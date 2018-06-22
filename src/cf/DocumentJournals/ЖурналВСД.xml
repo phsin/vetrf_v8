@@ -34,6 +34,8 @@
 				<xr:Item xsi:type="xr:MDObjectRef">Document.ВСД2_транзакция</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">Document.ВСД2</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">Document.ВСД2_ЛабораторныеИсследования</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.ВСД2_Инвентаризация</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.ВСД2_ОбъединениеПартий</xr:Item>
 			</RegisteredDocuments>
 			<IncludeHelpInContents>false</IncludeHelpInContents>
 			<StandardAttributes>
@@ -198,6 +200,117 @@
 			<ExtendedListPresentation/>
 			<Explanation/>
 		</Properties>
-		<ChildObjects/>
+		<ChildObjects>
+			<Column uuid="398b28b3-6e53-496a-8538-360b8c0a7785">
+				<Properties>
+					<Name>Организация</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Организация</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+					<Indexing>DontIndex</Indexing>
+					<References>
+						<xr:Item xsi:type="xr:MDObjectRef">Document.ВСД.Attribute.Организация</xr:Item>
+						<xr:Item xsi:type="xr:MDObjectRef">Document.ВСД_транзакция.Attribute.Организация</xr:Item>
+						<xr:Item xsi:type="xr:MDObjectRef">Document.ВСД2_Производство.Attribute.Организация</xr:Item>
+						<xr:Item xsi:type="xr:MDObjectRef">Document.ВСД2_транзакция.Attribute.Организация</xr:Item>
+						<xr:Item xsi:type="xr:MDObjectRef">Document.ВСД2.Attribute.Организация</xr:Item>
+						<xr:Item xsi:type="xr:MDObjectRef">Document.ВСД2_ЛабораторныеИсследования.Attribute.Организация</xr:Item>
+						<xr:Item xsi:type="xr:MDObjectRef">Document.ВСД2_Инвентаризация.Attribute.Организация</xr:Item>
+						<xr:Item xsi:type="xr:MDObjectRef">Document.ВСД2_ОбъединениеПартий.Attribute.Организация</xr:Item>
+					</References>
+				</Properties>
+			</Column>
+			<Column uuid="ccd0ae5d-f7c2-4f6c-b9ad-c4738518805e">
+				<Properties>
+					<Name>Статус</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Статус</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+					<Indexing>DontIndex</Indexing>
+					<References>
+						<xr:Item xsi:type="xr:MDObjectRef">Document.ВСД.Attribute.Статус</xr:Item>
+						<xr:Item xsi:type="xr:MDObjectRef">Document.ВСД_транзакция.Attribute.Статус</xr:Item>
+						<xr:Item xsi:type="xr:MDObjectRef">Document.ВСД2_Производство.Attribute.Статус</xr:Item>
+						<xr:Item xsi:type="xr:MDObjectRef">Document.ВСД2_транзакция.Attribute.Статус</xr:Item>
+						<xr:Item xsi:type="xr:MDObjectRef">Document.ВСД2.Attribute.Статус</xr:Item>
+						<xr:Item xsi:type="xr:MDObjectRef">Document.ВСД2_ЛабораторныеИсследования.Attribute.Статус</xr:Item>
+						<xr:Item xsi:type="xr:MDObjectRef">Document.ВСД2_Инвентаризация.Attribute.Статус</xr:Item>
+						<xr:Item xsi:type="xr:MDObjectRef">Document.ВСД2_ОбъединениеПартий.Attribute.Статус</xr:Item>
+					</References>
+				</Properties>
+			</Column>
+			<Column uuid="a9f5d422-4526-42ba-9be4-c83baa5913a7">
+				<Properties>
+					<Name>UUID</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>UUID</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+					<Indexing>DontIndex</Indexing>
+					<References>
+						<xr:Item xsi:type="xr:MDObjectRef">Document.ВСД.Attribute.UUID</xr:Item>
+						<xr:Item xsi:type="xr:MDObjectRef">Document.ВСД_транзакция.Attribute.UUID</xr:Item>
+						<xr:Item xsi:type="xr:MDObjectRef">Document.ВСД2_Производство.Attribute.UUID</xr:Item>
+						<xr:Item xsi:type="xr:MDObjectRef">Document.ВСД2_транзакция.Attribute.UUID</xr:Item>
+						<xr:Item xsi:type="xr:MDObjectRef">Document.ВСД2.Attribute.UUID</xr:Item>
+						<xr:Item xsi:type="xr:MDObjectRef">Document.ВСД2_ЛабораторныеИсследования.Attribute.UUID</xr:Item>
+						<xr:Item xsi:type="xr:MDObjectRef">Document.ВСД2_Инвентаризация.Attribute.UUID</xr:Item>
+						<xr:Item xsi:type="xr:MDObjectRef">Document.ВСД2_ОбъединениеПартий.Attribute.UUID</xr:Item>
+					</References>
+				</Properties>
+			</Column>
+			<Column uuid="a14dd23a-5914-4ee5-b029-744d450ab0d7">
+				<Properties>
+					<Name>Площадка</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Площадка</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+					<Indexing>DontIndex</Indexing>
+					<References>
+						<xr:Item xsi:type="xr:MDObjectRef">Document.ВСД.Attribute.Отправитель_Площадка</xr:Item>
+						<xr:Item xsi:type="xr:MDObjectRef">Document.ВСД_транзакция.Attribute.Отправитель_Площадка</xr:Item>
+						<xr:Item xsi:type="xr:MDObjectRef">Document.ВСД2_Производство.Attribute.Производитель_Площадка</xr:Item>
+						<xr:Item xsi:type="xr:MDObjectRef">Document.ВСД2_транзакция.Attribute.Отправитель_Площадка</xr:Item>
+						<xr:Item xsi:type="xr:MDObjectRef">Document.ВСД2.Attribute.Отправитель_Площадка</xr:Item>
+						<xr:Item xsi:type="xr:MDObjectRef">Document.ВСД2_Инвентаризация.Attribute.Владелец_Площадка</xr:Item>
+						<xr:Item xsi:type="xr:MDObjectRef">Document.ВСД2_ОбъединениеПартий.Attribute.Владелец_Площадка</xr:Item>
+					</References>
+				</Properties>
+			</Column>
+			<Column uuid="c47df16a-9a2f-4792-91d6-37743d6f3143">
+				<Properties>
+					<Name>ПолучательПлощадка</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Получатель площадка</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+					<Indexing>DontIndex</Indexing>
+					<References>
+						<xr:Item xsi:type="xr:MDObjectRef">Document.ВСД.Attribute.Получатель_Площадка</xr:Item>
+						<xr:Item xsi:type="xr:MDObjectRef">Document.ВСД_транзакция.Attribute.Получатель_Площадка</xr:Item>
+						<xr:Item xsi:type="xr:MDObjectRef">Document.ВСД2_транзакция.Attribute.Получатель_Площадка</xr:Item>
+						<xr:Item xsi:type="xr:MDObjectRef">Document.ВСД2.Attribute.Получатель_Площадка</xr:Item>
+					</References>
+				</Properties>
+			</Column>
+		</ChildObjects>
 	</DocumentJournal>
 </MetaDataObject>
