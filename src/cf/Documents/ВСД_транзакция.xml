@@ -175,6 +175,7 @@
 			<Characteristics/>
 			<BasedOn>
 				<xr:Item xsi:type="xr:MDObjectRef">Document.РеализацияТоваровУслуг</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.ПеремещениеТоваров</xr:Item>
 			</BasedOn>
 			<InputByString>
 				<xr:Field>Document.ВСД_транзакция.StandardAttribute.Number</xr:Field>
@@ -183,9 +184,9 @@
 			<SearchStringModeOnInputByString>Begin</SearchStringModeOnInputByString>
 			<FullTextSearchOnInputByString>DontUse</FullTextSearchOnInputByString>
 			<ChoiceDataGetModeOnInputByString>Directly</ChoiceDataGetModeOnInputByString>
-			<DefaultObjectForm>Document.ВСД_транзакция.Form.ФормаДокумента1</DefaultObjectForm>
-			<DefaultListForm/>
-			<DefaultChoiceForm/>
+			<DefaultObjectForm>Document.ВСД_транзакция.Form.ФормаДокументаУФ</DefaultObjectForm>
+			<DefaultListForm>Document.ВСД_транзакция.Form.ФормаСпискаУФ</DefaultListForm>
+			<DefaultChoiceForm>Document.ВСД_транзакция.Form.ФормаСпискаУФ</DefaultChoiceForm>
 			<AuxiliaryObjectForm/>
 			<AuxiliaryListForm/>
 			<AuxiliaryChoiceForm/>
@@ -1302,6 +1303,8 @@
 			<Form>ФормаДокумента1</Form>
 			<Form>ФормаСписка</Form>
 			<Form>ФормаДокумента</Form>
+			<Form>ФормаСпискаУФ</Form>
+			<Form>ФормаДокументаУФ</Form>
 			<TabularSection uuid="0cbd1ea7-f48a-4acd-a1f7-ee02081aeaa3">
 				<InternalInfo>
 					<xr:GeneratedType name="DocumentTabularSection.ВСД_транзакция.Товары" category="TabularSection">

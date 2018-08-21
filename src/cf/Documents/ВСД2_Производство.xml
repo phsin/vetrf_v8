@@ -32,7 +32,7 @@
 				</v8:item>
 			</Synonym>
 			<Comment>api 2.*</Comment>
-			<UseStandardCommands>false</UseStandardCommands>
+			<UseStandardCommands>true</UseStandardCommands>
 			<Numerator/>
 			<NumberType>String</NumberType>
 			<NumberLength>9</NumberLength>
@@ -184,7 +184,7 @@
 			<FullTextSearchOnInputByString>DontUse</FullTextSearchOnInputByString>
 			<ChoiceDataGetModeOnInputByString>Directly</ChoiceDataGetModeOnInputByString>
 			<DefaultObjectForm>Document.ВСД2_Производство.Form.ФормаДокумента1</DefaultObjectForm>
-			<DefaultListForm/>
+			<DefaultListForm>Document.ВСД2_Производство.Form.ФормаСпискаУФ</DefaultListForm>
 			<DefaultChoiceForm/>
 			<AuxiliaryObjectForm/>
 			<AuxiliaryListForm/>
@@ -915,6 +915,7 @@
 				</Properties>
 			</Attribute>
 			<Form>ФормаДокумента1</Form>
+			<Form>ФормаСпискаУФ</Form>
 			<TabularSection uuid="327bcbc8-1362-432d-9c67-7207cb835ab0">
 				<InternalInfo>
 					<xr:GeneratedType name="DocumentTabularSection.ВСД2_Производство.Продукция" category="TabularSection">

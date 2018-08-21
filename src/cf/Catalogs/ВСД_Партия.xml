@@ -37,7 +37,7 @@
 			<LimitLevelCount>false</LimitLevelCount>
 			<LevelCount>2</LevelCount>
 			<FoldersOnTop>true</FoldersOnTop>
-			<UseStandardCommands>false</UseStandardCommands>
+			<UseStandardCommands>true</UseStandardCommands>
 			<Owners/>
 			<SubordinationUse>ToItems</SubordinationUse>
 			<CodeLength>9</CodeLength>
@@ -298,7 +298,7 @@
 			<ChoiceDataGetModeOnInputByString>Directly</ChoiceDataGetModeOnInputByString>
 			<DefaultObjectForm>Catalog.ВСД_Партия.Form.ФормаЭлемента</DefaultObjectForm>
 			<DefaultFolderForm/>
-			<DefaultListForm>Catalog.ВСД_Партия.Form.ФормаСписка</DefaultListForm>
+			<DefaultListForm>Catalog.ВСД_Партия.Form.ФормаСпискаУФ</DefaultListForm>
 			<DefaultChoiceForm>Catalog.ВСД_Партия.Form.ФормаСписка</DefaultChoiceForm>
 			<DefaultFolderChoiceForm/>
 			<AuxiliaryObjectForm/>
@@ -1768,6 +1768,7 @@
 			</TabularSection>
 			<Form>ФормаЭлемента</Form>
 			<Form>ФормаСписка</Form>
+			<Form>ФормаСпискаУФ</Form>
 		</ChildObjects>
 	</Catalog>
 </MetaDataObject>

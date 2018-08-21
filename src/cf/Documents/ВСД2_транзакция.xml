@@ -175,6 +175,7 @@
 			<Characteristics/>
 			<BasedOn>
 				<xr:Item xsi:type="xr:MDObjectRef">Document.РеализацияТоваровУслуг</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.ПеремещениеТоваров</xr:Item>
 			</BasedOn>
 			<InputByString>
 				<xr:Field>Document.ВСД2_транзакция.StandardAttribute.Number</xr:Field>
@@ -183,9 +184,9 @@
 			<SearchStringModeOnInputByString>Begin</SearchStringModeOnInputByString>
 			<FullTextSearchOnInputByString>DontUse</FullTextSearchOnInputByString>
 			<ChoiceDataGetModeOnInputByString>Directly</ChoiceDataGetModeOnInputByString>
-			<DefaultObjectForm>Document.ВСД2_транзакция.Form.ФормаДокумента1</DefaultObjectForm>
-			<DefaultListForm/>
-			<DefaultChoiceForm/>
+			<DefaultObjectForm>Document.ВСД2_транзакция.Form.ФормаДокумента</DefaultObjectForm>
+			<DefaultListForm>Document.ВСД2_транзакция.Form.ФормаСписка</DefaultListForm>
+			<DefaultChoiceForm>Document.ВСД2_транзакция.Form.ФормаСписка</DefaultChoiceForm>
 			<AuxiliaryObjectForm/>
 			<AuxiliaryListForm/>
 			<AuxiliaryChoiceForm/>

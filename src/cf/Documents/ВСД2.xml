@@ -32,7 +32,7 @@
 				</v8:item>
 			</Synonym>
 			<Comment>ответ ГИС Меркурий api 2.0</Comment>
-			<UseStandardCommands>false</UseStandardCommands>
+			<UseStandardCommands>true</UseStandardCommands>
 			<Numerator/>
 			<NumberType>String</NumberType>
 			<NumberLength>9</NumberLength>
@@ -173,9 +173,7 @@
 				</xr:StandardAttribute>
 			</StandardAttributes>
 			<Characteristics/>
-			<BasedOn>
-				<xr:Item xsi:type="xr:MDObjectRef">Document.РеализацияТоваровУслуг</xr:Item>
-			</BasedOn>
+			<BasedOn/>
 			<InputByString>
 				<xr:Field>Document.ВСД2.StandardAttribute.Number</xr:Field>
 			</InputByString>
@@ -184,7 +182,7 @@
 			<FullTextSearchOnInputByString>DontUse</FullTextSearchOnInputByString>
 			<ChoiceDataGetModeOnInputByString>Directly</ChoiceDataGetModeOnInputByString>
 			<DefaultObjectForm>Document.ВСД2.Form.ФормаДокумента1</DefaultObjectForm>
-			<DefaultListForm/>
+			<DefaultListForm>Document.ВСД2.Form.ФормаСпискаУФ</DefaultListForm>
 			<DefaultChoiceForm/>
 			<AuxiliaryObjectForm/>
 			<AuxiliaryListForm/>
@@ -1791,6 +1789,7 @@
 				</Properties>
 			</Attribute>
 			<Form>ФормаДокумента1</Form>
+			<Form>ФормаСпискаУФ</Form>
 		</ChildObjects>
 	</Document>
 </MetaDataObject>

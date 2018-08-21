@@ -41,8 +41,15 @@
 				<xr:Item xsi:type="xr:MDObjectRef">Document.ВСД2_Инвентаризация</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">Document.ВСД2</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">Document.ВСД2_ОбъединениеПартий</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.ВСД</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">DataProcessor.ВСД_ЗапускИнтеграции</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonTemplate.ВСД_Компонента</xr:Item>
 			</Content>
 		</Properties>
-		<ChildObjects/>
+		<ChildObjects>
+			<Subsystem>СправочникиВСД</Subsystem>
+			<Subsystem>ДокументыВСД</Subsystem>
+			<Subsystem>Команды</Subsystem>
+		</ChildObjects>
 	</Subsystem>
 </MetaDataObject>

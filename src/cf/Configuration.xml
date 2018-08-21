@@ -132,7 +132,17 @@
 			<Language>Русский</Language>
 			<Subsystem>ВСД</Subsystem>
 			<CommonTemplate>ВСД_Компонента</CommonTemplate>
+			<FilterCriterion>СвязанныеДокументы</FilterCriterion>
 			<CommonModule>ВСД</CommonModule>
+			<CommonCommand>СтруктураПодчиненности</CommonCommand>
+			<CommonCommand>ВСД_ОтправитьВСД</CommonCommand>
+			<CommonCommand>ВСД_ОформитьВСД</CommonCommand>
+			<CommonCommand>ВСД_АннулироватьВСД</CommonCommand>
+			<CommonCommand>ВСД_ОткрытьВСДвГИС</CommonCommand>
+			<CommonCommand>ВСД_ПечатьВСДПолный</CommonCommand>
+			<CommonCommand>ВСД_ПечатьВСДСокращенный</CommonCommand>
+			<CommonCommand>ВСД_Регионализация</CommonCommand>
+			<CommandGroup>ВСД_ГруппаКоманд</CommandGroup>
 			<Catalog>Контрагенты</Catalog>
 			<Catalog>Номенклатура</Catalog>
 			<Catalog>Склады</Catalog>
@@ -164,6 +174,7 @@
 			<Enum>ВСД_РезультатИсследования</Enum>
 			<Enum>ВСД_УровниУпаковки</Enum>
 			<Enum>ВСД_Маркировка</Enum>
+			<DataProcessor>ВСД_ЗапускИнтеграции</DataProcessor>
 			<InformationRegister>ВСД_Соответсвия</InformationRegister>
 		</ChildObjects>
 	</Configuration>

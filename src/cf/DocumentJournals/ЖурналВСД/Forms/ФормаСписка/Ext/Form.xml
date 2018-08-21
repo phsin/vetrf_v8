@@ -1,7 +1,109 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.5">
-	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<Autofill>false</Autofill>
+	</AutoCommandBar>
 	<ChildItems>
+		<CommandBar name="ГруппаКоманднаяПанель" id="46">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа командная панель</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа командная панель</v8:content>
+				</v8:item>
+			</ToolTip>
+			<CommandSource>Form</CommandSource>
+			<ExtendedTooltip name="ГруппаКоманднаяПанельРасширеннаяПодсказка" id="47"/>
+			<ChildItems>
+				<ButtonGroup name="ГлобальныеКоманды" id="48">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Глобальные команды</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Глобальные команды</v8:content>
+						</v8:item>
+					</ToolTip>
+					<CommandSource>FormCommandPanelGlobalCommands</CommandSource>
+					<ExtendedTooltip name="ГлобальныеКомандыРасширеннаяПодсказка" id="49"/>
+					<ChildItems>
+						<Button name="ФормаОбщаяКомандаСтруктураПодчиненности" id="50">
+							<Type>CommandBarButton</Type>
+							<CommandName>CommonCommand.СтруктураПодчиненности</CommandName>
+							<DataPath>Items.Список.CurrentData.Ref</DataPath>
+							<ExtendedTooltip name="ФормаОбщаяКомандаСтруктураПодчиненностиРасширеннаяПодсказка" id="51"/>
+						</Button>
+						<Popup name="ГруппаВСД" id="52">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>ВСД</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа ВСД</v8:content>
+								</v8:item>
+							</ToolTip>
+							<ExtendedTooltip name="ГруппаВСДРасширеннаяПодсказка" id="53"/>
+							<ChildItems>
+								<Button name="ФормаОбщаяКомандаВСД_ПечатьВСДСокращенный" id="62">
+									<Type>CommandBarButton</Type>
+									<CommandName>CommonCommand.ВСД_ПечатьВСДСокращенный</CommandName>
+									<DataPath>Items.Список.CurrentData.Ref</DataPath>
+									<ExtendedTooltip name="ФормаОбщаяКомандаВСД_ПечатьВСДСокращенныйРасширеннаяПодсказка" id="63"/>
+								</Button>
+								<Button name="ФормаОбщаяКомандаВСД_ПечатьВСДПолный" id="60">
+									<Type>CommandBarButton</Type>
+									<CommandName>CommonCommand.ВСД_ПечатьВСДПолный</CommandName>
+									<DataPath>Items.Список.CurrentData.Ref</DataPath>
+									<ExtendedTooltip name="ФормаОбщаяКомандаВСД_ПечатьВСДПолныйРасширеннаяПодсказка" id="61"/>
+								</Button>
+								<Button name="ФормаОбщаяКомандаВСД_ОткрытьВСДвГИС" id="56">
+									<Type>CommandBarButton</Type>
+									<CommandName>CommonCommand.ВСД_ОткрытьВСДвГИС</CommandName>
+									<DataPath>Items.Список.CurrentData.Ref</DataPath>
+									<ExtendedTooltip name="ФормаОбщаяКомандаВСД_ОткрытьВСДвГИСРасширеннаяПодсказка" id="57"/>
+								</Button>
+								<ButtonGroup name="ФормаГруппа1" id="66">
+									<ExtendedTooltip name="ФормаГруппа1РасширеннаяПодсказка" id="67"/>
+									<ChildItems>
+										<Button name="ФормаОбщаяКомандаВСД_ОтправитьВСД" id="58">
+											<Type>CommandBarButton</Type>
+											<CommandName>CommonCommand.ВСД_ОтправитьВСД</CommandName>
+											<DataPath>Items.Список.CurrentData.Ref</DataPath>
+											<ExtendedTooltip name="ФормаОбщаяКомандаВСД_ОтправитьВСДРасширеннаяПодсказка" id="59"/>
+										</Button>
+										<Button name="ФормаОбщаяКомандаВСД_АннулироватьВСД" id="54">
+											<Type>CommandBarButton</Type>
+											<CommandName>CommonCommand.ВСД_АннулироватьВСД</CommandName>
+											<DataPath>Items.Список.CurrentData.Ref</DataPath>
+											<ExtendedTooltip name="ФормаОбщаяКомандаВСД_АннулироватьВСДРасширеннаяПодсказка" id="55"/>
+										</Button>
+										<Button name="ФормаОбщаяКомандаВСД_Регионализация" id="64">
+											<Type>CommandBarButton</Type>
+											<CommandName>CommonCommand.ВСД_Регионализация</CommandName>
+											<DataPath>Items.Список.CurrentData.Ref</DataPath>
+											<ExtendedTooltip name="ФормаОбщаяКомандаВСД_РегионализацияРасширеннаяПодсказка" id="65"/>
+										</Button>
+									</ChildItems>
+								</ButtonGroup>
+							</ChildItems>
+						</Popup>
+					</ChildItems>
+				</ButtonGroup>
+			</ChildItems>
+		</CommandBar>
 		<UsualGroup name="СписокКомпоновщикНастроекПользовательскиеНастройки" id="1">
 			<Title>
 				<v8:item>
@@ -88,16 +190,6 @@
 					<ContextMenu name="ОрганизацияКонтекстноеМеню" id="32"/>
 					<ExtendedTooltip name="ОрганизацияРасширеннаяПодсказка" id="33"/>
 				</LabelField>
-				<LabelField name="Статус" id="34">
-					<DataPath>Список.Статус</DataPath>
-					<ContextMenu name="СтатусКонтекстноеМеню" id="35"/>
-					<ExtendedTooltip name="СтатусРасширеннаяПодсказка" id="36"/>
-				</LabelField>
-				<LabelField name="UUID" id="37">
-					<DataPath>Список.UUID</DataPath>
-					<ContextMenu name="UUIDКонтекстноеМеню" id="38"/>
-					<ExtendedTooltip name="UUIDРасширеннаяПодсказка" id="39"/>
-				</LabelField>
 				<LabelField name="Площадка" id="40">
 					<DataPath>Список.Площадка</DataPath>
 					<ContextMenu name="ПлощадкаКонтекстноеМеню" id="41"/>
@@ -107,6 +199,16 @@
 					<DataPath>Список.ПолучательПлощадка</DataPath>
 					<ContextMenu name="ПолучательПлощадкаКонтекстноеМеню" id="44"/>
 					<ExtendedTooltip name="ПолучательПлощадкаРасширеннаяПодсказка" id="45"/>
+				</LabelField>
+				<LabelField name="Статус" id="34">
+					<DataPath>Список.Статус</DataPath>
+					<ContextMenu name="СтатусКонтекстноеМеню" id="35"/>
+					<ExtendedTooltip name="СтатусРасширеннаяПодсказка" id="36"/>
+				</LabelField>
+				<LabelField name="UUID" id="37">
+					<DataPath>Список.UUID</DataPath>
+					<ContextMenu name="UUIDКонтекстноеМеню" id="38"/>
+					<ExtendedTooltip name="UUIDРасширеннаяПодсказка" id="39"/>
 				</LabelField>
 			</ChildItems>
 		</Table>

@@ -103,11 +103,6 @@
 					<ContextMenu name="СтатусКонтекстноеМеню" id="41"/>
 					<ExtendedTooltip name="СтатусРасширеннаяПодсказка" id="42"/>
 				</LabelField>
-				<LabelField name="UUID" id="43">
-					<DataPath>Список.UUID</DataPath>
-					<ContextMenu name="UUIDКонтекстноеМеню" id="44"/>
-					<ExtendedTooltip name="UUIDРасширеннаяПодсказка" id="45"/>
-				</LabelField>
 				<LabelField name="ДокументОснование" id="46">
 					<DataPath>Список.ДокументОснование</DataPath>
 					<ContextMenu name="ДокументОснованиеКонтекстноеМеню" id="47"/>
@@ -150,4 +145,21 @@
 			</Settings>
 		</Attribute>
 	</Attributes>
+	<Commands>
+		<Command name="СоздатьВСД2Транзакция" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Создать ВСД2 транзакция</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Создать ВСД2 транзакция</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>СоздатьВСД2Транзакция</Action>
+		</Command>
+	</Commands>
 </Form>

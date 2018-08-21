@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.5">
+	<DataProcessor uuid="97cf5e8f-08b1-4e59-b88e-848baa0248c6">
+		<InternalInfo>
+			<xr:GeneratedType name="DataProcessorObject.ВСД_ЗапускИнтеграции" category="Object">
+				<xr:TypeId>8c1e764a-49c1-40d5-9b28-04201f98f359</xr:TypeId>
+				<xr:ValueId>9c648e92-7442-4f76-a76a-eb40008b6105</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="DataProcessorManager.ВСД_ЗапускИнтеграции" category="Manager">
+				<xr:TypeId>7ecf96fe-a9d1-4c90-b59b-0beae97cfda1</xr:TypeId>
+				<xr:ValueId>039e7136-c889-429c-a974-a8769391c7b5</xr:ValueId>
+			</xr:GeneratedType>
+		</InternalInfo>
+		<Properties>
+			<Name>ВСД_ЗапускИнтеграции</Name>
+			<Synonym>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Запуск модуля интеграции kb99.pro</v8:content>
+				</v8:item>
+			</Synonym>
+			<Comment>www.kb99.pro - Интеграция ГИС Меркурий</Comment>
+			<UseStandardCommands>true</UseStandardCommands>
+			<DefaultForm>DataProcessor.ВСД_ЗапускИнтеграции.Form.ФормаУФ</DefaultForm>
+			<AuxiliaryForm/>
+			<IncludeHelpInContents>false</IncludeHelpInContents>
+			<ExtendedPresentation/>
+			<Explanation/>
+		</Properties>
+		<ChildObjects>
+			<Form>ФормаУФ</Form>
+		</ChildObjects>
+	</DataProcessor>
+</MetaDataObject>
