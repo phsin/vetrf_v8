@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.5">
-	<AutoCommandBar name="" id="-1"/>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
 	<ChildItems>
 		<UsualGroup name="СписокКомпоновщикНастроекПользовательскиеНастройки" id="1">
 			<Title>
@@ -73,30 +73,50 @@
 					<ContextMenu name="ДатаКонтекстноеМеню" id="17"/>
 					<ExtendedTooltip name="ДатаРасширеннаяПодсказка" id="18"/>
 				</LabelField>
+				<LabelField name="Статус" id="28">
+					<DataPath>Список.Статус</DataPath>
+					<ContextMenu name="СтатусКонтекстноеМеню" id="29"/>
+					<ExtendedTooltip name="СтатусРасширеннаяПодсказка" id="30"/>
+				</LabelField>
 				<LabelField name="Номер" id="19">
 					<DataPath>Список.Number</DataPath>
 					<ContextMenu name="НомерКонтекстноеМеню" id="20"/>
 					<ExtendedTooltip name="НомерРасширеннаяПодсказка" id="21"/>
-				</LabelField>
-				<LabelField name="Отправитель_ХозСубъект" id="22">
-					<DataPath>Список.Отправитель_ХозСубъект</DataPath>
-					<ContextMenu name="Отправитель_ХозСубъектКонтекстноеМеню" id="23"/>
-					<ExtendedTooltip name="Отправитель_ХозСубъектРасширеннаяПодсказка" id="24"/>
 				</LabelField>
 				<LabelField name="Отправитель_Площадка" id="25">
 					<DataPath>Список.Отправитель_Площадка</DataPath>
 					<ContextMenu name="Отправитель_ПлощадкаКонтекстноеМеню" id="26"/>
 					<ExtendedTooltip name="Отправитель_ПлощадкаРасширеннаяПодсказка" id="27"/>
 				</LabelField>
-				<LabelField name="Статус" id="28">
-					<DataPath>Список.Статус</DataPath>
-					<ContextMenu name="СтатусКонтекстноеМеню" id="29"/>
-					<ExtendedTooltip name="СтатусРасширеннаяПодсказка" id="30"/>
+				<LabelField name="Получатель_Площадка" id="46">
+					<DataPath>Список.Получатель_Площадка</DataPath>
+					<ContextMenu name="Получатель_ПлощадкаКонтекстноеМеню" id="47"/>
+					<ExtendedTooltip name="Получатель_ПлощадкаРасширеннаяПодсказка" id="48"/>
+				</LabelField>
+				<LabelField name="Продукция_Элемент" id="34">
+					<DataPath>Список.Продукция_Элемент</DataPath>
+					<ContextMenu name="Продукция_ЭлементКонтекстноеМеню" id="35"/>
+					<ExtendedTooltip name="Продукция_ЭлементРасширеннаяПодсказка" id="36"/>
+				</LabelField>
+				<LabelField name="Количество" id="37">
+					<DataPath>Список.Количество</DataPath>
+					<ContextMenu name="КоличествоКонтекстноеМеню" id="38"/>
+					<ExtendedTooltip name="КоличествоРасширеннаяПодсказка" id="39"/>
+				</LabelField>
+				<LabelField name="ЕдиницаИзмерения" id="40">
+					<DataPath>Список.ЕдиницаИзмерения</DataPath>
+					<ContextMenu name="ЕдиницаИзмеренияКонтекстноеМеню" id="41"/>
+					<ExtendedTooltip name="ЕдиницаИзмеренияРасширеннаяПодсказка" id="42"/>
 				</LabelField>
 				<LabelField name="UUID" id="31">
 					<DataPath>Список.UUID</DataPath>
 					<ContextMenu name="UUIDКонтекстноеМеню" id="32"/>
 					<ExtendedTooltip name="UUIDРасширеннаяПодсказка" id="33"/>
+				</LabelField>
+				<LabelField name="Организация" id="43">
+					<DataPath>Список.Организация</DataPath>
+					<ContextMenu name="ОрганизацияКонтекстноеМеню" id="44"/>
+					<ExtendedTooltip name="ОрганизацияРасширеннаяПодсказка" id="45"/>
 				</LabelField>
 			</ChildItems>
 		</Table>

@@ -296,10 +296,10 @@
 			<SearchStringModeOnInputByString>Begin</SearchStringModeOnInputByString>
 			<FullTextSearchOnInputByString>DontUse</FullTextSearchOnInputByString>
 			<ChoiceDataGetModeOnInputByString>Directly</ChoiceDataGetModeOnInputByString>
-			<DefaultObjectForm>Catalog.ВСД_Продукция_Элемент.Form.ФормаЭлемента</DefaultObjectForm>
+			<DefaultObjectForm>Catalog.ВСД_Продукция_Элемент.Form.ФормаЭлементаУФ</DefaultObjectForm>
 			<DefaultFolderForm/>
 			<DefaultListForm>Catalog.ВСД_Продукция_Элемент.Form.ФормаСпискаУФ</DefaultListForm>
-			<DefaultChoiceForm/>
+			<DefaultChoiceForm>Catalog.ВСД_Продукция_Элемент.Form.ФормаВыбораУФ</DefaultChoiceForm>
 			<DefaultFolderChoiceForm/>
 			<AuxiliaryObjectForm/>
 			<AuxiliaryFolderForm/>
@@ -476,7 +476,13 @@
 					<FillValue xsi:nil="true"/>
 					<FillChecking>DontCheck</FillChecking>
 					<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
-					<ChoiceParameterLinks/>
+					<ChoiceParameterLinks>
+						<xr:Link>
+							<xr:Name>Отбор.Владелец</xr:Name>
+							<xr:DataPath xsi:type="xs:string">Catalog.ВСД_Продукция_Элемент.Attribute.Продукция</xr:DataPath>
+							<xr:ValueChange>Clear</xr:ValueChange>
+						</xr:Link>
+					</ChoiceParameterLinks>
 					<ChoiceParameters/>
 					<QuickChoice>Auto</QuickChoice>
 					<CreateOnInput>Auto</CreateOnInput>
@@ -1098,6 +1104,8 @@
 			<Form>ФормаЭлемента</Form>
 			<Form>ФормаСписка</Form>
 			<Form>ФормаСпискаУФ</Form>
+			<Form>ФормаВыбораУФ</Form>
+			<Form>ФормаЭлементаУФ</Form>
 		</ChildObjects>
 	</Catalog>
 </MetaDataObject>

@@ -98,6 +98,34 @@
 										</Button>
 									</ChildItems>
 								</ButtonGroup>
+								<ButtonGroup name="ФормаГруппа2" id="70">
+									<ExtendedTooltip name="ФормаГруппа2РасширеннаяПодсказка" id="71"/>
+									<ChildItems>
+										<Button name="ФормаОбщаяКомандаВСД_ПогаситьВСДПоставщика" id="68">
+											<Type>CommandBarButton</Type>
+											<CommandName>CommonCommand.ВСД_ПогаситьВСДПоставщика</CommandName>
+											<DataPath>Items.Список.CurrentData.Ref</DataPath>
+											<ExtendedTooltip name="ФормаОбщаяКомандаВСД_ПогаситьВСДПоставщикаРасширеннаяПодсказка" id="69"/>
+										</Button>
+									</ChildItems>
+								</ButtonGroup>
+								<ButtonGroup name="ФормаГруппа3" id="72">
+									<ExtendedTooltip name="ФормаГруппа3РасширеннаяПодсказка" id="73"/>
+									<ChildItems>
+										<Button name="ФормаОбщаяКомандаВСД_ОткрытьЗапрос" id="74">
+											<Type>CommandBarButton</Type>
+											<CommandName>CommonCommand.ВСД_ОткрытьЗапрос</CommandName>
+											<DataPath>Items.Список.CurrentData.Ref</DataPath>
+											<ExtendedTooltip name="ФормаОбщаяКомандаВСД_ОткрытьЗапросРасширеннаяПодсказка" id="75"/>
+										</Button>
+										<Button name="ФормаОбщаяКомандаВСД_ОткрытьОтвет" id="76">
+											<Type>CommandBarButton</Type>
+											<CommandName>CommonCommand.ВСД_ОткрытьОтвет</CommandName>
+											<DataPath>Items.Список.CurrentData.Ref</DataPath>
+											<ExtendedTooltip name="ФормаОбщаяКомандаВСД_ОткрытьОтветРасширеннаяПодсказка" id="77"/>
+										</Button>
+									</ChildItems>
+								</ButtonGroup>
 							</ChildItems>
 						</Popup>
 					</ChildItems>

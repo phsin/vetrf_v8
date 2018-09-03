@@ -181,7 +181,7 @@
 			<SearchStringModeOnInputByString>Begin</SearchStringModeOnInputByString>
 			<FullTextSearchOnInputByString>DontUse</FullTextSearchOnInputByString>
 			<ChoiceDataGetModeOnInputByString>Directly</ChoiceDataGetModeOnInputByString>
-			<DefaultObjectForm>Document.ВСД2_Инвентаризация.Form.ФормаДокумента1</DefaultObjectForm>
+			<DefaultObjectForm>Document.ВСД2_Инвентаризация.Form.ФормаДокументаУФ</DefaultObjectForm>
 			<DefaultListForm>Document.ВСД2_Инвентаризация.Form.ФормаСпискаУФ</DefaultListForm>
 			<DefaultChoiceForm/>
 			<AuxiliaryObjectForm/>
@@ -624,6 +624,7 @@
 			</Attribute>
 			<Form>ФормаДокумента1</Form>
 			<Form>ФормаСпискаУФ</Form>
+			<Form>ФормаДокументаУФ</Form>
 			<TabularSection uuid="0a7a38c4-7fae-4aab-bd61-71df5bd229fb">
 				<InternalInfo>
 					<xr:GeneratedType name="DocumentTabularSection.ВСД2_Инвентаризация.Продукция" category="TabularSection">
@@ -819,7 +820,13 @@
 							<MaxValue xsi:nil="true"/>
 							<FillChecking>DontCheck</FillChecking>
 							<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
-							<ChoiceParameterLinks/>
+							<ChoiceParameterLinks>
+								<xr:Link>
+									<xr:Name>Отбор.Владелец</xr:Name>
+									<xr:DataPath xsi:type="xs:string">Document.ВСД2_Инвентаризация.TabularSection.Продукция.Attribute.Продукция</xr:DataPath>
+									<xr:ValueChange>Clear</xr:ValueChange>
+								</xr:Link>
+							</ChoiceParameterLinks>
 							<ChoiceParameters/>
 							<QuickChoice>Auto</QuickChoice>
 							<CreateOnInput>Auto</CreateOnInput>

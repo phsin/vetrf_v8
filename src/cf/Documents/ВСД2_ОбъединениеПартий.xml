@@ -181,7 +181,7 @@
 			<SearchStringModeOnInputByString>Begin</SearchStringModeOnInputByString>
 			<FullTextSearchOnInputByString>DontUse</FullTextSearchOnInputByString>
 			<ChoiceDataGetModeOnInputByString>Directly</ChoiceDataGetModeOnInputByString>
-			<DefaultObjectForm>Document.ВСД2_ОбъединениеПартий.Form.ФормаДокумента1</DefaultObjectForm>
+			<DefaultObjectForm>Document.ВСД2_ОбъединениеПартий.Form.ФормаДокументаУФ</DefaultObjectForm>
 			<DefaultListForm>Document.ВСД2_ОбъединениеПартий.Form.ФормаСпискаУФ</DefaultListForm>
 			<DefaultChoiceForm/>
 			<AuxiliaryObjectForm/>
@@ -602,7 +602,13 @@
 					<FillValue xsi:nil="true"/>
 					<FillChecking>DontCheck</FillChecking>
 					<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
-					<ChoiceParameterLinks/>
+					<ChoiceParameterLinks>
+						<xr:Link>
+							<xr:Name>Отбор.Владелец</xr:Name>
+							<xr:DataPath xsi:type="xs:string">Document.ВСД2_ОбъединениеПартий.Attribute.ВыбПродукция</xr:DataPath>
+							<xr:ValueChange>Clear</xr:ValueChange>
+						</xr:Link>
+					</ChoiceParameterLinks>
 					<ChoiceParameters/>
 					<QuickChoice>Auto</QuickChoice>
 					<CreateOnInput>Auto</CreateOnInput>
@@ -737,6 +743,7 @@
 			</Attribute>
 			<Form>ФормаДокумента1</Form>
 			<Form>ФормаСпискаУФ</Form>
+			<Form>ФормаДокументаУФ</Form>
 			<TabularSection uuid="bf8ca274-15bb-42c8-ad99-41cf0826ab76">
 				<InternalInfo>
 					<xr:GeneratedType name="DocumentTabularSection.ВСД2_ОбъединениеПартий.Продукция" category="TabularSection">

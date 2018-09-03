@@ -78,6 +78,11 @@
 					<ContextMenu name="НомерКонтекстноеМеню" id="20"/>
 					<ExtendedTooltip name="НомерРасширеннаяПодсказка" id="21"/>
 				</LabelField>
+				<LabelField name="Статус" id="37">
+					<DataPath>Список.Статус</DataPath>
+					<ContextMenu name="СтатусКонтекстноеМеню" id="38"/>
+					<ExtendedTooltip name="СтатусРасширеннаяПодсказка" id="39"/>
+				</LabelField>
 				<LabelField name="Отправитель_Площадка" id="25">
 					<DataPath>Список.Отправитель_Площадка</DataPath>
 					<ContextMenu name="Отправитель_ПлощадкаКонтекстноеМеню" id="26"/>
@@ -97,11 +102,6 @@
 					<DataPath>Список.Количество</DataPath>
 					<ContextMenu name="КоличествоКонтекстноеМеню" id="44"/>
 					<ExtendedTooltip name="КоличествоРасширеннаяПодсказка" id="45"/>
-				</LabelField>
-				<LabelField name="Статус" id="37">
-					<DataPath>Список.Статус</DataPath>
-					<ContextMenu name="СтатусКонтекстноеМеню" id="38"/>
-					<ExtendedTooltip name="СтатусРасширеннаяПодсказка" id="39"/>
 				</LabelField>
 				<LabelField name="UUID" id="40">
 					<DataPath>Список.UUID</DataPath>

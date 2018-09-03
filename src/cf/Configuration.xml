@@ -136,12 +136,18 @@
 			<CommonModule>ВСД</CommonModule>
 			<CommonCommand>СтруктураПодчиненности</CommonCommand>
 			<CommonCommand>ВСД_ОтправитьВСД</CommonCommand>
-			<CommonCommand>ВСД_ОформитьВСД</CommonCommand>
 			<CommonCommand>ВСД_АннулироватьВСД</CommonCommand>
 			<CommonCommand>ВСД_ОткрытьВСДвГИС</CommonCommand>
 			<CommonCommand>ВСД_ПечатьВСДПолный</CommonCommand>
 			<CommonCommand>ВСД_ПечатьВСДСокращенный</CommonCommand>
 			<CommonCommand>ВСД_Регионализация</CommonCommand>
+			<CommonCommand>ВСД_ОформитьВСДПеремещениеОтПоставщика</CommonCommand>
+			<CommonCommand>ВСД_ПогаситьВСДПоставщика</CommonCommand>
+			<CommonCommand>ВСД_ОформитьВСДПроизводство</CommonCommand>
+			<CommonCommand>ВСД_ОформитьВСД</CommonCommand>
+			<CommonCommand>ВСД_ОтправитьВСДсГашением</CommonCommand>
+			<CommonCommand>ВСД_ОткрытьЗапрос</CommonCommand>
+			<CommonCommand>ВСД_ОткрытьОтвет</CommonCommand>
 			<CommandGroup>ВСД_ГруппаКоманд</CommandGroup>
 			<Catalog>Контрагенты</Catalog>
 			<Catalog>Номенклатура</Catalog>
@@ -161,9 +167,9 @@
 			<Catalog>ВСД_Цель</Catalog>
 			<Document>ПеремещениеТоваров</Document>
 			<Document>ВСД2_Производство</Document>
+			<Document>РеализацияТоваровУслуг</Document>
 			<Document>ВСД_транзакция</Document>
 			<Document>ВСД_входящий</Document>
-			<Document>РеализацияТоваровУслуг</Document>
 			<Document>ВСД</Document>
 			<Document>ВСД2_транзакция</Document>
 			<Document>ВСД2</Document>
@@ -175,6 +181,7 @@
 			<Enum>ВСД_УровниУпаковки</Enum>
 			<Enum>ВСД_Маркировка</Enum>
 			<DataProcessor>ВСД_ЗапускИнтеграции</DataProcessor>
+			<DataProcessor>ВСД_Старт</DataProcessor>
 			<InformationRegister>ВСД_Соответсвия</InformationRegister>
 		</ChildObjects>
 	</Configuration>
