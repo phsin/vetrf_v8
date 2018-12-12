@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.1">
+<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.6">
 	<Document uuid="5649f15c-9d96-4ecc-9fb1-d0089e250c95">
 		<InternalInfo>
 			<xr:GeneratedType name="DocumentObject.ВСД2_Производство" category="Object">
@@ -56,6 +56,7 @@
 					<xr:ChoiceHistoryOnInput>Auto</xr:ChoiceHistoryOnInput>
 					<xr:EditFormat/>
 					<xr:PasswordMode>false</xr:PasswordMode>
+					<xr:DataHistory>Use</xr:DataHistory>
 					<xr:MarkNegatives>false</xr:MarkNegatives>
 					<xr:MinValue xsi:nil="true"/>
 					<xr:Synonym/>
@@ -81,6 +82,7 @@
 					<xr:ChoiceHistoryOnInput>Auto</xr:ChoiceHistoryOnInput>
 					<xr:EditFormat/>
 					<xr:PasswordMode>false</xr:PasswordMode>
+					<xr:DataHistory>Use</xr:DataHistory>
 					<xr:MarkNegatives>false</xr:MarkNegatives>
 					<xr:MinValue xsi:nil="true"/>
 					<xr:Synonym/>
@@ -106,6 +108,7 @@
 					<xr:ChoiceHistoryOnInput>Auto</xr:ChoiceHistoryOnInput>
 					<xr:EditFormat/>
 					<xr:PasswordMode>false</xr:PasswordMode>
+					<xr:DataHistory>Use</xr:DataHistory>
 					<xr:MarkNegatives>false</xr:MarkNegatives>
 					<xr:MinValue xsi:nil="true"/>
 					<xr:Synonym/>
@@ -131,6 +134,7 @@
 					<xr:ChoiceHistoryOnInput>Auto</xr:ChoiceHistoryOnInput>
 					<xr:EditFormat/>
 					<xr:PasswordMode>false</xr:PasswordMode>
+					<xr:DataHistory>Use</xr:DataHistory>
 					<xr:MarkNegatives>false</xr:MarkNegatives>
 					<xr:MinValue xsi:nil="true"/>
 					<xr:Synonym/>
@@ -156,6 +160,7 @@
 					<xr:ChoiceHistoryOnInput>Auto</xr:ChoiceHistoryOnInput>
 					<xr:EditFormat/>
 					<xr:PasswordMode>false</xr:PasswordMode>
+					<xr:DataHistory>Use</xr:DataHistory>
 					<xr:MarkNegatives>false</xr:MarkNegatives>
 					<xr:MinValue xsi:nil="true"/>
 					<xr:Synonym/>
@@ -178,8 +183,8 @@
 			<SearchStringModeOnInputByString>Begin</SearchStringModeOnInputByString>
 			<FullTextSearchOnInputByString>DontUse</FullTextSearchOnInputByString>
 			<ChoiceDataGetModeOnInputByString>Directly</ChoiceDataGetModeOnInputByString>
-			<DefaultObjectForm>Document.ВСД2_Производство.Form.ФормаДокументаУФ</DefaultObjectForm>
-			<DefaultListForm>Document.ВСД2_Производство.Form.ФормаСпискаУФ</DefaultListForm>
+			<DefaultObjectForm>Document.ВСД2_Производство.Form.ФормаДокумента</DefaultObjectForm>
+			<DefaultListForm>Document.ВСД2_Производство.Form.ФормаСписка</DefaultListForm>
 			<DefaultChoiceForm/>
 			<AuxiliaryObjectForm/>
 			<AuxiliaryListForm/>
@@ -202,6 +207,7 @@
 			<ExtendedListPresentation/>
 			<Explanation/>
 			<ChoiceHistoryOnInput>Auto</ChoiceHistoryOnInput>
+			<DataHistory>DontUse</DataHistory>
 		</Properties>
 		<ChildObjects>
 			<Attribute uuid="ff31e25e-fcba-40d0-a80b-f58ea377fffe">
@@ -240,6 +246,7 @@
 					<ChoiceHistoryOnInput>Auto</ChoiceHistoryOnInput>
 					<Indexing>Index</Indexing>
 					<FullTextSearch>Use</FullTextSearch>
+					<DataHistory>Use</DataHistory>
 				</Properties>
 			</Attribute>
 			<Attribute uuid="49be778c-eaf7-4d5b-89b8-8f4ed299808d">
@@ -278,6 +285,7 @@
 					<ChoiceHistoryOnInput>Auto</ChoiceHistoryOnInput>
 					<Indexing>DontIndex</Indexing>
 					<FullTextSearch>Use</FullTextSearch>
+					<DataHistory>Use</DataHistory>
 				</Properties>
 			</Attribute>
 			<Attribute uuid="0eab74cd-8b87-4f33-b654-e2462eadb93c">
@@ -320,6 +328,7 @@
 					<ChoiceHistoryOnInput>Auto</ChoiceHistoryOnInput>
 					<Indexing>DontIndex</Indexing>
 					<FullTextSearch>Use</FullTextSearch>
+					<DataHistory>Use</DataHistory>
 				</Properties>
 			</Attribute>
 			<Attribute uuid="38869a55-cc19-486e-ad4d-f94b57d12380">
@@ -362,6 +371,7 @@
 					<ChoiceHistoryOnInput>Auto</ChoiceHistoryOnInput>
 					<Indexing>DontIndex</Indexing>
 					<FullTextSearch>Use</FullTextSearch>
+					<DataHistory>Use</DataHistory>
 				</Properties>
 			</Attribute>
 			<Attribute uuid="75999678-e834-4da1-8165-d531a3a9d58e">
@@ -404,6 +414,7 @@
 					<ChoiceHistoryOnInput>Auto</ChoiceHistoryOnInput>
 					<Indexing>DontIndex</Indexing>
 					<FullTextSearch>Use</FullTextSearch>
+					<DataHistory>Use</DataHistory>
 				</Properties>
 			</Attribute>
 			<Attribute uuid="6f59ec1a-d33b-49cf-af29-eb922e83c8cf">
@@ -446,6 +457,7 @@
 					<ChoiceHistoryOnInput>Auto</ChoiceHistoryOnInput>
 					<Indexing>DontIndex</Indexing>
 					<FullTextSearch>Use</FullTextSearch>
+					<DataHistory>Use</DataHistory>
 				</Properties>
 			</Attribute>
 			<Attribute uuid="660d5d34-98ae-4ec4-81b1-1558633bef2f">
@@ -484,6 +496,7 @@
 					<ChoiceHistoryOnInput>Auto</ChoiceHistoryOnInput>
 					<Indexing>DontIndex</Indexing>
 					<FullTextSearch>Use</FullTextSearch>
+					<DataHistory>Use</DataHistory>
 				</Properties>
 			</Attribute>
 			<Attribute uuid="14a43b6a-975c-49ec-b75d-aa593e017dde">
@@ -527,6 +540,7 @@
 					<ChoiceHistoryOnInput>Auto</ChoiceHistoryOnInput>
 					<Indexing>DontIndex</Indexing>
 					<FullTextSearch>Use</FullTextSearch>
+					<DataHistory>Use</DataHistory>
 				</Properties>
 			</Attribute>
 			<Attribute uuid="a937cf4f-f53b-48f4-b265-ce1324402889">
@@ -565,6 +579,7 @@
 					<ChoiceHistoryOnInput>Auto</ChoiceHistoryOnInput>
 					<Indexing>DontIndex</Indexing>
 					<FullTextSearch>Use</FullTextSearch>
+					<DataHistory>Use</DataHistory>
 				</Properties>
 			</Attribute>
 			<Attribute uuid="2b665f66-b372-45ca-b529-342bcda283f2">
@@ -607,6 +622,7 @@
 					<ChoiceHistoryOnInput>Auto</ChoiceHistoryOnInput>
 					<Indexing>DontIndex</Indexing>
 					<FullTextSearch>Use</FullTextSearch>
+					<DataHistory>Use</DataHistory>
 				</Properties>
 			</Attribute>
 			<Attribute uuid="573dc375-f396-4613-a8af-370cbdb5e7a0">
@@ -645,6 +661,7 @@
 					<ChoiceHistoryOnInput>Auto</ChoiceHistoryOnInput>
 					<Indexing>DontIndex</Indexing>
 					<FullTextSearch>Use</FullTextSearch>
+					<DataHistory>Use</DataHistory>
 				</Properties>
 			</Attribute>
 			<Attribute uuid="5f695d76-a24f-43df-9bfe-60bebc2d6f1d">
@@ -683,6 +700,7 @@
 					<ChoiceHistoryOnInput>Auto</ChoiceHistoryOnInput>
 					<Indexing>DontIndex</Indexing>
 					<FullTextSearch>Use</FullTextSearch>
+					<DataHistory>Use</DataHistory>
 				</Properties>
 			</Attribute>
 			<Attribute uuid="61726a92-a742-4678-b1a9-b20cc118f060">
@@ -725,11 +743,97 @@
 					<ChoiceHistoryOnInput>Auto</ChoiceHistoryOnInput>
 					<Indexing>DontIndex</Indexing>
 					<FullTextSearch>Use</FullTextSearch>
+					<DataHistory>Use</DataHistory>
 				</Properties>
 			</Attribute>
-			<Form>ФормаДокумента1</Form>
-			<Form>ФормаСпискаУФ</Form>
-			<Form>ФормаДокументаУФ</Form>
+			<Attribute uuid="04d4737f-3bb2-43a7-a900-d9127522df29">
+				<Properties>
+					<Name>ИмяФайлаЗапрос</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Имя файла запрос</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>150</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+					<PasswordMode>false</PasswordMode>
+					<Format/>
+					<EditFormat/>
+					<ToolTip/>
+					<MarkNegatives>false</MarkNegatives>
+					<Mask/>
+					<MultiLine>false</MultiLine>
+					<ExtendedEdit>false</ExtendedEdit>
+					<MinValue xsi:nil="true"/>
+					<MaxValue xsi:nil="true"/>
+					<FillFromFillingValue>false</FillFromFillingValue>
+					<FillValue xsi:type="xs:string"/>
+					<FillChecking>DontCheck</FillChecking>
+					<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+					<ChoiceParameterLinks/>
+					<ChoiceParameters/>
+					<QuickChoice>Auto</QuickChoice>
+					<CreateOnInput>Auto</CreateOnInput>
+					<ChoiceForm/>
+					<LinkByType/>
+					<ChoiceHistoryOnInput>Auto</ChoiceHistoryOnInput>
+					<Indexing>DontIndex</Indexing>
+					<FullTextSearch>Use</FullTextSearch>
+					<DataHistory>Use</DataHistory>
+				</Properties>
+			</Attribute>
+			<Attribute uuid="8c50efbd-127c-45ed-a284-8345f1642332">
+				<Properties>
+					<Name>ИмяФайлаОтвет</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Имя файла ответ</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>150</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+					<PasswordMode>false</PasswordMode>
+					<Format/>
+					<EditFormat/>
+					<ToolTip/>
+					<MarkNegatives>false</MarkNegatives>
+					<Mask/>
+					<MultiLine>false</MultiLine>
+					<ExtendedEdit>false</ExtendedEdit>
+					<MinValue xsi:nil="true"/>
+					<MaxValue xsi:nil="true"/>
+					<FillFromFillingValue>false</FillFromFillingValue>
+					<FillValue xsi:type="xs:string"/>
+					<FillChecking>DontCheck</FillChecking>
+					<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+					<ChoiceParameterLinks/>
+					<ChoiceParameters/>
+					<QuickChoice>Auto</QuickChoice>
+					<CreateOnInput>Auto</CreateOnInput>
+					<ChoiceForm/>
+					<LinkByType/>
+					<ChoiceHistoryOnInput>Auto</ChoiceHistoryOnInput>
+					<Indexing>DontIndex</Indexing>
+					<FullTextSearch>Use</FullTextSearch>
+					<DataHistory>Use</DataHistory>
+				</Properties>
+			</Attribute>
+			<Form>ФормаСписка</Form>
+			<Form>ФормаДокумента</Form>
 			<TabularSection uuid="327bcbc8-1362-432d-9c67-7207cb835ab0">
 				<InternalInfo>
 					<xr:GeneratedType name="DocumentTabularSection.ВСД2_Производство.Продукция" category="TabularSection">
@@ -768,6 +872,7 @@
 							<xr:ChoiceHistoryOnInput>Auto</xr:ChoiceHistoryOnInput>
 							<xr:EditFormat/>
 							<xr:PasswordMode>false</xr:PasswordMode>
+							<xr:DataHistory>Use</xr:DataHistory>
 							<xr:MarkNegatives>false</xr:MarkNegatives>
 							<xr:MinValue xsi:nil="true"/>
 							<xr:Synonym/>
@@ -822,6 +927,7 @@
 							<ChoiceHistoryOnInput>Auto</ChoiceHistoryOnInput>
 							<Indexing>DontIndex</Indexing>
 							<FullTextSearch>Use</FullTextSearch>
+							<DataHistory>Use</DataHistory>
 						</Properties>
 					</Attribute>
 					<Attribute uuid="1b187333-a412-4225-b117-e6c77ded33d0">
@@ -858,6 +964,7 @@
 							<ChoiceHistoryOnInput>Auto</ChoiceHistoryOnInput>
 							<Indexing>DontIndex</Indexing>
 							<FullTextSearch>Use</FullTextSearch>
+							<DataHistory>Use</DataHistory>
 						</Properties>
 					</Attribute>
 					<Attribute uuid="e965444e-eb83-4058-9fd3-54f347e73ccd">
@@ -894,6 +1001,7 @@
 							<ChoiceHistoryOnInput>Auto</ChoiceHistoryOnInput>
 							<Indexing>DontIndex</Indexing>
 							<FullTextSearch>Use</FullTextSearch>
+							<DataHistory>Use</DataHistory>
 						</Properties>
 					</Attribute>
 					<Attribute uuid="5f699bee-1710-4552-a0d4-4ba0993043b4">
@@ -934,6 +1042,7 @@
 							<ChoiceHistoryOnInput>Auto</ChoiceHistoryOnInput>
 							<Indexing>DontIndex</Indexing>
 							<FullTextSearch>Use</FullTextSearch>
+							<DataHistory>Use</DataHistory>
 						</Properties>
 					</Attribute>
 					<Attribute uuid="bd0dbc02-affb-497d-ada9-d0bd396f1219">
@@ -970,6 +1079,7 @@
 							<ChoiceHistoryOnInput>Auto</ChoiceHistoryOnInput>
 							<Indexing>DontIndex</Indexing>
 							<FullTextSearch>Use</FullTextSearch>
+							<DataHistory>Use</DataHistory>
 						</Properties>
 					</Attribute>
 					<Attribute uuid="ebec6538-0916-4ae6-85d3-026901b1329f">
@@ -1011,6 +1121,7 @@
 							<ChoiceHistoryOnInput>Auto</ChoiceHistoryOnInput>
 							<Indexing>DontIndex</Indexing>
 							<FullTextSearch>Use</FullTextSearch>
+							<DataHistory>Use</DataHistory>
 						</Properties>
 					</Attribute>
 					<Attribute uuid="a049cbb5-a209-4a52-a3eb-8e51be5a9045">
@@ -1047,6 +1158,7 @@
 							<ChoiceHistoryOnInput>Auto</ChoiceHistoryOnInput>
 							<Indexing>DontIndex</Indexing>
 							<FullTextSearch>Use</FullTextSearch>
+							<DataHistory>Use</DataHistory>
 						</Properties>
 					</Attribute>
 					<Attribute uuid="6f0a6a55-a2ed-4acb-819d-30e9d59e7074">
@@ -1083,6 +1195,7 @@
 							<ChoiceHistoryOnInput>Auto</ChoiceHistoryOnInput>
 							<Indexing>DontIndex</Indexing>
 							<FullTextSearch>Use</FullTextSearch>
+							<DataHistory>Use</DataHistory>
 						</Properties>
 					</Attribute>
 					<Attribute uuid="d72d61b3-362a-4f99-89c7-8118ea3abffb">
@@ -1119,6 +1232,7 @@
 							<ChoiceHistoryOnInput>Auto</ChoiceHistoryOnInput>
 							<Indexing>DontIndex</Indexing>
 							<FullTextSearch>Use</FullTextSearch>
+							<DataHistory>Use</DataHistory>
 						</Properties>
 					</Attribute>
 					<Attribute uuid="f2014d74-35ca-4296-b00b-cd4f35eaeaf5">
@@ -1158,6 +1272,7 @@
 							<ChoiceHistoryOnInput>Auto</ChoiceHistoryOnInput>
 							<Indexing>DontIndex</Indexing>
 							<FullTextSearch>Use</FullTextSearch>
+							<DataHistory>Use</DataHistory>
 						</Properties>
 					</Attribute>
 					<Attribute uuid="5ccb11e5-a15c-41f9-9523-3253f653433e">
@@ -1197,6 +1312,7 @@
 							<ChoiceHistoryOnInput>Auto</ChoiceHistoryOnInput>
 							<Indexing>DontIndex</Indexing>
 							<FullTextSearch>Use</FullTextSearch>
+							<DataHistory>Use</DataHistory>
 						</Properties>
 					</Attribute>
 					<Attribute uuid="16dfd6b5-21d0-4c73-a0ca-87cc41bb9610">
@@ -1236,6 +1352,7 @@
 							<ChoiceHistoryOnInput>Auto</ChoiceHistoryOnInput>
 							<Indexing>DontIndex</Indexing>
 							<FullTextSearch>Use</FullTextSearch>
+							<DataHistory>Use</DataHistory>
 						</Properties>
 					</Attribute>
 					<Attribute uuid="6a8d6bea-84d1-410d-bf38-782d4e7e2455">
@@ -1275,6 +1392,7 @@
 							<ChoiceHistoryOnInput>Auto</ChoiceHistoryOnInput>
 							<Indexing>DontIndex</Indexing>
 							<FullTextSearch>Use</FullTextSearch>
+							<DataHistory>Use</DataHistory>
 						</Properties>
 					</Attribute>
 				</ChildObjects>
@@ -1317,6 +1435,7 @@
 							<xr:ChoiceHistoryOnInput>Auto</xr:ChoiceHistoryOnInput>
 							<xr:EditFormat/>
 							<xr:PasswordMode>false</xr:PasswordMode>
+							<xr:DataHistory>Use</xr:DataHistory>
 							<xr:MarkNegatives>false</xr:MarkNegatives>
 							<xr:MinValue xsi:nil="true"/>
 							<xr:Synonym/>
@@ -1371,6 +1490,7 @@
 							<ChoiceHistoryOnInput>Auto</ChoiceHistoryOnInput>
 							<Indexing>DontIndex</Indexing>
 							<FullTextSearch>Use</FullTextSearch>
+							<DataHistory>Use</DataHistory>
 						</Properties>
 					</Attribute>
 					<Attribute uuid="c61822dd-92d9-406b-b602-66dcf524280c">
@@ -1407,6 +1527,7 @@
 							<ChoiceHistoryOnInput>Auto</ChoiceHistoryOnInput>
 							<Indexing>DontIndex</Indexing>
 							<FullTextSearch>Use</FullTextSearch>
+							<DataHistory>Use</DataHistory>
 						</Properties>
 					</Attribute>
 					<Attribute uuid="d23ff275-718b-419e-9b29-4ce55eabc5a0">
@@ -1443,6 +1564,7 @@
 							<ChoiceHistoryOnInput>Auto</ChoiceHistoryOnInput>
 							<Indexing>DontIndex</Indexing>
 							<FullTextSearch>Use</FullTextSearch>
+							<DataHistory>Use</DataHistory>
 						</Properties>
 					</Attribute>
 					<Attribute uuid="e74351c6-1591-4c1c-af5b-28a769ff2f12">
@@ -1479,6 +1601,7 @@
 							<ChoiceHistoryOnInput>Auto</ChoiceHistoryOnInput>
 							<Indexing>DontIndex</Indexing>
 							<FullTextSearch>Use</FullTextSearch>
+							<DataHistory>Use</DataHistory>
 						</Properties>
 					</Attribute>
 					<Attribute uuid="00e27fa9-84c0-4870-8e39-b17481b9c3e9">
@@ -1515,6 +1638,7 @@
 							<ChoiceHistoryOnInput>Auto</ChoiceHistoryOnInput>
 							<Indexing>DontIndex</Indexing>
 							<FullTextSearch>Use</FullTextSearch>
+							<DataHistory>Use</DataHistory>
 						</Properties>
 					</Attribute>
 					<Attribute uuid="9d20ff4a-58f9-4097-8992-b62508dd1d75">
@@ -1556,6 +1680,7 @@
 							<ChoiceHistoryOnInput>Auto</ChoiceHistoryOnInput>
 							<Indexing>DontIndex</Indexing>
 							<FullTextSearch>Use</FullTextSearch>
+							<DataHistory>Use</DataHistory>
 						</Properties>
 					</Attribute>
 					<Attribute uuid="b98d2192-84df-439b-9668-afaad8805f0f">
@@ -1592,6 +1717,7 @@
 							<ChoiceHistoryOnInput>Auto</ChoiceHistoryOnInput>
 							<Indexing>DontIndex</Indexing>
 							<FullTextSearch>Use</FullTextSearch>
+							<DataHistory>Use</DataHistory>
 						</Properties>
 					</Attribute>
 				</ChildObjects>
@@ -1634,6 +1760,7 @@
 							<xr:ChoiceHistoryOnInput>Auto</xr:ChoiceHistoryOnInput>
 							<xr:EditFormat/>
 							<xr:PasswordMode>false</xr:PasswordMode>
+							<xr:DataHistory>Use</xr:DataHistory>
 							<xr:MarkNegatives>false</xr:MarkNegatives>
 							<xr:MinValue xsi:nil="true"/>
 							<xr:Synonym/>
@@ -1686,6 +1813,7 @@
 							<ChoiceHistoryOnInput>Auto</ChoiceHistoryOnInput>
 							<Indexing>DontIndex</Indexing>
 							<FullTextSearch>Use</FullTextSearch>
+							<DataHistory>Use</DataHistory>
 						</Properties>
 					</Attribute>
 					<Attribute uuid="f632b420-5c5e-421a-9b55-73d8f283570e">
@@ -1722,6 +1850,7 @@
 							<ChoiceHistoryOnInput>Auto</ChoiceHistoryOnInput>
 							<Indexing>DontIndex</Indexing>
 							<FullTextSearch>Use</FullTextSearch>
+							<DataHistory>Use</DataHistory>
 						</Properties>
 					</Attribute>
 					<Attribute uuid="c95bf978-feeb-4d74-9d6f-95f2d5e207ce">
@@ -1758,6 +1887,7 @@
 							<ChoiceHistoryOnInput>Auto</ChoiceHistoryOnInput>
 							<Indexing>DontIndex</Indexing>
 							<FullTextSearch>Use</FullTextSearch>
+							<DataHistory>Use</DataHistory>
 						</Properties>
 					</Attribute>
 					<Attribute uuid="abd2c0d9-95b7-4580-8d5f-1d9d3ec22f88">
@@ -1799,6 +1929,7 @@
 							<ChoiceHistoryOnInput>Auto</ChoiceHistoryOnInput>
 							<Indexing>DontIndex</Indexing>
 							<FullTextSearch>Use</FullTextSearch>
+							<DataHistory>Use</DataHistory>
 						</Properties>
 					</Attribute>
 				</ChildObjects>
@@ -1841,6 +1972,7 @@
 							<xr:ChoiceHistoryOnInput>Auto</xr:ChoiceHistoryOnInput>
 							<xr:EditFormat/>
 							<xr:PasswordMode>false</xr:PasswordMode>
+							<xr:DataHistory>Use</xr:DataHistory>
 							<xr:MarkNegatives>false</xr:MarkNegatives>
 							<xr:MinValue xsi:nil="true"/>
 							<xr:Synonym/>
@@ -1888,6 +2020,7 @@
 							<ChoiceHistoryOnInput>Auto</ChoiceHistoryOnInput>
 							<Indexing>DontIndex</Indexing>
 							<FullTextSearch>Use</FullTextSearch>
+							<DataHistory>Use</DataHistory>
 						</Properties>
 					</Attribute>
 					<Attribute uuid="416b04c3-c3d6-439a-9c09-2c39dce29ba8">
@@ -1924,6 +2057,7 @@
 							<ChoiceHistoryOnInput>Auto</ChoiceHistoryOnInput>
 							<Indexing>DontIndex</Indexing>
 							<FullTextSearch>Use</FullTextSearch>
+							<DataHistory>Use</DataHistory>
 						</Properties>
 					</Attribute>
 					<Attribute uuid="8f5c8f88-f02a-45c2-9c36-e22424d5595a">
@@ -1964,6 +2098,7 @@
 							<ChoiceHistoryOnInput>Auto</ChoiceHistoryOnInput>
 							<Indexing>DontIndex</Indexing>
 							<FullTextSearch>Use</FullTextSearch>
+							<DataHistory>Use</DataHistory>
 						</Properties>
 					</Attribute>
 					<Attribute uuid="e9885dd2-f144-448a-a1f3-bb4c171133f1">
@@ -2005,6 +2140,7 @@
 							<ChoiceHistoryOnInput>Auto</ChoiceHistoryOnInput>
 							<Indexing>DontIndex</Indexing>
 							<FullTextSearch>Use</FullTextSearch>
+							<DataHistory>Use</DataHistory>
 						</Properties>
 					</Attribute>
 				</ChildObjects>
