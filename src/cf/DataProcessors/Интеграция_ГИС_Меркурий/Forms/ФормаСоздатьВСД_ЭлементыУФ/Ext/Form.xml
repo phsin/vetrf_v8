@@ -418,11 +418,13 @@
 												</InputField>
 												<InputField name="ВыбСрокГодности" id="115">
 													<DataPath>ВыбСрокГодности</DataPath>
+													<Width>20</Width>
 													<ContextMenu name="ВыбСрокГодностиКонтекстноеМеню" id="116"/>
 													<ExtendedTooltip name="ВыбСрокГодностиРасширеннаяПодсказка" id="117"/>
 												</InputField>
 												<InputField name="ВыбТермическиеУсловия" id="118">
 													<DataPath>ВыбТермическиеУсловия</DataPath>
+													<Width>20</Width>
 													<ListChoiceMode>true</ListChoiceMode>
 													<MinValue xsi:type="xs:decimal">1</MinValue>
 													<MaxValue xsi:type="xs:decimal">4</MaxValue>

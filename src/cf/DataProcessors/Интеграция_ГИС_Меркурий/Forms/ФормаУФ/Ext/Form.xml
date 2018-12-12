@@ -26,6 +26,37 @@
 		<Event name="OnOpen">ПриОткрытии</Event>
 	</Events>
 	<ChildItems>
+		<UsualGroup name="Группа5" id="491">
+			<Group>Horizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="Группа5РасширеннаяПодсказка" id="492"/>
+			<ChildItems>
+				<InputField name="Отправитель_ПлощадкаНаФорме" id="377">
+					<DataPath>Объект.Отправитель_Площадка</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Активная Площадка</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="Отправитель_ПлощадкаНаФормеКонтекстноеМеню" id="378"/>
+					<ExtendedTooltip name="Отправитель_ПлощадкаНаФормеРасширеннаяПодсказка" id="379"/>
+					<Events>
+						<Event name="StartChoice">Отправитель_ПлощадкаНаФормеНачалоВыбора</Event>
+					</Events>
+				</InputField>
+				<InputField name="Организация" id="70">
+					<DataPath>Объект.Организация</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ОрганизацияКонтекстноеМеню" id="71"/>
+					<ExtendedTooltip name="ОрганизацияРасширеннаяПодсказка" id="72"/>
+					<Events>
+						<Event name="OnChange">ОрганизацияПриИзменении</Event>
+					</Events>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
 		<UsualGroup name="Группа6" id="231">
 			<ExtendedTooltip name="Группа6РасширеннаяПодсказка" id="232"/>
 			<ChildItems>
@@ -66,11 +97,13 @@
 									<GroupHorizontalAlign>Left</GroupHorizontalAlign>
 									<Group>Vertical</Group>
 									<HorizontalAlign>Left</HorizontalAlign>
+									<Representation>None</Representation>
 									<ShowTitle>false</ShowTitle>
 									<ExtendedTooltip name="Группа10РасширеннаяПодсказка" id="256"/>
 									<ChildItems>
 										<UsualGroup name="Группа17" id="307">
 											<Group>Horizontal</Group>
+											<Representation>None</Representation>
 											<ShowTitle>false</ShowTitle>
 											<ExtendedTooltip name="Группа17РасширеннаяПодсказка" id="308"/>
 											<ChildItems>
@@ -186,6 +219,7 @@
 										</UsualGroup>
 										<UsualGroup name="Группа20" id="346">
 											<Group>Vertical</Group>
+											<Representation>None</Representation>
 											<ShowTitle>false</ShowTitle>
 											<ExtendedTooltip name="Группа20РасширеннаяПодсказка" id="347"/>
 											<ChildItems>
@@ -321,11 +355,13 @@
 								</UsualGroup>
 								<UsualGroup name="Группа4" id="144">
 									<Group>Vertical</Group>
+									<Representation>None</Representation>
 									<ShowTitle>false</ShowTitle>
 									<ExtendedTooltip name="Группа4РасширеннаяПодсказка" id="145"/>
 									<ChildItems>
 										<UsualGroup name="Группа7" id="236">
 											<Group>Horizontal</Group>
+											<Representation>None</Representation>
 											<ShowTitle>false</ShowTitle>
 											<ExtendedTooltip name="Группа7РасширеннаяПодсказка" id="237"/>
 											<ChildItems>
@@ -337,8 +373,10 @@
 															<v8:content>С</v8:content>
 														</v8:item>
 													</Title>
-													<TitleLocation>Top</TitleLocation>
+													<TitleLocation>Left</TitleLocation>
 													<EditMode>EnterOnInput</EditMode>
+													<MaxWidth>10</MaxWidth>
+													<MultiLine>false</MultiLine>
 													<ContextMenu name="ДатаНачалаОтбораКонтекстноеМеню" id="74"/>
 													<ExtendedTooltip name="ДатаНачалаОтбораРасширеннаяПодсказка" id="75"/>
 													<Events>
@@ -353,8 +391,9 @@
 															<v8:content>По</v8:content>
 														</v8:item>
 													</Title>
-													<TitleLocation>Top</TitleLocation>
+													<TitleLocation>Left</TitleLocation>
 													<EditMode>EnterOnInput</EditMode>
+													<MultiLine>false</MultiLine>
 													<ContextMenu name="ДатаОкончанияОтбораКонтекстноеМеню" id="77"/>
 													<ExtendedTooltip name="ДатаОкончанияОтбораРасширеннаяПодсказка" id="78"/>
 													<Events>
@@ -374,13 +413,15 @@
 												<InputField name="Маршрут1" id="309">
 													<DataPath>Объект.Маршрут</DataPath>
 													<Enabled>false</Enabled>
-													<TitleLocation>Top</TitleLocation>
+													<TitleLocation>Left</TitleLocation>
 													<ToolTip>
 														<v8:item>
 															<v8:lang>ru</v8:lang>
 															<v8:content>Фильтрация документов Реализации по выбранному Маршруту</v8:content>
 														</v8:item>
 													</ToolTip>
+													<MultiLine>false</MultiLine>
+													<ExtendedEdit>false</ExtendedEdit>
 													<ContextMenu name="Маршрут1КонтекстноеМеню" id="310"/>
 													<ExtendedTooltip name="Маршрут1РасширеннаяПодсказка" id="311"/>
 												</InputField>
@@ -563,8 +604,12 @@
 							<ExtendedTooltip name="ГрПартииРасширеннаяПодсказка" id="190"/>
 							<ChildItems>
 								<UsualGroup name="Группа18" id="334">
+									<HorizontalStretch>true</HorizontalStretch>
 									<Group>Vertical</Group>
+									<Representation>None</Representation>
+									<ChildItemsWidth>Equal</ChildItemsWidth>
 									<ShowTitle>false</ShowTitle>
+									<ThroughAlign>Use</ThroughAlign>
 									<ExtendedTooltip name="Группа18РасширеннаяПодсказка" id="335"/>
 									<ChildItems>
 										<UsualGroup name="Группа23" id="352">
@@ -623,6 +668,7 @@
 													<v8:content>Переместить от Поставщика</v8:content>
 												</v8:item>
 											</Title>
+											<Group>Vertical</Group>
 											<ExtendedTooltip name="Группа25РасширеннаяПодсказка" id="359"/>
 											<ChildItems>
 												<Button name="кнПереместитьОтПоставщика" id="360">
@@ -636,6 +682,7 @@
 								</UsualGroup>
 								<UsualGroup name="Группа19" id="336">
 									<Group>Vertical</Group>
+									<Representation>None</Representation>
 									<ShowTitle>false</ShowTitle>
 									<ExtendedTooltip name="Группа19РасширеннаяПодсказка" id="337"/>
 									<ChildItems>
@@ -880,26 +927,14 @@
 								</UsualGroup>
 								<UsualGroup name="Группа26" id="375">
 									<Group>Vertical</Group>
+									<Representation>None</Representation>
 									<ShowTitle>false</ShowTitle>
 									<ExtendedTooltip name="Группа26РасширеннаяПодсказка" id="376"/>
 									<ChildItems>
-										<InputField name="Отправитель_ПлощадкаНаФорме" id="377">
-											<DataPath>Объект.Отправитель_Площадка</DataPath>
-											<Title>
-												<v8:item>
-													<v8:lang>ru</v8:lang>
-													<v8:content>Активная Площадка</v8:content>
-												</v8:item>
-											</Title>
-											<ContextMenu name="Отправитель_ПлощадкаНаФормеКонтекстноеМеню" id="378"/>
-											<ExtendedTooltip name="Отправитель_ПлощадкаНаФормеРасширеннаяПодсказка" id="379"/>
-											<Events>
-												<Event name="StartChoice">Отправитель_ПлощадкаНаФормеНачалоВыбора</Event>
-											</Events>
-										</InputField>
 										<UsualGroup name="Группа27" id="380">
 											<Group>Horizontal</Group>
 											<Representation>None</Representation>
+											<ShowTitle>false</ShowTitle>
 											<ExtendedTooltip name="Группа27РасширеннаяПодсказка" id="381"/>
 											<ChildItems>
 												<UsualGroup name="Группа12" id="269">
@@ -981,6 +1016,14 @@
 																	<ContextMenu name="ПартииСмещениеКонтекстноеМеню" id="283"/>
 																	<ExtendedTooltip name="ПартииСмещениеРасширеннаяПодсказка" id="284"/>
 																</InputField>
+															</ChildItems>
+														</UsualGroup>
+														<UsualGroup name="Группа3" id="483">
+															<Group>Vertical</Group>
+															<Representation>None</Representation>
+															<ShowTitle>false</ShowTitle>
+															<ExtendedTooltip name="Группа3РасширеннаяПодсказка" id="484"/>
+															<ChildItems>
 																<Button name="кнПолучитьПартии" id="285">
 																	<Type>UsualButton</Type>
 																	<CommandName>Form.Command.кнПолучитьПартии</CommandName>
@@ -992,14 +1035,6 @@
 																	</Title>
 																	<ExtendedTooltip name="кнПолучитьПартииРасширеннаяПодсказка" id="286"/>
 																</Button>
-															</ChildItems>
-														</UsualGroup>
-														<UsualGroup name="Группа3" id="483">
-															<Group>Vertical</Group>
-															<Representation>None</Representation>
-															<ShowTitle>false</ShowTitle>
-															<ExtendedTooltip name="Группа3РасширеннаяПодсказка" id="484"/>
-															<ChildItems>
 																<Button name="кнПолучитьПартии14" id="481">
 																	<Type>UsualButton</Type>
 																	<CommandName>Form.Command.кнПолучитьПартии14</CommandName>
@@ -2008,15 +2043,6 @@
 											<CommandName>Form.Command.СохранитьПараметры</CommandName>
 											<ExtendedTooltip name="СохранитьПараметрыРасширеннаяПодсказка" id="241"/>
 										</Button>
-										<InputField name="Организация" id="70">
-											<DataPath>Объект.Организация</DataPath>
-											<EditMode>EnterOnInput</EditMode>
-											<ContextMenu name="ОрганизацияКонтекстноеМеню" id="71"/>
-											<ExtendedTooltip name="ОрганизацияРасширеннаяПодсказка" id="72"/>
-											<Events>
-												<Event name="OnChange">ОрганизацияПриИзменении</Event>
-											</Events>
-										</InputField>
 										<LabelField name="ВерсияОбработки" id="463">
 											<DataPath>ВерсияОбработки</DataPath>
 											<Title>
