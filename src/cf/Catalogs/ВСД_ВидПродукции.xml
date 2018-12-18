@@ -298,10 +298,10 @@
 			<SearchStringModeOnInputByString>Begin</SearchStringModeOnInputByString>
 			<FullTextSearchOnInputByString>DontUse</FullTextSearchOnInputByString>
 			<ChoiceDataGetModeOnInputByString>Directly</ChoiceDataGetModeOnInputByString>
-			<DefaultObjectForm/>
+			<DefaultObjectForm>Catalog.ВСД_ВидПродукции.Form.ФормаЭлемента</DefaultObjectForm>
 			<DefaultFolderForm/>
 			<DefaultListForm>Catalog.ВСД_ВидПродукции.Form.ФормаСписка</DefaultListForm>
-			<DefaultChoiceForm>Catalog.ВСД_ВидПродукции.Form.ФормаСписка</DefaultChoiceForm>
+			<DefaultChoiceForm>Catalog.ВСД_ВидПродукции.Form.ФормаВыбора</DefaultChoiceForm>
 			<DefaultFolderChoiceForm/>
 			<AuxiliaryObjectForm/>
 			<AuxiliaryFolderForm/>
@@ -496,6 +496,8 @@
 				</Properties>
 			</Attribute>
 			<Form>ФормаСписка</Form>
+			<Form>ФормаВыбора</Form>
+			<Form>ФормаЭлемента</Form>
 		</ChildObjects>
 	</Catalog>
 </MetaDataObject>

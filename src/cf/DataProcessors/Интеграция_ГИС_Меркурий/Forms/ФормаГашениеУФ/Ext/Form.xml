@@ -9,6 +9,7 @@
 	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
 	<Customizable>false</Customizable>
 	<CommandBarLocation>None</CommandBarLocation>
+	<ScalingMode>Compact</ScalingMode>
 	<CommandSet>
 		<ExcludedCommand>Abort</ExcludedCommand>
 		<ExcludedCommand>Cancel</ExcludedCommand>
@@ -191,6 +192,8 @@
 												</InputField>
 												<Button name="кнВыбратьПериодВСД" id="372">
 													<Type>UsualButton</Type>
+													<Width>4</Width>
+													<AutoMaxWidth>false</AutoMaxWidth>
 													<CommandName>Form.Command.кнВыбратьПериодВСД</CommandName>
 													<Title>
 														<v8:item>

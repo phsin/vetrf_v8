@@ -16,10 +16,10 @@
 			<Synonym>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>kb99.pro Интеграция ГИС Меркурий</v8:content>
+					<v8:content>kb99.pro Интеграция ГИС Меркурий 8.3 для Управляемых форм</v8:content>
 				</v8:item>
 			</Synonym>
-			<Comment>http://www.kb99.pro версия 1.7.12 от 12/12/2018</Comment>
+			<Comment>http://www.kb99.pro версия 1.7.12 от 16/12/2018</Comment>
 			<UseStandardCommands>true</UseStandardCommands>
 			<DefaultForm>DataProcessor.Интеграция_ГИС_Меркурий.Form.ФормаУФ</DefaultForm>
 			<AuxiliaryForm/>
@@ -2153,6 +2153,44 @@
 					<Comment/>
 					<Type>
 						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+					<PasswordMode>false</PasswordMode>
+					<Format/>
+					<EditFormat/>
+					<ToolTip/>
+					<MarkNegatives>false</MarkNegatives>
+					<Mask/>
+					<MultiLine>false</MultiLine>
+					<ExtendedEdit>false</ExtendedEdit>
+					<MinValue xsi:nil="true"/>
+					<MaxValue xsi:nil="true"/>
+					<FillChecking>DontCheck</FillChecking>
+					<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+					<ChoiceParameterLinks/>
+					<ChoiceParameters/>
+					<QuickChoice>Auto</QuickChoice>
+					<CreateOnInput>Auto</CreateOnInput>
+					<ChoiceForm/>
+					<LinkByType/>
+					<ChoiceHistoryOnInput>Auto</ChoiceHistoryOnInput>
+				</Properties>
+			</Attribute>
+			<Attribute uuid="39217e43-a85f-4c1d-980d-6e31243b2d4b">
+				<Properties>
+					<Name>ПолноеИмяФайлаПереопределения</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Полное имя файла переопределения</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
 					</Type>
 					<PasswordMode>false</PasswordMode>
 					<Format/>
@@ -6790,10 +6828,6 @@
 			<Form>ФормаУФ</Form>
 			<Form>Форма_СоответствияУФ</Form>
 			<Form>ФормаСоздатьВСД_ЭлементыУФ</Form>
-			<Form>Форма_Соответствия</Form>
-			<Form>ФормаГашение</Form>
-			<Form>Форма_ЗагрузкаПлощадок</Form>
-			<Form>Форма</Form>
 			<Form>ФормаГашениеУФ</Form>
 			<Template>Реестр</Template>
 		</ChildObjects>

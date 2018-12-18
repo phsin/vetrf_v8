@@ -101,18 +101,12 @@
 				<xr:Common>false</xr:Common>
 			</Visibility>
 		</Command>
-		<Command name="InformationRegister.ВСД_ОрганизацияПоУмолчанию.StandardCommand.OpenList">
+		<Command name="DataProcessor.ВСД_ЗапускИнтеграции.StandardCommand.Open">
 			<Visibility>
-				<xr:Common>true</xr:Common>
+				<xr:Common>false</xr:Common>
 			</Visibility>
 		</Command>
 	</CommandsVisibility>
-	<CommandsPlacement>
-		<Command name="InformationRegister.ВСД_ОрганизацияПоУмолчанию.StandardCommand.OpenList">
-			<CommandGroup>00000000-0000-0000-0000-000000000000</CommandGroup>
-			<Placement>Auto</Placement>
-		</Command>
-	</CommandsPlacement>
 	<CommandsOrder>
 		<Command name="Document.ВСД.StandardCommand.OpenList">
 			<CommandGroup>NavigationPanelOrdinary</CommandGroup>
@@ -177,12 +171,8 @@
 		<Command name="DocumentJournal.ЖурналВСД.StandardCommand.OpenList">
 			<CommandGroup>NavigationPanelOrdinary</CommandGroup>
 		</Command>
-		<Command name="InformationRegister.ВСД_ОрганизацияПоУмолчанию.StandardCommand.OpenList">
-			<CommandGroup>00000000-0000-0000-0000-000000000000</CommandGroup>
-		</Command>
 	</CommandsOrder>
 	<GroupsOrder>
 		<Group>NavigationPanelOrdinary</Group>
-		<Group>00000000-0000-0000-0000-000000000000</Group>
 	</GroupsOrder>
 </CommandInterface>

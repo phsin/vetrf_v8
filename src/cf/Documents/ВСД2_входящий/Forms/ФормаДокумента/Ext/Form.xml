@@ -100,7 +100,7 @@
 											<ContextMenu name="UUIDКонтекстноеМеню" id="32"/>
 											<ExtendedTooltip name="UUIDРасширеннаяПодсказка" id="33"/>
 										</InputField>
-										<InputField name="ВидВСД" id="39">
+										<CheckBoxField name="ВидВСД" id="39">
 											<DataPath>Объект.ВидВСД</DataPath>
 											<ReadOnly>true</ReadOnly>
 											<Title>
@@ -109,9 +109,10 @@
 													<v8:content>Бумажный</v8:content>
 												</v8:item>
 											</Title>
+											<CheckBoxType>Auto</CheckBoxType>
 											<ContextMenu name="ВидВСДКонтекстноеМеню" id="40"/>
 											<ExtendedTooltip name="ВидВСДРасширеннаяПодсказка" id="41"/>
-										</InputField>
+										</CheckBoxField>
 										<InputField name="ФормаВСД" id="36">
 											<DataPath>Объект.ФормаВСД</DataPath>
 											<ReadOnly>true</ReadOnly>
