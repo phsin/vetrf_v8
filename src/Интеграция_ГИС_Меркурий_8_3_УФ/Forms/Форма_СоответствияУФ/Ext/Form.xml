@@ -1,0 +1,253 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.6">
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<Autofill>false</Autofill>
+	</AutoCommandBar>
+	<ChildItems>
+		<UsualGroup name="Группа1" id="1">
+			<Group>Horizontal</Group>
+			<ExtendedTooltip name="Группа1РасширеннаяПодсказка" id="2"/>
+			<ChildItems>
+				<UsualGroup name="Группа2" id="3">
+					<Group>Vertical</Group>
+					<ExtendedTooltip name="Группа2РасширеннаяПодсказка" id="4"/>
+					<ChildItems>
+						<InputField name="ВыбВСДЭлемент" id="5">
+							<DataPath>ВыбВСДЭлемент</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Номенклатура Меркурий</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="ВыбВСДЭлементКонтекстноеМеню" id="6"/>
+							<ExtendedTooltip name="ВыбВСДЭлементРасширеннаяПодсказка" id="7"/>
+							<Events>
+								<Event name="OnChange">кнПрочитать</Event>
+							</Events>
+						</InputField>
+						<Table name="СзНоменклатура" id="8">
+							<Representation>List</Representation>
+							<Header>false</Header>
+							<HorizontalLines>false</HorizontalLines>
+							<VerticalLines>false</VerticalLines>
+							<DataPath>СзНоменклатура</DataPath>
+							<RowPictureDataPath>СзНоменклатура.Picture</RowPictureDataPath>
+							<CommandSet>
+								<ExcludedCommand>Add</ExcludedCommand>
+								<ExcludedCommand>Change</ExcludedCommand>
+								<ExcludedCommand>CheckAll</ExcludedCommand>
+								<ExcludedCommand>Copy</ExcludedCommand>
+								<ExcludedCommand>CopyToClipboard</ExcludedCommand>
+								<ExcludedCommand>EndEdit</ExcludedCommand>
+								<ExcludedCommand>MoveDown</ExcludedCommand>
+								<ExcludedCommand>MoveUp</ExcludedCommand>
+								<ExcludedCommand>Pickup</ExcludedCommand>
+								<ExcludedCommand>SelectAll</ExcludedCommand>
+								<ExcludedCommand>ShowMultipleSelection</ExcludedCommand>
+								<ExcludedCommand>ShowRowRearrangement</ExcludedCommand>
+								<ExcludedCommand>SortListAsc</ExcludedCommand>
+								<ExcludedCommand>SortListDesc</ExcludedCommand>
+								<ExcludedCommand>UncheckAll</ExcludedCommand>
+							</CommandSet>
+							<ContextMenu name="СзНоменклатураКонтекстноеМеню" id="9"/>
+							<AutoCommandBar name="СзНоменклатураКоманднаяПанель" id="10">
+								<Autofill>false</Autofill>
+								<ChildItems>
+									<Button name="СзНоменклатураДобавить" id="36">
+										<Type>CommandBarButton</Type>
+										<CommandName>8:b0016a68-ec64-4e6d-b905-c71fd62efc4c</CommandName>
+										<ExtendedTooltip name="СзНоменклатураДобавитьРасширеннаяПодсказка" id="37"/>
+									</Button>
+									<Button name="СзНоменклатураУдалить" id="38">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Item.СзНоменклатура.StandardCommand.Delete</CommandName>
+										<ExtendedTooltip name="СзНоменклатураУдалитьРасширеннаяПодсказка" id="39"/>
+									</Button>
+									<Button name="СзНоменклатуракнДобавитьНоменклатуру" id="40">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.кнДобавитьНоменклатуру</CommandName>
+										<Picture>
+											<xr:Ref>StdPicture.CreateListItem</xr:Ref>
+											<xr:LoadTransparent>true</xr:LoadTransparent>
+										</Picture>
+										<ExtendedTooltip name="СзНоменклатуракнДобавитьНоменклатуруРасширеннаяПодсказка" id="41"/>
+									</Button>
+								</ChildItems>
+							</AutoCommandBar>
+							<ExtendedTooltip name="СзНоменклатураРасширеннаяПодсказка" id="11"/>
+							<SearchStringAddition name="СзНоменклатураСтрокаПоиска" id="12">
+								<AdditionSource>
+									<Item>СзНоменклатура</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="СзНоменклатураСтрокаПоискаКонтекстноеМеню" id="13"/>
+								<ExtendedTooltip name="СзНоменклатураСтрокаПоискаРасширеннаяПодсказка" id="14"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="СзНоменклатураСостояниеПросмотра" id="15">
+								<AdditionSource>
+									<Item>СзНоменклатура</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="СзНоменклатураСостояниеПросмотраКонтекстноеМеню" id="16"/>
+								<ExtendedTooltip name="СзНоменклатураСостояниеПросмотраРасширеннаяПодсказка" id="17"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="СзНоменклатураУправлениеПоиском" id="18">
+								<AdditionSource>
+									<Item>СзНоменклатура</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="СзНоменклатураУправлениеПоискомКонтекстноеМеню" id="19"/>
+								<ExtendedTooltip name="СзНоменклатураУправлениеПоискомРасширеннаяПодсказка" id="20"/>
+							</SearchControlAddition>
+							<Events>
+								<Event name="ChoiceProcessing">СзНоменклатураОбработкаВыбора</Event>
+							</Events>
+							<ChildItems>
+								<InputField name="СзНоменклатураЗначение" id="21">
+									<DataPath>СзНоменклатура.Value</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<EditMode>EnterOnInput</EditMode>
+									<TextEdit>false</TextEdit>
+									<ContextMenu name="СзНоменклатураЗначениеКонтекстноеМеню" id="22"/>
+									<ExtendedTooltip name="СзНоменклатураЗначениеРасширеннаяПодсказка" id="23"/>
+									<Events>
+										<Event name="ChoiceProcessing">СзНоменклатураЗначениеОбработкаВыбора</Event>
+									</Events>
+								</InputField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="Группа3" id="26">
+					<Group>Vertical</Group>
+					<ExtendedTooltip name="Группа3РасширеннаяПодсказка" id="27"/>
+					<ChildItems>
+						<Button name="кнПрочитать" id="24">
+							<Type>UsualButton</Type>
+							<CommandName>Form.Command.кнПрочитать</CommandName>
+							<ExtendedTooltip name="кнПрочитатьРасширеннаяПодсказка" id="25"/>
+						</Button>
+						<Button name="кнЗаписатьСоответсвия" id="30">
+							<Type>UsualButton</Type>
+							<CommandName>Form.Command.кнЗаписатьСоответсвия</CommandName>
+							<TextColor>style:SpecialTextColor</TextColor>
+							<Font ref="style:NormalTextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Записать изменения</v8:content>
+								</v8:item>
+							</Title>
+							<ExtendedTooltip name="кнЗаписатьСоответсвияРасширеннаяПодсказка" id="31"/>
+						</Button>
+						<Button name="кнУбратьСоответствия" id="32">
+							<Type>UsualButton</Type>
+							<CommandName>Form.Command.кнУбратьСоответствия</CommandName>
+							<ExtendedTooltip name="кнУбратьСоответствияРасширеннаяПодсказка" id="33"/>
+						</Button>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:ExternalDataProcessorObject.Интеграция_ГИС_Меркурий</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+		</Attribute>
+		<Attribute name="ВыбВСДЭлемент" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выб ВСДЭлемент</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.ВСД_Продукция_Элемент</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="СзНоменклатура" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сз номенклатура</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueListType</v8:Type>
+			</Type>
+			<Settings xsi:type="v8:TypeDescription">
+				<v8:Type>cfg:CatalogRef.Номенклатура</v8:Type>
+			</Settings>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="кнПрочитать" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Показать установленные соответствия Элементу</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Показать установленные соответствия Элементу</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>кнПрочитать</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="кнДобавитьНоменклатуру" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Добавить номенклатуру 1С</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Добавить номенклатуру 1С в список соответсвий</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>кнДобавитьНоменклатуру</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="кнЗаписатьСоответсвия" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Записать соответсвия</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Записать установленные соответсвия в БД</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>кнЗаписатьСоответсвия</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="кнУбратьСоответствия" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Убрать соответствия</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Убрать соответствия выбранной номенклатуры 1С элементу Меркурий</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>кнУбратьСоответствия</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+	</Commands>
+</Form>
