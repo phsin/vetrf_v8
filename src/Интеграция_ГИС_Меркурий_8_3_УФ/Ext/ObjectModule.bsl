@@ -6847,7 +6847,7 @@
 				|        </merc:initiator>
 				|        <base:listOptions>
 				|        <base:count>1000</base:count>
-				|        <base:offset>"+_Смещение+"</base:offset>
+				|        <base:offset>"+СтрЗаменить( _Смещение , Символы.НПП ,"")+"</base:offset>
 				|        </base:listOptions>
 				|        <ent:enterpriseGuid>"+СокрЛП(_Отправитель_Площадка.GUID)+"</ent:enterpriseGuid>
 				|</merc:getStockEntryListRequest>
@@ -10584,7 +10584,7 @@
 	|            </merc:initiator>
 	|            <bs:listOptions>
 	|              <bs:count>1000</bs:count>
-	|              <bs:offset>"+Смещение+"</bs:offset>
+	|              <bs:offset>"+СтрЗаменить( Смещение , Символы.НПП ,"")+"</bs:offset>
 	|            </bs:listOptions>
 	|            <vd:vetDocumentType>"+ vetDocumentType +"</vd:vetDocumentType>
 	|            <vd:vetDocumentStatus>"+ vetDocumentStatus +"</vd:vetDocumentStatus>";
@@ -11190,7 +11190,7 @@
 	|      <ws:getStreetListByLocalityRequest>
 	|         <base:listOptions>
 	|            <base:count>1000</base:count>
-	|            <base:offset>"+Смещение+"</base:offset>
+	|            <base:offset>"+СтрЗаменить( Смещение , Символы.НПП ,"")+"</base:offset>
 	|         </base:listOptions>
 	|         <ikar:localityGuid>" +СокрЛП(Город.GUID)+ "</ikar:localityGuid>
 	|      </ws:getStreetListByLocalityRequest>
