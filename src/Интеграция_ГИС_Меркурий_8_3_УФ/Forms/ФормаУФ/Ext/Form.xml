@@ -650,17 +650,20 @@
 													<v8:content>Транспортные ВСД</v8:content>
 												</v8:item>
 											</Title>
+											<HorizontalStretch>true</HorizontalStretch>
 											<Group>Vertical</Group>
 											<Representation>StrongSeparation</Representation>
 											<ExtendedTooltip name="Группа23РасширеннаяПодсказка" id="353"/>
 											<ChildItems>
 												<Button name="кнСоздатьВСД" id="338">
 													<Type>UsualButton</Type>
+													<HorizontalStretch>true</HorizontalStretch>
 													<CommandName>Form.Command.кнСоздатьВСД</CommandName>
 													<ExtendedTooltip name="кнСоздатьВСДРасширеннаяПодсказка" id="339"/>
 												</Button>
 												<Button name="кнОтправитьВСД1" id="340">
 													<Type>UsualButton</Type>
+													<HorizontalStretch>true</HorizontalStretch>
 													<CommandName>Form.Command.кнОтправитьВСД</CommandName>
 													<ExtendedTooltip name="кнОтправитьВСД1РасширеннаяПодсказка" id="341"/>
 												</Button>
@@ -673,12 +676,14 @@
 													<v8:content>Производственные ВСД</v8:content>
 												</v8:item>
 											</Title>
+											<HorizontalStretch>true</HorizontalStretch>
 											<Group>Vertical</Group>
 											<Representation>StrongSeparation</Representation>
 											<ExtendedTooltip name="Группа24РасширеннаяПодсказка" id="355"/>
 											<ChildItems>
 												<Button name="кнПроизводство" id="342">
 													<Type>UsualButton</Type>
+													<HorizontalStretch>true</HorizontalStretch>
 													<CommandName>Form.Command.кнПроизводство</CommandName>
 													<Title>
 														<v8:item>
@@ -690,6 +695,7 @@
 												</Button>
 												<Button name="кнПроизводствоОтправить" id="356">
 													<Type>UsualButton</Type>
+													<HorizontalStretch>true</HorizontalStretch>
 													<CommandName>Form.Command.кнПроизводствоОтправить</CommandName>
 													<Title>
 														<v8:item>
@@ -701,6 +707,7 @@
 												</Button>
 												<Button name="кнПолучитьОтветВСДПроизводство" id="344">
 													<Type>UsualButton</Type>
+													<HorizontalStretch>true</HorizontalStretch>
 													<CommandName>Form.Command.кнПолучитьОтветВСДПроизводство</CommandName>
 													<Title>
 														<v8:item>
@@ -719,12 +726,14 @@
 													<v8:content>Переместить от Поставщика</v8:content>
 												</v8:item>
 											</Title>
+											<HorizontalStretch>true</HorizontalStretch>
 											<Group>Vertical</Group>
 											<Representation>StrongSeparation</Representation>
 											<ExtendedTooltip name="Группа25РасширеннаяПодсказка" id="359"/>
 											<ChildItems>
 												<Button name="кнПереместитьОтПоставщика" id="360">
 													<Type>UsualButton</Type>
+													<HorizontalStretch>true</HorizontalStretch>
 													<CommandName>Form.Command.кнПереместитьОтПоставщика</CommandName>
 													<Title>
 														<v8:item>
@@ -907,27 +916,32 @@
 												</v8:item>
 											</Title>
 											<TitleLocation>Top</TitleLocation>
+											<HorizontalStretch>true</HorizontalStretch>
 											<OpenButton>true</OpenButton>
 											<ContextMenu name="ВыбранныйХСКонтекстноеМеню" id="249"/>
 											<ExtendedTooltip name="ВыбранныйХСРасширеннаяПодсказка" id="250"/>
 										</InputField>
 										<Button name="ПолучитьГУИД_ХС" id="251">
 											<Type>UsualButton</Type>
+											<HorizontalStretch>true</HorizontalStretch>
 											<CommandName>Form.Command.ПолучитьГУИД_ХС</CommandName>
 											<ExtendedTooltip name="ПолучитьГУИД_ХСРасширеннаяПодсказка" id="252"/>
 										</Button>
 										<Button name="кнХС_Создать" id="393">
 											<Type>UsualButton</Type>
+											<HorizontalStretch>true</HorizontalStretch>
 											<CommandName>Form.Command.кнХС_Создать</CommandName>
 											<ExtendedTooltip name="кнХС_СоздатьРасширеннаяПодсказка" id="394"/>
 										</Button>
 										<Button name="ЗагрузитьПлощадкиПоХС" id="253">
 											<Type>UsualButton</Type>
+											<HorizontalStretch>true</HorizontalStretch>
 											<CommandName>Form.Command.ЗагрузитьПлощадкиПоХС</CommandName>
 											<ExtendedTooltip name="ЗагрузитьПлощадкиПоХСРасширеннаяПодсказка" id="254"/>
 										</Button>
 										<Button name="кнЗагрузитьПлощадкиПоНаименованию" id="362">
 											<Type>UsualButton</Type>
+											<HorizontalStretch>true</HorizontalStretch>
 											<CommandName>Form.Command.кнЗагрузитьПлощадкиПоНаименованию</CommandName>
 											<ExtendedTooltip name="кнЗагрузитьПлощадкиПоНаименованиюРасширеннаяПодсказка" id="363"/>
 										</Button>
@@ -940,6 +954,7 @@
 												</v8:item>
 											</Title>
 											<TitleLocation>Top</TitleLocation>
+											<HorizontalStretch>true</HorizontalStretch>
 											<ContextMenu name="ВыбраннаяПлощадкаКонтекстноеМеню" id="365"/>
 											<ExtendedTooltip name="ВыбраннаяПлощадкаРасширеннаяПодсказка" id="366"/>
 											<Events>
@@ -948,11 +963,13 @@
 										</InputField>
 										<Button name="кнПлощадкаПоХССоздать" id="367">
 											<Type>UsualButton</Type>
+											<HorizontalStretch>true</HorizontalStretch>
 											<CommandName>Form.Command.кнПлощадкаПоХССоздать</CommandName>
 											<ExtendedTooltip name="кнПлощадкаПоХССоздатьРасширеннаяПодсказка" id="368"/>
 										</Button>
 										<Button name="кнСоздатьПлощадкувМеркурий" id="371">
 											<Type>UsualButton</Type>
+											<HorizontalStretch>true</HorizontalStretch>
 											<CommandName>Form.Command.кнСоздатьПлощадкувМеркурий</CommandName>
 											<Title>
 												<v8:item>
@@ -964,6 +981,7 @@
 										</Button>
 										<Button name="кнПривязатьПлощадку" id="369">
 											<Type>UsualButton</Type>
+											<HorizontalStretch>true</HorizontalStretch>
 											<CommandName>Form.Command.кнПривязатьПлощадку</CommandName>
 											<ExtendedTooltip name="кнПривязатьПлощадкуРасширеннаяПодсказка" id="370"/>
 										</Button>
@@ -981,24 +999,35 @@
 											<ShowTitle>false</ShowTitle>
 											<ExtendedTooltip name="Группа27РасширеннаяПодсказка" id="381"/>
 											<ChildItems>
-												<UsualGroup name="Группа12" id="269">
+												<UsualGroup name="ГруппаЗапросПартий" id="269">
 													<Title>
 														<v8:item>
 															<v8:lang>ru</v8:lang>
 															<v8:content>Партии в Меркурий</v8:content>
 														</v8:item>
 													</Title>
+													<ToolTip>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Группа запрос партий</v8:content>
+														</v8:item>
+													</ToolTip>
+													<HorizontalStretch>true</HorizontalStretch>
 													<Group>Vertical</Group>
 													<Representation>StrongSeparation</Representation>
-													<ExtendedTooltip name="Группа12РасширеннаяПодсказка" id="270"/>
+													<ExtendedTooltip name="ГруппаЗапросПартийРасширеннаяПодсказка" id="270"/>
 													<ChildItems>
 														<UsualGroup name="Группа34" id="459">
+															<HorizontalStretch>true</HorizontalStretch>
 															<Group>AlwaysHorizontal</Group>
 															<Representation>None</Representation>
 															<ShowTitle>false</ShowTitle>
 															<ExtendedTooltip name="Группа34РасширеннаяПодсказка" id="460"/>
 															<ChildItems>
 																<UsualGroup name="Группа38" id="521">
+																	<HorizontalStretch>true</HorizontalStretch>
+																	<Group>AlwaysHorizontal</Group>
+																	<Representation>None</Representation>
 																	<ExtendedTooltip name="Группа38РасширеннаяПодсказка" id="522"/>
 																	<ChildItems>
 																		<InputField name="ПартииНач" id="273">
@@ -1011,11 +1040,6 @@
 																			<ContextMenu name="ПартииКонКонтекстноеМеню" id="277"/>
 																			<ExtendedTooltip name="ПартииКонРасширеннаяПодсказка" id="278"/>
 																		</InputField>
-																	</ChildItems>
-																</UsualGroup>
-																<UsualGroup name="Группа39" id="523">
-																	<ExtendedTooltip name="Группа39РасширеннаяПодсказка" id="524"/>
-																	<ChildItems>
 																		<Button name="ВыборПериодаПартии" id="455">
 																			<Type>UsualButton</Type>
 																			<Representation>Picture</Representation>
@@ -1031,11 +1055,29 @@
 															</ChildItems>
 														</UsualGroup>
 														<UsualGroup name="Группа33" id="457">
-															<Group>Vertical</Group>
+															<HorizontalStretch>true</HorizontalStretch>
+															<Group>AlwaysHorizontal</Group>
 															<Representation>None</Representation>
 															<ShowTitle>false</ShowTitle>
 															<ExtendedTooltip name="Группа33РасширеннаяПодсказка" id="458"/>
 															<ChildItems>
+																<InputField name="ПартииСмещение" id="282">
+																	<DataPath>ПартииСмещение</DataPath>
+																	<Title>
+																		<v8:item>
+																			<v8:lang>ru</v8:lang>
+																			<v8:content>Смещение</v8:content>
+																		</v8:item>
+																	</Title>
+																	<ToolTip>
+																		<v8:item>
+																			<v8:lang>ru</v8:lang>
+																			<v8:content>Получить со смещением от первой</v8:content>
+																		</v8:item>
+																	</ToolTip>
+																	<ContextMenu name="ПартииСмещениеКонтекстноеМеню" id="283"/>
+																	<ExtendedTooltip name="ПартииСмещениеРасширеннаяПодсказка" id="284"/>
+																</InputField>
 																<CheckBoxField name="флПартииНенулевые" id="279">
 																	<DataPath>флПартииНенулевые</DataPath>
 																	<Title>
@@ -1054,26 +1096,10 @@
 																	<ContextMenu name="флПартииНенулевыеКонтекстноеМеню" id="280"/>
 																	<ExtendedTooltip name="флПартииНенулевыеРасширеннаяПодсказка" id="281"/>
 																</CheckBoxField>
-																<InputField name="ПартииСмещение" id="282">
-																	<DataPath>ПартииСмещение</DataPath>
-																	<Title>
-																		<v8:item>
-																			<v8:lang>ru</v8:lang>
-																			<v8:content>Смещение</v8:content>
-																		</v8:item>
-																	</Title>
-																	<ToolTip>
-																		<v8:item>
-																			<v8:lang>ru</v8:lang>
-																			<v8:content>Получить со смещением от первой</v8:content>
-																		</v8:item>
-																	</ToolTip>
-																	<ContextMenu name="ПартииСмещениеКонтекстноеМеню" id="283"/>
-																	<ExtendedTooltip name="ПартииСмещениеРасширеннаяПодсказка" id="284"/>
-																</InputField>
 															</ChildItems>
 														</UsualGroup>
 														<UsualGroup name="Группа3" id="483">
+															<HorizontalStretch>true</HorizontalStretch>
 															<Group>Vertical</Group>
 															<Representation>None</Representation>
 															<ShowTitle>false</ShowTitle>
@@ -1081,22 +1107,35 @@
 															<ChildItems>
 																<Button name="кнПолучитьПартии" id="285">
 																	<Type>UsualButton</Type>
+																	<HorizontalStretch>true</HorizontalStretch>
 																	<CommandName>Form.Command.кнПолучитьПартии</CommandName>
 																	<Title>
 																		<v8:item>
 																			<v8:lang>ru</v8:lang>
-																			<v8:content>Получить Партии за период</v8:content>
+																			<v8:content>Получить Партии (v 2.*)</v8:content>
 																		</v8:item>
 																	</Title>
 																	<ExtendedTooltip name="кнПолучитьПартииРасширеннаяПодсказка" id="286"/>
 																</Button>
+															</ChildItems>
+														</UsualGroup>
+														<UsualGroup name="Группа39" id="523">
+															<Title>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>API 1.4</v8:content>
+																</v8:item>
+															</Title>
+															<ExtendedTooltip name="Группа39РасширеннаяПодсказка" id="524"/>
+															<ChildItems>
 																<Button name="кнПолучитьПартии14" id="481">
 																	<Type>UsualButton</Type>
+																	<HorizontalStretch>true</HorizontalStretch>
 																	<CommandName>Form.Command.кнПолучитьПартии14</CommandName>
 																	<Title>
 																		<v8:item>
 																			<v8:lang>ru</v8:lang>
-																			<v8:content>Получить ВСЕ Партии (v1.4)</v8:content>
+																			<v8:content>Получить Партии (Фильтр не учитывается)</v8:content>
 																		</v8:item>
 																	</Title>
 																	<ExtendedTooltip name="кнПолучитьПартии14РасширеннаяПодсказка" id="482"/>
@@ -1117,6 +1156,7 @@
 													<ChildItems>
 														<Button name="кнПолучитьСписокПродукции" id="373">
 															<Type>UsualButton</Type>
+															<HorizontalStretch>true</HorizontalStretch>
 															<CommandName>Form.Command.кнПолучитьСписокПродукции</CommandName>
 															<ExtendedTooltip name="кнПолучитьСписокПродукцииРасширеннаяПодсказка" id="374"/>
 														</Button>
@@ -1124,26 +1164,31 @@
 															<DataPath>ВыбПродукция</DataPath>
 															<TitleLocation>Top</TitleLocation>
 															<MaxWidth>20</MaxWidth>
+															<HorizontalStretch>true</HorizontalStretch>
 															<ContextMenu name="ВыбПродукцияКонтекстноеМеню" id="383"/>
 															<ExtendedTooltip name="ВыбПродукцияРасширеннаяПодсказка" id="384"/>
 														</InputField>
 														<Button name="кнПолучитьИнфоПродукция" id="385">
 															<Type>UsualButton</Type>
+															<HorizontalStretch>true</HorizontalStretch>
 															<CommandName>Form.Command.кнПолучитьИнфоПродукция</CommandName>
 															<ExtendedTooltip name="кнПолучитьИнфоПродукцияРасширеннаяПодсказка" id="386"/>
 														</Button>
 														<Button name="кнИзменитьПродукцию" id="387">
 															<Type>UsualButton</Type>
+															<HorizontalStretch>true</HorizontalStretch>
 															<CommandName>Form.Command.кнИзменитьПродукцию</CommandName>
 															<ExtendedTooltip name="кнИзменитьПродукциюРасширеннаяПодсказка" id="388"/>
 														</Button>
 														<Button name="кнСоздатьПродукцию" id="389">
 															<Type>UsualButton</Type>
+															<HorizontalStretch>true</HorizontalStretch>
 															<CommandName>Form.Command.кнСоздатьПродукцию</CommandName>
 															<ExtendedTooltip name="кнСоздатьПродукциюРасширеннаяПодсказка" id="390"/>
 														</Button>
 														<Button name="кнУдалитьПродукцию" id="391">
 															<Type>UsualButton</Type>
+															<HorizontalStretch>true</HorizontalStretch>
 															<CommandName>Form.Command.кнУдалитьПродукцию</CommandName>
 															<ExtendedTooltip name="кнУдалитьПродукциюРасширеннаяПодсказка" id="392"/>
 														</Button>
@@ -1161,6 +1206,7 @@
 															<ChildItems>
 																<Button name="кнСоздатьВСДЭлементы" id="466">
 																	<Type>UsualButton</Type>
+																	<HorizontalStretch>true</HorizontalStretch>
 																	<CommandName>Form.Command.кнСоздатьВСДЭлементы</CommandName>
 																	<Title>
 																		<v8:item>
