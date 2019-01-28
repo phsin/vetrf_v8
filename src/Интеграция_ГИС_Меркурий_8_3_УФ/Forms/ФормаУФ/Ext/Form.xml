@@ -41,6 +41,7 @@
 							<v8:content>Активная Площадка</v8:content>
 						</v8:item>
 					</Title>
+					<ChoiceHistoryOnInput>DontUse</ChoiceHistoryOnInput>
 					<ContextMenu name="Отправитель_ПлощадкаНаФормеКонтекстноеМеню" id="378"/>
 					<ExtendedTooltip name="Отправитель_ПлощадкаНаФормеРасширеннаяПодсказка" id="379"/>
 					<Events>
@@ -204,7 +205,7 @@
 																	<Title>
 																		<v8:item>
 																			<v8:lang>ru</v8:lang>
-																			<v8:content>Найти площадки по имени</v8:content>
+																			<v8:content>Найти площадки по наименованию</v8:content>
 																		</v8:item>
 																	</Title>
 																	<ExtendedTooltip name="ЗагрузитьПлощадкиПоСпискуДокументовНаименованиеРасширеннаяПодсказка" id="290"/>
@@ -537,6 +538,7 @@
 													<ClearButton>false</ClearButton>
 													<CreateButton>false</CreateButton>
 													<TextEdit>false</TextEdit>
+													<ChoiceHistoryOnInput>DontUse</ChoiceHistoryOnInput>
 													<ContextMenu name="ОтгрузкиГрузополучательКонтекстноеМеню" id="166"/>
 													<ExtendedTooltip name="ОтгрузкиГрузополучательРасширеннаяПодсказка" id="167"/>
 												</InputField>
@@ -544,6 +546,7 @@
 													<DataPath>Объект.Отгрузки.Площадка</DataPath>
 													<EditMode>EnterOnInput</EditMode>
 													<ClearButton>true</ClearButton>
+													<ChoiceHistoryOnInput>DontUse</ChoiceHistoryOnInput>
 													<ContextMenu name="ОтгрузкиПлощадкаКонтекстноеМеню" id="169"/>
 													<ExtendedTooltip name="ОтгрузкиПлощадкаРасширеннаяПодсказка" id="170"/>
 													<Events>
@@ -558,6 +561,7 @@
 													<ChoiceButton>false</ChoiceButton>
 													<ClearButton>true</ClearButton>
 													<TextEdit>false</TextEdit>
+													<ChoiceHistoryOnInput>DontUse</ChoiceHistoryOnInput>
 													<ContextMenu name="ОтгрузкиВСДКонтекстноеМеню" id="172"/>
 													<ExtendedTooltip name="ОтгрузкиВСДРасширеннаяПодсказка" id="173"/>
 													<Events>
@@ -566,6 +570,7 @@
 												</InputField>
 												<InputField name="ОтгрузкиКоличество" id="174">
 													<DataPath>Объект.Отгрузки.Количество</DataPath>
+													<ReadOnly>true</ReadOnly>
 													<EditMode>EnterOnInput</EditMode>
 													<DropListButton>false</DropListButton>
 													<TextEdit>false</TextEdit>
@@ -589,6 +594,7 @@
 													<ClearButton>false</ClearButton>
 													<CreateButton>false</CreateButton>
 													<TextEdit>false</TextEdit>
+													<ChoiceHistoryOnInput>DontUse</ChoiceHistoryOnInput>
 													<ContextMenu name="ОтгрузкиДокКонтекстноеМеню" id="181"/>
 													<ExtendedTooltip name="ОтгрузкиДокРасширеннаяПодсказка" id="182"/>
 												</InputField>
@@ -599,6 +605,7 @@
 													<ClearButton>false</ClearButton>
 													<CreateButton>false</CreateButton>
 													<TextEdit>false</TextEdit>
+													<ChoiceHistoryOnInput>DontUse</ChoiceHistoryOnInput>
 													<ContextMenu name="ОтгрузкиКонтрагентКонтекстноеМеню" id="184"/>
 													<ExtendedTooltip name="ОтгрузкиКонтрагентРасширеннаяПодсказка" id="185"/>
 												</InputField>
@@ -609,6 +616,7 @@
 													<ClearButton>false</ClearButton>
 													<CreateButton>false</CreateButton>
 													<TextEdit>false</TextEdit>
+													<ChoiceHistoryOnInput>DontUse</ChoiceHistoryOnInput>
 													<ContextMenu name="ОтгрузкиХозСубъектКонтекстноеМеню" id="187"/>
 													<ExtendedTooltip name="ОтгрузкиХозСубъектРасширеннаяПодсказка" id="188"/>
 												</InputField>
@@ -805,6 +813,7 @@
 													<ClearButton>false</ClearButton>
 													<CreateButton>false</CreateButton>
 													<TextEdit>false</TextEdit>
+													<ChoiceHistoryOnInput>DontUse</ChoiceHistoryOnInput>
 													<ContextMenu name="ПартииВСД_Продукция_ЭлементКонтекстноеМеню" id="208"/>
 													<ExtendedTooltip name="ПартииВСД_Продукция_ЭлементРасширеннаяПодсказка" id="209"/>
 												</InputField>
@@ -814,6 +823,7 @@
 													<ClearButton>false</ClearButton>
 													<CreateButton>false</CreateButton>
 													<TextEdit>false</TextEdit>
+													<ChoiceHistoryOnInput>DontUse</ChoiceHistoryOnInput>
 													<ContextMenu name="ПартииПартияКонтекстноеМеню" id="211"/>
 													<ExtendedTooltip name="ПартииПартияРасширеннаяПодсказка" id="212"/>
 												</InputField>
@@ -938,12 +948,6 @@
 											<HorizontalStretch>true</HorizontalStretch>
 											<CommandName>Form.Command.ЗагрузитьПлощадкиПоХС</CommandName>
 											<ExtendedTooltip name="ЗагрузитьПлощадкиПоХСРасширеннаяПодсказка" id="254"/>
-										</Button>
-										<Button name="кнЗагрузитьПлощадкиПоНаименованию" id="362">
-											<Type>UsualButton</Type>
-											<HorizontalStretch>true</HorizontalStretch>
-											<CommandName>Form.Command.кнЗагрузитьПлощадкиПоНаименованию</CommandName>
-											<ExtendedTooltip name="кнЗагрузитьПлощадкиПоНаименованиюРасширеннаяПодсказка" id="363"/>
 										</Button>
 										<InputField name="ВыбраннаяПлощадка" id="364">
 											<DataPath>ВыбраннаяПлощадка</DataPath>
@@ -1108,7 +1112,7 @@
 																<Button name="кнПолучитьПартии" id="285">
 																	<Type>UsualButton</Type>
 																	<HorizontalStretch>true</HorizontalStretch>
-																	<CommandName>Form.Command.кнПолучитьПартии</CommandName>
+																	<CommandName>Form.Command.кнПолучитьПартии2</CommandName>
 																	<Title>
 																		<v8:item>
 																			<v8:lang>ru</v8:lang>
@@ -3232,22 +3236,6 @@
 			<Action>кнПереместитьОтПоставщика</Action>
 			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
-		<Command name="кнЗагрузитьПлощадкиПоНаименованию" id="31">
-			<Title>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Загрузить площадки Региона по наименованию</v8:content>
-				</v8:item>
-			</Title>
-			<ToolTip>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Загрузить площадки Региона по наименованию и привязать в 1С к выбранному ХС (при отсутствии ХС в ответе Меркурий)</v8:content>
-				</v8:item>
-			</ToolTip>
-			<Action>кнЗагрузитьПлощадкиПоНаименованию</Action>
-			<CurrentRowUse>DontUse</CurrentRowUse>
-		</Command>
 		<Command name="кнПлощадкаПоХССоздать" id="32">
 			<Title>
 				<v8:item>
@@ -3566,6 +3554,22 @@
 				</v8:item>
 			</ToolTip>
 			<Action>кнПечатьРеестр</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="кнПолучитьПартии2" id="52">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Получить партии</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Загрузить партии из Меркурий по выбранной площадке</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>кнПолучитьПартии2</Action>
 			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 	</Commands>
