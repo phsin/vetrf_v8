@@ -45,6 +45,7 @@
 					<ContextMenu name="Отправитель_ПлощадкаНаФормеКонтекстноеМеню" id="378"/>
 					<ExtendedTooltip name="Отправитель_ПлощадкаНаФормеРасширеннаяПодсказка" id="379"/>
 					<Events>
+						<Event name="OnChange">Отправитель_ПлощадкаНаФормеПриИзменении</Event>
 						<Event name="StartChoice">Отправитель_ПлощадкаНаФормеНачалоВыбора</Event>
 					</Events>
 				</InputField>
