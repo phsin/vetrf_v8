@@ -56,6 +56,7 @@
 								</v8:item>
 							</Title>
 							<EditMode>EnterOnInput</EditMode>
+							<ChoiceHistoryOnInput>DontUse</ChoiceHistoryOnInput>
 							<ContextMenu name="Отправитель_ПлощадкаКонтекстноеМеню" id="2"/>
 							<ExtendedTooltip name="Отправитель_ПлощадкаРасширеннаяПодсказка" id="3"/>
 							<Events>
@@ -310,6 +311,11 @@
 												<InputField name="ВСДВходящиеОтправитель_Площадка" id="124">
 													<DataPath>Объект.ВСДВходящие.Отправитель_Площадка</DataPath>
 													<EditMode>EnterOnInput</EditMode>
+													<ChoiceButton>false</ChoiceButton>
+													<ClearButton>false</ClearButton>
+													<CreateButton>false</CreateButton>
+													<TextEdit>false</TextEdit>
+													<ChoiceHistoryOnInput>DontUse</ChoiceHistoryOnInput>
 													<ContextMenu name="ВСДВходящиеОтправитель_ПлощадкаКонтекстноеМеню" id="125"/>
 													<ExtendedTooltip name="ВСДВходящиеОтправитель_ПлощадкаРасширеннаяПодсказка" id="126"/>
 												</InputField>
@@ -321,6 +327,7 @@
 												</InputField>
 												<InputField name="ВСДВходящиеКоличество" id="70">
 													<DataPath>Объект.ВСДВходящие.Количество</DataPath>
+													<ReadOnly>true</ReadOnly>
 													<EditMode>EnterOnInput</EditMode>
 													<ContextMenu name="ВСДВходящиеКоличествоКонтекстноеМеню" id="71"/>
 													<ExtendedTooltip name="ВСДВходящиеКоличествоРасширеннаяПодсказка" id="72"/>
@@ -946,7 +953,9 @@
 													<EditMode>EnterOnInput</EditMode>
 													<ChoiceButton>true</ChoiceButton>
 													<ClearButton>true</ClearButton>
+													<CreateButton>false</CreateButton>
 													<ChooseType>false</ChooseType>
+													<ChoiceHistoryOnInput>DontUse</ChoiceHistoryOnInput>
 													<ContextMenu name="СоответствияНоменклатураКонтекстноеМеню" id="303"/>
 													<ExtendedTooltip name="СоответствияНоменклатураРасширеннаяПодсказка" id="304"/>
 													<Events>
@@ -962,6 +971,7 @@
 													<ClearButton>false</ClearButton>
 													<ChooseType>false</ChooseType>
 													<TextEdit>false</TextEdit>
+													<ChoiceHistoryOnInput>DontUse</ChoiceHistoryOnInput>
 													<ContextMenu name="СоответствияПродукция_ЭлементКонтекстноеМеню" id="306"/>
 													<ExtendedTooltip name="СоответствияПродукция_ЭлементРасширеннаяПодсказка" id="307"/>
 												</InputField>
@@ -980,9 +990,12 @@
 												<InputField name="СоответствияПроизводитель" id="314">
 													<DataPath>Объект.Соответствия.Производитель</DataPath>
 													<EditMode>EnterOnInput</EditMode>
+													<DropListButton>false</DropListButton>
 													<ChoiceButton>false</ChoiceButton>
 													<ClearButton>false</ClearButton>
+													<CreateButton>false</CreateButton>
 													<TextEdit>false</TextEdit>
+													<ChoiceHistoryOnInput>DontUse</ChoiceHistoryOnInput>
 													<ContextMenu name="СоответствияПроизводительКонтекстноеМеню" id="315"/>
 													<ExtendedTooltip name="СоответствияПроизводительРасширеннаяПодсказка" id="316"/>
 												</InputField>
