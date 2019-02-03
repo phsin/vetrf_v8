@@ -1,6 +1,6 @@
 ﻿// www.kb99.pro
 // zhukov@kb99.pro адаптация для Управляемого приложения
-// версия 1.7.14 от 02/02/2019
+// версия 1.7.14 от 03/02/2019
 //
 // Общий модуль для Обычного и Управляемого Приложений
 // Разобраться с СтрРазделить() - > Проверить самописаный аналог СтрРазделить82() на соответствие
@@ -7678,29 +7678,33 @@
 	|            </merc:enterprise>
 	|            <vd:stockEntry>
 	|              <bs:guid>"+ СокрЛП( док.Партия.GUID ) +"</bs:guid>
-	|              <vd:vetEventList>
-	|                <vd:laboratoryResearch>
-	|                  <vd:actualDateTime>"+ ДатаXML(док.ДатаРезультата, "T00:00:00") +"</vd:actualDateTime>
-	|                  <vd:operator>
-	|                    <dt:name>" + СокрЛП(док.НаименованиеЛаборатории) + "</dt:name>
-	|                  </vd:operator>
-	|                  <vd:referencedDocument>
-	|                    <vd:issueNumber>"+ СокрЛП(док.НомерАктаОтбораПроб) +"</vd:issueNumber>
-	|                    <vd:issueDate>"+ ДатаXML(док.ДатаОтбораПроб) +"</vd:issueDate>
-	|                    <vd:type>9</vd:type> 
-	//|                    <vd:relationshipType>6</vd:relationshipType>
-	|                  </vd:referencedDocument>
-	|                  <vd:expertiseID>"+ СокрЛП(док.НомерЭкспертизы) +"</vd:expertiseID>
-	|                  <vd:disease>
-	|                    <dt:name>"+ СокрЛП(док.НаименованиеПоказателя) +"</dt:name>
-	|                  </vd:disease>
-	|                  <vd:method>
-	|                    <dt:name>"+ СокрЛП(док.МетодИсследования) +"</dt:name>
-	|                  </vd:method>
-						//Допустимые значения: UNKNOWN, POSITIVE, NEGATIVE
-	|                  <vd:result>"+ ПолучитьИдентификаторПеречисления(док.РезультатИсследования) +"</vd:result>
-	|                  <vd:conclusion>"+ СокрЛП(док.Заключение)  +"</vd:conclusion>
-	|                </vd:laboratoryResearch>
+	|              <vd:vetEventList>"; //Тест многострочность
+	Для каждого строкаДок из Док.Исследования Цикл
+		Запрос = Запрос + "
+		|                <vd:laboratoryResearch>
+		|                  <vd:actualDateTime>"+ ДатаXML(строкаДок.ДатаРезультата, "T00:00:00") +"</vd:actualDateTime>
+		|                  <vd:operator>
+		|                    <dt:name>" + СокрЛП(строкаДок.НаименованиеЛаборатории) + "</dt:name>
+		|                  </vd:operator>
+		|                  <vd:referencedDocument>
+		|                    <vd:issueNumber>"+ СокрЛП(строкаДок.НомерАктаОтбораПроб) +"</vd:issueNumber>
+		|                    <vd:issueDate>"+ ДатаXML(строкаДок.ДатаОтбораПроб) +"</vd:issueDate>
+		|                    <vd:type>9</vd:type> 
+		//|                    <vd:relationshipType>6</vd:relationshipType>
+		|                  </vd:referencedDocument>
+		|                  <vd:expertiseID>"+ СокрЛП(строкаДок.НомерЭкспертизы) +"</vd:expertiseID>
+		|                  <vd:disease>
+		|                    <dt:name>"+ СокрЛП(строкаДок.НаименованиеПоказателя) +"</dt:name>
+		|                  </vd:disease>
+		|                  <vd:method>
+		|                    <dt:name>"+ СокрЛП(строкаДок.МетодИсследования) +"</dt:name>
+		|                  </vd:method>
+							//Допустимые значения: UNKNOWN, POSITIVE, NEGATIVE
+		|                  <vd:result>"+ ПолучитьИдентификаторПеречисления(строкаДок.РезультатИсследования) +"</vd:result>
+		|                  <vd:conclusion>"+ СокрЛП(строкаДок.Заключение)  +"</vd:conclusion>
+		|                </vd:laboratoryResearch>";
+		КонецЦикла;
+	Запрос = Запрос + "
 	|              </vd:vetEventList>
 	|            </vd:stockEntry>
 	|          </merc:updateVeterinaryEventsRequest>
@@ -7730,10 +7734,12 @@
 	    Сообщить("Не указана исследуемая партия");
 		Возврат 0;
 	КонецЕсли;
-	Если НЕ ЗначениеЗаполнено(ДокСсылка.РезультатИсследования) Тогда
-	    Сообщить("Нет результатов исследования");
-		Возврат 0;
-	КонецЕсли;
+	// ЖД Добавить построчную проверку, тк. теперь ТЧ
+	
+//	Если НЕ ЗначениеЗаполнено(ДокСсылка.РезультатИсследования) Тогда
+//	    Сообщить("Нет результатов исследования");
+//		Возврат 0;
+//	КонецЕсли;
 
     Возврат Рез;
 КонецФункции
