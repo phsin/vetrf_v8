@@ -230,7 +230,7 @@
 		<Metadata name="CommonModule.ВСД.Module" id="833fb32a-b62f-4ac4-83e6-959f1ecc5e2c.0" configVersion="b814a84f3022ea45854b5c05121ad51e00000000"/>
 		<Metadata name="CommonTemplate.ВСД_Компонента" id="d59112a8-db61-438c-9113-4edbe4234817" configVersion="a155f72ef677104098316bb530b9cf1b00000000"/>
 		<Metadata name="CommonTemplate.ВСД_Компонента.Template" id="d59112a8-db61-438c-9113-4edbe4234817.0" configVersion="992d8515c5727c4b9bd00c01fe1f2a3a00000000"/>
-		<Metadata name="Configuration.Конфигурация" id="d6b5cddd-c482-44ec-985e-bd8e031ff16a" configVersion="1a4fef070750e1458d6070409641c85900000000"/>
+		<Metadata name="Configuration.Конфигурация" id="d6b5cddd-c482-44ec-985e-bd8e031ff16a" configVersion="a0d526b0ddfbc24d8c6c9da76fa540f200000000"/>
 		<Metadata name="Configuration.Конфигурация.ExternalConnectionModule" id="a7338e73-79e8-4c8b-a266-7e7b1bcac2b6.5" configVersion="81517186f2234f4284f9fa80679d5fea00000000"/>
 		<Metadata name="Configuration.Конфигурация.ManagedApplicationModule" id="a7338e73-79e8-4c8b-a266-7e7b1bcac2b6.6" configVersion="3d23c990e538c84991a888104f2c0d5800000000"/>
 		<Metadata name="Configuration.Конфигурация.ParentConfigurations" id="a7338e73-79e8-4c8b-a266-7e7b1bcac2b6.4" configVersion="e51968b165da5145acd4d5faa0e138f900000000"/>
@@ -596,27 +596,37 @@
 		<Metadata name="Document.ВСД2_Инвентаризация.Form.ФормаСписка" id="081c46f6-b085-4a9c-93ce-3baabc0cd221" configVersion="4a62089b6860374cace988f108d98a2c00000000"/>
 		<Metadata name="Document.ВСД2_Инвентаризация.Form.ФормаСписка.Form" id="081c46f6-b085-4a9c-93ce-3baabc0cd221.0" configVersion="f01802447420f94e803594012197005200000000"/>
 		<Metadata name="Document.ВСД2_Инвентаризация.ObjectModule" id="fa4d52d8-8436-41ac-ad09-04ee925e55ec.0" configVersion="296e570b022b79429a37383528f079fa00000000"/>
-		<Metadata name="Document.ВСД2_ЛабораторныеИсследования" id="1a7e3f25-edc9-4f8d-9eaf-4b07b8bb0ac0" configVersion="596f7d09390d2f40ae6e8cd6059d9ebe00000000">
+		<Metadata name="Document.ВСД2_ЛабораторныеИсследования" id="1a7e3f25-edc9-4f8d-9eaf-4b07b8bb0ac0" configVersion="a3bddfdacfcac14988c8ff2fcae5d49a00000000">
 			<Metadata name="Document.ВСД2_ЛабораторныеИсследования.Attribute.НаименованиеПоказателя" id="0110018b-6865-40d9-837d-1fc9eb9888de"/>
+			<Metadata name="Document.ВСД2_ЛабораторныеИсследования.TabularSection.Исследования" id="0e8bfedd-50fe-49a7-b991-f8cd70f08682"/>
+			<Metadata name="Document.ВСД2_ЛабораторныеИсследования.TabularSection.Исследования.Attribute.МетодИсследования" id="0f3520cb-edf4-4634-a13f-fe3b4434ddb5"/>
 			<Metadata name="Document.ВСД2_ЛабораторныеИсследования.Attribute.НомерЭкспертизы" id="3a51a3f8-c477-45b4-bfd8-57133a1b4d6c"/>
+			<Metadata name="Document.ВСД2_ЛабораторныеИсследования.TabularSection.Исследования.Attribute.РезультатИсследования" id="3c5b0d5b-b478-477c-812b-842061859112"/>
 			<Metadata name="Document.ВСД2_ЛабораторныеИсследования.Attribute.НаименованиеЛаборатории" id="4b21588d-a182-4ade-92dd-663eeb293aa2"/>
 			<Metadata name="Document.ВСД2_ЛабораторныеИсследования.Attribute.Организация" id="74f052f4-a7a2-4121-ada3-7c2cbb5669a5"/>
 			<Metadata name="Document.ВСД2_ЛабораторныеИсследования.Attribute.ИмяФайлаОтвет" id="7906a8c6-8dfb-4bb8-b7c6-735f3231f5f2"/>
 			<Metadata name="Document.ВСД2_ЛабораторныеИсследования.Attribute.UUID" id="79f8f53c-895d-4765-b260-d7494383c68a"/>
 			<Metadata name="Document.ВСД2_ЛабораторныеИсследования.Attribute.Партия" id="7c786076-75b4-4d66-9c9b-c23bd227f55d"/>
+			<Metadata name="Document.ВСД2_ЛабораторныеИсследования.TabularSection.Исследования.Attribute.ДатаОтбораПроб" id="8af85af4-e3b5-43cf-b9f8-dcc837b69f3d"/>
 			<Metadata name="Document.ВСД2_ЛабораторныеИсследования.Attribute.applicationID" id="8af8f6f8-a5c7-4c76-ad9e-f38a0a2e0de9"/>
 			<Metadata name="Document.ВСД2_ЛабораторныеИсследования.Attribute.ДатаОтбораПроб" id="97cce0d7-e02c-4e4e-8578-e71cc0ac793f"/>
+			<Metadata name="Document.ВСД2_ЛабораторныеИсследования.TabularSection.Исследования.Attribute.Заключение" id="aad3cd67-8a89-4f1d-a913-54905fed9179"/>
+			<Metadata name="Document.ВСД2_ЛабораторныеИсследования.TabularSection.Исследования.Attribute.НаименованиеПоказателя" id="b4bc439a-638d-4a57-87f8-bde27e0c1199"/>
 			<Metadata name="Document.ВСД2_ЛабораторныеИсследования.Attribute.ИмяФайлаЗапрос" id="b82d95dc-8cac-4b08-b611-558ff2a011ea"/>
 			<Metadata name="Document.ВСД2_ЛабораторныеИсследования.Attribute.МетодИсследования" id="bc118037-c114-4c8f-a9cd-34972b1fd9fa"/>
 			<Metadata name="Document.ВСД2_ЛабораторныеИсследования.Attribute.Статус" id="bcdfdaa9-7143-4a5c-b51b-7833d1941f7a"/>
+			<Metadata name="Document.ВСД2_ЛабораторныеИсследования.TabularSection.Исследования.Attribute.НаименованиеЛаборатории" id="beb871a7-bd8b-458a-95b7-b41bc6477d4c"/>
 			<Metadata name="Document.ВСД2_ЛабораторныеИсследования.Attribute.ДатаРезультата" id="c42ed80e-857e-4646-b4af-66cc6f917af4"/>
 			<Metadata name="Document.ВСД2_ЛабораторныеИсследования.Attribute.НомерАктаОтбораПроб" id="cf8bb546-7b7e-4c8e-b64e-1d68a8818364"/>
 			<Metadata name="Document.ВСД2_ЛабораторныеИсследования.Attribute.Заключение" id="d0e312d1-15e9-4812-b42a-77afbb678eb2"/>
 			<Metadata name="Document.ВСД2_ЛабораторныеИсследования.Attribute.РезультатИсследования" id="d37cba97-9568-4f18-be16-847bf3ec0ff0"/>
 			<Metadata name="Document.ВСД2_ЛабораторныеИсследования.Attribute.Комментарий" id="d685c99f-f5d0-4531-acfb-788efbeaa51c"/>
+			<Metadata name="Document.ВСД2_ЛабораторныеИсследования.TabularSection.Исследования.Attribute.ДатаРезультата" id="e10574ff-e6cf-422c-9c58-29202ace936c"/>
+			<Metadata name="Document.ВСД2_ЛабораторныеИсследования.TabularSection.Исследования.Attribute.НомерЭкспертизы" id="e9c2717c-b895-474f-81c4-2005953e85de"/>
+			<Metadata name="Document.ВСД2_ЛабораторныеИсследования.TabularSection.Исследования.Attribute.НомерАктаОтбораПроб" id="fe87d0ec-95e8-4af9-91a5-c367e47e285e"/>
 		</Metadata>
-		<Metadata name="Document.ВСД2_ЛабораторныеИсследования.Form.ФормаДокумента" id="58bf68d3-7c96-46e7-8680-be00b9c60bff" configVersion="1b4537977c48764cb8b331d83cddaa6800000000"/>
-		<Metadata name="Document.ВСД2_ЛабораторныеИсследования.Form.ФормаДокумента.Form" id="58bf68d3-7c96-46e7-8680-be00b9c60bff.0" configVersion="1b772ff88f797d418ba7464ec132da5900000000"/>
+		<Metadata name="Document.ВСД2_ЛабораторныеИсследования.Form.ФормаДокумента" id="58bf68d3-7c96-46e7-8680-be00b9c60bff" configVersion="73504a5c0ab06347bc261a958f39275b00000000"/>
+		<Metadata name="Document.ВСД2_ЛабораторныеИсследования.Form.ФормаДокумента.Form" id="58bf68d3-7c96-46e7-8680-be00b9c60bff.0" configVersion="0940dd51f7fd5341bbfc4d69e16e2c7200000000"/>
 		<Metadata name="Document.ВСД2_ЛабораторныеИсследования.Form.ФормаСписка" id="4b04c3d0-0a35-44c3-b42c-62082950071e" configVersion="c690ab9c907342469a8b21831496bfa200000000"/>
 		<Metadata name="Document.ВСД2_ЛабораторныеИсследования.Form.ФормаСписка.Form" id="4b04c3d0-0a35-44c3-b42c-62082950071e.0" configVersion="1db0332127cc7d419be12a6feb2adf2800000000"/>
 		<Metadata name="Document.ВСД2_ОбъединениеПартий" id="d9f0bfe2-fde7-4208-b8cf-d1d7caedfd39" configVersion="f8305f0e80e49e47bf0ec4612afc926800000000">
@@ -1025,7 +1035,7 @@
 		</Metadata>
 		<Metadata name="DocumentJournal.ЖурналВСД.Form.ФормаСписка" id="9b11d932-03e5-42d8-af46-58e394d8140a" configVersion="e9ef69c3a43e2b4cb1dc71f6e3425d0c00000000"/>
 		<Metadata name="DocumentJournal.ЖурналВСД.Form.ФормаСписка.Form" id="9b11d932-03e5-42d8-af46-58e394d8140a.0" configVersion="cdd076b974196c4ebe568d43dc349b9400000000"/>
-		<Metadata name="Enum.ВСД_Маркировка" id="9e0cd1d6-641a-4bbd-a6b3-3aa8237ba64b" configVersion="634bea1094b9be45b3df9e63c011f93d00000000">
+		<Metadata name="Enum.ВСД_Маркировка" id="9e0cd1d6-641a-4bbd-a6b3-3aa8237ba64b" configVersion="79db1db2be72334e9a6d1ec67fe99c3a00000000">
 			<Metadata name="Enum.ВСД_Маркировка.EnumValue.BUNDLE" id="09a757d0-ef7a-424c-8787-7bf9e608c927"/>
 			<Metadata name="Enum.ВСД_Маркировка.EnumValue.BN" id="166aed2c-7f23-4f4e-890a-0af3b80df2ae"/>
 			<Metadata name="Enum.ВСД_Маркировка.EnumValue.SSCC" id="2d7a5016-ac53-4850-97f8-9266568d9b4b"/>
@@ -1040,6 +1050,12 @@
 			<Metadata name="Enum.ВСД_РезультатИсследования.EnumValue.VSEFULL" id="a3593a6f-1551-4bbf-836c-48ca795bbd29"/>
 			<Metadata name="Enum.ВСД_РезультатИсследования.EnumValue.UNFULFILLED" id="dc874542-9360-4b95-9e91-7cadddbe61db"/>
 			<Metadata name="Enum.ВСД_РезультатИсследования.EnumValue.NEGATIVE" id="fedec0aa-f51f-4358-880c-73b28cf22c9c"/>
+		</Metadata>
+		<Metadata name="Enum.ВСД_ТермическиеУсловияПеревозки" id="25699eb7-78b6-4a6f-94f4-e7e3f5d4d1e8" configVersion="e97ed300a042d24dbffd4fb06cf5259b00000000">
+			<Metadata name="Enum.ВСД_ТермическиеУсловияПеревозки.EnumValue.FROZEN" id="37ae11be-9cdd-4e8a-b2fd-fb59f332fa44"/>
+			<Metadata name="Enum.ВСД_ТермическиеУсловияПеревозки.EnumValue.COOLED" id="a6154fe8-e515-400e-a2dc-87f2ca4a938b"/>
+			<Metadata name="Enum.ВСД_ТермическиеУсловияПеревозки.EnumValue.CHILLED" id="ab045344-cea8-494c-9d5c-2c64d2c51e96"/>
+			<Metadata name="Enum.ВСД_ТермическиеУсловияПеревозки.EnumValue.VENTILATED" id="f3f514d1-e635-4fec-8e71-4dd8cb9ee2c8"/>
 		</Metadata>
 		<Metadata name="Enum.ВСД_УровниУпаковки" id="07c407f9-3239-4ccd-a51e-fc95963a7a39" configVersion="68e24a078da46547ac2927c6d9ea06ab00000000">
 			<Metadata name="Enum.ВСД_УровниУпаковки.EnumValue.Промежуточный" id="01472068-42f0-4883-9d16-c7b00a9fd9f3"/>
@@ -1086,7 +1102,7 @@
 			<Metadata name="InformationRegister.ВСД_Соответсвия_ХС.Dimension.Второй" id="d3bdf133-41dd-4055-9258-1dfca654b9c6"/>
 		</Metadata>
 		<Metadata name="Language.Русский" id="479a3f1a-c43d-49c3-8062-859cf7f1a5a0" configVersion="db48d51ccfec014e8556e96de7bba96500000000"/>
-		<Metadata name="Subsystem.ВСД" id="53a7cff2-0ec8-4cdf-bba1-976ec888a33d" configVersion="377769bcff3f06429ba1ba0d5928c73400000000"/>
+		<Metadata name="Subsystem.ВСД" id="53a7cff2-0ec8-4cdf-bba1-976ec888a33d" configVersion="dc9bfb82b537e14db7c2090503b851e300000000"/>
 		<Metadata name="Subsystem.ВСД.CommandInterface" id="53a7cff2-0ec8-4cdf-bba1-976ec888a33d.1" configVersion="30248624b4997742b626db59092b824500000000"/>
 		<Metadata name="Subsystem.ВСД.Subsystem.ДокументыВСД" id="ccfc41d8-8b58-4328-be8b-b1c834262fe6" configVersion="29b1d29260ee344f8fc5cf3cb615f68200000000"/>
 		<Metadata name="Subsystem.ВСД.Subsystem.ДокументыВСД.CommandInterface" id="ccfc41d8-8b58-4328-be8b-b1c834262fe6.1" configVersion="689895f7e23116488cd7eb6cc0cba29800000000"/>

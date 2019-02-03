@@ -3,7 +3,22 @@
 	<AutoTime>CurrentOrLast</AutoTime>
 	<UsePostingMode>Auto</UsePostingMode>
 	<RepostOnWrite>true</RepostOnWrite>
-	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<ChildItems>
+			<Button name="ФормаОбщаяКомандаВСД_ОтправитьВСД" id="111">
+				<Type>CommandBarButton</Type>
+				<CommandName>CommonCommand.ВСД_ОтправитьВСД</CommandName>
+				<DataPath>Объект.Ref</DataPath>
+				<Title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Отправить</v8:content>
+					</v8:item>
+				</Title>
+				<ExtendedTooltip name="ФормаОбщаяКомандаВСД_ОтправитьВСДРасширеннаяПодсказка" id="112"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
 	<Events>
 		<Event name="OnOpen">ПриОткрытии</Event>
 	</Events>
@@ -51,6 +66,12 @@
 						<InputField name="Дата" id="11">
 							<DataPath>Объект.Date</DataPath>
 							<EditMode>EnterOnInput</EditMode>
+							<EditFormat>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>ДФ=dd.MM.yyyy</v8:content>
+								</v8:item>
+							</EditFormat>
 							<ContextMenu name="ДатаКонтекстноеМеню" id="12"/>
 							<ExtendedTooltip name="ДатаРасширеннаяПодсказка" id="13"/>
 						</InputField>
@@ -66,7 +87,7 @@
 					</ChildItems>
 				</UsualGroup>
 				<UsualGroup name="Группа2" id="17">
-					<Group>Horizontal</Group>
+					<Group>AlwaysHorizontal</Group>
 					<Representation>None</Representation>
 					<ShowTitle>false</ShowTitle>
 					<ExtendedTooltip name="Группа2РасширеннаяПодсказка" id="18"/>
@@ -91,66 +112,203 @@
 						</LabelField>
 					</ChildItems>
 				</UsualGroup>
-				<UsualGroup name="Группа3" id="25">
-					<ExtendedTooltip name="Группа3РасширеннаяПодсказка" id="26"/>
+				<InputField name="Партия" id="27">
+					<DataPath>Объект.Партия</DataPath>
+					<ContextMenu name="ПартияКонтекстноеМеню" id="28"/>
+					<ExtendedTooltip name="ПартияРасширеннаяПодсказка" id="29"/>
+					<Events>
+						<Event name="StartChoice">ПартияНачалоВыбора</Event>
+					</Events>
+				</InputField>
+				<Pages name="ГрСтраницы" id="105">
+					<ExtendedTooltip name="ГрСтраницыРасширеннаяПодсказка" id="106"/>
 					<ChildItems>
-						<InputField name="Партия" id="27">
-							<DataPath>Объект.Партия</DataPath>
-							<ContextMenu name="ПартияКонтекстноеМеню" id="28"/>
-							<ExtendedTooltip name="ПартияРасширеннаяПодсказка" id="29"/>
-						</InputField>
-						<InputField name="НомерАктаОтбораПроб" id="30">
-							<DataPath>Объект.НомерАктаОтбораПроб</DataPath>
-							<ContextMenu name="НомерАктаОтбораПробКонтекстноеМеню" id="31"/>
-							<ExtendedTooltip name="НомерАктаОтбораПробРасширеннаяПодсказка" id="32"/>
-						</InputField>
-						<InputField name="ДатаОтбораПроб" id="33">
-							<DataPath>Объект.ДатаОтбораПроб</DataPath>
-							<ContextMenu name="ДатаОтбораПробКонтекстноеМеню" id="34"/>
-							<ExtendedTooltip name="ДатаОтбораПробРасширеннаяПодсказка" id="35"/>
-						</InputField>
-						<InputField name="НаименованиеЛаборатории" id="36">
-							<DataPath>Объект.НаименованиеЛаборатории</DataPath>
-							<ContextMenu name="НаименованиеЛабораторииКонтекстноеМеню" id="37"/>
-							<ExtendedTooltip name="НаименованиеЛабораторииРасширеннаяПодсказка" id="38"/>
-						</InputField>
-						<InputField name="НаименованиеПоказателя" id="39">
-							<DataPath>Объект.НаименованиеПоказателя</DataPath>
-							<ContextMenu name="НаименованиеПоказателяКонтекстноеМеню" id="40"/>
-							<ExtendedTooltip name="НаименованиеПоказателяРасширеннаяПодсказка" id="41"/>
-						</InputField>
-						<InputField name="МетодИсследования" id="42">
-							<DataPath>Объект.МетодИсследования</DataPath>
-							<ContextMenu name="МетодИсследованияКонтекстноеМеню" id="43"/>
-							<ExtendedTooltip name="МетодИсследованияРасширеннаяПодсказка" id="44"/>
-						</InputField>
-						<InputField name="РезультатИсследования" id="45">
-							<DataPath>Объект.РезультатИсследования</DataPath>
-							<ContextMenu name="РезультатИсследованияКонтекстноеМеню" id="46"/>
-							<ExtendedTooltip name="РезультатИсследованияРасширеннаяПодсказка" id="47"/>
-						</InputField>
-						<InputField name="ДатаРезультата" id="48">
-							<DataPath>Объект.ДатаРезультата</DataPath>
-							<ContextMenu name="ДатаРезультатаКонтекстноеМеню" id="49"/>
-							<ExtendedTooltip name="ДатаРезультатаРасширеннаяПодсказка" id="50"/>
-						</InputField>
-						<InputField name="НомерЭкспертизы" id="51">
-							<DataPath>Объект.НомерЭкспертизы</DataPath>
-							<ContextMenu name="НомерЭкспертизыКонтекстноеМеню" id="52"/>
-							<ExtendedTooltip name="НомерЭкспертизыРасширеннаяПодсказка" id="53"/>
-						</InputField>
-						<InputField name="Заключение" id="54">
-							<DataPath>Объект.Заключение</DataPath>
-							<ContextMenu name="ЗаключениеКонтекстноеМеню" id="55"/>
-							<ExtendedTooltip name="ЗаключениеРасширеннаяПодсказка" id="56"/>
-						</InputField>
-						<InputField name="Комментарий" id="57">
-							<DataPath>Объект.Комментарий</DataPath>
-							<ContextMenu name="КомментарийКонтекстноеМеню" id="58"/>
-							<ExtendedTooltip name="КомментарийРасширеннаяПодсказка" id="59"/>
-						</InputField>
+						<Page name="Группа5" id="107">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Исследования</v8:content>
+								</v8:item>
+							</Title>
+							<ExtendedTooltip name="Группа5РасширеннаяПодсказка" id="108"/>
+							<ChildItems>
+								<UsualGroup name="Группа4" id="60">
+									<Group>AlwaysHorizontal</Group>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="Группа4РасширеннаяПодсказка" id="61"/>
+									<ChildItems>
+										<Table name="Исследования" id="62">
+											<AutoInsertNewRow>true</AutoInsertNewRow>
+											<EnableStartDrag>true</EnableStartDrag>
+											<EnableDrag>true</EnableDrag>
+											<DataPath>Объект.Исследования</DataPath>
+											<RowFilter xsi:nil="true"/>
+											<ContextMenu name="ИсследованияКонтекстноеМеню" id="63"/>
+											<AutoCommandBar name="ИсследованияКоманднаяПанель" id="64"/>
+											<ExtendedTooltip name="ИсследованияРасширеннаяПодсказка" id="65"/>
+											<SearchStringAddition name="ИсследованияСтрокаПоиска" id="66">
+												<AdditionSource>
+													<Item>Исследования</Item>
+													<Type>SearchStringRepresentation</Type>
+												</AdditionSource>
+												<ContextMenu name="ИсследованияСтрокаПоискаКонтекстноеМеню" id="67"/>
+												<ExtendedTooltip name="ИсследованияСтрокаПоискаРасширеннаяПодсказка" id="68"/>
+											</SearchStringAddition>
+											<ViewStatusAddition name="ИсследованияСостояниеПросмотра" id="69">
+												<AdditionSource>
+													<Item>Исследования</Item>
+													<Type>ViewStatusRepresentation</Type>
+												</AdditionSource>
+												<ContextMenu name="ИсследованияСостояниеПросмотраКонтекстноеМеню" id="70"/>
+												<ExtendedTooltip name="ИсследованияСостояниеПросмотраРасширеннаяПодсказка" id="71"/>
+											</ViewStatusAddition>
+											<SearchControlAddition name="ИсследованияУправлениеПоиском" id="72">
+												<AdditionSource>
+													<Item>Исследования</Item>
+													<Type>SearchControl</Type>
+												</AdditionSource>
+												<ContextMenu name="ИсследованияУправлениеПоискомКонтекстноеМеню" id="73"/>
+												<ExtendedTooltip name="ИсследованияУправлениеПоискомРасширеннаяПодсказка" id="74"/>
+											</SearchControlAddition>
+											<ChildItems>
+												<LabelField name="ИсследованияНомерСтроки" id="75">
+													<DataPath>Объект.Исследования.LineNumber</DataPath>
+													<EditMode>EnterOnInput</EditMode>
+													<ContextMenu name="ИсследованияНомерСтрокиКонтекстноеМеню" id="76"/>
+													<ExtendedTooltip name="ИсследованияНомерСтрокиРасширеннаяПодсказка" id="77"/>
+												</LabelField>
+												<InputField name="ИсследованияНомерАктаОтбораПроб" id="78">
+													<DataPath>Объект.Исследования.НомерАктаОтбораПроб</DataPath>
+													<EditMode>EnterOnInput</EditMode>
+													<ContextMenu name="ИсследованияНомерАктаОтбораПробКонтекстноеМеню" id="79"/>
+													<ExtendedTooltip name="ИсследованияНомерАктаОтбораПробРасширеннаяПодсказка" id="80"/>
+												</InputField>
+												<InputField name="ИсследованияДатаОтбораПроб" id="81">
+													<DataPath>Объект.Исследования.ДатаОтбораПроб</DataPath>
+													<EditMode>EnterOnInput</EditMode>
+													<ContextMenu name="ИсследованияДатаОтбораПробКонтекстноеМеню" id="82"/>
+													<ExtendedTooltip name="ИсследованияДатаОтбораПробРасширеннаяПодсказка" id="83"/>
+												</InputField>
+												<InputField name="ИсследованияНаименованиеЛаборатории" id="84">
+													<DataPath>Объект.Исследования.НаименованиеЛаборатории</DataPath>
+													<EditMode>EnterOnInput</EditMode>
+													<ContextMenu name="ИсследованияНаименованиеЛабораторииКонтекстноеМеню" id="85"/>
+													<ExtendedTooltip name="ИсследованияНаименованиеЛабораторииРасширеннаяПодсказка" id="86"/>
+												</InputField>
+												<InputField name="ИсследованияНаименованиеПоказателя" id="87">
+													<DataPath>Объект.Исследования.НаименованиеПоказателя</DataPath>
+													<EditMode>EnterOnInput</EditMode>
+													<ContextMenu name="ИсследованияНаименованиеПоказателяКонтекстноеМеню" id="88"/>
+													<ExtendedTooltip name="ИсследованияНаименованиеПоказателяРасширеннаяПодсказка" id="89"/>
+												</InputField>
+												<InputField name="ИсследованияДатаРезультата" id="90">
+													<DataPath>Объект.Исследования.ДатаРезультата</DataPath>
+													<EditMode>EnterOnInput</EditMode>
+													<ContextMenu name="ИсследованияДатаРезультатаКонтекстноеМеню" id="91"/>
+													<ExtendedTooltip name="ИсследованияДатаРезультатаРасширеннаяПодсказка" id="92"/>
+												</InputField>
+												<InputField name="ИсследованияМетодИсследования" id="93">
+													<DataPath>Объект.Исследования.МетодИсследования</DataPath>
+													<EditMode>EnterOnInput</EditMode>
+													<ContextMenu name="ИсследованияМетодИсследованияКонтекстноеМеню" id="94"/>
+													<ExtendedTooltip name="ИсследованияМетодИсследованияРасширеннаяПодсказка" id="95"/>
+												</InputField>
+												<InputField name="ИсследованияНомерЭкспертизы" id="96">
+													<DataPath>Объект.Исследования.НомерЭкспертизы</DataPath>
+													<EditMode>EnterOnInput</EditMode>
+													<ContextMenu name="ИсследованияНомерЭкспертизыКонтекстноеМеню" id="97"/>
+													<ExtendedTooltip name="ИсследованияНомерЭкспертизыРасширеннаяПодсказка" id="98"/>
+												</InputField>
+												<InputField name="ИсследованияРезультатИсследования" id="99">
+													<DataPath>Объект.Исследования.РезультатИсследования</DataPath>
+													<EditMode>EnterOnInput</EditMode>
+													<ContextMenu name="ИсследованияРезультатИсследованияКонтекстноеМеню" id="100"/>
+													<ExtendedTooltip name="ИсследованияРезультатИсследованияРасширеннаяПодсказка" id="101"/>
+												</InputField>
+												<InputField name="ИсследованияЗаключение" id="102">
+													<DataPath>Объект.Исследования.Заключение</DataPath>
+													<EditMode>EnterOnInput</EditMode>
+													<ContextMenu name="ИсследованияЗаключениеКонтекстноеМеню" id="103"/>
+													<ExtendedTooltip name="ИсследованияЗаключениеРасширеннаяПодсказка" id="104"/>
+												</InputField>
+											</ChildItems>
+										</Table>
+									</ChildItems>
+								</UsualGroup>
+							</ChildItems>
+						</Page>
+						<Page name="Группа6" id="109">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Прежняя версия</v8:content>
+								</v8:item>
+							</Title>
+							<ExtendedTooltip name="Группа6РасширеннаяПодсказка" id="110"/>
+							<ChildItems>
+								<UsualGroup name="Группа3" id="25">
+									<Group>Vertical</Group>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="Группа3РасширеннаяПодсказка" id="26"/>
+									<ChildItems>
+										<InputField name="НомерАктаОтбораПроб" id="30">
+											<DataPath>Объект.НомерАктаОтбораПроб</DataPath>
+											<ContextMenu name="НомерАктаОтбораПробКонтекстноеМеню" id="31"/>
+											<ExtendedTooltip name="НомерАктаОтбораПробРасширеннаяПодсказка" id="32"/>
+										</InputField>
+										<InputField name="ДатаОтбораПроб" id="33">
+											<DataPath>Объект.ДатаОтбораПроб</DataPath>
+											<ContextMenu name="ДатаОтбораПробКонтекстноеМеню" id="34"/>
+											<ExtendedTooltip name="ДатаОтбораПробРасширеннаяПодсказка" id="35"/>
+										</InputField>
+										<InputField name="НаименованиеЛаборатории" id="36">
+											<DataPath>Объект.НаименованиеЛаборатории</DataPath>
+											<ContextMenu name="НаименованиеЛабораторииКонтекстноеМеню" id="37"/>
+											<ExtendedTooltip name="НаименованиеЛабораторииРасширеннаяПодсказка" id="38"/>
+										</InputField>
+										<InputField name="НаименованиеПоказателя" id="39">
+											<DataPath>Объект.НаименованиеПоказателя</DataPath>
+											<ContextMenu name="НаименованиеПоказателяКонтекстноеМеню" id="40"/>
+											<ExtendedTooltip name="НаименованиеПоказателяРасширеннаяПодсказка" id="41"/>
+										</InputField>
+										<InputField name="МетодИсследования" id="42">
+											<DataPath>Объект.МетодИсследования</DataPath>
+											<ContextMenu name="МетодИсследованияКонтекстноеМеню" id="43"/>
+											<ExtendedTooltip name="МетодИсследованияРасширеннаяПодсказка" id="44"/>
+										</InputField>
+										<InputField name="РезультатИсследования" id="45">
+											<DataPath>Объект.РезультатИсследования</DataPath>
+											<ContextMenu name="РезультатИсследованияКонтекстноеМеню" id="46"/>
+											<ExtendedTooltip name="РезультатИсследованияРасширеннаяПодсказка" id="47"/>
+										</InputField>
+										<InputField name="ДатаРезультата" id="48">
+											<DataPath>Объект.ДатаРезультата</DataPath>
+											<ContextMenu name="ДатаРезультатаКонтекстноеМеню" id="49"/>
+											<ExtendedTooltip name="ДатаРезультатаРасширеннаяПодсказка" id="50"/>
+										</InputField>
+										<InputField name="НомерЭкспертизы" id="51">
+											<DataPath>Объект.НомерЭкспертизы</DataPath>
+											<ContextMenu name="НомерЭкспертизыКонтекстноеМеню" id="52"/>
+											<ExtendedTooltip name="НомерЭкспертизыРасширеннаяПодсказка" id="53"/>
+										</InputField>
+										<InputField name="Заключение" id="54">
+											<DataPath>Объект.Заключение</DataPath>
+											<ContextMenu name="ЗаключениеКонтекстноеМеню" id="55"/>
+											<ExtendedTooltip name="ЗаключениеРасширеннаяПодсказка" id="56"/>
+										</InputField>
+									</ChildItems>
+								</UsualGroup>
+							</ChildItems>
+						</Page>
 					</ChildItems>
-				</UsualGroup>
+				</Pages>
+				<InputField name="Комментарий" id="57">
+					<DataPath>Объект.Комментарий</DataPath>
+					<ContextMenu name="КомментарийКонтекстноеМеню" id="58"/>
+					<ExtendedTooltip name="КомментарийРасширеннаяПодсказка" id="59"/>
+				</InputField>
 			</ChildItems>
 		</UsualGroup>
 	</ChildItems>
