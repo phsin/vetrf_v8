@@ -735,10 +735,12 @@
 					<ExtendedTooltip name="грЗапросыРасширеннаяПодсказка" id="260"/>
 					<ChildItems>
 						<UsualGroup name="Группа13" id="261">
+							<ShowTitle>false</ShowTitle>
 							<ExtendedTooltip name="Группа13РасширеннаяПодсказка" id="262"/>
 							<ChildItems>
 								<Table name="Запросы" id="263">
 									<Representation>List</Representation>
+									<ReadOnly>true</ReadOnly>
 									<AutoInsertNewRow>true</AutoInsertNewRow>
 									<EnableStartDrag>true</EnableStartDrag>
 									<EnableDrag>true</EnableDrag>
@@ -747,6 +749,13 @@
 									<ContextMenu name="ЗапросыКонтекстноеМеню" id="264"/>
 									<AutoCommandBar name="ЗапросыКоманднаяПанель" id="265">
 										<Autofill>false</Autofill>
+										<ChildItems>
+											<Button name="кнОткрытьЗапрос" id="290">
+												<Type>CommandBarButton</Type>
+												<CommandName>Form.Command.кнОткрытьЗапрос</CommandName>
+												<ExtendedTooltip name="кнОткрытьЗапросРасширеннаяПодсказка" id="291"/>
+											</Button>
+										</ChildItems>
 									</AutoCommandBar>
 									<ExtendedTooltip name="ЗапросыРасширеннаяПодсказка" id="266"/>
 									<SearchStringAddition name="ЗапросыСтрокаПоиска" id="267">
@@ -773,9 +782,6 @@
 										<ContextMenu name="ЗапросыУправлениеПоискомКонтекстноеМеню" id="274"/>
 										<ExtendedTooltip name="ЗапросыУправлениеПоискомРасширеннаяПодсказка" id="275"/>
 									</SearchControlAddition>
-									<Events>
-										<Event name="ChoiceProcessing">ЗапросыОбработкаВыбора</Event>
-									</Events>
 									<ChildItems>
 										<LabelField name="ЗапросыНомерСтроки" id="276">
 											<DataPath>Объект.Запросы.LineNumber</DataPath>
@@ -789,16 +795,13 @@
 											<ContextMenu name="ЗапросыДатаКонтекстноеМеню" id="280"/>
 											<ExtendedTooltip name="ЗапросыДатаРасширеннаяПодсказка" id="281"/>
 										</InputField>
-										<InputField name="ЗапросыФайл" id="282">
+										<LabelField name="ЗапросыФайл" id="282">
 											<DataPath>Объект.Запросы.Файл</DataPath>
 											<EditMode>EnterOnInput</EditMode>
-											<OpenButton>true</OpenButton>
+											<Hiperlink>true</Hiperlink>
 											<ContextMenu name="ЗапросыФайлКонтекстноеМеню" id="283"/>
 											<ExtendedTooltip name="ЗапросыФайлРасширеннаяПодсказка" id="284"/>
-											<Events>
-												<Event name="Opening">ЗапросыФайлОткрытие</Event>
-											</Events>
-										</InputField>
+										</LabelField>
 										<InputField name="ЗапросыПользователь" id="285">
 											<DataPath>Объект.Запросы.Пользователь</DataPath>
 											<EditMode>EnterOnInput</EditMode>
@@ -892,4 +895,25 @@
 			</Columns>
 		</Attribute>
 	</Attributes>
+	<Commands>
+		<Command name="кнОткрытьЗапрос" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Открыть</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Открыть xml</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.OpenFile</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>кнОткрытьЗапрос</Action>
+		</Command>
+	</Commands>
 </Form>
