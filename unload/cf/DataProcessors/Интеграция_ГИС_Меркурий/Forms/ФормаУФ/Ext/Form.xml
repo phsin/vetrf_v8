@@ -1574,12 +1574,12 @@
 																			<ShowTitle>false</ShowTitle>
 																			<ExtendedTooltip name="Группа46РасширеннаяПодсказка" id="555"/>
 																			<ChildItems>
-																				<InputField name="Перевозчик_ХозСубъект" id="35">
-																					<DataPath>Объект.Перевозчик_ХозСубъект</DataPath>
+																				<InputField name="Отправитель_ХозСубъект" id="14">
+																					<DataPath>Объект.Отправитель_ХозСубъект</DataPath>
 																					<EditMode>EnterOnInput</EditMode>
 																					<HorizontalStretch>true</HorizontalStretch>
-																					<ContextMenu name="Перевозчик_ХозСубъектКонтекстноеМеню" id="36"/>
-																					<ExtendedTooltip name="Перевозчик_ХозСубъектРасширеннаяПодсказка" id="37"/>
+																					<ContextMenu name="Отправитель_ХозСубъектКонтекстноеМеню" id="15"/>
+																					<ExtendedTooltip name="Отправитель_ХозСубъектРасширеннаяПодсказка" id="16"/>
 																				</InputField>
 																				<InputField name="Отправитель_Площадка" id="32">
 																					<DataPath>Объект.Отправитель_Площадка</DataPath>
@@ -1591,12 +1591,12 @@
 																						<Event name="StartChoice">Отправитель_ПлощадкаНаФормеНачалоВыбора</Event>
 																					</Events>
 																				</InputField>
-																				<InputField name="Отправитель_ХозСубъект" id="14">
-																					<DataPath>Объект.Отправитель_ХозСубъект</DataPath>
+																				<InputField name="Перевозчик_ХозСубъект" id="35">
+																					<DataPath>Объект.Перевозчик_ХозСубъект</DataPath>
 																					<EditMode>EnterOnInput</EditMode>
 																					<HorizontalStretch>true</HorizontalStretch>
-																					<ContextMenu name="Отправитель_ХозСубъектКонтекстноеМеню" id="15"/>
-																					<ExtendedTooltip name="Отправитель_ХозСубъектРасширеннаяПодсказка" id="16"/>
+																					<ContextMenu name="Перевозчик_ХозСубъектКонтекстноеМеню" id="36"/>
+																					<ExtendedTooltip name="Перевозчик_ХозСубъектРасширеннаяПодсказка" id="37"/>
 																				</InputField>
 																			</ChildItems>
 																		</UsualGroup>
