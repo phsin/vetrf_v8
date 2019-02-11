@@ -1895,6 +1895,49 @@
 																					<Width>20</Width>
 																					<AutoMaxWidth>false</AutoMaxWidth>
 																					<HorizontalStretch>true</HorizontalStretch>
+																					<ListChoiceMode>true</ListChoiceMode>
+																					<ChooseType>false</ChooseType>
+																					<ChoiceList>
+																						<xr:Item>
+																							<xr:Presentation/>
+																							<xr:CheckState>0</xr:CheckState>
+																							<xr:Value xsi:type="FormChoiceListDesTimeValue">
+																								<Presentation>
+																									<v8:item>
+																										<v8:lang>ru</v8:lang>
+																										<v8:content>Дата изменения</v8:content>
+																									</v8:item>
+																								</Presentation>
+																								<Value xsi:type="xs:string">ДатаИзменения</Value>
+																							</xr:Value>
+																						</xr:Item>
+																						<xr:Item>
+																							<xr:Presentation/>
+																							<xr:CheckState>0</xr:CheckState>
+																							<xr:Value xsi:type="FormChoiceListDesTimeValue">
+																								<Presentation>
+																									<v8:item>
+																										<v8:lang>ru</v8:lang>
+																										<v8:content>Срок годности</v8:content>
+																									</v8:item>
+																								</Presentation>
+																								<Value xsi:type="xs:string">ДатаСрокГодности1</Value>
+																							</xr:Value>
+																						</xr:Item>
+																						<xr:Item>
+																							<xr:Presentation/>
+																							<xr:CheckState>0</xr:CheckState>
+																							<xr:Value xsi:type="FormChoiceListDesTimeValue">
+																								<Presentation>
+																									<v8:item>
+																										<v8:lang>ru</v8:lang>
+																										<v8:content>Изготовлено</v8:content>
+																									</v8:item>
+																								</Presentation>
+																								<Value xsi:type="xs:string">ДатаИзготовления1</Value>
+																							</xr:Value>
+																						</xr:Item>
+																					</ChoiceList>
 																					<ContextMenu name="ПарамКолонкаСортировкиПартииСписанияКонтекстноеМеню" id="329"/>
 																					<ExtendedTooltip name="ПарамКолонкаСортировкиПартииСписанияРасширеннаяПодсказка" id="330"/>
 																				</InputField>
