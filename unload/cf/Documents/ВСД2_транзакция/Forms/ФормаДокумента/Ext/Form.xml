@@ -43,17 +43,6 @@
 					<ShowTitle>false</ShowTitle>
 					<ExtendedTooltip name="Группа1РасширеннаяПодсказка" id="278"/>
 					<ChildItems>
-						<LabelField name="Статус" id="40">
-							<DataPath>Объект.Статус</DataPath>
-							<TitleLocation>None</TitleLocation>
-							<EditMode>EnterOnInput</EditMode>
-							<Border width="1">
-								<v8ui:style xsi:type="v8ui:ControlBorderType">Embossed</v8ui:style>
-							</Border>
-							<Font ref="style:NormalTextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
-							<ContextMenu name="СтатусКонтекстноеМеню" id="41"/>
-							<ExtendedTooltip name="СтатусРасширеннаяПодсказка" id="42"/>
-						</LabelField>
 						<InputField name="Номер" id="1">
 							<DataPath>Объект.Number</DataPath>
 							<EditMode>EnterOnInput</EditMode>
@@ -65,6 +54,13 @@
 							<EditMode>EnterOnInput</EditMode>
 							<ContextMenu name="ДатаКонтекстноеМеню" id="5"/>
 							<ExtendedTooltip name="ДатаРасширеннаяПодсказка" id="6"/>
+						</InputField>
+						<InputField name="Статус" id="40">
+							<DataPath>Объект.Статус</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<Font ref="style:NormalTextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
+							<ContextMenu name="СтатусКонтекстноеМеню" id="41"/>
+							<ExtendedTooltip name="СтатусРасширеннаяПодсказка" id="42"/>
 						</InputField>
 						<InputField name="Организация" id="88">
 							<DataPath>Объект.Организация</DataPath>
@@ -435,6 +431,7 @@
 									<Group>Vertical</Group>
 									<VerticalAlign>Top</VerticalAlign>
 									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
 									<ThroughAlign>Use</ThroughAlign>
 									<ExtendedTooltip name="грШапка2РасширеннаяПодсказка" id="353"/>
 									<ChildItems>
@@ -448,7 +445,7 @@
 													<v8:content>Перемещение от поставщика</v8:content>
 												</v8:item>
 											</Title>
-											<TitleLocation>Left</TitleLocation>
+											<TitleLocation>Right</TitleLocation>
 											<HorizontalAlign>Right</HorizontalAlign>
 											<VerticalAlign>Center</VerticalAlign>
 											<CheckBoxType>Auto</CheckBoxType>
