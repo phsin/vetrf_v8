@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.6">
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.8">
 	<AutoTime>CurrentOrLast</AutoTime>
 	<UsePostingMode>Auto</UsePostingMode>
 	<RepostOnWrite>true</RepostOnWrite>
@@ -21,6 +21,7 @@
 	</AutoCommandBar>
 	<Events>
 		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="FillCheckProcessingAtServer">ОбработкаПроверкиЗаполненияНаСервере</Event>
 	</Events>
 	<ChildItems>
 		<UsualGroup name="ГруппаГолова" id="1">
@@ -46,17 +47,6 @@
 					<ShowTitle>false</ShowTitle>
 					<ExtendedTooltip name="Группа1РасширеннаяПодсказка" id="4"/>
 					<ChildItems>
-						<LabelField name="Статус" id="5">
-							<DataPath>Объект.Статус</DataPath>
-							<TitleLocation>None</TitleLocation>
-							<EditMode>EnterOnInput</EditMode>
-							<Border width="1">
-								<v8ui:style xsi:type="v8ui:ControlBorderType">Embossed</v8ui:style>
-							</Border>
-							<Font ref="style:NormalTextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
-							<ContextMenu name="СтатусКонтекстноеМеню" id="6"/>
-							<ExtendedTooltip name="СтатусРасширеннаяПодсказка" id="7"/>
-						</LabelField>
 						<InputField name="Номер" id="8">
 							<DataPath>Объект.Number</DataPath>
 							<EditMode>EnterOnInput</EditMode>
@@ -75,45 +65,39 @@
 							<ContextMenu name="ДатаКонтекстноеМеню" id="12"/>
 							<ExtendedTooltip name="ДатаРасширеннаяПодсказка" id="13"/>
 						</InputField>
-						<InputField name="Организация" id="14">
-							<DataPath>Объект.Организация</DataPath>
+						<InputField name="Статус" id="5">
+							<DataPath>Объект.Статус</DataPath>
 							<EditMode>EnterOnInput</EditMode>
-							<ContextMenu name="ОрганизацияКонтекстноеМеню" id="15"/>
-							<ExtendedTooltip name="ОрганизацияРасширеннаяПодсказка" id="16"/>
-							<Events>
-								<Event name="OnChange">ОрганизацияПриИзменении</Event>
-							</Events>
+							<Font ref="style:NormalTextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
+							<ContextMenu name="СтатусКонтекстноеМеню" id="6"/>
+							<ExtendedTooltip name="СтатусРасширеннаяПодсказка" id="7"/>
 						</InputField>
 					</ChildItems>
 				</UsualGroup>
-				<UsualGroup name="Группа2" id="17">
-					<Group>AlwaysHorizontal</Group>
-					<Representation>None</Representation>
-					<ShowTitle>false</ShowTitle>
-					<ExtendedTooltip name="Группа2РасширеннаяПодсказка" id="18"/>
-					<ChildItems>
-						<LabelField name="applicationID" id="19">
-							<DataPath>Объект.applicationID</DataPath>
-							<Title>
-								<v8:item>
-									<v8:lang>ru</v8:lang>
-									<v8:content>AppID</v8:content>
-								</v8:item>
-							</Title>
-							<EditMode>EnterOnInput</EditMode>
-							<ContextMenu name="applicationIDКонтекстноеМеню" id="20"/>
-							<ExtendedTooltip name="applicationIDРасширеннаяПодсказка" id="21"/>
-						</LabelField>
-						<LabelField name="UUID" id="22">
-							<DataPath>Объект.UUID</DataPath>
-							<EditMode>EnterOnInput</EditMode>
-							<ContextMenu name="UUIDКонтекстноеМеню" id="23"/>
-							<ExtendedTooltip name="UUIDРасширеннаяПодсказка" id="24"/>
-						</LabelField>
-					</ChildItems>
-				</UsualGroup>
+				<InputField name="Организация" id="14">
+					<DataPath>Объект.Организация</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ОрганизацияКонтекстноеМеню" id="15"/>
+					<ExtendedTooltip name="ОрганизацияРасширеннаяПодсказка" id="16"/>
+					<Events>
+						<Event name="OnChange">ОрганизацияПриИзменении</Event>
+					</Events>
+				</InputField>
+				<InputField name="applicationID" id="19">
+					<DataPath>Объект.applicationID</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>AppID</v8:content>
+						</v8:item>
+					</Title>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="applicationIDКонтекстноеМеню" id="20"/>
+					<ExtendedTooltip name="applicationIDРасширеннаяПодсказка" id="21"/>
+				</InputField>
 				<InputField name="Партия" id="27">
 					<DataPath>Объект.Партия</DataPath>
+					<AutoMarkIncomplete>true</AutoMarkIncomplete>
 					<ContextMenu name="ПартияКонтекстноеМеню" id="28"/>
 					<ExtendedTooltip name="ПартияРасширеннаяПодсказка" id="29"/>
 					<Events>
@@ -142,6 +126,7 @@
 											<AutoInsertNewRow>true</AutoInsertNewRow>
 											<EnableStartDrag>true</EnableStartDrag>
 											<EnableDrag>true</EnableDrag>
+											<FileDragMode>AsFile</FileDragMode>
 											<DataPath>Объект.Исследования</DataPath>
 											<RowFilter xsi:nil="true"/>
 											<ContextMenu name="ИсследованияКонтекстноеМеню" id="63"/>
@@ -181,54 +166,64 @@
 												<InputField name="ИсследованияНомерАктаОтбораПроб" id="78">
 													<DataPath>Объект.Исследования.НомерАктаОтбораПроб</DataPath>
 													<EditMode>EnterOnInput</EditMode>
+													<AutoMarkIncomplete>true</AutoMarkIncomplete>
 													<ContextMenu name="ИсследованияНомерАктаОтбораПробКонтекстноеМеню" id="79"/>
 													<ExtendedTooltip name="ИсследованияНомерАктаОтбораПробРасширеннаяПодсказка" id="80"/>
 												</InputField>
 												<InputField name="ИсследованияДатаОтбораПроб" id="81">
 													<DataPath>Объект.Исследования.ДатаОтбораПроб</DataPath>
 													<EditMode>EnterOnInput</EditMode>
+													<AutoMarkIncomplete>true</AutoMarkIncomplete>
 													<ContextMenu name="ИсследованияДатаОтбораПробКонтекстноеМеню" id="82"/>
 													<ExtendedTooltip name="ИсследованияДатаОтбораПробРасширеннаяПодсказка" id="83"/>
 												</InputField>
 												<InputField name="ИсследованияНаименованиеЛаборатории" id="84">
 													<DataPath>Объект.Исследования.НаименованиеЛаборатории</DataPath>
 													<EditMode>EnterOnInput</EditMode>
+													<AutoMarkIncomplete>true</AutoMarkIncomplete>
 													<ContextMenu name="ИсследованияНаименованиеЛабораторииКонтекстноеМеню" id="85"/>
 													<ExtendedTooltip name="ИсследованияНаименованиеЛабораторииРасширеннаяПодсказка" id="86"/>
 												</InputField>
 												<InputField name="ИсследованияНаименованиеПоказателя" id="87">
 													<DataPath>Объект.Исследования.НаименованиеПоказателя</DataPath>
 													<EditMode>EnterOnInput</EditMode>
+													<AutoMarkIncomplete>true</AutoMarkIncomplete>
 													<ContextMenu name="ИсследованияНаименованиеПоказателяКонтекстноеМеню" id="88"/>
 													<ExtendedTooltip name="ИсследованияНаименованиеПоказателяРасширеннаяПодсказка" id="89"/>
 												</InputField>
 												<InputField name="ИсследованияДатаРезультата" id="90">
 													<DataPath>Объект.Исследования.ДатаРезультата</DataPath>
 													<EditMode>EnterOnInput</EditMode>
+													<AutoMarkIncomplete>true</AutoMarkIncomplete>
 													<ContextMenu name="ИсследованияДатаРезультатаКонтекстноеМеню" id="91"/>
 													<ExtendedTooltip name="ИсследованияДатаРезультатаРасширеннаяПодсказка" id="92"/>
 												</InputField>
 												<InputField name="ИсследованияМетодИсследования" id="93">
 													<DataPath>Объект.Исследования.МетодИсследования</DataPath>
 													<EditMode>EnterOnInput</EditMode>
+													<AutoMarkIncomplete>true</AutoMarkIncomplete>
 													<ContextMenu name="ИсследованияМетодИсследованияКонтекстноеМеню" id="94"/>
 													<ExtendedTooltip name="ИсследованияМетодИсследованияРасширеннаяПодсказка" id="95"/>
 												</InputField>
 												<InputField name="ИсследованияНомерЭкспертизы" id="96">
 													<DataPath>Объект.Исследования.НомерЭкспертизы</DataPath>
 													<EditMode>EnterOnInput</EditMode>
+													<AutoMarkIncomplete>true</AutoMarkIncomplete>
 													<ContextMenu name="ИсследованияНомерЭкспертизыКонтекстноеМеню" id="97"/>
 													<ExtendedTooltip name="ИсследованияНомерЭкспертизыРасширеннаяПодсказка" id="98"/>
 												</InputField>
 												<InputField name="ИсследованияРезультатИсследования" id="99">
 													<DataPath>Объект.Исследования.РезультатИсследования</DataPath>
 													<EditMode>EnterOnInput</EditMode>
+													<AutoChoiceIncomplete>true</AutoChoiceIncomplete>
+													<AutoMarkIncomplete>true</AutoMarkIncomplete>
 													<ContextMenu name="ИсследованияРезультатИсследованияКонтекстноеМеню" id="100"/>
 													<ExtendedTooltip name="ИсследованияРезультатИсследованияРасширеннаяПодсказка" id="101"/>
 												</InputField>
 												<InputField name="ИсследованияЗаключение" id="102">
 													<DataPath>Объект.Исследования.Заключение</DataPath>
 													<EditMode>EnterOnInput</EditMode>
+													<AutoMarkIncomplete>true</AutoMarkIncomplete>
 													<ContextMenu name="ИсследованияЗаключениеКонтекстноеМеню" id="103"/>
 													<ExtendedTooltip name="ИсследованияЗаключениеРасширеннаяПодсказка" id="104"/>
 												</InputField>
@@ -239,6 +234,7 @@
 							</ChildItems>
 						</Page>
 						<Page name="Группа6" id="109">
+							<Visible>false</Visible>
 							<Title>
 								<v8:item>
 									<v8:lang>ru</v8:lang>
@@ -303,10 +299,111 @@
 								</UsualGroup>
 							</ChildItems>
 						</Page>
+						<Page name="грЗапросы" id="113">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Запросы</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Гр запросы</v8:content>
+								</v8:item>
+							</ToolTip>
+							<ExtendedTooltip name="грЗапросыРасширеннаяПодсказка" id="114"/>
+							<ChildItems>
+								<Button name="кнОткрытьЗапрос" id="156">
+									<Type>UsualButton</Type>
+									<CommandName>Form.Command.кнОткрытьЗапрос</CommandName>
+									<ExtendedTooltip name="кнОткрытьЗапросРасширеннаяПодсказка" id="157"/>
+								</Button>
+								<UsualGroup name="Группа13" id="115">
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="Группа13РасширеннаяПодсказка" id="116"/>
+									<ChildItems>
+										<Table name="Запросы" id="117">
+											<Representation>List</Representation>
+											<ReadOnly>true</ReadOnly>
+											<AutoInsertNewRow>true</AutoInsertNewRow>
+											<EnableStartDrag>true</EnableStartDrag>
+											<EnableDrag>true</EnableDrag>
+											<FileDragMode>AsFile</FileDragMode>
+											<DataPath>Объект.Запросы</DataPath>
+											<RowFilter xsi:nil="true"/>
+											<ContextMenu name="ЗапросыКонтекстноеМеню" id="118"/>
+											<AutoCommandBar name="ЗапросыКоманднаяПанель" id="119">
+												<Autofill>false</Autofill>
+												<ChildItems>
+													<Button name="ЗапросыкнОткрытьЗапрос" id="142">
+														<Type>CommandBarButton</Type>
+														<CommandName>3:409b9a53-7f7e-4178-86c1-33176c7c7a7a</CommandName>
+														<ExtendedTooltip name="ЗапросыкнОткрытьЗапросРасширеннаяПодсказка" id="143"/>
+													</Button>
+												</ChildItems>
+											</AutoCommandBar>
+											<ExtendedTooltip name="ЗапросыРасширеннаяПодсказка" id="120"/>
+											<SearchStringAddition name="ЗапросыСтрокаПоиска" id="121">
+												<AdditionSource>
+													<Item>Запросы</Item>
+													<Type>SearchStringRepresentation</Type>
+												</AdditionSource>
+												<ContextMenu name="ЗапросыСтрокаПоискаКонтекстноеМеню" id="122"/>
+												<ExtendedTooltip name="ЗапросыСтрокаПоискаРасширеннаяПодсказка" id="123"/>
+											</SearchStringAddition>
+											<ViewStatusAddition name="ЗапросыСостояниеПросмотра" id="124">
+												<AdditionSource>
+													<Item>Запросы</Item>
+													<Type>ViewStatusRepresentation</Type>
+												</AdditionSource>
+												<ContextMenu name="ЗапросыСостояниеПросмотраКонтекстноеМеню" id="125"/>
+												<ExtendedTooltip name="ЗапросыСостояниеПросмотраРасширеннаяПодсказка" id="126"/>
+											</ViewStatusAddition>
+											<SearchControlAddition name="ЗапросыУправлениеПоиском" id="127">
+												<AdditionSource>
+													<Item>Запросы</Item>
+													<Type>SearchControl</Type>
+												</AdditionSource>
+												<ContextMenu name="ЗапросыУправлениеПоискомКонтекстноеМеню" id="128"/>
+												<ExtendedTooltip name="ЗапросыУправлениеПоискомРасширеннаяПодсказка" id="129"/>
+											</SearchControlAddition>
+											<ChildItems>
+												<LabelField name="ЗапросыНомерСтроки" id="144">
+													<DataPath>Объект.Запросы.LineNumber</DataPath>
+													<EditMode>EnterOnInput</EditMode>
+													<ContextMenu name="ЗапросыНомерСтрокиКонтекстноеМеню" id="145"/>
+													<ExtendedTooltip name="ЗапросыНомерСтрокиРасширеннаяПодсказка" id="146"/>
+												</LabelField>
+												<InputField name="ЗапросыДата" id="147">
+													<DataPath>Объект.Запросы.Дата</DataPath>
+													<EditMode>EnterOnInput</EditMode>
+													<ContextMenu name="ЗапросыДатаКонтекстноеМеню" id="148"/>
+													<ExtendedTooltip name="ЗапросыДатаРасширеннаяПодсказка" id="149"/>
+												</InputField>
+												<InputField name="ЗапросыФайл" id="150">
+													<DataPath>Объект.Запросы.Файл</DataPath>
+													<EditMode>EnterOnInput</EditMode>
+													<ContextMenu name="ЗапросыФайлКонтекстноеМеню" id="151"/>
+													<ExtendedTooltip name="ЗапросыФайлРасширеннаяПодсказка" id="152"/>
+												</InputField>
+												<InputField name="ЗапросыПользователь" id="153">
+													<DataPath>Объект.Запросы.Пользователь</DataPath>
+													<EditMode>EnterOnInput</EditMode>
+													<ContextMenu name="ЗапросыПользовательКонтекстноеМеню" id="154"/>
+													<ExtendedTooltip name="ЗапросыПользовательРасширеннаяПодсказка" id="155"/>
+												</InputField>
+											</ChildItems>
+										</Table>
+									</ChildItems>
+								</UsualGroup>
+							</ChildItems>
+						</Page>
 					</ChildItems>
 				</Pages>
 				<InputField name="Комментарий" id="57">
 					<DataPath>Объект.Комментарий</DataPath>
+					<AutoMaxWidth>false</AutoMaxWidth>
 					<ContextMenu name="КомментарийКонтекстноеМеню" id="58"/>
 					<ExtendedTooltip name="КомментарийРасширеннаяПодсказка" id="59"/>
 				</InputField>
@@ -325,4 +422,25 @@
 			</UseAlways>
 		</Attribute>
 	</Attributes>
+	<Commands>
+		<Command name="кнОткрытьЗапрос" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Открыть</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Открыть xml</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.OpenFile</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>кнОткрытьЗапрос</Action>
+		</Command>
+	</Commands>
 </Form>

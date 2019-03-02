@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.6">
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.8">
 	<AutoTime>CurrentOrLast</AutoTime>
 	<UsePostingMode>Auto</UsePostingMode>
 	<RepostOnWrite>true</RepostOnWrite>
@@ -105,12 +105,12 @@
 					<ExtendedTooltip name="Страница1РасширеннаяПодсказка" id="50"/>
 					<ChildItems>
 						<UsualGroup name="Группа2" id="51">
-							<Group>Horizontal</Group>
+							<Group>Vertical</Group>
 							<Representation>None</Representation>
 							<ShowTitle>false</ShowTitle>
 							<ExtendedTooltip name="Группа2РасширеннаяПодсказка" id="52"/>
 							<ChildItems>
-								<LabelField name="applicationID" id="53">
+								<InputField name="applicationID" id="53">
 									<DataPath>Объект.applicationID</DataPath>
 									<Title>
 										<v8:item>
@@ -121,13 +121,13 @@
 									<EditMode>EnterOnInput</EditMode>
 									<ContextMenu name="applicationIDКонтекстноеМеню" id="54"/>
 									<ExtendedTooltip name="applicationIDРасширеннаяПодсказка" id="55"/>
-								</LabelField>
-								<LabelField name="UUID" id="56">
+								</InputField>
+								<InputField name="UUID" id="56">
 									<DataPath>Объект.UUID</DataPath>
 									<EditMode>EnterOnInput</EditMode>
 									<ContextMenu name="UUIDКонтекстноеМеню" id="57"/>
 									<ExtendedTooltip name="UUIDРасширеннаяПодсказка" id="58"/>
-								</LabelField>
+								</InputField>
 							</ChildItems>
 						</UsualGroup>
 						<UsualGroup name="ГрШапка" id="59">
@@ -161,12 +161,12 @@
 										</v8:item>
 									</ToolTip>
 									<Group>Vertical</Group>
-									<Representation>StrongSeparation</Representation>
+									<Representation>None</Representation>
 									<ShowTitle>false</ShowTitle>
 									<ExtendedTooltip name="ГруппаВладелецРасширеннаяПодсказка" id="62"/>
 									<ChildItems>
 										<UsualGroup name="Группа4" id="63">
-											<Group>Horizontal</Group>
+											<Group>Vertical</Group>
 											<Representation>None</Representation>
 											<ShowTitle>false</ShowTitle>
 											<ExtendedTooltip name="Группа4РасширеннаяПодсказка" id="64"/>
@@ -193,7 +193,7 @@
 										</UsualGroup>
 										<UsualGroup name="Группа3" id="71">
 											<Group>Vertical</Group>
-											<Representation>StrongSeparation</Representation>
+											<Representation>None</Representation>
 											<ShowTitle>false</ShowTitle>
 											<ExtendedTooltip name="Группа3РасширеннаяПодсказка" id="72"/>
 											<ChildItems>
@@ -246,6 +246,7 @@
 									<AutoInsertNewRow>true</AutoInsertNewRow>
 									<EnableStartDrag>true</EnableStartDrag>
 									<EnableDrag>true</EnableDrag>
+									<FileDragMode>AsFile</FileDragMode>
 									<DataPath>Объект.Продукция</DataPath>
 									<RowFilter xsi:nil="true"/>
 									<ContextMenu name="ПродукцияКонтекстноеМеню" id="150"/>
@@ -483,6 +484,7 @@
 											<AutoInsertNewRow>true</AutoInsertNewRow>
 											<EnableStartDrag>true</EnableStartDrag>
 											<EnableDrag>true</EnableDrag>
+											<FileDragMode>AsFile</FileDragMode>
 											<DataPath>Объект.УровниУпаковки</DataPath>
 											<RowFilter xsi:nil="true"/>
 											<ContextMenu name="УровниУпаковкиКонтекстноеМеню" id="209"/>
@@ -567,6 +569,7 @@
 											<AutoInsertNewRow>true</AutoInsertNewRow>
 											<EnableStartDrag>true</EnableStartDrag>
 											<EnableDrag>true</EnableDrag>
+											<FileDragMode>AsFile</FileDragMode>
 											<DataPath>Объект.Маркировка</DataPath>
 											<RowFilter xsi:nil="true"/>
 											<ContextMenu name="МаркировкаКонтекстноеМеню" id="239"/>
@@ -670,6 +673,7 @@
 									<AutoInsertNewRow>true</AutoInsertNewRow>
 									<EnableStartDrag>true</EnableStartDrag>
 									<EnableDrag>true</EnableDrag>
+									<FileDragMode>AsFile</FileDragMode>
 									<DataPath>Объект.Запросы</DataPath>
 									<RowFilter xsi:nil="true"/>
 									<ContextMenu name="ЗапросыКонтекстноеМеню" id="414"/>
@@ -745,6 +749,7 @@
 		<InputField name="Комментарий" id="22">
 			<DataPath>Объект.Комментарий</DataPath>
 			<EditMode>EnterOnInput</EditMode>
+			<AutoMaxWidth>false</AutoMaxWidth>
 			<ContextMenu name="КомментарийКонтекстноеМеню" id="23"/>
 			<ExtendedTooltip name="КомментарийРасширеннаяПодсказка" id="24"/>
 		</InputField>

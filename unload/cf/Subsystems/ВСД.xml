@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.6">
+<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.8">
 	<Subsystem uuid="53a7cff2-0ec8-4cdf-bba1-976ec888a33d">
 		<Properties>
 			<Name>ВСД</Name>
@@ -13,7 +13,10 @@
 			<IncludeHelpInContents>true</IncludeHelpInContents>
 			<IncludeInCommandInterface>true</IncludeInCommandInterface>
 			<Explanation/>
-			<Picture/>
+			<Picture>
+				<xr:Ref>CommonPicture.Ветис2</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
 			<Content>
 				<xr:Item xsi:type="xr:MDObjectRef">Document.ВСД</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">Document.ВСД_транзакция</xr:Item>
@@ -42,13 +45,16 @@
 				<xr:Item xsi:type="xr:MDObjectRef">Document.ВСД2</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">Document.ВСД2_ОбъединениеПартий</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.ВСД</xr:Item>
-				<xr:Item xsi:type="xr:MDObjectRef">DataProcessor.ВСД_ЗапускИнтеграции</xr:Item>
-				<xr:Item xsi:type="xr:MDObjectRef">d59112a8-db61-438c-9113-4edbe4234817</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">97cf5e8f-08b1-4e59-b88e-848baa0248c6</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">Document.ВСД2_входящий</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">DataProcessor.Интеграция_ГИС_Меркурий</xr:Item>
-				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.ВСД_Соответсвия_ХС</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.ВСД_ПроизводственнаяСпецификация</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">Enum.ВСД_ТермическиеУсловияПеревозки</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.Ветис2</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.ВСД_Отправка</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.ВСД_Запросы</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.ВСД_Общий</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.ВСД_Производство</xr:Item>
 			</Content>
 		</Properties>
 		<ChildObjects>

@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.6">
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.8">
 	<AutoTime>CurrentOrLast</AutoTime>
 	<UsePostingMode>Auto</UsePostingMode>
 	<RepostOnWrite>true</RepostOnWrite>
@@ -10,6 +10,11 @@
 				<CommandName>CommonCommand.ВСД_ОтправитьВСД</CommandName>
 				<DataPath>Объект.Ref</DataPath>
 				<ExtendedTooltip name="ФормаОбщаяКомандаВСД_ОтправитьВСДРасширеннаяПодсказка" id="351"/>
+			</Button>
+			<Button name="ФормакнОтправить" id="356">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.кнОтправить</CommandName>
+				<ExtendedTooltip name="ФормакнОтправитьРасширеннаяПодсказка" id="357"/>
 			</Button>
 		</ChildItems>
 	</AutoCommandBar>
@@ -43,17 +48,6 @@
 					<ShowTitle>false</ShowTitle>
 					<ExtendedTooltip name="Группа1РасширеннаяПодсказка" id="278"/>
 					<ChildItems>
-						<LabelField name="Статус" id="40">
-							<DataPath>Объект.Статус</DataPath>
-							<TitleLocation>None</TitleLocation>
-							<EditMode>EnterOnInput</EditMode>
-							<Border width="1">
-								<v8ui:style xsi:type="v8ui:ControlBorderType">Embossed</v8ui:style>
-							</Border>
-							<Font ref="style:NormalTextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
-							<ContextMenu name="СтатусКонтекстноеМеню" id="41"/>
-							<ExtendedTooltip name="СтатусРасширеннаяПодсказка" id="42"/>
-						</LabelField>
 						<InputField name="Номер" id="1">
 							<DataPath>Объект.Number</DataPath>
 							<EditMode>EnterOnInput</EditMode>
@@ -65,6 +59,15 @@
 							<EditMode>EnterOnInput</EditMode>
 							<ContextMenu name="ДатаКонтекстноеМеню" id="5"/>
 							<ExtendedTooltip name="ДатаРасширеннаяПодсказка" id="6"/>
+						</InputField>
+						<InputField name="Статус" id="40">
+							<DataPath>Объект.Статус</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<MaxWidth>12</MaxWidth>
+							<Font ref="style:NormalTextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
+							<ContextMenu name="СтатусКонтекстноеМеню" id="41"/>
+							<ExtendedTooltip name="СтатусРасширеннаяПодсказка" id="42"/>
 						</InputField>
 						<InputField name="Организация" id="88">
 							<DataPath>Объект.Организация</DataPath>
@@ -266,74 +269,10 @@
 													<ContextMenu name="номерАвтоКонтекстноеМеню" id="35"/>
 													<ExtendedTooltip name="номерАвтоРасширеннаяПодсказка" id="36"/>
 												</InputField>
-												<InputField name="ТермическоеСостояние" id="49">
-													<DataPath>Объект.ТермическоеСостояние</DataPath>
-													<Title>
-														<v8:item>
-															<v8:lang>ru</v8:lang>
-															<v8:content>Хранение при перевозке</v8:content>
-														</v8:item>
-													</Title>
-													<EditMode>EnterOnInput</EditMode>
-													<ListChoiceMode>true</ListChoiceMode>
-													<MinValue xsi:type="xs:decimal">1</MinValue>
-													<MaxValue xsi:type="xs:decimal">4</MaxValue>
-													<ChoiceList>
-														<xr:Item>
-															<xr:Presentation/>
-															<xr:CheckState>0</xr:CheckState>
-															<xr:Value xsi:type="FormChoiceListDesTimeValue">
-																<Presentation>
-																	<v8:item>
-																		<v8:lang>ru</v8:lang>
-																		<v8:content>Замороженный</v8:content>
-																	</v8:item>
-																</Presentation>
-																<Value xsi:type="xs:decimal">1</Value>
-															</xr:Value>
-														</xr:Item>
-														<xr:Item>
-															<xr:Presentation/>
-															<xr:CheckState>0</xr:CheckState>
-															<xr:Value xsi:type="FormChoiceListDesTimeValue">
-																<Presentation>
-																	<v8:item>
-																		<v8:lang>ru</v8:lang>
-																		<v8:content>Охлажденный</v8:content>
-																	</v8:item>
-																</Presentation>
-																<Value xsi:type="xs:decimal">2</Value>
-															</xr:Value>
-														</xr:Item>
-														<xr:Item>
-															<xr:Presentation/>
-															<xr:CheckState>0</xr:CheckState>
-															<xr:Value xsi:type="FormChoiceListDesTimeValue">
-																<Presentation>
-																	<v8:item>
-																		<v8:lang>ru</v8:lang>
-																		<v8:content>Охлаждаемый</v8:content>
-																	</v8:item>
-																</Presentation>
-																<Value xsi:type="xs:decimal">3</Value>
-															</xr:Value>
-														</xr:Item>
-														<xr:Item>
-															<xr:Presentation/>
-															<xr:CheckState>0</xr:CheckState>
-															<xr:Value xsi:type="FormChoiceListDesTimeValue">
-																<Presentation>
-																	<v8:item>
-																		<v8:lang>ru</v8:lang>
-																		<v8:content>Вентилируемый</v8:content>
-																	</v8:item>
-																</Presentation>
-																<Value xsi:type="xs:decimal">4</Value>
-															</xr:Value>
-														</xr:Item>
-													</ChoiceList>
-													<ContextMenu name="ТермическоеСостояниеКонтекстноеМеню" id="50"/>
-													<ExtendedTooltip name="ТермическоеСостояниеРасширеннаяПодсказка" id="51"/>
+												<InputField name="ТермическиеУсловияПеревозки" id="358">
+													<DataPath>Объект.ТермическиеУсловияПеревозки</DataPath>
+													<ContextMenu name="ТермическиеУсловияПеревозкиКонтекстноеМеню" id="359"/>
+													<ExtendedTooltip name="ТермическиеУсловияПеревозкиРасширеннаяПодсказка" id="360"/>
 												</InputField>
 											</ChildItems>
 										</UsualGroup>
@@ -435,6 +374,7 @@
 									<Group>Vertical</Group>
 									<VerticalAlign>Top</VerticalAlign>
 									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
 									<ThroughAlign>Use</ThroughAlign>
 									<ExtendedTooltip name="грШапка2РасширеннаяПодсказка" id="353"/>
 									<ChildItems>
@@ -448,7 +388,7 @@
 													<v8:content>Перемещение от поставщика</v8:content>
 												</v8:item>
 											</Title>
-											<TitleLocation>Left</TitleLocation>
+											<TitleLocation>Right</TitleLocation>
 											<HorizontalAlign>Right</HorizontalAlign>
 											<VerticalAlign>Center</VerticalAlign>
 											<CheckBoxType>Auto</CheckBoxType>
@@ -688,6 +628,7 @@
 									<AutoAddIncomplete>false</AutoAddIncomplete>
 									<EnableStartDrag>true</EnableStartDrag>
 									<EnableDrag>true</EnableDrag>
+									<FileDragMode>AsFile</FileDragMode>
 									<DataPath>Объект.Товары</DataPath>
 									<CommandSet>
 										<ExcludedCommand>CopyToClipboard</ExcludedCommand>
@@ -895,10 +836,12 @@
 											<Representation>List</Representation>
 											<AutoMaxWidth>false</AutoMaxWidth>
 											<Height>10</Height>
+											<AutoMaxHeight>false</AutoMaxHeight>
 											<HeightInTableRows>1</HeightInTableRows>
 											<AutoInsertNewRow>true</AutoInsertNewRow>
 											<EnableStartDrag>true</EnableStartDrag>
 											<EnableDrag>true</EnableDrag>
+											<FileDragMode>AsFile</FileDragMode>
 											<DataPath>Объект.УровниУпаковки</DataPath>
 											<RowFilter xsi:nil="true"/>
 											<ContextMenu name="УровниУпаковкиКонтекстноеМеню" id="150"/>
@@ -982,10 +925,12 @@
 											<Representation>List</Representation>
 											<AutoMaxWidth>false</AutoMaxWidth>
 											<Height>10</Height>
+											<AutoMaxHeight>false</AutoMaxHeight>
 											<HeightInTableRows>1</HeightInTableRows>
 											<AutoInsertNewRow>true</AutoInsertNewRow>
 											<EnableStartDrag>true</EnableStartDrag>
 											<EnableDrag>true</EnableDrag>
+											<FileDragMode>AsFile</FileDragMode>
 											<DataPath>Объект.Маркировка</DataPath>
 											<RowFilter xsi:nil="true"/>
 											<ContextMenu name="МаркировкаКонтекстноеМеню" id="180"/>
@@ -1093,6 +1038,7 @@
 									<AutoInsertNewRow>true</AutoInsertNewRow>
 									<EnableStartDrag>true</EnableStartDrag>
 									<EnableDrag>true</EnableDrag>
+									<FileDragMode>AsFile</FileDragMode>
 									<DataPath>Объект.УсловияПеревозки</DataPath>
 									<RowFilter xsi:nil="true"/>
 									<ContextMenu name="УсловияПеревозкиКонтекстноеМеню" id="210"/>
@@ -1199,6 +1145,7 @@
 									<AutoInsertNewRow>true</AutoInsertNewRow>
 									<EnableStartDrag>true</EnableStartDrag>
 									<EnableDrag>true</EnableDrag>
+									<FileDragMode>AsFile</FileDragMode>
 									<DataPath>Объект.Запросы</DataPath>
 									<RowFilter xsi:nil="true"/>
 									<ContextMenu name="ЗапросыКонтекстноеМеню" id="326"/>
@@ -1276,6 +1223,7 @@
 		<InputField name="Комментарий" id="67">
 			<DataPath>Объект.Комментарий</DataPath>
 			<EditMode>EnterOnInput</EditMode>
+			<AutoMaxWidth>false</AutoMaxWidth>
 			<ContextMenu name="КомментарийКонтекстноеМеню" id="68"/>
 			<ExtendedTooltip name="КомментарийРасширеннаяПодсказка" id="69"/>
 		</InputField>
@@ -1351,6 +1299,17 @@
 				</AdditionalColumns>
 			</Columns>
 		</Attribute>
+		<Attribute name="ИдентификаторЗадания" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Идентификатор задания</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:UUID</v8:Type>
+			</Type>
+		</Attribute>
 	</Attributes>
 	<Commands>
 		<Command name="кнЗаполнить" id="1">
@@ -1403,6 +1362,21 @@
 				<xr:LoadTransparent>true</xr:LoadTransparent>
 			</Picture>
 			<Action>кнОткрытьЗапрос</Action>
+		</Command>
+		<Command name="кнОтправить" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отправить в фоне</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Кн отправить</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>кнОтправить</Action>
 		</Command>
 	</Commands>
 </Form>
