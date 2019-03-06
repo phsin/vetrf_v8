@@ -1506,14 +1506,14 @@
 																					<ContextMenu name="ВыводитьПодробнуюИнформациюКонтекстноеМеню" id="97"/>
 																					<ExtendedTooltip name="ВыводитьПодробнуюИнформациюРасширеннаяПодсказка" id="98"/>
 																				</CheckBoxField>
+																				<CheckBoxField name="ОтправлятьВФоне" id="582">
+																					<DataPath>Объект.ОтправлятьВФоне</DataPath>
+																					<CheckBoxType>Auto</CheckBoxType>
+																					<ContextMenu name="ОтправлятьВФонеКонтекстноеМеню" id="583"/>
+																					<ExtendedTooltip name="ОтправлятьВФонеРасширеннаяПодсказка" id="584"/>
+																				</CheckBoxField>
 																			</ChildItems>
 																		</UsualGroup>
-																		<CheckBoxField name="ОтправлятьВФоне2" id="582">
-																			<DataPath>Объект.ОтправлятьВФоне</DataPath>
-																			<CheckBoxType>Auto</CheckBoxType>
-																			<ContextMenu name="ОтправлятьВФоне2КонтекстноеМеню" id="583"/>
-																			<ExtendedTooltip name="ОтправлятьВФоне2РасширеннаяПодсказка" id="584"/>
-																		</CheckBoxField>
 																	</ChildItems>
 																</UsualGroup>
 															</ChildItems>
@@ -1817,12 +1817,6 @@
 																			<ContextMenu name="ВСД_РезультатыИсследованийКонтекстноеМеню" id="115"/>
 																			<ExtendedTooltip name="ВСД_РезультатыИсследованийРасширеннаяПодсказка" id="116"/>
 																		</InputField>
-																		<CheckBoxField name="ОтправлятьВФоне1" id="579">
-																			<DataPath>Объект.ОтправлятьВФоне</DataPath>
-																			<CheckBoxType>Auto</CheckBoxType>
-																			<ContextMenu name="ОтправлятьВФоне1КонтекстноеМеню" id="580"/>
-																			<ExtendedTooltip name="ОтправлятьВФоне1РасширеннаяПодсказка" id="581"/>
-																		</CheckBoxField>
 																	</ChildItems>
 																</UsualGroup>
 															</ChildItems>
@@ -2222,12 +2216,6 @@
 																					<CheckBoxType>Auto</CheckBoxType>
 																					<ContextMenu name="ПарамРазрешитьВводНаОснованииБолееОдногоВСДКонтекстноеМеню" id="486"/>
 																					<ExtendedTooltip name="ПарамРазрешитьВводНаОснованииБолееОдногоВСДРасширеннаяПодсказка" id="487"/>
-																				</CheckBoxField>
-																				<CheckBoxField name="ОтправлятьВФоне" id="576">
-																					<DataPath>Объект.ОтправлятьВФоне</DataPath>
-																					<CheckBoxType>Auto</CheckBoxType>
-																					<ContextMenu name="ОтправлятьВФонеКонтекстноеМеню" id="577"/>
-																					<ExtendedTooltip name="ОтправлятьВФонеРасширеннаяПодсказка" id="578"/>
 																				</CheckBoxField>
 																				<UsualGroup name="Группа40" id="525">
 																					<ShowTitle>false</ShowTitle>
