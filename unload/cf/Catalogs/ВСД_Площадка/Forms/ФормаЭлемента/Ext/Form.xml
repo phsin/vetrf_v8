@@ -168,6 +168,36 @@
 									<ContextMenu name="дсСоответствияСоответствуетКонтекстноеМеню" id="68"/>
 									<ExtendedTooltip name="дсСоответствияСоответствуетРасширеннаяПодсказка" id="69"/>
 								</CheckBoxField>
+								<LabelField name="дсСоответствияНаименование" id="70">
+									<DataPath>дсСоответствия.Description</DataPath>
+									<ContextMenu name="дсСоответствияНаименованиеКонтекстноеМеню" id="71"/>
+									<ExtendedTooltip name="дсСоответствияНаименованиеРасширеннаяПодсказка" id="72"/>
+								</LabelField>
+								<LabelField name="дсСоответствияКод" id="73">
+									<DataPath>дсСоответствия.Code</DataPath>
+									<ContextMenu name="дсСоответствияКодКонтекстноеМеню" id="74"/>
+									<ExtendedTooltip name="дсСоответствияКодРасширеннаяПодсказка" id="75"/>
+								</LabelField>
+								<LabelField name="дсСоответствияКонтрагент" id="76">
+									<DataPath>дсСоответствия.Контрагент</DataPath>
+									<ContextMenu name="дсСоответствияКонтрагентКонтекстноеМеню" id="77"/>
+									<ExtendedTooltip name="дсСоответствияКонтрагентРасширеннаяПодсказка" id="78"/>
+								</LabelField>
+								<LabelField name="дсСоответствияGUID" id="79">
+									<DataPath>дсСоответствия.GUID</DataPath>
+									<ContextMenu name="дсСоответствияGUIDКонтекстноеМеню" id="80"/>
+									<ExtendedTooltip name="дсСоответствияGUIDРасширеннаяПодсказка" id="81"/>
+								</LabelField>
+								<LabelField name="дсСоответствияUUID" id="82">
+									<DataPath>дсСоответствия.UUID</DataPath>
+									<ContextMenu name="дсСоответствияUUIDКонтекстноеМеню" id="83"/>
+									<ExtendedTooltip name="дсСоответствияUUIDРасширеннаяПодсказка" id="84"/>
+								</LabelField>
+								<LabelField name="дсСоответствияОГРН" id="85">
+									<DataPath>дсСоответствия.ОГРН</DataPath>
+									<ContextMenu name="дсСоответствияОГРНКонтекстноеМеню" id="86"/>
+									<ExtendedTooltip name="дсСоответствияОГРНРасширеннаяПодсказка" id="87"/>
+								</LabelField>
 							</ChildItems>
 						</Table>
 					</ChildItems>
@@ -196,7 +226,7 @@
 			<Settings xsi:type="DynamicList">
 				<ManualQuery>false</ManualQuery>
 				<DynamicDataRead>true</DynamicDataRead>
-				<MainTable>InformationRegister.ВСД_Соответсвия</MainTable>
+				<MainTable>Catalog.ВСД_ХозСубъект</MainTable>
 				<ListSettings>
 					<dcsset:filter>
 						<dcsset:viewMode>Normal</dcsset:viewMode>

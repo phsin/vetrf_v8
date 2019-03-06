@@ -454,9 +454,24 @@
 							</Events>
 							<ChildItems>
 								<LabelField name="дсСоответствияНоменклатура" id="104">
-									<DataPath>дсСоответствия.Номенклатура</DataPath>
+									<DataPath>~дсСоответствия.Номенклатура</DataPath>
 									<ContextMenu name="дсСоответствияНоменклатураКонтекстноеМеню" id="105"/>
 									<ExtendedTooltip name="дсСоответствияНоменклатураРасширеннаяПодсказка" id="106"/>
+								</LabelField>
+								<LabelField name="дсСоответствияВладелец" id="142">
+									<DataPath>дсСоответствия.Owner</DataPath>
+									<ContextMenu name="дсСоответствияВладелецКонтекстноеМеню" id="143"/>
+									<ExtendedTooltip name="дсСоответствияВладелецРасширеннаяПодсказка" id="144"/>
+								</LabelField>
+								<LabelField name="дсСоответствияНаименование" id="136">
+									<DataPath>дсСоответствия.Description</DataPath>
+									<ContextMenu name="дсСоответствияНаименованиеКонтекстноеМеню" id="137"/>
+									<ExtendedTooltip name="дсСоответствияНаименованиеРасширеннаяПодсказка" id="138"/>
+								</LabelField>
+								<LabelField name="дсСоответствияКод" id="139">
+									<DataPath>дсСоответствия.Code</DataPath>
+									<ContextMenu name="дсСоответствияКодКонтекстноеМеню" id="140"/>
+									<ExtendedTooltip name="дсСоответствияКодРасширеннаяПодсказка" id="141"/>
 								</LabelField>
 							</ChildItems>
 						</Table>
@@ -566,7 +581,7 @@
 			<Settings xsi:type="DynamicList">
 				<ManualQuery>false</ManualQuery>
 				<DynamicDataRead>true</DynamicDataRead>
-				<MainTable>InformationRegister.ВСД_Соответсвия</MainTable>
+				<MainTable>Catalog.ВСД_Соответсвия</MainTable>
 				<ListSettings>
 					<dcsset:filter>
 						<dcsset:viewMode>Normal</dcsset:viewMode>
