@@ -13,7 +13,7 @@
 			</Button>
 			<Button name="ФормакнОтправить" id="356">
 				<Type>CommandBarButton</Type>
-				<CommandName>Form.Command.кнОтправить</CommandName>
+				<CommandName>Form.Command.кнОтправитьВФоне</CommandName>
 				<ExtendedTooltip name="ФормакнОтправитьРасширеннаяПодсказка" id="357"/>
 			</Button>
 		</ChildItems>
@@ -1364,7 +1364,7 @@
 			</Picture>
 			<Action>кнОткрытьЗапрос</Action>
 		</Command>
-		<Command name="кнОтправить" id="4">
+		<Command name="кнОтправитьВФоне" id="4">
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
@@ -1374,7 +1374,7 @@
 			<ToolTip>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Кн отправить</v8:content>
+					<v8:content>Кн отправить в фоне</v8:content>
 				</v8:item>
 			</ToolTip>
 			<Action>кнОтправить</Action>

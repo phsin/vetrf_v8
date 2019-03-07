@@ -1101,6 +1101,22 @@
 														</Button>
 													</ChildItems>
 												</UsualGroup>
+												<UsualGroup name="Группа14" id="585">
+													<ExtendedTooltip name="Группа14РасширеннаяПодсказка" id="586"/>
+													<ChildItems>
+														<Button name="кнУдалитьПартии" id="587">
+															<Type>UsualButton</Type>
+															<CommandName>Form.Command.кнУдалитьПартии</CommandName>
+															<Title>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Удалить все партии</v8:content>
+																</v8:item>
+															</Title>
+															<ExtendedTooltip name="кнУдалитьПартииРасширеннаяПодсказка" id="588"/>
+														</Button>
+													</ChildItems>
+												</UsualGroup>
 											</ChildItems>
 										</Page>
 										<Page name="Группа13" id="271">
@@ -2443,6 +2459,22 @@
 																		</Button>
 																	</ChildItems>
 																</UsualGroup>
+																<UsualGroup name="Группа27" id="591">
+																	<Title>
+																		<v8:item>
+																			<v8:lang>ru</v8:lang>
+																			<v8:content>Обновить</v8:content>
+																		</v8:item>
+																	</Title>
+																	<ExtendedTooltip name="Группа27РасширеннаяПодсказка" id="592"/>
+																	<ChildItems>
+																		<Button name="Версия2ОбновитьСправочники" id="589">
+																			<Type>UsualButton</Type>
+																			<CommandName>Form.Command.Версия2ОбновитьСправочники</CommandName>
+																			<ExtendedTooltip name="Версия2ОбновитьСправочникиРасширеннаяПодсказка" id="590"/>
+																		</Button>
+																	</ChildItems>
+																</UsualGroup>
 															</ChildItems>
 														</UsualGroup>
 													</ChildItems>
@@ -3078,22 +3110,6 @@
 			<Action>ЗагрузитьПлощадкиПоСпискуДокументов</Action>
 			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
-		<Command name="ТЕСТ1" id="7">
-			<Title>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>ТЕСТ1</v8:content>
-				</v8:item>
-			</Title>
-			<ToolTip>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>ТЕСТ1</v8:content>
-				</v8:item>
-			</ToolTip>
-			<Action>ТЕСТ1</Action>
-			<CurrentRowUse>DontUse</CurrentRowUse>
-		</Command>
 		<Command name="кнОтметитьВсеДокументы" id="8">
 			<Title>
 				<v8:item>
@@ -3609,22 +3625,6 @@
 			<Action>кнХС_Создать</Action>
 			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
-		<Command name="ТЕСТСообщения" id="41">
-			<Title>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>ТЕСТСообщения</v8:content>
-				</v8:item>
-			</Title>
-			<ToolTip>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>ТЕСТСообщения</v8:content>
-				</v8:item>
-			</ToolTip>
-			<Action>ТЕСТСообщения</Action>
-			<CurrentRowUse>DontUse</CurrentRowUse>
-		</Command>
 		<Command name="кнОтметитьДокументыКСозданию" id="42">
 			<Title>
 				<v8:item>
@@ -3800,6 +3800,36 @@
 			</ToolTip>
 			<Action>кнПолучитьПартии2</Action>
 			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="кнУдалитьПартии" id="31">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Удалить все партии</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Кн удалить партии</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>кнУдалитьПартии</Action>
+		</Command>
+		<Command name="Версия2ОбновитьСправочники" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>версия2 обновить справочники</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Версия2 обновить справочники</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>кнВерсия2ОбновитьСправочники</Action>
 		</Command>
 	</Commands>
 </Form>

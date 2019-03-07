@@ -9,6 +9,9 @@
 	<ChildItems>
 		<Pages name="Группа1" id="28">
 			<ExtendedTooltip name="Группа1РасширеннаяПодсказка" id="29"/>
+			<Events>
+				<Event name="OnCurrentPageChange">Группа1ПриСменеСтраницы</Event>
+			</Events>
 			<ChildItems>
 				<Page name="страница1" id="30">
 					<Title>
@@ -30,6 +33,14 @@
 							<EditMode>EnterOnInput</EditMode>
 							<ContextMenu name="НаименованиеКонтекстноеМеню" id="5"/>
 							<ExtendedTooltip name="НаименованиеРасширеннаяПодсказка" id="6"/>
+						</InputField>
+						<InputField name="ХозСубъект" id="88">
+							<DataPath>Объект.ХозСубъект</DataPath>
+							<ContextMenu name="ХозСубъектКонтекстноеМеню" id="89"/>
+							<ExtendedTooltip name="ХозСубъектРасширеннаяПодсказка" id="90"/>
+							<Events>
+								<Event name="OnChange">ХозСубъектПриИзменении</Event>
+							</Events>
 						</InputField>
 						<InputField name="Склад" id="25">
 							<DataPath>Объект.Склад</DataPath>
@@ -75,22 +86,8 @@
 						</InputField>
 					</ChildItems>
 				</Page>
-				<Page name="страница2" id="32">
-					<Title>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>Страница2</v8:content>
-						</v8:item>
-					</Title>
-					<ToolTip>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>Страница2</v8:content>
-						</v8:item>
-					</ToolTip>
-					<ExtendedTooltip name="страница2РасширеннаяПодсказка" id="33"/>
-				</Page>
 				<Page name="Группа15" id="34">
+					<Visible>false</Visible>
 					<Title>
 						<v8:item>
 							<v8:lang>ru</v8:lang>

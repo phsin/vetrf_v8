@@ -32,17 +32,6 @@
 					<ShowTitle>false</ShowTitle>
 					<ExtendedTooltip name="Группа1РасширеннаяПодсказка" id="31"/>
 					<ChildItems>
-						<LabelField name="Статус" id="32">
-							<DataPath>Объект.Статус</DataPath>
-							<TitleLocation>None</TitleLocation>
-							<EditMode>EnterOnInput</EditMode>
-							<Border width="1">
-								<v8ui:style xsi:type="v8ui:ControlBorderType">Embossed</v8ui:style>
-							</Border>
-							<Font ref="style:NormalTextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
-							<ContextMenu name="СтатусКонтекстноеМеню" id="33"/>
-							<ExtendedTooltip name="СтатусРасширеннаяПодсказка" id="34"/>
-						</LabelField>
 						<InputField name="Номер" id="35">
 							<DataPath>Объект.Number</DataPath>
 							<EditMode>EnterOnInput</EditMode>
@@ -55,6 +44,17 @@
 							<ContextMenu name="ДатаКонтекстноеМеню" id="39"/>
 							<ExtendedTooltip name="ДатаРасширеннаяПодсказка" id="40"/>
 						</InputField>
+						<LabelField name="Статус" id="32">
+							<DataPath>Объект.Статус</DataPath>
+							<TitleLocation>None</TitleLocation>
+							<EditMode>EnterOnInput</EditMode>
+							<Border width="1">
+								<v8ui:style xsi:type="v8ui:ControlBorderType">Embossed</v8ui:style>
+							</Border>
+							<Font ref="style:NormalTextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
+							<ContextMenu name="СтатусКонтекстноеМеню" id="33"/>
+							<ExtendedTooltip name="СтатусРасширеннаяПодсказка" id="34"/>
+						</LabelField>
 						<InputField name="Организация" id="41">
 							<DataPath>Объект.Организация</DataPath>
 							<EditMode>EnterOnInput</EditMode>
@@ -331,8 +331,8 @@
 											<ContextMenu name="ПродукцияПартияКонтекстноеМеню" id="311"/>
 											<ExtendedTooltip name="ПродукцияПартияРасширеннаяПодсказка" id="312"/>
 											<Events>
-												<Event name="OnChange">ПродукцияПартияПриИзменении</Event>
 												<Event name="StartChoice">ПродукцияПартияНачалоВыбора</Event>
+												<Event name="ChoiceProcessing">ПродукцияПартияОбработкаВыбора</Event>
 											</Events>
 										</InputField>
 										<InputField name="ПродукцияКоличество" id="328">
@@ -462,6 +462,7 @@
 									<v8:content>Маркировка</v8:content>
 								</v8:item>
 							</Title>
+							<VerticalStretch>false</VerticalStretch>
 							<Group>Horizontal</Group>
 							<Representation>None</Representation>
 							<ShowTitle>false</ShowTitle>
@@ -474,6 +475,7 @@
 											<v8:content>Уровни упаковки</v8:content>
 										</v8:item>
 									</Title>
+									<VerticalStretch>false</VerticalStretch>
 									<Group>Vertical</Group>
 									<Representation>None</Representation>
 									<ShowTitle>false</ShowTitle>
@@ -481,7 +483,9 @@
 									<ChildItems>
 										<Table name="УровниУпаковки" id="208">
 											<Representation>List</Representation>
+											<Height>5</Height>
 											<AutoInsertNewRow>true</AutoInsertNewRow>
+											<VerticalStretch>false</VerticalStretch>
 											<EnableStartDrag>true</EnableStartDrag>
 											<EnableDrag>true</EnableDrag>
 											<FileDragMode>AsFile</FileDragMode>
@@ -560,13 +564,16 @@
 									</ChildItems>
 								</UsualGroup>
 								<UsualGroup name="Группа10" id="236">
+									<VerticalStretch>false</VerticalStretch>
 									<Representation>None</Representation>
 									<ShowTitle>false</ShowTitle>
 									<ExtendedTooltip name="Группа10РасширеннаяПодсказка" id="237"/>
 									<ChildItems>
 										<Table name="Маркировка" id="238">
 											<Representation>List</Representation>
+											<Height>5</Height>
 											<AutoInsertNewRow>true</AutoInsertNewRow>
+											<VerticalStretch>false</VerticalStretch>
 											<EnableStartDrag>true</EnableStartDrag>
 											<EnableDrag>true</EnableDrag>
 											<FileDragMode>AsFile</FileDragMode>
@@ -648,6 +655,7 @@
 					</ChildItems>
 				</Page>
 				<Page name="грЗапросы" id="406">
+					<Visible>false</Visible>
 					<Title>
 						<v8:item>
 							<v8:lang>ru</v8:lang>

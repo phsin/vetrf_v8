@@ -32,17 +32,6 @@
 					<ShowTitle>false</ShowTitle>
 					<ExtendedTooltip name="Группа1РасширеннаяПодсказка" id="4"/>
 					<ChildItems>
-						<LabelField name="Статус" id="5">
-							<DataPath>Объект.Статус</DataPath>
-							<TitleLocation>None</TitleLocation>
-							<EditMode>EnterOnInput</EditMode>
-							<Border width="1">
-								<v8ui:style xsi:type="v8ui:ControlBorderType">Embossed</v8ui:style>
-							</Border>
-							<Font ref="style:NormalTextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
-							<ContextMenu name="СтатусКонтекстноеМеню" id="6"/>
-							<ExtendedTooltip name="СтатусРасширеннаяПодсказка" id="7"/>
-						</LabelField>
 						<InputField name="Номер" id="8">
 							<DataPath>Объект.Number</DataPath>
 							<EditMode>EnterOnInput</EditMode>
@@ -55,6 +44,17 @@
 							<ContextMenu name="ДатаКонтекстноеМеню" id="12"/>
 							<ExtendedTooltip name="ДатаРасширеннаяПодсказка" id="13"/>
 						</InputField>
+						<LabelField name="Статус" id="5">
+							<DataPath>Объект.Статус</DataPath>
+							<TitleLocation>None</TitleLocation>
+							<EditMode>EnterOnInput</EditMode>
+							<Border width="1">
+								<v8ui:style xsi:type="v8ui:ControlBorderType">Embossed</v8ui:style>
+							</Border>
+							<Font ref="style:NormalTextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
+							<ContextMenu name="СтатусКонтекстноеМеню" id="6"/>
+							<ExtendedTooltip name="СтатусРасширеннаяПодсказка" id="7"/>
+						</LabelField>
 						<InputField name="Организация" id="14">
 							<DataPath>Объект.Организация</DataPath>
 							<EditMode>EnterOnInput</EditMode>
@@ -230,18 +230,6 @@
 											<ContextMenu name="НаименованиеПродукцииКонтекстноеМеню" id="239"/>
 											<ExtendedTooltip name="НаименованиеПродукцииРасширеннаяПодсказка" id="240"/>
 										</InputField>
-										<CheckBoxField name="ФлПодбиратьБезУчетаПродукцияЭлемент" id="241">
-											<DataPath>ФлПодбиратьБезУчетаПродукцияЭлемент</DataPath>
-											<Title>
-												<v8:item>
-													<v8:lang>ru</v8:lang>
-													<v8:content>Подбирать партии по Виду Продукции</v8:content>
-												</v8:item>
-											</Title>
-											<CheckBoxType>Auto</CheckBoxType>
-											<ContextMenu name="ФлПодбиратьБезУчетаПродукцияЭлементКонтекстноеМеню" id="242"/>
-											<ExtendedTooltip name="ФлПодбиратьБезУчетаПродукцияЭлементРасширеннаяПодсказка" id="243"/>
-										</CheckBoxField>
 									</ChildItems>
 								</UsualGroup>
 								<Table name="Продукция" id="56">
@@ -373,6 +361,7 @@
 					</ChildItems>
 				</Page>
 				<Page name="грЗапросы" id="248">
+					<Visible>false</Visible>
 					<Title>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
