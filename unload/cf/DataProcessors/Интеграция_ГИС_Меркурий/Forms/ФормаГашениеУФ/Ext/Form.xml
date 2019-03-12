@@ -31,6 +31,7 @@
 	<ChildItems>
 		<UsualGroup name="Группа1" id="39">
 			<Group>Vertical</Group>
+			<ShowTitle>false</ShowTitle>
 			<ExtendedTooltip name="Группа1РасширеннаяПодсказка" id="40"/>
 			<ChildItems>
 				<UsualGroup name="Группа4" id="251">
@@ -99,6 +100,9 @@
 									</Title>
 									<ContextMenu name="ВыбНачалоПериодаКонтекстноеМеню" id="365"/>
 									<ExtendedTooltip name="ВыбНачалоПериодаРасширеннаяПодсказка" id="366"/>
+									<Events>
+										<Event name="OnChange">ВыбНачалоПериодаПриИзменении</Event>
+									</Events>
 								</InputField>
 								<InputField name="ВыбОкончаниеПериода" id="367">
 									<DataPath>ВыбОкончаниеПериода</DataPath>
@@ -110,6 +114,9 @@
 									</Title>
 									<ContextMenu name="ВыбОкончаниеПериодаКонтекстноеМеню" id="368"/>
 									<ExtendedTooltip name="ВыбОкончаниеПериодаРасширеннаяПодсказка" id="369"/>
+									<Events>
+										<Event name="OnChange">ВыбОкончаниеПериодаПриИзменении</Event>
+									</Events>
 								</InputField>
 								<Button name="кнВыбратьПериодВСД" id="372">
 									<Type>UsualButton</Type>
@@ -123,11 +130,6 @@
 										</v8:item>
 									</Title>
 									<ExtendedTooltip name="кнВыбратьПериодВСДРасширеннаяПодсказка" id="373"/>
-								</Button>
-								<Button name="кнОформитьВходящийВСД" id="374">
-									<Type>UsualButton</Type>
-									<CommandName>Form.Command.кнОформитьВходящийВСД</CommandName>
-									<ExtendedTooltip name="кнОформитьВходящийВСДРасширеннаяПодсказка" id="375"/>
 								</Button>
 							</ChildItems>
 						</UsualGroup>
@@ -237,12 +239,16 @@
 													<DataPath>ВыбрХозСубъект</DataPath>
 													<ContextMenu name="ВыбрХозСубъектКонтекстноеМеню" id="390"/>
 													<ExtendedTooltip name="ВыбрХозСубъектРасширеннаяПодсказка" id="391"/>
+													<Events>
+														<Event name="OnChange">ВыбрХозСубъектПриИзменении</Event>
+													</Events>
 												</InputField>
 												<InputField name="ВыбрПлощадка" id="392">
 													<DataPath>ВыбрПлощадка</DataPath>
 													<ContextMenu name="ВыбрПлощадкаКонтекстноеМеню" id="393"/>
 													<ExtendedTooltip name="ВыбрПлощадкаРасширеннаяПодсказка" id="394"/>
 													<Events>
+														<Event name="OnChange">ВыбрПлощадкаПриИзменении</Event>
 														<Event name="StartChoice">Отправитель_ПлощадкаНачалоВыбора</Event>
 													</Events>
 												</InputField>
@@ -1068,6 +1074,11 @@
 									<Type>UsualButton</Type>
 									<CommandName>Form.Command.кнЗагрузитьПартииИзФайла</CommandName>
 									<ExtendedTooltip name="кнЗагрузитьПартииИзФайлаРасширеннаяПодсказка" id="335"/>
+								</Button>
+								<Button name="кнОформитьВходящийВСД" id="374">
+									<Type>UsualButton</Type>
+									<CommandName>Form.Command.кнОформитьВходящийВСД</CommandName>
+									<ExtendedTooltip name="кнОформитьВходящийВСДРасширеннаяПодсказка" id="375"/>
 								</Button>
 							</ChildItems>
 						</Page>
