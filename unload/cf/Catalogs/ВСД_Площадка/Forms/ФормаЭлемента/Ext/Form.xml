@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.6">
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.8">
 	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
 	<UseForFoldersAndItems>Items</UseForFoldersAndItems>
 	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
@@ -9,6 +9,9 @@
 	<ChildItems>
 		<Pages name="Группа1" id="28">
 			<ExtendedTooltip name="Группа1РасширеннаяПодсказка" id="29"/>
+			<Events>
+				<Event name="OnCurrentPageChange">Группа1ПриСменеСтраницы</Event>
+			</Events>
 			<ChildItems>
 				<Page name="страница1" id="30">
 					<Title>
@@ -30,6 +33,14 @@
 							<EditMode>EnterOnInput</EditMode>
 							<ContextMenu name="НаименованиеКонтекстноеМеню" id="5"/>
 							<ExtendedTooltip name="НаименованиеРасширеннаяПодсказка" id="6"/>
+						</InputField>
+						<InputField name="ХозСубъект" id="88">
+							<DataPath>Объект.ХозСубъект</DataPath>
+							<ContextMenu name="ХозСубъектКонтекстноеМеню" id="89"/>
+							<ExtendedTooltip name="ХозСубъектРасширеннаяПодсказка" id="90"/>
+							<Events>
+								<Event name="OnChange">ХозСубъектПриИзменении</Event>
+							</Events>
 						</InputField>
 						<InputField name="Склад" id="25">
 							<DataPath>Объект.Склад</DataPath>
@@ -75,22 +86,8 @@
 						</InputField>
 					</ChildItems>
 				</Page>
-				<Page name="страница2" id="32">
-					<Title>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>Страница2</v8:content>
-						</v8:item>
-					</Title>
-					<ToolTip>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>Страница2</v8:content>
-						</v8:item>
-					</ToolTip>
-					<ExtendedTooltip name="страница2РасширеннаяПодсказка" id="33"/>
-				</Page>
 				<Page name="Группа15" id="34">
+					<Visible>false</Visible>
 					<Title>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
@@ -103,6 +100,7 @@
 							<Representation>List</Representation>
 							<UseAlternationRowColor>true</UseAlternationRowColor>
 							<EnableStartDrag>true</EnableStartDrag>
+							<FileDragMode>AsFile</FileDragMode>
 							<DataPath>дсСоответствия</DataPath>
 							<RowPictureDataPath>дсСоответствия.DefaultPicture</RowPictureDataPath>
 							<AutoRefresh>false</AutoRefresh>
@@ -167,6 +165,36 @@
 									<ContextMenu name="дсСоответствияСоответствуетКонтекстноеМеню" id="68"/>
 									<ExtendedTooltip name="дсСоответствияСоответствуетРасширеннаяПодсказка" id="69"/>
 								</CheckBoxField>
+								<LabelField name="дсСоответствияНаименование" id="70">
+									<DataPath>дсСоответствия.Description</DataPath>
+									<ContextMenu name="дсСоответствияНаименованиеКонтекстноеМеню" id="71"/>
+									<ExtendedTooltip name="дсСоответствияНаименованиеРасширеннаяПодсказка" id="72"/>
+								</LabelField>
+								<LabelField name="дсСоответствияКод" id="73">
+									<DataPath>дсСоответствия.Code</DataPath>
+									<ContextMenu name="дсСоответствияКодКонтекстноеМеню" id="74"/>
+									<ExtendedTooltip name="дсСоответствияКодРасширеннаяПодсказка" id="75"/>
+								</LabelField>
+								<LabelField name="дсСоответствияКонтрагент" id="76">
+									<DataPath>дсСоответствия.Контрагент</DataPath>
+									<ContextMenu name="дсСоответствияКонтрагентКонтекстноеМеню" id="77"/>
+									<ExtendedTooltip name="дсСоответствияКонтрагентРасширеннаяПодсказка" id="78"/>
+								</LabelField>
+								<LabelField name="дсСоответствияGUID" id="79">
+									<DataPath>дсСоответствия.GUID</DataPath>
+									<ContextMenu name="дсСоответствияGUIDКонтекстноеМеню" id="80"/>
+									<ExtendedTooltip name="дсСоответствияGUIDРасширеннаяПодсказка" id="81"/>
+								</LabelField>
+								<LabelField name="дсСоответствияUUID" id="82">
+									<DataPath>дсСоответствия.UUID</DataPath>
+									<ContextMenu name="дсСоответствияUUIDКонтекстноеМеню" id="83"/>
+									<ExtendedTooltip name="дсСоответствияUUIDРасширеннаяПодсказка" id="84"/>
+								</LabelField>
+								<LabelField name="дсСоответствияОГРН" id="85">
+									<DataPath>дсСоответствия.ОГРН</DataPath>
+									<ContextMenu name="дсСоответствияОГРНКонтекстноеМеню" id="86"/>
+									<ExtendedTooltip name="дсСоответствияОГРНРасширеннаяПодсказка" id="87"/>
+								</LabelField>
 							</ChildItems>
 						</Table>
 					</ChildItems>
@@ -195,7 +223,7 @@
 			<Settings xsi:type="DynamicList">
 				<ManualQuery>false</ManualQuery>
 				<DynamicDataRead>true</DynamicDataRead>
-				<MainTable>InformationRegister.ВСД_Соответсвия</MainTable>
+				<MainTable>Catalog.ВСД_ХозСубъект</MainTable>
 				<ListSettings>
 					<dcsset:filter>
 						<dcsset:viewMode>Normal</dcsset:viewMode>

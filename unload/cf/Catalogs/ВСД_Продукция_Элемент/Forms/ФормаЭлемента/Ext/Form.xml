@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.6">
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.8">
 	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
 	<UseForFoldersAndItems>Items</UseForFoldersAndItems>
 	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
@@ -405,6 +405,7 @@
 							<Representation>List</Representation>
 							<UseAlternationRowColor>true</UseAlternationRowColor>
 							<EnableStartDrag>true</EnableStartDrag>
+							<FileDragMode>AsFile</FileDragMode>
 							<DataPath>дсСоответствия</DataPath>
 							<RowPictureDataPath>дсСоответствия.DefaultPicture</RowPictureDataPath>
 							<AutoRefresh>false</AutoRefresh>
@@ -453,9 +454,24 @@
 							</Events>
 							<ChildItems>
 								<LabelField name="дсСоответствияНоменклатура" id="104">
-									<DataPath>дсСоответствия.Номенклатура</DataPath>
+									<DataPath>~дсСоответствия.Номенклатура</DataPath>
 									<ContextMenu name="дсСоответствияНоменклатураКонтекстноеМеню" id="105"/>
 									<ExtendedTooltip name="дсСоответствияНоменклатураРасширеннаяПодсказка" id="106"/>
+								</LabelField>
+								<LabelField name="дсСоответствияВладелец" id="142">
+									<DataPath>дсСоответствия.Owner</DataPath>
+									<ContextMenu name="дсСоответствияВладелецКонтекстноеМеню" id="143"/>
+									<ExtendedTooltip name="дсСоответствияВладелецРасширеннаяПодсказка" id="144"/>
+								</LabelField>
+								<LabelField name="дсСоответствияНаименование" id="136">
+									<DataPath>дсСоответствия.Description</DataPath>
+									<ContextMenu name="дсСоответствияНаименованиеКонтекстноеМеню" id="137"/>
+									<ExtendedTooltip name="дсСоответствияНаименованиеРасширеннаяПодсказка" id="138"/>
+								</LabelField>
+								<LabelField name="дсСоответствияКод" id="139">
+									<DataPath>дсСоответствия.Code</DataPath>
+									<ContextMenu name="дсСоответствияКодКонтекстноеМеню" id="140"/>
+									<ExtendedTooltip name="дсСоответствияКодРасширеннаяПодсказка" id="141"/>
 								</LabelField>
 							</ChildItems>
 						</Table>
@@ -479,6 +495,7 @@
 						<Table name="дсСпецификация" id="117">
 							<UseAlternationRowColor>true</UseAlternationRowColor>
 							<EnableStartDrag>true</EnableStartDrag>
+							<FileDragMode>AsFile</FileDragMode>
 							<DataPath>дсСпецификация</DataPath>
 							<RowPictureDataPath>дсСпецификация.DefaultPicture</RowPictureDataPath>
 							<AutoRefresh>false</AutoRefresh>
@@ -564,8 +581,23 @@
 			<Settings xsi:type="DynamicList">
 				<ManualQuery>false</ManualQuery>
 				<DynamicDataRead>true</DynamicDataRead>
-				<MainTable>InformationRegister.ВСД_Соответсвия</MainTable>
-				<ListSettings/>
+				<MainTable>Catalog.ВСД_Соответсвия</MainTable>
+				<ListSettings>
+					<dcsset:filter>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>dfcece9d-5077-440b-b6b3-45a5cb4538eb</dcsset:userSettingID>
+					</dcsset:filter>
+					<dcsset:order>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>88619765-ccb3-46c6-ac52-38e9c992ebd4</dcsset:userSettingID>
+					</dcsset:order>
+					<dcsset:conditionalAppearance>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>b75fecce-942b-4aed-abc9-e6a02e460fb3</dcsset:userSettingID>
+					</dcsset:conditionalAppearance>
+					<dcsset:itemsViewMode>Normal</dcsset:itemsViewMode>
+					<dcsset:itemsUserSettingID>911b6018-f537-43e8-a417-da56b22f9aec</dcsset:itemsUserSettingID>
+				</ListSettings>
 			</Settings>
 		</Attribute>
 		<Attribute name="дсСпецификация" id="4">

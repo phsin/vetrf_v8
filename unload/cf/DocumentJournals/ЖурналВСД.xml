@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.6">
+<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.8">
 	<DocumentJournal uuid="15db5220-cc6e-4da0-8cf1-8fe2b9aede48">
 		<InternalInfo>
 			<xr:GeneratedType name="DocumentJournalSelection.ЖурналВСД" category="Selection">
@@ -28,11 +28,8 @@
 			<AuxiliaryForm/>
 			<UseStandardCommands>true</UseStandardCommands>
 			<RegisteredDocuments>
-				<xr:Item xsi:type="xr:MDObjectRef">Document.ВСД</xr:Item>
-				<xr:Item xsi:type="xr:MDObjectRef">Document.ВСД_транзакция</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">Document.ВСД2_Производство</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">Document.ВСД2_транзакция</xr:Item>
-				<xr:Item xsi:type="xr:MDObjectRef">Document.ВСД2</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">Document.ВСД2_ЛабораторныеИсследования</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">Document.ВСД2_Инвентаризация</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">Document.ВСД2_ОбъединениеПартий</xr:Item>
@@ -214,11 +211,8 @@
 					<Comment/>
 					<Indexing>DontIndex</Indexing>
 					<References>
-						<xr:Item xsi:type="xr:MDObjectRef">Document.ВСД.Attribute.Организация</xr:Item>
-						<xr:Item xsi:type="xr:MDObjectRef">Document.ВСД_транзакция.Attribute.Организация</xr:Item>
 						<xr:Item xsi:type="xr:MDObjectRef">Document.ВСД2_Производство.Attribute.Организация</xr:Item>
 						<xr:Item xsi:type="xr:MDObjectRef">Document.ВСД2_транзакция.Attribute.Организация</xr:Item>
-						<xr:Item xsi:type="xr:MDObjectRef">Document.ВСД2.Attribute.Организация</xr:Item>
 						<xr:Item xsi:type="xr:MDObjectRef">Document.ВСД2_ЛабораторныеИсследования.Attribute.Организация</xr:Item>
 						<xr:Item xsi:type="xr:MDObjectRef">Document.ВСД2_Инвентаризация.Attribute.Организация</xr:Item>
 						<xr:Item xsi:type="xr:MDObjectRef">Document.ВСД2_ОбъединениеПартий.Attribute.Организация</xr:Item>
@@ -238,11 +232,8 @@
 					<Comment/>
 					<Indexing>DontIndex</Indexing>
 					<References>
-						<xr:Item xsi:type="xr:MDObjectRef">Document.ВСД.Attribute.Статус</xr:Item>
-						<xr:Item xsi:type="xr:MDObjectRef">Document.ВСД_транзакция.Attribute.Статус</xr:Item>
 						<xr:Item xsi:type="xr:MDObjectRef">Document.ВСД2_Производство.Attribute.Статус</xr:Item>
 						<xr:Item xsi:type="xr:MDObjectRef">Document.ВСД2_транзакция.Attribute.Статус</xr:Item>
-						<xr:Item xsi:type="xr:MDObjectRef">Document.ВСД2.Attribute.Статус</xr:Item>
 						<xr:Item xsi:type="xr:MDObjectRef">Document.ВСД2_ЛабораторныеИсследования.Attribute.Статус</xr:Item>
 						<xr:Item xsi:type="xr:MDObjectRef">Document.ВСД2_Инвентаризация.Attribute.Статус</xr:Item>
 						<xr:Item xsi:type="xr:MDObjectRef">Document.ВСД2_ОбъединениеПартий.Attribute.Статус</xr:Item>
@@ -262,11 +253,8 @@
 					<Comment/>
 					<Indexing>DontIndex</Indexing>
 					<References>
-						<xr:Item xsi:type="xr:MDObjectRef">Document.ВСД.Attribute.UUID</xr:Item>
-						<xr:Item xsi:type="xr:MDObjectRef">Document.ВСД_транзакция.Attribute.UUID</xr:Item>
 						<xr:Item xsi:type="xr:MDObjectRef">Document.ВСД2_Производство.Attribute.UUID</xr:Item>
 						<xr:Item xsi:type="xr:MDObjectRef">Document.ВСД2_транзакция.Attribute.UUID</xr:Item>
-						<xr:Item xsi:type="xr:MDObjectRef">Document.ВСД2.Attribute.UUID</xr:Item>
 						<xr:Item xsi:type="xr:MDObjectRef">Document.ВСД2_ЛабораторныеИсследования.Attribute.UUID</xr:Item>
 						<xr:Item xsi:type="xr:MDObjectRef">Document.ВСД2_Инвентаризация.Attribute.UUID</xr:Item>
 						<xr:Item xsi:type="xr:MDObjectRef">Document.ВСД2_ОбъединениеПартий.Attribute.UUID</xr:Item>
@@ -286,11 +274,8 @@
 					<Comment/>
 					<Indexing>DontIndex</Indexing>
 					<References>
-						<xr:Item xsi:type="xr:MDObjectRef">Document.ВСД.Attribute.Отправитель_Площадка</xr:Item>
-						<xr:Item xsi:type="xr:MDObjectRef">Document.ВСД_транзакция.Attribute.Отправитель_Площадка</xr:Item>
 						<xr:Item xsi:type="xr:MDObjectRef">Document.ВСД2_Производство.Attribute.Производитель_Площадка</xr:Item>
 						<xr:Item xsi:type="xr:MDObjectRef">Document.ВСД2_транзакция.Attribute.Отправитель_Площадка</xr:Item>
-						<xr:Item xsi:type="xr:MDObjectRef">Document.ВСД2.Attribute.Отправитель_Площадка</xr:Item>
 						<xr:Item xsi:type="xr:MDObjectRef">Document.ВСД2_Инвентаризация.Attribute.Владелец_Площадка</xr:Item>
 						<xr:Item xsi:type="xr:MDObjectRef">Document.ВСД2_ОбъединениеПартий.Attribute.Владелец_Площадка</xr:Item>
 						<xr:Item xsi:type="xr:MDObjectRef">Document.ВСД2_входящий.Attribute.Отправитель_Площадка</xr:Item>
@@ -309,10 +294,7 @@
 					<Comment/>
 					<Indexing>DontIndex</Indexing>
 					<References>
-						<xr:Item xsi:type="xr:MDObjectRef">Document.ВСД.Attribute.Получатель_Площадка</xr:Item>
-						<xr:Item xsi:type="xr:MDObjectRef">Document.ВСД_транзакция.Attribute.Получатель_Площадка</xr:Item>
 						<xr:Item xsi:type="xr:MDObjectRef">Document.ВСД2_транзакция.Attribute.Получатель_Площадка</xr:Item>
-						<xr:Item xsi:type="xr:MDObjectRef">Document.ВСД2.Attribute.Получатель_Площадка</xr:Item>
 						<xr:Item xsi:type="xr:MDObjectRef">Document.ВСД2_входящий.Attribute.Получатель_Площадка</xr:Item>
 					</References>
 				</Properties>

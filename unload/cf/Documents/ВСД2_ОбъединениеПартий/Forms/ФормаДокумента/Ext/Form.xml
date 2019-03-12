@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.6">
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.8">
 	<AutoTime>CurrentOrLast</AutoTime>
 	<UsePostingMode>Auto</UsePostingMode>
 	<RepostOnWrite>true</RepostOnWrite>
@@ -32,17 +32,6 @@
 					<ShowTitle>false</ShowTitle>
 					<ExtendedTooltip name="Группа1РасширеннаяПодсказка" id="4"/>
 					<ChildItems>
-						<LabelField name="Статус" id="5">
-							<DataPath>Объект.Статус</DataPath>
-							<TitleLocation>None</TitleLocation>
-							<EditMode>EnterOnInput</EditMode>
-							<Border width="1">
-								<v8ui:style xsi:type="v8ui:ControlBorderType">Embossed</v8ui:style>
-							</Border>
-							<Font ref="style:NormalTextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
-							<ContextMenu name="СтатусКонтекстноеМеню" id="6"/>
-							<ExtendedTooltip name="СтатусРасширеннаяПодсказка" id="7"/>
-						</LabelField>
 						<InputField name="Номер" id="8">
 							<DataPath>Объект.Number</DataPath>
 							<EditMode>EnterOnInput</EditMode>
@@ -55,6 +44,17 @@
 							<ContextMenu name="ДатаКонтекстноеМеню" id="12"/>
 							<ExtendedTooltip name="ДатаРасширеннаяПодсказка" id="13"/>
 						</InputField>
+						<LabelField name="Статус" id="5">
+							<DataPath>Объект.Статус</DataPath>
+							<TitleLocation>None</TitleLocation>
+							<EditMode>EnterOnInput</EditMode>
+							<Border width="1">
+								<v8ui:style xsi:type="v8ui:ControlBorderType">Embossed</v8ui:style>
+							</Border>
+							<Font ref="style:NormalTextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
+							<ContextMenu name="СтатусКонтекстноеМеню" id="6"/>
+							<ExtendedTooltip name="СтатусРасширеннаяПодсказка" id="7"/>
+						</LabelField>
 						<InputField name="Организация" id="14">
 							<DataPath>Объект.Организация</DataPath>
 							<EditMode>EnterOnInput</EditMode>
@@ -105,12 +105,12 @@
 					<ExtendedTooltip name="Страница1РасширеннаяПодсказка" id="23"/>
 					<ChildItems>
 						<UsualGroup name="Группа2" id="24">
-							<Group>Horizontal</Group>
+							<Group>Vertical</Group>
 							<Representation>None</Representation>
 							<ShowTitle>false</ShowTitle>
 							<ExtendedTooltip name="Группа2РасширеннаяПодсказка" id="25"/>
 							<ChildItems>
-								<LabelField name="applicationID" id="26">
+								<InputField name="applicationID" id="26">
 									<DataPath>Объект.applicationID</DataPath>
 									<Title>
 										<v8:item>
@@ -121,78 +121,39 @@
 									<EditMode>EnterOnInput</EditMode>
 									<ContextMenu name="applicationIDКонтекстноеМеню" id="27"/>
 									<ExtendedTooltip name="applicationIDРасширеннаяПодсказка" id="28"/>
-								</LabelField>
-								<LabelField name="UUID" id="29">
+								</InputField>
+								<InputField name="UUID" id="29">
 									<DataPath>Объект.UUID</DataPath>
 									<EditMode>EnterOnInput</EditMode>
 									<ContextMenu name="UUIDКонтекстноеМеню" id="30"/>
 									<ExtendedTooltip name="UUIDРасширеннаяПодсказка" id="31"/>
-								</LabelField>
+								</InputField>
 							</ChildItems>
 						</UsualGroup>
-						<UsualGroup name="ГрШапка" id="32">
-							<Title>
-								<v8:item>
-									<v8:lang>ru</v8:lang>
-									<v8:content>Гр шапка</v8:content>
-								</v8:item>
-							</Title>
-							<ToolTip>
-								<v8:item>
-									<v8:lang>ru</v8:lang>
-									<v8:content>Гр шапка</v8:content>
-								</v8:item>
-							</ToolTip>
+						<UsualGroup name="Группа4" id="36">
+							<Group>Vertical</Group>
 							<Representation>None</Representation>
 							<ShowTitle>false</ShowTitle>
-							<ExtendedTooltip name="ГрШапкаРасширеннаяПодсказка" id="33"/>
+							<ExtendedTooltip name="Группа4РасширеннаяПодсказка" id="37"/>
 							<ChildItems>
-								<UsualGroup name="ГруппаВладелец" id="34">
-									<Title>
-										<v8:item>
-											<v8:lang>ru</v8:lang>
-											<v8:content>Владелец</v8:content>
-										</v8:item>
-									</Title>
-									<ToolTip>
-										<v8:item>
-											<v8:lang>ru</v8:lang>
-											<v8:content>Группа владелец</v8:content>
-										</v8:item>
-									</ToolTip>
-									<Group>Vertical</Group>
-									<Representation>StrongSeparation</Representation>
-									<ShowTitle>false</ShowTitle>
-									<ExtendedTooltip name="ГруппаВладелецРасширеннаяПодсказка" id="35"/>
-									<ChildItems>
-										<UsualGroup name="Группа4" id="36">
-											<Group>Horizontal</Group>
-											<Representation>None</Representation>
-											<ShowTitle>false</ShowTitle>
-											<ExtendedTooltip name="Группа4РасширеннаяПодсказка" id="37"/>
-											<ChildItems>
-												<InputField name="Владелец_ХозСубъект" id="38">
-													<DataPath>Объект.Владелец_ХозСубъект</DataPath>
-													<EditMode>EnterOnInput</EditMode>
-													<ContextMenu name="Владелец_ХозСубъектКонтекстноеМеню" id="39"/>
-													<ExtendedTooltip name="Владелец_ХозСубъектРасширеннаяПодсказка" id="40"/>
-													<Events>
-														<Event name="OnChange">Владелец_ХозСубъектПриИзменении</Event>
-													</Events>
-												</InputField>
-												<InputField name="Владелец_Площадка" id="41">
-													<DataPath>Объект.Владелец_Площадка</DataPath>
-													<EditMode>EnterOnInput</EditMode>
-													<ContextMenu name="Владелец_ПлощадкаКонтекстноеМеню" id="42"/>
-													<ExtendedTooltip name="Владелец_ПлощадкаРасширеннаяПодсказка" id="43"/>
-													<Events>
-														<Event name="StartChoice">Владелец_ПлощадкаНачалоВыбора</Event>
-													</Events>
-												</InputField>
-											</ChildItems>
-										</UsualGroup>
-									</ChildItems>
-								</UsualGroup>
+								<InputField name="Владелец_ХозСубъект" id="38">
+									<DataPath>Объект.Владелец_ХозСубъект</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="Владелец_ХозСубъектКонтекстноеМеню" id="39"/>
+									<ExtendedTooltip name="Владелец_ХозСубъектРасширеннаяПодсказка" id="40"/>
+									<Events>
+										<Event name="OnChange">Владелец_ХозСубъектПриИзменении</Event>
+									</Events>
+								</InputField>
+								<InputField name="Владелец_Площадка" id="41">
+									<DataPath>Объект.Владелец_Площадка</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="Владелец_ПлощадкаКонтекстноеМеню" id="42"/>
+									<ExtendedTooltip name="Владелец_ПлощадкаРасширеннаяПодсказка" id="43"/>
+									<Events>
+										<Event name="StartChoice">Владелец_ПлощадкаНачалоВыбора</Event>
+									</Events>
+								</InputField>
 							</ChildItems>
 						</UsualGroup>
 					</ChildItems>
@@ -269,18 +230,6 @@
 											<ContextMenu name="НаименованиеПродукцииКонтекстноеМеню" id="239"/>
 											<ExtendedTooltip name="НаименованиеПродукцииРасширеннаяПодсказка" id="240"/>
 										</InputField>
-										<CheckBoxField name="ФлПодбиратьБезУчетаПродукцияЭлемент" id="241">
-											<DataPath>ФлПодбиратьБезУчетаПродукцияЭлемент</DataPath>
-											<Title>
-												<v8:item>
-													<v8:lang>ru</v8:lang>
-													<v8:content>Подбирать партии по Виду Продукции</v8:content>
-												</v8:item>
-											</Title>
-											<CheckBoxType>Auto</CheckBoxType>
-											<ContextMenu name="ФлПодбиратьБезУчетаПродукцияЭлементКонтекстноеМеню" id="242"/>
-											<ExtendedTooltip name="ФлПодбиратьБезУчетаПродукцияЭлементРасширеннаяПодсказка" id="243"/>
-										</CheckBoxField>
 									</ChildItems>
 								</UsualGroup>
 								<Table name="Продукция" id="56">
@@ -288,6 +237,7 @@
 									<AutoInsertNewRow>true</AutoInsertNewRow>
 									<EnableStartDrag>true</EnableStartDrag>
 									<EnableDrag>true</EnableDrag>
+									<FileDragMode>AsFile</FileDragMode>
 									<DataPath>Объект.Продукция</DataPath>
 									<RowFilter xsi:nil="true"/>
 									<ContextMenu name="ПродукцияКонтекстноеМеню" id="57"/>
@@ -411,6 +361,7 @@
 					</ChildItems>
 				</Page>
 				<Page name="грЗапросы" id="248">
+					<Visible>false</Visible>
 					<Title>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
@@ -435,6 +386,7 @@
 									<AutoInsertNewRow>true</AutoInsertNewRow>
 									<EnableStartDrag>true</EnableStartDrag>
 									<EnableDrag>true</EnableDrag>
+									<FileDragMode>AsFile</FileDragMode>
 									<DataPath>Объект.Запросы</DataPath>
 									<RowFilter xsi:nil="true"/>
 									<ContextMenu name="ЗапросыКонтекстноеМеню" id="253"/>
@@ -509,6 +461,7 @@
 		</Pages>
 		<InputField name="Комментарий" id="194">
 			<DataPath>Объект.Комментарий</DataPath>
+			<AutoMaxWidth>false</AutoMaxWidth>
 			<ContextMenu name="КомментарийКонтекстноеМеню" id="195"/>
 			<ExtendedTooltip name="КомментарийРасширеннаяПодсказка" id="196"/>
 		</InputField>

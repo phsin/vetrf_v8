@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.6">
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.8">
 	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
 	<UseForFoldersAndItems>Items</UseForFoldersAndItems>
 	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
@@ -67,9 +67,9 @@
 					<ExtendedTooltip name="Группа3РасширеннаяПодсказка" id="24"/>
 					<ChildItems>
 						<Table name="дсСоответствия" id="25">
-							<Representation>List</Representation>
 							<UseAlternationRowColor>true</UseAlternationRowColor>
 							<EnableStartDrag>true</EnableStartDrag>
+							<FileDragMode>AsFile</FileDragMode>
 							<DataPath>дсСоответствия</DataPath>
 							<RowPictureDataPath>дсСоответствия.DefaultPicture</RowPictureDataPath>
 							<AutoRefresh>false</AutoRefresh>
@@ -112,28 +112,52 @@
 								<ContextMenu name="дсСоответствияУправлениеПоискомКонтекстноеМеню" id="36"/>
 								<ExtendedTooltip name="дсСоответствияУправлениеПоискомРасширеннаяПодсказка" id="37"/>
 							</SearchControlAddition>
-							<Events>
-								<Event name="BeforeAddRow">дсСоответствияПередНачаломДобавления</Event>
-								<Event name="ChoiceProcessing">дсСоответствияОбработкаВыбора</Event>
-							</Events>
 							<ChildItems>
-								<LabelField name="дсСоответствияПервый" id="38">
-									<DataPath>~дсСоответствия.Первый</DataPath>
-									<Title>
-										<v8:item>
-											<v8:lang>ru</v8:lang>
-											<v8:content>Площадка</v8:content>
-										</v8:item>
-									</Title>
-									<ContextMenu name="дсСоответствияПервыйКонтекстноеМеню" id="39"/>
-									<ExtendedTooltip name="дсСоответствияПервыйРасширеннаяПодсказка" id="40"/>
+								<LabelField name="дсСоответствияНаименование" id="38">
+									<DataPath>дсСоответствия.Description</DataPath>
+									<ContextMenu name="дсСоответствияНаименованиеКонтекстноеМеню" id="39"/>
+									<ExtendedTooltip name="дсСоответствияНаименованиеРасширеннаяПодсказка" id="40"/>
 								</LabelField>
-								<CheckBoxField name="дсСоответствияСоответствует" id="50">
-									<DataPath>~дсСоответствия.Соответствует</DataPath>
-									<CheckBoxType>Auto</CheckBoxType>
-									<ContextMenu name="дсСоответствияСоответствуетКонтекстноеМеню" id="51"/>
-									<ExtendedTooltip name="дсСоответствияСоответствуетРасширеннаяПодсказка" id="52"/>
-								</CheckBoxField>
+								<LabelField name="дсСоответствияКод" id="41">
+									<DataPath>дсСоответствия.Code</DataPath>
+									<ContextMenu name="дсСоответствияКодКонтекстноеМеню" id="42"/>
+									<ExtendedTooltip name="дсСоответствияКодРасширеннаяПодсказка" id="43"/>
+								</LabelField>
+								<LabelField name="дсСоответствияКонтрагент" id="44">
+									<DataPath>дсСоответствия.Контрагент</DataPath>
+									<ContextMenu name="дсСоответствияКонтрагентКонтекстноеМеню" id="45"/>
+									<ExtendedTooltip name="дсСоответствияКонтрагентРасширеннаяПодсказка" id="46"/>
+								</LabelField>
+								<LabelField name="дсСоответствияGUID" id="47">
+									<DataPath>дсСоответствия.GUID</DataPath>
+									<ContextMenu name="дсСоответствияGUIDКонтекстноеМеню" id="48"/>
+									<ExtendedTooltip name="дсСоответствияGUIDРасширеннаяПодсказка" id="49"/>
+								</LabelField>
+								<LabelField name="дсСоответствияUUID" id="50">
+									<DataPath>дсСоответствия.UUID</DataPath>
+									<ContextMenu name="дсСоответствияUUIDКонтекстноеМеню" id="51"/>
+									<ExtendedTooltip name="дсСоответствияUUIDРасширеннаяПодсказка" id="52"/>
+								</LabelField>
+								<LabelField name="дсСоответствияАдрес" id="53">
+									<DataPath>дсСоответствия.Адрес</DataPath>
+									<ContextMenu name="дсСоответствияАдресКонтекстноеМеню" id="54"/>
+									<ExtendedTooltip name="дсСоответствияАдресРасширеннаяПодсказка" id="55"/>
+								</LabelField>
+								<LabelField name="дсСоответствияGuidХозСубъекта" id="56">
+									<DataPath>дсСоответствия.GuidХозСубъекта</DataPath>
+									<ContextMenu name="дсСоответствияGuidХозСубъектаКонтекстноеМеню" id="57"/>
+									<ExtendedTooltip name="дсСоответствияGuidХозСубъектаРасширеннаяПодсказка" id="58"/>
+								</LabelField>
+								<LabelField name="дсСоответствияНомерПлощадки" id="59">
+									<DataPath>дсСоответствия.НомерПлощадки</DataPath>
+									<ContextMenu name="дсСоответствияНомерПлощадкиКонтекстноеМеню" id="60"/>
+									<ExtendedTooltip name="дсСоответствияНомерПлощадкиРасширеннаяПодсказка" id="61"/>
+								</LabelField>
+								<LabelField name="дсСоответствияСклад" id="62">
+									<DataPath>дсСоответствия.Склад</DataPath>
+									<ContextMenu name="дсСоответствияСкладКонтекстноеМеню" id="63"/>
+									<ExtendedTooltip name="дсСоответствияСкладРасширеннаяПодсказка" id="64"/>
+								</LabelField>
 							</ChildItems>
 						</Table>
 					</ChildItems>
@@ -162,7 +186,7 @@
 			<Settings xsi:type="DynamicList">
 				<ManualQuery>false</ManualQuery>
 				<DynamicDataRead>true</DynamicDataRead>
-				<MainTable>InformationRegister.ВСД_Соответсвия</MainTable>
+				<MainTable>Catalog.ВСД_Площадка</MainTable>
 				<ListSettings>
 					<dcsset:filter>
 						<dcsset:viewMode>Normal</dcsset:viewMode>

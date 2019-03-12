@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.6">
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.8">
 	<Title>
 		<v8:item>
 			<v8:lang>ru</v8:lang>
@@ -31,9 +31,11 @@
 	<ChildItems>
 		<UsualGroup name="Группа1" id="39">
 			<Group>Vertical</Group>
+			<ShowTitle>false</ShowTitle>
 			<ExtendedTooltip name="Группа1РасширеннаяПодсказка" id="40"/>
 			<ChildItems>
 				<UsualGroup name="Группа4" id="251">
+					<Group>AlwaysHorizontal</Group>
 					<Representation>None</Representation>
 					<ShowTitle>false</ShowTitle>
 					<ExtendedTooltip name="Группа4РасширеннаяПодсказка" id="252"/>
@@ -66,6 +68,73 @@
 						</InputField>
 					</ChildItems>
 				</UsualGroup>
+				<UsualGroup name="Группа20" id="395">
+					<Group>AlwaysHorizontal</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="Группа20РасширеннаяПодсказка" id="396"/>
+					<ChildItems>
+						<Button name="кнПолучитьВСД" id="265">
+							<Type>UsualButton</Type>
+							<CommandName>Form.Command.кнПолучитьВСД</CommandName>
+							<ExtendedTooltip name="кнПолучитьВСДРасширеннаяПодсказка" id="266"/>
+						</Button>
+						<Button name="кнПогасить" id="267">
+							<Type>UsualButton</Type>
+							<CommandName>Form.Command.кнПогасить</CommandName>
+							<ExtendedTooltip name="кнПогаситьРасширеннаяПодсказка" id="268"/>
+						</Button>
+						<UsualGroup name="Группа18" id="370">
+							<Group>Horizontal</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="Группа18РасширеннаяПодсказка" id="371"/>
+							<ChildItems>
+								<InputField name="ВыбНачалоПериода" id="364">
+									<DataPath>ВыбНачалоПериода</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Поступившие С</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="ВыбНачалоПериодаКонтекстноеМеню" id="365"/>
+									<ExtendedTooltip name="ВыбНачалоПериодаРасширеннаяПодсказка" id="366"/>
+									<Events>
+										<Event name="OnChange">ВыбНачалоПериодаПриИзменении</Event>
+									</Events>
+								</InputField>
+								<InputField name="ВыбОкончаниеПериода" id="367">
+									<DataPath>ВыбОкончаниеПериода</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>По</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="ВыбОкончаниеПериодаКонтекстноеМеню" id="368"/>
+									<ExtendedTooltip name="ВыбОкончаниеПериодаРасширеннаяПодсказка" id="369"/>
+									<Events>
+										<Event name="OnChange">ВыбОкончаниеПериодаПриИзменении</Event>
+									</Events>
+								</InputField>
+								<Button name="кнВыбратьПериодВСД" id="372">
+									<Type>UsualButton</Type>
+									<Width>4</Width>
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<CommandName>Form.Command.кнВыбратьПериодВСД</CommandName>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>...</v8:content>
+										</v8:item>
+									</Title>
+									<ExtendedTooltip name="кнВыбратьПериодВСДРасширеннаяПодсказка" id="373"/>
+								</Button>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</UsualGroup>
 				<Pages name="Страницы" id="7">
 					<Title>
 						<v8:item>
@@ -94,18 +163,34 @@
 								<UsualGroup name="Группа2" id="247">
 									<Group>Vertical</Group>
 									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
 									<ExtendedTooltip name="Группа2РасширеннаяПодсказка" id="248"/>
 									<ChildItems>
-										<Button name="кнПолучитьВСД" id="265">
-											<Type>UsualButton</Type>
-											<CommandName>Form.Command.кнПолучитьВСД</CommandName>
-											<ExtendedTooltip name="кнПолучитьВСДРасширеннаяПодсказка" id="266"/>
-										</Button>
 										<UsualGroup name="Группа17" id="253">
-											<Group>Horizontal</Group>
+											<Group>Vertical</Group>
 											<Representation>None</Representation>
 											<ShowTitle>false</ShowTitle>
 											<ExtendedTooltip name="Группа17РасширеннаяПодсказка" id="254"/>
+										</UsualGroup>
+									</ChildItems>
+								</UsualGroup>
+								<UsualGroup name="Группа3" id="249">
+									<Group>Vertical</Group>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="Группа3РасширеннаяПодсказка" id="250"/>
+									<ChildItems>
+										<UsualGroup name="Группа19" id="387">
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Фильтр по отправителю ВСД</v8:content>
+												</v8:item>
+											</ToolTip>
+											<Group>AlwaysHorizontal</Group>
+											<Representation>None</Representation>
+											<ShowTitle>false</ShowTitle>
+											<ExtendedTooltip name="Группа19РасширеннаяПодсказка" id="388"/>
 											<ChildItems>
 												<CommandBar name="ГруппаКомПанельотгрузки" id="255">
 													<EnableContentChange>true</EnableContentChange>
@@ -121,6 +206,8 @@
 															<v8:content>Группа ком панельотгрузки</v8:content>
 														</v8:item>
 													</ToolTip>
+													<HorizontalStretch>false</HorizontalStretch>
+													<VerticalStretch>false</VerticalStretch>
 													<HorizontalLocation>Center</HorizontalLocation>
 													<ExtendedTooltip name="ГруппаКомПанельотгрузкиРасширеннаяПодсказка" id="256"/>
 													<ChildItems>
@@ -148,90 +235,20 @@
 														</Button>
 													</ChildItems>
 												</CommandBar>
-											</ChildItems>
-										</UsualGroup>
-										<Button name="кнПогасить" id="267">
-											<Type>UsualButton</Type>
-											<CommandName>Form.Command.кнПогасить</CommandName>
-											<ExtendedTooltip name="кнПогаситьРасширеннаяПодсказка" id="268"/>
-										</Button>
-									</ChildItems>
-								</UsualGroup>
-								<UsualGroup name="Группа3" id="249">
-									<Group>Vertical</Group>
-									<Representation>None</Representation>
-									<ShowTitle>false</ShowTitle>
-									<ExtendedTooltip name="Группа3РасширеннаяПодсказка" id="250"/>
-									<ChildItems>
-										<UsualGroup name="Группа18" id="370">
-											<Group>Horizontal</Group>
-											<Representation>None</Representation>
-											<ShowTitle>false</ShowTitle>
-											<ExtendedTooltip name="Группа18РасширеннаяПодсказка" id="371"/>
-											<ChildItems>
-												<InputField name="ВыбНачалоПериода" id="364">
-													<DataPath>ВыбНачалоПериода</DataPath>
-													<Title>
-														<v8:item>
-															<v8:lang>ru</v8:lang>
-															<v8:content>Поступившие С</v8:content>
-														</v8:item>
-													</Title>
-													<ContextMenu name="ВыбНачалоПериодаКонтекстноеМеню" id="365"/>
-													<ExtendedTooltip name="ВыбНачалоПериодаРасширеннаяПодсказка" id="366"/>
-												</InputField>
-												<InputField name="ВыбОкончаниеПериода" id="367">
-													<DataPath>ВыбОкончаниеПериода</DataPath>
-													<Title>
-														<v8:item>
-															<v8:lang>ru</v8:lang>
-															<v8:content>По</v8:content>
-														</v8:item>
-													</Title>
-													<ContextMenu name="ВыбОкончаниеПериодаКонтекстноеМеню" id="368"/>
-													<ExtendedTooltip name="ВыбОкончаниеПериодаРасширеннаяПодсказка" id="369"/>
-												</InputField>
-												<Button name="кнВыбратьПериодВСД" id="372">
-													<Type>UsualButton</Type>
-													<Width>4</Width>
-													<AutoMaxWidth>false</AutoMaxWidth>
-													<CommandName>Form.Command.кнВыбратьПериодВСД</CommandName>
-													<Title>
-														<v8:item>
-															<v8:lang>ru</v8:lang>
-															<v8:content>...</v8:content>
-														</v8:item>
-													</Title>
-													<ExtendedTooltip name="кнВыбратьПериодВСДРасширеннаяПодсказка" id="373"/>
-												</Button>
-												<Button name="кнОформитьВходящийВСД" id="374">
-													<Type>UsualButton</Type>
-													<CommandName>Form.Command.кнОформитьВходящийВСД</CommandName>
-													<ExtendedTooltip name="кнОформитьВходящийВСДРасширеннаяПодсказка" id="375"/>
-												</Button>
-											</ChildItems>
-										</UsualGroup>
-										<UsualGroup name="Группа19" id="387">
-											<ToolTip>
-												<v8:item>
-													<v8:lang>ru</v8:lang>
-													<v8:content>Фильтр по отправителю ВСД</v8:content>
-												</v8:item>
-											</ToolTip>
-											<Representation>None</Representation>
-											<ShowTitle>false</ShowTitle>
-											<ExtendedTooltip name="Группа19РасширеннаяПодсказка" id="388"/>
-											<ChildItems>
 												<InputField name="ВыбрХозСубъект" id="389">
 													<DataPath>ВыбрХозСубъект</DataPath>
 													<ContextMenu name="ВыбрХозСубъектКонтекстноеМеню" id="390"/>
 													<ExtendedTooltip name="ВыбрХозСубъектРасширеннаяПодсказка" id="391"/>
+													<Events>
+														<Event name="OnChange">ВыбрХозСубъектПриИзменении</Event>
+													</Events>
 												</InputField>
 												<InputField name="ВыбрПлощадка" id="392">
 													<DataPath>ВыбрПлощадка</DataPath>
 													<ContextMenu name="ВыбрПлощадкаКонтекстноеМеню" id="393"/>
 													<ExtendedTooltip name="ВыбрПлощадкаРасширеннаяПодсказка" id="394"/>
 													<Events>
+														<Event name="OnChange">ВыбрПлощадкаПриИзменении</Event>
 														<Event name="StartChoice">Отправитель_ПлощадкаНачалоВыбора</Event>
 													</Events>
 												</InputField>
@@ -242,6 +259,7 @@
 											<AutoInsertNewRow>true</AutoInsertNewRow>
 											<EnableStartDrag>true</EnableStartDrag>
 											<EnableDrag>true</EnableDrag>
+											<FileDragMode>AsFile</FileDragMode>
 											<DataPath>Объект.ВСДВходящие</DataPath>
 											<CommandSet>
 												<ExcludedCommand>Add</ExcludedCommand>
@@ -714,6 +732,12 @@
 													<ContextMenu name="ВСДВходящиеНомерПартииКонтекстноеМеню" id="242"/>
 													<ExtendedTooltip name="ВСДВходящиеНомерПартииРасширеннаяПодсказка" id="243"/>
 												</InputField>
+												<InputField name="ВСДВходящиеТермическиеУсловияПеревозки" id="397">
+													<DataPath>Объект.ВСДВходящие.ТермическиеУсловияПеревозки</DataPath>
+													<EditMode>EnterOnInput</EditMode>
+													<ContextMenu name="ВСДВходящиеТермическиеУсловияПеревозкиКонтекстноеМеню" id="398"/>
+													<ExtendedTooltip name="ВСДВходящиеТермическиеУсловияПеревозкиРасширеннаяПодсказка" id="399"/>
+												</InputField>
 											</ChildItems>
 										</Table>
 										<UsualGroup name="Группа5" id="269">
@@ -753,7 +777,7 @@
 															</ChildItems>
 														</UsualGroup>
 														<UsualGroup name="Группа11" id="327">
-															<Group>Vertical</Group>
+															<Group>AlwaysHorizontal</Group>
 															<Representation>None</Representation>
 															<ShowTitle>false</ShowTitle>
 															<ExtendedTooltip name="Группа11РасширеннаяПодсказка" id="328"/>
@@ -893,6 +917,7 @@
 											<AutoInsertNewRow>true</AutoInsertNewRow>
 											<EnableStartDrag>true</EnableStartDrag>
 											<EnableDrag>true</EnableDrag>
+											<FileDragMode>AsFile</FileDragMode>
 											<DataPath>Объект.Соответствия</DataPath>
 											<CommandSet>
 												<ExcludedCommand>Add</ExcludedCommand>
@@ -1049,6 +1074,11 @@
 									<Type>UsualButton</Type>
 									<CommandName>Form.Command.кнЗагрузитьПартииИзФайла</CommandName>
 									<ExtendedTooltip name="кнЗагрузитьПартииИзФайлаРасширеннаяПодсказка" id="335"/>
+								</Button>
+								<Button name="кнОформитьВходящийВСД" id="374">
+									<Type>UsualButton</Type>
+									<CommandName>Form.Command.кнОформитьВходящийВСД</CommandName>
+									<ExtendedTooltip name="кнОформитьВходящийВСДРасширеннаяПодсказка" id="375"/>
 								</Button>
 							</ChildItems>
 						</Page>

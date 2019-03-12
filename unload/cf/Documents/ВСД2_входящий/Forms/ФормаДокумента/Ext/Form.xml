@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.6">
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.8">
 	<AutoTime>CurrentOrLast</AutoTime>
 	<UsePostingMode>Auto</UsePostingMode>
 	<RepostOnWrite>true</RepostOnWrite>
@@ -81,7 +81,7 @@
 									<ShowTitle>false</ShowTitle>
 									<ExtendedTooltip name="Группа2РасширеннаяПодсказка" id="27"/>
 									<ChildItems>
-										<LabelField name="applicationID" id="28">
+										<InputField name="applicationID" id="28">
 											<DataPath>Объект.applicationID</DataPath>
 											<Title>
 												<v8:item>
@@ -92,7 +92,7 @@
 											<EditMode>EnterOnInput</EditMode>
 											<ContextMenu name="applicationIDКонтекстноеМеню" id="29"/>
 											<ExtendedTooltip name="applicationIDРасширеннаяПодсказка" id="30"/>
-										</LabelField>
+										</InputField>
 										<InputField name="UUID" id="31">
 											<DataPath>Объект.UUID</DataPath>
 											<ReadOnly>true</ReadOnly>
@@ -156,7 +156,7 @@
 									<ShowTitle>false</ShowTitle>
 									<ExtendedTooltip name="Группа37РасширеннаяПодсказка" id="661"/>
 									<ChildItems>
-										<LabelField name="Продукция_Элемент1" id="604">
+										<InputField name="Продукция_Элемент1" id="604">
 											<DataPath>Объект.Продукция_Элемент</DataPath>
 											<Title>
 												<v8:item>
@@ -166,7 +166,7 @@
 											</Title>
 											<ContextMenu name="Продукция_Элемент1КонтекстноеМеню" id="605"/>
 											<ExtendedTooltip name="Продукция_Элемент1РасширеннаяПодсказка" id="606"/>
-										</LabelField>
+										</InputField>
 										<InputField name="Количество1" id="607">
 											<DataPath>Объект.Количество</DataPath>
 											<ReadOnly>true</ReadOnly>
@@ -179,7 +179,7 @@
 											<ContextMenu name="Количество1КонтекстноеМеню" id="608"/>
 											<ExtendedTooltip name="Количество1РасширеннаяПодсказка" id="609"/>
 										</InputField>
-										<LabelField name="ЕдиницаИзмерения1" id="610">
+										<InputField name="ЕдиницаИзмерения1" id="610">
 											<DataPath>Объект.ЕдиницаИзмерения</DataPath>
 											<Title>
 												<v8:item>
@@ -189,7 +189,7 @@
 											</Title>
 											<ContextMenu name="ЕдиницаИзмерения1КонтекстноеМеню" id="611"/>
 											<ExtendedTooltip name="ЕдиницаИзмерения1РасширеннаяПодсказка" id="612"/>
-										</LabelField>
+										</InputField>
 										<InputField name="КоличествоПринять" id="654">
 											<DataPath>Объект.КоличествоПринять</DataPath>
 											<Title>
@@ -263,7 +263,7 @@
 					<ExtendedTooltip name="СтраницаПродукцияРасширеннаяПодсказка" id="194"/>
 					<ChildItems>
 						<UsualGroup name="Группа14" id="222">
-							<Group>AlwaysHorizontal</Group>
+							<Group>Vertical</Group>
 							<Representation>None</Representation>
 							<ShowTitle>false</ShowTitle>
 							<ExtendedTooltip name="Группа14РасширеннаяПодсказка" id="223"/>
@@ -286,7 +286,7 @@
 							</ChildItems>
 						</UsualGroup>
 						<UsualGroup name="Группа15" id="224">
-							<Group>AlwaysHorizontal</Group>
+							<Group>Vertical</Group>
 							<Representation>None</Representation>
 							<ShowTitle>false</ShowTitle>
 							<ExtendedTooltip name="Группа15РасширеннаяПодсказка" id="225"/>
@@ -431,6 +431,11 @@
 											<ContextMenu name="ДатаИзготовления2КонтекстноеМеню" id="269"/>
 											<ExtendedTooltip name="ДатаИзготовления2РасширеннаяПодсказка" id="270"/>
 										</InputField>
+										<InputField name="ДатаИзготовления" id="283">
+											<DataPath>Объект.ДатаИзготовления</DataPath>
+											<ContextMenu name="ДатаИзготовленияКонтекстноеМеню" id="284"/>
+											<ExtendedTooltip name="ДатаИзготовленияРасширеннаяПодсказка" id="285"/>
+										</InputField>
 									</ChildItems>
 								</UsualGroup>
 								<UsualGroup name="Группа21" id="271">
@@ -449,6 +454,11 @@
 											<ContextMenu name="ДатаСрокГодности2КонтекстноеМеню" id="277"/>
 											<ExtendedTooltip name="ДатаСрокГодности2РасширеннаяПодсказка" id="278"/>
 										</InputField>
+										<InputField name="ДатаСрокГодности" id="286">
+											<DataPath>Объект.ДатаСрокГодности</DataPath>
+											<ContextMenu name="ДатаСрокГодностиКонтекстноеМеню" id="287"/>
+											<ExtendedTooltip name="ДатаСрокГодностиРасширеннаяПодсказка" id="288"/>
+										</InputField>
 									</ChildItems>
 								</UsualGroup>
 								<UsualGroup name="Группа23" id="281">
@@ -456,18 +466,6 @@
 									<Representation>None</Representation>
 									<ShowTitle>false</ShowTitle>
 									<ExtendedTooltip name="Группа23РасширеннаяПодсказка" id="282"/>
-									<ChildItems>
-										<InputField name="ДатаИзготовления" id="283">
-											<DataPath>Объект.ДатаИзготовления</DataPath>
-											<ContextMenu name="ДатаИзготовленияКонтекстноеМеню" id="284"/>
-											<ExtendedTooltip name="ДатаИзготовленияРасширеннаяПодсказка" id="285"/>
-										</InputField>
-										<InputField name="ДатаСрокГодности" id="286">
-											<DataPath>Объект.ДатаСрокГодности</DataPath>
-											<ContextMenu name="ДатаСрокГодностиКонтекстноеМеню" id="287"/>
-											<ExtendedTooltip name="ДатаСрокГодностиРасширеннаяПодсказка" id="288"/>
-										</InputField>
-									</ChildItems>
 								</UsualGroup>
 							</ChildItems>
 						</UsualGroup>
@@ -593,74 +591,10 @@
 													<ContextMenu name="Перевозчик_ХозСубъектКонтекстноеМеню" id="154"/>
 													<ExtendedTooltip name="Перевозчик_ХозСубъектРасширеннаяПодсказка" id="155"/>
 												</InputField>
-												<InputField name="ТермическоеСостояние" id="80">
-													<DataPath>Объект.ТермическоеСостояние</DataPath>
-													<Title>
-														<v8:item>
-															<v8:lang>ru</v8:lang>
-															<v8:content>Хранение при перевозке</v8:content>
-														</v8:item>
-													</Title>
-													<EditMode>EnterOnInput</EditMode>
-													<ListChoiceMode>true</ListChoiceMode>
-													<MinValue xsi:type="xs:decimal">1</MinValue>
-													<MaxValue xsi:type="xs:decimal">4</MaxValue>
-													<ChoiceList>
-														<xr:Item>
-															<xr:Presentation/>
-															<xr:CheckState>0</xr:CheckState>
-															<xr:Value xsi:type="FormChoiceListDesTimeValue">
-																<Presentation>
-																	<v8:item>
-																		<v8:lang>ru</v8:lang>
-																		<v8:content>Замороженный</v8:content>
-																	</v8:item>
-																</Presentation>
-																<Value xsi:type="xs:decimal">1</Value>
-															</xr:Value>
-														</xr:Item>
-														<xr:Item>
-															<xr:Presentation/>
-															<xr:CheckState>0</xr:CheckState>
-															<xr:Value xsi:type="FormChoiceListDesTimeValue">
-																<Presentation>
-																	<v8:item>
-																		<v8:lang>ru</v8:lang>
-																		<v8:content>Охлажденный</v8:content>
-																	</v8:item>
-																</Presentation>
-																<Value xsi:type="xs:decimal">2</Value>
-															</xr:Value>
-														</xr:Item>
-														<xr:Item>
-															<xr:Presentation/>
-															<xr:CheckState>0</xr:CheckState>
-															<xr:Value xsi:type="FormChoiceListDesTimeValue">
-																<Presentation>
-																	<v8:item>
-																		<v8:lang>ru</v8:lang>
-																		<v8:content>Охлаждаемый</v8:content>
-																	</v8:item>
-																</Presentation>
-																<Value xsi:type="xs:decimal">3</Value>
-															</xr:Value>
-														</xr:Item>
-														<xr:Item>
-															<xr:Presentation/>
-															<xr:CheckState>0</xr:CheckState>
-															<xr:Value xsi:type="FormChoiceListDesTimeValue">
-																<Presentation>
-																	<v8:item>
-																		<v8:lang>ru</v8:lang>
-																		<v8:content>Вентилируемый</v8:content>
-																	</v8:item>
-																</Presentation>
-																<Value xsi:type="xs:decimal">4</Value>
-															</xr:Value>
-														</xr:Item>
-													</ChoiceList>
-													<ContextMenu name="ТермическоеСостояниеКонтекстноеМеню" id="81"/>
-													<ExtendedTooltip name="ТермическоеСостояниеРасширеннаяПодсказка" id="82"/>
+												<InputField name="ТермическиеУсловияПеревозки" id="664">
+													<DataPath>Объект.ТермическиеУсловияПеревозки</DataPath>
+													<ContextMenu name="ТермическиеУсловияПеревозкиКонтекстноеМеню" id="665"/>
+													<ExtendedTooltip name="ТермическиеУсловияПеревозкиРасширеннаяПодсказка" id="666"/>
 												</InputField>
 											</ChildItems>
 										</UsualGroup>
@@ -1036,6 +970,7 @@
 													<AutoInsertNewRow>true</AutoInsertNewRow>
 													<EnableStartDrag>true</EnableStartDrag>
 													<EnableDrag>true</EnableDrag>
+													<FileDragMode>AsFile</FileDragMode>
 													<DataPath>Объект.НомераПартий</DataPath>
 													<RowFilter xsi:nil="true"/>
 													<ContextMenu name="НомераПартийКонтекстноеМеню" id="326"/>
@@ -1099,6 +1034,7 @@
 											<AutoInsertNewRow>true</AutoInsertNewRow>
 											<EnableStartDrag>true</EnableStartDrag>
 											<EnableDrag>true</EnableDrag>
+											<FileDragMode>AsFile</FileDragMode>
 											<DataPath>Объект.Производители</DataPath>
 											<RowFilter xsi:nil="true"/>
 											<ContextMenu name="ПроизводителиКонтекстноеМеню" id="301"/>
@@ -1188,6 +1124,7 @@
 															<AutoInsertNewRow>true</AutoInsertNewRow>
 															<EnableStartDrag>true</EnableStartDrag>
 															<EnableDrag>true</EnableDrag>
+															<FileDragMode>AsFile</FileDragMode>
 															<DataPath>Объект.ДатаИзготовления1XML</DataPath>
 															<RowFilter xsi:nil="true"/>
 															<ContextMenu name="ДатаИзготовления1XMLКонтекстноеМеню" id="345"/>
@@ -1250,6 +1187,7 @@
 															<AutoInsertNewRow>true</AutoInsertNewRow>
 															<EnableStartDrag>true</EnableStartDrag>
 															<EnableDrag>true</EnableDrag>
+															<FileDragMode>AsFile</FileDragMode>
 															<DataPath>Объект.ДатаИзготовления2XML</DataPath>
 															<RowFilter xsi:nil="true"/>
 															<ContextMenu name="ДатаИзготовления2XMLКонтекстноеМеню" id="364"/>
@@ -1326,6 +1264,7 @@
 													<AutoInsertNewRow>true</AutoInsertNewRow>
 													<EnableStartDrag>true</EnableStartDrag>
 													<EnableDrag>true</EnableDrag>
+													<FileDragMode>AsFile</FileDragMode>
 													<DataPath>Объект.ДатаСрокГодности1XML</DataPath>
 													<RowFilter xsi:nil="true"/>
 													<ContextMenu name="ДатаСрокГодности1XMLКонтекстноеМеню" id="410"/>
@@ -1388,6 +1327,7 @@
 													<AutoInsertNewRow>true</AutoInsertNewRow>
 													<EnableStartDrag>true</EnableStartDrag>
 													<EnableDrag>true</EnableDrag>
+													<FileDragMode>AsFile</FileDragMode>
 													<DataPath>Объект.ДатаСрокГодности2XML</DataPath>
 													<RowFilter xsi:nil="true"/>
 													<ContextMenu name="ДатаСрокГодности2XMLКонтекстноеМеню" id="429"/>
@@ -1451,6 +1391,7 @@
 											<AutoInsertNewRow>true</AutoInsertNewRow>
 											<EnableStartDrag>true</EnableStartDrag>
 											<EnableDrag>true</EnableDrag>
+											<FileDragMode>AsFile</FileDragMode>
 											<DataPath>Объект.СвязанныеДокументы</DataPath>
 											<RowFilter xsi:nil="true"/>
 											<ContextMenu name="СвязанныеДокументыКонтекстноеМеню" id="514"/>
@@ -1555,6 +1496,7 @@
 									<AutoInsertNewRow>true</AutoInsertNewRow>
 									<EnableStartDrag>true</EnableStartDrag>
 									<EnableDrag>true</EnableDrag>
+									<FileDragMode>AsFile</FileDragMode>
 									<DataPath>Объект.УровниУпаковки</DataPath>
 									<RowFilter xsi:nil="true"/>
 									<ContextMenu name="УровниУпаковкиКонтекстноеМеню" id="462"/>
@@ -1625,6 +1567,7 @@
 									<AutoInsertNewRow>true</AutoInsertNewRow>
 									<EnableStartDrag>true</EnableStartDrag>
 									<EnableDrag>true</EnableDrag>
+									<FileDragMode>AsFile</FileDragMode>
 									<DataPath>Объект.Маркировка</DataPath>
 									<RowFilter xsi:nil="true"/>
 									<ContextMenu name="МаркировкаКонтекстноеМеню" id="487"/>
@@ -1706,6 +1649,7 @@
 							<AutoInsertNewRow>true</AutoInsertNewRow>
 							<EnableStartDrag>true</EnableStartDrag>
 							<EnableDrag>true</EnableDrag>
+							<FileDragMode>AsFile</FileDragMode>
 							<DataPath>Объект.МаршрутСледования</DataPath>
 							<RowFilter xsi:nil="true"/>
 							<ContextMenu name="МаршрутСледованияКонтекстноеМеню" id="545"/>
@@ -1852,6 +1796,7 @@
 									<AutoInsertNewRow>true</AutoInsertNewRow>
 									<EnableStartDrag>true</EnableStartDrag>
 									<EnableDrag>true</EnableDrag>
+									<FileDragMode>AsFile</FileDragMode>
 									<DataPath>Объект.УсловияПеревозки</DataPath>
 									<RowFilter xsi:nil="true"/>
 									<ContextMenu name="УсловияПеревозкиКонтекстноеМеню" id="621"/>

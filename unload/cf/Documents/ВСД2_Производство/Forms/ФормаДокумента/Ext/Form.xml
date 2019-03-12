@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.6">
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.8">
 	<AutoTime>CurrentOrLast</AutoTime>
 	<UsePostingMode>Auto</UsePostingMode>
 	<RepostOnWrite>true</RepostOnWrite>
@@ -34,28 +34,30 @@
 					<ShowTitle>false</ShowTitle>
 					<ExtendedTooltip name="Группа1РасширеннаяПодсказка" id="165"/>
 					<ChildItems>
-						<LabelField name="Статус" id="166">
-							<DataPath>Объект.Статус</DataPath>
-							<TitleLocation>None</TitleLocation>
-							<EditMode>EnterOnInput</EditMode>
-							<Border width="1">
-								<v8ui:style xsi:type="v8ui:ControlBorderType">Embossed</v8ui:style>
-							</Border>
-							<Font ref="style:NormalTextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
-							<ContextMenu name="СтатусКонтекстноеМеню" id="167"/>
-							<ExtendedTooltip name="СтатусРасширеннаяПодсказка" id="168"/>
-						</LabelField>
 						<InputField name="Номер" id="169">
 							<DataPath>Объект.Number</DataPath>
 							<EditMode>EnterOnInput</EditMode>
+							<HorizontalStretch>false</HorizontalStretch>
 							<ContextMenu name="НомерКонтекстноеМеню" id="170"/>
 							<ExtendedTooltip name="НомерРасширеннаяПодсказка" id="171"/>
 						</InputField>
 						<InputField name="Дата" id="172">
 							<DataPath>Объект.Date</DataPath>
 							<EditMode>EnterOnInput</EditMode>
+							<HorizontalStretch>false</HorizontalStretch>
 							<ContextMenu name="ДатаКонтекстноеМеню" id="173"/>
 							<ExtendedTooltip name="ДатаРасширеннаяПодсказка" id="174"/>
+						</InputField>
+						<InputField name="Статус" id="166">
+							<DataPath>Объект.Статус</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<Width>15</Width>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<MaxWidth>12</MaxWidth>
+							<HorizontalStretch>false</HorizontalStretch>
+							<Font ref="style:NormalTextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
+							<ContextMenu name="СтатусКонтекстноеМеню" id="167"/>
+							<ExtendedTooltip name="СтатусРасширеннаяПодсказка" id="168"/>
 						</InputField>
 						<InputField name="Организация" id="175">
 							<DataPath>Объект.Организация</DataPath>
@@ -275,6 +277,7 @@
 									<AutoInsertNewRow>true</AutoInsertNewRow>
 									<EnableStartDrag>true</EnableStartDrag>
 									<EnableDrag>true</EnableDrag>
+									<FileDragMode>AsFile</FileDragMode>
 									<DataPath>Объект.Продукция</DataPath>
 									<RowFilter xsi:nil="true"/>
 									<ContextMenu name="ПродукцияКонтекстноеМеню" id="63"/>
@@ -449,7 +452,6 @@
 									<v8:content>Маркировка</v8:content>
 								</v8:item>
 							</Title>
-							<Height>10</Height>
 							<Group>Horizontal</Group>
 							<Representation>None</Representation>
 							<ShowTitle>false</ShowTitle>
@@ -469,9 +471,13 @@
 									<ChildItems>
 										<Table name="УровниУпаковки" id="348">
 											<Representation>List</Representation>
+											<AutoMaxHeight>false</AutoMaxHeight>
+											<MaxHeight>10</MaxHeight>
+											<HeightInTableRows>1</HeightInTableRows>
 											<AutoInsertNewRow>true</AutoInsertNewRow>
 											<EnableStartDrag>true</EnableStartDrag>
 											<EnableDrag>true</EnableDrag>
+											<FileDragMode>AsFile</FileDragMode>
 											<DataPath>Объект.УровниУпаковки</DataPath>
 											<RowFilter xsi:nil="true"/>
 											<ContextMenu name="УровниУпаковкиКонтекстноеМеню" id="349"/>
@@ -553,9 +559,13 @@
 									<ChildItems>
 										<Table name="Маркировка" id="378">
 											<Representation>List</Representation>
+											<AutoMaxHeight>false</AutoMaxHeight>
+											<MaxHeight>10</MaxHeight>
+											<HeightInTableRows>1</HeightInTableRows>
 											<AutoInsertNewRow>true</AutoInsertNewRow>
 											<EnableStartDrag>true</EnableStartDrag>
 											<EnableDrag>true</EnableDrag>
+											<FileDragMode>AsFile</FileDragMode>
 											<DataPath>Объект.Маркировка</DataPath>
 											<RowFilter xsi:nil="true"/>
 											<ContextMenu name="МаркировкаКонтекстноеМеню" id="379"/>
@@ -664,6 +674,7 @@
 									<AutoInsertNewRow>true</AutoInsertNewRow>
 									<EnableStartDrag>true</EnableStartDrag>
 									<EnableDrag>true</EnableDrag>
+									<FileDragMode>AsFile</FileDragMode>
 									<DataPath>Объект.ПартииСписания</DataPath>
 									<RowFilter xsi:nil="true"/>
 									<ContextMenu name="ПартииСписанияКонтекстноеМеню" id="126"/>
@@ -680,15 +691,20 @@
 												<CommandName>Form.Command.кнПодбор</CommandName>
 												<ExtendedTooltip name="ПартииСписаниякнПодборРасширеннаяПодсказка" id="492"/>
 											</Button>
-											<Button name="ПартииСписаниякнЗаполнитьПоСпецификации" id="493">
+											<Button name="ПартииСписаниякнЗаполнитьПоСправочнику" id="493">
 												<Type>CommandBarButton</Type>
-												<CommandName>Form.Command.кнЗаполнитьПоСпецификации</CommandName>
-												<ExtendedTooltip name="ПартииСписаниякнЗаполнитьПоСпецификацииРасширеннаяПодсказка" id="494"/>
+												<CommandName>Form.Command.кнЗаполнитьПоПродукцияЭлемент</CommandName>
+												<ExtendedTooltip name="ПартииСписаниякнЗаполнитьПоСправочникуРасширеннаяПодсказка" id="494"/>
 											</Button>
 											<Button name="ПартииСписаниякнАвтоподборПартийПоСпецификации" id="495">
 												<Type>CommandBarButton</Type>
-												<CommandName>Form.Command.кнАвтоподборПартийПоСпецификации</CommandName>
+												<CommandName>Form.Command.кнПодборПартийПоСправочнику</CommandName>
 												<ExtendedTooltip name="ПартииСписаниякнАвтоподборПартийПоСпецификацииРасширеннаяПодсказка" id="496"/>
+											</Button>
+											<Button name="ПартииСписаниякнЗаполнитьПоСпецификации1" id="562">
+												<Type>CommandBarButton</Type>
+												<CommandName>Form.Command.кнЗаполнитьПоСпецификацииНоменклатуры</CommandName>
+												<ExtendedTooltip name="ПартииСписаниякнЗаполнитьПоСпецификации1РасширеннаяПодсказка" id="563"/>
 											</Button>
 										</ChildItems>
 									</AutoCommandBar>
@@ -727,15 +743,6 @@
 											<ContextMenu name="ПартииСписанияНомерСтрокиКонтекстноеМеню" id="139"/>
 											<ExtendedTooltip name="ПартииСписанияНомерСтрокиРасширеннаяПодсказка" id="140"/>
 										</LabelField>
-										<InputField name="ПартииСписанияНоменклатура" id="141">
-											<DataPath>Объект.ПартииСписания.Номенклатура</DataPath>
-											<EditMode>EnterOnInput</EditMode>
-											<ContextMenu name="ПартииСписанияНоменклатураКонтекстноеМеню" id="142"/>
-											<ExtendedTooltip name="ПартииСписанияНоменклатураРасширеннаяПодсказка" id="143"/>
-											<Events>
-												<Event name="OnChange">ПартииСписанияНоменклатураПриИзменении</Event>
-											</Events>
-										</InputField>
 										<InputField name="ПартииСписанияПродукция_Элемент" id="153">
 											<DataPath>Объект.ПартииСписания.Продукция_Элемент</DataPath>
 											<EditMode>EnterOnInput</EditMode>
@@ -767,6 +774,23 @@
 											<ContextMenu name="ПартииСписанияЕдиницаИзмеренияКонтекстноеМеню" id="160"/>
 											<ExtendedTooltip name="ПартииСписанияЕдиницаИзмеренияРасширеннаяПодсказка" id="161"/>
 										</InputField>
+										<ColumnGroup name="ПартииСписанияГруппа3" id="560">
+											<ExtendedTooltip name="ПартииСписанияГруппа3РасширеннаяПодсказка" id="561"/>
+											<ChildItems>
+												<InputField name="ПартииСписанияПродукция" id="557">
+													<DataPath>Объект.ПартииСписания.Продукция</DataPath>
+													<EditMode>EnterOnInput</EditMode>
+													<ContextMenu name="ПартииСписанияПродукцияКонтекстноеМеню" id="558"/>
+													<ExtendedTooltip name="ПартииСписанияПродукцияРасширеннаяПодсказка" id="559"/>
+												</InputField>
+												<InputField name="ПартииСписанияВидПродукции" id="554">
+													<DataPath>Объект.ПартииСписания.ВидПродукции</DataPath>
+													<EditMode>EnterOnInput</EditMode>
+													<ContextMenu name="ПартииСписанияВидПродукцииКонтекстноеМеню" id="555"/>
+													<ExtendedTooltip name="ПартииСписанияВидПродукцииРасширеннаяПодсказка" id="556"/>
+												</InputField>
+											</ChildItems>
+										</ColumnGroup>
 										<ColumnGroup name="ПартииСписанияГруппа1" id="501">
 											<ExtendedTooltip name="ПартииСписанияГруппа1РасширеннаяПодсказка" id="502"/>
 											<ChildItems>
@@ -819,6 +843,15 @@
 												</InputField>
 											</ChildItems>
 										</ColumnGroup>
+										<InputField name="ПартииСписанияНоменклатура" id="141">
+											<DataPath>Объект.ПартииСписания.Номенклатура</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="ПартииСписанияНоменклатураКонтекстноеМеню" id="142"/>
+											<ExtendedTooltip name="ПартииСписанияНоменклатураРасширеннаяПодсказка" id="143"/>
+											<Events>
+												<Event name="OnChange">ПартииСписанияНоменклатураПриИзменении</Event>
+											</Events>
+										</InputField>
 									</ChildItems>
 								</Table>
 							</ChildItems>
@@ -826,6 +859,7 @@
 					</ChildItems>
 				</Page>
 				<Page name="грЗапросы" id="509">
+					<Visible>false</Visible>
 					<Title>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
@@ -855,6 +889,7 @@
 									<AutoInsertNewRow>true</AutoInsertNewRow>
 									<EnableStartDrag>true</EnableStartDrag>
 									<EnableDrag>true</EnableDrag>
+									<FileDragMode>AsFile</FileDragMode>
 									<DataPath>Объект.Запросы</DataPath>
 									<RowFilter xsi:nil="true"/>
 									<ContextMenu name="ЗапросыКонтекстноеМеню" id="514"/>
@@ -1015,11 +1050,11 @@
 			<Action>кнПодбор</Action>
 			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
-		<Command name="кнЗаполнитьПоСпецификации" id="2">
+		<Command name="кнЗаполнитьПоПродукцияЭлемент" id="2">
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Заполнить Элементы по спецификации</v8:content>
+					<v8:content>Заполнить по Продукция_Элемент</v8:content>
 				</v8:item>
 			</Title>
 			<ToolTip>
@@ -1028,13 +1063,13 @@
 					<v8:content>Зполнить Элементами и рассчитать количество по спецификации</v8:content>
 				</v8:item>
 			</ToolTip>
-			<Action>кнЗаполнитьПоСпецификации</Action>
+			<Action>кнЗаполнитьПоПродукцияЭлемент</Action>
 		</Command>
-		<Command name="кнАвтоподборПартийПоСпецификации" id="3">
+		<Command name="кнПодборПартийПоСправочнику" id="3">
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Автоподбор партий по спецификации</v8:content>
+					<v8:content>Подбор партий по справочнику</v8:content>
 				</v8:item>
 			</Title>
 			<ToolTip>
@@ -1043,7 +1078,7 @@
 					<v8:content>Автоподбор партий для списания по спецификации</v8:content>
 				</v8:item>
 			</ToolTip>
-			<Action>кнАвтоподборПартийПоСпецификации</Action>
+			<Action>кнЗаполнитьПартииСписанияПоВСД_Продукция_Элемент</Action>
 		</Command>
 		<Command name="кнОткрытьЗапрос" id="4">
 			<Title>
@@ -1063,6 +1098,21 @@
 				<xr:LoadTransparent>true</xr:LoadTransparent>
 			</Picture>
 			<Action>кнОткрытьЗапрос</Action>
+		</Command>
+		<Command name="кнЗаполнитьПоСпецификацииНоменклатуры" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заполнить по спецификации Номенклатуры</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Кн заполнить по спецификации номенклатуры</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>кнЗаполнитьПоСпецификацииНоменклатуры</Action>
 		</Command>
 	</Commands>
 </Form>

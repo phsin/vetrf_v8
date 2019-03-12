@@ -1,9 +1,9 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.6">
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.8">
 	<Title>
 		<v8:item>
 			<v8:lang>ru</v8:lang>
-			<v8:content>kb99.pro Интеграция ГИС Меркурий</v8:content>
+			<v8:content>Интеграция ГИС Меркурий www.kb99.pro </v8:content>
 		</v8:item>
 	</Title>
 	<AutoTitle>false</AutoTitle>
@@ -25,6 +25,7 @@
 	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
 	<Events>
 		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
 	</Events>
 	<ChildItems>
 		<UsualGroup name="Группа5" id="491">
@@ -136,6 +137,28 @@
 														</Button>
 													</ChildItems>
 												</UsualGroup>
+												<Button name="кнПолучитьПартии1" id="312">
+													<Type>UsualButton</Type>
+													<CommandName>Form.Command.кнПолучитьПартии</CommandName>
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Загрузить Партии</v8:content>
+														</v8:item>
+													</Title>
+													<ExtendedTooltip name="кнПолучитьПартии1РасширеннаяПодсказка" id="313"/>
+												</Button>
+												<Button name="кнГашение" id="461">
+													<Type>UsualButton</Type>
+													<CommandName>Form.Command.кнГашение</CommandName>
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Гашение Входящих партий</v8:content>
+														</v8:item>
+													</Title>
+													<ExtendedTooltip name="кнГашениеРасширеннаяПодсказка" id="462"/>
+												</Button>
 												<CommandBar name="Группа17" id="531">
 													<ExtendedTooltip name="Группа17РасширеннаяПодсказка" id="532"/>
 													<ChildItems>
@@ -143,7 +166,7 @@
 															<Title>
 																<v8:item>
 																	<v8:lang>ru</v8:lang>
-																	<v8:content>Меркурий ВСД</v8:content>
+																	<v8:content>ВСД</v8:content>
 																</v8:item>
 															</Title>
 															<ExtendedTooltip name="Группа41РасширеннаяПодсказка" id="538"/>
@@ -224,35 +247,6 @@
 																</v8:item>
 															</Title>
 															<ExtendedTooltip name="Группа22РасширеннаяПодсказка" id="540"/>
-															<ChildItems>
-																<Button name="кнПолучитьПартии1" id="312">
-																	<Type>CommandBarButton</Type>
-																	<CommandName>Form.Command.кнПолучитьПартии</CommandName>
-																	<Title>
-																		<v8:item>
-																			<v8:lang>ru</v8:lang>
-																			<v8:content>Загрузить Партии</v8:content>
-																		</v8:item>
-																	</Title>
-																	<ExtendedTooltip name="кнПолучитьПартии1РасширеннаяПодсказка" id="313"/>
-																</Button>
-																<Button name="кнГашение" id="461">
-																	<Type>CommandBarButton</Type>
-																	<CommandName>Form.Command.кнГашение</CommandName>
-																	<Title>
-																		<v8:item>
-																			<v8:lang>ru</v8:lang>
-																			<v8:content>Гашение Входящих партий</v8:content>
-																		</v8:item>
-																	</Title>
-																	<ExtendedTooltip name="кнГашениеРасширеннаяПодсказка" id="462"/>
-																</Button>
-																<Button name="кнУстановитьСоответствия" id="324">
-																	<Type>CommandBarButton</Type>
-																	<CommandName>Form.Command.кнУстановитьСоответствия</CommandName>
-																	<ExtendedTooltip name="кнУстановитьСоответствияРасширеннаяПодсказка" id="325"/>
-																</Button>
-															</ChildItems>
 														</Popup>
 													</ChildItems>
 												</CommandBar>
@@ -495,6 +489,7 @@
 												<Table name="Отгрузки" id="146">
 													<SelectionMode>SingleRow</SelectionMode>
 													<AutoInsertNewRow>true</AutoInsertNewRow>
+													<FileDragMode>AsFile</FileDragMode>
 													<DataPath>Объект.Отгрузки</DataPath>
 													<CommandSet>
 														<ExcludedCommand>Add</ExcludedCommand>
@@ -799,6 +794,7 @@
 											<AutoInsertNewRow>true</AutoInsertNewRow>
 											<EnableStartDrag>true</EnableStartDrag>
 											<EnableDrag>true</EnableDrag>
+											<FileDragMode>AsFile</FileDragMode>
 											<DataPath>Объект.Партии</DataPath>
 											<CommandSet>
 												<ExcludedCommand>Add</ExcludedCommand>
@@ -1073,7 +1069,7 @@
 																	<Title>
 																		<v8:item>
 																			<v8:lang>ru</v8:lang>
-																			<v8:content>Получить Партии (v 2.*)</v8:content>
+																			<v8:content>Получить Партии [Ветис v2]</v8:content>
 																		</v8:item>
 																	</Title>
 																	<ExtendedTooltip name="кнПолучитьПартииРасширеннаяПодсказка" id="286"/>
@@ -1102,6 +1098,22 @@
 																</v8:item>
 															</Title>
 															<ExtendedTooltip name="кнПолучитьПартии14РасширеннаяПодсказка" id="482"/>
+														</Button>
+													</ChildItems>
+												</UsualGroup>
+												<UsualGroup name="Группа14" id="585">
+													<ExtendedTooltip name="Группа14РасширеннаяПодсказка" id="586"/>
+													<ChildItems>
+														<Button name="кнУдалитьПартии" id="587">
+															<Type>UsualButton</Type>
+															<CommandName>Form.Command.кнУдалитьПартии</CommandName>
+															<Title>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Удалить все партии</v8:content>
+																</v8:item>
+															</Title>
+															<ExtendedTooltip name="кнУдалитьПартииРасширеннаяПодсказка" id="588"/>
 														</Button>
 													</ChildItems>
 												</UsualGroup>
@@ -1234,7 +1246,7 @@
 												</InputField>
 												<Button name="ПолучитьГУИД_ХС" id="251">
 													<Type>UsualButton</Type>
-													<CommandName>Form.Command.ПолучитьГУИД_ХС</CommandName>
+													<CommandName>Form.Command.кнХозСубъект_ПолучитьGuidПоИНН</CommandName>
 													<ExtendedTooltip name="ПолучитьГУИД_ХСРасширеннаяПодсказка" id="252"/>
 												</Button>
 												<Button name="кнХС_Создать" id="393">
@@ -1244,7 +1256,7 @@
 												</Button>
 												<Button name="ЗагрузитьПлощадкиПоХС" id="253">
 													<Type>UsualButton</Type>
-													<CommandName>Form.Command.ЗагрузитьПлощадкиПоХС</CommandName>
+													<CommandName>Form.Command.кнЗагрузитьПлощадкиПоХС</CommandName>
 													<ExtendedTooltip name="ЗагрузитьПлощадкиПоХСРасширеннаяПодсказка" id="254"/>
 												</Button>
 												<InputField name="ВыбраннаяПлощадка" id="364">
@@ -1336,7 +1348,7 @@
 													<Title>
 														<v8:item>
 															<v8:lang>ru</v8:lang>
-															<v8:content>Параметры подключения и Системные настройки</v8:content>
+															<v8:content>Параметры подключения Ветис.API</v8:content>
 														</v8:item>
 													</Title>
 													<ToolTip>
@@ -1383,12 +1395,6 @@
 																			<EditMode>EnterOnInput</EditMode>
 																			<ContextMenu name="param_issuer_idКонтекстноеМеню" id="12"/>
 																			<ExtendedTooltip name="param_issuer_idРасширеннаяПодсказка" id="13"/>
-																		</InputField>
-																		<InputField name="param_service_id" id="38">
-																			<DataPath>Объект.param_service_id</DataPath>
-																			<EditMode>EnterOnInput</EditMode>
-																			<ContextMenu name="param_service_idКонтекстноеМеню" id="39"/>
-																			<ExtendedTooltip name="param_service_idРасширеннаяПодсказка" id="40"/>
 																		</InputField>
 																		<InputField name="param_api_key" id="41">
 																			<DataPath>Объект.param_api_key</DataPath>
@@ -1440,12 +1446,6 @@
 																	<Representation>StrongSeparation</Representation>
 																	<ExtendedTooltip name="ГруппаСистемныеНастройкиРасширеннаяПодсказка" id="406"/>
 																	<ChildItems>
-																		<CheckBoxField name="флИспользоватьВнешнююОбработку" id="499">
-																			<DataPath>Объект.флИспользоватьВнешнююОбработку</DataPath>
-																			<CheckBoxType>Auto</CheckBoxType>
-																			<ContextMenu name="флИспользоватьВнешнююОбработкуКонтекстноеМеню" id="500"/>
-																			<ExtendedTooltip name="флИспользоватьВнешнююОбработкуРасширеннаяПодсказка" id="501"/>
-																		</CheckBoxField>
 																		<UsualGroup name="Группа45" id="552">
 																			<HorizontalStretch>true</HorizontalStretch>
 																			<Group>Vertical</Group>
@@ -1458,13 +1458,6 @@
 																					<HorizontalStretch>true</HorizontalStretch>
 																					<ContextMenu name="КаталогИнтеграцииКонтекстноеМеню" id="489"/>
 																					<ExtendedTooltip name="КаталогИнтеграцииРасширеннаяПодсказка" id="490"/>
-																				</InputField>
-																				<InputField name="ПолноеИмяФайлаОбработки1" id="502">
-																					<DataPath>Объект.ПолноеИмяФайлаОбработки</DataPath>
-																					<EditMode>EnterOnInput</EditMode>
-																					<HorizontalStretch>true</HorizontalStretch>
-																					<ContextMenu name="ПолноеИмяФайлаОбработки1КонтекстноеМеню" id="503"/>
-																					<ExtendedTooltip name="ПолноеИмяФайлаОбработки1РасширеннаяПодсказка" id="504"/>
 																				</InputField>
 																				<InputField name="ПолноеИмяФайлаОбработки" id="91">
 																					<DataPath>Объект.ПолноеИмяФайлаПереопределения</DataPath>
@@ -1498,6 +1491,12 @@
 																			<ChildItems>
 																				<CheckBoxField name="ОтладкаЗапросовXML" id="67">
 																					<DataPath>Объект.ОтладкаЗапросовXML</DataPath>
+																					<Title>
+																						<v8:item>
+																							<v8:lang>ru</v8:lang>
+																							<v8:content>Сохранять запросы и ответы Ветис.API в каталог логов </v8:content>
+																						</v8:item>
+																					</Title>
 																					<GroupHorizontalAlign>Left</GroupHorizontalAlign>
 																					<GroupVerticalAlign>Center</GroupVerticalAlign>
 																					<EditMode>EnterOnInput</EditMode>
@@ -1523,6 +1522,12 @@
 																					<ContextMenu name="ВыводитьПодробнуюИнформациюКонтекстноеМеню" id="97"/>
 																					<ExtendedTooltip name="ВыводитьПодробнуюИнформациюРасширеннаяПодсказка" id="98"/>
 																				</CheckBoxField>
+																				<CheckBoxField name="ОтправлятьВФоне" id="582">
+																					<DataPath>Объект.ОтправлятьВФоне</DataPath>
+																					<CheckBoxType>Auto</CheckBoxType>
+																					<ContextMenu name="ОтправлятьВФонеКонтекстноеМеню" id="583"/>
+																					<ExtendedTooltip name="ОтправлятьВФонеРасширеннаяПодсказка" id="584"/>
+																				</CheckBoxField>
 																			</ChildItems>
 																		</UsualGroup>
 																	</ChildItems>
@@ -1535,7 +1540,7 @@
 													<Title>
 														<v8:item>
 															<v8:lang>ru</v8:lang>
-															<v8:content>Настройки ХС</v8:content>
+															<v8:content>Параметры ХозСубъекта</v8:content>
 														</v8:item>
 													</Title>
 													<ToolTip>
@@ -1638,6 +1643,12 @@
 																						</InputField>
 																						<InputField name="ВСДЦель" id="120">
 																							<DataPath>Объект.ВСДЦель</DataPath>
+																							<Title>
+																								<v8:item>
+																									<v8:lang>ru</v8:lang>
+																									<v8:content>Цель транспортировки по приказу №646</v8:content>
+																								</v8:item>
+																							</Title>
 																							<EditMode>EnterOnInput</EditMode>
 																							<HorizontalStretch>true</HorizontalStretch>
 																							<ContextMenu name="ВСДЦельКонтекстноеМеню" id="121"/>
@@ -1810,6 +1821,11 @@
 																			<ContextMenu name="ТермУсловияПеревозкиКонтекстноеМеню" id="118"/>
 																			<ExtendedTooltip name="ТермУсловияПеревозкиРасширеннаяПодсказка" id="119"/>
 																		</InputField>
+																		<InputField name="ТермическиеУсловияПеревозки" id="573">
+																			<DataPath>Объект.ТермическиеУсловияПеревозки</DataPath>
+																			<ContextMenu name="ТермическиеУсловияПеревозкиКонтекстноеМеню" id="574"/>
+																			<ExtendedTooltip name="ТермическиеУсловияПеревозкиРасширеннаяПодсказка" id="575"/>
+																		</InputField>
 																		<InputField name="ВСД_РезультатыИсследований" id="114">
 																			<DataPath>Объект.ВСД_РезультатыИсследований</DataPath>
 																			<EditMode>EnterOnInput</EditMode>
@@ -1827,7 +1843,7 @@
 													<Title>
 														<v8:item>
 															<v8:lang>ru</v8:lang>
-															<v8:content>Настройки модуля</v8:content>
+															<v8:content>Параметры Модуля</v8:content>
 														</v8:item>
 													</Title>
 													<ToolTip>
@@ -1872,7 +1888,7 @@
 																					<Title>
 																						<v8:item>
 																							<v8:lang>ru</v8:lang>
-																							<v8:content>Реквизит сортировки Партий</v8:content>
+																							<v8:content>Сортировать ВСД_Партии по реквизиту</v8:content>
 																						</v8:item>
 																					</Title>
 																					<ToolTip>
@@ -1941,7 +1957,7 @@
 																							<Title>
 																								<v8:item>
 																									<v8:lang>ru</v8:lang>
-																									<v8:content>LIFO (сортировать по убыванию)</v8:content>
+																									<v8:content>Сортировать Партии при подборе по убыванию LIFO</v8:content>
 																								</v8:item>
 																							</Title>
 																							<ToolTip>
@@ -1959,7 +1975,7 @@
 																							<Title>
 																								<v8:item>
 																									<v8:lang>ru</v8:lang>
-																									<v8:content>Очищать справочник перед загрузкой</v8:content>
+																									<v8:content>Очищать справочник ВСД_Партии перед загрузкой</v8:content>
 																								</v8:item>
 																							</Title>
 																							<ToolTip>
@@ -1999,7 +2015,7 @@
 																			<Title>
 																				<v8:item>
 																					<v8:lang>ru</v8:lang>
-																					<v8:content>Автозаполнение упаковки ВСД</v8:content>
+																					<v8:content>Заполнение Уровней упаковки в ВСД</v8:content>
 																				</v8:item>
 																			</Title>
 																			<Representation>StrongSeparation</Representation>
@@ -2010,7 +2026,7 @@
 																					<Title>
 																						<v8:item>
 																							<v8:lang>ru</v8:lang>
-																							<v8:content>Имя реквизита кол-во мест в Накладной 1С</v8:content>
+																							<v8:content>Имя реквизита [количество мест] в Реализации</v8:content>
 																						</v8:item>
 																					</Title>
 																					<ToolTip>
@@ -2030,7 +2046,7 @@
 																					<Title>
 																						<v8:item>
 																							<v8:lang>ru</v8:lang>
-																							<v8:content>№ уровня при автозаполнении ВСД</v8:content>
+																							<v8:content>№ уровня при заполнении ВСД</v8:content>
 																						</v8:item>
 																					</Title>
 																					<ToolTip>
@@ -2050,7 +2066,7 @@
 																					<Title>
 																						<v8:item>
 																							<v8:lang>ru</v8:lang>
-																							<v8:content>Форма упаковки на уровне</v8:content>
+																							<v8:content>Форма упаковки Уровня</v8:content>
 																						</v8:item>
 																					</Title>
 																					<EditMode>EnterOnInput</EditMode>
@@ -2153,7 +2169,7 @@
 																					<Title>
 																						<v8:item>
 																							<v8:lang>ru</v8:lang>
-																							<v8:content>Пропускать пустые соответсвия (товары)</v8:content>
+																							<v8:content>ВСД: пропускать пустые соответсвия (товары)</v8:content>
 																						</v8:item>
 																					</Title>
 																					<ToolTip>
@@ -2172,7 +2188,7 @@
 																					<Title>
 																						<v8:item>
 																							<v8:lang>ru</v8:lang>
-																							<v8:content>Заполнять ВСД Номенклатурой при отсутствии Партий</v8:content>
+																							<v8:content>ВСД: заполнять строки при отсутствии Партий</v8:content>
 																						</v8:item>
 																					</Title>
 																					<ToolTip>
@@ -2188,6 +2204,12 @@
 																				</CheckBoxField>
 																				<CheckBoxField name="АвтоЗаписьВСДСоответствия" id="105">
 																					<DataPath>Объект.АвтоЗаписьВСДСоответствия</DataPath>
+																					<Title>
+																						<v8:item>
+																							<v8:lang>ru</v8:lang>
+																							<v8:content>ВСД: Авто запись соответствия Номенклатуры и Продукция_Элемент в документе</v8:content>
+																						</v8:item>
+																					</Title>
 																					<ToolTip>
 																						<v8:item>
 																							<v8:lang>ru</v8:lang>
@@ -2201,6 +2223,12 @@
 																				</CheckBoxField>
 																				<CheckBoxField name="ПарамРазрешитьВводНаОснованииБолееОдногоВСД" id="485">
 																					<DataPath>Объект.ПарамРазрешитьВводНаОснованииБолееОдногоВСД</DataPath>
+																					<Title>
+																						<v8:item>
+																							<v8:lang>ru</v8:lang>
+																							<v8:content>Реализация: разрешить вводить на основании несколько ВСД</v8:content>
+																						</v8:item>
+																					</Title>
 																					<CheckBoxType>Auto</CheckBoxType>
 																					<ContextMenu name="ПарамРазрешитьВводНаОснованииБолееОдногоВСДКонтекстноеМеню" id="486"/>
 																					<ExtendedTooltip name="ПарамРазрешитьВводНаОснованииБолееОдногоВСДРасширеннаяПодсказка" id="487"/>
@@ -2257,7 +2285,7 @@
 																							<Title>
 																								<v8:item>
 																									<v8:lang>ru</v8:lang>
-																									<v8:content>Имя реквизита Количество</v8:content>
+																									<v8:content>Имя реквизита [Количество]</v8:content>
 																								</v8:item>
 																							</Title>
 																							<ToolTip>
@@ -2302,7 +2330,7 @@
 													<Title>
 														<v8:item>
 															<v8:lang>ru</v8:lang>
-															<v8:content>Инициализация, загрузка Классификаторв</v8:content>
+															<v8:content>загрузка справочников</v8:content>
 														</v8:item>
 													</Title>
 													<ToolTip>
@@ -2409,7 +2437,7 @@
 																		</Button>
 																		<Button name="кнЗагрузитьУпаковку" id="303">
 																			<Type>UsualButton</Type>
-																			<CommandName>Form.Command.кнЗагрузитьУпаковку</CommandName>
+																			<CommandName>Form.Command.кнЗагрузитьФормыУпаковки</CommandName>
 																			<Title>
 																				<v8:item>
 																					<v8:lang>ru</v8:lang>
@@ -2428,6 +2456,22 @@
 																				</v8:item>
 																			</Title>
 																			<ExtendedTooltip name="ЗагрузитьЦелиРасширеннаяПодсказка" id="247"/>
+																		</Button>
+																	</ChildItems>
+																</UsualGroup>
+																<UsualGroup name="Группа27" id="591">
+																	<Title>
+																		<v8:item>
+																			<v8:lang>ru</v8:lang>
+																			<v8:content>Обновить</v8:content>
+																		</v8:item>
+																	</Title>
+																	<ExtendedTooltip name="Группа27РасширеннаяПодсказка" id="592"/>
+																	<ChildItems>
+																		<Button name="Версия2ОбновитьСправочники" id="589">
+																			<Type>UsualButton</Type>
+																			<CommandName>Form.Command.Версия2ОбновитьСправочники</CommandName>
+																			<ExtendedTooltip name="Версия2ОбновитьСправочникиРасширеннаяПодсказка" id="590"/>
 																		</Button>
 																	</ChildItems>
 																</UsualGroup>
@@ -2458,33 +2502,6 @@
 										</CheckBoxField>
 									</ChildItems>
 								</UsualGroup>
-							</ChildItems>
-						</Page>
-						<Page name="Группа14" id="287">
-							<Title>
-								<v8:item>
-									<v8:lang>ru</v8:lang>
-									<v8:content>Тестирование</v8:content>
-								</v8:item>
-							</Title>
-							<ExtendedTooltip name="Группа14РасширеннаяПодсказка" id="288"/>
-							<ChildItems>
-								<Button name="ТЕСТ1" id="259">
-									<Type>UsualButton</Type>
-									<CommandName>Form.Command.ТЕСТ1</CommandName>
-									<Title>
-										<v8:item>
-											<v8:lang>ru</v8:lang>
-											<v8:content>Проверка Компоненты и СписокКонстант на сервере ?</v8:content>
-										</v8:item>
-									</Title>
-									<ExtendedTooltip name="ТЕСТ1РасширеннаяПодсказка" id="260"/>
-								</Button>
-								<Button name="ТЕСТСообщения" id="427">
-									<Type>UsualButton</Type>
-									<CommandName>Form.Command.ТЕСТСообщения</CommandName>
-									<ExtendedTooltip name="ТЕСТСообщенияРасширеннаяПодсказка" id="428"/>
-								</Button>
 							</ChildItems>
 						</Page>
 					</ChildItems>
@@ -2622,6 +2639,32 @@
 			</Title>
 			<Type>
 				<v8:Type>cfg:CatalogRef.ВСД_Площадка</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ИдентификаторЗадания" id="12">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Идентификатор задания</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:UUID</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="АдресХранилища" id="13">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Адрес хранилища</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
 			</Type>
 		</Attribute>
 		<ConditionalAppearance>
@@ -3019,27 +3062,27 @@
 			<Action>ЗагрузитьЦели</Action>
 			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
-		<Command name="ПолучитьГУИД_ХС" id="4">
+		<Command name="кнХозСубъект_ПолучитьGuidПоИНН" id="4">
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Получить ГУИД ХС</v8:content>
+					<v8:content>ХозСубъект получить guid по ИНН</v8:content>
 				</v8:item>
 			</Title>
 			<ToolTip>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Получить ГУИД ХС</v8:content>
+					<v8:content>Кн хоз субъект получить guid по ИНН</v8:content>
 				</v8:item>
 			</ToolTip>
-			<Action>ПолучитьГУИД_ХС</Action>
+			<Action>кнХозСубъект_ПолучитьGuidПоИНН</Action>
 			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
-		<Command name="ЗагрузитьПлощадкиПоХС" id="5">
+		<Command name="кнЗагрузитьПлощадкиПоХС" id="5">
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Загрузить площадки ХС</v8:content>
+					<v8:content>Загрузить площадки по ХС</v8:content>
 				</v8:item>
 			</Title>
 			<ToolTip>
@@ -3048,7 +3091,7 @@
 					<v8:content>Загрузить все площадки по выбранному ХС</v8:content>
 				</v8:item>
 			</ToolTip>
-			<Action>ЗагрузитьПлощадкиПоХС</Action>
+			<Action>кнЗагрузитьПлощадкиПоХозСубъекту</Action>
 			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="ЗагрузитьПлощадкиПоСпискуДокументов" id="6">
@@ -3065,22 +3108,6 @@
 				</v8:item>
 			</ToolTip>
 			<Action>ЗагрузитьПлощадкиПоСпискуДокументов</Action>
-			<CurrentRowUse>DontUse</CurrentRowUse>
-		</Command>
-		<Command name="ТЕСТ1" id="7">
-			<Title>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>ТЕСТ1</v8:content>
-				</v8:item>
-			</Title>
-			<ToolTip>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>ТЕСТ1</v8:content>
-				</v8:item>
-			</ToolTip>
-			<Action>ТЕСТ1</Action>
 			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="кнОтметитьВсеДокументы" id="8">
@@ -3227,11 +3254,11 @@
 			<Action>кнЗагрузитьГорода</Action>
 			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
-		<Command name="кнЗагрузитьУпаковку" id="17">
+		<Command name="кнЗагрузитьФормыУпаковки" id="17">
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Загрузить упаковку</v8:content>
+					<v8:content>Загрузить Формы упаковки</v8:content>
 				</v8:item>
 			</Title>
 			<ToolTip>
@@ -3240,7 +3267,7 @@
 					<v8:content>Загрузить классификатор форм Упаковки</v8:content>
 				</v8:item>
 			</ToolTip>
-			<Action>кнЗагрузитьУпаковку</Action>
+			<Action>кнЗагрузитьФормыУпаковки</Action>
 			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="кнИнициализация" id="18">
@@ -3598,22 +3625,6 @@
 			<Action>кнХС_Создать</Action>
 			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
-		<Command name="ТЕСТСообщения" id="41">
-			<Title>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>ТЕСТСообщения</v8:content>
-				</v8:item>
-			</Title>
-			<ToolTip>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>ТЕСТСообщения</v8:content>
-				</v8:item>
-			</ToolTip>
-			<Action>ТЕСТСообщения</Action>
-			<CurrentRowUse>DontUse</CurrentRowUse>
-		</Command>
 		<Command name="кнОтметитьДокументыКСозданию" id="42">
 			<Title>
 				<v8:item>
@@ -3789,6 +3800,36 @@
 			</ToolTip>
 			<Action>кнПолучитьПартии2</Action>
 			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="кнУдалитьПартии" id="31">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Удалить все партии</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Кн удалить партии</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>кнУдалитьПартии</Action>
+		</Command>
+		<Command name="Версия2ОбновитьСправочники" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>версия2 обновить справочники</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Версия2 обновить справочники</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>кнВерсия2ОбновитьСправочники</Action>
 		</Command>
 	</Commands>
 </Form>
