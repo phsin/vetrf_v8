@@ -66,6 +66,21 @@
 							<ContextMenu name="UUIDКонтекстноеМеню" id="14"/>
 							<ExtendedTooltip name="UUIDРасширеннаяПодсказка" id="15"/>
 						</InputField>
+						<InputField name="Страна" id="91">
+							<DataPath>Объект.Страна</DataPath>
+							<ContextMenu name="СтранаКонтекстноеМеню" id="92"/>
+							<ExtendedTooltip name="СтранаРасширеннаяПодсказка" id="93"/>
+						</InputField>
+						<InputField name="Регион" id="94">
+							<DataPath>Объект.Регион</DataPath>
+							<ContextMenu name="РегионКонтекстноеМеню" id="95"/>
+							<ExtendedTooltip name="РегионРасширеннаяПодсказка" id="96"/>
+						</InputField>
+						<InputField name="Город" id="97">
+							<DataPath>Объект.Город</DataPath>
+							<ContextMenu name="ГородКонтекстноеМеню" id="98"/>
+							<ExtendedTooltip name="ГородРасширеннаяПодсказка" id="99"/>
+						</InputField>
 						<InputField name="Адрес" id="16">
 							<DataPath>Объект.Адрес</DataPath>
 							<EditMode>EnterOnInput</EditMode>

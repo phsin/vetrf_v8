@@ -698,7 +698,13 @@
 											</Button>
 											<Button name="ПартииСписаниякнАвтоподборПартийПоСпецификации" id="495">
 												<Type>CommandBarButton</Type>
-												<CommandName>Form.Command.кнПодборПартийПоСправочнику</CommandName>
+												<CommandName>Form.Command.кнЗаполнитьПоРегистру</CommandName>
+												<Title>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>Заполнить по регистру</v8:content>
+													</v8:item>
+												</Title>
 												<ExtendedTooltip name="ПартииСписаниякнАвтоподборПартийПоСпецификацииРасширеннаяПодсказка" id="496"/>
 											</Button>
 											<Button name="ПартииСписаниякнЗаполнитьПоСпецификации1" id="562">
@@ -1065,11 +1071,11 @@
 			</ToolTip>
 			<Action>кнЗаполнитьПоПродукцияЭлемент</Action>
 		</Command>
-		<Command name="кнПодборПартийПоСправочнику" id="3">
+		<Command name="кнЗаполнитьПоРегистру" id="3">
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Подбор партий по справочнику</v8:content>
+					<v8:content>Заполнить по регистру</v8:content>
 				</v8:item>
 			</Title>
 			<ToolTip>

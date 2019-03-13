@@ -24,7 +24,7 @@
 	КонецПопытки;
 КонецФункции
 
-Функция СтатусЗапроса( xdto, ДокСсылка=Неопределено )
+Функция СтатусЗапроса( xdto, ДокСсылка=Неопределено ) Экспорт
 	Статус = "";
 	
 	Попытка
@@ -49,7 +49,7 @@
 КонецФункции
 
 
-Функция НайтиОшибки( xdto, ДокСсылка=Неопределено )  
+Функция НайтиОшибки( xdto, ДокСсылка=Неопределено ) Экспорт 
 	
 	Ответ = Ложь;	
 	
@@ -114,7 +114,7 @@
 	Возврат СокрЛП(ИННКПП);
 КонецФункции
 
-Процедура Пауза(ЗадержкаСекунд)
+Процедура Пауза(ЗадержкаСекунд) Экспорт 
 	СообщитьИнфо("Пауза "+ЗадержкаСекунд+" сек");
 	Если НЕ ЗначениеЗаполнено(ЗадержкаСекунд) Тогда 
 		ЗадержкаСекунд = 5;
@@ -158,7 +158,7 @@
 
 #Область Функции_Дата
 	
-Функция ДатаXML(ВыбДата, Время="") 
+Функция ДатаXML(ВыбДата, Время="") Экспорт 
 		
 	стрДата = формат(ВыбДата, "ДФ=""гггг-ММ-дд""")+Время;
 	Возврат стрДата;
@@ -3224,6 +3224,7 @@
 	Возврат Ответ;
 	
 КонецФункции
+
 #КонецОбласти
 
 #Область Партии
@@ -3390,11 +3391,11 @@
 	Иначе
 		ТолькоАктуальныеПартии = Ложь;
 	КонецЕсли;	
-	Если ЗначениеЗаполнено( Параметры["ОчищатьСправочникВСД_Партии"] ) Тогда 
-		ОчищатьСправочникВСД_Партии = Параметры["ОчищатьСправочникВСД_Партии"];
-	Иначе
+	//Если ЗначениеЗаполнено( Параметры["ОчищатьСправочникВСД_Партии"] ) Тогда 
+	//	ОчищатьСправочникВСД_Партии = Параметры["ОчищатьСправочникВСД_Партии"];
+	//Иначе
 		ОчищатьСправочникВСД_Партии = Ложь;
-	КонецЕсли;	
+	//КонецЕсли;	
 	Предприятие = Параметры["ВыбПлощадка"];
 	ПартияНачПериода = Параметры["ПартияНачПериода"];
 	ПартияКонПериода = Параметры["ПартияКонПериода"];
@@ -3711,7 +3712,7 @@
 
 //ЗаписатьПартию2
 Функция Партия_Заполнить( Параметры, stockEntry)
-	Если ЗначениеЗаполнено(Параметры["ВыбПлощадка"]) Тогда 
+	Если Параметры.Свойство("ВыбПлощадка") Тогда 
 		ВыбПлощадка = Параметры["ВыбПлощадка"];
 	Иначе
 		ВыбПлощадка = Параметры["Отправитель_Площадка"];
@@ -4312,16 +4313,16 @@
 	|  <SOAP-ENV:Header/>
 	|  <SOAP-ENV:Body>
 	|    <apldef:submitApplicationRequest>
-	|      <apldef:apiKey>"+ СокрЛП( Параметры.Получить("param_api_key") ) +"</apldef:apiKey>
+	|      <apldef:apiKey>"+ СокрЛП( Параметры["param_api_key"] ) +"</apldef:apiKey>
 	|      <apl:application>
 	|        <apl:serviceId>mercury-g2b.service:2.1</apl:serviceId>
-	|        <apl:issuerId>"+ СокрЛП( Параметры.Получить("param_issuer_id") ) +"</apl:issuerId>
+	|        <apl:issuerId>"+ СокрЛП( Параметры["param_issuer_id"] ) +"</apl:issuerId>
 	|        <apl:issueDate>" + ДатаXML(ТекущаяДата(), "T00:00:00") + "</apl:issueDate>
 	|        <apl:data>
 	|          <merc:getVetDocumentListRequest>
 	|            <merc:localTransactionId>a1</merc:localTransactionId>
 	|            <merc:initiator>
-	|              <vd:login>"+ СокрЛП( Параметры.Получить("param_intiator_login") ) +"</vd:login>
+	|              <vd:login>"+ СокрЛП( Параметры["param_intiator_login"] ) +"</vd:login>
 	|            </merc:initiator>
 	|            <bs:listOptions>
 	|              <bs:count>1000</bs:count>
@@ -4442,16 +4443,16 @@
   	|<SOAP-ENV:Header/>
   	|<SOAP-ENV:Body>
     |<apldef:submitApplicationRequest>
-	|      <apldef:apiKey>"+ СокрЛП( Параметры.Получить("param_api_key") ) +"</apldef:apiKey>
+	|      <apldef:apiKey>"+ СокрЛП( Параметры["param_api_key"] ) +"</apldef:apiKey>
 	|      <apl:application>
 	|        <apl:serviceId>mercury-g2b.service:2.0</apl:serviceId>
-	|        <apl:issuerId>"+ СокрЛП( Параметры.Получить("param_issuer_id") ) +"</apl:issuerId>
+	|        <apl:issuerId>"+ СокрЛП( Параметры["param_issuer_id"] ) +"</apl:issuerId>
 	|        <apl:issueDate>" + ДатаXML(ДокСсылка.Дата, "T00:00:00") + "</apl:issueDate>
 	|        <apl:data>
 	|          <merc:prepareOutgoingConsignmentRequest>
 	|            <merc:localTransactionId>" + СокрЛП(ДокСсылка.Номер) + "</merc:localTransactionId>
 	|            <merc:initiator>
-	|              <vd:login>"+ СокрЛП( Параметры.Получить("param_intiator_login") ) +"</vd:login>
+	|              <vd:login>"+ СокрЛП( Параметры["param_intiator_login"] ) +"</vd:login>
 	|            </merc:initiator>
 	|";
 	
@@ -4549,7 +4550,7 @@
 	        |        <vd:vetCertificate for='_" + (А+1) + "'>
 	        |          <vd:authentication>
 	        |            <vd:purpose>
-	        |              <bs:guid>"+ ?(ЗначениеЗаполнено(СтрокаДокумента.Цель),СокрЛП(СтрокаДокумента.Цель.Guid),СокрЛП( Параметры.Получить("ВСДЦель").Guid )) +"</bs:guid>		
+	        |              <bs:guid>"+ ?(ЗначениеЗаполнено(СтрокаДокумента.Цель), (СтрокаДокумента.Цель.Guid), Параметры["ВСДЦель"].Guid ) +"</bs:guid>		
 	        |            </vd:purpose>
 	        |            <vd:cargoInspected>"+ НашеБулево(ДокСсылка.cargoInspected) +"</vd:cargoInspected>
 			|            <vd:cargoExpertized>"+ПолучитьИдентификаторПеречисления(ДокСсылка.РезультатыИсследований)+"</vd:cargoExpertized>
@@ -5161,16 +5162,16 @@
 		|  <SOAP-ENV:Header/>
 		|  <SOAP-ENV:Body>
 		|    <apldef:submitApplicationRequest>
-		|      <apldef:apiKey>"+ СокрЛП( Параметры.Получить("param_api_key") ) +"</apldef:apiKey>
+		|      <apldef:apiKey>"+ СокрЛП( Параметры["param_api_key"] ) +"</apldef:apiKey>
 		|      <apl:application>
 		|        <apl:serviceId>mercury-g2b.service:2.0</apl:serviceId>
-		|        <apl:issuerId>"+ СокрЛП( Параметры.Получить("param_issuer_id") ) +"</apl:issuerId>
+		|        <apl:issuerId>"+ СокрЛП( Параметры["param_issuer_id"] ) +"</apl:issuerId>
 		|        <apl:issueDate>" + ДатаВремяXML(ДокСсылка.Дата) + "</apl:issueDate>
 		|        <apl:data>
 		|          <merc:registerProductionOperationRequest>
 		|            <merc:localTransactionId>" + СокрЛП(ДокСсылка.Номер) + "</merc:localTransactionId>
 		|            <merc:initiator>
-		|              <vd:login>"+ СокрЛП( Параметры.Получить("param_intiator_login") ) +"</vd:login>
+		|              <vd:login>"+ СокрЛП( Параметры["param_intiator_login"] ) +"</vd:login>
 		|            </merc:initiator>
 		|            <merc:enterprise>
 		|              <bs:guid>"+ СокрЛП(ДокСсылка.Производитель_Площадка.GUID) +"</bs:guid>
@@ -5323,16 +5324,16 @@
 	|  <SOAP-ENV:Header/>
 	|  <SOAP-ENV:Body>
 	|    <apldef:submitApplicationRequest>
-	|      <apldef:apiKey>"+ СокрЛП( Параметры.Получить("param_api_key") ) +"</apldef:apiKey>
+	|      <apldef:apiKey>"+ СокрЛП( Параметры["param_api_key"] ) +"</apldef:apiKey>
 	|      <apl:application>
 	|        <apl:serviceId>mercury-g2b.service:2.0</apl:serviceId>
-	|        <apl:issuerId>"+ СокрЛП( Параметры.Получить("param_issuer_id") ) +"</apl:issuerId>
+	|        <apl:issuerId>"+ СокрЛП( Параметры["param_issuer_id"] ) +"</apl:issuerId>
 	|        <apl:issueDate>"+ ДатаXML(ДокСсылка.Дата, "T00:00:00") +"</apl:issueDate>
 	|        <apl:data>
 	|          <merc:updateVeterinaryEventsRequest>
 	|            <merc:localTransactionId>" + СокрЛП(ДокСсылка.Номер) + "</merc:localTransactionId>
 	|            <merc:initiator>
-	|              <vd:login>"+ СокрЛП( Параметры.Получить("param_intiator_login") ) +"</vd:login>
+	|              <vd:login>"+ СокрЛП( Параметры["param_intiator_login"] ) +"</vd:login>
 	|            </merc:initiator>
 	|            <merc:enterprise>
 	|              <bs:guid>"+ СокрЛП(ДокСсылка.Партия.Получатель_Площадка.GUID) +"</bs:guid>
@@ -5431,16 +5432,16 @@
 		|  <SOAP-ENV:Header/>
 		|  <SOAP-ENV:Body>
 		|    <apldef:submitApplicationRequest>
-		|      <apldef:apiKey>"+ СокрЛП( Параметры.Получить("param_api_key") ) +"</apldef:apiKey>
+		|      <apldef:apiKey>"+ СокрЛП( Параметры["param_api_key"] ) +"</apldef:apiKey>
 		|      <apl:application>
 		|        <apl:serviceId>mercury-g2b.service:2.0</apl:serviceId>
-		|        <apl:issuerId>"+ СокрЛП( Параметры.Получить("param_issuer_id") ) +"</apl:issuerId>
+		|        <apl:issuerId>"+ СокрЛП( Параметры["param_issuer_id"] ) +"</apl:issuerId>
 		|        <apl:issueDate>" + ДатаВремяXML(ДокСсылка.Дата) + "</apl:issueDate>
 		|        <apl:data>
 		|          <merc:mergeStockEntriesRequest>
 		|            <merc:localTransactionId>" + СокрЛП(ДокСсылка.Номер) + "</merc:localTransactionId>
 		|            <merc:initiator>
-		|              <vd:login>"+ СокрЛП( Параметры.Получить("param_intiator_login") ) +"</vd:login>
+		|              <vd:login>"+ СокрЛП( Параметры["param_intiator_login"] ) +"</vd:login>
 		|            </merc:initiator>
 		|            <merc:enterprise>
 		|              <bs:guid>"+ СокрЛП(ДокСсылка.Владелец_Площадка.GUID) +"</bs:guid>
@@ -5548,23 +5549,23 @@
   	|<SOAP-ENV:Header/>
   	|<SOAP-ENV:Body>
 	|    <apldef:submitApplicationRequest>
-	|      <apldef:apiKey>"+ Параметры.Получить("param_api_key") + "</apldef:apiKey>
+	|      <apldef:apiKey>"+ Параметры["param_api_key"] + "</apldef:apiKey>
 	|      <apl:application>
 	|        <apl:serviceId>mercury-g2b.service:2.0</apl:serviceId>
-	|        <apl:issuerId>"+Параметры.Получить("param_issuer_id")+"</apl:issuerId>
+	|        <apl:issuerId>"+Параметры["param_issuer_id"]+"</apl:issuerId>
 	|        <apl:issueDate>"+ ДатаXML(ТекущаяДата(), "T00:00:00") +"</apl:issueDate>
 	|        <apl:data>
 	|          <merc:resolveDiscrepancyRequest>
 	|            <merc:localTransactionId>" + СокрЛП(ДокСсылка.Номер) + "</merc:localTransactionId>
 	|            <merc:initiator>
-	|              <vd:login>"+ СокрЛП( Параметры.Получить("param_intiator_login") ) +"</vd:login>
+	|              <vd:login>"+ СокрЛП( Параметры["param_intiator_login"] ) +"</vd:login>
 	|            </merc:initiator>
 	|            <merc:enterprise>
 	|              <bs:guid>"+ СокрЛП(ДокСсылка.Владелец_Площадка.GUID) +"</bs:guid>
 	|            </merc:enterprise>
 	|            <merc:inventoryDate>" + ДатаXML(ДокСсылка.Дата, "T00:00:00") + "</merc:inventoryDate>
 	|            <merc:responsible>
-	|              <vd:login>"+ СокрЛП( Параметры.Получить("param_intiator_login") ) +"</vd:login>
+	|              <vd:login>"+ СокрЛП( Параметры["param_intiator_login"] ) +"</vd:login>
 	|            </merc:responsible>
 	|            <merc:stockDiscrepancy id='_1'>
 	|              <vd:resultingList>";
@@ -5711,22 +5712,22 @@
 	|  <SOAP-ENV:Header/>
 	|  <SOAP-ENV:Body>
 	|    <apldef:submitApplicationRequest>
-	|      <apldef:apiKey>"+ Параметры.Получить("param_api_key") + "</apldef:apiKey>
+	|      <apldef:apiKey>"+ Параметры["param_api_key"] + "</apldef:apiKey>
 	|      <apl:application>
 	|        <apl:serviceId>mercury-g2b.service:2.0</apl:serviceId>
-	|        <apl:issuerId>"+Параметры.Получить("param_issuer_id")+"</apl:issuerId>
+	|        <apl:issuerId>"+Параметры["param_issuer_id"]+"</apl:issuerId>
 	|        <apl:issueDate>"+ ДатаXML(ТекущаяДата(), "T00:00:00") +"</apl:issueDate>
 	|        <apl:data>
 	|          <merc:withdrawVetDocumentRequest>
 	|            <merc:localTransactionId>[GUID]</merc:localTransactionId>
 	|            <merc:initiator>
-	|              <vd:login>"+Параметры.Получить("param_intiator_login")+"</vd:login>
+	|              <vd:login>"+Параметры["param_intiator_login"]+"</vd:login>
 	|            </merc:initiator>
 	|            <merc:vetDocumentId>"+ СокрЛП(ДокСсылка.UUID) +"</merc:vetDocumentId>
 	|            <merc:withdrawReason>Неверно указан объём продукции</merc:withdrawReason>
 	|            <merc:withdrawDate>"+ ДатаXML(ДокСсылка.Дата, "T23:59:59") +"</merc:withdrawDate>
 	|            <merc:specifiedPerson>
-	|              <vd:login>"+ Параметры.Получить("param_vetdoctor_login")+"</vd:login>
+	|              <vd:login>"+ Параметры["param_vetdoctor_login"]+"</vd:login>
 	|            </merc:specifiedPerson>
 	|          </merc:withdrawVetDocumentRequest>
 	|        </apl:data>
@@ -5815,16 +5816,16 @@
 	|  <SOAP-ENV:Header/>
 	|  <SOAP-ENV:Body>
 	|    <apldef:submitApplicationRequest>
-	|      <apldef:apiKey>"+ СокрЛП( Параметры.Получить("param_api_key") ) +"</apldef:apiKey>
+	|      <apldef:apiKey>"+ СокрЛП( Параметры["param_api_key"] ) +"</apldef:apiKey>
 	|      <apl:application>
 	|        <apl:serviceId>mercury-g2b.service:2.0</apl:serviceId>
-	|        <apl:issuerId>"+ СокрЛП( Параметры.Получить("param_issuer_id") ) +"</apl:issuerId>
+	|        <apl:issuerId>"+ СокрЛП( Параметры["param_issuer_id"] ) +"</apl:issuerId>
 	|        <apl:issueDate>" + ДатаXML(ДокСсылка.Дата, "T00:00:00") + "</apl:issueDate>
 	|        <apl:data>
 	|          <merc:checkShipmentRegionalizationRequest>
 	|            <merc:localTransactionId>" + СокрЛП(ДокСсылка.Номер) + "</merc:localTransactionId>
 	|            <merc:initiator>
-	|              <vd:login>"+ СокрЛП( Параметры.Получить("param_intiator_login") ) +"</vd:login>
+	|              <vd:login>"+ СокрЛП( Параметры["param_intiator_login"] ) +"</vd:login>
 	|            </merc:initiator>
 	|";
 
@@ -6088,7 +6089,7 @@
 		|                </dt:enterprise>";
 	КонецЕсли;
 	// У импортных ВСД может отсутствовать
-	ВремПолучатель_Площадка = ?(ЗначениеЗаполнено(ДокСсылка.Получатель_Площадка) ,ДокСсылка.Получатель_Площадка,Параметры.Получить("Отправитель_Площадка")); // возьмем из Парметров
+	ВремПолучатель_Площадка = ?(ЗначениеЗаполнено(ДокСсылка.Получатель_Площадка), ДокСсылка.Получатель_Площадка, Параметры["Отправитель_Площадка"] ); // возьмем из Парметров
    Запрос = запрос +"
 	|              </vd:consignor>
 	|              <vd:consignee>
@@ -6285,7 +6286,7 @@
 		Исключение КонецПопытки;	
 
 //			|           <vd:batchID>BN-875999954</vd:batchID>    Уникальный идентификатор производственной партии продукции.
-		Попытка ГУИДСтраны = СокрЛП( ДокСсылка.Страна_Гуид); Исключение ГУИДСтраны = СокрЛП( Параметры.Получить("Страна").GUID); КонецПопытки;
+		Попытка ГУИДСтраны = СокрЛП( ДокСсылка.Страна_Гуид); Исключение ГУИДСтраны = СокрЛП( Параметры["Страна"].GUID); КонецПопытки;
 
 		Запрос = Запрос + "
 			|			<vd:perishable>"+НашеБулево(ДокСсылка.скоропортящийся)+"</vd:perishable>
@@ -6366,7 +6367,7 @@
 	|              </vd:certifiedConsignment>
     |              <vd:authentication>
     |                <vd:purpose>
-    |                  <bs:guid>"+ СокрЛП( Параметры.Получить("Цель").Guid ) +"</bs:guid>
+    |                  <bs:guid>"+ СокрЛП( Параметры["Цель"].Guid ) +"</bs:guid>
     |                </vd:purpose>
     |                <vd:cargoInspected>"+ НашеБулево(ДокСсылка.cargoInspected) +"</vd:cargoInspected>
     |                <vd:cargoExpertized>"+ДокСсылка.РезультатыИсследований.Идентификатор()+"</vd:cargoExpertized>
@@ -6399,8 +6400,8 @@
     |              <vd:statusChange>
     |                <vd:status>CONFIRMED</vd:status>
     |                <vd:specifiedPerson>
-    |                  <vd:fio>"+ СокрЛП( Параметры.Получить("param_vetdoctor_fio")) +"</vd:fio>
-    |                  <vd:post>"+ СокрЛП( Параметры.Получить("param_vetdoctor_post")) +"</vd:post>
+    |                  <vd:fio>"+ СокрЛП( Параметры["param_vetdoctor_fio"] ) +"</vd:fio>
+    |                  <vd:post>"+ СокрЛП( Параметры["param_vetdoctor_post"] ) +"</vd:post>
     |                </vd:specifiedPerson>
     |                <vd:actualDateTime>"+ ДатаXML(ДокСсылка.Дата,"T00:00:00") +"</vd:actualDateTime>
     |              </vd:statusChange>";
@@ -6431,16 +6432,16 @@
 	|  <SOAP-ENV:Header/>
 	|  <SOAP-ENV:Body>  
 	|    <apldef:submitApplicationRequest>
-	|      <apldef:apiKey>"+ СокрЛП( Параметры.Получить("param_api_key") ) +"</apldef:apiKey>
+	|      <apldef:apiKey>"+ СокрЛП( Параметры["param_api_key"] ) +"</apldef:apiKey>
 	|      <apl:application>
 	|        <apl:serviceId>mercury-g2b.service:2.0</apl:serviceId>
-	|        <apl:issuerId>"+ СокрЛП( Параметры.Получить("param_issuer_id") ) +"</apl:issuerId>
+	|        <apl:issuerId>"+ СокрЛП( Параметры["param_issuer_id"] ) +"</apl:issuerId>
 	|        <apl:issueDate>" + ДатаXML(ТекущаяДата(), "T00:00:00") + "</apl:issueDate>
 	|        <apl:data>
 	|          <merc:processIncomingConsignmentRequest>
 	|            <merc:localTransactionId>[GUID]</merc:localTransactionId>
 	|            <merc:initiator>
-	|              <vd:login>"+ СокрЛП( Параметры.Получить("param_intiator_login") ) +"</vd:login>
+	|              <vd:login>"+ СокрЛП( Параметры["param_intiator_login"] ) +"</vd:login>
 	|            </merc:initiator>";
    Запрос = запрос +"
 	|            <merc:delivery>
@@ -6456,7 +6457,7 @@
 		|                </dt:enterprise>";
 	КонецЕсли;
 	// У импортных ВСД может отсутствовать
-	ВремПолучатель_Площадка = ?(ЗначениеЗаполнено(ДокСсылка.Получатель_Площадка) ,ДокСсылка.Получатель_Площадка,Параметры.Получить("Отправитель_Площадка")); // возьмем из Парметров
+	ВремПолучатель_Площадка = ?(ЗначениеЗаполнено(ДокСсылка.Получатель_Площадка) ,ДокСсылка.Получатель_Площадка, Параметры["Отправитель_Площадка"] ); // возьмем из Парметров
    Запрос = запрос +"
 	|              </vd:consignor>
 	|              <vd:consignee>
@@ -6655,7 +6656,12 @@
 		Исключение КонецПопытки;	
 
 		// По идее страну мы загрузили в ТЗ, вот только в документе ее нет
-		Попытка ГУИДСтраны = СокрЛП( ДокСсылка.Страна_Гуид); Исключение ГУИДСтраны = СокрЛП( Параметры.Получить("Страна").GUID); КонецПопытки;
+		Попытка 
+			ГУИДСтраны = СокрЛП( ДокСсылка.Страна_Гуид); 
+		Исключение 
+			ГУИДСтраны = Параметры["Страна"].GUID; 
+		КонецПопытки;
+		
 		Запрос = Запрос + "
 			|			<vd:perishable>"+НашеБулево(ДокСсылка.скоропортящийся)+"</vd:perishable>
 			|			<vd:origin>
@@ -6844,13 +6850,13 @@
 	Запрос=Запрос+"			
 	|              <vd:docInspection>
 	|                <vd:responsible>
-	|                  <vd:login>"+ СокрЛП( Параметры.Получить("param_vetdoctor_login")) +"</vd:login>
+	|                  <vd:login>"+ СокрЛП( Параметры["param_vetdoctor_login"] ) +"</vd:login>
 	|                </vd:responsible>
 	|                <vd:result>CORRESPONDS</vd:result>
 	|              </vd:docInspection>
 	|              <vd:vetInspection>
 	|                <vd:responsible>
-	|                  <vd:login>"+ СокрЛП( Параметры.Получить("param_vetdoctor_login")) +"</vd:login>
+	|                  <vd:login>"+ СокрЛП( Параметры["param_vetdoctor_login"] ) +"</vd:login>
 	|                </vd:responsible>
 	|                <vd:result>CORRESPONDS</vd:result>
 	|              </vd:vetInspection>
@@ -7031,7 +7037,7 @@
 			|			<vd:batchID>"+СокрЛП(СтрокаНомера.НомерПартии)+"</vd:batchID>";
 		КонецЦикла;
 	
-		Попытка ГУИДСтраны = СокрЛП( ДокСсылка.Страна_Гуид); Исключение ГУИДСтраны = СокрЛП( Параметры.Получить("Страна").GUID); КонецПопытки;
+		Попытка ГУИДСтраны = СокрЛП( ДокСсылка.Страна_Гуид); Исключение ГУИДСтраны = СокрЛП( Параметры["Страна"].GUID ); КонецПопытки;
 		
 		consignment = consignment + "
 			|			<vd:perishable>"+НашеБулево(ДокСсылка.скоропортящийся)+"</vd:perishable>
@@ -7145,7 +7151,7 @@
         |        <vd:vetCertificate>
         |          <vd:authentication>
         |            <vd:purpose>
-        |              <bs:guid>"+ СокрЛП( Параметры.Получить("ВСДЦель").Guid ) +"</bs:guid>		
+        |              <bs:guid>"+ СокрЛП( Параметры["ВСДЦель"].Guid ) +"</bs:guid>		
         |            </vd:purpose>
         |            <vd:cargoInspected>"+ НашеБулево(ДокСсылка.cargoInspected) +"</vd:cargoInspected>";
 			ЗапросПодвал = ЗапросПодвал+ "

@@ -1390,17 +1390,17 @@
 																			<ContextMenu name="param_passwordКонтекстноеМеню" id="9"/>
 																			<ExtendedTooltip name="param_passwordРасширеннаяПодсказка" id="10"/>
 																		</InputField>
-																		<InputField name="param_issuer_id" id="11">
-																			<DataPath>Объект.param_issuer_id</DataPath>
-																			<EditMode>EnterOnInput</EditMode>
-																			<ContextMenu name="param_issuer_idКонтекстноеМеню" id="12"/>
-																			<ExtendedTooltip name="param_issuer_idРасширеннаяПодсказка" id="13"/>
-																		</InputField>
 																		<InputField name="param_api_key" id="41">
 																			<DataPath>Объект.param_api_key</DataPath>
 																			<EditMode>EnterOnInput</EditMode>
 																			<ContextMenu name="param_api_keyКонтекстноеМеню" id="42"/>
 																			<ExtendedTooltip name="param_api_keyРасширеннаяПодсказка" id="43"/>
+																		</InputField>
+																		<InputField name="param_issuer_id" id="11">
+																			<DataPath>Объект.param_issuer_id</DataPath>
+																			<EditMode>EnterOnInput</EditMode>
+																			<ContextMenu name="param_issuer_idКонтекстноеМеню" id="12"/>
+																			<ExtendedTooltip name="param_issuer_idРасширеннаяПодсказка" id="13"/>
 																		</InputField>
 																		<InputField name="param_intiator_login" id="44">
 																			<DataPath>Объект.param_intiator_login</DataPath>
@@ -1459,13 +1459,6 @@
 																					<ContextMenu name="КаталогИнтеграцииКонтекстноеМеню" id="489"/>
 																					<ExtendedTooltip name="КаталогИнтеграцииРасширеннаяПодсказка" id="490"/>
 																				</InputField>
-																				<InputField name="ПолноеИмяФайлаОбработки" id="91">
-																					<DataPath>Объект.ПолноеИмяФайлаПереопределения</DataPath>
-																					<EditMode>EnterOnInput</EditMode>
-																					<HorizontalStretch>true</HorizontalStretch>
-																					<ContextMenu name="ПолноеИмяФайлаОбработкиКонтекстноеМеню" id="92"/>
-																					<ExtendedTooltip name="ПолноеИмяФайлаОбработкиРасширеннаяПодсказка" id="93"/>
-																				</InputField>
 																				<InputField name="КаталогЛогов" id="26">
 																					<DataPath>Объект.КаталогЛогов</DataPath>
 																					<EditMode>EnterOnInput</EditMode>
@@ -1487,23 +1480,9 @@
 																			<Group>Vertical</Group>
 																			<Representation>None</Representation>
 																			<ShowTitle>false</ShowTitle>
+																			<ThroughAlign>DontUse</ThroughAlign>
 																			<ExtendedTooltip name="Группа44РасширеннаяПодсказка" id="551"/>
 																			<ChildItems>
-																				<CheckBoxField name="ОтладкаЗапросовXML" id="67">
-																					<DataPath>Объект.ОтладкаЗапросовXML</DataPath>
-																					<Title>
-																						<v8:item>
-																							<v8:lang>ru</v8:lang>
-																							<v8:content>Сохранять запросы и ответы Ветис.API в каталог логов </v8:content>
-																						</v8:item>
-																					</Title>
-																					<GroupHorizontalAlign>Left</GroupHorizontalAlign>
-																					<GroupVerticalAlign>Center</GroupVerticalAlign>
-																					<EditMode>EnterOnInput</EditMode>
-																					<CheckBoxType>Auto</CheckBoxType>
-																					<ContextMenu name="ОтладкаЗапросовXMLКонтекстноеМеню" id="68"/>
-																					<ExtendedTooltip name="ОтладкаЗапросовXMLРасширеннаяПодсказка" id="69"/>
-																				</CheckBoxField>
 																				<CheckBoxField name="ТестовыйРежим" id="88">
 																					<DataPath>Объект.ТестовыйРежим</DataPath>
 																					<GroupHorizontalAlign>Left</GroupHorizontalAlign>
@@ -1521,6 +1500,21 @@
 																					<CheckBoxType>Auto</CheckBoxType>
 																					<ContextMenu name="ВыводитьПодробнуюИнформациюКонтекстноеМеню" id="97"/>
 																					<ExtendedTooltip name="ВыводитьПодробнуюИнформациюРасширеннаяПодсказка" id="98"/>
+																				</CheckBoxField>
+																				<CheckBoxField name="ОтладкаЗапросовXML" id="67">
+																					<DataPath>Объект.ОтладкаЗапросовXML</DataPath>
+																					<Title>
+																						<v8:item>
+																							<v8:lang>ru</v8:lang>
+																							<v8:content>Сохранять запросы и ответы Ветис.API в каталог логов </v8:content>
+																						</v8:item>
+																					</Title>
+																					<GroupHorizontalAlign>Left</GroupHorizontalAlign>
+																					<GroupVerticalAlign>Center</GroupVerticalAlign>
+																					<EditMode>EnterOnInput</EditMode>
+																					<CheckBoxType>Auto</CheckBoxType>
+																					<ContextMenu name="ОтладкаЗапросовXMLКонтекстноеМеню" id="68"/>
+																					<ExtendedTooltip name="ОтладкаЗапросовXMLРасширеннаяПодсказка" id="69"/>
 																				</CheckBoxField>
 																				<CheckBoxField name="ОтправлятьВФоне" id="582">
 																					<DataPath>Объект.ОтправлятьВФоне</DataPath>
@@ -1646,7 +1640,7 @@
 																							<Title>
 																								<v8:item>
 																									<v8:lang>ru</v8:lang>
-																									<v8:content>Цель транспортировки по приказу №646</v8:content>
+																									<v8:content>Цель перевозки по приказу №646</v8:content>
 																								</v8:item>
 																							</Title>
 																							<EditMode>EnterOnInput</EditMode>
@@ -1970,25 +1964,6 @@
 																							<ContextMenu name="ПарамЗнакСортировкиУбываниеКонтекстноеМеню" id="332"/>
 																							<ExtendedTooltip name="ПарамЗнакСортировкиУбываниеРасширеннаяПодсказка" id="333"/>
 																						</CheckBoxField>
-																						<CheckBoxField name="ОчищатьСправочникВСД_Партии" id="85">
-																							<DataPath>Объект.ОчищатьСправочникВСД_Партии</DataPath>
-																							<Title>
-																								<v8:item>
-																									<v8:lang>ru</v8:lang>
-																									<v8:content>Очищать справочник ВСД_Партии перед загрузкой</v8:content>
-																								</v8:item>
-																							</Title>
-																							<ToolTip>
-																								<v8:item>
-																									<v8:lang>ru</v8:lang>
-																									<v8:content>Для поддержания актуальности данных рекомендуется</v8:content>
-																								</v8:item>
-																							</ToolTip>
-																							<EditMode>EnterOnInput</EditMode>
-																							<CheckBoxType>Auto</CheckBoxType>
-																							<ContextMenu name="ОчищатьСправочникВСД_ПартииКонтекстноеМеню" id="86"/>
-																							<ExtendedTooltip name="ОчищатьСправочникВСД_ПартииРасширеннаяПодсказка" id="87"/>
-																						</CheckBoxField>
 																					</ChildItems>
 																				</UsualGroup>
 																				<InputField name="Смещение" id="102">
@@ -2207,7 +2182,7 @@
 																					<Title>
 																						<v8:item>
 																							<v8:lang>ru</v8:lang>
-																							<v8:content>ВСД: Авто запись соответствия Номенклатуры и Продукция_Элемент в документе</v8:content>
+																							<v8:content>ВСД: записывать соответствия Номенклатуры и Продукция_Элемент в документе</v8:content>
 																						</v8:item>
 																					</Title>
 																					<ToolTip>
@@ -2232,6 +2207,12 @@
 																					<CheckBoxType>Auto</CheckBoxType>
 																					<ContextMenu name="ПарамРазрешитьВводНаОснованииБолееОдногоВСДКонтекстноеМеню" id="486"/>
 																					<ExtendedTooltip name="ПарамРазрешитьВводНаОснованииБолееОдногоВСДРасширеннаяПодсказка" id="487"/>
+																				</CheckBoxField>
+																				<CheckBoxField name="ПарамПроизводствоЗаполнятьПоСправочнику" id="593">
+																					<DataPath>Объект.ПарамПроизводствоЗаполнятьПоСправочнику</DataPath>
+																					<CheckBoxType>Auto</CheckBoxType>
+																					<ContextMenu name="ПарамПроизводствоЗаполнятьПоСправочникуКонтекстноеМеню" id="594"/>
+																					<ExtendedTooltip name="ПарамПроизводствоЗаполнятьПоСправочникуРасширеннаяПодсказка" id="595"/>
 																				</CheckBoxField>
 																				<UsualGroup name="Группа40" id="525">
 																					<ShowTitle>false</ShowTitle>
