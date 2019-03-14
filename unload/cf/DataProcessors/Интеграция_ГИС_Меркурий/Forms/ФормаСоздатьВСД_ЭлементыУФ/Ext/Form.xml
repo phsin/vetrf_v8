@@ -24,9 +24,12 @@
 	<Events>
 		<Event name="OnOpen">ПриОткрытии</Event>
 		<Event name="BeforeClose">ПередЗакрытием</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
 	</Events>
 	<ChildItems>
 		<UsualGroup name="Группа1" id="20">
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
 			<ExtendedTooltip name="Группа1РасширеннаяПодсказка" id="21"/>
 			<ChildItems>
 				<UsualGroup name="Группа5" id="90">
@@ -536,6 +539,7 @@
 			<Type>
 				<v8:Type>cfg:CatalogRef.ВСД_Продукция</v8:Type>
 			</Type>
+			<FillCheck>ShowError</FillCheck>
 		</Attribute>
 		<Attribute name="ВыбВидПродукции" id="5">
 			<Title>
@@ -547,6 +551,7 @@
 			<Type>
 				<v8:Type>cfg:CatalogRef.ВСД_ВидПродукции</v8:Type>
 			</Type>
+			<FillCheck>ShowError</FillCheck>
 		</Attribute>
 		<Attribute name="ВыбЕдиницаИзмерения" id="6">
 			<Title>
@@ -558,6 +563,7 @@
 			<Type>
 				<v8:Type>cfg:CatalogRef.ВСД_ЕдиницыИзмерения</v8:Type>
 			</Type>
+			<FillCheck>ShowError</FillCheck>
 		</Attribute>
 		<Attribute name="ВыбСрокГодности" id="7">
 			<Title>
@@ -583,13 +589,9 @@
 				</v8:item>
 			</Title>
 			<Type>
-				<v8:Type>xs:decimal</v8:Type>
-				<v8:NumberQualifiers>
-					<v8:Digits>1</v8:Digits>
-					<v8:FractionDigits>0</v8:FractionDigits>
-					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
-				</v8:NumberQualifiers>
+				<v8:Type>cfg:EnumRef.ВСД_ТермическиеУсловияПеревозки</v8:Type>
 			</Type>
+			<FillCheck>ShowError</FillCheck>
 		</Attribute>
 		<ConditionalAppearance>
 			<dcsset:item>

@@ -22,12 +22,26 @@
 					</Title>
 					<ExtendedTooltip name="страница1РасширеннаяПодсказка" id="31"/>
 					<ChildItems>
-						<InputField name="Код" id="1">
-							<DataPath>Объект.Code</DataPath>
-							<EditMode>EnterOnInput</EditMode>
-							<ContextMenu name="КодКонтекстноеМеню" id="2"/>
-							<ExtendedTooltip name="КодРасширеннаяПодсказка" id="3"/>
-						</InputField>
+						<UsualGroup name="Группа2" id="103">
+							<Group>AlwaysHorizontal</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="Группа2РасширеннаяПодсказка" id="104"/>
+							<ChildItems>
+								<InputField name="Код" id="1">
+									<DataPath>Объект.Code</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="КодКонтекстноеМеню" id="2"/>
+									<ExtendedTooltip name="КодРасширеннаяПодсказка" id="3"/>
+								</InputField>
+								<CheckBoxField name="Активна" id="100">
+									<DataPath>Объект.Активен</DataPath>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="АктивнаКонтекстноеМеню" id="101"/>
+									<ExtendedTooltip name="АктивнаРасширеннаяПодсказка" id="102"/>
+								</CheckBoxField>
+							</ChildItems>
+						</UsualGroup>
 						<InputField name="Наименование" id="4">
 							<DataPath>Объект.Description</DataPath>
 							<EditMode>EnterOnInput</EditMode>

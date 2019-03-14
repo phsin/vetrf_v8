@@ -786,37 +786,18 @@
 	Попытка
 		Для каждого productItem из productItemМассив Цикл		
 			
-			//active 	 = productItem.active;		
-			//name 	 = productItem.name;
-			//guid  	 = productItem.guid;
-			//uuid  	 = productItem.uuid;
-			
 			Продукция = НайтиПродукцию(productItem.product.guid);
 			ВидПродукции = НайтиВидПродукции(productItem.subProduct.guid);
 			
 			Если ЗначениеЗаполнено(ВыбПродукцияЭлемент) Тогда
 				СпрОбъект = ВыбПродукцияЭлемент.ПолучитьОбъект();
 			Иначе
-				//СпрСсылка = Справочники.ВСД_Продукция_Элемент.НайтиПоРеквизиту("GUID", guid);
-				//Если СпрСсылка = Справочники.ВСД_Продукция_Элемент.ПустаяСсылка() Тогда
-				//	СпрСсылка = Справочники.ВСД_Продукция_Элемент.НайтиПоНаименованию(name);
-				//	Если СпрСсылка = Справочники.ВСД_Продукция_Элемент.ПустаяСсылка() Тогда
-				//		Если active = "true" тогда //можем создать новый
-				//			СпрОбъект = Справочники.ВСД_Продукция_Элемент.СоздатьЭлемент();
-				//		Иначе
-				//			Продолжить;
-				//		КонецЕсли;
-				//	Иначе
-				//		СпрОбъект = СпрСсылка.ПолучитьОбъект();
-				//	КонецЕсли;
-				//Иначе
-				//	СпрОбъект = СпрСсылка.ПолучитьОбъект();
-				//КонецЕсли;
 				СпрСсылка = Продукция_Элемент_Найти( Параметры, productItem, ложь );
 				СпрОбъект = СпрСсылка.ПолучитьОбъект();
 			КонецЕсли;
 			
-			СпрОбъект.UUID = productItem.uuid;
+			СпрОбъект.Активен = productItem.active;						
+			СпрОбъект.UUID = productItem.uuid;			
 			СпрОбъект.GUID = productItem.guid;		
 			Попытка СпрОбъект.Наименование = productItem.name;  Исключение КонецПопытки;
 			СпрОбъект.Продукция = Продукция;
@@ -834,8 +815,8 @@
 			Попытка	СпрОбъект.ФасовкаОбъем = Число(packaging.volume); Исключение	КонецПопытки;
 			Попытка	СпрОбъект.ФасовкаЕдиницаИзмерения = НайтиЕдИзмерения(packaging.unit.guid);	Исключение 	КонецПопытки;			
 			
-			Если СпрОбъект.ТермическиеУсловияПеревозки = 0 Тогда 
-				СпрОбъект.ТермическиеУсловияПеревозки = Параметры["ТермУсловияПеревозки"]; 
+			Если НЕ ЗначениеЗаполнено( СпрОбъект.ТермическиеУсловияПеревозки ) Тогда 
+				СпрОбъект.ТермическиеУсловияПеревозки = Параметры["ТермическиеУсловияПеревозки"]; 
 			КонецЕсли; 
 			//productItem.producer.guid - ХС Производитель
 			//productItem.producing.location.guid - Площадка-Производитель  - возможен список
@@ -853,11 +834,11 @@
 	//		st  	 = productItem.status;
 	//		prodType = productItem.productType;		
 			СпрОбъект.Записать();
-			Если productItem.active="false" Тогда
+			Если НЕ СпрОбъект.Активен Тогда
 				СпрОбъект.УстановитьПометкуУдаления(истина);
-				СообщитьИнфо("Помечен на удаление ["+productItem.name+"] uuid =["+productItem.uuid+"], т.к. статус = НЕАКТИВЕН");
+				СообщитьИнфо("Помечен на удаление ["+productItem.name+"] uuid =["+productItem.uuid+"], т.к. статус = НЕАКТИВЕН", СпрОбъект.Ссылка);
 			Иначе	
-				СообщитьИнфо("Записан ["+productItem.name+"] uuid =["+productItem.uuid+"]");
+				СообщитьИнфо("Записан ["+productItem.name+"] uuid =["+productItem.uuid+"]", СпрОбъект.Ссылка);
 				Если СпрОбъект.ПометкаУдаления Тогда
 					СпрОбъект.УстановитьПометкуУдаления(ложь);	
 				КонецЕсли;
@@ -930,7 +911,7 @@
 		Спр.Uuid = productItemUuid;
 		//Спр.Продукция = ВСД_Продукция;
 		//Спр.ВидПродукции = ВСД_ВидПродукции;
-		Спр.ТермическиеУсловияПеревозки = Параметры["ТермУсловияПеревозки"];
+		Спр.ТермическиеУсловияПеревозки = Параметры["ТермическиеУсловияПеревозки"];
 		Спр.Записать();	
 		СообщитьИнфо("не найден ВСД_Продукция_Элемент ["+productItemName+"] GUID ["+productItemGuid+"]. Создан новый элемент справочника", Спр.Ссылка);
 		Если ОбновитьДанные Тогда 
@@ -2628,39 +2609,35 @@
 	//НачатьТранзакцию();
 	Ответ = Неопределено;
 	Попытка	    
-	    enterprise = xdto.Body.getEnterpriseByGuidResponse.enterprise ;						
-		_guid = enterprise.guid;
-		_uuid = enterprise.uuid;
-		name = enterprise.name;
-		active = enterprise.active;		
-		Попытка address =  ?(ТипЗнч(enterprise.address.addressView) = Тип("Строка"),enterprise.address.addressView,""); Исключение address = "" ;КонецПопытки;
-		
-		//Если ИскатьПлощадку Тогда 
-		//	Ссылка_ВСД_Площадка = НайтиПлощадку( GUID, ХС, Параметры );
-		//Иначе
-		//	Ссылка_ВСД_Площадка = Неопределено;
-		//КонецЕсли;
-		
+	    enterprise = xdto.Body.getEnterpriseByGuidResponse.enterprise ;	
 		Если ЗначениеЗаполнено(Ссылка_ВСД_Площадка) Тогда 
-			Объект_ВСД_Площадка = Ссылка_ВСД_Площадка.ПолучитьОбъект(); 
+			Площадка_Объект = Ссылка_ВСД_Площадка.ПолучитьОбъект(); 
 		Иначе
-			Объект_ВСД_Площадка = Справочники.ВСД_Площадка.СоздатьЭлемент();
+			Площадка_Объект = Справочники.ВСД_Площадка.СоздатьЭлемент();
 		КонецЕсли;
-		Объект_ВСД_Площадка.Наименование = name;
-		Объект_ВСД_Площадка.Адрес = address;
-		Объект_ВСД_Площадка.GUID = _guid;
-		Объект_ВСД_Площадка.UUID = _uuid;	
+		Площадка_Объект.Наименование = enterprise.name;
+		Попытка 
+			Если ТипЗнч(enterprise.address.addressView) = Тип("Строка") Тогда 
+				Площадка_Объект.Адрес = enterprise.address.addressView; 
+			КонецЕсли;
+		Исключение КонецПопытки;
+		Попытка Площадка_Объект.Страна	= НайтиСтрануПоGUID( enterprise.address.country.GUID, enterprise.address.country.name); Исключение КонецПопытки;
+		Попытка Площадка_Объект.Регион	= НайтиРегионПоGUID( enterprise.address.region.GUID, enterprise.address.region.name); Исключение КонецПопытки;
+		Попытка Площадка_Объект.Город	= НайтиГородПоGUID( enterprise.address.locality.GUID, enterprise.address.locality.name); Исключение КонецПопытки;
+		Площадка_Объект.GUID = enterprise.guid;
+		Площадка_Объект.UUID = enterprise.uuid;	
+		Площадка_Объект.Активен = enterprise.active;
 		
 		Если НЕ ЗначениеЗаполнено(ХозСубъект) Тогда
-			СообщитьИнфо("Внимание: создана площадка ["+_guid+"] без указания ХозСубъекта ");
+			СообщитьИнфо("Внимание: создана площадка ["+_guid+"] без указания ХозСубъекта ", Площадка_Объект.Ссылка);
 		Иначе 
-			Объект_ВСД_Площадка.GUIDХозСубъекта = ХозСубъект.GUID;		
-			Объект_ВСД_Площадка.ХозСубъект = ХозСубъект;
+			Площадка_Объект.GUIDХозСубъекта = ХозСубъект.GUID;		
+			Площадка_Объект.ХозСубъект = ХозСубъект;
 		КонецЕсли;		
-		Объект_ВСД_Площадка.Записать();
-		Ответ = Объект_ВСД_Площадка.Ссылка;
+		Площадка_Объект.Записать();
+		Ответ = Площадка_Объект.Ссылка;
 		
-		СообщитьИнфо("Записана ВСД_Площадка ["+Объект_ВСД_Площадка.Наименование+"] GUID = "+ _guid, Объект_ВСД_Площадка.Ссылка);		
+		СообщитьИнфо("Записана ВСД_Площадка ["+Площадка_Объект.Наименование+"] GUID = "+ _guid, Площадка_Объект.Ссылка);		
 		//ЗафиксироватьТранзакцию();
 	
 	    //СообщитьИнфо("Загрузка площадок завершена");
@@ -2947,6 +2924,301 @@
 	Возврат Площадки; 
 КонецФункции
 
+#Область СвязатьПлощадку
+	
+&НаСервере
+Функция Площадка_СвязатьСХозСубъектом_Запрос( ПараметрыОрганизации, ВыбПлощадка ) 
+	_guid = Новый УникальныйИдентификатор;
+	ЗапросXML = "
+	|<SOAP-ENV:Envelope 
+	|xmlns:bs='http://api.vetrf.ru/schema/cdm/base'
+	|xmlns:merc='http://api.vetrf.ru/schema/cdm/mercury/g2b/applications/v2'
+	|xmlns:apldef='http://api.vetrf.ru/schema/cdm/application/ws-definitions'
+	|xmlns:apl='http://api.vetrf.ru/schema/cdm/application'
+	|xmlns:vd='http://api.vetrf.ru/schema/cdm/mercury/vet-document/v2'
+	|xmlns:SOAP-ENV='http://schemas.xmlsoap.org/soap/envelope/'>
+	|  <SOAP-ENV:Header/>
+	|  <SOAP-ENV:Body>
+	|    <apldef:submitApplicationRequest>
+	|      <apldef:apiKey>"+СокрЛП( ПараметрыОрганизации["param_api_key"] )+"</apldef:apiKey>
+	|      <apl:application>
+	|        <apl:serviceId>mercury-g2b.service:2.0</apl:serviceId>
+	|        <apl:issuerId>"+СокрЛП( ПараметрыОрганизации["param_issuer_id"] )+"</apl:issuerId>
+	|        <apl:issueDate>" + ВСд_Запросы.ДатаXML(Текущаядата(), "T00:00:00") + "</apl:issueDate>
+	|        <apl:data>
+	|          <merc:modifyActivityLocationsRequest>
+	|            <merc:localTransactionId>"+_guid+"</merc:localTransactionId>
+	|            <merc:initiator>
+	|              <vd:login>"+СокрЛП( ПараметрыОрганизации["param_intiator_login"] )+"</vd:login>
+	|            </merc:initiator>
+	|            <merc:modificationOperation>
+	|              <vd:type>CREATE</vd:type>
+	|              <vd:businessEntity>
+	|                <bs:guid>"+ВыбПлощадка.ХозСубъект.GUID+"</bs:guid>
+	|              </vd:businessEntity>
+	|              <vd:activityLocation>
+//	|                <vd:globalID>7574894948562</vd:globalID>
+//	|                <vd:globalID>5412345123453</vd:globalID>
+	|                <vd:enterprise>
+	|                  <bs:guid>"+ВыбПлощадка.GUID+"</bs:guid>
+	|                </vd:enterprise>
+	|              </vd:activityLocation>
+	|            </merc:modificationOperation>
+	|          </merc:modifyActivityLocationsRequest>
+	|        </apl:data>
+	|      </apl:application>
+	|    </apldef:submitApplicationRequest>
+	|  </SOAP-ENV:Body>
+	|</SOAP-ENV:Envelope>";	
+	
+	Возврат ЗапросXML;
+КонецФункции
+
+&НаСервере
+Процедура Площадка_СвязатьСХозСубъектом( ПараметрыОрганизации, ВыбПлощадка) Экспорт
+	
+	Если НЕ ЗначениеЗаполнено(ПараметрыОрганизации) Тогда 
+		Организация = ВСД_Общий.ПолучитьОрганизациюПоУмолчанию();	
+		ПараметрыОрганизации = ВСД.ЗагрузитьПараметры( Организация );
+	КонецЕсли;
+
+	Если ПустаяСтрока(ВыбПлощадка.ХозСубъект.GUID) Тогда 
+		ВСД.СообщитьИнфо("не указан GUID ХозСубъекта");
+		Возврат;
+	КонецЕсли;
+		
+	Если ПустаяСтрока(ВыбПлощадка.GUID) Тогда 
+		ВСД.СообщитьИнфо("площадке не указан GUID");
+		Возврат;
+	КонецЕсли;
+	
+	ВСД_Запросы.Пауза( ПараметрыОрганизации["ПаузаСек"] );	
+	
+	ВСД.СообщитьИнфо(" Запрос CreateActivityLocationsOperation [ "+СокрЛП(ВыбПлощадка)+" ]");		
+	ЗапросXML = Площадка_СвязатьСХозСубъектом_Запрос( ПараметрыОрганизации, ВыбПлощадка );	
+	Service = "platform/services/ApplicationManagementService";
+	Action = "modifyActivityLocations";
+	
+	ПараметрыОтправки = ВСД_Отправка.ПараметрыОтправкиИнициализация( ПараметрыОрганизации );
+	ПараметрыОтправки.ЗапросXML = ЗапросXML;
+    ПараметрыОтправки.Service = Service;
+    ПараметрыОтправки.Action = Action;
+	xdto = ВСД_Отправка.ОтправитьSOAPНаСервере( ПараметрыОтправки );
+	
+	Статус = ВСД_Запросы.СтатусЗапроса(xdto);
+	Если ВСД_Запросы.НайтиОшибки( xdto ) Тогда
+		Возврат ;
+	КонецЕсли;
+	
+	appID = ВСД_Отправка.Получить_ApplicationID( xdto );
+	
+	Если ЗначениеЗаполнено(appID) Тогда
+		Площадка_СвязатьСХозСубъектом_Ответ( ПараметрыОрганизации, appID );
+	КонецЕсли;
+	
+КонецПроцедуры
+
+&НаСервере
+Процедура Площадка_СвязатьСХозСубъектом_Ответ( ПараметрыОрганизации, appID )
+	
+	Если ПустаяСтрока(appID) Тогда
+		ВСД.СообщитьИнфо("Не указано applicationID");
+		Возврат;
+	КонецЕсли;
+	
+	ВСД.СообщитьИнфо(" Запрос CreateActivityLocationsOperationResult [ "+СокрЛП(appID)+" ]");		
+	
+	ВСД_Запросы.Пауза( ПараметрыОрганизации["ПаузаСек"] );	
+	
+	ВСД.СообщитьИнфо(" Запрос CreateEnterpriseResult [ "+СокрЛП(appID)+" ]");		
+	
+	xdto = ВСД_Отправка.ПолучитьРезультатСервер( ПараметрыОрганизации, appID );
+	
+	Статус = ВСД_Запросы.СтатусЗапроса(xdto);
+	Если ВСД_Запросы.НайтиОшибки(xdto) Тогда
+		Возврат ;
+	КонецЕсли;
+		
+	Если Статус = "COMPLETED" Тогда
+		ВСД.СообщитьИнфо("Успешно установлена связь ВСД_Площадка ");
+	КонецЕсли;	
+	
+КонецПроцедуры
+#КонецОбласти
+
+#Область СоздатьПлощадку
+
+&НаСервере
+Функция Площадка_Создать_Запрос( ПараметрыОрганизации, ВыбПлощадка ) 
+	_guid = Новый УникальныйИдентификатор;
+
+	ЗапросXML = "
+	|<SOAP-ENV:Envelope 
+	|xmlns:dt='http://api.vetrf.ru/schema/cdm/dictionary/v2'
+	|xmlns:bs='http://api.vetrf.ru/schema/cdm/base'
+	|xmlns:merc='http://api.vetrf.ru/schema/cdm/mercury/g2b/applications/v2'
+	|xmlns:apldef='http://api.vetrf.ru/schema/cdm/application/ws-definitions'
+	|xmlns:apl='http://api.vetrf.ru/schema/cdm/application'
+	|xmlns:vd='http://api.vetrf.ru/schema/cdm/mercury/vet-document/v2'
+	|xmlns:SOAP-ENV='http://schemas.xmlsoap.org/soap/envelope/'>
+	|  <SOAP-ENV:Header/>
+	|  <SOAP-ENV:Body>
+	|    <apldef:submitApplicationRequest>
+	|      <apldef:apiKey>"+ ( ПараметрыОрганизации["param_api_key"] )+"</apldef:apiKey>
+	|      <apl:application>
+	|        <apl:serviceId>mercury-g2b.service:2.0</apl:serviceId>
+	|        <apl:issuerId>"+ ( ПараметрыОрганизации["param_issuer_id"] )+"</apl:issuerId>
+	|        <apl:issueDate>" + ВСД_Запросы.ДатаXML(Текущаядата(), "T00:00:00") + "</apl:issueDate>
+	|        <apl:data>
+	|          <merc:modifyEnterpriseRequest>
+	|            <merc:localTransactionId>"+_guid+"</merc:localTransactionId>
+	|            <merc:initiator>
+	|              <vd:login>"+( ПараметрыОрганизации["param_intiator_login"] )+"</vd:login>
+	|            </merc:initiator>
+	|            <merc:modificationOperation>
+	|              <vd:type>CREATE</vd:type>
+	|              <vd:resultingList>
+	|                <dt:enterprise>
+	|                  <dt:name>"+ ВыбПлощадка.Наименование+"</dt:name>
+	|                  <dt:type>1</dt:type>
+	|                  <dt:address>
+	|                    <dt:country>
+	|                      <bs:guid>"+ ВыбПлощадка.Страна.GUID+"</bs:guid>
+	|                    </dt:country>
+	|                    <dt:region>
+	|                      <bs:guid>"+ ВыбПлощадка.Регион.GUID+"</bs:guid>
+	|                    </dt:region>
+	|                    <dt:locality>
+	|                      <bs:guid>"+ ВыбПлощадка.Город.GUID+"</bs:guid>
+	|                    </dt:locality>
+	|                    <dt:addressView>"+ ВыбПлощадка.Адрес+"</dt:addressView>
+	|                  </dt:address>
+	|                  <dt:activityList>
+	|                    <dt:activity>
+	|                      <dt:name>Приготовление полуфабрикатов</dt:name>
+	|                    </dt:activity>
+	|                    <dt:activity>
+	|                      <dt:name>Реализация пищевых продуктов</dt:name>
+	|                    </dt:activity>
+	|                    <dt:activity>
+	|                      <dt:name>Реализация непищевых продуктов</dt:name>
+	|                    </dt:activity>
+	|                  </dt:activityList>
+	|                  <dt:owner>
+	|                    <bs:guid>"+ ВыбПлощадка.ХозСубъект.GUID+"</bs:guid>
+	|                  </dt:owner>
+	|                </dt:enterprise>
+	|              </vd:resultingList>
+	|              <vd:reason>Добавление предприятия в реестр.</vd:reason>
+	|            </merc:modificationOperation>
+	|          </merc:modifyEnterpriseRequest>
+	|        </apl:data>
+	|      </apl:application>
+	|    </apldef:submitApplicationRequest>
+	|  </SOAP-ENV:Body>
+	|</SOAP-ENV:Envelope>";
+
+	Возврат ЗапросXML;
+КонецФункции
+
+&НаСервере
+Процедура Площадка_Создать( ПараметрыОрганизации, ВыбПлощадка ) Экспорт
+	
+	Если ПустаяСтрока(ВыбПлощадка.ХозСубъект.GUID) Тогда
+		ВСД.СообщитьИнфо("Не указан Guid ХозСубъекта");
+		Возврат;
+	КонецЕсли;
+	Если ПустаяСтрока(ВыбПлощадка.Адрес) Тогда
+		ВСД.СообщитьИнфо("Не указан Адрес");
+		Возврат;
+	КонецЕсли;
+
+	Если ПустаяСтрока(ВыбПлощадка.Страна.GUID) Тогда
+		ВСД.СообщитьИнфо("Не указан Страна.GUID");
+		Возврат;
+	КонецЕсли;
+
+	Если ПустаяСтрока(ВыбПлощадка.Регион.GUID) Тогда
+		ВСД.СообщитьИнфо("Не указан Регион.GUID");
+		Возврат;
+	КонецЕсли;
+
+	Если ПустаяСтрока(ВыбПлощадка.Город.GUID) Тогда
+		ВСД.СообщитьИнфо("Не указан Город.GUID");
+		Возврат;
+	КонецЕсли;
+	
+	//Если КомпонентаНаСервере = Неопределено тогда
+	//	ЗагрузитьГлПеременныеИзВременногоХранилища();
+	//КонецЕсли;
+	
+	ВСД.СообщитьИнфо(" Запрос CreateEnterprise [ "+СокрЛП(ВыбПлощадка)+" ]");		
+	//Результат = КомпонентаНаСервере.CreateEnterprise(
+	ЗапросXML = Площадка_Создать_Запрос(	ПараметрыОрганизации, ВыбПлощадка );	
+	Service = "platform/services/ApplicationManagementService";//"platform/cerberus/services/EnterpriseService";
+	Action = "modifyEnterprise";
+	
+	ПараметрыОтправки = ВСД_Отправка.ПараметрыОтправкиИнициализация( ПараметрыОрганизации );
+	ПараметрыОтправки.ЗапросXML = ЗапросXML;
+    ПараметрыОтправки.Service = Service;
+    ПараметрыОтправки.Action = Action;
+	xdto = ВСД_Отправка.ОтправитьSOAPНаСервере( ПараметрыОтправки );
+	
+	Статус = ВСД_Запросы.СтатусЗапроса(xdto);
+	Если ВСД_Запросы.НайтиОшибки( xdto ) Тогда
+		Возврат ;
+	КонецЕсли;
+	
+	appID = ВСД_Отправка.Получить_ApplicationID( xdto );
+	
+	Если ЗначениеЗаполнено(appID) Тогда
+		Площадка_ПолучитьОтвет( ПараметрыОрганизации, appID, ВыбПлощадка );
+	КонецЕсли;
+	
+КонецПроцедуры
+
+&НаСервере
+Процедура Площадка_ПолучитьОтвет( ПараметрыОрганизации, appID, ВыбПлощадка) Экспорт
+	
+	Если ПустаяСтрока(appID)=1 Тогда
+		ВСД.СообщитьИнфо("Не указано applicationID");
+		Возврат;
+	КонецЕсли;
+	
+	ВСД_Запросы.Пауза( ПараметрыОрганизации["ПаузаСек"] );	
+	
+	ВСД.СообщитьИнфо(" Запрос CreateEnterpriseResult [ "+СокрЛП(appID)+" ]");		
+	
+	xdto = ВСД_Отправка.ПолучитьРезультатСервер( ПараметрыОрганизации, appID );
+	
+	Статус = ВСД_Запросы.СтатусЗапроса(xdto);
+	Если ВСД_Запросы.НайтиОшибки(xdto) Тогда
+		Возврат ;
+	КонецЕсли;
+		
+	Если Статус = "COMPLETED" Тогда
+	    Попытка
+			enterprise = xdto.Body.receiveApplicationResultResponse.application.result.modifyEnterpriseResponse.enterprise;
+			guid = enterprise.guid;
+			_uuid = enterprise.uuid;
+			active = enterprise.active;
+			Попытка name = enterprise.name; Исключение	name = enterprise.fio;	КонецПопытки;
+			
+			ОбъектПлощадка = ВыбПлощадка.ПолучитьОбъект();
+			ОбъектПлощадка.guid = guid;
+			ОбъектПлощадка.uuid = _uuid;
+			ОбъектПлощадка.Записать();
+			ВСД.СообщитьИнфо("Успешно записан ВСД_Площадка ["+ВыбПлощадка+"] GUID = "+GUID, ОбъектПлощадка.Ссылка);
+		      			
+			Площадка_СвязатьСХозСубъектом( ПараметрыОрганизации, ВыбПлощадка);
+		Исключение
+			ВСД.СообщитьИнфо("Ошибка "+ОписаниеОшибки());
+		КонецПопытки;
+	КонецЕсли;
+
+КонецПроцедуры
+
+#КонецОбласти
 
 #КонецОбласти
 
@@ -3163,7 +3435,7 @@
 	Попытка	
 		businessEntity = xdto.Body.getBusinessEntityByGuidResponse.businessEntity;
 		//_guid = businessEntity.guid;
-		_uuid = businessEntity.uuid;
+		//_uuid = businessEntity.uuid;
 		
 		Попытка _name = businessEntity.name; Исключение _name=""; КонецПопытки;
 		Если _name = "" тогда
@@ -3171,43 +3443,50 @@
 		КонецЕсли;
 		
 		Попытка _Fullname = businessEntity.fullname;  Исключение _Fullname=""; КонецПопытки;
-		Если НЕ businessEntity.active Тогда 
-			СообщитьИнфо("ХозСубъект НЕ АКТИВЕН!");
-		КонецЕсли;
-		Попытка _ИНН =  businessEntity.inn; Исключение _ИНН=""; КонецПопытки;
-		Попытка _КПП = businessEntity.kpp; Исключение _КПП=""; КонецПопытки;
-		Попытка _ОГРН = businessEntity.ogrn; Исключение _ОГРН=""; КонецПопытки;
-		Попытка _address = businessEntity.juridicalAddress.addressView; Исключение _address=""; КонецПопытки;
+		//Попытка _ИНН =  businessEntity.inn; Исключение _ИНН=""; КонецПопытки;
+		//Попытка _КПП = businessEntity.kpp; Исключение _КПП=""; КонецПопытки;
+		//Попытка _ОГРН = businessEntity.ogrn; Исключение _ОГРН=""; КонецПопытки;
+		//Попытка _address = businessEntity.juridicalAddress.addressView; Исключение _address=""; КонецПопытки;
 		
 		Если ЗначениеЗаполнено(Ссылка_ВСД_ХозСубъект) Тогда 
-			Объект_ВСД_ХозСубъект = Ссылка_ВСД_ХозСубъект.ПолучитьОбъект(); 
+			ХозСубъект_Объект = Ссылка_ВСД_ХозСубъект.ПолучитьОбъект(); 
 		Иначе
 			Спр = Новый("СправочникМенеджер.ВСД_ХозСубъект");
 			Ссылка_ВСД_ХозСубъект = Спр.НайтиПоРеквизиту("GUID", businessEntity.guid);
 			Если Ссылка_ВСД_ХозСубъект = Справочники.ВСД_ХозСубъект.ПустаяСсылка() Тогда 
-				Объект_ВСД_ХозСубъект = Справочники.ВСД_ХозСубъект.СоздатьЭлемент();
+				ХозСубъект_Объект = Справочники.ВСД_ХозСубъект.СоздатьЭлемент();
 			Иначе
-				Объект_ВСД_ХозСубъект = Ссылка_ВСД_ХозСубъект.ПолучитьОбъект(); 
+				ХозСубъект_Объект = Ссылка_ВСД_ХозСубъект.ПолучитьОбъект(); 
 			КонецЕсли;
 		КонецЕсли;
 		
-		Объект_ВСД_ХозСубъект.Наименование = _name;
-		//Объект_ВСД_ХозСубъект.Адрес = address;
-		Объект_ВСД_ХозСубъект.GUID = businessEntity.guid;
-		Объект_ВСД_ХозСубъект.UUID = _uuid;	
+		ХозСубъект_Объект.Наименование = _name;
+		Попытка ХозСубъект_Объект.Адрес = businessEntity.juridicalAddress.addressView; Исключение КонецПопытки; 
+		ХозСубъект_Объект.GUID = businessEntity.guid;
+		ХозСубъект_Объект.UUID = businessEntity.uuid;	
+		ХозСубъект_Объект.ИНН = businessEntity.inn;
+		Попытка ХозСубъект_Объект.КПП = businessEntity.kpp; Исключение КонецПопытки;
+		Попытка ХозСубъект_Объект.ОГРН = businessEntity.ogrn; Исключение КонецПопытки;
+		ХозСубъект_Объект.Активен = businessEntity.active;	
+		Попытка ХозСубъект_Объект.Страна = НайтиСтрануПоGUID( businessEntity.juridicalAddress.country.GUID, businessEntity.juridicalAddress.country.name); Исключение КонецПопытки;
+		Попытка ХозСубъект_Объект.Регион = НайтиРегионПоGUID( businessEntity.juridicalAddress.region.GUID, businessEntity.juridicalAddress.region.name); Исключение КонецПопытки;
+		Попытка ХозСубъект_Объект.Город	= НайтиГородПоGUID( businessEntity.juridicalAddress.locality.GUID, businessEntity.juridicalAddress.locality.name); Исключение КонецПопытки;
 		
 		// Ищем контрагента
 		Спр = Новый("СправочникМенеджер.Контрагенты");
-		Ссылка_Контрагент = Спр.НайтиПоРеквизиту("ИНН",_ИНН);
+		Ссылка_Контрагент = Спр.НайтиПоРеквизиту("ИНН", ХозСубъект_Объект.ИНН );
 		Если Ссылка_Контрагент = Справочники.Контрагенты.ПустаяСсылка() Тогда
-			СообщитьИнфо("Не найден в справочнике Контрагент "+_name+" ИНН "+_ИНН+" ХС запишем без указания контрагента 1С");
+			СообщитьИнфо("Не найден в справочнике Контрагент "+ХозСубъект_Объект+" ИНН "+ХозСубъект_Объект.ИНН+" ХС запишем без указания контрагента 1С");
 		Иначе //Нашли по ИНН
-			Объект_ВСД_ХозСубъект.Контрагент = Ссылка_Контрагент;
+			ХозСубъект_Объект.Контрагент = Ссылка_Контрагент;
 		КонецЕсли;	
-		Объект_ВСД_ХозСубъект.Записать();
-		Ответ = Объект_ВСД_ХозСубъект.Ссылка;
+		ХозСубъект_Объект.Записать();
+		Ответ = ХозСубъект_Объект.Ссылка;
 		
-		СообщитьИнфо("Записан ВСД_Хозсубъект ["+Объект_ВСД_ХозСубъект+"] GUID = "+ businessEntity.guid+" Адрес: "+_address);		
+		Если НЕ businessEntity.active Тогда 
+			СообщитьИнфо("ХозСубъект НЕ АКТИВЕН!", ХозСубъект_Объект.Ссылка);
+		КонецЕсли;		
+		СообщитьИнфо("Записан ВСД_Хозсубъект ["+ХозСубъект_Объект+"] GUID = "+ businessEntity.guid+" Адрес: "+ХозСубъект_Объект.Адрес, ХозСубъект_Объект.Ссылка);		
 
 		//ЗафиксироватьТранзакцию();			    
 	Исключение
@@ -3228,6 +3507,73 @@
 #КонецОбласти
 
 #Область Партии
+
+Функция Партии_ПоGUID_Запрос( Параметры, ВыбПартия )
+	localTransactionId = Новый УникальныйИдентификатор;
+	Запрос = "
+	|<SOAP-ENV:Envelope xmlns:dt='http://api.vetrf.ru/schema/cdm/dictionary/v2' xmlns:bs='http://api.vetrf.ru/schema/cdm/base' 
+	|xmlns:merc='http://api.vetrf.ru/schema/cdm/mercury/g2b/applications/v2' xmlns:apldef='http://api.vetrf.ru/schema/cdm/application/ws-definitions' 
+	|xmlns:apl='http://api.vetrf.ru/schema/cdm/application' xmlns:vd='http://api.vetrf.ru/schema/cdm/mercury/vet-document/v2' 
+	|xmlns:SOAP-ENV='http://schemas.xmlsoap.org/soap/envelope/'>
+	|  <SOAP-ENV:Header/>
+	|  <SOAP-ENV:Body>
+	|    <apldef:submitApplicationRequest>
+	
+	|      <apldef:apiKey>"+ СокрЛП( Параметры["param_api_key"] ) +"</apldef:apiKey>
+	|      <apl:application>
+	|        <apl:serviceId>mercury-g2b.service:2.0</apl:serviceId>
+	|        <apl:issuerId>"+ СокрЛП( Параметры["param_issuer_id"] ) +"</apl:issuerId>
+	|        <apl:issueDate>" + ДатаXML(ТекущаяДата(), "T00:00:00") + "</apl:issueDate>	
+	|        <apl:data>
+	|          <merc:getStockEntryByGuidRequest>
+	|            <merc:localTransactionId>"+localTransactionId+"</merc:localTransactionId>
+	|            <merc:initiator>
+	|              <vd:login>"+ СокрЛП( Параметры["param_intiator_login"] ) +"</vd:login>
+	|            </merc:initiator>
+	|            <bs:guid>"+ ВыбПартия.guid +"</bs:guid>
+	|            <dt:enterpriseGuid>"+ВыбПартия.Получатель_Площадка.GUID+"</dt:enterpriseGuid>
+	|          </merc:getStockEntryByGuidRequest>
+	|        </apl:data>
+	|      </apl:application>
+	|    </apldef:submitApplicationRequest>
+	|  </SOAP-ENV:Body>
+	|</SOAP-ENV:Envelope>
+	|";	
+	Возврат Запрос;
+КонецФункции
+
+Функция Партии_ПолучитьПоGUID( Параметры, ВыбПартия ) Экспорт
+	
+	СообщитьИнфо("Отправляем запрос партий по GUID "+ВыбПартия);
+	ЗапросXML = Партии_ПоGUID_Запрос( Параметры, ВыбПартия );	
+	Service = "platform/services/2.0/ApplicationManagementService";
+	Action = "submitApplicationRequest";	
+	
+	ПараметрыОтправки = ВСД_Отправка.ПараметрыОтправкиИнициализация( Параметры );
+	ПараметрыОтправки.ЗапросXML = ЗапросXML;
+    ПараметрыОтправки.Service = Service;
+    ПараметрыОтправки.Action = Action;
+	xdto = ВСД_Отправка.ОтправитьSOAPНаСервере( ПараметрыОтправки );
+	
+	Если НайтиОшибки(xdto) Тогда
+		Возврат Неопределено;
+	КонецЕсли;
+	
+	//НачатьТранзакцию();
+	Ответ = Неопределено;
+	
+	appID = ВСД_Отправка.Получить_ApplicationID( xdto );
+	
+	Ответ =  Партии2_Ответ_Получить( Параметры, appID );	
+	//СообщитьИнфо("Результат = "+Результат);
+	Для А=1 По 10 Цикл
+		Если Ответ="IN_PROCESS" Тогда 
+			Ответ =  Партии2_Ответ_Получить( Параметры, appID );
+		КонецЕсли;
+	КонецЦикла;
+	
+	Возврат Ответ;
+КонецФункции
 
 //Функция ПолучитьПартии2_ЗапросXML( Предприятие , ПартииСмещение, НачПериода, КонПериода, ТолькоАктуальныеПартии )
 //Функция ПолучитьПартии2_ЗапросXML( Параметры, ВыбПлощадка , ПартииСмещение, НачПериода, КонПериода, ТолькоАктуальныеПартии  )
@@ -3252,6 +3598,7 @@
 	ПартияКонПериода = Параметры["ПартияКонПериода"];
 	ВыбПлощадка = Параметры["ВыбПлощадка"];
 	
+	localTransactionId = Новый УникальныйИдентификатор;
 	Запрос = "
 	|<SOAP-ENV:Envelope xmlns:dt='http://api.vetrf.ru/schema/cdm/dictionary/v2'
 	|xmlns:bs='http://api.vetrf.ru/schema/cdm/base'
@@ -3270,7 +3617,7 @@
 	|        <apl:issueDate>" + ДатаXML(ТекущаяДата(), "T00:00:00") + "</apl:issueDate>
 	|        <apl:data>
 	|          <merc:getStockEntryListRequest>
-	|            <merc:localTransactionId>a1</merc:localTransactionId>
+	|            <merc:localTransactionId>"+localTransactionId+"</merc:localTransactionId>
 	|            <merc:initiator>
 	|              <vd:login>"+ СокрЛП( Параметры["param_intiator_login"] ) +"</vd:login>
 	|            </merc:initiator>
@@ -3515,6 +3862,9 @@
 		ИначеЕсли НЕ(Response.Свойства().Получить("processIncomingConsignmentResponse") = Неопределено) Тогда
 			//xdto.Body.receiveApplicationResultResponse.application.result.processIncomingConsignmentResponse.stockEntry
 			seList = Response.processIncomingConsignmentResponse.stockEntry;	
+		ИначеЕсли НЕ(Response.Свойства().Получить("getStockEntryByGuidResponse") = Неопределено) Тогда
+			//xdto.Body.receiveApplicationResultResponse.application.result.processIncomingConsignmentResponse.stockEntry
+			seList = Response.getStockEntryByGuidResponse.stockEntry;	
 		Иначе
 			СообщитьИнфо("В партия получили не обработанные ветки -> "+Response.Свойства().Получить(0));
 			Возврат;

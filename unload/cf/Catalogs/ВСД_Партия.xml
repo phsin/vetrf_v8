@@ -1771,6 +1771,28 @@
 			<Form>ФормаСпискаУФ</Form>
 			<Form>ФормаЭлемента</Form>
 			<Form>ФормаЭлементаУФ</Form>
+			<Command uuid="3e4253b8-92e0-4f3a-bc6b-c857adbd23a0">
+				<Properties>
+					<Name>ВСД_Партия_Обновить</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Обновить из Меркурия</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+					<Group>FormCommandBarImportant</Group>
+					<CommandParameterType>
+						<v8:Type>cfg:CatalogRef.ВСД_Партия</v8:Type>
+					</CommandParameterType>
+					<ParameterUseMode>Multiple</ParameterUseMode>
+					<ModifiesData>true</ModifiesData>
+					<Representation>Auto</Representation>
+					<ToolTip/>
+					<Picture/>
+					<Shortcut/>
+				</Properties>
+			</Command>
 		</ChildObjects>
 	</Catalog>
 </MetaDataObject>

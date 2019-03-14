@@ -31,6 +31,7 @@
 	<ChildItems>
 		<UsualGroup name="Группа1" id="39">
 			<Group>Vertical</Group>
+			<Representation>None</Representation>
 			<ShowTitle>false</ShowTitle>
 			<ExtendedTooltip name="Группа1РасширеннаяПодсказка" id="40"/>
 			<ChildItems>
@@ -40,21 +41,12 @@
 					<ShowTitle>false</ShowTitle>
 					<ExtendedTooltip name="Группа4РасширеннаяПодсказка" id="252"/>
 					<ChildItems>
-						<InputField name="Организация" id="4">
-							<DataPath>Объект.Организация</DataPath>
-							<EditMode>EnterOnInput</EditMode>
-							<ContextMenu name="ОрганизацияКонтекстноеМеню" id="5"/>
-							<ExtendedTooltip name="ОрганизацияРасширеннаяПодсказка" id="6"/>
-							<Events>
-								<Event name="OnChange">ОрганизацияПриИзменении</Event>
-							</Events>
-						</InputField>
 						<InputField name="Отправитель_Площадка" id="1">
 							<DataPath>Объект.Отправитель_Площадка</DataPath>
 							<Title>
 								<v8:item>
 									<v8:lang>ru</v8:lang>
-									<v8:content>Площадка</v8:content>
+									<v8:content>Активная Площадка</v8:content>
 								</v8:item>
 							</Title>
 							<EditMode>EnterOnInput</EditMode>
@@ -64,6 +56,15 @@
 							<Events>
 								<Event name="OnChange">Отправитель_ПлощадкаПриИзменении</Event>
 								<Event name="StartChoice">Отправитель_ПлощадкаНачалоВыбора</Event>
+							</Events>
+						</InputField>
+						<InputField name="Организация" id="4">
+							<DataPath>Объект.Организация</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ОрганизацияКонтекстноеМеню" id="5"/>
+							<ExtendedTooltip name="ОрганизацияРасширеннаяПодсказка" id="6"/>
+							<Events>
+								<Event name="OnChange">ОрганизацияПриИзменении</Event>
 							</Events>
 						</InputField>
 					</ChildItems>
