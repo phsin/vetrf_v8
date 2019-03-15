@@ -951,6 +951,25 @@
 							</ToolTip>
 							<ExtendedTooltip name="ГрПараметрыРасширеннаяПодсказка" id="141"/>
 							<ChildItems>
+								<UsualGroup name="Группа8" id="238">
+									<Group>AlwaysHorizontal</Group>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="Группа8РасширеннаяПодсказка" id="239"/>
+									<ChildItems>
+										<Button name="СохранитьПараметры" id="240">
+											<Type>UsualButton</Type>
+											<CommandName>Form.Command.СохранитьПараметры</CommandName>
+											<ExtendedTooltip name="СохранитьПараметрыРасширеннаяПодсказка" id="241"/>
+										</Button>
+										<CheckBoxField name="флСохранятьНастройкиДляТекущегоПользователя" id="545">
+											<DataPath>Объект.флСохранятьНастройкиДляТекущегоПользователя</DataPath>
+											<CheckBoxType>Auto</CheckBoxType>
+											<ContextMenu name="флСохранятьНастройкиДляТекущегоПользователяКонтекстноеМеню" id="546"/>
+											<ExtendedTooltip name="флСохранятьНастройкиДляТекущегоПользователяРасширеннаяПодсказка" id="547"/>
+										</CheckBoxField>
+									</ChildItems>
+								</UsualGroup>
 								<UsualGroup name="Шапка" id="1">
 									<Title>
 										<v8:item>
@@ -2096,25 +2115,6 @@
 												</Page>
 											</ChildItems>
 										</Pages>
-									</ChildItems>
-								</UsualGroup>
-								<UsualGroup name="Группа8" id="238">
-									<Group>AlwaysHorizontal</Group>
-									<Representation>None</Representation>
-									<ShowTitle>false</ShowTitle>
-									<ExtendedTooltip name="Группа8РасширеннаяПодсказка" id="239"/>
-									<ChildItems>
-										<Button name="СохранитьПараметры" id="240">
-											<Type>UsualButton</Type>
-											<CommandName>Form.Command.СохранитьПараметры</CommandName>
-											<ExtendedTooltip name="СохранитьПараметрыРасширеннаяПодсказка" id="241"/>
-										</Button>
-										<CheckBoxField name="флСохранятьНастройкиДляТекущегоПользователя" id="545">
-											<DataPath>Объект.флСохранятьНастройкиДляТекущегоПользователя</DataPath>
-											<CheckBoxType>Auto</CheckBoxType>
-											<ContextMenu name="флСохранятьНастройкиДляТекущегоПользователяКонтекстноеМеню" id="546"/>
-											<ExtendedTooltip name="флСохранятьНастройкиДляТекущегоПользователяРасширеннаяПодсказка" id="547"/>
-										</CheckBoxField>
 									</ChildItems>
 								</UsualGroup>
 							</ChildItems>
