@@ -90,6 +90,12 @@
 							<ContextMenu name="АдресКонтекстноеМеню" id="90"/>
 							<ExtendedTooltip name="АдресРасширеннаяПодсказка" id="91"/>
 						</InputField>
+						<CheckBoxField name="ПерсональныеПараметрыСписанияПартий" id="92">
+							<DataPath>Объект.ПерсональныеПараметрыСписанияПартий</DataPath>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="ПерсональныеПараметрыСписанияПартийКонтекстноеМеню" id="93"/>
+							<ExtendedTooltip name="ПерсональныеПараметрыСписанияПартийРасширеннаяПодсказка" id="94"/>
+						</CheckBoxField>
 						<InputField name="ПарамКолонкаСортировкиПартииСписания" id="65">
 							<DataPath>Объект.ПарамКолонкаСортировкиПартииСписания</DataPath>
 							<Title>
