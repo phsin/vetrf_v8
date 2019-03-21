@@ -21,235 +21,209 @@
 		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
 	</Events>
 	<ChildItems>
-		<UsualGroup name="Группа1" id="1">
+		<UsualGroup name="ГруппаШапка" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа шапка</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа шапка</v8:content>
+				</v8:item>
+			</ToolTip>
 			<Group>Vertical</Group>
+			<Representation>None</Representation>
 			<ShowTitle>false</ShowTitle>
-			<ExtendedTooltip name="Группа1РасширеннаяПодсказка" id="2"/>
+			<ExtendedTooltip name="ГруппаШапкаРасширеннаяПодсказка" id="4"/>
 			<ChildItems>
-				<UsualGroup name="ГруппаШапка" id="3">
+				<InputField name="ВыбХозСубъект" id="5">
+					<DataPath>ВыбХозСубъект</DataPath>
 					<Title>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>Группа шапка</v8:content>
+							<v8:content>Хоз Субъект</v8:content>
 						</v8:item>
 					</Title>
-					<ToolTip>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>Группа шапка</v8:content>
-						</v8:item>
-					</ToolTip>
-					<Group>Vertical</Group>
-					<Representation>None</Representation>
-					<ShowTitle>false</ShowTitle>
-					<ExtendedTooltip name="ГруппаШапкаРасширеннаяПодсказка" id="4"/>
-					<ChildItems>
-						<InputField name="ВыбХозСубъект" id="5">
-							<DataPath>ВыбХозСубъект</DataPath>
-							<Title>
-								<v8:item>
-									<v8:lang>ru</v8:lang>
-									<v8:content>Хоз Субъект</v8:content>
-								</v8:item>
-							</Title>
-							<ContextMenu name="ВыбХозСубъектКонтекстноеМеню" id="6"/>
-							<ExtendedTooltip name="ВыбХозСубъектРасширеннаяПодсказка" id="7"/>
-						</InputField>
-						<InputField name="НазваниеПлощадки" id="8">
-							<DataPath>НазваниеПлощадки</DataPath>
-							<ContextMenu name="НазваниеПлощадкиКонтекстноеМеню" id="9"/>
-							<ExtendedTooltip name="НазваниеПлощадкиРасширеннаяПодсказка" id="10"/>
-						</InputField>
-						<InputField name="ВыбРегион" id="11">
-							<DataPath>ВыбРегион</DataPath>
-							<Title>
-								<v8:item>
-									<v8:lang>ru</v8:lang>
-									<v8:content>Регион</v8:content>
-								</v8:item>
-							</Title>
-							<ContextMenu name="ВыбРегионКонтекстноеМеню" id="12"/>
-							<ExtendedTooltip name="ВыбРегионРасширеннаяПодсказка" id="13"/>
-						</InputField>
-					</ChildItems>
-				</UsualGroup>
-				<UsualGroup name="ГруппаТаблица" id="14">
+					<ContextMenu name="ВыбХозСубъектКонтекстноеМеню" id="6"/>
+					<ExtendedTooltip name="ВыбХозСубъектРасширеннаяПодсказка" id="7"/>
+				</InputField>
+				<InputField name="НазваниеПлощадки" id="8">
+					<DataPath>НазваниеПлощадки</DataPath>
+					<ContextMenu name="НазваниеПлощадкиКонтекстноеМеню" id="9"/>
+					<ExtendedTooltip name="НазваниеПлощадкиРасширеннаяПодсказка" id="10"/>
+				</InputField>
+				<InputField name="ВыбРегион" id="11">
+					<DataPath>ВыбРегион</DataPath>
 					<Title>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>Группа таблица</v8:content>
+							<v8:content>Регион</v8:content>
 						</v8:item>
 					</Title>
-					<ToolTip>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>Группа таблица</v8:content>
-						</v8:item>
-					</ToolTip>
-					<Group>Vertical</Group>
-					<ShowTitle>false</ShowTitle>
-					<ExtendedTooltip name="ГруппаТаблицаРасширеннаяПодсказка" id="15"/>
-					<ChildItems>
-						<CommandBar name="грКомПанель" id="56">
-							<Title>
-								<v8:item>
-									<v8:lang>ru</v8:lang>
-									<v8:content>Гр ком панель</v8:content>
-								</v8:item>
-							</Title>
-							<ToolTip>
-								<v8:item>
-									<v8:lang>ru</v8:lang>
-									<v8:content>Гр ком панель</v8:content>
-								</v8:item>
-							</ToolTip>
-							<ExtendedTooltip name="грКомПанельРасширеннаяПодсказка" id="57"/>
-							<ChildItems>
-								<Button name="ОтметитьВсеДокументы" id="58">
-									<Type>CommandBarButton</Type>
-									<Representation>Picture</Representation>
-									<OnlyInAllActions>true</OnlyInAllActions>
-									<CommandName>Form.Command.кнОтметитьВсеДокументы</CommandName>
-									<Picture>
-										<xr:Ref>StdPicture.CheckAll</xr:Ref>
-										<xr:LoadTransparent>true</xr:LoadTransparent>
-									</Picture>
-									<ToolTipRepresentation>Balloon</ToolTipRepresentation>
-									<ExtendedTooltip name="ОтметитьВсеДокументыРасширеннаяПодсказка" id="59"/>
-								</Button>
-								<Button name="СнятьОтметкиДокументов" id="60">
-									<Type>CommandBarButton</Type>
-									<Representation>Picture</Representation>
-									<CommandName>Form.Command.кнСнятьОтметкиДокументов</CommandName>
-									<Picture>
-										<xr:Ref>StdPicture.UncheckAll</xr:Ref>
-										<xr:LoadTransparent>true</xr:LoadTransparent>
-									</Picture>
-									<ExtendedTooltip name="СнятьОтметкиДокументовРасширеннаяПодсказка" id="61"/>
-								</Button>
-								<Button name="кнВыполнитьПоиск" id="62">
-									<Type>CommandBarButton</Type>
-									<CommandName>Form.Command.кнВыполнитьПоиск</CommandName>
-									<ExtendedTooltip name="кнВыполнитьПоискРасширеннаяПодсказка" id="63"/>
-								</Button>
-								<Button name="кнСохранить" id="64">
-									<Type>CommandBarButton</Type>
-									<CommandName>Form.Command.кнСохранить</CommandName>
-									<ExtendedTooltip name="кнСохранитьРасширеннаяПодсказка" id="65"/>
-								</Button>
-							</ChildItems>
-						</CommandBar>
-						<Table name="Площадки" id="16">
-							<AutoInsertNewRow>true</AutoInsertNewRow>
-							<EnableStartDrag>true</EnableStartDrag>
-							<EnableDrag>true</EnableDrag>
-							<FileDragMode>AsFile</FileDragMode>
-							<DataPath>Объект.Площадки</DataPath>
-							<RowFilter xsi:nil="true"/>
-							<ContextMenu name="ПлощадкиКонтекстноеМеню" id="17"/>
-							<AutoCommandBar name="ПлощадкиКоманднаяПанель" id="18">
-								<Autofill>false</Autofill>
-							</AutoCommandBar>
-							<ExtendedTooltip name="ПлощадкиРасширеннаяПодсказка" id="19"/>
-							<SearchStringAddition name="ПлощадкиСтрокаПоиска" id="20">
-								<AdditionSource>
-									<Item>Площадки</Item>
-									<Type>SearchStringRepresentation</Type>
-								</AdditionSource>
-								<ContextMenu name="ПлощадкиСтрокаПоискаКонтекстноеМеню" id="21"/>
-								<ExtendedTooltip name="ПлощадкиСтрокаПоискаРасширеннаяПодсказка" id="22"/>
-							</SearchStringAddition>
-							<ViewStatusAddition name="ПлощадкиСостояниеПросмотра" id="23">
-								<AdditionSource>
-									<Item>Площадки</Item>
-									<Type>ViewStatusRepresentation</Type>
-								</AdditionSource>
-								<ContextMenu name="ПлощадкиСостояниеПросмотраКонтекстноеМеню" id="24"/>
-								<ExtendedTooltip name="ПлощадкиСостояниеПросмотраРасширеннаяПодсказка" id="25"/>
-							</ViewStatusAddition>
-							<SearchControlAddition name="ПлощадкиУправлениеПоиском" id="26">
-								<AdditionSource>
-									<Item>Площадки</Item>
-									<Type>SearchControl</Type>
-								</AdditionSource>
-								<ContextMenu name="ПлощадкиУправлениеПоискомКонтекстноеМеню" id="27"/>
-								<ExtendedTooltip name="ПлощадкиУправлениеПоискомРасширеннаяПодсказка" id="28"/>
-							</SearchControlAddition>
-							<ChildItems>
-								<LabelField name="ПлощадкиНомерСтроки" id="29">
-									<DataPath>Объект.Площадки.LineNumber</DataPath>
-									<EditMode>EnterOnInput</EditMode>
-									<ContextMenu name="ПлощадкиНомерСтрокиКонтекстноеМеню" id="30"/>
-									<ExtendedTooltip name="ПлощадкиНомерСтрокиРасширеннаяПодсказка" id="31"/>
-								</LabelField>
-								<CheckBoxField name="ПлощадкиОтметка" id="32">
-									<DataPath>Объект.Площадки.Отметка</DataPath>
-									<EditMode>EnterOnInput</EditMode>
-									<CheckBoxType>Auto</CheckBoxType>
-									<ContextMenu name="ПлощадкиОтметкаКонтекстноеМеню" id="33"/>
-									<ExtendedTooltip name="ПлощадкиОтметкаРасширеннаяПодсказка" id="34"/>
-								</CheckBoxField>
-								<CheckBoxField name="ПлощадкиАктивная" id="35">
-									<DataPath>Объект.Площадки.Активная</DataPath>
-									<ReadOnly>true</ReadOnly>
-									<EditMode>EnterOnInput</EditMode>
-									<CheckBoxType>Auto</CheckBoxType>
-									<ContextMenu name="ПлощадкиАктивнаяКонтекстноеМеню" id="36"/>
-									<ExtendedTooltip name="ПлощадкиАктивнаяРасширеннаяПодсказка" id="37"/>
-								</CheckBoxField>
-								<InputField name="ПлощадкиПлощадка" id="38">
-									<DataPath>Объект.Площадки.Площадка</DataPath>
-									<EditMode>EnterOnInput</EditMode>
-									<ChoiceHistoryOnInput>DontUse</ChoiceHistoryOnInput>
-									<ContextMenu name="ПлощадкиПлощадкаКонтекстноеМеню" id="39"/>
-									<ExtendedTooltip name="ПлощадкиПлощадкаРасширеннаяПодсказка" id="40"/>
-								</InputField>
-								<InputField name="ПлощадкиХозСубъект" id="93">
-									<DataPath>Объект.Площадки.ХозСубъект</DataPath>
-									<Title>
-										<v8:item>
-											<v8:lang>ru</v8:lang>
-											<v8:content>Владелец</v8:content>
-										</v8:item>
-									</Title>
-									<EditMode>EnterOnInput</EditMode>
-									<ContextMenu name="ПлощадкиХозСубъектКонтекстноеМеню" id="94"/>
-									<ExtendedTooltip name="ПлощадкиХозСубъектРасширеннаяПодсказка" id="95"/>
-								</InputField>
-								<InputField name="ПлощадкиНаименование" id="41">
-									<DataPath>Объект.Площадки.Наименование</DataPath>
-									<ReadOnly>true</ReadOnly>
-									<EditMode>EnterOnInput</EditMode>
-									<ContextMenu name="ПлощадкиНаименованиеКонтекстноеМеню" id="42"/>
-									<ExtendedTooltip name="ПлощадкиНаименованиеРасширеннаяПодсказка" id="43"/>
-								</InputField>
-								<InputField name="ПлощадкиАдрес" id="44">
-									<DataPath>Объект.Площадки.Адрес</DataPath>
-									<ReadOnly>true</ReadOnly>
-									<EditMode>EnterOnInput</EditMode>
-									<ContextMenu name="ПлощадкиАдресКонтекстноеМеню" id="45"/>
-									<ExtendedTooltip name="ПлощадкиАдресРасширеннаяПодсказка" id="46"/>
-								</InputField>
-								<InputField name="ПлощадкиGUID" id="47">
-									<DataPath>Объект.Площадки.GUID</DataPath>
-									<ReadOnly>true</ReadOnly>
-									<EditMode>EnterOnInput</EditMode>
-									<ContextMenu name="ПлощадкиGUIDКонтекстноеМеню" id="48"/>
-									<ExtendedTooltip name="ПлощадкиGUIDРасширеннаяПодсказка" id="49"/>
-								</InputField>
-								<InputField name="ПлощадкиGUIDХозСубъекта" id="53">
-									<DataPath>Объект.Площадки.GUIDХозСубъекта</DataPath>
-									<ReadOnly>true</ReadOnly>
-									<EditMode>EnterOnInput</EditMode>
-									<ContextMenu name="ПлощадкиGUIDХозСубъектаКонтекстноеМеню" id="54"/>
-									<ExtendedTooltip name="ПлощадкиGUIDХозСубъектаРасширеннаяПодсказка" id="55"/>
-								</InputField>
-							</ChildItems>
-						</Table>
-					</ChildItems>
-				</UsualGroup>
+					<ContextMenu name="ВыбРегионКонтекстноеМеню" id="12"/>
+					<ExtendedTooltip name="ВыбРегионРасширеннаяПодсказка" id="13"/>
+				</InputField>
 			</ChildItems>
 		</UsualGroup>
+		<CommandBar name="ПанельКнопки" id="56">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Панель кнопки</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Панель кнопки</v8:content>
+				</v8:item>
+			</ToolTip>
+			<ExtendedTooltip name="ПанельКнопкиРасширеннаяПодсказка" id="57"/>
+			<ChildItems>
+				<Button name="ОтметитьВсеДокументы" id="58">
+					<Type>CommandBarButton</Type>
+					<Representation>Picture</Representation>
+					<OnlyInAllActions>true</OnlyInAllActions>
+					<CommandName>Form.Command.кнОтметитьВсеДокументы</CommandName>
+					<Picture>
+						<xr:Ref>StdPicture.CheckAll</xr:Ref>
+						<xr:LoadTransparent>true</xr:LoadTransparent>
+					</Picture>
+					<ToolTipRepresentation>Balloon</ToolTipRepresentation>
+					<ExtendedTooltip name="ОтметитьВсеДокументыРасширеннаяПодсказка" id="59"/>
+				</Button>
+				<Button name="СнятьОтметкиДокументов" id="60">
+					<Type>CommandBarButton</Type>
+					<Representation>Picture</Representation>
+					<CommandName>Form.Command.кнСнятьОтметкиДокументов</CommandName>
+					<Picture>
+						<xr:Ref>StdPicture.UncheckAll</xr:Ref>
+						<xr:LoadTransparent>true</xr:LoadTransparent>
+					</Picture>
+					<ExtendedTooltip name="СнятьОтметкиДокументовРасширеннаяПодсказка" id="61"/>
+				</Button>
+				<Button name="кнВыполнитьПоиск" id="62">
+					<Type>CommandBarButton</Type>
+					<CommandName>Form.Command.кнВыполнитьПоиск</CommandName>
+					<ExtendedTooltip name="кнВыполнитьПоискРасширеннаяПодсказка" id="63"/>
+				</Button>
+				<Button name="кнСохранить" id="64">
+					<Type>CommandBarButton</Type>
+					<CommandName>Form.Command.кнСохранить</CommandName>
+					<ExtendedTooltip name="кнСохранитьРасширеннаяПодсказка" id="65"/>
+				</Button>
+			</ChildItems>
+		</CommandBar>
+		<Table name="Площадки" id="16">
+			<AutoInsertNewRow>true</AutoInsertNewRow>
+			<EnableStartDrag>true</EnableStartDrag>
+			<EnableDrag>true</EnableDrag>
+			<FileDragMode>AsFile</FileDragMode>
+			<DataPath>Объект.Площадки</DataPath>
+			<RowFilter xsi:nil="true"/>
+			<ContextMenu name="ПлощадкиКонтекстноеМеню" id="17"/>
+			<AutoCommandBar name="ПлощадкиКоманднаяПанель" id="18">
+				<Autofill>false</Autofill>
+			</AutoCommandBar>
+			<ExtendedTooltip name="ПлощадкиРасширеннаяПодсказка" id="19"/>
+			<SearchStringAddition name="ПлощадкиСтрокаПоиска" id="20">
+				<AdditionSource>
+					<Item>Площадки</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ПлощадкиСтрокаПоискаКонтекстноеМеню" id="21"/>
+				<ExtendedTooltip name="ПлощадкиСтрокаПоискаРасширеннаяПодсказка" id="22"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="ПлощадкиСостояниеПросмотра" id="23">
+				<AdditionSource>
+					<Item>Площадки</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ПлощадкиСостояниеПросмотраКонтекстноеМеню" id="24"/>
+				<ExtendedTooltip name="ПлощадкиСостояниеПросмотраРасширеннаяПодсказка" id="25"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="ПлощадкиУправлениеПоиском" id="26">
+				<AdditionSource>
+					<Item>Площадки</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="ПлощадкиУправлениеПоискомКонтекстноеМеню" id="27"/>
+				<ExtendedTooltip name="ПлощадкиУправлениеПоискомРасширеннаяПодсказка" id="28"/>
+			</SearchControlAddition>
+			<ChildItems>
+				<LabelField name="ПлощадкиНомерСтроки" id="29">
+					<DataPath>Объект.Площадки.LineNumber</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ПлощадкиНомерСтрокиКонтекстноеМеню" id="30"/>
+					<ExtendedTooltip name="ПлощадкиНомерСтрокиРасширеннаяПодсказка" id="31"/>
+				</LabelField>
+				<CheckBoxField name="ПлощадкиОтметка" id="32">
+					<DataPath>Объект.Площадки.Отметка</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ПлощадкиОтметкаКонтекстноеМеню" id="33"/>
+					<ExtendedTooltip name="ПлощадкиОтметкаРасширеннаяПодсказка" id="34"/>
+				</CheckBoxField>
+				<CheckBoxField name="ПлощадкиАктивная" id="35">
+					<DataPath>Объект.Площадки.Активная</DataPath>
+					<ReadOnly>true</ReadOnly>
+					<EditMode>EnterOnInput</EditMode>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ПлощадкиАктивнаяКонтекстноеМеню" id="36"/>
+					<ExtendedTooltip name="ПлощадкиАктивнаяРасширеннаяПодсказка" id="37"/>
+				</CheckBoxField>
+				<InputField name="ПлощадкиПлощадка" id="38">
+					<DataPath>Объект.Площадки.Площадка</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ChoiceHistoryOnInput>DontUse</ChoiceHistoryOnInput>
+					<ContextMenu name="ПлощадкиПлощадкаКонтекстноеМеню" id="39"/>
+					<ExtendedTooltip name="ПлощадкиПлощадкаРасширеннаяПодсказка" id="40"/>
+				</InputField>
+				<InputField name="ПлощадкиХозСубъект" id="93">
+					<DataPath>Объект.Площадки.ХозСубъект</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Владелец</v8:content>
+						</v8:item>
+					</Title>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ПлощадкиХозСубъектКонтекстноеМеню" id="94"/>
+					<ExtendedTooltip name="ПлощадкиХозСубъектРасширеннаяПодсказка" id="95"/>
+				</InputField>
+				<InputField name="ПлощадкиНаименование" id="41">
+					<DataPath>Объект.Площадки.Наименование</DataPath>
+					<ReadOnly>true</ReadOnly>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ПлощадкиНаименованиеКонтекстноеМеню" id="42"/>
+					<ExtendedTooltip name="ПлощадкиНаименованиеРасширеннаяПодсказка" id="43"/>
+				</InputField>
+				<InputField name="ПлощадкиАдрес" id="44">
+					<DataPath>Объект.Площадки.Адрес</DataPath>
+					<ReadOnly>true</ReadOnly>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ПлощадкиАдресКонтекстноеМеню" id="45"/>
+					<ExtendedTooltip name="ПлощадкиАдресРасширеннаяПодсказка" id="46"/>
+				</InputField>
+				<InputField name="ПлощадкиGUID" id="47">
+					<DataPath>Объект.Площадки.GUID</DataPath>
+					<ReadOnly>true</ReadOnly>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ПлощадкиGUIDКонтекстноеМеню" id="48"/>
+					<ExtendedTooltip name="ПлощадкиGUIDРасширеннаяПодсказка" id="49"/>
+				</InputField>
+				<InputField name="ПлощадкиGUIDХозСубъекта" id="53">
+					<DataPath>Объект.Площадки.GUIDХозСубъекта</DataPath>
+					<ReadOnly>true</ReadOnly>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ПлощадкиGUIDХозСубъектаКонтекстноеМеню" id="54"/>
+					<ExtendedTooltip name="ПлощадкиGUIDХозСубъектаРасширеннаяПодсказка" id="55"/>
+				</InputField>
+			</ChildItems>
+		</Table>
 	</ChildItems>
 	<Attributes>
 		<Attribute name="Объект" id="1">

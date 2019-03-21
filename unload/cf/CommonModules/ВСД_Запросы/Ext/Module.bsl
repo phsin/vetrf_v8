@@ -3505,6 +3505,185 @@
 	
 КонецФункции
 
+#Область СоздатьХозСубъект
+
+&НаСервере	
+Функция ХозСубъект_Создать_Ответ( ПараметрыОрганизации, appID, ВыбХозСубъект)
+	
+	Если Не (ЗначениеЗаполнено(appID)) Тогда
+		ВСД.СообщитьИнфо("Не указано applicationID");
+		Возврат ложь;
+	КонецЕсли;
+	
+	ВСД_Запросы.Пауза( ПараметрыОрганизации["ПаузаСек"] );	
+	
+	ВСД.СообщитьИнфо(" Запрос CreateBusinessEntityResult [ "+(appID)+" ]");		
+	//Результат = КомпонентаНаСервере.CreateBusinessEntityResult( СокрЛП(applicationID));
+	//Результат = ПолучитьРезультатСервер( СокрЛП(applicationID) );
+
+	//Отладка();	
+	
+    //СообщитьИнфо("Загрузка XML-файла: "+КомпонентаНаСервере.LogFilename);        
+	xdto = ВСД_Отправка.ПолучитьРезультатСервер( ПараметрыОрганизации, appID );
+	
+	Статус = ВСД_Запросы.СтатусЗапроса(xdto);
+	Если ВСД_Запросы.НайтиОшибки(xdto) Тогда
+		Возврат Статус;
+	КонецЕсли;
+		
+	Если Статус = "COMPLETED" Тогда
+		Попытка
+			be = xdto.Body.receiveApplicationResultResponse.application.result.modifyBusinessEntityResponse.businessEntity;
+			guid = be.guid;
+			_uuid = be.uuid;
+			ОбъектХС = ВыбХозСубъект.ПолучитьОбъект();
+			ОбъектХС.GUID = guid;
+			ОбъектХС.UUID = _uuid;
+			ОбъектХС.Записать();
+			ВСД.СообщитьИнфо("Записан ХозСубъект ["+ВыбХозСубъект+"] GUID = "+GUID, ВыбХозСубъект);	
+		Исключение
+			ЗаписьЖурналаРегистрации(
+				НСтр("ru = 'Ошибка при получении ответа Ветис'"),
+				УровеньЖурналаРегистрации.Ошибка,,,
+				ПодробноеПредставлениеОшибки(ИнформацияОбОшибке()));
+			ВСД.СообщитьИнфо("Ошибка ХозСубъект ["+ВыбХозСубъект+"] "+ОписаниеОшибки());
+		КонецПопытки;
+	КонецЕсли;
+	//УдалитьXML( КомпонентаНаСервере.LogFilename );
+КонецФункции
+
+&НаСервере
+//Функция CreateBusinessEntity_2(СписокКонстант, Наименование,НаименованиеПолное,ИНН,КПП,ОГРН,СтранаGUID, РегионGUID,ГородGUID,	Адрес) Экспорт
+Функция ХозСубъект_Создать_Запрос( ПараметрыОрганизации, ВыбХозСубъект ) 
+	_guid = Новый УникальныйИдентификатор();
+	ЗапросXML = "
+	|<SOAP-ENV:Envelope xmlns:dt='http://api.vetrf.ru/schema/cdm/dictionary/v2' 
+	|xmlns:bs='http://api.vetrf.ru/schema/cdm/base' 
+	|xmlns:merc='http://api.vetrf.ru/schema/cdm/mercury/g2b/applications/v2' 
+	|xmlns:apldef='http://api.vetrf.ru/schema/cdm/application/ws-definitions' 
+	|xmlns:apl='http://api.vetrf.ru/schema/cdm/application' 
+	|xmlns:vd='http://api.vetrf.ru/schema/cdm/mercury/vet-document/v2' 
+	|xmlns:SOAP-ENV='http://schemas.xmlsoap.org/soap/envelope/'>
+	|  <SOAP-ENV:Header/>
+	|  <SOAP-ENV:Body>
+	|    <apldef:submitApplicationRequest>
+	|      <apldef:apiKey>"+СокрЛП( ПараметрыОрганизации["param_api_key"] )+"</apldef:apiKey>
+	|      <apl:application>
+	|        <apl:serviceId>mercury-g2b.service:2.0</apl:serviceId>
+	|        <apl:issuerId>"+СокрЛП( ПараметрыОрганизации["param_issuer_id"] )+"</apl:issuerId>
+	|        <apl:issueDate>" + ВСД_Запросы.ДатаXML(Текущаядата(), "T00:00:00") + "</apl:issueDate>
+	|        <apl:data>
+	|          <merc:modifyBusinessEntityRequest>
+	|            <merc:localTransactionId>"+ _guid +"</merc:localTransactionId>
+	|            <merc:initiator>
+	|              <vd:login>"+СокрЛП( ПараметрыОрганизации["param_intiator_login"] )+"</vd:login>
+	|            </merc:initiator>
+	|            <merc:modificationOperation>
+	|              <vd:type>FIND_OR_CREATE</vd:type>
+	|              <vd:resultingList>
+	|                <dt:businessEntity>";
+	Если СтрДлина( ВыбХозСубъект.ИНН ) = 12 Тогда
+		//ИП Тип = 3 ФЛ тип = 2
+		ЗапросXML = ЗапросXML + "		
+		|                  <dt:type>3</dt:type>
+		|                  <dt:fio>"+ВыбХозСубъект.НаименованиеПолное+"</dt:fio>
+		|                  <dt:inn>"+ВыбХозСубъект.ИНН+"</dt:inn>";
+	Иначе
+		ЗапросXML = ЗапросXML + "		
+		|                  <dt:type>1</dt:type>
+		|                  <dt:name>"+ВыбХозСубъект.Наименование+"</dt:name>
+		|                  <dt:incorporationForm>
+		|                    <dt:code>12300</dt:code>
+		|                  </dt:incorporationForm>
+		|                  <dt:fullName>"+ВыбХозСубъект.НаименованиеПолное+"</dt:fullName>
+		|                  <dt:inn>"+ВыбХозСубъект.ИНН+"</dt:inn>";
+	КонецЕсли;
+	Если ЗначениеЗаполнено(ВыбХозСубъект.КПП) Тогда
+  		ЗапросXML = ЗапросXML + "
+		|                  <dt:kpp>"+ВыбХозСубъект.КПП+"</dt:kpp>";
+	КонецЕсли;
+  	ЗапросXML = ЗапросXML + "
+	|                  <dt:ogrn>"+ВыбХозСубъект.ОГРН+"</dt:ogrn>
+	|                  <dt:juridicalAddress>
+	|                    <dt:country>
+	|                      <bs:guid>"+ВыбХозСубъект.Страна.GUID+"</bs:guid>
+	|                    </dt:country>
+	|                    <dt:region>
+	|                      <bs:guid>"+ВыбХозСубъект.Регион.GUID+"</bs:guid>
+	|                    </dt:region>
+	|                    <dt:locality>
+	|                      <bs:guid>"+ВыбХозСубъект.Город.GUID+"</bs:guid>
+	|                    </dt:locality>
+	|                    <dt:addressView>"+ВыбХозСубъект.Адрес+"</dt:addressView>
+	|                  </dt:juridicalAddress>
+	|                </dt:businessEntity>
+	|              </vd:resultingList>
+	|              <vd:reason>Добавление субъекта в реестр.</vd:reason>
+	|            </merc:modificationOperation>
+	|          </merc:modifyBusinessEntityRequest>
+	|        </apl:data>
+	|      </apl:application>
+	|    </apldef:submitApplicationRequest>
+	|  </SOAP-ENV:Body>
+	|</SOAP-ENV:Envelope>";
+	
+	Возврат ЗапросXML;
+КонецФункции
+
+&НаСервере
+Процедура ХозСубъект_Создать(ПараметрыОрганизации, ВыбХозСубъект) Экспорт
+	
+	//СведенияОПлательщике = ПолучитьСведенияОКонтрагенте(ВыбХозСубъект.Контрагент, ТекущаяДата());	// в упп нет ф-ции
+	//ИНН = СведенияОПлательщике.ИНН;	
+	//КПП = СведенияОПлательщике.КПП;	
+	//Попытка
+	//	ОГРН = ?(ЗначениеЗаполнено(СведенияОПлательщике.ОГРН),СведенияОПлательщике.ОГРН,ВыбХозСубъект.Контрагент.ОГРН);
+	//Исключение
+	//	ОГРН = СокрЛП(ВыбХозСубъект.ОГРН);
+	//КонецПопытки;
+	//Адрес = СведенияОПлательщике.ЮридическийАдрес;//ПолучитьАдрес(СведенияОПлательщике,"ЮридическийАдрес");//ОбщегоНазначенияБПВызовСервера.ОписаниеОрганизации(СведенияОПлательщике, "ЮридическийАдрес");	
+	//Наименование = СведенияОПлательщике.ПолноеНаименование;//хс.Контрагент.НаименованиеПолное;
+	
+	Если не(ЗначениеЗаполнено(ВыбХозСубъект.ИНН)) Тогда 
+		ВСД.СообщитьИнфо("Неправильно указан ИНН");
+		Возврат;
+	КонецЕсли;	
+	Если НЕ(ЗначениеЗаполнено(ВыбХозСубъект.ОГРН)) Тогда 
+		ВСД.СообщитьИнфо("Не указан ОГРН");
+		Возврат;
+	КонецЕсли;
+	
+	Если НЕ(ЗначениеЗаполнено(ВыбХозСубъект.Адрес)) Тогда 
+		ВСД.СообщитьИнфо("Не указан Адрес");
+		Возврат;
+	КонецЕсли;
+		
+	ВСД.СообщитьИнфо(" Запрос CreateBusinessEntity [ "+ВыбХозСубъект.ИНН+" ]");		
+//	Результат = КомпонентаНаСервере.CreateBusinessEntity(
+	ЗапросXML = ХозСубъект_Создать_Запрос( ПараметрыОрганизации, ВыбХозСубъект );
+	Service = "platform/services/ApplicationManagementService";//"platform/cerberus/services/EnterpriseService";
+	Action = "modifyBusinessEntity";
+	
+	ПараметрыОтправки = ВСД_Отправка.ПараметрыОтправкиИнициализация( ПараметрыОрганизации );
+	ПараметрыОтправки.ЗапросXML = ЗапросXML;
+    ПараметрыОтправки.Service = Service;
+    ПараметрыОтправки.Action = Action;
+	xdto = ВСД_Отправка.ОтправитьSOAPНаСервере( ПараметрыОтправки );
+	
+	Статус = ВСД_Запросы.СтатусЗапроса(xdto);
+	Если ВСД_Запросы.НайтиОшибки( xdto ) Тогда
+		Возврат ;
+	КонецЕсли;
+	
+	appID = ВСД_Отправка.Получить_ApplicationID( xdto );
+	
+	Если ЗначениеЗаполнено(appID) Тогда
+		ХозСубъект_Создать_Ответ( ПараметрыОрганизации, appID, ВыбХозСубъект )
+	КонецЕсли;
+	
+КонецПроцедуры
+#КонецОбласти
+
 #КонецОбласти
 
 #Область Партии
