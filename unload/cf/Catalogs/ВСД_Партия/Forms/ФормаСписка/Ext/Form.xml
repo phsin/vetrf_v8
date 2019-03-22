@@ -94,10 +94,20 @@
 					<ContextMenu name="ДатаИзготовления1КонтекстноеМеню" id="53"/>
 					<ExtendedTooltip name="ДатаИзготовления1РасширеннаяПодсказка" id="54"/>
 				</LabelField>
+				<LabelField name="ДатаИзготовления2" id="67">
+					<DataPath>Список.ДатаИзготовления2</DataPath>
+					<ContextMenu name="ДатаИзготовления2КонтекстноеМеню" id="68"/>
+					<ExtendedTooltip name="ДатаИзготовления2РасширеннаяПодсказка" id="69"/>
+				</LabelField>
 				<LabelField name="ДатаСрокГодности1" id="55">
 					<DataPath>Список.ДатаСрокГодности1</DataPath>
 					<ContextMenu name="ДатаСрокГодности1КонтекстноеМеню" id="56"/>
 					<ExtendedTooltip name="ДатаСрокГодности1РасширеннаяПодсказка" id="57"/>
+				</LabelField>
+				<LabelField name="ДатаСрокГодности2" id="70">
+					<DataPath>Список.ДатаСрокГодности2</DataPath>
+					<ContextMenu name="ДатаСрокГодности2КонтекстноеМеню" id="71"/>
+					<ExtendedTooltip name="ДатаСрокГодности2РасширеннаяПодсказка" id="72"/>
 				</LabelField>
 				<LabelField name="НомерЗаписи" id="31">
 					<DataPath>Список.НомерЗаписи</DataPath>
@@ -153,6 +163,16 @@
 					<DataPath>Список.Продукция_Элемент</DataPath>
 					<ContextMenu name="Продукция_ЭлементКонтекстноеМеню" id="59"/>
 					<ExtendedTooltip name="Продукция_ЭлементРасширеннаяПодсказка" id="60"/>
+				</LabelField>
+				<LabelField name="ДатаИзготовления" id="76">
+					<DataPath>Список.ДатаИзготовления</DataPath>
+					<ContextMenu name="ДатаИзготовленияКонтекстноеМеню" id="77"/>
+					<ExtendedTooltip name="ДатаИзготовленияРасширеннаяПодсказка" id="78"/>
+				</LabelField>
+				<LabelField name="ДатаСрокГодности" id="73">
+					<DataPath>Список.ДатаСрокГодности</DataPath>
+					<ContextMenu name="ДатаСрокГодностиКонтекстноеМеню" id="74"/>
+					<ExtendedTooltip name="ДатаСрокГодностиРасширеннаяПодсказка" id="75"/>
 				</LabelField>
 			</ChildItems>
 		</Table>
