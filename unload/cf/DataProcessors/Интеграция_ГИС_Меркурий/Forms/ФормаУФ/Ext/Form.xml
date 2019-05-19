@@ -832,9 +832,42 @@
 										</Button>
 									</ChildItems>
 								</UsualGroup>
+								<UsualGroup name="ГруппаСоздатьИнвентаризацию" id="596">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Создать Инвентаризацию</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа переместить от поставщика</v8:content>
+										</v8:item>
+									</ToolTip>
+									<HorizontalStretch>true</HorizontalStretch>
+									<Group>Vertical</Group>
+									<Representation>StrongSeparation</Representation>
+									<ExtendedTooltip name="ГруппаСоздатьИнвентаризациюРасширеннаяПодсказка" id="597"/>
+									<ChildItems>
+										<Button name="кнСоздатьИнвентаризацию" id="598">
+											<Type>UsualButton</Type>
+											<HorizontalStretch>true</HorizontalStretch>
+											<CommandName>Form.Command.кнСоздатьИнвентаризацию</CommandName>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Создать Инвентаризацию</v8:content>
+												</v8:item>
+											</Title>
+											<ExtendedTooltip name="кнСоздатьИнвентаризациюРасширеннаяПодсказка" id="599"/>
+										</Button>
+									</ChildItems>
+								</UsualGroup>
 							</ChildItems>
 						</UsualGroup>
 						<Table name="Партии" id="191">
+							<UseAlternationRowColor>true</UseAlternationRowColor>
 							<AutoInsertNewRow>true</AutoInsertNewRow>
 							<EnableStartDrag>true</EnableStartDrag>
 							<EnableDrag>true</EnableDrag>
@@ -2818,7 +2851,7 @@
 				<dcsset:appearance>
 					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
 						<dcscor:parameter>ЦветФона</dcscor:parameter>
-						<dcscor:value xsi:type="v8ui:Color">#CCFFCC</dcscor:value>
+						<dcscor:value xsi:type="v8ui:Color">#AAFFA0</dcscor:value>
 					</dcscor:item>
 				</dcsset:appearance>
 			</dcsset:item>
@@ -2862,7 +2895,7 @@
 				<dcsset:appearance>
 					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
 						<dcscor:parameter>ЦветФона</dcscor:parameter>
-						<dcscor:value xsi:type="v8ui:Color">#FF0000</dcscor:value>
+						<dcscor:value xsi:type="v8ui:Color">web:Tomato</dcscor:value>
 					</dcscor:item>
 				</dcsset:appearance>
 			</dcsset:item>
@@ -2947,7 +2980,7 @@
 				<dcsset:appearance>
 					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
 						<dcscor:parameter>ЦветФона</dcscor:parameter>
-						<dcscor:value xsi:type="v8ui:Color">#FFCC99</dcscor:value>
+						<dcscor:value xsi:type="v8ui:Color">web:Salmon</dcscor:value>
 					</dcscor:item>
 				</dcsset:appearance>
 			</dcsset:item>
@@ -3029,7 +3062,7 @@
 				<dcsset:appearance>
 					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
 						<dcscor:parameter>ЦветФона</dcscor:parameter>
-						<dcscor:value xsi:type="v8ui:Color">#CCFFCC</dcscor:value>
+						<dcscor:value xsi:type="v8ui:Color">#AAFFA0</dcscor:value>
 					</dcscor:item>
 				</dcsset:appearance>
 			</dcsset:item>
@@ -3852,6 +3885,21 @@
 				</v8:item>
 			</ToolTip>
 			<Action>кнВерсия2ОбновитьСправочники</Action>
+		</Command>
+		<Command name="кнСоздатьИнвентаризацию" id="41">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Кн создать инвентаризацию</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Кн создать инвентаризацию</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>кнСоздатьИнвентаризацию</Action>
 		</Command>
 	</Commands>
 </Form>
