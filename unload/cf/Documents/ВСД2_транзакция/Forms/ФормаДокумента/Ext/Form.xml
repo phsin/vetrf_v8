@@ -19,6 +19,7 @@
 		</ChildItems>
 	</AutoCommandBar>
 	<Events>
+		<Event name="ChoiceProcessing">ОбработкаВыбора</Event>
 		<Event name="AfterWriteAtServer">ПослеЗаписиНаСервере</Event>
 		<Event name="OnReadAtServer">ПриЧтенииНаСервере</Event>
 		<Event name="OnOpen">ПриОткрытии</Event>
@@ -1226,6 +1227,188 @@
 						</UsualGroup>
 					</ChildItems>
 				</Page>
+				<Page name="стрМультимодальнаяПеревозка" id="364">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Мультимодальная перевозка</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Стр мультимодальная перевозка</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="стрМультимодальнаяПеревозкаРасширеннаяПодсказка" id="365"/>
+					<ChildItems>
+						<UsualGroup name="ГруппаММ" id="366">
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа ММ</v8:content>
+								</v8:item>
+							</ToolTip>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаММРасширеннаяПодсказка" id="367"/>
+							<ChildItems>
+								<Table name="ТочкиМаршрута" id="368">
+									<AutoInsertNewRow>true</AutoInsertNewRow>
+									<EnableStartDrag>true</EnableStartDrag>
+									<EnableDrag>true</EnableDrag>
+									<DataPath>Объект.ТочкиМаршрута</DataPath>
+									<RowFilter xsi:nil="true"/>
+									<ContextMenu name="ТочкиМаршрутаКонтекстноеМеню" id="369"/>
+									<AutoCommandBar name="ТочкиМаршрутаКоманднаяПанель" id="370">
+										<Autofill>false</Autofill>
+										<ChildItems>
+											<Button name="кнДобавитьММ" id="411">
+												<Type>CommandBarButton</Type>
+												<CommandName>Form.Command.ДобавитьММ</CommandName>
+												<ExtendedTooltip name="кнДобавитьММРасширеннаяПодсказка" id="412"/>
+											</Button>
+										</ChildItems>
+									</AutoCommandBar>
+									<ExtendedTooltip name="ТочкиМаршрутаРасширеннаяПодсказка" id="371"/>
+									<SearchStringAddition name="ТочкиМаршрутаСтрокаПоиска" id="372">
+										<AdditionSource>
+											<Item>ТочкиМаршрута</Item>
+											<Type>SearchStringRepresentation</Type>
+										</AdditionSource>
+										<ContextMenu name="ТочкиМаршрутаСтрокаПоискаКонтекстноеМеню" id="373"/>
+										<ExtendedTooltip name="ТочкиМаршрутаСтрокаПоискаРасширеннаяПодсказка" id="374"/>
+									</SearchStringAddition>
+									<ViewStatusAddition name="ТочкиМаршрутаСостояниеПросмотра" id="375">
+										<AdditionSource>
+											<Item>ТочкиМаршрута</Item>
+											<Type>ViewStatusRepresentation</Type>
+										</AdditionSource>
+										<ContextMenu name="ТочкиМаршрутаСостояниеПросмотраКонтекстноеМеню" id="376"/>
+										<ExtendedTooltip name="ТочкиМаршрутаСостояниеПросмотраРасширеннаяПодсказка" id="377"/>
+									</ViewStatusAddition>
+									<SearchControlAddition name="ТочкиМаршрутаУправлениеПоиском" id="378">
+										<AdditionSource>
+											<Item>ТочкиМаршрута</Item>
+											<Type>SearchControl</Type>
+										</AdditionSource>
+										<ContextMenu name="ТочкиМаршрутаУправлениеПоискомКонтекстноеМеню" id="379"/>
+										<ExtendedTooltip name="ТочкиМаршрутаУправлениеПоискомРасширеннаяПодсказка" id="380"/>
+									</SearchControlAddition>
+									<ChildItems>
+										<LabelField name="ТочкиМаршрутаНомерСтроки" id="413">
+											<DataPath>Объект.ТочкиМаршрута.LineNumber</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="ТочкиМаршрутаНомерСтрокиКонтекстноеМеню" id="414"/>
+											<ExtendedTooltip name="ТочкиМаршрутаНомерСтрокиРасширеннаяПодсказка" id="415"/>
+										</LabelField>
+										<InputField name="ТочкиМаршрутаПлощадка" id="443">
+											<DataPath>Объект.ТочкиМаршрута.Площадка</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="ТочкиМаршрутаПлощадкаКонтекстноеМеню" id="444"/>
+											<ExtendedTooltip name="ТочкиМаршрутаПлощадкаРасширеннаяПодсказка" id="445"/>
+										</InputField>
+										<InputField name="ТочкиМаршрутаtransportType" id="422">
+											<DataPath>Объект.ТочкиМаршрута.ТипТранспорта</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="ТочкиМаршрутаtransportTypeКонтекстноеМеню" id="423"/>
+											<ExtendedTooltip name="ТочкиМаршрутаtransportTypeРасширеннаяПодсказка" id="424"/>
+										</InputField>
+										<InputField name="ТочкиМаршрутаvehicleNumber" id="425">
+											<DataPath>Объект.ТочкиМаршрута.номерАвто</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="ТочкиМаршрутаvehicleNumberКонтекстноеМеню" id="426"/>
+											<ExtendedTooltip name="ТочкиМаршрутаvehicleNumberРасширеннаяПодсказка" id="427"/>
+										</InputField>
+										<InputField name="ТочкиМаршрутаcontainerNumber" id="428">
+											<DataPath>Объект.ТочкиМаршрута.номерКонтейнера</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="ТочкиМаршрутаcontainerNumberКонтекстноеМеню" id="429"/>
+											<ExtendedTooltip name="ТочкиМаршрутаcontainerNumberРасширеннаяПодсказка" id="430"/>
+										</InputField>
+										<InputField name="ТочкиМаршрутаtrailerNumber" id="431">
+											<DataPath>Объект.ТочкиМаршрута.номерПрицепа</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="ТочкиМаршрутаtrailerNumberКонтекстноеМеню" id="432"/>
+											<ExtendedTooltip name="ТочкиМаршрутаtrailerNumberРасширеннаяПодсказка" id="433"/>
+										</InputField>
+										<InputField name="ТочкиМаршрутаwagonNumber" id="434">
+											<DataPath>Объект.ТочкиМаршрута.номерВагона</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="ТочкиМаршрутаwagonNumberКонтекстноеМеню" id="435"/>
+											<ExtendedTooltip name="ТочкиМаршрутаwagonNumberРасширеннаяПодсказка" id="436"/>
+										</InputField>
+										<InputField name="ТочкиМаршрутаshipName" id="437">
+											<DataPath>Объект.ТочкиМаршрута.НазваниеСудна</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="ТочкиМаршрутаshipNameКонтекстноеМеню" id="438"/>
+											<ExtendedTooltip name="ТочкиМаршрутаshipNameРасширеннаяПодсказка" id="439"/>
+										</InputField>
+										<InputField name="ТочкиМаршрутаflightNumber" id="440">
+											<DataPath>Объект.ТочкиМаршрута.НомерАвиарейса</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="ТочкиМаршрутаflightNumberКонтекстноеМеню" id="441"/>
+											<ExtendedTooltip name="ТочкиМаршрутаflightNumberРасширеннаяПодсказка" id="442"/>
+										</InputField>
+										<InputField name="ТочкиМаршрутаНазвание" id="470">
+											<DataPath>Объект.ТочкиМаршрута.Название</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="ТочкиМаршрутаНазваниеКонтекстноеМеню" id="471"/>
+											<ExtendedTooltip name="ТочкиМаршрутаНазваниеРасширеннаяПодсказка" id="472"/>
+										</InputField>
+										<InputField name="ТочкиМаршрутаСтрана" id="446">
+											<DataPath>Объект.ТочкиМаршрута.Страна</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="ТочкиМаршрутаСтранаКонтекстноеМеню" id="447"/>
+											<ExtendedTooltip name="ТочкиМаршрутаСтранаРасширеннаяПодсказка" id="448"/>
+										</InputField>
+										<InputField name="ТочкиМаршрутаРегион" id="449">
+											<DataPath>Объект.ТочкиМаршрута.Регион</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="ТочкиМаршрутаРегионКонтекстноеМеню" id="450"/>
+											<ExtendedTooltip name="ТочкиМаршрутаРегионРасширеннаяПодсказка" id="451"/>
+										</InputField>
+										<InputField name="ТочкиМаршрутаРайон" id="452">
+											<DataPath>Объект.ТочкиМаршрута.Район</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="ТочкиМаршрутаРайонКонтекстноеМеню" id="453"/>
+											<ExtendedTooltip name="ТочкиМаршрутаРайонРасширеннаяПодсказка" id="454"/>
+										</InputField>
+										<InputField name="ТочкиМаршрутаГород" id="455">
+											<DataPath>Объект.ТочкиМаршрута.Город</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="ТочкиМаршрутаГородКонтекстноеМеню" id="456"/>
+											<ExtendedTooltip name="ТочкиМаршрутаГородРасширеннаяПодсказка" id="457"/>
+										</InputField>
+										<InputField name="ТочкиМаршрутаУлица" id="458">
+											<DataPath>Объект.ТочкиМаршрута.Улица</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="ТочкиМаршрутаУлицаКонтекстноеМеню" id="459"/>
+											<ExtendedTooltip name="ТочкиМаршрутаУлицаРасширеннаяПодсказка" id="460"/>
+										</InputField>
+										<InputField name="ТочкиМаршрутаДом" id="461">
+											<DataPath>Объект.ТочкиМаршрута.Дом</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="ТочкиМаршрутаДомКонтекстноеМеню" id="462"/>
+											<ExtendedTooltip name="ТочкиМаршрутаДомРасширеннаяПодсказка" id="463"/>
+										</InputField>
+										<InputField name="ТочкиМаршрутаСтроение" id="464">
+											<DataPath>Объект.ТочкиМаршрута.Строение</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="ТочкиМаршрутаСтроениеКонтекстноеМеню" id="465"/>
+											<ExtendedTooltip name="ТочкиМаршрутаСтроениеРасширеннаяПодсказка" id="466"/>
+										</InputField>
+										<InputField name="ТочкиМаршрутаПомещение" id="467">
+											<DataPath>Объект.ТочкиМаршрута.Помещение</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="ТочкиМаршрутаПомещениеКонтекстноеМеню" id="468"/>
+											<ExtendedTooltip name="ТочкиМаршрутаПомещениеРасширеннаяПодсказка" id="469"/>
+										</InputField>
+									</ChildItems>
+								</Table>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</Page>
 			</ChildItems>
 		</Pages>
 		<InputField name="Комментарий" id="67">
@@ -1385,6 +1568,21 @@
 				</v8:item>
 			</ToolTip>
 			<Action>кнОтправить</Action>
+		</Command>
+		<Command name="ДобавитьММ" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Добавить ММ</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Добавить ММ</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ДобавитьММ</Action>
 		</Command>
 	</Commands>
 </Form>
