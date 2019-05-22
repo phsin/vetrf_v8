@@ -205,6 +205,7 @@
 						</UsualGroup>
 						<Table name="ВСДВходящие" id="45">
 							<CommandBarLocation>Top</CommandBarLocation>
+							<AutoMaxWidth>false</AutoMaxWidth>
 							<AutoInsertNewRow>true</AutoInsertNewRow>
 							<EnableStartDrag>true</EnableStartDrag>
 							<EnableDrag>true</EnableDrag>
@@ -330,6 +331,8 @@
 									<DataPath>Объект.ВСДВходящие.Количество</DataPath>
 									<ReadOnly>true</ReadOnly>
 									<EditMode>EnterOnInput</EditMode>
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<MaxWidth>10</MaxWidth>
 									<ContextMenu name="ВСДВходящиеКоличествоКонтекстноеМеню" id="71"/>
 									<ExtendedTooltip name="ВСДВходящиеКоличествоРасширеннаяПодсказка" id="72"/>
 								</InputField>
@@ -342,6 +345,7 @@
 										</v8:item>
 									</Title>
 									<EditMode>EnterOnInput</EditMode>
+									<Width>10</Width>
 									<ContextMenu name="ВСДВходящиеКоличествоПринятьКонтекстноеМеню" id="382"/>
 									<ExtendedTooltip name="ВСДВходящиеКоличествоПринятьРасширеннаяПодсказка" id="383"/>
 								</InputField>
@@ -354,13 +358,16 @@
 										</v8:item>
 									</Title>
 									<EditMode>EnterOnInput</EditMode>
+									<Width>10</Width>
 									<ContextMenu name="ВСДВходящиеКоличествоВозвратКонтекстноеМеню" id="385"/>
 									<ExtendedTooltip name="ВСДВходящиеКоличествоВозвратРасширеннаяПодсказка" id="386"/>
 								</InputField>
 								<InputField name="ВСДВходящиеДатаИзготовления1" id="145">
 									<DataPath>Объект.ВСДВходящие.ДатаИзготовления1</DataPath>
 									<EditMode>EnterOnInput</EditMode>
-									<Width>10</Width>
+									<Width>5</Width>
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<MaxWidth>5</MaxWidth>
 									<ContextMenu name="ВСДВходящиеДатаИзготовления1КонтекстноеМеню" id="146"/>
 									<ExtendedTooltip name="ВСДВходящиеДатаИзготовления1РасширеннаяПодсказка" id="147"/>
 								</InputField>
@@ -433,18 +440,21 @@
 								</InputField>
 								<InputField name="ВСДВходящиеВСДместность" id="184">
 									<DataPath>Объект.ВСДВходящие.Местность</DataPath>
+									<Visible>false</Visible>
 									<EditMode>EnterOnInput</EditMode>
 									<ContextMenu name="ВСДВходящиеВСДместностьКонтекстноеМеню" id="185"/>
 									<ExtendedTooltip name="ВСДВходящиеВСДместностьРасширеннаяПодсказка" id="186"/>
 								</InputField>
 								<InputField name="ВСДВходящиеособыеотметки" id="187">
 									<DataPath>Объект.ВСДВходящие.особыеотметки</DataPath>
+									<Visible>false</Visible>
 									<EditMode>EnterOnInput</EditMode>
 									<ContextMenu name="ВСДВходящиеособыеотметкиКонтекстноеМеню" id="188"/>
 									<ExtendedTooltip name="ВСДВходящиеособыеотметкиРасширеннаяПодсказка" id="189"/>
 								</InputField>
 								<InputField name="ВСДВходящиеТипТС" id="169">
 									<DataPath>Объект.ВСДВходящие.ТипТС</DataPath>
+									<Visible>false</Visible>
 									<EditMode>EnterOnInput</EditMode>
 									<ContextMenu name="ВСДВходящиеТипТСКонтекстноеМеню" id="170"/>
 									<ExtendedTooltip name="ВСДВходящиеТипТСРасширеннаяПодсказка" id="171"/>
@@ -458,6 +468,7 @@
 								</InputField>
 								<InputField name="ВСДВходящиеномерПолуприцепа" id="175">
 									<DataPath>Объект.ВСДВходящие.номерПолуприцепа</DataPath>
+									<Visible>false</Visible>
 									<EditMode>EnterOnInput</EditMode>
 									<Width>10</Width>
 									<ContextMenu name="ВСДВходящиеномерПолуприцепаКонтекстноеМеню" id="176"/>
@@ -465,6 +476,7 @@
 								</InputField>
 								<InputField name="ВСДВходящиеномерКонтейнера" id="178">
 									<DataPath>Объект.ВСДВходящие.номерКонтейнера</DataPath>
+									<Visible>false</Visible>
 									<EditMode>EnterOnInput</EditMode>
 									<Width>10</Width>
 									<ContextMenu name="ВСДВходящиеномерКонтейнераКонтекстноеМеню" id="179"/>
@@ -472,6 +484,7 @@
 								</InputField>
 								<InputField name="ВСДВходящиеuuid" id="76">
 									<DataPath>Объект.ВСДВходящие.uuid</DataPath>
+									<Visible>false</Visible>
 									<EditMode>EnterOnInput</EditMode>
 									<ContextMenu name="ВСДВходящиеuuidКонтекстноеМеню" id="77"/>
 									<ExtendedTooltip name="ВСДВходящиеuuidРасширеннаяПодсказка" id="78"/>
@@ -508,6 +521,7 @@
 								</InputField>
 								<InputField name="ВСДВходящиеФасовкаФормаУпаковки" id="103">
 									<DataPath>Объект.ВСДВходящие.ФасовкаФормаУпаковки</DataPath>
+									<Visible>false</Visible>
 									<EditMode>EnterOnInput</EditMode>
 									<Width>10</Width>
 									<ContextMenu name="ВСДВходящиеФасовкаФормаУпаковкиКонтекстноеМеню" id="104"/>
@@ -515,6 +529,7 @@
 								</InputField>
 								<InputField name="ВСДВходящиеФасовкаНаименование" id="106">
 									<DataPath>Объект.ВСДВходящие.ФасовкаНаименование</DataPath>
+									<Visible>false</Visible>
 									<EditMode>EnterOnInput</EditMode>
 									<Width>10</Width>
 									<ContextMenu name="ВСДВходящиеФасовкаНаименованиеКонтекстноеМеню" id="107"/>
@@ -522,12 +537,14 @@
 								</InputField>
 								<InputField name="ВСДВходящиеФасовкаКоличество" id="109">
 									<DataPath>Объект.ВСДВходящие.ФасовкаКоличество</DataPath>
+									<Visible>false</Visible>
 									<EditMode>EnterOnInput</EditMode>
 									<ContextMenu name="ВСДВходящиеФасовкаКоличествоКонтекстноеМеню" id="110"/>
 									<ExtendedTooltip name="ВСДВходящиеФасовкаКоличествоРасширеннаяПодсказка" id="111"/>
 								</InputField>
 								<InputField name="ВСДВходящиеФасовкаЕдиницаИзм" id="112">
 									<DataPath>Объект.ВСДВходящие.ФасовкаЕдиницаИзм</DataPath>
+									<Visible>false</Visible>
 									<EditMode>EnterOnInput</EditMode>
 									<Width>10</Width>
 									<ContextMenu name="ВСДВходящиеФасовкаЕдиницаИзмКонтекстноеМеню" id="113"/>
@@ -535,6 +552,7 @@
 								</InputField>
 								<InputField name="ВСДВходящиеФасовкаОбъем" id="115">
 									<DataPath>Объект.ВСДВходящие.ФасовкаОбъем</DataPath>
+									<Visible>false</Visible>
 									<EditMode>EnterOnInput</EditMode>
 									<Width>5</Width>
 									<ContextMenu name="ВСДВходящиеФасовкаОбъемКонтекстноеМеню" id="116"/>
@@ -548,30 +566,35 @@
 								</InputField>
 								<InputField name="ВСДВходящиеОтправитель_Хозсубъект" id="121">
 									<DataPath>Объект.ВСДВходящие.Отправитель_Хозсубъект</DataPath>
+									<Visible>false</Visible>
 									<EditMode>EnterOnInput</EditMode>
 									<ContextMenu name="ВСДВходящиеОтправитель_ХозсубъектКонтекстноеМеню" id="122"/>
 									<ExtendedTooltip name="ВСДВходящиеОтправитель_ХозсубъектРасширеннаяПодсказка" id="123"/>
 								</InputField>
 								<InputField name="ВСДВходящиеПолучатель_ХозСубъект" id="127">
 									<DataPath>Объект.ВСДВходящие.Получатель_ХозСубъект</DataPath>
+									<Visible>false</Visible>
 									<EditMode>EnterOnInput</EditMode>
 									<ContextMenu name="ВСДВходящиеПолучатель_ХозСубъектКонтекстноеМеню" id="128"/>
 									<ExtendedTooltip name="ВСДВходящиеПолучатель_ХозСубъектРасширеннаяПодсказка" id="129"/>
 								</InputField>
 								<InputField name="ВСДВходящиеПолучатель_Площадка" id="130">
 									<DataPath>Объект.ВСДВходящие.Получатель_Площадка</DataPath>
+									<Visible>false</Visible>
 									<EditMode>EnterOnInput</EditMode>
 									<ContextMenu name="ВСДВходящиеПолучатель_ПлощадкаКонтекстноеМеню" id="131"/>
 									<ExtendedTooltip name="ВСДВходящиеПолучатель_ПлощадкаРасширеннаяПодсказка" id="132"/>
 								</InputField>
 								<InputField name="ВСДВходящиеПродукция" id="133">
 									<DataPath>Объект.ВСДВходящие.Продукция</DataPath>
+									<Visible>false</Visible>
 									<EditMode>EnterOnInput</EditMode>
 									<ContextMenu name="ВСДВходящиеПродукцияКонтекстноеМеню" id="134"/>
 									<ExtendedTooltip name="ВСДВходящиеПродукцияРасширеннаяПодсказка" id="135"/>
 								</InputField>
 								<InputField name="ВСДВходящиеВидПродукции" id="136">
 									<DataPath>Объект.ВСДВходящие.ВидПродукции</DataPath>
+									<Visible>false</Visible>
 									<EditMode>EnterOnInput</EditMode>
 									<ContextMenu name="ВСДВходящиеВидПродукцииКонтекстноеМеню" id="137"/>
 									<ExtendedTooltip name="ВСДВходящиеВидПродукцииРасширеннаяПодсказка" id="138"/>
@@ -590,6 +613,7 @@
 								</InputField>
 								<InputField name="ВСДВходящиеДатаИзготовления" id="148">
 									<DataPath>Объект.ВСДВходящие.ДатаИзготовления</DataPath>
+									<Visible>false</Visible>
 									<EditMode>EnterOnInput</EditMode>
 									<Width>10</Width>
 									<ContextMenu name="ВСДВходящиеДатаИзготовленияКонтекстноеМеню" id="149"/>
@@ -597,6 +621,7 @@
 								</InputField>
 								<InputField name="ВСДВходящиеДатаСрокГодности" id="157">
 									<DataPath>Объект.ВСДВходящие.ДатаСрокГодности</DataPath>
+									<Visible>false</Visible>
 									<EditMode>EnterOnInput</EditMode>
 									<Width>10</Width>
 									<ContextMenu name="ВСДВходящиеДатаСрокГодностиКонтекстноеМеню" id="158"/>
@@ -604,18 +629,21 @@
 								</InputField>
 								<InputField name="ВСДВходящиеПроизводителиСписок" id="163">
 									<DataPath>Объект.ВСДВходящие.ПроизводителиСписок</DataPath>
+									<Visible>false</Visible>
 									<EditMode>EnterOnInput</EditMode>
 									<ContextMenu name="ВСДВходящиеПроизводителиСписокКонтекстноеМеню" id="164"/>
 									<ExtendedTooltip name="ВСДВходящиеПроизводителиСписокРасширеннаяПодсказка" id="165"/>
 								</InputField>
 								<InputField name="ВСДВходящиеУровниУпаковки" id="166">
 									<DataPath>Объект.ВСДВходящие.УровниУпаковки</DataPath>
+									<Visible>false</Visible>
 									<EditMode>EnterOnInput</EditMode>
 									<ContextMenu name="ВСДВходящиеУровниУпаковкиКонтекстноеМеню" id="167"/>
 									<ExtendedTooltip name="ВСДВходящиеУровниУпаковкиРасширеннаяПодсказка" id="168"/>
 								</InputField>
 								<InputField name="ВСДВходящиеТтнСерия" id="190">
 									<DataPath>Объект.ВСДВходящие.ТтнСерия</DataPath>
+									<Visible>false</Visible>
 									<EditMode>EnterOnInput</EditMode>
 									<Width>5</Width>
 									<ContextMenu name="ВСДВходящиеТтнСерияКонтекстноеМеню" id="191"/>
@@ -623,6 +651,7 @@
 								</InputField>
 								<InputField name="ВСДВходящиеТтнНомер" id="193">
 									<DataPath>Объект.ВСДВходящие.ТтнНомер</DataPath>
+									<Visible>false</Visible>
 									<EditMode>EnterOnInput</EditMode>
 									<Width>10</Width>
 									<ContextMenu name="ВСДВходящиеТтнНомерКонтекстноеМеню" id="194"/>
@@ -630,18 +659,21 @@
 								</InputField>
 								<InputField name="ВСДВходящиеТтнДата" id="196">
 									<DataPath>Объект.ВСДВходящие.ТтнДата</DataPath>
+									<Visible>false</Visible>
 									<EditMode>EnterOnInput</EditMode>
 									<ContextMenu name="ВСДВходящиеТтнДатаКонтекстноеМеню" id="197"/>
 									<ExtendedTooltip name="ВСДВходящиеТтнДатаРасширеннаяПодсказка" id="198"/>
 								</InputField>
 								<InputField name="ВСДВходящиеТтнТип" id="199">
 									<DataPath>Объект.ВСДВходящие.ТтнТип</DataPath>
+									<Visible>false</Visible>
 									<EditMode>EnterOnInput</EditMode>
 									<ContextMenu name="ВСДВходящиеТтнТипКонтекстноеМеню" id="200"/>
 									<ExtendedTooltip name="ВСДВходящиеТтнТипРасширеннаяПодсказка" id="201"/>
 								</InputField>
 								<InputField name="ВСДВходящиеРезультатыИсследований" id="202">
 									<DataPath>Объект.ВСДВходящие.РезультатыИсследований</DataPath>
+									<Visible>false</Visible>
 									<EditMode>EnterOnInput</EditMode>
 									<ContextMenu name="ВСДВходящиеРезультатыИсследованийКонтекстноеМеню" id="203"/>
 									<ExtendedTooltip name="ВСДВходящиеРезультатыИсследованийРасширеннаяПодсказка" id="204"/>
@@ -683,6 +715,7 @@
 								</InputField>
 								<InputField name="ВСДВходящиестрана_гуид" id="220">
 									<DataPath>Объект.ВСДВходящие.страна_гуид</DataPath>
+									<Visible>false</Visible>
 									<EditMode>EnterOnInput</EditMode>
 									<Width>10</Width>
 									<ContextMenu name="ВСДВходящиестрана_гуидКонтекстноеМеню" id="221"/>
@@ -690,18 +723,21 @@
 								</InputField>
 								<InputField name="ВСДВходящиеОрганизация" id="223">
 									<DataPath>Объект.ВСДВходящие.Организация</DataPath>
+									<Visible>false</Visible>
 									<EditMode>EnterOnInput</EditMode>
 									<ContextMenu name="ВСДВходящиеОрганизацияКонтекстноеМеню" id="224"/>
 									<ExtendedTooltip name="ВСДВходящиеОрганизацияРасширеннаяПодсказка" id="225"/>
 								</InputField>
 								<InputField name="ВСДВходящиеВидВСД" id="226">
 									<DataPath>Объект.ВСДВходящие.ВидВСД</DataPath>
+									<Visible>false</Visible>
 									<EditMode>EnterOnInput</EditMode>
 									<ContextMenu name="ВСДВходящиеВидВСДКонтекстноеМеню" id="227"/>
 									<ExtendedTooltip name="ВСДВходящиеВидВСДРасширеннаяПодсказка" id="228"/>
 								</InputField>
 								<InputField name="ВСДВходящиеapplicationID" id="229">
 									<DataPath>Объект.ВСДВходящие.applicationID</DataPath>
+									<Visible>false</Visible>
 									<EditMode>EnterOnInput</EditMode>
 									<ContextMenu name="ВСДВходящиеapplicationIDКонтекстноеМеню" id="230"/>
 									<ExtendedTooltip name="ВСДВходящиеapplicationIDРасширеннаяПодсказка" id="231"/>
@@ -720,12 +756,14 @@
 								</InputField>
 								<InputField name="ВСДВходящиеСвязанныеДокументы" id="238">
 									<DataPath>Объект.ВСДВходящие.СвязанныеДокументы</DataPath>
+									<Visible>false</Visible>
 									<EditMode>EnterOnInput</EditMode>
 									<ContextMenu name="ВСДВходящиеСвязанныеДокументыКонтекстноеМеню" id="239"/>
 									<ExtendedTooltip name="ВСДВходящиеСвязанныеДокументыРасширеннаяПодсказка" id="240"/>
 								</InputField>
 								<InputField name="ВСДВходящиеНомерПартии" id="241">
 									<DataPath>Объект.ВСДВходящие.НомерПартии</DataPath>
+									<Visible>false</Visible>
 									<EditMode>EnterOnInput</EditMode>
 									<ContextMenu name="ВСДВходящиеНомерПартииКонтекстноеМеню" id="242"/>
 									<ExtendedTooltip name="ВСДВходящиеНомерПартииРасширеннаяПодсказка" id="243"/>
@@ -1227,7 +1265,7 @@
 				<dcsset:appearance>
 					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
 						<dcscor:parameter>ЦветФона</dcscor:parameter>
-						<dcscor:value xsi:type="v8ui:Color">web:LightGreen</dcscor:value>
+						<dcscor:value xsi:type="v8ui:Color">#91EE90</dcscor:value>
 					</dcscor:item>
 				</dcsset:appearance>
 			</dcsset:item>
@@ -1239,14 +1277,15 @@
 				</dcsset:selection>
 				<dcsset:filter>
 					<dcsset:item xsi:type="dcsset:FilterItemComparison">
-						<dcsset:left xsi:type="dcscor:Field">Объект.ВСДВходящие.Комментарий</dcsset:left>
-						<dcsset:comparisonType>Filled</dcsset:comparisonType>
+						<dcsset:left xsi:type="dcscor:Field">Объект.ВСДВходящие.Статус</dcsset:left>
+						<dcsset:comparisonType>Equal</dcsset:comparisonType>
+						<dcsset:right xsi:type="xs:string">REJECTED</dcsset:right>
 					</dcsset:item>
 				</dcsset:filter>
 				<dcsset:appearance>
 					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
 						<dcscor:parameter>ЦветФона</dcscor:parameter>
-						<dcscor:value xsi:type="v8ui:Color">web:Tomato</dcscor:value>
+						<dcscor:value xsi:type="v8ui:Color">#FF6447</dcscor:value>
 					</dcscor:item>
 				</dcsset:appearance>
 			</dcsset:item>
@@ -1285,7 +1324,7 @@
 				<dcsset:appearance>
 					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
 						<dcscor:parameter>ЦветФона</dcscor:parameter>
-						<dcscor:value xsi:type="v8ui:Color">web:Salmon</dcscor:value>
+						<dcscor:value xsi:type="v8ui:Color">#FA8073</dcscor:value>
 					</dcscor:item>
 				</dcsset:appearance>
 			</dcsset:item>
@@ -1305,7 +1344,7 @@
 				<dcsset:appearance>
 					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
 						<dcscor:parameter>ЦветФона</dcscor:parameter>
-						<dcscor:value xsi:type="v8ui:Color">web:LightGreen</dcscor:value>
+						<dcscor:value xsi:type="v8ui:Color">#91EE91</dcscor:value>
 					</dcscor:item>
 				</dcsset:appearance>
 			</dcsset:item>
