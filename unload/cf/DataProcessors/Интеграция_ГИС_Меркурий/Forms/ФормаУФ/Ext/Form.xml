@@ -1274,7 +1274,7 @@
 											<ExtendedTooltip name="ГруппаНастройкииХСРасширеннаяПодсказка" id="418"/>
 											<ChildItems>
 												<UsualGroup name="Группа32" id="409">
-													<Group>AlwaysHorizontal</Group>
+													<Group>Vertical</Group>
 													<Representation>None</Representation>
 													<ShowTitle>false</ShowTitle>
 													<ExtendedTooltip name="Группа32РасширеннаяПодсказка" id="410"/>
@@ -1331,15 +1331,17 @@
 																	</ChildItems>
 																</UsualGroup>
 																<UsualGroup name="Группа9" id="505">
-																	<Group>AlwaysHorizontal</Group>
+																	<Group>Vertical</Group>
 																	<Representation>None</Representation>
 																	<ShowTitle>false</ShowTitle>
+																	<ThroughAlign>Use</ThroughAlign>
 																	<ExtendedTooltip name="Группа9РасширеннаяПодсказка" id="506"/>
 																	<ChildItems>
 																		<UsualGroup name="Группа35" id="507">
-																			<Group>Vertical</Group>
+																			<Group>AlwaysHorizontal</Group>
 																			<Representation>None</Representation>
 																			<ShowTitle>false</ShowTitle>
+																			<ThroughAlign>Use</ThroughAlign>
 																			<ExtendedTooltip name="Группа35РасширеннаяПодсказка" id="508"/>
 																			<ChildItems>
 																				<InputField name="Страна" id="17">
@@ -1349,6 +1351,26 @@
 																					<ContextMenu name="СтранаКонтекстноеМеню" id="18"/>
 																					<ExtendedTooltip name="СтранаРасширеннаяПодсказка" id="19"/>
 																				</InputField>
+																				<Button name="кнЗагрузитьСтраны1" id="515">
+																					<Type>UsualButton</Type>
+																					<CommandName>Form.Command.кнЗагрузитьСтраны</CommandName>
+																					<Title>
+																						<v8:item>
+																							<v8:lang>ru</v8:lang>
+																							<v8:content>Страны</v8:content>
+																						</v8:item>
+																					</Title>
+																					<ExtendedTooltip name="кнЗагрузитьСтраны1РасширеннаяПодсказка" id="516"/>
+																				</Button>
+																			</ChildItems>
+																		</UsualGroup>
+																		<UsualGroup name="Группа37" id="513">
+																			<Group>AlwaysHorizontal</Group>
+																			<Representation>None</Representation>
+																			<ShowTitle>false</ShowTitle>
+																			<ThroughAlign>Use</ThroughAlign>
+																			<ExtendedTooltip name="Группа37РасширеннаяПодсказка" id="514"/>
+																			<ChildItems>
 																				<InputField name="Регион" id="20">
 																					<DataPath>Объект.Регион</DataPath>
 																					<EditMode>EnterOnInput</EditMode>
@@ -1356,6 +1378,26 @@
 																					<ContextMenu name="РегионКонтекстноеМеню" id="21"/>
 																					<ExtendedTooltip name="РегионРасширеннаяПодсказка" id="22"/>
 																				</InputField>
+																				<Button name="кнЗагрузитьРегионы1" id="509">
+																					<Type>UsualButton</Type>
+																					<CommandName>Form.Command.кнЗагрузитьРегионы</CommandName>
+																					<Title>
+																						<v8:item>
+																							<v8:lang>ru</v8:lang>
+																							<v8:content>Регионы</v8:content>
+																						</v8:item>
+																					</Title>
+																					<ExtendedTooltip name="кнЗагрузитьРегионы1РасширеннаяПодсказка" id="510"/>
+																				</Button>
+																			</ChildItems>
+																		</UsualGroup>
+																		<UsualGroup name="Группа4" id="603">
+																			<Group>AlwaysHorizontal</Group>
+																			<Representation>None</Representation>
+																			<ShowTitle>false</ShowTitle>
+																			<ThroughAlign>Use</ThroughAlign>
+																			<ExtendedTooltip name="Группа4РасширеннаяПодсказка" id="604"/>
+																			<ChildItems>
 																				<InputField name="Город" id="23">
 																					<DataPath>Объект.Город</DataPath>
 																					<EditMode>EnterOnInput</EditMode>
@@ -1363,6 +1405,26 @@
 																					<ContextMenu name="ГородКонтекстноеМеню" id="24"/>
 																					<ExtendedTooltip name="ГородРасширеннаяПодсказка" id="25"/>
 																				</InputField>
+																				<Button name="кнЗагрузитьГорода1" id="517">
+																					<Type>UsualButton</Type>
+																					<CommandName>Form.Command.кнЗагрузитьГорода</CommandName>
+																					<Title>
+																						<v8:item>
+																							<v8:lang>ru</v8:lang>
+																							<v8:content>Города</v8:content>
+																						</v8:item>
+																					</Title>
+																					<ExtendedTooltip name="кнЗагрузитьГорода1РасширеннаяПодсказка" id="518"/>
+																				</Button>
+																			</ChildItems>
+																		</UsualGroup>
+																		<UsualGroup name="Группа5" id="605">
+																			<Group>AlwaysHorizontal</Group>
+																			<Representation>None</Representation>
+																			<ShowTitle>false</ShowTitle>
+																			<ThroughAlign>Use</ThroughAlign>
+																			<ExtendedTooltip name="Группа5РасширеннаяПодсказка" id="606"/>
+																			<ChildItems>
 																				<InputField name="ВСДЦель" id="120">
 																					<DataPath>Объект.ВСДЦель</DataPath>
 																					<Title>
@@ -1376,47 +1438,6 @@
 																					<ContextMenu name="ВСДЦельКонтекстноеМеню" id="121"/>
 																					<ExtendedTooltip name="ВСДЦельРасширеннаяПодсказка" id="122"/>
 																				</InputField>
-																			</ChildItems>
-																		</UsualGroup>
-																		<UsualGroup name="Группа36" id="511">
-																			<Group>Vertical</Group>
-																			<Representation>None</Representation>
-																			<ShowTitle>false</ShowTitle>
-																			<ExtendedTooltip name="Группа36РасширеннаяПодсказка" id="512"/>
-																			<ChildItems>
-																				<Button name="кнЗагрузитьСтраны1" id="515">
-																					<Type>UsualButton</Type>
-																					<CommandName>Form.Command.кнЗагрузитьСтраны</CommandName>
-																					<Title>
-																						<v8:item>
-																							<v8:lang>ru</v8:lang>
-																							<v8:content>Страны</v8:content>
-																						</v8:item>
-																					</Title>
-																					<ExtendedTooltip name="кнЗагрузитьСтраны1РасширеннаяПодсказка" id="516"/>
-																				</Button>
-																				<Button name="кнЗагрузитьРегионы1" id="509">
-																					<Type>UsualButton</Type>
-																					<CommandName>Form.Command.кнЗагрузитьРегионы</CommandName>
-																					<Title>
-																						<v8:item>
-																							<v8:lang>ru</v8:lang>
-																							<v8:content>Регионы</v8:content>
-																						</v8:item>
-																					</Title>
-																					<ExtendedTooltip name="кнЗагрузитьРегионы1РасширеннаяПодсказка" id="510"/>
-																				</Button>
-																				<Button name="кнЗагрузитьГорода1" id="517">
-																					<Type>UsualButton</Type>
-																					<CommandName>Form.Command.кнЗагрузитьГорода</CommandName>
-																					<Title>
-																						<v8:item>
-																							<v8:lang>ru</v8:lang>
-																							<v8:content>Города</v8:content>
-																						</v8:item>
-																					</Title>
-																					<ExtendedTooltip name="кнЗагрузитьГорода1РасширеннаяПодсказка" id="518"/>
-																				</Button>
 																				<Button name="ЗагрузитьЦели1" id="519">
 																					<Type>UsualButton</Type>
 																					<CommandName>Form.Command.ЗагрузитьЦели</CommandName>
@@ -1429,9 +1450,6 @@
 																					<ExtendedTooltip name="ЗагрузитьЦели1РасширеннаяПодсказка" id="520"/>
 																				</Button>
 																			</ChildItems>
-																		</UsualGroup>
-																		<UsualGroup name="Группа37" id="513">
-																			<ExtendedTooltip name="Группа37РасширеннаяПодсказка" id="514"/>
 																		</UsualGroup>
 																	</ChildItems>
 																</UsualGroup>
@@ -1475,73 +1493,6 @@
 																	<HorizontalStretch>true</HorizontalStretch>
 																	<ContextMenu name="ВСД_ОсобыеОтметкиКонтекстноеМеню" id="65"/>
 																	<ExtendedTooltip name="ВСД_ОсобыеОтметкиРасширеннаяПодсказка" id="66"/>
-																</InputField>
-																<InputField name="ТермУсловияПеревозки" id="117">
-																	<DataPath>Объект.ТермУсловияПеревозки</DataPath>
-																	<EditMode>EnterOnInput</EditMode>
-																	<HorizontalStretch>true</HorizontalStretch>
-																	<ClearButton>false</ClearButton>
-																	<ListChoiceMode>true</ListChoiceMode>
-																	<ChooseType>false</ChooseType>
-																	<TextEdit>false</TextEdit>
-																	<MinValue xsi:type="xs:decimal">1</MinValue>
-																	<MaxValue xsi:type="xs:decimal">4</MaxValue>
-																	<ChoiceList>
-																		<xr:Item>
-																			<xr:Presentation/>
-																			<xr:CheckState>0</xr:CheckState>
-																			<xr:Value xsi:type="FormChoiceListDesTimeValue">
-																				<Presentation>
-																					<v8:item>
-																						<v8:lang>ru</v8:lang>
-																						<v8:content>Замороженный</v8:content>
-																					</v8:item>
-																				</Presentation>
-																				<Value xsi:type="xs:decimal">1</Value>
-																			</xr:Value>
-																		</xr:Item>
-																		<xr:Item>
-																			<xr:Presentation/>
-																			<xr:CheckState>0</xr:CheckState>
-																			<xr:Value xsi:type="FormChoiceListDesTimeValue">
-																				<Presentation>
-																					<v8:item>
-																						<v8:lang>ru</v8:lang>
-																						<v8:content>Охлажденный</v8:content>
-																					</v8:item>
-																				</Presentation>
-																				<Value xsi:type="xs:decimal">2</Value>
-																			</xr:Value>
-																		</xr:Item>
-																		<xr:Item>
-																			<xr:Presentation/>
-																			<xr:CheckState>0</xr:CheckState>
-																			<xr:Value xsi:type="FormChoiceListDesTimeValue">
-																				<Presentation>
-																					<v8:item>
-																						<v8:lang>ru</v8:lang>
-																						<v8:content>Охлаждаемый</v8:content>
-																					</v8:item>
-																				</Presentation>
-																				<Value xsi:type="xs:decimal">3</Value>
-																			</xr:Value>
-																		</xr:Item>
-																		<xr:Item>
-																			<xr:Presentation/>
-																			<xr:CheckState>0</xr:CheckState>
-																			<xr:Value xsi:type="FormChoiceListDesTimeValue">
-																				<Presentation>
-																					<v8:item>
-																						<v8:lang>ru</v8:lang>
-																						<v8:content>Вентилируемый</v8:content>
-																					</v8:item>
-																				</Presentation>
-																				<Value xsi:type="xs:decimal">4</Value>
-																			</xr:Value>
-																		</xr:Item>
-																	</ChoiceList>
-																	<ContextMenu name="ТермУсловияПеревозкиКонтекстноеМеню" id="118"/>
-																	<ExtendedTooltip name="ТермУсловияПеревозкиРасширеннаяПодсказка" id="119"/>
 																</InputField>
 																<InputField name="ТермическиеУсловияПеревозки" id="573">
 																	<DataPath>Объект.ТермическиеУсловияПеревозки</DataPath>
@@ -1941,6 +1892,12 @@
 																			<CheckBoxType>Auto</CheckBoxType>
 																			<ContextMenu name="ПарамПроизводствоЗаполнятьПоСправочникуКонтекстноеМеню" id="594"/>
 																			<ExtendedTooltip name="ПарамПроизводствоЗаполнятьПоСправочникуРасширеннаяПодсказка" id="595"/>
+																		</CheckBoxField>
+																		<CheckBoxField name="ПарамПроизводствоЗаполнятьТчПоТчСерииПродукции" id="600">
+																			<DataPath>Объект.ПарамПроизводствоЗаполнятьТчПоТчСерииПродукции</DataPath>
+																			<CheckBoxType>Auto</CheckBoxType>
+																			<ContextMenu name="ПарамПроизводствоЗаполнятьТчПоТчСерииПродукцииКонтекстноеМеню" id="601"/>
+																			<ExtendedTooltip name="ПарамПроизводствоЗаполнятьТчПоТчСерииПродукцииРасширеннаяПодсказка" id="602"/>
 																		</CheckBoxField>
 																		<UsualGroup name="Группа40" id="525">
 																			<ShowTitle>false</ShowTitle>

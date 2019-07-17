@@ -161,7 +161,7 @@
 							</ChildItems>
 						</UsualGroup>
 						<UsualGroup name="Группа3" id="205">
-							<Group>Vertical</Group>
+							<Group>AlwaysHorizontal</Group>
 							<Representation>StrongSeparation</Representation>
 							<ShowTitle>false</ShowTitle>
 							<ExtendedTooltip name="Группа3РасширеннаяПодсказка" id="206"/>
@@ -173,12 +173,6 @@
 									<ContextMenu name="ЗавершитьОперациюКонтекстноеМеню" id="38"/>
 									<ExtendedTooltip name="ЗавершитьОперациюРасширеннаяПодсказка" id="39"/>
 								</CheckBoxField>
-								<InputField name="НомерПартии" id="55">
-									<DataPath>Объект.НомерПартии</DataPath>
-									<EditMode>EnterOnInput</EditMode>
-									<ContextMenu name="НомерПартииКонтекстноеМеню" id="56"/>
-									<ExtendedTooltip name="НомерПартииРасширеннаяПодсказка" id="57"/>
-								</InputField>
 								<InputField name="operationId" id="34">
 									<DataPath>Объект.operationId</DataPath>
 									<Title>
@@ -206,7 +200,7 @@
 									<v8:content>Группа окружение</v8:content>
 								</v8:item>
 							</ToolTip>
-							<Group>Vertical</Group>
+							<Group>AlwaysHorizontal</Group>
 							<Representation>StrongSeparation</Representation>
 							<ShowTitle>false</ShowTitle>
 							<ExtendedTooltip name="ГруппаОкружениеРасширеннаяПодсказка" id="225"/>
@@ -416,6 +410,13 @@
 												</InputField>
 											</ChildItems>
 										</ColumnGroup>
+										<InputField name="ПродукцияНомерПартии" id="564">
+											<DataPath>Объект.Продукция.НомерПартии</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<Width>10</Width>
+											<ContextMenu name="ПродукцияНомерПартииКонтекстноеМеню" id="565"/>
+											<ExtendedTooltip name="ПродукцияНомерПартииРасширеннаяПодсказка" id="566"/>
+										</InputField>
 										<InputField name="ПродукцияНаименованиеПродукции" id="93">
 											<DataPath>Объект.Продукция.НаименованиеПродукции</DataPath>
 											<EditMode>EnterOnInput</EditMode>
