@@ -144,7 +144,7 @@
 			<c>
 				<i>3</i>
 				<c>
-					<f>16</f>
+					<f>15</f>
 					<parameter>тПолучатель</parameter>
 				</c>
 			</c>
@@ -153,7 +153,7 @@
 	<rowsItem>
 		<index>8</index>
 		<row>
-			<formatIndex>17</formatIndex>
+			<formatIndex>16</formatIndex>
 			<c>
 				<c>
 					<f>14</f>
@@ -162,7 +162,7 @@
 			<c>
 				<i>3</i>
 				<c>
-					<f>18</f>
+					<f>17</f>
 					<parameter>тПлощадка</parameter>
 				</c>
 			</c>
@@ -179,7 +179,7 @@
 			<c>
 				<i>3</i>
 				<c>
-					<f>16</f>
+					<f>15</f>
 					<parameter>тПродукция</parameter>
 				</c>
 			</c>
@@ -196,7 +196,7 @@
 			<c>
 				<i>3</i>
 				<c>
-					<f>16</f>
+					<f>15</f>
 					<parameter>тКод</parameter>
 				</c>
 			</c>
@@ -213,7 +213,7 @@
 			<c>
 				<i>3</i>
 				<c>
-					<f>16</f>
+					<f>15</f>
 					<parameter>тВыработано</parameter>
 				</c>
 			</c>
@@ -224,22 +224,22 @@
 		<row>
 			<c>
 				<c>
+					<f>18</f>
+				</c>
+			</c>
+			<c>
+				<c>
+					<f>19</f>
+				</c>
+			</c>
+			<c>
+				<c>
 					<f>19</f>
 				</c>
 			</c>
 			<c>
 				<c>
 					<f>20</f>
-				</c>
-			</c>
-			<c>
-				<c>
-					<f>20</f>
-				</c>
-			</c>
-			<c>
-				<c>
-					<f>21</f>
 					<parameter>тСгенерировано</parameter>
 				</c>
 			</c>
@@ -248,7 +248,7 @@
 	<drawing>
 		<drawingType>Object</drawingType>
 		<id>2</id>
-		<formatIndex>22</formatIndex>
+		<formatIndex>21</formatIndex>
 		<beginRow>19</beginRow>
 		<beginRowOffset>9</beginRowOffset>
 		<endRow>26</endRow>
@@ -321,15 +321,15 @@ AQMABAAAAPABAAAEAAAA8AECAAQAAAAnAf//AwAAAAAA4SAg</object>
 	<drawing>
 		<drawingType>Picture</drawingType>
 		<id>3</id>
-		<formatIndex>9</formatIndex>
+		<formatIndex>22</formatIndex>
 		<beginRow>5</beginRow>
 		<beginRowOffset>30</beginRowOffset>
 		<endRow>12</endRow>
 		<endRowOffset>24</endRowOffset>
-		<beginColumn>1</beginColumn>
-		<beginColumnOffset>12</beginColumnOffset>
+		<beginColumn>0</beginColumn>
+		<beginColumnOffset>33</beginColumnOffset>
 		<endColumn>2</endColumn>
-		<endColumnOffset>219</endColumnOffset>
+		<endColumnOffset>156</endColumnOffset>
 		<autoSize>false</autoSize>
 		<pictureSize>Proportionally</pictureSize>
 		<zOrder>0</zOrder>
@@ -416,8 +416,7 @@ AQMABAAAAPABAAAEAAAA8AECAAQAAAAnAf//AwAAAAAA4SAg</object>
 		<v8ui:style xsi:type="v8ui:SpreadsheetDocumentDrawingLineType">None</v8ui:style>
 	</line>
 	<font faceName="Arial" height="14.3" bold="true" italic="false" underline="false" strikeout="false" kind="Absolute" scale="100"/>
-	<font faceName="Arial" height="10" bold="true" italic="false" underline="false" strikeout="false" kind="Absolute" scale="100"/>
-	<font faceName="Arial" height="10" bold="false" italic="false" underline="false" strikeout="false" kind="Absolute" scale="100"/>
+	<font faceName="Arial" height="8" bold="true" italic="false" underline="false" strikeout="false" kind="Absolute" scale="100"/>
 	<font faceName="Arial" height="8" bold="false" italic="false" underline="false" strikeout="false" kind="Absolute" scale="100"/>
 	<format>
 		<width>32</width>
@@ -426,7 +425,7 @@ AQMABAAAAPABAAAEAAAA8AECAAQAAAAnAf//AwAAAAAA4SAg</object>
 		<width>33</width>
 	</format>
 	<format>
-		<width>95</width>
+		<width>77</width>
 	</format>
 	<format>
 		<width>55</width>
@@ -460,6 +459,7 @@ AQMABAAAAPABAAAEAAAA8AECAAQAAAAnAf//AwAAAAAA4SAg</object>
 		<font>1</font>
 		<topBorder>0</topBorder>
 		<rightBorder>0</rightBorder>
+		<textPlacement>Wrap</textPlacement>
 		<fillType>Parameter</fillType>
 	</format>
 	<format>
@@ -469,11 +469,6 @@ AQMABAAAAPABAAAEAAAA8AECAAQAAAAnAf//AwAAAAAA4SAg</object>
 		<font>2</font>
 		<rightBorder>0</rightBorder>
 		<textPlacement>Wrap</textPlacement>
-		<fillType>Parameter</fillType>
-	</format>
-	<format>
-		<font>2</font>
-		<rightBorder>0</rightBorder>
 		<fillType>Parameter</fillType>
 	</format>
 	<format>
@@ -494,16 +489,20 @@ AQMABAAAAPABAAAEAAAA8AECAAQAAAAnAf//AwAAAAAA4SAg</object>
 		<bottomBorder>0</bottomBorder>
 	</format>
 	<format>
-		<font>3</font>
+		<font>2</font>
 		<rightBorder>0</rightBorder>
 		<bottomBorder>0</bottomBorder>
 		<width>55</width>
+		<textPlacement>Wrap</textPlacement>
 		<fillType>Parameter</fillType>
 	</format>
 	<format>
 		<drawingBorder>1</drawingBorder>
 		<verticalAlignment>Top</verticalAlignment>
 		<backColor>style:FieldBackColor</backColor>
+	</format>
+	<format>
+		<drawingBorder>1</drawingBorder>
 	</format>
 	<format>
 		<width>72</width>
