@@ -115,7 +115,7 @@
 									<v8:content>Панель кнопок1</v8:content>
 								</v8:item>
 							</ToolTip>
-							<Group>AlwaysHorizontal</Group>
+							<Group>Horizontal</Group>
 							<Representation>None</Representation>
 							<ShowTitle>false</ShowTitle>
 							<ExtendedTooltip name="ПанельКнопок1РасширеннаяПодсказка" id="347"/>
@@ -267,7 +267,7 @@
 									<v8:content>Панель кнопок2</v8:content>
 								</v8:item>
 							</ToolTip>
-							<Group>AlwaysHorizontal</Group>
+							<Group>Horizontal</Group>
 							<Representation>None</Representation>
 							<ShowTitle>false</ShowTitle>
 							<ExtendedTooltip name="ПанельКнопок2РасширеннаяПодсказка" id="237"/>
@@ -434,7 +434,7 @@
 											<v8:content>Панель условий отгрузки</v8:content>
 										</v8:item>
 									</ToolTip>
-									<Group>AlwaysHorizontal</Group>
+									<Group>Horizontal</Group>
 									<Representation>None</Representation>
 									<ShowTitle>false</ShowTitle>
 									<ExtendedTooltip name="ПанельУсловийОтгрузкиРасширеннаяПодсказка" id="561"/>
@@ -1038,7 +1038,7 @@
 					<ExtendedTooltip name="СтраницаПараметрыРасширеннаяПодсказка" id="141"/>
 					<ChildItems>
 						<UsualGroup name="Группа8" id="238">
-							<Group>AlwaysHorizontal</Group>
+							<Group>Horizontal</Group>
 							<Representation>None</Representation>
 							<ShowTitle>false</ShowTitle>
 							<ExtendedTooltip name="Группа8РасширеннаяПодсказка" id="239"/>
@@ -1100,7 +1100,7 @@
 											<ExtendedTooltip name="ГруппаПараметрыПодключенияРасширеннаяПодсказка" id="398"/>
 											<ChildItems>
 												<UsualGroup name="Группа31" id="407">
-													<Group>AlwaysHorizontal</Group>
+													<Group>Horizontal</Group>
 													<Representation>None</Representation>
 													<ShowTitle>false</ShowTitle>
 													<ExtendedTooltip name="Группа31РасширеннаяПодсказка" id="408"/>
@@ -1349,7 +1349,7 @@
 																	<ExtendedTooltip name="Группа9РасширеннаяПодсказка" id="506"/>
 																	<ChildItems>
 																		<UsualGroup name="Группа35" id="507">
-																			<Group>AlwaysHorizontal</Group>
+																			<Group>Horizontal</Group>
 																			<Representation>None</Representation>
 																			<ShowTitle>false</ShowTitle>
 																			<ThroughAlign>Use</ThroughAlign>
@@ -1376,7 +1376,7 @@
 																			</ChildItems>
 																		</UsualGroup>
 																		<UsualGroup name="Группа37" id="513">
-																			<Group>AlwaysHorizontal</Group>
+																			<Group>Horizontal</Group>
 																			<Representation>None</Representation>
 																			<ShowTitle>false</ShowTitle>
 																			<ThroughAlign>Use</ThroughAlign>
@@ -1403,7 +1403,7 @@
 																			</ChildItems>
 																		</UsualGroup>
 																		<UsualGroup name="Группа4" id="603">
-																			<Group>AlwaysHorizontal</Group>
+																			<Group>Horizontal</Group>
 																			<Representation>None</Representation>
 																			<ShowTitle>false</ShowTitle>
 																			<ThroughAlign>Use</ThroughAlign>
@@ -1430,7 +1430,7 @@
 																			</ChildItems>
 																		</UsualGroup>
 																		<UsualGroup name="Группа5" id="605">
-																			<Group>AlwaysHorizontal</Group>
+																			<Group>Horizontal</Group>
 																			<Representation>None</Representation>
 																			<ShowTitle>false</ShowTitle>
 																			<ThroughAlign>Use</ThroughAlign>
@@ -1540,7 +1540,7 @@
 											<ExtendedTooltip name="ГруппаНастройкиМодуляРасширеннаяПодсказка" id="402"/>
 											<ChildItems>
 												<UsualGroup name="Группа12" id="548">
-													<Group>AlwaysHorizontal</Group>
+													<Group>Horizontal</Group>
 													<Representation>None</Representation>
 													<ShowTitle>false</ShowTitle>
 													<ExtendedTooltip name="Группа12РасширеннаяПодсказка" id="549"/>
@@ -2210,7 +2210,7 @@
 											<ExtendedTooltip name="Группа34РасширеннаяПодсказка" id="460"/>
 											<ChildItems>
 												<UsualGroup name="Группа38" id="521">
-													<Group>AlwaysHorizontal</Group>
+													<Group>Horizontal</Group>
 													<Representation>None</Representation>
 													<ShowTitle>false</ShowTitle>
 													<ExtendedTooltip name="Группа38РасширеннаяПодсказка" id="522"/>
@@ -2239,7 +2239,7 @@
 												</UsualGroup>
 												<UsualGroup name="Группа33" id="457">
 													<HorizontalStretch>true</HorizontalStretch>
-													<Group>AlwaysHorizontal</Group>
+													<Group>Horizontal</Group>
 													<Representation>None</Representation>
 													<ShowTitle>false</ShowTitle>
 													<ExtendedTooltip name="Группа33РасширеннаяПодсказка" id="458"/>
@@ -3838,6 +3838,7 @@
 				</v8:item>
 			</ToolTip>
 			<Action>кнУдалитьПартии</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="Версия2ОбновитьСправочники" id="7">
 			<Title>
@@ -3853,6 +3854,7 @@
 				</v8:item>
 			</ToolTip>
 			<Action>кнВерсия2ОбновитьСправочники</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="кнСоздатьИнвентаризацию" id="41">
 			<Title>
@@ -3868,6 +3870,7 @@
 				</v8:item>
 			</ToolTip>
 			<Action>кнСоздатьИнвентаризацию</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="кнПечатьСтрОтгрузкиПечать" id="53">
 			<Title>

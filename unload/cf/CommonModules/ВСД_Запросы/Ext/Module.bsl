@@ -102,13 +102,16 @@
 			ВсеОшибки = ВсеОшибки + СтрОшибки;
 		КонецЦикла;
 		
-		Если ЗначениеЗаполнено(ДокСсылка) Тогда
-			ДокОбъект = ДокСсылка.ПолучитьОбъект();
-			ДокОбъект.Комментарий = ВсеОшибки;
-			ДокОбъект.Записать();
-		КонецЕсли;	
+		Попытка
+			Если ЗначениеЗаполнено(ДокСсылка) Тогда
+				ДокОбъект = ДокСсылка.ПолучитьОбъект();
+				ДокОбъект.Комментарий = ВсеОшибки;
+				ДокОбъект.Записать();
+			КонецЕсли;	
+		Исключение
+		КонецПопытки;
 	Исключение
-		Ответ = Ложь;
+		//Ответ = Ложь;
 	КонецПопытки;
 		
 	Возврат Ответ;
@@ -3499,6 +3502,8 @@
 			ОбъектХС.UUID = _uuid;
 			ОбъектХС.Записать();
 			СообщитьИнфо("Записан ХозСубъект ["+ХозСубъект+"] GUID = "+_GUID);			
+			
+			ХозСубъект_ЗагрузитьПоGUID(Параметры, _GUID, ОбъектХС.Ссылка );
 		Иначе
 			СообщитьИнфо("ХозСубъект ["+ХозСубъект+"] с ИНН "+ИНН+" не найден в ГИС Меркурий");			
 		КонецЕсли;
@@ -6574,6 +6579,7 @@
 #Область Аннулирование
 // **************** Аннулирование ВСД Транспортного v2
 Функция ВСД2_Аннулирование_ЗапросXML( Параметры, ДокСсылка)
+	GUID_запроса = Новый УникальныйИдентификатор;
 	Запрос = "
 	|<SOAP-ENV:Envelope 
 	|xmlns:merc='http://api.vetrf.ru/schema/cdm/mercury/g2b/applications/v2' 
@@ -6591,7 +6597,7 @@
 	|        <apl:issueDate>"+ ДатаXML(ТекущаяДата(), "T00:00:00") +"</apl:issueDate>
 	|        <apl:data>
 	|          <merc:withdrawVetDocumentRequest>
-	|            <merc:localTransactionId>[GUID]</merc:localTransactionId>
+	|            <merc:localTransactionId>"+GUID_запроса+"</merc:localTransactionId>
 	|            <merc:initiator>
 	|              <vd:login>"+Параметры["param_intiator_login"]+"</vd:login>
 	|            </merc:initiator>
@@ -7280,6 +7286,7 @@
 	Иначе
 		Решение = "PARTIALLY";			
 	КонецЕсли;
+	GUID_запроса = Новый УникальныйИдентификатор;
 	
 		Запрос="
 	|<SOAP-ENV:Envelope xmlns:dt='http://api.vetrf.ru/schema/cdm/dictionary/v2'
@@ -7299,7 +7306,7 @@
 	|        <apl:issueDate>" + ДатаXML(ТекущаяДата(), "T00:00:00") + "</apl:issueDate>
 	|        <apl:data>
 	|          <merc:processIncomingConsignmentRequest>
-	|            <merc:localTransactionId>[GUID]</merc:localTransactionId>
+	|            <merc:localTransactionId>"+GUID_запроса+"</merc:localTransactionId>
 	|            <merc:initiator>
 	|              <vd:login>"+ СокрЛП( Параметры["param_intiator_login"] ) +"</vd:login>
 	|            </merc:initiator>";

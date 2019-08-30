@@ -1585,6 +1585,7 @@
 					<DataHistory>Use</DataHistory>
 				</Properties>
 			</Attribute>
+			<Form>ФормаДокумента1</Form>
 			<Form>ФормаДокумента</Form>
 			<Form>ФормаСписка</Form>
 			<Form>ФормаВыбора</Form>
@@ -3838,11 +3839,11 @@
 					<Synonym>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>Печать сокращенной формы ВСД</v8:content>
+							<v8:content>Печать сокращенной формы ВСД </v8:content>
 						</v8:item>
 					</Synonym>
 					<Comment/>
-					<Group>CommandGroup.Печать</Group>
+					<Group>CommandGroup.ВСД_ГруппаКоманд</Group>
 					<CommandParameterType>
 						<v8:Type>cfg:DocumentRef.ВСД2_транзакция</v8:Type>
 					</CommandParameterType>
@@ -3850,7 +3851,10 @@
 					<ModifiesData>false</ModifiesData>
 					<Representation>Auto</Representation>
 					<ToolTip/>
-					<Picture/>
+					<Picture>
+						<xr:Ref>StdPicture.Document</xr:Ref>
+						<xr:LoadTransparent>true</xr:LoadTransparent>
+					</Picture>
 					<Shortcut/>
 				</Properties>
 			</Command>
@@ -3860,7 +3864,7 @@
 					<Synonym>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>Отправить ВСД с Гашением</v8:content>
+							<v8:content>Отправить ВСД с гашением</v8:content>
 						</v8:item>
 					</Synonym>
 					<Comment>Отправить ВСД Поставщика с Гашением</Comment>
@@ -3887,7 +3891,7 @@
 					<Synonym>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>Погасить ВСД Поставщика</v8:content>
+							<v8:content>Погасить ВСД</v8:content>
 						</v8:item>
 					</Synonym>
 					<Comment/>

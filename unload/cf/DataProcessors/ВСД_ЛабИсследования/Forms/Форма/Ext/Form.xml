@@ -114,6 +114,7 @@
 			<AutoInsertNewRow>true</AutoInsertNewRow>
 			<EnableStartDrag>true</EnableStartDrag>
 			<EnableDrag>true</EnableDrag>
+			<FileDragMode>AsFile</FileDragMode>
 			<DataPath>Объект.Партии</DataPath>
 			<CommandSet>
 				<ExcludedCommand>Add</ExcludedCommand>
@@ -404,6 +405,7 @@
 				<xr:LoadTransparent>true</xr:LoadTransparent>
 			</Picture>
 			<Action>Заполнить</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="СоздатьЛИ" id="2">
 			<Title>
@@ -419,6 +421,7 @@
 				</v8:item>
 			</ToolTip>
 			<Action>СоздатьЛИ</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="Отправить" id="3">
 			<Title>
@@ -434,6 +437,7 @@
 				</v8:item>
 			</ToolTip>
 			<Action>Отправить</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 	</Commands>
 </Form>
