@@ -1256,6 +1256,7 @@
 									<AutoInsertNewRow>true</AutoInsertNewRow>
 									<EnableStartDrag>true</EnableStartDrag>
 									<EnableDrag>true</EnableDrag>
+									<FileDragMode>AsFile</FileDragMode>
 									<DataPath>Объект.ТочкиМаршрута</DataPath>
 									<RowFilter xsi:nil="true"/>
 									<ContextMenu name="ТочкиМаршрутаКонтекстноеМеню" id="369"/>
@@ -1553,6 +1554,7 @@
 				<xr:LoadTransparent>true</xr:LoadTransparent>
 			</Picture>
 			<Action>кнОткрытьЗапрос</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="кнОтправитьВФоне" id="4">
 			<Title>
@@ -1568,6 +1570,7 @@
 				</v8:item>
 			</ToolTip>
 			<Action>кнОтправить</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="ДобавитьММ" id="5">
 			<Title>
@@ -1583,6 +1586,7 @@
 				</v8:item>
 			</ToolTip>
 			<Action>ДобавитьММ</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 	</Commands>
 </Form>

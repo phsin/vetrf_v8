@@ -27,7 +27,7 @@
 					<ExtendedTooltip name="стрВСДРасширеннаяПодсказка" id="289"/>
 					<ChildItems>
 						<UsualGroup name="Группа2" id="135">
-							<Group>AlwaysHorizontal</Group>
+							<Group>Horizontal</Group>
 							<Representation>None</Representation>
 							<ShowTitle>false</ShowTitle>
 							<ExtendedTooltip name="Группа2РасширеннаяПодсказка" id="136"/>
@@ -39,7 +39,7 @@
 									<ExtendedTooltip name="Группа12РасширеннаяПодсказка" id="280"/>
 									<ChildItems>
 										<UsualGroup name="ГруппаГолова" id="118">
-											<Group>AlwaysHorizontal</Group>
+											<Group>Horizontal</Group>
 											<Representation>None</Representation>
 											<ShowTitle>false</ShowTitle>
 											<ExtendedTooltip name="ГруппаГоловаРасширеннаяПодсказка" id="119"/>
@@ -133,7 +133,7 @@
 									<v8:content>Гр шапка</v8:content>
 								</v8:item>
 							</ToolTip>
-							<Group>AlwaysHorizontal</Group>
+							<Group>Horizontal</Group>
 							<Representation>None</Representation>
 							<ShowTitle>false</ShowTitle>
 							<ExtendedTooltip name="ГрШапкаРасширеннаяПодсказка" id="144"/>
@@ -423,7 +423,7 @@
 															<v8:content>Дата изготовления</v8:content>
 														</v8:item>
 													</Title>
-													<Group>AlwaysHorizontal</Group>
+													<Group>Horizontal</Group>
 													<Representation>None</Representation>
 													<ThroughAlign>DontUse</ThroughAlign>
 													<ExtendedTooltip name="Группа13РасширеннаяПодсказка" id="228"/>
@@ -479,7 +479,7 @@
 															<v8:content>Срок годности</v8:content>
 														</v8:item>
 													</Title>
-													<Group>AlwaysHorizontal</Group>
+													<Group>Horizontal</Group>
 													<Representation>None</Representation>
 													<ThroughAlign>DontUse</ThroughAlign>
 													<ExtendedTooltip name="Группа14РасширеннаяПодсказка" id="236"/>
@@ -554,7 +554,7 @@
 															<v8:content>ТТН</v8:content>
 														</v8:item>
 													</Title>
-													<Group>AlwaysHorizontal</Group>
+													<Group>Horizontal</Group>
 													<Representation>None</Representation>
 													<ExtendedTooltip name="Группа11РасширеннаяПодсказка" id="195"/>
 													<ChildItems>
@@ -612,7 +612,7 @@
 															<v8:content>Группа ВСД</v8:content>
 														</v8:item>
 													</ToolTip>
-													<Group>AlwaysHorizontal</Group>
+													<Group>Horizontal</Group>
 													<Representation>None</Representation>
 													<ExtendedTooltip name="ГруппаВСДРасширеннаяПодсказка" id="209"/>
 													<ChildItems>
@@ -684,6 +684,7 @@
 									<AutoInsertNewRow>true</AutoInsertNewRow>
 									<EnableStartDrag>true</EnableStartDrag>
 									<EnableDrag>true</EnableDrag>
+									<FileDragMode>AsFile</FileDragMode>
 									<DataPath>Объект.ТочкиМаршрута</DataPath>
 									<RowFilter xsi:nil="true"/>
 									<ContextMenu name="ТочкиМаршрутаКонтекстноеМеню" id="295"/>
