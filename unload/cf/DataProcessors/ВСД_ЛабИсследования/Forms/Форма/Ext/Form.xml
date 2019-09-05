@@ -130,6 +130,7 @@
 			<RowFilter xsi:nil="true"/>
 			<ContextMenu name="ПартииКонтекстноеМеню" id="8"/>
 			<AutoCommandBar name="ПартииКоманднаяПанель" id="9">
+				<Autofill>false</Autofill>
 				<ChildItems>
 					<Button name="ОтметитьНеСозданные" id="88">
 						<Type>CommandBarButton</Type>
@@ -163,16 +164,36 @@
 					<Button name="ПартииСоздатьЛИ" id="73">
 						<Type>CommandBarButton</Type>
 						<CommandName>Form.Command.СоздатьЛИ</CommandName>
+						<Picture>
+							<xr:Ref>StdPicture.DataCompositionNewNestedScheme</xr:Ref>
+							<xr:LoadTransparent>true</xr:LoadTransparent>
+						</Picture>
 						<ExtendedTooltip name="ПартииСоздатьЛИРасширеннаяПодсказка" id="74"/>
 					</Button>
 					<Button name="ПартииОтправить" id="75">
 						<Type>CommandBarButton</Type>
+						<Representation>PictureAndText</Representation>
 						<CommandName>Form.Command.Отправить</CommandName>
+						<Picture>
+							<xr:Ref>StdPicture.SendMessage</xr:Ref>
+							<xr:LoadTransparent>true</xr:LoadTransparent>
+						</Picture>
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Отправить</v8:content>
+							</v8:item>
+						</Title>
 						<ExtendedTooltip name="ПартииОтправитьРасширеннаяПодсказка" id="76"/>
 					</Button>
 					<Button name="ПартииСоздатьЛабИсследПоСырью" id="83">
 						<Type>CommandBarButton</Type>
+						<Representation>PictureAndText</Representation>
 						<CommandName>Form.Command.СоздатьЛабИсследПоСырью</CommandName>
+						<Picture>
+							<xr:Ref>StdPicture.DataCompositionNewGroup</xr:Ref>
+							<xr:LoadTransparent>true</xr:LoadTransparent>
+						</Picture>
 						<ExtendedTooltip name="ПартииСоздатьЛабИсследПоСырьюРасширеннаяПодсказка" id="84"/>
 					</Button>
 				</ChildItems>
