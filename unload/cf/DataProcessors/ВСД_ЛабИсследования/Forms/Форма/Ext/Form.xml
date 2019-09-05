@@ -98,6 +98,11 @@
 							<ContextMenu name="ВыбШаблонКонтекстноеМеню" id="2"/>
 							<ExtendedTooltip name="ВыбШаблонРасширеннаяПодсказка" id="3"/>
 						</InputField>
+						<InputField name="ВыбДокПроизводства" id="85">
+							<DataPath>Объект.ВыбДокПроизводства</DataPath>
+							<ContextMenu name="ВыбДокПроизводстваКонтекстноеМеню" id="86"/>
+							<ExtendedTooltip name="ВыбДокПроизводстваРасширеннаяПодсказка" id="87"/>
+						</InputField>
 						<CheckBoxField name="ОтправлятьВФоне" id="80">
 							<DataPath>Объект.ОтправлятьВФоне</DataPath>
 							<Visible>false</Visible>
@@ -140,6 +145,11 @@
 						<Type>CommandBarButton</Type>
 						<CommandName>Form.Command.Отправить</CommandName>
 						<ExtendedTooltip name="ПартииОтправитьРасширеннаяПодсказка" id="76"/>
+					</Button>
+					<Button name="ПартииСоздатьЛабИсследПоСырью" id="83">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.СоздатьЛабИсследПоСырью</CommandName>
+						<ExtendedTooltip name="ПартииСоздатьЛабИсследПоСырьюРасширеннаяПодсказка" id="84"/>
 					</Button>
 				</ChildItems>
 			</AutoCommandBar>
@@ -438,6 +448,21 @@
 			</ToolTip>
 			<Action>Отправить</Action>
 			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="СоздатьЛабИсследПоСырью" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Создать лаб исслед по Входящему сырью</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Создать лаб исслед по сырью</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>СоздатьЛабИсследПоСырью</Action>
 		</Command>
 	</Commands>
 </Form>
