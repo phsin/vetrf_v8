@@ -131,6 +131,30 @@
 			<ContextMenu name="ПартииКонтекстноеМеню" id="8"/>
 			<AutoCommandBar name="ПартииКоманднаяПанель" id="9">
 				<ChildItems>
+					<Button name="ОтметитьНеСозданные" id="88">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.ОтметитьНеСозданные</CommandName>
+						<Picture>
+							<xr:Ref>StdPicture.CheckAll</xr:Ref>
+							<xr:LoadTransparent>true</xr:LoadTransparent>
+						</Picture>
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Отметить не созданные</v8:content>
+							</v8:item>
+						</Title>
+						<ExtendedTooltip name="ОтметитьНеСозданныеРасширеннаяПодсказка" id="89"/>
+					</Button>
+					<Button name="СнятьВсеОтметки" id="90">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.СнятьВсеОтметки</CommandName>
+						<Picture>
+							<xr:Ref>StdPicture.UncheckAll</xr:Ref>
+							<xr:LoadTransparent>true</xr:LoadTransparent>
+						</Picture>
+						<ExtendedTooltip name="СнятьВсеОтметкиРасширеннаяПодсказка" id="91"/>
+					</Button>
 					<Button name="ФормаЗаполнить" id="56">
 						<Type>CommandBarButton</Type>
 						<CommandName>Form.Command.Заполнить</CommandName>
@@ -463,6 +487,36 @@
 				</v8:item>
 			</ToolTip>
 			<Action>СоздатьЛабИсследПоСырью</Action>
+		</Command>
+		<Command name="ОтметитьНеСозданные" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отметить не созданные</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отметить не созданные</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОтметитьНеСозданные</Action>
+		</Command>
+		<Command name="СнятьВсеОтметки" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Снять все отметки</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Снять все отметки</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>СнятьВсеОтметки</Action>
 		</Command>
 	</Commands>
 </Form>
