@@ -130,7 +130,26 @@
 			<RowFilter xsi:nil="true"/>
 			<ContextMenu name="ПартииКонтекстноеМеню" id="8"/>
 			<AutoCommandBar name="ПартииКоманднаяПанель" id="9">
+				<Autofill>false</Autofill>
 				<ChildItems>
+					<Button name="ОтметитьВсеНеСозданные" id="88">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.ОтметитьВсеНесозданные</CommandName>
+						<Picture>
+							<xr:Ref>StdPicture.CheckAll</xr:Ref>
+							<xr:LoadTransparent>true</xr:LoadTransparent>
+						</Picture>
+						<ExtendedTooltip name="ОтметитьВсеНеСозданныеРасширеннаяПодсказка" id="89"/>
+					</Button>
+					<Button name="СнятьВсеОтметки" id="90">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.СнятьВсеОтметки</CommandName>
+						<Picture>
+							<xr:Ref>StdPicture.UncheckAll</xr:Ref>
+							<xr:LoadTransparent>true</xr:LoadTransparent>
+						</Picture>
+						<ExtendedTooltip name="СнятьВсеОтметкиРасширеннаяПодсказка" id="91"/>
+					</Button>
 					<Button name="ФормаЗаполнить" id="56">
 						<Type>CommandBarButton</Type>
 						<CommandName>Form.Command.Заполнить</CommandName>
@@ -138,17 +157,31 @@
 					</Button>
 					<Button name="ПартииСоздатьЛИ" id="73">
 						<Type>CommandBarButton</Type>
+						<Representation>PictureAndText</Representation>
 						<CommandName>Form.Command.СоздатьЛИ</CommandName>
+						<Picture>
+							<xr:Ref>StdPicture.DataCompositionNewNestedScheme</xr:Ref>
+							<xr:LoadTransparent>true</xr:LoadTransparent>
+						</Picture>
 						<ExtendedTooltip name="ПартииСоздатьЛИРасширеннаяПодсказка" id="74"/>
 					</Button>
 					<Button name="ПартииОтправить" id="75">
 						<Type>CommandBarButton</Type>
 						<CommandName>Form.Command.Отправить</CommandName>
+						<Picture>
+							<xr:Ref>StdPicture.InputOnBasis</xr:Ref>
+							<xr:LoadTransparent>true</xr:LoadTransparent>
+						</Picture>
 						<ExtendedTooltip name="ПартииОтправитьРасширеннаяПодсказка" id="76"/>
 					</Button>
 					<Button name="ПартииСоздатьЛабИсследПоСырью" id="83">
 						<Type>CommandBarButton</Type>
+						<Representation>PictureAndText</Representation>
 						<CommandName>Form.Command.СоздатьЛабИсследПоСырью</CommandName>
+						<Picture>
+							<xr:Ref>StdPicture.DataCompositionNewGroup</xr:Ref>
+							<xr:LoadTransparent>true</xr:LoadTransparent>
+						</Picture>
 						<ExtendedTooltip name="ПартииСоздатьЛабИсследПоСырьюРасширеннаяПодсказка" id="84"/>
 					</Button>
 				</ChildItems>
@@ -463,6 +496,36 @@
 				</v8:item>
 			</ToolTip>
 			<Action>СоздатьЛабИсследПоСырью</Action>
+		</Command>
+		<Command name="ОтметитьВсеНесозданные" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отметить все несозданные</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отметить все несозданные</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОтметитьВсеНесозданные</Action>
+		</Command>
+		<Command name="СнятьВсеОтметки" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Снять все отметки</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Снять все отметки</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>СнятьВсеОтметки</Action>
 		</Command>
 	</Commands>
 </Form>
