@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.8">
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.9">
 	<Title>
 		<v8:item>
 			<v8:lang>ru</v8:lang>
@@ -130,7 +130,32 @@
 			<RowFilter xsi:nil="true"/>
 			<ContextMenu name="ПартииКонтекстноеМеню" id="8"/>
 			<AutoCommandBar name="ПартииКоманднаяПанель" id="9">
+				<Autofill>false</Autofill>
 				<ChildItems>
+					<Button name="ОтметитьНеСозданные" id="88">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.ОтметитьНеСозданные</CommandName>
+						<Picture>
+							<xr:Ref>StdPicture.CheckAll</xr:Ref>
+							<xr:LoadTransparent>true</xr:LoadTransparent>
+						</Picture>
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Отметить не созданные</v8:content>
+							</v8:item>
+						</Title>
+						<ExtendedTooltip name="ОтметитьНеСозданныеРасширеннаяПодсказка" id="89"/>
+					</Button>
+					<Button name="СнятьВсеОтметки" id="90">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.СнятьВсеОтметки</CommandName>
+						<Picture>
+							<xr:Ref>StdPicture.UncheckAll</xr:Ref>
+							<xr:LoadTransparent>true</xr:LoadTransparent>
+						</Picture>
+						<ExtendedTooltip name="СнятьВсеОтметкиРасширеннаяПодсказка" id="91"/>
+					</Button>
 					<Button name="ФормаЗаполнить" id="56">
 						<Type>CommandBarButton</Type>
 						<CommandName>Form.Command.Заполнить</CommandName>
@@ -139,16 +164,36 @@
 					<Button name="ПартииСоздатьЛИ" id="73">
 						<Type>CommandBarButton</Type>
 						<CommandName>Form.Command.СоздатьЛИ</CommandName>
+						<Picture>
+							<xr:Ref>StdPicture.DataCompositionNewNestedScheme</xr:Ref>
+							<xr:LoadTransparent>true</xr:LoadTransparent>
+						</Picture>
 						<ExtendedTooltip name="ПартииСоздатьЛИРасширеннаяПодсказка" id="74"/>
 					</Button>
 					<Button name="ПартииОтправить" id="75">
 						<Type>CommandBarButton</Type>
+						<Representation>PictureAndText</Representation>
 						<CommandName>Form.Command.Отправить</CommandName>
+						<Picture>
+							<xr:Ref>StdPicture.SendMessage</xr:Ref>
+							<xr:LoadTransparent>true</xr:LoadTransparent>
+						</Picture>
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Отправить</v8:content>
+							</v8:item>
+						</Title>
 						<ExtendedTooltip name="ПартииОтправитьРасширеннаяПодсказка" id="76"/>
 					</Button>
 					<Button name="ПартииСоздатьЛабИсследПоСырью" id="83">
 						<Type>CommandBarButton</Type>
+						<Representation>PictureAndText</Representation>
 						<CommandName>Form.Command.СоздатьЛабИсследПоСырью</CommandName>
+						<Picture>
+							<xr:Ref>StdPicture.DataCompositionNewGroup</xr:Ref>
+							<xr:LoadTransparent>true</xr:LoadTransparent>
+						</Picture>
 						<ExtendedTooltip name="ПартииСоздатьЛабИсследПоСырьюРасширеннаяПодсказка" id="84"/>
 					</Button>
 				</ChildItems>
@@ -463,6 +508,36 @@
 				</v8:item>
 			</ToolTip>
 			<Action>СоздатьЛабИсследПоСырью</Action>
+		</Command>
+		<Command name="ОтметитьНеСозданные" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отметить не созданные</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отметить не созданные</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОтметитьНеСозданные</Action>
+		</Command>
+		<Command name="СнятьВсеОтметки" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Снять все отметки</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Снять все отметки</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>СнятьВсеОтметки</Action>
 		</Command>
 	</Commands>
 </Form>
