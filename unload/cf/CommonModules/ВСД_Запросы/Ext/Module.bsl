@@ -3751,7 +3751,7 @@
 &НаСервере
 //Функция CreateBusinessEntity_2(СписокКонстант, Наименование,НаименованиеПолное,ИНН,КПП,ОГРН,СтранаGUID, РегионGUID,ГородGUID,	Адрес) Экспорт
 Функция ХозСубъект_Создать_Запрос( ПараметрыОрганизации, ВыбХозСубъект ) 
-	_guid = Новый УникальныйИдентификатор();
+	_guid = Новый УникальныйИдентификатор;
 	ЗапросXML = "
 	|<SOAP-ENV:Envelope xmlns:dt='http://api.vetrf.ru/schema/cdm/dictionary/v2' 
 	|xmlns:bs='http://api.vetrf.ru/schema/cdm/base' 
@@ -4748,7 +4748,7 @@
 				    Продолжить;
 				КонецЕсли;
 				Запрос=Запрос+"
-				|                    <dt:productMarks class='"+ СтрокаМаркировки.Класс.Идентификатор() +"'>"+СтрокаМаркировки.Маркировка+"</dt:productMarks>";
+				|                    <dt:productMarks class='"+ ПолучитьИдентификаторПеречисления( СтрокаМаркировки.Класс ) +"'>"+СтрокаМаркировки.Маркировка+"</dt:productMarks>";
 			КонецЦикла;		
 			Запрос=Запрос+"
    	   		|                  </dt:package>";
@@ -7273,7 +7273,7 @@
     |                  <bs:guid>"+ СокрЛП( Параметры["Цель"].Guid ) +"</bs:guid>
     |                </vd:purpose>
     |                <vd:cargoInspected>"+ НашеБулево(ДокСсылка.cargoInspected) +"</vd:cargoInspected>
-    |                <vd:cargoExpertized>"+ ПолучитьИдентификаторПеречисления( ДокСсылка.РезультатыИсследований.Идентификатор )+"</vd:cargoExpertized>
+    |                <vd:cargoExpertized>"+ ПолучитьИдентификаторПеречисления( ДокСсылка.РезультатыИсследований )+"</vd:cargoExpertized>
     |                <vd:locationProsperity>"+СокрЛП(ДокСсылка.Местность)+"</vd:locationProsperity>
     |                <vd:specialMarks>"+СокрЛП(ДокСсылка.ОсобыеОтметки)+"</vd:specialMarks>
     |              </vd:authentication>";
