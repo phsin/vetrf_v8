@@ -747,15 +747,13 @@
 	ПараметрыОтправки.Action = Action;
 	
 	xdto = ВСД_Отправка.ОтправитьSOAPНаСервере( ПараметрыОтправки );
-	
-	НачатьТранзакцию();
-	
+		
 	КолвоПолучено = Число(xdto.Body.getSubProductByProductListResponse.subProductList.count);
 	Если КолвоПолучено>0 Тогда
 		Попытка
 			//subProductList = xdto.subProductList.subProduct;
 			//КолвоПолучено = Число(xdto.Body.getSubProductByProductListResponse.subProductList.count);
-			
+			НачатьТранзакцию();
 			Если ТипЗнч(xdto.Body.getSubProductByProductListResponse.subProductList.subProduct)<>Тип("СписокXDTO") Тогда 
 				subProductList = Новый Массив;
 				subProductList.Добавить(xdto.Body.getSubProductByProductListResponse.subProductList.subProduct);
@@ -821,8 +819,8 @@
 			СообщитьИнфо("Ошибка при получении ВСД_Продукция "+ОписаниеОшибки());
 		КонецПопытки;
 	Иначе
-		СообщитьИнфо("Список ВСД_ВидПродукции для "+ Владелец+ " пуст");
-		Ответ = Истина;
+		СообщитьИнфо("Список ВСД_ВидПродукции для "+ Владелец+ " пуст.");
+		Ответ = Ложь;
 	КонецЕсли;	
 	
 	Возврат Ответ;
