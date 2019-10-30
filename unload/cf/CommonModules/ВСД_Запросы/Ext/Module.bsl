@@ -2757,15 +2757,16 @@
 		КонецЕсли;
 		
 		Для каждого activityLocation ИЗ activityLocationList Цикл		
-			guid = activityLocation.enterprise.guid;
-			Если guid <> Неопределено Тогда
+			Попытка
+				guid = activityLocation.enterprise.guid;
 				Площадка_НайтиПоGUID(Параметры, guid, ВыбХозСубъект, ЗагрузитьПлощадку, Истина);
-			Иначе
+			Исключение
 				Продолжить;
-			КонецЕсли
+			КонецПопытки;
 		КонецЦикла;
 		
 		Ответ = Истина;
+		
 	Исключение
 		
 		ЗаписьЖурналаРегистрации(
