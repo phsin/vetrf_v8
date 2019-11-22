@@ -663,6 +663,22 @@
 												<CommandName>Form.Command.кнПодбор</CommandName>
 												<ExtendedTooltip name="ТоварыкнПодборРасширеннаяПодсказка" id="317"/>
 											</Button>
+											<Button name="Заполнить" id="473">
+												<Type>CommandBarButton</Type>
+												<CommandName>0</CommandName>
+												<Title>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>Зполнить просрочкой</v8:content>
+													</v8:item>
+												</Title>
+												<ExtendedTooltip name="ЗаполнитьРасширеннаяПодсказка" id="474"/>
+											</Button>
+											<Button name="ТоварыЗаполнитьПросроченнымиТоварами" id="475">
+												<Type>CommandBarButton</Type>
+												<CommandName>Form.Command.ЗаполнитьПросроченнымиТоварами</CommandName>
+												<ExtendedTooltip name="ТоварыЗаполнитьПросроченнымиТоварамиРасширеннаяПодсказка" id="476"/>
+											</Button>
 										</ChildItems>
 									</AutoCommandBar>
 									<ExtendedTooltip name="ТоварыРасширеннаяПодсказка" id="98"/>
@@ -1585,6 +1601,21 @@
 			</ToolTip>
 			<Action>ДобавитьММ</Action>
 			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ЗаполнитьПросроченнымиТоварами" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заполнить просроченными товарами</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заполнить просроченными товарами</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ЗаполнитьПросроченнымиТоварами</Action>
 		</Command>
 	</Commands>
 </Form>
