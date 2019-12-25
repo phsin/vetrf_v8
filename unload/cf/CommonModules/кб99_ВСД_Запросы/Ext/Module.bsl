@@ -3992,7 +3992,11 @@
 		Если НЕ(Response.Свойства().Получить("getStockEntryListResponse") = Неопределено) Тогда
 			seList = Response.getStockEntryListResponse.stockEntryList.StockEntry;	
 		ИначеЕсли НЕ(Response.Свойства().Получить("processIncomingConsignmentResponse") = Неопределено) Тогда
-			seList = Response.processIncomingConsignmentResponse.stockEntry;	
+			Если Response.processIncomingConsignmentResponse.Свойства().Получить("stockEntry") <> Неопределено Тогда 
+				seList = Response.processIncomingConsignmentResponse.stockEntry;	
+			Иначе
+				Возврат;
+			КонецЕсли
 		ИначеЕсли НЕ(Response.Свойства().Получить("getStockEntryByGuidResponse") = Неопределено) Тогда			
 			seList = Response.getStockEntryByGuidResponse.stockEntry;	
 		Иначе

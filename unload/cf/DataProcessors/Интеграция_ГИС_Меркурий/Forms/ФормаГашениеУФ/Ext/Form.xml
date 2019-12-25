@@ -361,6 +361,9 @@
 									<Width>10</Width>
 									<ContextMenu name="ВСДВходящиеКоличествоВозвратКонтекстноеМеню" id="385"/>
 									<ExtendedTooltip name="ВСДВходящиеКоличествоВозвратРасширеннаяПодсказка" id="386"/>
+									<Events>
+										<Event name="OnChange">ВСДВходящиеКоличествоВозвратПриИзменении</Event>
+									</Events>
 								</InputField>
 								<InputField name="ВСДВходящиеДатаИзготовления1" id="145">
 									<DataPath>Объект.ВСДВходящие.ДатаИзготовления1</DataPath>
