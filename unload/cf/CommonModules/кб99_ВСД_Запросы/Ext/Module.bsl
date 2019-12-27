@@ -4810,7 +4810,10 @@
 	
 	Если НЕ(ЗначениеЗаполнено(докОснование)) Тогда
 		Возврат тзДок;
-	КонецЕсли;
+	ИначеЕсли типЗнч( докОснование ) = Тип("ДокументСсылка.ВСД2") Тогда 
+		СтрТЗ = тзДок.Добавить();
+		СтрТЗ.Док = докОснование;		
+	Иначе
  		Запрос = Новый Запрос;
     	ТекстЗапроса = 
         "ВЫБРАТЬ
@@ -4836,6 +4839,8 @@
 			СтрТЗ = тзДок.Добавить();
 			СтрТЗ.Док = ВСДРезультат;
 		КонецЦикла;	
+	КонецЕсли;
+	
 	Возврат тзДок;
 КонецФункции
 
@@ -4940,6 +4945,82 @@
 	КонецЦикла;
 	
 	Возврат Ответ;		
+	
+КонецФункции
+
+Функция ВСД2_ЗагрузитьПоUUID_ЗапросXML( Параметры, док )
+	
+	Запрос = "
+	|<SOAP-ENV:Envelope xmlns:dt='http://api.vetrf.ru/schema/cdm/dictionary/v2' 
+	| xmlns:bs='http://api.vetrf.ru/schema/cdm/base' 
+	| xmlns:merc='http://api.vetrf.ru/schema/cdm/mercury/g2b/applications/v2' 
+	| xmlns:apldef='http://api.vetrf.ru/schema/cdm/application/ws-definitions' 
+	| xmlns:apl='http://api.vetrf.ru/schema/cdm/application' 
+	| xmlns:vd='http://api.vetrf.ru/schema/cdm/mercury/vet-document/v2' 
+	| xmlns:SOAP-ENV='http://schemas.xmlsoap.org/soap/envelope/'>
+	|  <SOAP-ENV:Header/>
+	|  <SOAP-ENV:Body>
+	|    <apldef:submitApplicationRequest>
+	|      <apldef:apiKey>"+ Параметры["param_api_key"] +"</apldef:apiKey>
+	|      <apl:application>
+	|        <apl:serviceId>mercury-g2b.service:2.0</apl:serviceId>
+	|        <apl:issuerId>"+ Параметры["param_issuer_id"] +"</apl:issuerId>
+	|        <apl:issueDate>" + ДатаXML(ТекущаяДата(), "T00:00:00") + "</apl:issueDate>
+	|        <apl:data>
+	|          <merc:getVetDocumentByUuidRequest>
+	|            <merc:localTransactionId>[GUID]</merc:localTransactionId>
+	|            <merc:initiator>
+	|              <vd:login>"+ Параметры["param_intiator_login"] +"</vd:login>
+	|            </merc:initiator>
+	|            <bs:uuid>"+ СокрЛП(док.UUID) +"</bs:uuid>
+	|            <dt:enterpriseGuid>"+ СокрЛП(Док.Отправитель_Площадка.GUID) +"</dt:enterpriseGuid>
+	|          </merc:getVetDocumentByUuidRequest>
+	|        </apl:data>
+	|      </apl:application>
+	|    </apldef:submitApplicationRequest>
+	|  </SOAP-ENV:Body>
+	|</SOAP-ENV:Envelope>
+	|";
+	
+	Возврат Запрос;
+	
+КонецФункции
+
+Функция ВСД2_ЗагрузитьПоUUID( Знач Параметры, докОснование ) Экспорт
+	
+	тзВСД = Выбрать_ВСД2( докОснование );
+	Для Каждого строкаВСД ИЗ тзВСД Цикл
+		
+		Если НЕ(ЗначениеЗаполнено(строкаВСД.Док.UUID)) Тогда 
+			СообщитьИнфо("Пустой UUID в документе "+строкаВСД.Док);
+			Возврат Ложь;
+		КонецЕсли;
+		
+		ЗапросXML = ВСД2_ЗагрузитьПоUUID_ЗапросXML( Параметры, строкаВСД.Док );	
+		Service = "platform/services/2.0/ApplicationManagementService";
+	    Action = "submitApplicationRequest";	
+		
+		ПараметрыОтправки = кб99_ВСД_Отправка.ПараметрыОтправкиИнициализация( Параметры );
+		ПараметрыОтправки.ЗапросXML = ЗапросXML;
+	    ПараметрыОтправки.Service = Service;
+	    ПараметрыОтправки.Action = Action;
+		xdto = кб99_ВСД_Отправка.ОтправитьSOAPНаСервере( ПараметрыОтправки );
+		
+		Если НайтиОшибки(xdto ) Тогда
+			Возврат Ложь;
+		КонецЕсли;
+		
+		appID = кб99_ВСД_Отправка.Получить_ApplicationID( xdto );
+
+		Ответ =  ПолучитьРезультат_ВСД2( Параметры, appID );	
+		Для А=1 По 10 Цикл
+			Если (Ответ="IN_PROCESS") Тогда
+				Ответ =  ПолучитьРезультат_ВСД2( Параметры, appID );	
+			КонецЕсли;
+		КонецЦикла;
+		
+	КонецЦикла;
+	Возврат Ответ;
 	
 КонецФункции
 
@@ -5347,6 +5428,9 @@
 		ИначеЕсли НЕ(appResult.Свойства().Получить("resolveDiscrepancyResponse") = Неопределено) Тогда
 			// Инвентаризация
 			seList = appResult.resolveDiscrepancyResponse.vetDocumentList.vetDocument;	
+		ИначеЕсли НЕ(appResult.Свойства().Получить("getVetDocumentByUuidResponse") = Неопределено) Тогда
+			// Запрос по UUID 
+			seList = appResult.getVetDocumentByUuidResponse.vetDocument;	
 		Иначе
 			СообщитьИнфо("Документы ВСД отсутствуют / Не далось прочитать ВСД ");
 			Возврат Ложь;
@@ -5585,6 +5669,7 @@
 		Если СоздаватьДокументы Тогда
 			ДокОбъект = НайтиВСДпоUUID( _uuid, "ВСД2" );
 			
+			ВсдСтруктура.ДокументОснование = ДокОбъект.ДокументОснование; // не изменяем !
 			ЗаполнитьЗначенияСвойств(ДокОбъект, ВсдСтруктура);
 			ДокОбъект.ТочкиМаршрута.Очистить();
 			
@@ -5597,7 +5682,7 @@
 				КонецЦикла;
 			КонецЕсли;
 			
-			Если НЕ ЗначениеЗаполнено( ДокОбъект.ДокументОснование  ) Тогда 
+			Если НЕ ЗначениеЗаполнено( ДокОбъект.ДокументОснование ) и ЗначениеЗаполнено(докОснование) Тогда 
 				ДокОбъект.ДокументОснование = ДокОснование;
 			КонецЕсли;
 			

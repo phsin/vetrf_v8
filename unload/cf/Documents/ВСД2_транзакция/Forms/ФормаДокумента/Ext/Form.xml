@@ -1143,7 +1143,6 @@
 					</ChildItems>
 				</Page>
 				<Page name="грЗапросы" id="318">
-					<Visible>false</Visible>
 					<Title>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
@@ -1164,6 +1163,7 @@
 							<ChildItems>
 								<Table name="Запросы" id="325">
 									<Representation>List</Representation>
+									<Visible>false</Visible>
 									<ReadOnly>true</ReadOnly>
 									<AutoInsertNewRow>true</AutoInsertNewRow>
 									<EnableStartDrag>true</EnableStartDrag>
