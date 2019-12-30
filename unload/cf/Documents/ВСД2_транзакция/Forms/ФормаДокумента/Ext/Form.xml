@@ -64,11 +64,19 @@
 						<InputField name="Статус" id="40">
 							<DataPath>Объект.Статус</DataPath>
 							<EditMode>EnterOnInput</EditMode>
+							<Width>10</Width>
 							<AutoMaxWidth>false</AutoMaxWidth>
-							<MaxWidth>12</MaxWidth>
+							<MaxWidth>10</MaxWidth>
 							<Font ref="style:NormalTextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
 							<ContextMenu name="СтатусКонтекстноеМеню" id="41"/>
 							<ExtendedTooltip name="СтатусРасширеннаяПодсказка" id="42"/>
+						</InputField>
+						<InputField name="СтатусВСД" id="477">
+							<DataPath>Объект.СтатусВСД</DataPath>
+							<ReadOnly>true</ReadOnly>
+							<Width>10</Width>
+							<ContextMenu name="СтатусВСДКонтекстноеМеню" id="478"/>
+							<ExtendedTooltip name="СтатусВСДРасширеннаяПодсказка" id="479"/>
 						</InputField>
 						<InputField name="ДокументОснование" id="70">
 							<DataPath>Объект.ДокументОснование</DataPath>
@@ -1163,7 +1171,6 @@
 							<ChildItems>
 								<Table name="Запросы" id="325">
 									<Representation>List</Representation>
-									<Visible>false</Visible>
 									<ReadOnly>true</ReadOnly>
 									<AutoInsertNewRow>true</AutoInsertNewRow>
 									<EnableStartDrag>true</EnableStartDrag>
