@@ -113,6 +113,60 @@
 							<ContextMenu name="НомерПлощадкиКонтекстноеМеню" id="23"/>
 							<ExtendedTooltip name="НомерПлощадкиРасширеннаяПодсказка" id="24"/>
 						</InputField>
+						<InputField name="ПарамКолонкаСортировкиПартииСписания" id="105">
+							<DataPath>Объект.ПарамКолонкаСортировкиПартииСписания</DataPath>
+							<ListChoiceMode>true</ListChoiceMode>
+							<ChooseType>false</ChooseType>
+							<ChoiceList>
+								<xr:Item>
+									<xr:Presentation/>
+									<xr:CheckState>0</xr:CheckState>
+									<xr:Value xsi:type="FormChoiceListDesTimeValue">
+										<Presentation>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Дата изменения</v8:content>
+											</v8:item>
+										</Presentation>
+										<Value xsi:type="xs:string">ДатаИзменения</Value>
+									</xr:Value>
+								</xr:Item>
+								<xr:Item>
+									<xr:Presentation/>
+									<xr:CheckState>0</xr:CheckState>
+									<xr:Value xsi:type="FormChoiceListDesTimeValue">
+										<Presentation>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Срок годности</v8:content>
+											</v8:item>
+										</Presentation>
+										<Value xsi:type="xs:string">ДатаСрокГодности1</Value>
+									</xr:Value>
+								</xr:Item>
+								<xr:Item>
+									<xr:Presentation/>
+									<xr:CheckState>0</xr:CheckState>
+									<xr:Value xsi:type="FormChoiceListDesTimeValue">
+										<Presentation>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Изготовлено</v8:content>
+											</v8:item>
+										</Presentation>
+										<Value xsi:type="xs:string">ДатаИзготовления1</Value>
+									</xr:Value>
+								</xr:Item>
+							</ChoiceList>
+							<ContextMenu name="ПарамКолонкаСортировкиПартииСписанияКонтекстноеМеню" id="106"/>
+							<ExtendedTooltip name="ПарамКолонкаСортировкиПартииСписанияРасширеннаяПодсказка" id="107"/>
+						</InputField>
+						<CheckBoxField name="ПарамЗнакСортировкиУбывание" id="108">
+							<DataPath>Объект.ПарамЗнакСортировкиУбывание</DataPath>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="ПарамЗнакСортировкиУбываниеКонтекстноеМеню" id="109"/>
+							<ExtendedTooltip name="ПарамЗнакСортировкиУбываниеРасширеннаяПодсказка" id="110"/>
+						</CheckBoxField>
 					</ChildItems>
 				</Page>
 				<Page name="Группа15" id="34">
