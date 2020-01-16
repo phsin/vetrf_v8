@@ -113,6 +113,12 @@
 							<ContextMenu name="НомерПлощадкиКонтекстноеМеню" id="23"/>
 							<ExtendedTooltip name="НомерПлощадкиРасширеннаяПодсказка" id="24"/>
 						</InputField>
+						<CheckBoxField name="ПерсональныеПараметрыСписанияПартий" id="111">
+							<DataPath>Объект.ПерсональныеПараметрыСписанияПартий</DataPath>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="ПерсональныеПараметрыСписанияПартийКонтекстноеМеню" id="112"/>
+							<ExtendedTooltip name="ПерсональныеПараметрыСписанияПартийРасширеннаяПодсказка" id="113"/>
+						</CheckBoxField>
 						<InputField name="ПарамКолонкаСортировкиПартииСписания" id="105">
 							<DataPath>Объект.ПарамКолонкаСортировкиПартииСписания</DataPath>
 							<ListChoiceMode>true</ListChoiceMode>

@@ -611,6 +611,44 @@
 														</InputField>
 													</ChildItems>
 												</UsualGroup>
+												<UsualGroup name="Группа12" id="480">
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>УПД</v8:content>
+														</v8:item>
+													</Title>
+													<Group>Horizontal</Group>
+													<Representation>None</Representation>
+													<ThroughAlign>Use</ThroughAlign>
+													<ExtendedTooltip name="Группа12РасширеннаяПодсказка" id="481"/>
+													<ChildItems>
+														<InputField name="УпдНомер" id="482">
+															<DataPath>Объект.УПДНомер</DataPath>
+															<Title>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>УПД №</v8:content>
+																</v8:item>
+															</Title>
+															<EditMode>EnterOnInput</EditMode>
+															<Width>10</Width>
+															<ContextMenu name="УпдНомерКонтекстноеМеню" id="483"/>
+															<ExtendedTooltip name="УпдНомерРасширеннаяПодсказка" id="484"/>
+														</InputField>
+														<InputField name="УпдДата" id="485">
+															<DataPath>Объект.УпдДата</DataPath>
+															<Title>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>от</v8:content>
+																</v8:item>
+															</Title>
+															<ContextMenu name="УпдДатаКонтекстноеМеню" id="486"/>
+															<ExtendedTooltip name="УпдДатаРасширеннаяПодсказка" id="487"/>
+														</InputField>
+													</ChildItems>
+												</UsualGroup>
 											</ChildItems>
 										</UsualGroup>
 									</ChildItems>

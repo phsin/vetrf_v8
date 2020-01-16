@@ -5056,7 +5056,7 @@
     |<apldef:submitApplicationRequest>
 	|      <apldef:apiKey>"+ СокрЛП( Параметры["param_api_key"] ) +"</apldef:apiKey>
 	|      <apl:application>
-	|        <apl:serviceId>mercury-g2b.service:2.0</apl:serviceId>
+	|        <apl:serviceId>mercury-g2b.service:2.1</apl:serviceId>
 	|        <apl:issuerId>"+ СокрЛП( Параметры["param_issuer_id"] ) +"</apl:issuerId>
 	|        <apl:issueDate>" + ДатаXML(ДокСсылка.Дата, "T00:00:00") + "</apl:issueDate>
 	|        <apl:data>
@@ -5197,6 +5197,7 @@
 	КонецЦикла;	
 	
 		// Связанные документы
+		// http://help.vetrf.ru/wiki/DocumentType_v2.0
 		// тип 16 = Заказ, 6 = ТОРГ12,  1 = ТрН
 //        |          <vd:issueSeries>А</vd:issueSeries>
 //        |          <vd:issueDate>2017-09-26</vd:issueDate>
@@ -5218,6 +5219,16 @@
     	    |          <vd:issueNumber>"+СокрЛП(ДокСсылка.ТОРГ12Номер)+"</vd:issueNumber>
 	        |          <vd:issueDate>"+ ДатаXML(ДокСсылка.ТОРГ12Дата) +"</vd:issueDate>
     	    |          <vd:type>6</vd:type>
+        	|          <vd:relationshipType>1</vd:relationshipType>
+	        |        </vd:relatedDocument>";
+        КонецЕсли;
+		
+		Если ЗначениеЗаполнено(ДокСсылка.УпдНомер) Тогда
+	        СвязанныеДокументы = СвязанныеДокументы+ "
+	        |        <vd:relatedDocument>
+    	    |          <vd:issueNumber>"+СокрЛП(ДокСсылка.УпдНомер)+"</vd:issueNumber>
+	        |          <vd:issueDate>"+ ДатаXML(ДокСсылка.УпдДата) +"</vd:issueDate>
+    	    |          <vd:type>23</vd:type>
         	|          <vd:relationshipType>1</vd:relationshipType>
 	        |        </vd:relatedDocument>";
         КонецЕсли;
