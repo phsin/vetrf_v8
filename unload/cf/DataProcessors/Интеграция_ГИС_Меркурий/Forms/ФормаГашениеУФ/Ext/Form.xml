@@ -33,6 +33,11 @@
 				<CommandName>Form.Command.кнПогасить</CommandName>
 				<ExtendedTooltip name="кнПогаситьРасширеннаяПодсказка" id="268"/>
 			</Button>
+			<Button name="кнПереместить" id="630">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.кнПереместитьПартии</CommandName>
+				<ExtendedTooltip name="кнПереместитьРасширеннаяПодсказка" id="631"/>
+			</Button>
 		</ChildItems>
 	</AutoCommandBar>
 	<Events>
@@ -776,6 +781,12 @@
 									<EditMode>EnterOnInput</EditMode>
 									<ContextMenu name="ВСДВходящиеТермическиеУсловияПеревозкиКонтекстноеМеню" id="398"/>
 									<ExtendedTooltip name="ВСДВходящиеТермическиеУсловияПеревозкиРасширеннаяПодсказка" id="399"/>
+								</InputField>
+								<InputField name="ВСДВходящиеВСД_Партия" id="627">
+									<DataPath>Объект.ВСДВходящие.ВСД_Партия</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ВСДВходящиеВСД_ПартияКонтекстноеМеню" id="628"/>
+									<ExtendedTooltip name="ВСДВходящиеВСД_ПартияРасширеннаяПодсказка" id="629"/>
 								</InputField>
 							</ChildItems>
 						</Table>
@@ -1577,6 +1588,21 @@
 			</ToolTip>
 			<Action>кнОформитьВходящийВСД</Action>
 			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="кнПереместитьПартии" id="15">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Переместить партии</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Кн переместить партии</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>кнПереместитьПартии</Action>
 		</Command>
 	</Commands>
 </Form>
