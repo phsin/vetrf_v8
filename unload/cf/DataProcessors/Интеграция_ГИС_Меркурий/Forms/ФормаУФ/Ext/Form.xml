@@ -875,6 +875,38 @@
 										</Button>
 									</ChildItems>
 								</UsualGroup>
+								<UsualGroup name="ЛабораторныеИсследования" id="615">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Лабораторные исследования</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Лабораторные исследования</v8:content>
+										</v8:item>
+									</ToolTip>
+									<HorizontalStretch>true</HorizontalStretch>
+									<VerticalStretch>false</VerticalStretch>
+									<Representation>StrongSeparation</Representation>
+									<ExtendedTooltip name="ЛабораторныеИсследованияРасширеннаяПодсказка" id="616"/>
+									<ChildItems>
+										<Button name="кнОформитьЛабИсследования" id="617">
+											<Type>UsualButton</Type>
+											<HorizontalStretch>true</HorizontalStretch>
+											<CommandName>Form.Command.кнОформитьЛабИсследования</CommandName>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Оформить Лаб. Исследования</v8:content>
+												</v8:item>
+											</Title>
+											<ExtendedTooltip name="кнОформитьЛабИсследованияРасширеннаяПодсказка" id="618"/>
+										</Button>
+									</ChildItems>
+								</UsualGroup>
 							</ChildItems>
 						</UsualGroup>
 						<Table name="Партии" id="191">
@@ -3921,6 +3953,21 @@
 			</ToolTip>
 			<Action>кнПечатьДокНаПринтер</Action>
 			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="кнОформитьЛабИсследования" id="56">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Кн оформить лаб исследования</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Кн оформить лаб исследования</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>кнОформитьЛабИсследования</Action>
 		</Command>
 	</Commands>
 </Form>

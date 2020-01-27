@@ -152,7 +152,18 @@
 					</Button>
 					<Button name="ФормаЗаполнить" id="56">
 						<Type>CommandBarButton</Type>
+						<Representation>PictureAndText</Representation>
 						<CommandName>Form.Command.Заполнить</CommandName>
+						<Picture>
+							<xr:Ref>StdPicture.DataCompositionNewTable</xr:Ref>
+							<xr:LoadTransparent>true</xr:LoadTransparent>
+						</Picture>
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Заполнить Актуальными партиями</v8:content>
+							</v8:item>
+						</Title>
 						<ExtendedTooltip name="ФормаЗаполнитьРасширеннаяПодсказка" id="57"/>
 					</Button>
 					<Button name="ПартииСоздатьЛИ" id="73">
@@ -167,11 +178,18 @@
 					</Button>
 					<Button name="ПартииОтправить" id="75">
 						<Type>CommandBarButton</Type>
+						<Representation>PictureAndText</Representation>
 						<CommandName>Form.Command.Отправить</CommandName>
 						<Picture>
 							<xr:Ref>StdPicture.InputOnBasis</xr:Ref>
 							<xr:LoadTransparent>true</xr:LoadTransparent>
 						</Picture>
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Отправить</v8:content>
+							</v8:item>
+						</Title>
 						<ExtendedTooltip name="ПартииОтправитьРасширеннаяПодсказка" id="76"/>
 					</Button>
 					<Button name="ПартииСоздатьЛабИсследПоСырью" id="83">
