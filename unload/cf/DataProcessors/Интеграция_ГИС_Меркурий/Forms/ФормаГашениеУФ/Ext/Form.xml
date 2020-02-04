@@ -378,15 +378,6 @@
 									<MaxWidth>5</MaxWidth>
 									<ContextMenu name="ВСДВходящиеДатаИзготовления1КонтекстноеМеню" id="146"/>
 									<ExtendedTooltip name="ВСДВходящиеДатаИзготовления1РасширеннаяПодсказка" id="147"/>
-									<Events>
-										<Event name="OnChange">ВСДВходящиеДатаИзготовления1ПриИзменении</Event>
-									</Events>
-								</InputField>
-								<InputField name="ВСДВходящиеДатаИзготовления1Строка" id="632">
-									<DataPath>Объект.ВСДВходящие.ДатаИзготовления1Строка</DataPath>
-									<EditMode>EnterOnInput</EditMode>
-									<ContextMenu name="ВСДВходящиеДатаИзготовления1СтрокаКонтекстноеМеню" id="633"/>
-									<ExtendedTooltip name="ВСДВходящиеДатаИзготовления1СтрокаРасширеннаяПодсказка" id="634"/>
 								</InputField>
 								<InputField name="ВСДВходящиеДатаИзготовления2" id="151">
 									<DataPath>Объект.ВСДВходящие.ДатаИзготовления2</DataPath>
@@ -395,16 +386,6 @@
 									<MaxWidth>10</MaxWidth>
 									<ContextMenu name="ВСДВходящиеДатаИзготовления2КонтекстноеМеню" id="152"/>
 									<ExtendedTooltip name="ВСДВходящиеДатаИзготовления2РасширеннаяПодсказка" id="153"/>
-									<Events>
-										<Event name="OnChange">ВСДВходящиеДатаИзготовления2ПриИзменении</Event>
-										<Event name="TextEditEnd">ВСДВходящиеДатаИзготовления2ОкончаниеВводаТекста</Event>
-									</Events>
-								</InputField>
-								<InputField name="ВСДВходящиеДатаИзготовления2Строка" id="635">
-									<DataPath>Объект.ВСДВходящие.ДатаИзготовления2Строка</DataPath>
-									<EditMode>EnterOnInput</EditMode>
-									<ContextMenu name="ВСДВходящиеДатаИзготовления2СтрокаКонтекстноеМеню" id="636"/>
-									<ExtendedTooltip name="ВСДВходящиеДатаИзготовления2СтрокаРасширеннаяПодсказка" id="637"/>
 								</InputField>
 								<InputField name="ВСДВходящиеДатаСрокГодности1" id="154">
 									<DataPath>Объект.ВСДВходящие.ДатаСрокГодности1</DataPath>
@@ -413,24 +394,12 @@
 									<ContextMenu name="ВСДВходящиеДатаСрокГодности1КонтекстноеМеню" id="155"/>
 									<ExtendedTooltip name="ВСДВходящиеДатаСрокГодности1РасширеннаяПодсказка" id="156"/>
 								</InputField>
-								<InputField name="ВСДВходящиеДатаСрокГодности1Строка" id="638">
-									<DataPath>Объект.ВСДВходящие.ДатаСрокГодности1Строка</DataPath>
-									<EditMode>EnterOnInput</EditMode>
-									<ContextMenu name="ВСДВходящиеДатаСрокГодности1СтрокаКонтекстноеМеню" id="639"/>
-									<ExtendedTooltip name="ВСДВходящиеДатаСрокГодности1СтрокаРасширеннаяПодсказка" id="640"/>
-								</InputField>
 								<InputField name="ВСДВходящиеДатаСрокГодности2" id="160">
 									<DataPath>Объект.ВСДВходящие.ДатаСрокГодности2</DataPath>
 									<EditMode>EnterOnInput</EditMode>
 									<Width>10</Width>
 									<ContextMenu name="ВСДВходящиеДатаСрокГодности2КонтекстноеМеню" id="161"/>
 									<ExtendedTooltip name="ВСДВходящиеДатаСрокГодности2РасширеннаяПодсказка" id="162"/>
-								</InputField>
-								<InputField name="ВСДВходящиеДатаСрокГодности2Строка" id="641">
-									<DataPath>Объект.ВСДВходящие.ДатаСрокГодности2Строка</DataPath>
-									<EditMode>EnterOnInput</EditMode>
-									<ContextMenu name="ВСДВходящиеДатаСрокГодности2СтрокаКонтекстноеМеню" id="642"/>
-									<ExtendedTooltip name="ВСДВходящиеДатаСрокГодности2СтрокаРасширеннаяПодсказка" id="643"/>
 								</InputField>
 								<InputField name="ВСДВходящиеДокВСД" id="73">
 									<DataPath>Объект.ВСДВходящие.ДокВСД</DataPath>
