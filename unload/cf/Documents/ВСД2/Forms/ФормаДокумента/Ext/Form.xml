@@ -81,19 +81,38 @@
 									<ShowTitle>false</ShowTitle>
 									<ExtendedTooltip name="Группа16РасширеннаяПодсказка" id="282"/>
 									<ChildItems>
-										<InputField name="Статус" id="120">
-											<DataPath>Объект.Статус</DataPath>
-											<Title>
-												<v8:item>
-													<v8:lang>ru</v8:lang>
-													<v8:content>Статус</v8:content>
-												</v8:item>
-											</Title>
-											<EditMode>EnterOnInput</EditMode>
-											<Font ref="style:NormalTextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
-											<ContextMenu name="СтатусКонтекстноеМеню" id="121"/>
-											<ExtendedTooltip name="СтатусРасширеннаяПодсказка" id="122"/>
-										</InputField>
+										<UsualGroup name="Группа10" id="370">
+											<Group>AlwaysHorizontal</Group>
+											<ChildrenAlign>None</ChildrenAlign>
+											<Representation>None</Representation>
+											<ShowTitle>false</ShowTitle>
+											<ExtendedTooltip name="Группа10РасширеннаяПодсказка" id="371"/>
+											<ChildItems>
+												<InputField name="Статус" id="120">
+													<DataPath>Объект.Статус</DataPath>
+													<ReadOnly>true</ReadOnly>
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Статус</v8:content>
+														</v8:item>
+													</Title>
+													<EditMode>EnterOnInput</EditMode>
+													<Width>20</Width>
+													<AutoMaxWidth>false</AutoMaxWidth>
+													<MaxWidth>20</MaxWidth>
+													<Font ref="style:NormalTextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
+													<ContextMenu name="СтатусКонтекстноеМеню" id="121"/>
+													<ExtendedTooltip name="СтатусРасширеннаяПодсказка" id="122"/>
+												</InputField>
+												<InputField name="СтатусВСД" id="367">
+													<DataPath>Объект.СтатусВСД</DataPath>
+													<ReadOnly>true</ReadOnly>
+													<ContextMenu name="СтатусВСДКонтекстноеМеню" id="368"/>
+													<ExtendedTooltip name="СтатусВСДРасширеннаяПодсказка" id="369"/>
+												</InputField>
+											</ChildItems>
+										</UsualGroup>
 										<InputField name="applicationID" id="137">
 											<DataPath>Объект.applicationID</DataPath>
 											<Title>

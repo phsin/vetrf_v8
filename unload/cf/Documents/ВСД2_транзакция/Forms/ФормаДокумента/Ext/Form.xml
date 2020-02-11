@@ -64,11 +64,19 @@
 						<InputField name="Статус" id="40">
 							<DataPath>Объект.Статус</DataPath>
 							<EditMode>EnterOnInput</EditMode>
+							<Width>10</Width>
 							<AutoMaxWidth>false</AutoMaxWidth>
-							<MaxWidth>12</MaxWidth>
+							<MaxWidth>10</MaxWidth>
 							<Font ref="style:NormalTextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
 							<ContextMenu name="СтатусКонтекстноеМеню" id="41"/>
 							<ExtendedTooltip name="СтатусРасширеннаяПодсказка" id="42"/>
+						</InputField>
+						<InputField name="СтатусВСД" id="477">
+							<DataPath>Объект.СтатусВСД</DataPath>
+							<ReadOnly>true</ReadOnly>
+							<Width>10</Width>
+							<ContextMenu name="СтатусВСДКонтекстноеМеню" id="478"/>
+							<ExtendedTooltip name="СтатусВСДРасширеннаяПодсказка" id="479"/>
 						</InputField>
 						<InputField name="ДокументОснование" id="70">
 							<DataPath>Объект.ДокументОснование</DataPath>
@@ -603,6 +611,44 @@
 														</InputField>
 													</ChildItems>
 												</UsualGroup>
+												<UsualGroup name="Группа12" id="480">
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>УПД</v8:content>
+														</v8:item>
+													</Title>
+													<Group>Horizontal</Group>
+													<Representation>None</Representation>
+													<ThroughAlign>Use</ThroughAlign>
+													<ExtendedTooltip name="Группа12РасширеннаяПодсказка" id="481"/>
+													<ChildItems>
+														<InputField name="УпдНомер" id="482">
+															<DataPath>Объект.УПДНомер</DataPath>
+															<Title>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>УПД №</v8:content>
+																</v8:item>
+															</Title>
+															<EditMode>EnterOnInput</EditMode>
+															<Width>10</Width>
+															<ContextMenu name="УпдНомерКонтекстноеМеню" id="483"/>
+															<ExtendedTooltip name="УпдНомерРасширеннаяПодсказка" id="484"/>
+														</InputField>
+														<InputField name="УпдДата" id="485">
+															<DataPath>Объект.УпдДата</DataPath>
+															<Title>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>от</v8:content>
+																</v8:item>
+															</Title>
+															<ContextMenu name="УпдДатаКонтекстноеМеню" id="486"/>
+															<ExtendedTooltip name="УпдДатаРасширеннаяПодсказка" id="487"/>
+														</InputField>
+													</ChildItems>
+												</UsualGroup>
 											</ChildItems>
 										</UsualGroup>
 									</ChildItems>
@@ -662,6 +708,22 @@
 												<Type>CommandBarButton</Type>
 												<CommandName>Form.Command.кнПодбор</CommandName>
 												<ExtendedTooltip name="ТоварыкнПодборРасширеннаяПодсказка" id="317"/>
+											</Button>
+											<Button name="Заполнить" id="473">
+												<Type>CommandBarButton</Type>
+												<CommandName>0</CommandName>
+												<Title>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>Зполнить просрочкой</v8:content>
+													</v8:item>
+												</Title>
+												<ExtendedTooltip name="ЗаполнитьРасширеннаяПодсказка" id="474"/>
+											</Button>
+											<Button name="ТоварыЗаполнитьПросроченнымиТоварами" id="475">
+												<Type>CommandBarButton</Type>
+												<CommandName>Form.Command.ЗаполнитьПросроченнымиТоварами</CommandName>
+												<ExtendedTooltip name="ТоварыЗаполнитьПросроченнымиТоварамиРасширеннаяПодсказка" id="476"/>
 											</Button>
 										</ChildItems>
 									</AutoCommandBar>
@@ -846,7 +908,6 @@
 											<Height>10</Height>
 											<AutoMaxHeight>false</AutoMaxHeight>
 											<HeightInTableRows>1</HeightInTableRows>
-											<AutoInsertNewRow>true</AutoInsertNewRow>
 											<EnableStartDrag>true</EnableStartDrag>
 											<EnableDrag>true</EnableDrag>
 											<FileDragMode>AsFile</FileDragMode>
@@ -935,7 +996,6 @@
 											<Height>10</Height>
 											<AutoMaxHeight>false</AutoMaxHeight>
 											<HeightInTableRows>1</HeightInTableRows>
-											<AutoInsertNewRow>true</AutoInsertNewRow>
 											<EnableStartDrag>true</EnableStartDrag>
 											<EnableDrag>true</EnableDrag>
 											<FileDragMode>AsFile</FileDragMode>
@@ -1129,7 +1189,6 @@
 					</ChildItems>
 				</Page>
 				<Page name="грЗапросы" id="318">
-					<Visible>false</Visible>
 					<Title>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
@@ -1587,6 +1646,21 @@
 			</ToolTip>
 			<Action>ДобавитьММ</Action>
 			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ЗаполнитьПросроченнымиТоварами" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заполнить просроченными товарами</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заполнить просроченными товарами</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ЗаполнитьПросроченнымиТоварами</Action>
 		</Command>
 	</Commands>
 </Form>
