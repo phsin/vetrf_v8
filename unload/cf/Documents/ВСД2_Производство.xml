@@ -290,11 +290,11 @@
 			</Attribute>
 			<Attribute uuid="0eab74cd-8b87-4f33-b654-e2462eadb93c">
 				<Properties>
-					<Name>applicationID</Name>
+					<Name>удалитьapplicationID</Name>
 					<Synonym>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>Application ID</v8:content>
+							<v8:content>Удалитьapplication ID</v8:content>
 						</v8:item>
 					</Synonym>
 					<Comment/>
@@ -333,11 +333,11 @@
 			</Attribute>
 			<Attribute uuid="38869a55-cc19-486e-ad4d-f94b57d12380">
 				<Properties>
-					<Name>Статус</Name>
+					<Name>удалитьСтатус</Name>
 					<Synonym>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>Статус</v8:content>
+							<v8:content>Удалить статус</v8:content>
 						</v8:item>
 					</Synonym>
 					<Comment/>
@@ -376,11 +376,11 @@
 			</Attribute>
 			<Attribute uuid="75999678-e834-4da1-8165-d531a3a9d58e">
 				<Properties>
-					<Name>UUID</Name>
+					<Name>удалитьUUID</Name>
 					<Synonym>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>UUID</v8:content>
+							<v8:content>Удалить UUID</v8:content>
 						</v8:item>
 					</Synonym>
 					<Comment/>
@@ -554,7 +554,7 @@
 					</Synonym>
 					<Comment/>
 					<Type>
-						<v8:Type>cfg:EnumRef.ВСД_РезультатИсследования</v8:Type>
+						<v8:Type>cfg:EnumRef.кб99_РезультатИсследования</v8:Type>
 					</Type>
 					<PasswordMode>false</PasswordMode>
 					<Format/>
@@ -916,11 +916,11 @@
 			</Attribute>
 			<Attribute uuid="04d4737f-3bb2-43a7-a900-d9127522df29">
 				<Properties>
-					<Name>ИмяФайлаЗапрос</Name>
+					<Name>удалитьИмяФайлаЗапрос</Name>
 					<Synonym>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>Имя файла запрос</v8:content>
+							<v8:content>Удалить имя файла запрос</v8:content>
 						</v8:item>
 					</Synonym>
 					<Comment/>
@@ -959,11 +959,11 @@
 			</Attribute>
 			<Attribute uuid="8c50efbd-127c-45ed-a284-8345f1642332">
 				<Properties>
-					<Name>ИмяФайлаОтвет</Name>
+					<Name>удалитьИмяФайлаОтвет</Name>
 					<Synonym>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>Имя файла ответ</v8:content>
+							<v8:content>Удалить имя файла ответ</v8:content>
 						</v8:item>
 					</Synonym>
 					<Comment/>
@@ -1002,11 +1002,11 @@
 			</Attribute>
 			<Attribute uuid="a16774e6-d5f8-41aa-809d-90bed049f867">
 				<Properties>
-					<Name>СтатусВСД</Name>
+					<Name>удалитьСтатусВСД</Name>
 					<Synonym>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>Статус ВСД</v8:content>
+							<v8:content>Удалить статус ВСД</v8:content>
 						</v8:item>
 					</Synonym>
 					<Comment/>
@@ -2153,7 +2153,7 @@
 							</Synonym>
 							<Comment/>
 							<Type>
-								<v8:Type>cfg:EnumRef.ВСД_УровниУпаковки</v8:Type>
+								<v8:Type>cfg:EnumRef.кб99_УровниУпаковки</v8:Type>
 							</Type>
 							<PasswordMode>false</PasswordMode>
 							<Format/>
@@ -2323,7 +2323,7 @@
 							</Synonym>
 							<Comment/>
 							<Type>
-								<v8:Type>cfg:EnumRef.ВСД_УровниУпаковки</v8:Type>
+								<v8:Type>cfg:EnumRef.кб99_УровниУпаковки</v8:Type>
 							</Type>
 							<PasswordMode>false</PasswordMode>
 							<Format/>
@@ -2360,7 +2360,7 @@
 							</Synonym>
 							<Comment/>
 							<Type>
-								<v8:Type>cfg:EnumRef.ВСД_Маркировка</v8:Type>
+								<v8:Type>cfg:EnumRef.кб99_Маркировка</v8:Type>
 							</Type>
 							<PasswordMode>false</PasswordMode>
 							<Format/>

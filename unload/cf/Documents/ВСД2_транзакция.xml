@@ -408,11 +408,11 @@
 			</Attribute>
 			<Attribute uuid="dc212cd0-aec5-4a94-b3ec-ea891eb631dc">
 				<Properties>
-					<Name>applicationID</Name>
+					<Name>удалитьapplicationID</Name>
 					<Synonym>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>Application ID</v8:content>
+							<v8:content>Удалитьapplication ID</v8:content>
 						</v8:item>
 					</Synonym>
 					<Comment/>
@@ -665,11 +665,11 @@
 			</Attribute>
 			<Attribute uuid="0d3a7626-5cd0-4344-aec1-c1298c6e6662">
 				<Properties>
-					<Name>Статус</Name>
+					<Name>удалитьСтатус</Name>
 					<Synonym>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>Статус</v8:content>
+							<v8:content>Удалить статус</v8:content>
 						</v8:item>
 					</Synonym>
 					<Comment/>
@@ -708,11 +708,11 @@
 			</Attribute>
 			<Attribute uuid="fb860d32-f1b0-4c0f-a2d5-a0a58afc5f14">
 				<Properties>
-					<Name>UUID</Name>
+					<Name>удалитьUUID</Name>
 					<Synonym>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>UUID</v8:content>
+							<v8:content>Удалить UUID</v8:content>
 						</v8:item>
 					</Synonym>
 					<Comment/>
@@ -751,11 +751,11 @@
 			</Attribute>
 			<Attribute uuid="c55056a2-a907-4517-b79a-7562d030d264">
 				<Properties>
-					<Name>ФормаВСД</Name>
+					<Name>удалитьФормаВСД</Name>
 					<Synonym>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>Форма ВСД</v8:content>
+							<v8:content>Удалить форма ВСД</v8:content>
 						</v8:item>
 					</Synonym>
 					<Comment/>
@@ -1145,7 +1145,7 @@
 					</Synonym>
 					<Comment/>
 					<Type>
-						<v8:Type>cfg:EnumRef.ВСД_РезультатИсследования</v8:Type>
+						<v8:Type>cfg:EnumRef.кб99_РезультатИсследования</v8:Type>
 					</Type>
 					<PasswordMode>false</PasswordMode>
 					<Format/>
@@ -1518,7 +1518,7 @@
 					</Synonym>
 					<Comment/>
 					<Type>
-						<v8:Type>cfg:EnumRef.ВСД_ТермическиеУсловияПеревозки</v8:Type>
+						<v8:Type>cfg:EnumRef.кб99_ТермическиеУсловияПеревозки</v8:Type>
 					</Type>
 					<PasswordMode>false</PasswordMode>
 					<Format/>
@@ -1596,7 +1596,7 @@
 					</Synonym>
 					<Comment/>
 					<Type>
-						<v8:Type>cfg:EnumRef.ВСД_СтатусВСД</v8:Type>
+						<v8:Type>cfg:EnumRef.кб99_СтатусВСД</v8:Type>
 					</Type>
 					<PasswordMode>false</PasswordMode>
 					<Format/>
@@ -2351,7 +2351,7 @@
 							</Synonym>
 							<Comment/>
 							<Type>
-								<v8:Type>cfg:EnumRef.ВСД_УровниУпаковки</v8:Type>
+								<v8:Type>cfg:EnumRef.кб99_УровниУпаковки</v8:Type>
 							</Type>
 							<PasswordMode>false</PasswordMode>
 							<Format/>
@@ -2521,7 +2521,7 @@
 							</Synonym>
 							<Comment/>
 							<Type>
-								<v8:Type>cfg:EnumRef.ВСД_УровниУпаковки</v8:Type>
+								<v8:Type>cfg:EnumRef.кб99_УровниУпаковки</v8:Type>
 							</Type>
 							<PasswordMode>false</PasswordMode>
 							<Format/>
@@ -2558,7 +2558,7 @@
 							</Synonym>
 							<Comment/>
 							<Type>
-								<v8:Type>cfg:EnumRef.ВСД_Маркировка</v8:Type>
+								<v8:Type>cfg:EnumRef.кб99_Маркировка</v8:Type>
 							</Type>
 							<PasswordMode>false</PasswordMode>
 							<Format/>
@@ -3285,7 +3285,7 @@
 							</Synonym>
 							<Comment/>
 							<Type>
-								<v8:Type>cfg:EnumRef.ВСД_ТипыТранспорта</v8:Type>
+								<v8:Type>cfg:EnumRef.кб99_ТипыТранспорта</v8:Type>
 							</Type>
 							<PasswordMode>false</PasswordMode>
 							<Format/>
