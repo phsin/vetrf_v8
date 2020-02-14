@@ -141,6 +141,27 @@
 			<Subsystem>кб99_ВСД</Subsystem>
 			<CommonPicture>Ветис2</CommonPicture>
 			<CommonPicture>ЛабИсследования</CommonPicture>
+			<CommonPicture>кб99_rotate_left</CommonPicture>
+			<CommonPicture>кб99_reply</CommonPicture>
+			<CommonPicture>кб99_map_o</CommonPicture>
+			<CommonPicture>кб99_refresh</CommonPicture>
+			<CommonPicture>кб99_space_shattle</CommonPicture>
+			<CommonPicture>кб99_random</CommonPicture>
+			<CommonPicture>кб99_send</CommonPicture>
+			<CommonPicture>кб99_send_o</CommonPicture>
+			<CommonPicture>кб99_check</CommonPicture>
+			<CommonPicture>кб99_exchange</CommonPicture>
+			<CommonPicture>кб99_remove</CommonPicture>
+			<CommonPicture>кб99_plus</CommonPicture>
+			<CommonPicture>кб99_print</CommonPicture>
+			<CommonPicture>кб99_Car</CommonPicture>
+			<CommonPicture>kb99_plus</CommonPicture>
+			<CommonPicture>kb99_download</CommonPicture>
+			<CommonPicture>kb99_shopping_basket</CommonPicture>
+			<CommonPicture>kb99_wrench</CommonPicture>
+			<CommonPicture>kb99_truck</CommonPicture>
+			<CommonPicture>kb99_user</CommonPicture>
+			<CommonPicture>kb99_user_o</CommonPicture>
 			<Interface>ВСД</Interface>
 			<CommonTemplate>КомпонентаПечатиQRКода</CommonTemplate>
 			<FilterCriterion>СвязанныеДокументы</FilterCriterion>
@@ -176,6 +197,7 @@
 			<CommandGroup>ВСД_ГруппаКоманд</CommandGroup>
 			<Catalog>Контрагенты</Catalog>
 			<Catalog>Номенклатура</Catalog>
+			<Catalog>ВСД_ХозСубъект</Catalog>
 			<Catalog>ВСД_Площадка</Catalog>
 			<Catalog>ВСД_Продукция</Catalog>
 			<Catalog>ВСД_ФормыУпаковки</Catalog>
@@ -191,7 +213,6 @@
 			<Catalog>Пользователи</Catalog>
 			<Catalog>Склады</Catalog>
 			<Catalog>ВСД_Соответсвия</Catalog>
-			<Catalog>ВСД_ХозСубъект</Catalog>
 			<Catalog>кб99_ВСД2</Catalog>
 			<Document>ПеремещениеТоваров</Document>
 			<Document>ВСД2_Производство</Document>
@@ -215,7 +236,7 @@
 			<Enum>кб99_СтатусЗапроса</Enum>
 			<Report>кб99_Отчет_СравнениеОстатковПартий</Report>
 			<DataProcessor>Интеграция_ГИС_Меркурий</DataProcessor>
-			<DataProcessor>ВСД_ЛабИсследования</DataProcessor>
+			<DataProcessor>кб99_ЛабИсследования</DataProcessor>
 			<DataProcessor>кб99_ГашениеВходящихПартий</DataProcessor>
 			<InformationRegister>кб99_ОрганизацияПоУмолчанию</InformationRegister>
 			<InformationRegister>кб99_ПроизводственнаяСпецификация</InformationRegister>

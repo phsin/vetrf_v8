@@ -3975,7 +3975,7 @@
 					<Representation>Auto</Representation>
 					<ToolTip/>
 					<Picture>
-						<xr:Ref>StdPicture.Document</xr:Ref>
+						<xr:Ref>CommonPicture.кб99_print</xr:Ref>
 						<xr:LoadTransparent>true</xr:LoadTransparent>
 					</Picture>
 					<Shortcut/>
@@ -3983,14 +3983,14 @@
 			</Command>
 			<Command uuid="3f0d0389-d2e9-4ed4-a4a2-6cece721bb45">
 				<Properties>
-					<Name>ВСД_ОтправитьВСДсГашением</Name>
+					<Name>ОтправитьВСДсГашением</Name>
 					<Synonym>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
 							<v8:content>Отправить ВСД с гашением</v8:content>
 						</v8:item>
 					</Synonym>
-					<Comment>Отправить ВСД Поставщика с Гашением</Comment>
+					<Comment>Отправить ВСД с Гашением от имени Получателя</Comment>
 					<Group>CommandGroup.ВСД_ГруппаКоманд</Group>
 					<CommandParameterType>
 						<v8:Type>cfg:DocumentRef.ВСД2_транзакция</v8:Type>
@@ -4001,16 +4001,19 @@
 					<ToolTip>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>Отправить В Меркурий</v8:content>
+							<v8:content>Отправить ВСД с Гашением от имени Получателя</v8:content>
 						</v8:item>
 					</ToolTip>
-					<Picture/>
+					<Picture>
+						<xr:Ref>CommonPicture.кб99_random</xr:Ref>
+						<xr:LoadTransparent>true</xr:LoadTransparent>
+					</Picture>
 					<Shortcut/>
 				</Properties>
 			</Command>
 			<Command uuid="4742ea96-21a7-4387-8578-2fa80b3a46a3">
 				<Properties>
-					<Name>ВСД_ПогаситьВСДПоставщика</Name>
+					<Name>ПогаситьВсдОтИмениПолучателя</Name>
 					<Synonym>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
@@ -4031,13 +4034,16 @@
 							<v8:content>Отправить В Меркурий</v8:content>
 						</v8:item>
 					</ToolTip>
-					<Picture/>
+					<Picture>
+						<xr:Ref>CommonPicture.кб99_check</xr:Ref>
+						<xr:LoadTransparent>true</xr:LoadTransparent>
+					</Picture>
 					<Shortcut/>
 				</Properties>
 			</Command>
 			<Command uuid="e439568f-8816-42a2-b7bc-e87cfcd89823">
 				<Properties>
-					<Name>ВСД_Регионализация</Name>
+					<Name>УсловияПеревозки</Name>
 					<Synonym>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
@@ -4054,14 +4060,17 @@
 					</CommandParameterType>
 					<ParameterUseMode>Single</ParameterUseMode>
 					<ModifiesData>true</ModifiesData>
-					<Representation>Auto</Representation>
+					<Representation>PictureAndText</Representation>
 					<ToolTip>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>Запросить условия перевозки в Меркурий</v8:content>
+							<v8:content>Получить Условия перевозки из Меркурия</v8:content>
 						</v8:item>
 					</ToolTip>
-					<Picture/>
+					<Picture>
+						<xr:Ref>CommonPicture.кб99_map_o</xr:Ref>
+						<xr:LoadTransparent>true</xr:LoadTransparent>
+					</Picture>
 					<Shortcut/>
 				</Properties>
 			</Command>

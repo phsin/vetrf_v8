@@ -31,25 +31,25 @@
 		<Pages name="Группа1" id="22">
 			<ExtendedTooltip name="Группа1РасширеннаяПодсказка" id="23"/>
 			<ChildItems>
-				<Page name="СтраницаОшибки" id="28">
+				<Page name="СтраницаОтвет" id="26">
 					<Title>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>Ошибки</v8:content>
+							<v8:content>Ответ</v8:content>
 						</v8:item>
 					</Title>
 					<ToolTip>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>Страница ошибки</v8:content>
+							<v8:content>Страница ответ</v8:content>
 						</v8:item>
 					</ToolTip>
-					<ExtendedTooltip name="СтраницаОшибкиРасширеннаяПодсказка" id="29"/>
+					<ExtendedTooltip name="СтраницаОтветРасширеннаяПодсказка" id="27"/>
 					<ChildItems>
-						<TextDocumentField name="Ошибки" id="30">
-							<DataPath>Запись.Ошибки</DataPath>
-							<ContextMenu name="ОшибкиКонтекстноеМеню" id="31"/>
-							<ExtendedTooltip name="ОшибкиРасширеннаяПодсказка" id="32"/>
+						<TextDocumentField name="Ответ" id="19">
+							<DataPath>Запись.Ответ</DataPath>
+							<ContextMenu name="ОтветКонтекстноеМеню" id="20"/>
+							<ExtendedTooltip name="ОтветРасширеннаяПодсказка" id="21"/>
 						</TextDocumentField>
 					</ChildItems>
 				</Page>
@@ -75,25 +75,25 @@
 						</TextDocumentField>
 					</ChildItems>
 				</Page>
-				<Page name="СтраницаОтвет" id="26">
+				<Page name="СтраницаОшибки" id="28">
 					<Title>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>Ответ</v8:content>
+							<v8:content>Ошибки</v8:content>
 						</v8:item>
 					</Title>
 					<ToolTip>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>Страница ответ</v8:content>
+							<v8:content>Страница ошибки</v8:content>
 						</v8:item>
 					</ToolTip>
-					<ExtendedTooltip name="СтраницаОтветРасширеннаяПодсказка" id="27"/>
+					<ExtendedTooltip name="СтраницаОшибкиРасширеннаяПодсказка" id="29"/>
 					<ChildItems>
-						<TextDocumentField name="Ответ" id="19">
-							<DataPath>Запись.Ответ</DataPath>
-							<ContextMenu name="ОтветКонтекстноеМеню" id="20"/>
-							<ExtendedTooltip name="ОтветРасширеннаяПодсказка" id="21"/>
+						<TextDocumentField name="Ошибки" id="30">
+							<DataPath>Запись.Ошибки</DataPath>
+							<ContextMenu name="ОшибкиКонтекстноеМеню" id="31"/>
+							<ExtendedTooltip name="ОшибкиРасширеннаяПодсказка" id="32"/>
 						</TextDocumentField>
 					</ChildItems>
 				</Page>
