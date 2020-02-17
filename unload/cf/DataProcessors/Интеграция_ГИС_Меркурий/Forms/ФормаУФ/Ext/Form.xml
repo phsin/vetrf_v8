@@ -71,6 +71,17 @@
 				</Title>
 				<ExtendedTooltip name="кнЗаполнитьТаблицуПартийРасширеннаяПодсказка" id="315"/>
 			</Button>
+			<Button name="кнСоздатьВСД1" id="653">
+				<Type>CommandBarButton</Type>
+				<Representation>PictureAndText</Representation>
+				<HorizontalStretch>true</HorizontalStretch>
+				<CommandName>Form.Command.СоздатьВСД</CommandName>
+				<Picture>
+					<xr:Abs>Picture.svg</xr:Abs>
+					<xr:LoadTransparent>false</xr:LoadTransparent>
+				</Picture>
+				<ExtendedTooltip name="кнСоздатьВСД1РасширеннаяПодсказка" id="654"/>
+			</Button>
 			<Button name="ОтправитьВсдПоследовательно2" id="645">
 				<Type>CommandBarButton</Type>
 				<Representation>PictureAndText</Representation>
@@ -86,6 +97,22 @@
 					</v8:item>
 				</Title>
 				<ExtendedTooltip name="ОтправитьВсдПоследовательно2РасширеннаяПодсказка" id="646"/>
+			</Button>
+			<Button name="ОтправитьВсдБыстро2" id="655">
+				<Type>CommandBarButton</Type>
+				<Representation>PictureAndText</Representation>
+				<CommandName>Form.Command.ОтправитьВсдБыстро</CommandName>
+				<Picture>
+					<xr:Ref>CommonPicture.кб99_send</xr:Ref>
+					<xr:LoadTransparent>false</xr:LoadTransparent>
+				</Picture>
+				<Title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Отправить ВСД Быстро</v8:content>
+					</v8:item>
+				</Title>
+				<ExtendedTooltip name="ОтправитьВсдБыстро2РасширеннаяПодсказка" id="656"/>
 			</Button>
 			<Button name="ФормаОткрытьПараметры" id="649">
 				<Type>CommandBarButton</Type>
@@ -222,7 +249,7 @@
 												<Button name="ЗаполнитьТаблицуПартийПоFIFO" id="623">
 													<Type>CommandBarButton</Type>
 													<Representation>PictureAndText</Representation>
-													<CommandName>Form.Command.ЗаполнитьТаблицуПартий</CommandName>
+													<CommandName>Form.Command.ЗаполнитьТаблицуПартийПоFIFO</CommandName>
 													<Picture>
 														<xr:Ref>CommonPicture.kb99_shopping_basket</xr:Ref>
 														<xr:LoadTransparent>false</xr:LoadTransparent>
@@ -238,7 +265,7 @@
 												<Button name="ЗаполнитьТаблицуПартийПоLIFO" id="621">
 													<Type>CommandBarButton</Type>
 													<Representation>PictureAndText</Representation>
-													<CommandName>Form.Command.ЗаполнитьТаблицуПартий</CommandName>
+													<CommandName>Form.Command.ЗаполнитьТаблицуПартийПоLIFO</CommandName>
 													<Picture>
 														<xr:Ref>CommonPicture.kb99_shopping_basket</xr:Ref>
 														<xr:LoadTransparent>false</xr:LoadTransparent>
@@ -998,7 +1025,7 @@
 										<Button name="кнСоздатьВСД" id="338">
 											<Type>CommandBarButton</Type>
 											<HorizontalStretch>true</HorizontalStretch>
-											<CommandName>Form.Command.кнСоздатьВСД</CommandName>
+											<CommandName>Form.Command.СоздатьВСД</CommandName>
 											<Picture>
 												<xr:Abs>Picture.svg</xr:Abs>
 												<xr:LoadTransparent>false</xr:LoadTransparent>
@@ -1146,7 +1173,7 @@
 										<Button name="кнСоздатьИнвентаризацию" id="598">
 											<Type>CommandBarButton</Type>
 											<HorizontalStretch>true</HorizontalStretch>
-											<CommandName>Form.Command.кнСоздатьИнвентаризацию</CommandName>
+											<CommandName>Form.Command.СоздатьИнвентаризацию</CommandName>
 											<Picture>
 												<xr:Abs>Picture.svg</xr:Abs>
 												<xr:LoadTransparent>false</xr:LoadTransparent>
@@ -1263,7 +1290,7 @@
 									<ExtendedTooltip name="ПартииНомерСтрокиРасширеннаяПодсказка" id="206"/>
 								</LabelField>
 								<InputField name="ПартииВСД_Продукция_Элемент" id="207">
-									<DataPath>Объект.Партии.ВСД_Продукция_Элемент</DataPath>
+									<DataPath>Объект.Партии.Продукция_Элемент</DataPath>
 									<EditMode>EnterOnInput</EditMode>
 									<ChoiceButton>false</ChoiceButton>
 									<ClearButton>false</ClearButton>
@@ -2239,7 +2266,7 @@
 			<Action>кнПечатьСтрОтгрузки</Action>
 			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
-		<Command name="кнСоздатьВСД" id="26">
+		<Command name="СоздатьВСД" id="26">
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
@@ -2672,17 +2699,17 @@
 			<Action>кнВерсия2ОбновитьСправочники</Action>
 			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
-		<Command name="кнСоздатьИнвентаризацию" id="41">
+		<Command name="СоздатьИнвентаризацию" id="41">
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Кн создать инвентаризацию</v8:content>
+					<v8:content>Создать инвентаризацию</v8:content>
 				</v8:item>
 			</Title>
 			<ToolTip>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Кн создать инвентаризацию</v8:content>
+					<v8:content>Создать инвентаризацию</v8:content>
 				</v8:item>
 			</ToolTip>
 			<Action>кнСоздатьИнвентаризацию</Action>
