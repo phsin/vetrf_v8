@@ -26,9 +26,9 @@
 			<Button name="кнГашение" id="461">
 				<Type>CommandBarButton</Type>
 				<Representation>PictureAndText</Representation>
-				<CommandName>Form.Command.кнГашение</CommandName>
+				<CommandName>Form.Command.ОткрытьГашение</CommandName>
 				<Picture>
-					<xr:Ref>CommonPicture.kb99_plus</xr:Ref>
+					<xr:Ref>CommonPicture.kb99_plus_black</xr:Ref>
 					<xr:LoadTransparent>false</xr:LoadTransparent>
 				</Picture>
 				<Title>
@@ -77,7 +77,7 @@
 				<HorizontalStretch>true</HorizontalStretch>
 				<CommandName>Form.Command.СоздатьВСД</CommandName>
 				<Picture>
-					<xr:Abs>Picture.svg</xr:Abs>
+					<xr:Ref>CommonPicture.кб99_plus</xr:Ref>
 					<xr:LoadTransparent>false</xr:LoadTransparent>
 				</Picture>
 				<ExtendedTooltip name="кнСоздатьВСД1РасширеннаяПодсказка" id="654"/>
@@ -1104,7 +1104,7 @@
 										<Button name="кнПроизводствоОтправить" id="356">
 											<Type>CommandBarButton</Type>
 											<HorizontalStretch>true</HorizontalStretch>
-											<CommandName>Form.Command.кнПроизводствоОтправить</CommandName>
+											<CommandName>Form.Command.ПроизводствоОтправить</CommandName>
 											<Picture>
 												<xr:Abs>Picture.svg</xr:Abs>
 												<xr:LoadTransparent>false</xr:LoadTransparent>
@@ -1912,54 +1912,6 @@
 			<Action>ОбновитьСписокРеализаций</Action>
 			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
-		<Command name="ЗагрузитьЦели" id="3">
-			<Title>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Загрузить цели</v8:content>
-				</v8:item>
-			</Title>
-			<ToolTip>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Загрузить классификатор Цели ВСД</v8:content>
-				</v8:item>
-			</ToolTip>
-			<Action>ЗагрузитьЦели</Action>
-			<CurrentRowUse>DontUse</CurrentRowUse>
-		</Command>
-		<Command name="кнХозСубъект_ПолучитьGuidПоИНН" id="4">
-			<Title>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>ХозСубъект получить guid по ИНН</v8:content>
-				</v8:item>
-			</Title>
-			<ToolTip>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Кн хоз субъект получить guid по ИНН</v8:content>
-				</v8:item>
-			</ToolTip>
-			<Action>кнХозСубъект_ПолучитьGuidПоИНН</Action>
-			<CurrentRowUse>DontUse</CurrentRowUse>
-		</Command>
-		<Command name="кнЗагрузитьПлощадкиПоХозСубъекту" id="5">
-			<Title>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Загрузить площадки по ХС</v8:content>
-				</v8:item>
-			</Title>
-			<ToolTip>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Загрузить все площадки по выбранному ХС</v8:content>
-				</v8:item>
-			</ToolTip>
-			<Action>кнЗагрузитьПлощадкиПоХозСубъекту</Action>
-			<CurrentRowUse>DontUse</CurrentRowUse>
-		</Command>
 		<Command name="ЗагрузитьПлощадкиПоСпискуДокументов" id="6">
 			<Title>
 				<v8:item>
@@ -2038,118 +1990,6 @@
 				</v8:item>
 			</ToolTip>
 			<Action>ЗагрузитьПлощадкиПоНаименованию</Action>
-			<CurrentRowUse>DontUse</CurrentRowUse>
-		</Command>
-		<Command name="кнЗагрузитьПродукцию" id="12">
-			<Title>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Кн загрузить продукцию</v8:content>
-				</v8:item>
-			</Title>
-			<ToolTip>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Загрузить классификатор продукции</v8:content>
-				</v8:item>
-			</ToolTip>
-			<Action>кнЗагрузитьПродукцию</Action>
-			<CurrentRowUse>DontUse</CurrentRowUse>
-		</Command>
-		<Command name="кнЗагрузитьЕдИзм" id="13">
-			<Title>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Загрузить ед изм</v8:content>
-				</v8:item>
-			</Title>
-			<ToolTip>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Загрузить классификатор Единиц измерения</v8:content>
-				</v8:item>
-			</ToolTip>
-			<Action>кнЗагрузитьЕдИзм</Action>
-			<CurrentRowUse>DontUse</CurrentRowUse>
-		</Command>
-		<Command name="кнЗагрузитьСтраны" id="14">
-			<Title>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Загрузить страны</v8:content>
-				</v8:item>
-			</Title>
-			<ToolTip>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Загрузить классификатор Стран</v8:content>
-				</v8:item>
-			</ToolTip>
-			<Action>кнЗагрузитьСтраны</Action>
-			<CurrentRowUse>DontUse</CurrentRowUse>
-		</Command>
-		<Command name="кнЗагрузитьРегионы" id="15">
-			<Title>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Загрузить регионы</v8:content>
-				</v8:item>
-			</Title>
-			<ToolTip>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Загрузить классификатор Регионов по выбранной Стране</v8:content>
-				</v8:item>
-			</ToolTip>
-			<Action>кнЗагрузитьРегионы</Action>
-			<CurrentRowUse>DontUse</CurrentRowUse>
-		</Command>
-		<Command name="кнЗагрузитьГорода" id="16">
-			<Title>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Загрузить города</v8:content>
-				</v8:item>
-			</Title>
-			<ToolTip>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Загрузить города по выбранному Региону</v8:content>
-				</v8:item>
-			</ToolTip>
-			<Action>кнЗагрузитьГорода</Action>
-			<CurrentRowUse>DontUse</CurrentRowUse>
-		</Command>
-		<Command name="кнЗагрузитьФормыУпаковки" id="17">
-			<Title>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Загрузить Формы упаковки</v8:content>
-				</v8:item>
-			</Title>
-			<ToolTip>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Загрузить классификатор форм Упаковки</v8:content>
-				</v8:item>
-			</ToolTip>
-			<Action>кнЗагрузитьФормыУпаковки</Action>
-			<CurrentRowUse>DontUse</CurrentRowUse>
-		</Command>
-		<Command name="кнИнициализация" id="18">
-			<Title>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Инициализация</v8:content>
-				</v8:item>
-			</Title>
-			<ToolTip>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>За грузка всех классификаторов Меркурий и заполнение начальных параметров</v8:content>
-				</v8:item>
-			</ToolTip>
-			<Action>кнИнициализация</Action>
 			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="ЗаполнитьТаблицуПартий" id="19">
@@ -2233,23 +2073,6 @@
 			<Action>кнАннулироватьВыбранныеВСД</Action>
 			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
-		<Command name="кнУстановитьСоответствия" id="24">
-			<Title>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Соответствия</v8:content>
-				</v8:item>
-			</Title>
-			<ToolTip>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Открыть форму установки соответствий 
-Один ВСД_Продукция_Элемент - &gt; список номенклатуры</v8:content>
-				</v8:item>
-			</ToolTip>
-			<Action>кнУстановитьСоответствия</Action>
-			<CurrentRowUse>DontUse</CurrentRowUse>
-		</Command>
 		<Command name="кнПечатьСтрОтгрузки" id="25">
 			<Title>
 				<v8:item>
@@ -2314,7 +2137,7 @@
 			<Action>кнПолучитьОтветВСДПроизводство</Action>
 			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
-		<Command name="кнПроизводствоОтправить" id="29">
+		<Command name="ПроизводствоОтправить" id="29">
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
@@ -2327,7 +2150,7 @@
 					<v8:content>Отправить Производственный ВСД</v8:content>
 				</v8:item>
 			</ToolTip>
-			<Action>кнПроизводствоОтправить</Action>
+			<Action>ПроизводствоОтправить</Action>
 			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="кнПереместитьОтПоставщика" id="30">
@@ -2345,150 +2168,6 @@
 				</v8:item>
 			</ToolTip>
 			<Action>кнПереместитьОтПоставщика</Action>
-			<CurrentRowUse>DontUse</CurrentRowUse>
-		</Command>
-		<Command name="кнПлощадкаПоХССоздать" id="32">
-			<Title>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Создать площадку по ХС в 1С</v8:content>
-				</v8:item>
-			</Title>
-			<ToolTip>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Создать площадку в 1С по выбранному ХС</v8:content>
-				</v8:item>
-			</ToolTip>
-			<Action>кнПлощадкаПоХССоздать</Action>
-			<CurrentRowUse>DontUse</CurrentRowUse>
-		</Command>
-		<Command name="кнСоздатьПлощадкувМеркурий" id="33">
-			<Title>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Создать площадку в Меркурий</v8:content>
-				</v8:item>
-			</Title>
-			<ToolTip>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Создать площадку и приявязать к ХС в Меркурий</v8:content>
-				</v8:item>
-			</ToolTip>
-			<Action>кнСоздатьПлощадкувМеркурий</Action>
-			<CurrentRowUse>DontUse</CurrentRowUse>
-		</Command>
-		<Command name="кнПривязатьПлощадку" id="34">
-			<Title>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Привязать площадку к ХС в Меркурий</v8:content>
-				</v8:item>
-			</Title>
-			<ToolTip>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Привязать площадку к ХС в Меркурий</v8:content>
-				</v8:item>
-			</ToolTip>
-			<Action>кнПривязатьПлощадку</Action>
-			<CurrentRowUse>DontUse</CurrentRowUse>
-		</Command>
-		<Command name="кнПолучитьСписокПродукции" id="35">
-			<Title>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Получить всю продукцию по площадке</v8:content>
-				</v8:item>
-			</Title>
-			<ToolTip>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Получить всю продукцию по выбранной площадке</v8:content>
-				</v8:item>
-			</ToolTip>
-			<Action>кнПолучитьСписокПродукции</Action>
-			<CurrentRowUse>DontUse</CurrentRowUse>
-		</Command>
-		<Command name="кнПолучитьИнфоПродукция" id="36">
-			<Title>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Получить инфо о продукции</v8:content>
-				</v8:item>
-			</Title>
-			<ToolTip>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Получить полную информацию по выбранной продукции из Меркурий по GUID</v8:content>
-				</v8:item>
-			</ToolTip>
-			<Action>кнПолучитьИнфоПродукция</Action>
-			<CurrentRowUse>DontUse</CurrentRowUse>
-		</Command>
-		<Command name="кнИзменитьПродукцию" id="37">
-			<Title>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Изменить продукцию</v8:content>
-				</v8:item>
-			</Title>
-			<ToolTip>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Изменить продукцию в Меркурий</v8:content>
-				</v8:item>
-			</ToolTip>
-			<Action>кнИзменитьПродукцию</Action>
-			<CurrentRowUse>DontUse</CurrentRowUse>
-		</Command>
-		<Command name="кнСоздатьПродукцию" id="38">
-			<Title>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Создать продукцию</v8:content>
-				</v8:item>
-			</Title>
-			<ToolTip>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Создать продукцию в Меркурий по выбранной Площадке</v8:content>
-				</v8:item>
-			</ToolTip>
-			<Action>кнСоздатьПродукцию</Action>
-			<CurrentRowUse>DontUse</CurrentRowUse>
-		</Command>
-		<Command name="кнУдалитьПродукцию" id="39">
-			<Title>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Удалить продукцию</v8:content>
-				</v8:item>
-			</Title>
-			<ToolTip>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Удалить продукцию в Меркурий</v8:content>
-				</v8:item>
-			</ToolTip>
-			<Action>кнУдалитьПродукцию</Action>
-			<CurrentRowUse>DontUse</CurrentRowUse>
-		</Command>
-		<Command name="кнХС_Создать" id="40">
-			<Title>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Создать ХС</v8:content>
-				</v8:item>
-			</Title>
-			<ToolTip>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Создать ХС в Меркурий</v8:content>
-				</v8:item>
-			</ToolTip>
-			<Action>кнХС_Создать</Action>
 			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="кнОтметитьДокументыКСозданию" id="42">
@@ -2571,23 +2250,7 @@
 			<Action>ВыборПериода</Action>
 			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
-		<Command name="ВыборПериодаПартии" id="47">
-			<Title>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Выбор периода партии</v8:content>
-				</v8:item>
-			</Title>
-			<ToolTip>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Выбор периода</v8:content>
-				</v8:item>
-			</ToolTip>
-			<Action>ВыборПериода</Action>
-			<CurrentRowUse>DontUse</CurrentRowUse>
-		</Command>
-		<Command name="кнГашение" id="48">
+		<Command name="ОткрытьГашение" id="48">
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
@@ -2601,38 +2264,6 @@
 				</v8:item>
 			</ToolTip>
 			<Action>кнГашение</Action>
-			<CurrentRowUse>DontUse</CurrentRowUse>
-		</Command>
-		<Command name="кнСоздатьВСДЭлементы" id="49">
-			<Title>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Создать ВСД_Продукция</v8:content>
-				</v8:item>
-			</Title>
-			<ToolTip>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Открыть обработку создания ВСД_Продукции в Меркурий</v8:content>
-				</v8:item>
-			</ToolTip>
-			<Action>кнСоздатьВСДЭлементы</Action>
-			<CurrentRowUse>DontUse</CurrentRowUse>
-		</Command>
-		<Command name="кнПолучитьПартии14" id="50">
-			<Title>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Получить партии (v1.4)</v8:content>
-				</v8:item>
-			</Title>
-			<ToolTip>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Получить партии версия 1.4</v8:content>
-				</v8:item>
-			</ToolTip>
-			<Action>кнПолучитьПартии14</Action>
 			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="кнПечатьРеестр" id="51">
@@ -2649,54 +2280,6 @@
 				</v8:item>
 			</ToolTip>
 			<Action>кнПечатьРеестр</Action>
-			<CurrentRowUse>DontUse</CurrentRowUse>
-		</Command>
-		<Command name="кнПолучитьПартии2" id="52">
-			<Title>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Получить партии</v8:content>
-				</v8:item>
-			</Title>
-			<ToolTip>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Загрузить партии из Меркурий по выбранной площадке</v8:content>
-				</v8:item>
-			</ToolTip>
-			<Action>кнПолучитьПартии2</Action>
-			<CurrentRowUse>DontUse</CurrentRowUse>
-		</Command>
-		<Command name="кнУдалитьПартии" id="31">
-			<Title>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Удалить все партии</v8:content>
-				</v8:item>
-			</Title>
-			<ToolTip>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Кн удалить партии</v8:content>
-				</v8:item>
-			</ToolTip>
-			<Action>кнУдалитьПартии</Action>
-			<CurrentRowUse>DontUse</CurrentRowUse>
-		</Command>
-		<Command name="Версия2ОбновитьСправочники" id="7">
-			<Title>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>версия2 обновить справочники</v8:content>
-				</v8:item>
-			</Title>
-			<ToolTip>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Версия2 обновить справочники</v8:content>
-				</v8:item>
-			</ToolTip>
-			<Action>кнВерсия2ОбновитьСправочники</Action>
 			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="СоздатьИнвентаризацию" id="41">
