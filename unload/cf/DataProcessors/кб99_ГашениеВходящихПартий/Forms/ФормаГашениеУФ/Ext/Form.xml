@@ -340,6 +340,12 @@
 									<ContextMenu name="ВСДВходящиеВладелецХСКонтекстноеМеню" id="65"/>
 									<ExtendedTooltip name="ВСДВходящиеВладелецХСРасширеннаяПодсказка" id="66"/>
 								</InputField>
+								<InputField name="ВСДВходящиеОшибки" id="650">
+									<DataPath>Объект.ВСДВходящие.Ошибки</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ВСДВходящиеОшибкиКонтекстноеМеню" id="651"/>
+									<ExtendedTooltip name="ВСДВходящиеОшибкиРасширеннаяПодсказка" id="652"/>
+								</InputField>
 								<InputField name="ВСДВходящиеОтправитель_Площадка" id="124">
 									<DataPath>Объект.ВСДВходящие.Отправитель_Площадка</DataPath>
 									<ReadOnly>true</ReadOnly>
@@ -355,12 +361,11 @@
 									<ContextMenu name="ВСДВходящиеОтправитель_ПлощадкаКонтекстноеМеню" id="125"/>
 									<ExtendedTooltip name="ВСДВходящиеОтправитель_ПлощадкаРасширеннаяПодсказка" id="126"/>
 								</InputField>
-								<InputField name="ВСДВходящиеНаименованиеПродукции" id="67">
-									<DataPath>Объект.ВСДВходящие.НаименованиеПродукции</DataPath>
+								<InputField name="ВСДВходящиеПродукция_Элемент" id="139">
+									<DataPath>Объект.ВСДВходящие.Продукция_Элемент</DataPath>
 									<EditMode>EnterOnInput</EditMode>
-									<Width>30</Width>
-									<ContextMenu name="ВСДВходящиеНаименованиеПродукцииКонтекстноеМеню" id="68"/>
-									<ExtendedTooltip name="ВСДВходящиеНаименованиеПродукцииРасширеннаяПодсказка" id="69"/>
+									<ContextMenu name="ВСДВходящиеПродукция_ЭлементКонтекстноеМеню" id="140"/>
+									<ExtendedTooltip name="ВСДВходящиеПродукция_ЭлементРасширеннаяПодсказка" id="141"/>
 								</InputField>
 								<InputField name="ВСДВходящиеКоличество" id="70">
 									<DataPath>Объект.ВСДВходящие.Количество</DataPath>
@@ -487,12 +492,6 @@
 									<EditMode>EnterOnInput</EditMode>
 									<ContextMenu name="ВСДВходящиеОтправитель_ХозсубъектКонтекстноеМеню" id="122"/>
 									<ExtendedTooltip name="ВСДВходящиеОтправитель_ХозсубъектРасширеннаяПодсказка" id="123"/>
-								</InputField>
-								<InputField name="ВСДВходящиеПродукция_Элемент" id="139">
-									<DataPath>Объект.ВСДВходящие.Продукция_Элемент</DataPath>
-									<EditMode>EnterOnInput</EditMode>
-									<ContextMenu name="ВСДВходящиеПродукция_ЭлементКонтекстноеМеню" id="140"/>
-									<ExtendedTooltip name="ВСДВходящиеПродукция_ЭлементРасширеннаяПодсказка" id="141"/>
 								</InputField>
 								<InputField name="ВСДВходящиеНоменклатура" id="632">
 									<DataPath>Объект.ВСДВходящие.Номенклатура</DataPath>
@@ -1168,6 +1167,25 @@
 					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
 						<dcscor:parameter>ЦветФона</dcscor:parameter>
 						<dcscor:value xsi:type="v8ui:Color">#FF6447</dcscor:value>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>ВСДВходящие</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">Объект.ВСДВходящие.Ошибки</dcsset:left>
+						<dcsset:comparisonType>Filled</dcsset:comparisonType>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>ЦветФона</dcscor:parameter>
+						<dcscor:value xsi:type="v8ui:Color">#FFFF99</dcscor:value>
 					</dcscor:item>
 				</dcsset:appearance>
 			</dcsset:item>

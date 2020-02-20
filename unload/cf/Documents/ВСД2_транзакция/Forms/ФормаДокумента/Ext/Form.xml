@@ -101,7 +101,8 @@
 							<v8:content>Ошибки последнего запроса, отправленного на сервер Ветис.API</v8:content>
 						</v8:item>
 					</ToolTip>
-					<Width>50</Width>
+					<Width>100</Width>
+					<HorizontalStretch>true</HorizontalStretch>
 					<Border width="1">
 						<v8ui:style xsi:type="v8ui:ControlBorderType">Single</v8ui:style>
 					</Border>
@@ -472,7 +473,8 @@
 															</Title>
 															<EditMode>EnterOnInput</EditMode>
 															<Width>3</Width>
-															<MaxWidth>1</MaxWidth>
+															<AutoMaxWidth>false</AutoMaxWidth>
+															<MaxWidth>5</MaxWidth>
 															<ContextMenu name="ТтнСерияКонтекстноеМеню" id="26"/>
 															<ExtendedTooltip name="ТтнСерияРасширеннаяПодсказка" id="27"/>
 														</InputField>
@@ -485,6 +487,8 @@
 																</v8:item>
 															</Title>
 															<EditMode>EnterOnInput</EditMode>
+															<Width>5</Width>
+															<AutoMaxWidth>false</AutoMaxWidth>
 															<MaxWidth>10</MaxWidth>
 															<ContextMenu name="ТтнНомерКонтекстноеМеню" id="29"/>
 															<ExtendedTooltip name="ТтнНомерРасширеннаяПодсказка" id="30"/>
@@ -525,6 +529,7 @@
 															</Title>
 															<EditMode>EnterOnInput</EditMode>
 															<Width>3</Width>
+															<AutoMaxWidth>false</AutoMaxWidth>
 															<MaxWidth>5</MaxWidth>
 															<ContextMenu name="ВсдСерияКонтекстноеМеню" id="59"/>
 															<ExtendedTooltip name="ВсдСерияРасширеннаяПодсказка" id="60"/>
@@ -538,6 +543,9 @@
 																</v8:item>
 															</Title>
 															<EditMode>EnterOnInput</EditMode>
+															<Width>5</Width>
+															<AutoMaxWidth>false</AutoMaxWidth>
+															<MaxWidth>10</MaxWidth>
 															<ContextMenu name="ВсдНомерКонтекстноеМеню" id="62"/>
 															<ExtendedTooltip name="ВсдНомерРасширеннаяПодсказка" id="63"/>
 														</InputField>
@@ -617,7 +625,9 @@
 																</v8:item>
 															</Title>
 															<EditMode>EnterOnInput</EditMode>
-															<Width>10</Width>
+															<Width>5</Width>
+															<AutoMaxWidth>false</AutoMaxWidth>
+															<MaxWidth>10</MaxWidth>
 															<ContextMenu name="ТОРГ12НомерКонтекстноеМеню" id="83"/>
 															<ExtendedTooltip name="ТОРГ12НомерРасширеннаяПодсказка" id="84"/>
 														</InputField>
@@ -656,7 +666,9 @@
 																</v8:item>
 															</Title>
 															<EditMode>EnterOnInput</EditMode>
-															<Width>10</Width>
+															<Width>5</Width>
+															<AutoMaxWidth>false</AutoMaxWidth>
+															<MaxWidth>10</MaxWidth>
 															<ContextMenu name="УпдНомерКонтекстноеМеню" id="483"/>
 															<ExtendedTooltip name="УпдНомерРасширеннаяПодсказка" id="484"/>
 														</InputField>
@@ -819,12 +831,14 @@
 										<InputField name="ТоварыКоличество" id="120">
 											<DataPath>Объект.Товары.Количество</DataPath>
 											<EditMode>EnterOnInput</EditMode>
+											<Width>10</Width>
 											<ContextMenu name="ТоварыКоличествоКонтекстноеМеню" id="121"/>
 											<ExtendedTooltip name="ТоварыКоличествоРасширеннаяПодсказка" id="122"/>
 										</InputField>
 										<InputField name="ТоварыЕдиницаИзмерения" id="123">
 											<DataPath>Объект.Товары.ЕдиницаИзмерения</DataPath>
 											<EditMode>EnterOnInput</EditMode>
+											<Width>10</Width>
 											<ContextMenu name="ТоварыЕдиницаИзмеренияКонтекстноеМеню" id="124"/>
 											<ExtendedTooltip name="ТоварыЕдиницаИзмеренияРасширеннаяПодсказка" id="125"/>
 										</InputField>
@@ -856,41 +870,26 @@
 											<ContextMenu name="ТоварыДатаСрокгодности2КонтекстноеМеню" id="314"/>
 											<ExtendedTooltip name="ТоварыДатаСрокгодности2РасширеннаяПодсказка" id="315"/>
 										</InputField>
+										<CheckBoxField name="ТоварыНекачественный" id="717">
+											<DataPath>Объект.Товары.Некачественный</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<CheckBoxType>Auto</CheckBoxType>
+											<ContextMenu name="ТоварыНекачественныйКонтекстноеМеню" id="718"/>
+											<ExtendedTooltip name="ТоварыНекачественныйРасширеннаяПодсказка" id="719"/>
+										</CheckBoxField>
 										<InputField name="ТоварыАртикул" id="126">
 											<DataPath>Объект.Товары.Артикул</DataPath>
 											<EditMode>EnterOnInput</EditMode>
+											<Width>10</Width>
 											<ContextMenu name="ТоварыАртикулКонтекстноеМеню" id="127"/>
 											<ExtendedTooltip name="ТоварыАртикулРасширеннаяПодсказка" id="128"/>
 										</InputField>
 										<InputField name="ТоварыGTIN" id="129">
 											<DataPath>Объект.Товары.GTIN</DataPath>
 											<EditMode>EnterOnInput</EditMode>
+											<Width>10</Width>
 											<ContextMenu name="ТоварыGTINКонтекстноеМеню" id="130"/>
 											<ExtendedTooltip name="ТоварыGTINРасширеннаяПодсказка" id="131"/>
-										</InputField>
-										<InputField name="ТоварыФасовкаФормаУпаковки" id="132">
-											<DataPath>Объект.Товары.ФасовкаФормаУпаковки</DataPath>
-											<EditMode>EnterOnInput</EditMode>
-											<ContextMenu name="ТоварыФасовкаФормаУпаковкиКонтекстноеМеню" id="133"/>
-											<ExtendedTooltip name="ТоварыФасовкаФормаУпаковкиРасширеннаяПодсказка" id="134"/>
-										</InputField>
-										<InputField name="ТоварыФасовкаКоличество" id="135">
-											<DataPath>Объект.Товары.ФасовкаКоличество</DataPath>
-											<EditMode>EnterOnInput</EditMode>
-											<ContextMenu name="ТоварыФасовкаКоличествоКонтекстноеМеню" id="136"/>
-											<ExtendedTooltip name="ТоварыФасовкаКоличествоРасширеннаяПодсказка" id="137"/>
-										</InputField>
-										<InputField name="ТоварыФасовкаОбъем" id="138">
-											<DataPath>Объект.Товары.ФасовкаОбъем</DataPath>
-											<EditMode>EnterOnInput</EditMode>
-											<ContextMenu name="ТоварыФасовкаОбъемКонтекстноеМеню" id="139"/>
-											<ExtendedTooltip name="ТоварыФасовкаОбъемРасширеннаяПодсказка" id="140"/>
-										</InputField>
-										<InputField name="ТоварыФасовкаЕдиницаИзмерения" id="141">
-											<DataPath>Объект.Товары.ФасовкаЕдиницаИзмерения</DataPath>
-											<EditMode>EnterOnInput</EditMode>
-											<ContextMenu name="ТоварыФасовкаЕдиницаИзмеренияКонтекстноеМеню" id="142"/>
-											<ExtendedTooltip name="ТоварыФасовкаЕдиницаИзмеренияРасширеннаяПодсказка" id="143"/>
 										</InputField>
 										<InputField name="ТоварыЦель" id="144">
 											<DataPath>Объект.Товары.Цель</DataPath>

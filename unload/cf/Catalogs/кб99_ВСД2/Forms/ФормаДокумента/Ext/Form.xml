@@ -1,6 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.8">
-	<VerticalSpacing>None</VerticalSpacing>
 	<VerticalScroll>useWithoutStretch</VerticalScroll>
 	<UseForFoldersAndItems>Items</UseForFoldersAndItems>
 	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
@@ -138,7 +137,7 @@
 					<ChildItems>
 						<UsualGroup name="Группа19" id="727">
 							<Group>Vertical</Group>
-							<Representation>StrongSeparation</Representation>
+							<Representation>None</Representation>
 							<ShowTitle>false</ShowTitle>
 							<ExtendedTooltip name="Группа19РасширеннаяПодсказка" id="728"/>
 							<ChildItems>
@@ -248,6 +247,7 @@
 					<ChildItems>
 						<UsualGroup name="Группа9" id="721">
 							<Group>AlwaysHorizontal</Group>
+							<ShowTitle>false</ShowTitle>
 							<ExtendedTooltip name="Группа9РасширеннаяПодсказка" id="722"/>
 							<ChildItems>
 								<UsualGroup name="Группа14" id="222">
@@ -346,6 +346,78 @@
 								</InputField>
 							</ChildItems>
 						</UsualGroup>
+						<UsualGroup name="ГруппаСроки" id="263">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Сроки изготовления и годности</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа сроки</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>AlwaysHorizontal</Group>
+							<ExtendedTooltip name="ГруппаСрокиРасширеннаяПодсказка" id="264"/>
+							<ChildItems>
+								<UsualGroup name="Группа24" id="768">
+									<Group>Vertical</Group>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="Группа24РасширеннаяПодсказка" id="769"/>
+									<ChildItems>
+										<InputField name="ДатаИзготовления1" id="265">
+											<DataPath>Объект.ДатаИзготовления1</DataPath>
+											<ContextMenu name="ДатаИзготовления1КонтекстноеМеню" id="266"/>
+											<ExtendedTooltip name="ДатаИзготовления1РасширеннаяПодсказка" id="267"/>
+										</InputField>
+										<InputField name="ДатаСрокГодности1" id="273">
+											<DataPath>Объект.ДатаСрокГодности1</DataPath>
+											<ContextMenu name="ДатаСрокГодности1КонтекстноеМеню" id="274"/>
+											<ExtendedTooltip name="ДатаСрокГодности1РасширеннаяПодсказка" id="275"/>
+										</InputField>
+									</ChildItems>
+								</UsualGroup>
+								<UsualGroup name="Группа23" id="281">
+									<Group>Vertical</Group>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="Группа23РасширеннаяПодсказка" id="282"/>
+									<ChildItems>
+										<InputField name="ДатаИзготовления2" id="268">
+											<DataPath>Объект.ДатаИзготовления2</DataPath>
+											<ContextMenu name="ДатаИзготовления2КонтекстноеМеню" id="269"/>
+											<ExtendedTooltip name="ДатаИзготовления2РасширеннаяПодсказка" id="270"/>
+										</InputField>
+										<InputField name="ДатаСрокГодности2" id="276">
+											<DataPath>Объект.ДатаСрокГодности2</DataPath>
+											<ContextMenu name="ДатаСрокГодности2КонтекстноеМеню" id="277"/>
+											<ExtendedTooltip name="ДатаСрокГодности2РасширеннаяПодсказка" id="278"/>
+										</InputField>
+									</ChildItems>
+								</UsualGroup>
+								<UsualGroup name="Группа22" id="279">
+									<Group>Vertical</Group>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="Группа22РасширеннаяПодсказка" id="280"/>
+									<ChildItems>
+										<InputField name="ДатаИзготовления" id="283">
+											<DataPath>Объект.ДатаИзготовления</DataPath>
+											<ContextMenu name="ДатаИзготовленияКонтекстноеМеню" id="284"/>
+											<ExtendedTooltip name="ДатаИзготовленияРасширеннаяПодсказка" id="285"/>
+										</InputField>
+										<InputField name="ДатаСрокГодности" id="286">
+											<DataPath>Объект.ДатаСрокГодности</DataPath>
+											<ContextMenu name="ДатаСрокГодностиКонтекстноеМеню" id="287"/>
+											<ExtendedTooltip name="ДатаСрокГодностиРасширеннаяПодсказка" id="288"/>
+										</InputField>
+									</ChildItems>
+								</UsualGroup>
+							</ChildItems>
+						</UsualGroup>
 						<UsualGroup name="Группа18" id="244">
 							<Representation>None</Representation>
 							<ShowTitle>false</ShowTitle>
@@ -426,76 +498,6 @@
 								</UsualGroup>
 							</ChildItems>
 						</UsualGroup>
-						<UsualGroup name="ГруппаСроки" id="263">
-							<Title>
-								<v8:item>
-									<v8:lang>ru</v8:lang>
-									<v8:content>Сроки изговтовления и годности</v8:content>
-								</v8:item>
-							</Title>
-							<ToolTip>
-								<v8:item>
-									<v8:lang>ru</v8:lang>
-									<v8:content>Группа сроки</v8:content>
-								</v8:item>
-							</ToolTip>
-							<Group>Vertical</Group>
-							<ExtendedTooltip name="ГруппаСрокиРасширеннаяПодсказка" id="264"/>
-							<ChildItems>
-								<UsualGroup name="Группа22" id="279">
-									<Group>Horizontal</Group>
-									<Representation>None</Representation>
-									<ShowTitle>false</ShowTitle>
-									<ExtendedTooltip name="Группа22РасширеннаяПодсказка" id="280"/>
-									<ChildItems>
-										<InputField name="ДатаИзготовления1" id="265">
-											<DataPath>Объект.ДатаИзготовления1</DataPath>
-											<ContextMenu name="ДатаИзготовления1КонтекстноеМеню" id="266"/>
-											<ExtendedTooltip name="ДатаИзготовления1РасширеннаяПодсказка" id="267"/>
-										</InputField>
-										<InputField name="ДатаИзготовления2" id="268">
-											<DataPath>Объект.ДатаИзготовления2</DataPath>
-											<ContextMenu name="ДатаИзготовления2КонтекстноеМеню" id="269"/>
-											<ExtendedTooltip name="ДатаИзготовления2РасширеннаяПодсказка" id="270"/>
-										</InputField>
-										<InputField name="ДатаИзготовления" id="283">
-											<DataPath>Объект.ДатаИзготовления</DataPath>
-											<ContextMenu name="ДатаИзготовленияКонтекстноеМеню" id="284"/>
-											<ExtendedTooltip name="ДатаИзготовленияРасширеннаяПодсказка" id="285"/>
-										</InputField>
-									</ChildItems>
-								</UsualGroup>
-								<UsualGroup name="Группа21" id="271">
-									<Group>Horizontal</Group>
-									<Representation>None</Representation>
-									<ShowTitle>false</ShowTitle>
-									<ExtendedTooltip name="Группа21РасширеннаяПодсказка" id="272"/>
-									<ChildItems>
-										<InputField name="ДатаСрокГодности1" id="273">
-											<DataPath>Объект.ДатаСрокГодности1</DataPath>
-											<ContextMenu name="ДатаСрокГодности1КонтекстноеМеню" id="274"/>
-											<ExtendedTooltip name="ДатаСрокГодности1РасширеннаяПодсказка" id="275"/>
-										</InputField>
-										<InputField name="ДатаСрокГодности2" id="276">
-											<DataPath>Объект.ДатаСрокГодности2</DataPath>
-											<ContextMenu name="ДатаСрокГодности2КонтекстноеМеню" id="277"/>
-											<ExtendedTooltip name="ДатаСрокГодности2РасширеннаяПодсказка" id="278"/>
-										</InputField>
-										<InputField name="ДатаСрокГодности" id="286">
-											<DataPath>Объект.ДатаСрокГодности</DataPath>
-											<ContextMenu name="ДатаСрокГодностиКонтекстноеМеню" id="287"/>
-											<ExtendedTooltip name="ДатаСрокГодностиРасширеннаяПодсказка" id="288"/>
-										</InputField>
-									</ChildItems>
-								</UsualGroup>
-								<UsualGroup name="Группа23" id="281">
-									<Group>Horizontal</Group>
-									<Representation>None</Representation>
-									<ShowTitle>false</ShowTitle>
-									<ExtendedTooltip name="Группа23РасширеннаяПодсказка" id="282"/>
-								</UsualGroup>
-							</ChildItems>
-						</UsualGroup>
 					</ChildItems>
 				</Page>
 				<Page name="СтраницаПоставщик" id="47">
@@ -545,7 +547,7 @@
 										</v8:item>
 									</ToolTip>
 									<Group>Horizontal</Group>
-									<Representation>StrongSeparation</Representation>
+									<Representation>None</Representation>
 									<ShowTitle>false</ShowTitle>
 									<ExtendedTooltip name="ГруппаПолучательРасширеннаяПодсказка" id="55"/>
 									<ChildItems>
@@ -617,7 +619,7 @@
 										</v8:item>
 									</ToolTip>
 									<Group>Horizontal</Group>
-									<Representation>StrongSeparation</Representation>
+									<Representation>None</Representation>
 									<ShowTitle>false</ShowTitle>
 									<ExtendedTooltip name="ГруппаОкружениеРасширеннаяПодсказка" id="84"/>
 									<ChildItems>
@@ -732,7 +734,8 @@
 								</v8:item>
 							</ToolTip>
 							<Group>AlwaysHorizontal</Group>
-							<Representation>StrongSeparation</Representation>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
 							<ExtendedTooltip name="ГруппаАвтоРасширеннаяПодсказка" id="73"/>
 							<ChildItems>
 								<UsualGroup name="Группа13" id="191">
@@ -949,7 +952,7 @@
 								</v8:item>
 							</ToolTip>
 							<Group>AlwaysHorizontal</Group>
-							<Representation>StrongSeparation</Representation>
+							<Representation>None</Representation>
 							<ExtendedTooltip name="ГруппаВСДРасширеннаяПодсказка" id="115"/>
 							<ChildItems>
 								<InputField name="ВсдСерия" id="171">
@@ -1166,6 +1169,7 @@
 								</v8:item>
 							</Title>
 							<Group>Vertical</Group>
+							<ShowTitle>false</ShowTitle>
 							<ExtendedTooltip name="ГруппаУсловияПеревозкиРасширеннаяПодсказка" id="619"/>
 							<ChildItems>
 								<Table name="УсловияПеревозки" id="620">
@@ -1521,18 +1525,21 @@
 					</ToolTip>
 					<ExtendedTooltip name="СтраницаЗапросыРасширеннаяПодсказка" id="673"/>
 					<ChildItems>
-						<Table name="Запросы" id="674">
+						<UsualGroup name="Группа20" id="729">
+							<ExtendedTooltip name="Группа20РасширеннаяПодсказка" id="730"/>
+						</UsualGroup>
+						<Table name="дсЗапросы" id="731">
+							<Representation>List</Representation>
+							<Height>5</Height>
+							<MaxHeight>50</MaxHeight>
+							<FooterHeight>5</FooterHeight>
 							<UseAlternationRowColor>true</UseAlternationRowColor>
+							<InitialListView>End</InitialListView>
 							<EnableStartDrag>true</EnableStartDrag>
 							<DataPath>дсЗапросы</DataPath>
 							<RowPictureDataPath>дсЗапросы.DefaultPicture</RowPictureDataPath>
-							<Title>
-								<v8:item>
-									<v8:lang>ru</v8:lang>
-									<v8:content>Запросы</v8:content>
-								</v8:item>
-							</Title>
-							<AutoRefresh>false</AutoRefresh>
+							<RefreshRequest>PullFromTopOrBottom</RefreshRequest>
+							<AutoRefresh>true</AutoRefresh>
 							<AutoRefreshPeriod>60</AutoRefreshPeriod>
 							<Period>
 								<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
@@ -1542,76 +1549,76 @@
 							<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
 							<RestoreCurrentRow>false</RestoreCurrentRow>
 							<TopLevelParent xsi:nil="true"/>
-							<ShowRoot>true</ShowRoot>
+							<ShowRoot>false</ShowRoot>
 							<AllowRootChoice>false</AllowRootChoice>
 							<UpdateOnDataChange>Auto</UpdateOnDataChange>
-							<ContextMenu name="ЗапросыКонтекстноеМеню" id="675"/>
-							<AutoCommandBar name="ЗапросыКоманднаяПанель" id="676"/>
-							<ExtendedTooltip name="ЗапросыРасширеннаяПодсказка" id="677"/>
-							<SearchStringAddition name="ЗапросыСтрокаПоиска" id="678">
+							<ContextMenu name="дсЗапросыКонтекстноеМеню" id="732"/>
+							<AutoCommandBar name="дсЗапросыКоманднаяПанель" id="733"/>
+							<ExtendedTooltip name="дсЗапросыРасширеннаяПодсказка" id="734"/>
+							<SearchStringAddition name="дсЗапросыСтрокаПоиска" id="735">
 								<AdditionSource>
-									<Item>Запросы</Item>
+									<Item>дсЗапросы</Item>
 									<Type>SearchStringRepresentation</Type>
 								</AdditionSource>
-								<ContextMenu name="ЗапросыСтрокаПоискаКонтекстноеМеню" id="679"/>
-								<ExtendedTooltip name="ЗапросыСтрокаПоискаРасширеннаяПодсказка" id="680"/>
+								<ContextMenu name="дсЗапросыСтрокаПоискаКонтекстноеМеню" id="736"/>
+								<ExtendedTooltip name="дсЗапросыСтрокаПоискаРасширеннаяПодсказка" id="737"/>
 							</SearchStringAddition>
-							<ViewStatusAddition name="ЗапросыСостояниеПросмотра" id="681">
+							<ViewStatusAddition name="дсЗапросыСостояниеПросмотра" id="738">
 								<AdditionSource>
-									<Item>Запросы</Item>
+									<Item>дсЗапросы</Item>
 									<Type>ViewStatusRepresentation</Type>
 								</AdditionSource>
-								<ContextMenu name="ЗапросыСостояниеПросмотраКонтекстноеМеню" id="682"/>
-								<ExtendedTooltip name="ЗапросыСостояниеПросмотраРасширеннаяПодсказка" id="683"/>
+								<ContextMenu name="дсЗапросыСостояниеПросмотраКонтекстноеМеню" id="739"/>
+								<ExtendedTooltip name="дсЗапросыСостояниеПросмотраРасширеннаяПодсказка" id="740"/>
 							</ViewStatusAddition>
-							<SearchControlAddition name="ЗапросыУправлениеПоиском" id="684">
+							<SearchControlAddition name="дсЗапросыУправлениеПоиском" id="741">
 								<AdditionSource>
-									<Item>Запросы</Item>
+									<Item>дсЗапросы</Item>
 									<Type>SearchControl</Type>
 								</AdditionSource>
-								<ContextMenu name="ЗапросыУправлениеПоискомКонтекстноеМеню" id="685"/>
-								<ExtendedTooltip name="ЗапросыУправлениеПоискомРасширеннаяПодсказка" id="686"/>
+								<ContextMenu name="дсЗапросыУправлениеПоискомКонтекстноеМеню" id="742"/>
+								<ExtendedTooltip name="дсЗапросыУправлениеПоискомРасширеннаяПодсказка" id="743"/>
 							</SearchControlAddition>
 							<ChildItems>
-								<LabelField name="ЗапросыПериод" id="687">
+								<LabelField name="дсЗапросыПериод" id="744">
 									<DataPath>дсЗапросы.Period</DataPath>
-									<ContextMenu name="ЗапросыПериодКонтекстноеМеню" id="688"/>
-									<ExtendedTooltip name="ЗапросыПериодРасширеннаяПодсказка" id="689"/>
+									<ContextMenu name="дсЗапросыПериодКонтекстноеМеню" id="745"/>
+									<ExtendedTooltip name="дсЗапросыПериодРасширеннаяПодсказка" id="746"/>
 								</LabelField>
-								<LabelField name="ЗапросыОбъект" id="690">
+								<LabelField name="дсЗапросыОбъект" id="747">
 									<DataPath>дсЗапросы.Объект</DataPath>
-									<ContextMenu name="ЗапросыОбъектКонтекстноеМеню" id="691"/>
-									<ExtendedTooltip name="ЗапросыОбъектРасширеннаяПодсказка" id="692"/>
+									<ContextMenu name="дсЗапросыОбъектКонтекстноеМеню" id="748"/>
+									<ExtendedTooltip name="дсЗапросыОбъектРасширеннаяПодсказка" id="749"/>
 								</LabelField>
-								<LabelField name="ЗапросыСтатусЗапроса" id="693">
+								<LabelField name="дсЗапросыСтатусЗапроса" id="750">
 									<DataPath>дсЗапросы.СтатусЗапроса</DataPath>
-									<ContextMenu name="ЗапросыСтатусЗапросаКонтекстноеМеню" id="694"/>
-									<ExtendedTooltip name="ЗапросыСтатусЗапросаРасширеннаяПодсказка" id="695"/>
+									<ContextMenu name="дсЗапросыСтатусЗапросаКонтекстноеМеню" id="751"/>
+									<ExtendedTooltip name="дсЗапросыСтатусЗапросаРасширеннаяПодсказка" id="752"/>
 								</LabelField>
-								<LabelField name="ЗапросыПользователь" id="696">
+								<LabelField name="дсЗапросыПользователь" id="753">
 									<DataPath>дсЗапросы.Пользователь</DataPath>
-									<ContextMenu name="ЗапросыПользовательКонтекстноеМеню" id="697"/>
-									<ExtendedTooltip name="ЗапросыПользовательРасширеннаяПодсказка" id="698"/>
+									<ContextMenu name="дсЗапросыПользовательКонтекстноеМеню" id="754"/>
+									<ExtendedTooltip name="дсЗапросыПользовательРасширеннаяПодсказка" id="755"/>
 								</LabelField>
-								<LabelField name="ЗапросыApplicationID" id="699">
+								<LabelField name="дсЗапросыApplicationID" id="756">
 									<DataPath>дсЗапросы.ApplicationID</DataPath>
-									<ContextMenu name="ЗапросыApplicationIDКонтекстноеМеню" id="700"/>
-									<ExtendedTooltip name="ЗапросыApplicationIDРасширеннаяПодсказка" id="701"/>
+									<ContextMenu name="дсЗапросыApplicationIDКонтекстноеМеню" id="757"/>
+									<ExtendedTooltip name="дсЗапросыApplicationIDРасширеннаяПодсказка" id="758"/>
 								</LabelField>
-								<LabelField name="ЗапросыОшибки" id="702">
+								<LabelField name="дсЗапросыОшибки" id="759">
 									<DataPath>дсЗапросы.Ошибки</DataPath>
-									<ContextMenu name="ЗапросыОшибкиКонтекстноеМеню" id="703"/>
-									<ExtendedTooltip name="ЗапросыОшибкиРасширеннаяПодсказка" id="704"/>
+									<ContextMenu name="дсЗапросыОшибкиКонтекстноеМеню" id="760"/>
+									<ExtendedTooltip name="дсЗапросыОшибкиРасширеннаяПодсказка" id="761"/>
 								</LabelField>
-								<LabelField name="ЗапросыЗапрос" id="705">
+								<LabelField name="дсЗапросыЗапрос" id="762">
 									<DataPath>дсЗапросы.Запрос</DataPath>
-									<ContextMenu name="ЗапросыЗапросКонтекстноеМеню" id="706"/>
-									<ExtendedTooltip name="ЗапросыЗапросРасширеннаяПодсказка" id="707"/>
+									<ContextMenu name="дсЗапросыЗапросКонтекстноеМеню" id="763"/>
+									<ExtendedTooltip name="дсЗапросыЗапросРасширеннаяПодсказка" id="764"/>
 								</LabelField>
-								<LabelField name="ЗапросыОтвет" id="708">
+								<LabelField name="дсЗапросыОтвет" id="765">
 									<DataPath>дсЗапросы.Ответ</DataPath>
-									<ContextMenu name="ЗапросыОтветКонтекстноеМеню" id="709"/>
-									<ExtendedTooltip name="ЗапросыОтветРасширеннаяПодсказка" id="710"/>
+									<ContextMenu name="дсЗапросыОтветКонтекстноеМеню" id="766"/>
+									<ExtendedTooltip name="дсЗапросыОтветРасширеннаяПодсказка" id="767"/>
 								</LabelField>
 							</ChildItems>
 						</Table>

@@ -105,6 +105,24 @@
 						<Event name="ChoiceProcessing">ПартияОбработкаВыбора</Event>
 					</Events>
 				</InputField>
+				<LabelField name="Ошибки" id="158">
+					<DataPath>Ошибки</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Ошибки запроса / Ветис.API</v8:content>
+						</v8:item>
+					</Title>
+					<TitleTextColor>#FF0000</TitleTextColor>
+					<Width>50</Width>
+					<Border width="1">
+						<v8ui:style xsi:type="v8ui:ControlBorderType">Single</v8ui:style>
+					</Border>
+					<BorderColor>style:SpecialTextColor</BorderColor>
+					<TextColor>#FF0000</TextColor>
+					<ContextMenu name="ОшибкиКонтекстноеМеню" id="159"/>
+					<ExtendedTooltip name="ОшибкиРасширеннаяПодсказка" id="160"/>
+				</LabelField>
 				<Pages name="ГрСтраницы" id="105">
 					<ExtendedTooltip name="ГрСтраницыРасширеннаяПодсказка" id="106"/>
 					<ChildItems>
@@ -427,19 +445,6 @@
 						</Page>
 					</ChildItems>
 				</Pages>
-				<TextDocumentField name="Ошибки" id="158">
-					<DataPath>Ошибки</DataPath>
-					<Title>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>Есть ошибки</v8:content>
-						</v8:item>
-					</Title>
-					<TitleTextColor>#FF0000</TitleTextColor>
-					<TextColor>#FF0000</TextColor>
-					<ContextMenu name="ОшибкиКонтекстноеМеню" id="159"/>
-					<ExtendedTooltip name="ОшибкиРасширеннаяПодсказка" id="160"/>
-				</TextDocumentField>
 				<InputField name="Комментарий" id="57">
 					<DataPath>Объект.Комментарий</DataPath>
 					<AutoMaxWidth>false</AutoMaxWidth>

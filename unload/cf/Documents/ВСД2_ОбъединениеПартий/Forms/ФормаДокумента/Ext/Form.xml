@@ -156,13 +156,24 @@
 								</InputField>
 							</ChildItems>
 						</UsualGroup>
-						<TextDocumentField name="Ошибки" id="303">
+						<LabelField name="Ошибки" id="303">
 							<DataPath>Ошибки</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Ошибки запроса / Ветис.API</v8:content>
+								</v8:item>
+							</Title>
 							<TitleTextColor>#FF0000</TitleTextColor>
+							<Width>50</Width>
+							<Border width="1">
+								<v8ui:style xsi:type="v8ui:ControlBorderType">Single</v8ui:style>
+							</Border>
+							<BorderColor>style:SpecialTextColor</BorderColor>
 							<TextColor>#FF0000</TextColor>
 							<ContextMenu name="ОшибкиКонтекстноеМеню" id="304"/>
 							<ExtendedTooltip name="ОшибкиРасширеннаяПодсказка" id="305"/>
-						</TextDocumentField>
+						</LabelField>
 					</ChildItems>
 				</Page>
 				<Page name="ГруппаТовары" id="52">
