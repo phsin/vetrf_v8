@@ -229,6 +229,8 @@
 							<AutoMaxWidth>false</AutoMaxWidth>
 							<FileDragMode>AsFile</FileDragMode>
 							<DataPath>Объект.ВСДВходящие</DataPath>
+							<Font ref="style:NormalTextFont" kind="StyleItem"/>
+							<TitleFont ref="style:SmallTextFont" kind="StyleItem"/>
 							<CommandSet>
 								<ExcludedCommand>Add</ExcludedCommand>
 								<ExcludedCommand>CancelSearch</ExcludedCommand>
@@ -410,6 +412,12 @@
 								</InputField>
 								<InputField name="ВСДВходящиеКоличествоПринято1С" id="638">
 									<DataPath>Объект.ВСДВходящие.КоличествоПринято1С</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Кол-во 1с</v8:content>
+										</v8:item>
+									</Title>
 									<EditMode>EnterOnInput</EditMode>
 									<Width>10</Width>
 									<ContextMenu name="ВСДВходящиеКоличествоПринято1СКонтекстноеМеню" id="639"/>
@@ -417,6 +425,12 @@
 								</InputField>
 								<InputField name="ВСДВходящиеДатаСрокГодности1С" id="641">
 									<DataPath>Объект.ВСДВходящие.ДатаСрокГодности1С</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Дата Годн 1с</v8:content>
+										</v8:item>
+									</Title>
 									<EditMode>EnterOnInput</EditMode>
 									<Width>10</Width>
 									<ContextMenu name="ВСДВходящиеДатаСрокГодности1СКонтекстноеМеню" id="642"/>
@@ -430,6 +444,7 @@
 											<v8:content>Входящий ВСД</v8:content>
 										</v8:item>
 									</Title>
+									<TitleFont ref="style:SmallTextFont" kind="StyleItem"/>
 									<EditMode>EnterOnInput</EditMode>
 									<ContextMenu name="ВСДВходящиеДокВСДКонтекстноеМеню" id="74"/>
 									<ExtendedTooltip name="ВСДВходящиеДокВСДРасширеннаяПодсказка" id="75"/>
@@ -570,6 +585,113 @@
 									<EditMode>EnterOnInput</EditMode>
 									<ContextMenu name="ВСДВходящиеВСД_ПартияКонтекстноеМеню" id="628"/>
 									<ExtendedTooltip name="ВСДВходящиеВСД_ПартияРасширеннаяПодсказка" id="629"/>
+								</InputField>
+								<InputField name="ВСДВходящиеДатаИзготовления1" id="653">
+									<DataPath>Объект.ВСДВходящие.ДатаИзготовления1</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Дата Изг1</v8:content>
+										</v8:item>
+									</Title>
+									<EditMode>EnterOnInput</EditMode>
+									<Width>10</Width>
+									<Format>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>ДФ=dd.MM.yyyy</v8:content>
+										</v8:item>
+									</Format>
+									<EditFormat>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>ДФ=dd.MM.yyyy</v8:content>
+										</v8:item>
+									</EditFormat>
+									<ContextMenu name="ВСДВходящиеДатаИзготовления1КонтекстноеМеню" id="654"/>
+									<ExtendedTooltip name="ВСДВходящиеДатаИзготовления1РасширеннаяПодсказка" id="655"/>
+								</InputField>
+								<InputField name="ВСДВходящиеДатаИзготовления2" id="656">
+									<DataPath>Объект.ВСДВходящие.ДатаИзготовления2</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Дата Изг2</v8:content>
+										</v8:item>
+									</Title>
+									<EditMode>EnterOnInput</EditMode>
+									<Width>10</Width>
+									<Format>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>ДФ=dd.MM.yyyy</v8:content>
+										</v8:item>
+									</Format>
+									<EditFormat>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>ДФ=dd.MM.yyyy</v8:content>
+										</v8:item>
+									</EditFormat>
+									<ContextMenu name="ВСДВходящиеДатаИзготовления2КонтекстноеМеню" id="657"/>
+									<ExtendedTooltip name="ВСДВходящиеДатаИзготовления2РасширеннаяПодсказка" id="658"/>
+								</InputField>
+								<InputField name="ВСДВходящиеДатаСрокГодности1" id="659">
+									<DataPath>Объект.ВСДВходящие.ДатаСрокГодности1</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Дата Годн1</v8:content>
+										</v8:item>
+									</Title>
+									<EditMode>EnterOnInput</EditMode>
+									<Width>10</Width>
+									<Format>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>ДФ=dd.MM.yyyy</v8:content>
+										</v8:item>
+									</Format>
+									<EditFormat>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>ДФ=dd.MM.yyyy</v8:content>
+										</v8:item>
+									</EditFormat>
+									<ContextMenu name="ВСДВходящиеДатаСрокГодности1КонтекстноеМеню" id="660"/>
+									<ExtendedTooltip name="ВСДВходящиеДатаСрокГодности1РасширеннаяПодсказка" id="661"/>
+								</InputField>
+								<InputField name="ВСДВходящиеДатаСрокГодности2" id="662">
+									<DataPath>Объект.ВСДВходящие.ДатаСрокГодности2</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Дата Годн2</v8:content>
+										</v8:item>
+									</Title>
+									<EditMode>EnterOnInput</EditMode>
+									<Width>10</Width>
+									<Format>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>ДФ=dd.MM.yyyy</v8:content>
+										</v8:item>
+									</Format>
+									<EditFormat>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>ДФ=dd.MM.yyyy</v8:content>
+										</v8:item>
+									</EditFormat>
+									<ContextMenu name="ВСДВходящиеДатаСрокГодности2КонтекстноеМеню" id="663"/>
+									<ExtendedTooltip name="ВСДВходящиеДатаСрокГодности2РасширеннаяПодсказка" id="664"/>
+								</InputField>
+								<InputField name="ВСДВходящиеКодТНВЭД" id="665">
+									<DataPath>Объект.ВСДВходящие.КодТНВЭД</DataPath>
+									<TitleFont ref="style:SmallTextFont" kind="StyleItem"/>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ВСДВходящиеКодТНВЭДКонтекстноеМеню" id="666"/>
+									<ExtendedTooltip name="ВСДВходящиеКодТНВЭДРасширеннаяПодсказка" id="667"/>
 								</InputField>
 							</ChildItems>
 						</Table>

@@ -5,6 +5,12 @@
 	</AutoCommandBar>
 	<ChildItems>
 		<UsualGroup name="Группа1" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Установка соответсвий Номенклатуры и Продукции из Меркурия</v8:content>
+				</v8:item>
+			</Title>
 			<Group>Horizontal</Group>
 			<ExtendedTooltip name="Группа1РасширеннаяПодсказка" id="2"/>
 			<ChildItems>
@@ -17,7 +23,7 @@
 							<Title>
 								<v8:item>
 									<v8:lang>ru</v8:lang>
-									<v8:content>Номенклатура Меркурий</v8:content>
+									<v8:content>Продукция в Меркурии</v8:content>
 								</v8:item>
 							</Title>
 							<ContextMenu name="ВыбВСДЭлементКонтекстноеМеню" id="6"/>
@@ -190,7 +196,7 @@
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Показать установленные соответствия Элементу</v8:content>
+					<v8:content>Показать установленные соответствия</v8:content>
 				</v8:item>
 			</Title>
 			<ToolTip>
@@ -238,7 +244,7 @@
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Убрать соответствия</v8:content>
+					<v8:content>Очистить соответствия</v8:content>
 				</v8:item>
 			</Title>
 			<ToolTip>
