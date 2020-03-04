@@ -13,6 +13,17 @@
 				<CommandName>Form.Command.ЗаполнитьСверку</CommandName>
 				<ExtendedTooltip name="ФормаЗаполнитьСверкуРасширеннаяПодсказка" id="108"/>
 			</Button>
+			<Button name="кнКорректировкаОстатков" id="181">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.кнКорректировкаОстатков</CommandName>
+				<Title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Инвентаризация (Остатки)</v8:content>
+					</v8:item>
+				</Title>
+				<ExtendedTooltip name="кнКорректировкаОстатковРасширеннаяПодсказка" id="182"/>
+			</Button>
 		</ChildItems>
 	</AutoCommandBar>
 	<ChildItems>
@@ -140,6 +151,12 @@
 									<EditMode>EnterOnInput</EditMode>
 									<ContextMenu name="Остатки1СКоличествоКонтекстноеМеню" id="34"/>
 									<ExtendedTooltip name="Остатки1СКоличествоРасширеннаяПодсказка" id="35"/>
+								</InputField>
+								<InputField name="Остатки1СОшибки" id="183">
+									<DataPath>Объект.Остатки1С.Ошибки</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="Остатки1СОшибкиКонтекстноеМеню" id="184"/>
+									<ExtendedTooltip name="Остатки1СОшибкиРасширеннаяПодсказка" id="185"/>
 								</InputField>
 							</ChildItems>
 						</Table>
@@ -355,7 +372,40 @@
 							<DataPath>Объект.СверкаКорректировка</DataPath>
 							<RowFilter xsi:nil="true"/>
 							<ContextMenu name="СверкаКорректировкаКонтекстноеМеню" id="136"/>
-							<AutoCommandBar name="СверкаКорректировкаКоманднаяПанель" id="137"/>
+							<AutoCommandBar name="СверкаКорректировкаКоманднаяПанель" id="137">
+								<Autofill>false</Autofill>
+								<ChildItems>
+									<Button name="кнОтметитьВсе" id="177">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.кнОтметитьВсе</CommandName>
+										<Picture>
+											<xr:Ref>StdPicture.CheckAll</xr:Ref>
+											<xr:LoadTransparent>true</xr:LoadTransparent>
+										</Picture>
+										<ExtendedTooltip name="кнОтметитьВсеРасширеннаяПодсказка" id="178"/>
+									</Button>
+									<Button name="кнСнятьВсе" id="179">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.кнСнятьВсе</CommandName>
+										<Picture>
+											<xr:Ref>StdPicture.UncheckAll</xr:Ref>
+											<xr:LoadTransparent>true</xr:LoadTransparent>
+										</Picture>
+										<ExtendedTooltip name="кнСнятьВсеРасширеннаяПодсказка" id="180"/>
+									</Button>
+									<Button name="кнСоздатьКорректировку" id="172">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.кнКорректировкаДаты</CommandName>
+										<Title>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Инвентаризация (СрокГодности)</v8:content>
+											</v8:item>
+										</Title>
+										<ExtendedTooltip name="кнСоздатьКорректировкуРасширеннаяПодсказка" id="173"/>
+									</Button>
+								</ChildItems>
+							</AutoCommandBar>
 							<ExtendedTooltip name="СверкаКорректировкаРасширеннаяПодсказка" id="138"/>
 							<SearchStringAddition name="СверкаКорректировкаСтрокаПоиска" id="139">
 								<AdditionSource>
@@ -382,6 +432,19 @@
 								<ExtendedTooltip name="СверкаКорректировкаУправлениеПоискомРасширеннаяПодсказка" id="147"/>
 							</SearchControlAddition>
 							<ChildItems>
+								<CheckBoxField name="СверкаКорректировкаОтметка" id="174">
+									<DataPath>Объект.СверкаКорректировка.Отметка</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>V</v8:content>
+										</v8:item>
+									</Title>
+									<EditMode>EnterOnInput</EditMode>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="СверкаКорректировкаОтметкаКонтекстноеМеню" id="175"/>
+									<ExtendedTooltip name="СверкаКорректировкаОтметкаРасширеннаяПодсказка" id="176"/>
+								</CheckBoxField>
 								<LabelField name="СверкаКорректировкаНомерСтроки" id="148">
 									<DataPath>Объект.СверкаКорректировка.LineNumber</DataPath>
 									<EditMode>EnterOnInput</EditMode>
@@ -443,6 +506,25 @@
 				<v8:Type>cfg:DataProcessorObject.кб99_СверкаОстатковУТ11</v8:Type>
 			</Type>
 			<MainAttribute>true</MainAttribute>
+			<Columns>
+				<AdditionalColumns table="Объект.Остатки1С">
+					<Column name="Ошибки" id="1">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Ошибки</v8:content>
+							</v8:item>
+						</Title>
+						<Type>
+							<v8:Type>xs:string</v8:Type>
+							<v8:StringQualifiers>
+								<v8:Length>0</v8:Length>
+								<v8:AllowedLength>Variable</v8:AllowedLength>
+							</v8:StringQualifiers>
+						</Type>
+					</Column>
+				</AdditionalColumns>
+			</Columns>
 		</Attribute>
 		<Attribute name="ВыбСклады" id="2">
 			<Title>
@@ -485,6 +567,26 @@
 					</dcscor:item>
 				</dcsset:appearance>
 			</dcsset:item>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>Остатки1С</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">Объект.Остатки1С.Цвет</dcsset:left>
+						<dcsset:comparisonType>Contains</dcsset:comparisonType>
+						<dcsset:right xsi:type="xs:string">Желтый</dcsset:right>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>ЦветФона</dcscor:parameter>
+						<dcscor:value xsi:type="v8ui:Color">#FFFF00</dcscor:value>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
 		</ConditionalAppearance>
 	</Attributes>
 	<Commands>
@@ -517,6 +619,66 @@
 				</v8:item>
 			</ToolTip>
 			<Action>ЗаполнитьСверку</Action>
+		</Command>
+		<Command name="кнКорректировкаДаты" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Кн корректировка даты</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>ВСД2 Инвентаризация, корректировка сроков годности.</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>кнКорректировкаДаты</Action>
+		</Command>
+		<Command name="кнОтметитьВсе" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отметить все</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Кн отметить все</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>кнОтметитьВсе</Action>
+		</Command>
+		<Command name="кнСнятьВсе" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Снять все</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Кн снять все</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>кнСнятьВсе</Action>
+		</Command>
+		<Command name="кнКорректировкаОстатков" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Кн корректировка остатков</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>ВСД2 Инвентаризация, корректировка остатков.</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>кнКорректировкаОстатков</Action>
 		</Command>
 	</Commands>
 </Form>
