@@ -378,7 +378,7 @@
 													<Title>
 														<v8:item>
 															<v8:lang>ru</v8:lang>
-															<v8:content>Дата изготовления1</v8:content>
+															<v8:content>Дата Изготовления 1</v8:content>
 														</v8:item>
 													</Title>
 													<EditMode>EnterOnInput</EditMode>
@@ -390,6 +390,12 @@
 												</InputField>
 												<InputField name="ПродукцияДатаИзготовления2" id="114">
 													<DataPath>Объект.Продукция.ДатаИзготовления2</DataPath>
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Дата Изготовления 2</v8:content>
+														</v8:item>
+													</Title>
 													<EditMode>EnterOnInput</EditMode>
 													<ContextMenu name="ПродукцияДатаИзготовления2КонтекстноеМеню" id="115"/>
 													<ExtendedTooltip name="ПродукцияДатаИзготовления2РасширеннаяПодсказка" id="116"/>
@@ -404,7 +410,7 @@
 													<Title>
 														<v8:item>
 															<v8:lang>ru</v8:lang>
-															<v8:content>Дата срок годности 1</v8:content>
+															<v8:content>Срок Годности 1</v8:content>
 														</v8:item>
 													</Title>
 													<EditMode>EnterOnInput</EditMode>
@@ -413,6 +419,12 @@
 												</InputField>
 												<InputField name="ПродукцияДатаСрокГодности2" id="120">
 													<DataPath>Объект.Продукция.ДатаСрокГодности2</DataPath>
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Срок Годности 2</v8:content>
+														</v8:item>
+													</Title>
 													<EditMode>EnterOnInput</EditMode>
 													<ContextMenu name="ПродукцияДатаСрокГодности2КонтекстноеМеню" id="121"/>
 													<ExtendedTooltip name="ПродукцияДатаСрокГодности2РасширеннаяПодсказка" id="122"/>
@@ -776,15 +788,41 @@
 											<ContextMenu name="ПартииСписанияНомерСтрокиКонтекстноеМеню" id="139"/>
 											<ExtendedTooltip name="ПартииСписанияНомерСтрокиРасширеннаяПодсказка" id="140"/>
 										</LabelField>
-										<InputField name="ПартииСписанияПродукция_Элемент" id="153">
-											<DataPath>Объект.ПартииСписания.Продукция_Элемент</DataPath>
-											<EditMode>EnterOnInput</EditMode>
-											<ContextMenu name="ПартииСписанияПродукция_ЭлементКонтекстноеМеню" id="154"/>
-											<ExtendedTooltip name="ПартииСписанияПродукция_ЭлементРасширеннаяПодсказка" id="155"/>
-											<Events>
-												<Event name="OnChange">ПартииСписанияПродукция_ЭлементПриИзменении</Event>
-											</Events>
-										</InputField>
+										<ColumnGroup name="ПартииСписанияГруппаПродукция" id="591">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Партии списания группа продукция</v8:content>
+												</v8:item>
+											</Title>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Партии списания группа продукция</v8:content>
+												</v8:item>
+											</ToolTip>
+											<ExtendedTooltip name="ПартииСписанияГруппаПродукцияРасширеннаяПодсказка" id="592"/>
+											<ChildItems>
+												<InputField name="ПартииСписанияПродукция_Элемент" id="153">
+													<DataPath>Объект.ПартииСписания.Продукция_Элемент</DataPath>
+													<EditMode>EnterOnInput</EditMode>
+													<ContextMenu name="ПартииСписанияПродукция_ЭлементКонтекстноеМеню" id="154"/>
+													<ExtendedTooltip name="ПартииСписанияПродукция_ЭлементРасширеннаяПодсказка" id="155"/>
+													<Events>
+														<Event name="OnChange">ПартииСписанияПродукция_ЭлементПриИзменении</Event>
+													</Events>
+												</InputField>
+												<InputField name="ПартииСписанияНоменклатура" id="141">
+													<DataPath>Объект.ПартииСписания.Номенклатура</DataPath>
+													<EditMode>EnterOnInput</EditMode>
+													<ContextMenu name="ПартииСписанияНоменклатураКонтекстноеМеню" id="142"/>
+													<ExtendedTooltip name="ПартииСписанияНоменклатураРасширеннаяПодсказка" id="143"/>
+													<Events>
+														<Event name="OnChange">ПартииСписанияНоменклатураПриИзменении</Event>
+													</Events>
+												</InputField>
+											</ChildItems>
+										</ColumnGroup>
 										<InputField name="ПартииСписанияПартия" id="144">
 											<DataPath>Объект.ПартииСписания.Партия</DataPath>
 											<EditMode>EnterOnInput</EditMode>
@@ -832,7 +870,7 @@
 													<Title>
 														<v8:item>
 															<v8:lang>ru</v8:lang>
-															<v8:content>Дата изготовления 1</v8:content>
+															<v8:content>Дата Изготовления 1</v8:content>
 														</v8:item>
 													</Title>
 													<EditMode>EnterOnInput</EditMode>
@@ -841,6 +879,12 @@
 												</InputField>
 												<InputField name="ПартииСписанияДатаИзготовления2" id="485">
 													<DataPath>Объект.ПартииСписания.ДатаИзготовления2</DataPath>
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Дата Изготовления 2</v8:content>
+														</v8:item>
+													</Title>
 													<EditMode>EnterOnInput</EditMode>
 													<ContextMenu name="ПартииСписанияДатаИзготовления2КонтекстноеМеню" id="486"/>
 													<ExtendedTooltip name="ПартииСписанияДатаИзготовления2РасширеннаяПодсказка" id="487"/>
@@ -855,7 +899,7 @@
 													<Title>
 														<v8:item>
 															<v8:lang>ru</v8:lang>
-															<v8:content>Дата срок годности 1</v8:content>
+															<v8:content>Срок Годности 1</v8:content>
 														</v8:item>
 													</Title>
 													<EditMode>EnterOnInput</EditMode>
@@ -867,7 +911,7 @@
 													<Title>
 														<v8:item>
 															<v8:lang>ru</v8:lang>
-															<v8:content>Дата срок годности 2</v8:content>
+															<v8:content>Срок Годности 2</v8:content>
 														</v8:item>
 													</Title>
 													<EditMode>EnterOnInput</EditMode>
@@ -876,15 +920,6 @@
 												</InputField>
 											</ChildItems>
 										</ColumnGroup>
-										<InputField name="ПартииСписанияНоменклатура" id="141">
-											<DataPath>Объект.ПартииСписания.Номенклатура</DataPath>
-											<EditMode>EnterOnInput</EditMode>
-											<ContextMenu name="ПартииСписанияНоменклатураКонтекстноеМеню" id="142"/>
-											<ExtendedTooltip name="ПартииСписанияНоменклатураРасширеннаяПодсказка" id="143"/>
-											<Events>
-												<Event name="OnChange">ПартииСписанияНоменклатураПриИзменении</Event>
-											</Events>
-										</InputField>
 									</ChildItems>
 								</Table>
 							</ChildItems>

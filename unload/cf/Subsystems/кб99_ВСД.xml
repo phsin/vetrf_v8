@@ -89,13 +89,15 @@
 				<xr:Item xsi:type="xr:MDObjectRef">DataProcessor.кб99_СоздатьВсдПродукцию</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">DataProcessor.кб99_УстановкаСоответствий</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">DataProcessor.кб99_НайтиПлощадки</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">DataProcessor.кб99_Параметры</xr:Item>
 			</Content>
 		</Properties>
 		<ChildObjects>
 			<Subsystem>СправочникиВСД</Subsystem>
-			<Subsystem>ДокументыВСД</Subsystem>
+			<Subsystem>ДокументыВСДv2</Subsystem>
 			<Subsystem>Команды</Subsystem>
 			<Subsystem>ОтчетыВСД</Subsystem>
+			<Subsystem>ДокументыВСДv1</Subsystem>
 		</ChildObjects>
 	</Subsystem>
 </MetaDataObject>

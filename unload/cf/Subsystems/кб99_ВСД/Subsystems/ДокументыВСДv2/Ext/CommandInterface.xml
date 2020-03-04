@@ -1,19 +1,14 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <CommandInterface xmlns="http://v8.1c.ru/8.3/xcf/extrnprops" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.8">
 	<CommandsVisibility>
+		<Command name="Document.ВСД2_входящий.StandardCommand.OpenList">
+			<Visibility>
+				<xr:Common>false</xr:Common>
+			</Visibility>
+		</Command>
 		<Command name="DocumentJournal.кб99_ЖурналВСД.StandardCommand.OpenList">
 			<Visibility>
 				<xr:Common>false</xr:Common>
-			</Visibility>
-		</Command>
-		<Command name="0:243606b7-bfa1-4d33-9703-f98b7428f6e5">
-			<Visibility>
-				<xr:Common>false</xr:Common>
-			</Visibility>
-		</Command>
-		<Command name="Document.ВСД_транзакция.StandardCommand.Create">
-			<Visibility>
-				<xr:Common>true</xr:Common>
 			</Visibility>
 		</Command>
 		<Command name="Document.ВСД2_Инвентаризация.StandardCommand.Create">
@@ -37,11 +32,6 @@
 			</Visibility>
 		</Command>
 		<Command name="Document.ВСД2_транзакция.StandardCommand.Create">
-			<Visibility>
-				<xr:Common>true</xr:Common>
-			</Visibility>
-		</Command>
-		<Command name="Document.ВСД2_входящий.StandardCommand.Create">
 			<Visibility>
 				<xr:Common>true</xr:Common>
 			</Visibility>

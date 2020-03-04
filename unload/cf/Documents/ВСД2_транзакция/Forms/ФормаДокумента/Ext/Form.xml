@@ -842,61 +842,141 @@
 											<ContextMenu name="ТоварыЕдиницаИзмеренияКонтекстноеМеню" id="124"/>
 											<ExtendedTooltip name="ТоварыЕдиницаИзмеренияРасширеннаяПодсказка" id="125"/>
 										</InputField>
-										<InputField name="ТоварыДатаИзготовления" id="304">
-											<DataPath>Объект.Товары.ДатаИзготовления</DataPath>
-											<ReadOnly>true</ReadOnly>
-											<EditMode>EnterOnInput</EditMode>
-											<ContextMenu name="ТоварыДатаИзготовленияКонтекстноеМеню" id="305"/>
-											<ExtendedTooltip name="ТоварыДатаИзготовленияРасширеннаяПодсказка" id="306"/>
-										</InputField>
-										<InputField name="ТоварыДатаСрокГодности" id="307">
-											<DataPath>Объект.Товары.ДатаСрокГодности</DataPath>
-											<ReadOnly>true</ReadOnly>
-											<EditMode>EnterOnInput</EditMode>
-											<ContextMenu name="ТоварыДатаСрокГодностиКонтекстноеМеню" id="308"/>
-											<ExtendedTooltip name="ТоварыДатаСрокГодностиРасширеннаяПодсказка" id="309"/>
-										</InputField>
-										<InputField name="ТоварыДатаИзготовления2" id="310">
-											<DataPath>Объект.Товары.ДатаИзготовления2</DataPath>
-											<ReadOnly>true</ReadOnly>
-											<EditMode>EnterOnInput</EditMode>
-											<ContextMenu name="ТоварыДатаИзготовления2КонтекстноеМеню" id="311"/>
-											<ExtendedTooltip name="ТоварыДатаИзготовления2РасширеннаяПодсказка" id="312"/>
-										</InputField>
-										<InputField name="ТоварыДатаСрокгодности2" id="313">
-											<DataPath>Объект.Товары.ДатаСрокгодности2</DataPath>
-											<ReadOnly>true</ReadOnly>
-											<EditMode>EnterOnInput</EditMode>
-											<ContextMenu name="ТоварыДатаСрокгодности2КонтекстноеМеню" id="314"/>
-											<ExtendedTooltip name="ТоварыДатаСрокгодности2РасширеннаяПодсказка" id="315"/>
-										</InputField>
-										<CheckBoxField name="ТоварыНекачественный" id="717">
-											<DataPath>Объект.Товары.Некачественный</DataPath>
-											<EditMode>EnterOnInput</EditMode>
-											<CheckBoxType>Auto</CheckBoxType>
-											<ContextMenu name="ТоварыНекачественныйКонтекстноеМеню" id="718"/>
-											<ExtendedTooltip name="ТоварыНекачественныйРасширеннаяПодсказка" id="719"/>
-										</CheckBoxField>
-										<InputField name="ТоварыАртикул" id="126">
-											<DataPath>Объект.Товары.Артикул</DataPath>
-											<EditMode>EnterOnInput</EditMode>
-											<Width>10</Width>
-											<ContextMenu name="ТоварыАртикулКонтекстноеМеню" id="127"/>
-											<ExtendedTooltip name="ТоварыАртикулРасширеннаяПодсказка" id="128"/>
-										</InputField>
-										<InputField name="ТоварыGTIN" id="129">
-											<DataPath>Объект.Товары.GTIN</DataPath>
-											<EditMode>EnterOnInput</EditMode>
-											<Width>10</Width>
-											<ContextMenu name="ТоварыGTINКонтекстноеМеню" id="130"/>
-											<ExtendedTooltip name="ТоварыGTINРасширеннаяПодсказка" id="131"/>
-										</InputField>
-										<InputField name="ТоварыЦель" id="144">
-											<DataPath>Объект.Товары.Цель</DataPath>
-											<EditMode>EnterOnInput</EditMode>
-											<ContextMenu name="ТоварыЦельКонтекстноеМеню" id="145"/>
-											<ExtendedTooltip name="ТоварыЦельРасширеннаяПодсказка" id="146"/>
-										</InputField>
+										<ColumnGroup name="ТоварыГруппаДатаИзготовления" id="720">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Товары группа дата изготовления</v8:content>
+												</v8:item>
+											</Title>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Товары группа дата изготовления</v8:content>
+												</v8:item>
+											</ToolTip>
+											<ExtendedTooltip name="ТоварыГруппаДатаИзготовленияРасширеннаяПодсказка" id="721"/>
+											<ChildItems>
+												<InputField name="ТоварыДатаИзготовления" id="304">
+													<DataPath>Объект.Товары.ДатаИзготовления</DataPath>
+													<ReadOnly>true</ReadOnly>
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Дата Изготовления 1</v8:content>
+														</v8:item>
+													</Title>
+													<EditMode>EnterOnInput</EditMode>
+													<ContextMenu name="ТоварыДатаИзготовленияКонтекстноеМеню" id="305"/>
+													<ExtendedTooltip name="ТоварыДатаИзготовленияРасширеннаяПодсказка" id="306"/>
+												</InputField>
+												<InputField name="ТоварыДатаИзготовления2" id="310">
+													<DataPath>Объект.Товары.ДатаИзготовления2</DataPath>
+													<ReadOnly>true</ReadOnly>
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Дата Изготовления 2</v8:content>
+														</v8:item>
+													</Title>
+													<EditMode>EnterOnInput</EditMode>
+													<ContextMenu name="ТоварыДатаИзготовления2КонтекстноеМеню" id="311"/>
+													<ExtendedTooltip name="ТоварыДатаИзготовления2РасширеннаяПодсказка" id="312"/>
+												</InputField>
+											</ChildItems>
+										</ColumnGroup>
+										<ColumnGroup name="ТоварыГруппаСрокГодности" id="722">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Товары группа срок годности</v8:content>
+												</v8:item>
+											</Title>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Товары группа срок годности</v8:content>
+												</v8:item>
+											</ToolTip>
+											<ExtendedTooltip name="ТоварыГруппаСрокГодностиРасширеннаяПодсказка" id="723"/>
+											<ChildItems>
+												<InputField name="ТоварыДатаСрокГодности" id="307">
+													<DataPath>Объект.Товары.ДатаСрокГодности</DataPath>
+													<ReadOnly>true</ReadOnly>
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Срок Годности 1</v8:content>
+														</v8:item>
+													</Title>
+													<EditMode>EnterOnInput</EditMode>
+													<ContextMenu name="ТоварыДатаСрокГодностиКонтекстноеМеню" id="308"/>
+													<ExtendedTooltip name="ТоварыДатаСрокГодностиРасширеннаяПодсказка" id="309"/>
+												</InputField>
+												<InputField name="ТоварыДатаСрокгодности2" id="313">
+													<DataPath>Объект.Товары.ДатаСрокгодности2</DataPath>
+													<ReadOnly>true</ReadOnly>
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Срок Годности 2</v8:content>
+														</v8:item>
+													</Title>
+													<EditMode>EnterOnInput</EditMode>
+													<ContextMenu name="ТоварыДатаСрокгодности2КонтекстноеМеню" id="314"/>
+													<ExtendedTooltip name="ТоварыДатаСрокгодности2РасширеннаяПодсказка" id="315"/>
+												</InputField>
+											</ChildItems>
+										</ColumnGroup>
+										<ColumnGroup name="ТоварыГруппаКоды" id="724">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Товары группа коды</v8:content>
+												</v8:item>
+											</Title>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Товары группа коды</v8:content>
+												</v8:item>
+											</ToolTip>
+											<ExtendedTooltip name="ТоварыГруппаКодыРасширеннаяПодсказка" id="725"/>
+											<ChildItems>
+												<InputField name="ТоварыАртикул" id="126">
+													<DataPath>Объект.Товары.Артикул</DataPath>
+													<EditMode>EnterOnInput</EditMode>
+													<Width>10</Width>
+													<ContextMenu name="ТоварыАртикулКонтекстноеМеню" id="127"/>
+													<ExtendedTooltip name="ТоварыАртикулРасширеннаяПодсказка" id="128"/>
+												</InputField>
+												<InputField name="ТоварыGTIN" id="129">
+													<DataPath>Объект.Товары.GTIN</DataPath>
+													<EditMode>EnterOnInput</EditMode>
+													<Width>10</Width>
+													<ContextMenu name="ТоварыGTINКонтекстноеМеню" id="130"/>
+													<ExtendedTooltip name="ТоварыGTINРасширеннаяПодсказка" id="131"/>
+												</InputField>
+											</ChildItems>
+										</ColumnGroup>
+										<ColumnGroup name="ТоварыГруппа1" id="726">
+											<ExtendedTooltip name="ТоварыГруппа1РасширеннаяПодсказка" id="727"/>
+											<ChildItems>
+												<InputField name="ТоварыЦель" id="144">
+													<DataPath>Объект.Товары.Цель</DataPath>
+													<EditMode>EnterOnInput</EditMode>
+													<ContextMenu name="ТоварыЦельКонтекстноеМеню" id="145"/>
+													<ExtendedTooltip name="ТоварыЦельРасширеннаяПодсказка" id="146"/>
+												</InputField>
+												<CheckBoxField name="ТоварыНекачественный" id="717">
+													<DataPath>Объект.Товары.Некачественный</DataPath>
+													<EditMode>EnterOnInput</EditMode>
+													<CheckBoxType>Auto</CheckBoxType>
+													<ContextMenu name="ТоварыНекачественныйКонтекстноеМеню" id="718"/>
+													<ExtendedTooltip name="ТоварыНекачественныйРасширеннаяПодсказка" id="719"/>
+												</CheckBoxField>
+											</ChildItems>
+										</ColumnGroup>
 									</ChildItems>
 								</Table>
 							</ChildItems>
