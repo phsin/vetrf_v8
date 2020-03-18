@@ -6,7 +6,7 @@
 			<Synonym>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Кб99 ВСД</v8:content>
+					<v8:content>кб99 ВСД</v8:content>
 				</v8:item>
 			</Synonym>
 			<Comment/>
@@ -33,12 +33,12 @@
 				<xr:Item xsi:type="xr:MDObjectRef">Catalog.ВСД_Продукция</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">Catalog.ВСД_Площадка</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">Catalog.ВСД_ХозСубъект</xr:Item>
-				<xr:Item xsi:type="xr:MDObjectRef">DocumentJournal.ЖурналВСД</xr:Item>
-				<xr:Item xsi:type="xr:MDObjectRef">Enum.ВСД_РезультатИсследования</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">DocumentJournal.кб99_ЖурналВСД</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.кб99_РезультатИсследования</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">Document.ВСД2_транзакция</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">Document.ВСД2_ЛабораторныеИсследования</xr:Item>
-				<xr:Item xsi:type="xr:MDObjectRef">Enum.ВСД_УровниУпаковки</xr:Item>
-				<xr:Item xsi:type="xr:MDObjectRef">Enum.ВСД_Маркировка</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.кб99_УровниУпаковки</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.кб99_Маркировка</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">Catalog.ВСД_Цель</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">Document.ВСД2_Инвентаризация</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">Document.ВСД2</xr:Item>
@@ -46,28 +46,59 @@
 				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.кб99_ВСД</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">Document.ВСД2_входящий</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">DataProcessor.Интеграция_ГИС_Меркурий</xr:Item>
-				<xr:Item xsi:type="xr:MDObjectRef">Enum.ВСД_ТермическиеУсловияПеревозки</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.кб99_ТермическиеУсловияПеревозки</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.Ветис2</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.кб99_ВСД_Отправка</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.кб99_ВСД_Запросы</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.кб99_ВСД_Общий</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.кб99_ВСД_Производство</xr:Item>
-				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.ВСД_ПроизводственнаяСпецификация</xr:Item>
-				<xr:Item xsi:type="xr:MDObjectRef">Enum.ВСД_ТипыТранспорта</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.кб99_ПроизводственнаяСпецификация</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.кб99_ТипыТранспорта</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.ЛабИсследования</xr:Item>
-				<xr:Item xsi:type="xr:MDObjectRef">DataProcessor.ВСД_ЛабИсследования</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">DataProcessor.кб99_ЛабИсследования</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.кб99_ВСД_УправлениеПечатью</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">CommonTemplate.КомпонентаПечатиQRКода</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.кб99_ВСД_Клиент</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">CommonCommand.ВСД_ОбновитьСтатусВСД</xr:Item>
-				<xr:Item xsi:type="xr:MDObjectRef">Enum.ВСД_СтатусВСД</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.кб99_СтатусВСД</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.кб99_Запросы</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">DataProcessor.кб99_ГашениеВходящихПартий</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.кб99_ВСД2</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.ВСД_Соответсвия</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.кб99_map_o</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.кб99_print</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.кб99_send</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.кб99_send_o</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.кб99_space_shattle</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.кб99_check</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.кб99_reply</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.кб99_exchange</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.кб99_remove</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.кб99_random</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.кб99_plus</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.кб99_rotate_left</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.кб99_refresh</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.кб99_Car</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.kb99_plus_black</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.kb99_download</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.kb99_shopping_basket</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.kb99_wrench</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.kb99_truck</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.kb99_user</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.kb99_user_o</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">DataProcessor.кб99_СоздатьВсдПродукцию</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">DataProcessor.кб99_УстановкаСоответствий</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">DataProcessor.кб99_НайтиПлощадки</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">DataProcessor.кб99_Параметры</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">DataProcessor.кб99_СверкаОстатковУТ11</xr:Item>
 			</Content>
 		</Properties>
 		<ChildObjects>
 			<Subsystem>СправочникиВСД</Subsystem>
-			<Subsystem>ДокументыВСД</Subsystem>
+			<Subsystem>ДокументыВСДv2</Subsystem>
 			<Subsystem>Команды</Subsystem>
 			<Subsystem>ОтчетыВСД</Subsystem>
+			<Subsystem>ДокументыВСДv1</Subsystem>
 		</ChildObjects>
 	</Subsystem>
 </MetaDataObject>

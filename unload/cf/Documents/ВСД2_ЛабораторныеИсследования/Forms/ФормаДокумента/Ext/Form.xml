@@ -66,7 +66,7 @@
 							<ExtendedTooltip name="ДатаРасширеннаяПодсказка" id="13"/>
 						</InputField>
 						<InputField name="Статус" id="5">
-							<DataPath>Объект.Статус</DataPath>
+							<DataPath>СтатусЗапроса</DataPath>
 							<EditMode>EnterOnInput</EditMode>
 							<Font ref="style:NormalTextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
 							<ContextMenu name="СтатусКонтекстноеМеню" id="6"/>
@@ -84,7 +84,7 @@
 					</Events>
 				</InputField>
 				<InputField name="applicationID" id="19">
-					<DataPath>Объект.applicationID</DataPath>
+					<DataPath>ApplicationID</DataPath>
 					<Title>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
@@ -105,6 +105,24 @@
 						<Event name="ChoiceProcessing">ПартияОбработкаВыбора</Event>
 					</Events>
 				</InputField>
+				<LabelField name="Ошибки" id="158">
+					<DataPath>Ошибки</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Ошибки запроса / Ветис.API</v8:content>
+						</v8:item>
+					</Title>
+					<TitleTextColor>#FF0000</TitleTextColor>
+					<Width>50</Width>
+					<Border width="1">
+						<v8ui:style xsi:type="v8ui:ControlBorderType">Single</v8ui:style>
+					</Border>
+					<BorderColor>style:SpecialTextColor</BorderColor>
+					<TextColor>#FF0000</TextColor>
+					<ContextMenu name="ОшибкиКонтекстноеМеню" id="159"/>
+					<ExtendedTooltip name="ОшибкиРасширеннаяПодсказка" id="160"/>
+				</LabelField>
 				<Pages name="ГрСтраницы" id="105">
 					<ExtendedTooltip name="ГрСтраницыРасширеннаяПодсказка" id="106"/>
 					<ChildItems>
@@ -301,7 +319,6 @@
 							</ChildItems>
 						</Page>
 						<Page name="грЗапросы" id="113">
-							<Visible>false</Visible>
 							<Title>
 								<v8:item>
 									<v8:lang>ru</v8:lang>
@@ -316,11 +333,6 @@
 							</ToolTip>
 							<ExtendedTooltip name="грЗапросыРасширеннаяПодсказка" id="114"/>
 							<ChildItems>
-								<Button name="кнОткрытьЗапрос" id="156">
-									<Type>UsualButton</Type>
-									<CommandName>Form.Command.кнОткрытьЗапрос</CommandName>
-									<ExtendedTooltip name="кнОткрытьЗапросРасширеннаяПодсказка" id="157"/>
-								</Button>
 								<UsualGroup name="Группа13" id="115">
 									<ShowTitle>false</ShowTitle>
 									<ExtendedTooltip name="Группа13РасширеннаяПодсказка" id="116"/>
@@ -328,12 +340,26 @@
 										<Table name="Запросы" id="117">
 											<Representation>List</Representation>
 											<ReadOnly>true</ReadOnly>
+											<UseAlternationRowColor>true</UseAlternationRowColor>
 											<AutoInsertNewRow>true</AutoInsertNewRow>
 											<EnableStartDrag>true</EnableStartDrag>
 											<EnableDrag>true</EnableDrag>
 											<FileDragMode>AsFile</FileDragMode>
-											<DataPath>Объект.Запросы</DataPath>
-											<RowFilter xsi:nil="true"/>
+											<DataPath>дсЗапросы</DataPath>
+											<RowPictureDataPath>дсЗапросы.DefaultPicture</RowPictureDataPath>
+											<AutoRefresh>false</AutoRefresh>
+											<AutoRefreshPeriod>60</AutoRefreshPeriod>
+											<Period>
+												<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+												<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+												<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+											</Period>
+											<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+											<RestoreCurrentRow>false</RestoreCurrentRow>
+											<TopLevelParent xsi:nil="true"/>
+											<ShowRoot>true</ShowRoot>
+											<AllowRootChoice>false</AllowRootChoice>
+											<UpdateOnDataChange>Auto</UpdateOnDataChange>
 											<ContextMenu name="ЗапросыКонтекстноеМеню" id="118"/>
 											<AutoCommandBar name="ЗапросыКоманднаяПанель" id="119">
 												<Autofill>false</Autofill>
@@ -371,30 +397,46 @@
 												<ExtendedTooltip name="ЗапросыУправлениеПоискомРасширеннаяПодсказка" id="129"/>
 											</SearchControlAddition>
 											<ChildItems>
-												<LabelField name="ЗапросыНомерСтроки" id="144">
-													<DataPath>Объект.Запросы.LineNumber</DataPath>
-													<EditMode>EnterOnInput</EditMode>
-													<ContextMenu name="ЗапросыНомерСтрокиКонтекстноеМеню" id="145"/>
-													<ExtendedTooltip name="ЗапросыНомерСтрокиРасширеннаяПодсказка" id="146"/>
+												<LabelField name="ЗапросыПериод" id="161">
+													<DataPath>дсЗапросы.Period</DataPath>
+													<ContextMenu name="ЗапросыПериодКонтекстноеМеню" id="162"/>
+													<ExtendedTooltip name="ЗапросыПериодРасширеннаяПодсказка" id="163"/>
 												</LabelField>
-												<InputField name="ЗапросыДата" id="147">
-													<DataPath>Объект.Запросы.Дата</DataPath>
-													<EditMode>EnterOnInput</EditMode>
-													<ContextMenu name="ЗапросыДатаКонтекстноеМеню" id="148"/>
-													<ExtendedTooltip name="ЗапросыДатаРасширеннаяПодсказка" id="149"/>
-												</InputField>
-												<InputField name="ЗапросыФайл" id="150">
-													<DataPath>Объект.Запросы.Файл</DataPath>
-													<EditMode>EnterOnInput</EditMode>
-													<ContextMenu name="ЗапросыФайлКонтекстноеМеню" id="151"/>
-													<ExtendedTooltip name="ЗапросыФайлРасширеннаяПодсказка" id="152"/>
-												</InputField>
-												<InputField name="ЗапросыПользователь" id="153">
-													<DataPath>Объект.Запросы.Пользователь</DataPath>
-													<EditMode>EnterOnInput</EditMode>
-													<ContextMenu name="ЗапросыПользовательКонтекстноеМеню" id="154"/>
-													<ExtendedTooltip name="ЗапросыПользовательРасширеннаяПодсказка" id="155"/>
-												</InputField>
+												<LabelField name="ЗапросыОбъект" id="164">
+													<DataPath>дсЗапросы.Объект</DataPath>
+													<ContextMenu name="ЗапросыОбъектКонтекстноеМеню" id="165"/>
+													<ExtendedTooltip name="ЗапросыОбъектРасширеннаяПодсказка" id="166"/>
+												</LabelField>
+												<LabelField name="ЗапросыСтатусЗапроса" id="167">
+													<DataPath>дсЗапросы.СтатусЗапроса</DataPath>
+													<ContextMenu name="ЗапросыСтатусЗапросаКонтекстноеМеню" id="168"/>
+													<ExtendedTooltip name="ЗапросыСтатусЗапросаРасширеннаяПодсказка" id="169"/>
+												</LabelField>
+												<LabelField name="ЗапросыПользователь" id="170">
+													<DataPath>дсЗапросы.Пользователь</DataPath>
+													<ContextMenu name="ЗапросыПользовательКонтекстноеМеню" id="171"/>
+													<ExtendedTooltip name="ЗапросыПользовательРасширеннаяПодсказка" id="172"/>
+												</LabelField>
+												<LabelField name="ЗапросыApplicationID" id="173">
+													<DataPath>дсЗапросы.ApplicationID</DataPath>
+													<ContextMenu name="ЗапросыApplicationIDКонтекстноеМеню" id="174"/>
+													<ExtendedTooltip name="ЗапросыApplicationIDРасширеннаяПодсказка" id="175"/>
+												</LabelField>
+												<LabelField name="ЗапросыОшибки" id="176">
+													<DataPath>дсЗапросы.Ошибки</DataPath>
+													<ContextMenu name="ЗапросыОшибкиКонтекстноеМеню" id="177"/>
+													<ExtendedTooltip name="ЗапросыОшибкиРасширеннаяПодсказка" id="178"/>
+												</LabelField>
+												<LabelField name="ЗапросыЗапрос" id="179">
+													<DataPath>дсЗапросы.Запрос</DataPath>
+													<ContextMenu name="ЗапросыЗапросКонтекстноеМеню" id="180"/>
+													<ExtendedTooltip name="ЗапросыЗапросРасширеннаяПодсказка" id="181"/>
+												</LabelField>
+												<LabelField name="ЗапросыОтвет" id="182">
+													<DataPath>дсЗапросы.Ответ</DataPath>
+													<ContextMenu name="ЗапросыОтветКонтекстноеМеню" id="183"/>
+													<ExtendedTooltip name="ЗапросыОтветРасширеннаяПодсказка" id="184"/>
+												</LabelField>
 											</ChildItems>
 										</Table>
 									</ChildItems>
@@ -422,6 +464,83 @@
 			<UseAlways>
 				<Field>Объект.RegisterRecords</Field>
 			</UseAlways>
+		</Attribute>
+		<Attribute name="СтатусЗапроса" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Статус</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ApplicationID" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Application ID</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>36</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="Ошибки" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Ошибки</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="дсЗапросы" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Дс запросы</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:DynamicList</v8:Type>
+			</Type>
+			<Settings xsi:type="DynamicList">
+				<ManualQuery>false</ManualQuery>
+				<DynamicDataRead>true</DynamicDataRead>
+				<MainTable>InformationRegister.кб99_Запросы</MainTable>
+				<ListSettings>
+					<dcsset:filter>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>dfcece9d-5077-440b-b6b3-45a5cb4538eb</dcsset:userSettingID>
+					</dcsset:filter>
+					<dcsset:order>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>88619765-ccb3-46c6-ac52-38e9c992ebd4</dcsset:userSettingID>
+					</dcsset:order>
+					<dcsset:conditionalAppearance>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>b75fecce-942b-4aed-abc9-e6a02e460fb3</dcsset:userSettingID>
+					</dcsset:conditionalAppearance>
+					<dcsset:itemsViewMode>Normal</dcsset:itemsViewMode>
+					<dcsset:itemsUserSettingID>911b6018-f537-43e8-a417-da56b22f9aec</dcsset:itemsUserSettingID>
+				</ListSettings>
+			</Settings>
 		</Attribute>
 	</Attributes>
 	<Commands>

@@ -11,14 +11,17 @@
 			</Synonym>
 			<Comment/>
 			<Group>CommandGroup.ВСД_ГруппаКоманд</Group>
-			<Representation>Auto</Representation>
+			<Representation>PictureAndText</Representation>
 			<ToolTip>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Отправить В Меркурий</v8:content>
+					<v8:content>Отправить ВСД в Меркурий</v8:content>
 				</v8:item>
 			</ToolTip>
-			<Picture/>
+			<Picture>
+				<xr:Ref>CommonPicture.кб99_send_o</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
 			<Shortcut/>
 			<IncludeHelpInContents>false</IncludeHelpInContents>
 			<CommandParameterType>

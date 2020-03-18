@@ -11,9 +11,12 @@
 			</Synonym>
 			<Comment/>
 			<Group>CommandGroup.ВСД_ГруппаКоманд</Group>
-			<Representation>Auto</Representation>
+			<Representation>PictureAndText</Representation>
 			<ToolTip/>
-			<Picture/>
+			<Picture>
+				<xr:Ref>CommonPicture.кб99_remove</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
 			<Shortcut/>
 			<IncludeHelpInContents>false</IncludeHelpInContents>
 			<CommandParameterType>
@@ -21,6 +24,7 @@
 				<v8:Type>cfg:DocumentRef.ВСД</v8:Type>
 				<v8:Type>cfg:DocumentRef.РеализацияТоваровУслуг</v8:Type>
 				<v8:Type>cfg:DocumentRef.ПеремещениеТоваров</v8:Type>
+				<v8:Type>cfg:CatalogRef.кб99_ВСД2</v8:Type>
 				<v8:Type>cfg:DocumentRef.ВСД2</v8:Type>
 				<v8:Type>cfg:DocumentRef.ВСД2_транзакция</v8:Type>
 			</CommandParameterType>
