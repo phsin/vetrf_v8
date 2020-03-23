@@ -1309,6 +1309,9 @@
 									<ChoiceHistoryOnInput>DontUse</ChoiceHistoryOnInput>
 									<ContextMenu name="ПартииПартияКонтекстноеМеню" id="211"/>
 									<ExtendedTooltip name="ПартииПартияРасширеннаяПодсказка" id="212"/>
+									<Events>
+										<Event name="StartChoice">ПартииПартияНачалоВыбора</Event>
+									</Events>
 								</InputField>
 								<InputField name="ПартииКоличество" id="213">
 									<DataPath>Объект.Партии.Количество</DataPath>
