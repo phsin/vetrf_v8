@@ -1,0 +1,100 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.8">
+	<Title>
+		<v8:item>
+			<v8:lang>ru</v8:lang>
+			<v8:content>По каким терм.условиям создать документ ВСД2 Транзакция?</v8:content>
+		</v8:item>
+	</Title>
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<AutoTitle>false</AutoTitle>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1" DisplayImportance="VeryLow">
+		<Autofill>false</Autofill>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<LabelDecoration name="Надпись" id="4">
+			<Font ref="style:NormalTextFont" height="11" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
+			<Title formatted="false">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выберите термические условия перевозки, по которым требуется создать ВСД:</v8:content>
+				</v8:item>
+			</Title>
+			<ContextMenu name="НадписьКонтекстноеМеню" id="5"/>
+			<ExtendedTooltip name="НадписьРасширеннаяПодсказка" id="6"/>
+		</LabelDecoration>
+		<InputField name="ТермическиеУсловияПеревозки" id="13">
+			<DataPath>ТермическиеУсловияПеревозки</DataPath>
+			<TitleLocation>None</TitleLocation>
+			<ListChoiceMode>true</ListChoiceMode>
+			<ContextMenu name="ТермическиеУсловияПеревозкиКонтекстноеМеню" id="14"/>
+			<ExtendedTooltip name="ТермическиеУсловияПеревозкиРасширеннаяПодсказка" id="15"/>
+			<Events>
+				<Event name="StartChoice">Реквизит1НачалоВыбора</Event>
+			</Events>
+		</InputField>
+		<CommandBar name="Кнопки" id="11">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Кнопки</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Кнопки</v8:content>
+				</v8:item>
+			</ToolTip>
+			<CommandSource>FormCommandPanelGlobalCommands</CommandSource>
+			<ExtendedTooltip name="КнопкиРасширеннаяПодсказка" id="12"/>
+			<ChildItems>
+				<Button name="Ок" id="7">
+					<Type>CommandBarButton</Type>
+					<CommandName>Form.Command.Ок</CommandName>
+					<BackColor>#FFCC00</BackColor>
+					<ExtendedTooltip name="ОкРасширеннаяПодсказка" id="8"/>
+				</Button>
+				<Button name="ФормаОтмена" id="16">
+					<Type>CommandBarButton</Type>
+					<CommandName>Form.StandardCommand.Cancel</CommandName>
+					<ExtendedTooltip name="ФормаОтменаРасширеннаяПодсказка" id="17"/>
+				</Button>
+			</ChildItems>
+		</CommandBar>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="ТермическиеУсловияПеревозки" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Термические условия перевозки</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:EnumRef.кб99_ТермическиеУсловияПеревозки</v8:Type>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="Ок" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Ок</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Ок</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>Ок</Action>
+		</Command>
+	</Commands>
+</Form>
