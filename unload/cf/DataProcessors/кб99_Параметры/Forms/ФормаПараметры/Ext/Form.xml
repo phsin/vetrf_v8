@@ -290,20 +290,6 @@
 											<ContextMenu name="ОтправлятьВФонеКонтекстноеМеню" id="583"/>
 											<ExtendedTooltip name="ОтправлятьВФонеРасширеннаяПодсказка" id="584"/>
 										</CheckBoxField>
-										<CheckBoxField name="ПарамКонтроллироватьСрокГодностиПриОтправке" id="640">
-											<DataPath>Объект.ПарамКонтроллироватьСрокГодностиПриОтправке</DataPath>
-											<CheckBoxType>Auto</CheckBoxType>
-											<ContextMenu name="ПарамКонтроллироватьСрокГодностиПриОтправкеКонтекстноеМеню" id="641"/>
-											<ExtendedTooltip name="ПарамКонтроллироватьСрокГодностиПриОтправкеРасширеннаяПодсказка" id="642"/>
-											<Events>
-												<Event name="OnChange">ПарамКонтроллироватьСрокГодностиПриОтправкеПриИзменении</Event>
-											</Events>
-										</CheckBoxField>
-										<InputField name="СрокГодностиДней" id="643">
-											<DataPath>Объект.СрокГодностиДней</DataPath>
-											<ContextMenu name="СрокГодностиДнейКонтекстноеМеню" id="644"/>
-											<ExtendedTooltip name="СрокГодностиДнейРасширеннаяПодсказка" id="645"/>
-										</InputField>
 									</ChildItems>
 								</UsualGroup>
 							</ChildItems>
@@ -985,6 +971,20 @@
 									<ContextMenu name="ПарамПроизводствоЗаполнятьТчПоТчСерииПродукцииКонтекстноеМеню" id="601"/>
 									<ExtendedTooltip name="ПарамПроизводствоЗаполнятьТчПоТчСерииПродукцииРасширеннаяПодсказка" id="602"/>
 								</CheckBoxField>
+								<CheckBoxField name="ПарамКонтроллироватьСрокГодностиПриОтправке" id="640">
+									<DataPath>Объект.ПарамКонтроллироватьСрокГодностиПриОтправке</DataPath>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="ПарамКонтроллироватьСрокГодностиПриОтправкеКонтекстноеМеню" id="641"/>
+									<ExtendedTooltip name="ПарамКонтроллироватьСрокГодностиПриОтправкеРасширеннаяПодсказка" id="642"/>
+									<Events>
+										<Event name="OnChange">ПарамКонтроллироватьСрокГодностиПриОтправкеПриИзменении</Event>
+									</Events>
+								</CheckBoxField>
+								<InputField name="СрокГодностиДней" id="643">
+									<DataPath>Объект.СрокГодностиДней</DataPath>
+									<ContextMenu name="СрокГодностиДнейКонтекстноеМеню" id="644"/>
+									<ExtendedTooltip name="СрокГодностиДнейРасширеннаяПодсказка" id="645"/>
+								</InputField>
 							</ChildItems>
 						</UsualGroup>
 					</ChildItems>
