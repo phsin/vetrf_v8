@@ -665,6 +665,22 @@
 									<ContextMenu name="ПарамКоэффициентПересчетаКоличестваКонтекстноеМеню" id="124"/>
 									<ExtendedTooltip name="ПарамКоэффициентПересчетаКоличестваРасширеннаяПодсказка" id="125"/>
 								</InputField>
+								<LabelDecoration name="НадписьВСД2Производство" id="670">
+									<TextColor>#009646</TextColor>
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>ВСД2 Производство</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="НадписьВСД2ПроизводствоКонтекстноеМеню" id="671"/>
+									<ExtendedTooltip name="НадписьВСД2ПроизводствоРасширеннаяПодсказка" id="672"/>
+								</LabelDecoration>
+								<InputField name="КоэфПересчетаКоличестваПриПроизводстве" id="673">
+									<DataPath>Объект.КоэфПересчетаКоличестваПриПроизводстве</DataPath>
+									<ContextMenu name="КоэфПересчетаКоличестваПриПроизводствеКонтекстноеМеню" id="674"/>
+									<ExtendedTooltip name="КоэфПересчетаКоличестваПриПроизводствеРасширеннаяПодсказка" id="675"/>
+								</InputField>
 								<LabelDecoration name="НадписьЗаполнениеУровнейУпаковки" id="661">
 									<TextColor>#009646</TextColor>
 									<Title formatted="false">
