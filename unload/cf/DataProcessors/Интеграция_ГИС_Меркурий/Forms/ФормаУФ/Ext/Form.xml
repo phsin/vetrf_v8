@@ -448,16 +448,63 @@
 												</Button>
 											</ChildItems>
 										</Popup>
-										<Button name="ЗаполнитьПеремещения" id="651">
-											<Type>CommandBarButton</Type>
-											<Representation>PictureAndText</Representation>
-											<CommandName>Form.Command.ЗаполнитьПеремещения</CommandName>
+										<Popup name="КнопкаЗаполнить" id="657">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Заполнить</v8:content>
+												</v8:item>
+											</Title>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Кнопка заполнить</v8:content>
+												</v8:item>
+											</ToolTip>
 											<Picture>
 												<xr:Ref>CommonPicture.кб99_exchange</xr:Ref>
-												<xr:LoadTransparent>false</xr:LoadTransparent>
+												<xr:LoadTransparent>true</xr:LoadTransparent>
 											</Picture>
-											<ExtendedTooltip name="ЗаполнитьПеремещенияРасширеннаяПодсказка" id="652"/>
-										</Button>
+											<ExtendedTooltip name="КнопкаЗаполнитьРасширеннаяПодсказка" id="658"/>
+											<ChildItems>
+												<Button name="ЗаполнитьРеализациями" id="661">
+													<Type>CommandBarButton</Type>
+													<CommandName>Form.Command.ОбновитьСписокРеализаций</CommandName>
+													<Picture>
+														<xr:Ref>CommonPicture.кб99_random</xr:Ref>
+														<xr:LoadTransparent>true</xr:LoadTransparent>
+													</Picture>
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Реализациями</v8:content>
+														</v8:item>
+													</Title>
+													<ExtendedTooltip name="ЗаполнитьРеализациямиРасширеннаяПодсказка" id="662"/>
+												</Button>
+												<Button name="ЗаполнитьЗаказами" id="659">
+													<Type>CommandBarButton</Type>
+													<CommandName>Form.Command.ЗаполнитьЗаказами</CommandName>
+													<ExtendedTooltip name="ЗаполнитьЗаказамиРасширеннаяПодсказка" id="660"/>
+												</Button>
+												<Button name="ЗаполнитьПеремещения" id="651">
+													<Type>CommandBarButton</Type>
+													<Representation>PictureAndText</Representation>
+													<CommandName>Form.Command.ЗаполнитьПеремещения</CommandName>
+													<Picture>
+														<xr:Ref>CommonPicture.кб99_exchange</xr:Ref>
+														<xr:LoadTransparent>false</xr:LoadTransparent>
+													</Picture>
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Перемещениями</v8:content>
+														</v8:item>
+													</Title>
+													<ExtendedTooltip name="ЗаполнитьПеремещенияРасширеннаяПодсказка" id="652"/>
+												</Button>
+											</ChildItems>
+										</Popup>
 									</ChildItems>
 								</CommandBar>
 							</ChildItems>
@@ -2443,6 +2490,25 @@
 				</v8:item>
 			</ToolTip>
 			<Action>ЗаполнитьПеремещения</Action>
+		</Command>
+		<Command name="ЗаполнитьЗаказами" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заказами покупателя</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заполнить заказами</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>CommonPicture.kb99_user_o</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ЗаполнитьЗаказами</Action>
 		</Command>
 	</Commands>
 </Form>

@@ -566,312 +566,303 @@
 							<v8:content>Группа настройки модуля</v8:content>
 						</v8:item>
 					</ToolTip>
-					<Group>HorizontalIfPossible</Group>
 					<ExtendedTooltip name="ГруппаНастройкиМодуляРасширеннаяПодсказка" id="402"/>
 					<ChildItems>
 						<UsualGroup name="Группа12" id="548">
-							<Width>30</Width>
+							<Width>40</Width>
 							<Group>Vertical</Group>
-							<Representation>StrongSeparation</Representation>
+							<Representation>None</Representation>
 							<ShowTitle>false</ShowTitle>
 							<ExtendedTooltip name="Группа12РасширеннаяПодсказка" id="549"/>
 							<ChildItems>
-								<UsualGroup name="Группа40" id="525">
-									<Title>
+								<LabelDecoration name="НадписьЗаполнениеВсд2Транзакция" id="658">
+									<TextColor>#009646</TextColor>
+									<Title formatted="false">
 										<v8:item>
 											<v8:lang>ru</v8:lang>
 											<v8:content>Заполнение ВСД2_Транзакция</v8:content>
 										</v8:item>
 									</Title>
-									<Representation>None</Representation>
-									<ExtendedTooltip name="Группа40РасширеннаяПодсказка" id="526"/>
-									<ChildItems>
-										<InputField name="РеквизитГрузополучатель" id="99">
-											<DataPath>Объект.РеквизитГрузополучатель</DataPath>
-											<Title>
-												<v8:item>
-													<v8:lang>ru</v8:lang>
-													<v8:content>Реквизит Грузополучатель</v8:content>
-												</v8:item>
-											</Title>
-											<EditMode>EnterOnInput</EditMode>
-											<ListChoiceMode>true</ListChoiceMode>
-											<ChooseType>false</ChooseType>
-											<TextEdit>false</TextEdit>
-											<ChoiceList>
-												<xr:Item>
-													<xr:Presentation/>
-													<xr:CheckState>0</xr:CheckState>
-													<xr:Value xsi:type="FormChoiceListDesTimeValue">
-														<Presentation>
-															<v8:item>
-																<v8:lang>ru</v8:lang>
-																<v8:content>Контрагент</v8:content>
-															</v8:item>
-														</Presentation>
-														<Value xsi:type="xs:decimal">0</Value>
-													</xr:Value>
-												</xr:Item>
-												<xr:Item>
-													<xr:Presentation/>
-													<xr:CheckState>0</xr:CheckState>
-													<xr:Value xsi:type="FormChoiceListDesTimeValue">
-														<Presentation>
-															<v8:item>
-																<v8:lang>ru</v8:lang>
-																<v8:content>Адрес доставки</v8:content>
-															</v8:item>
-														</Presentation>
-														<Value xsi:type="xs:decimal">1</Value>
-													</xr:Value>
-												</xr:Item>
-											</ChoiceList>
-											<ContextMenu name="РеквизитГрузополучательКонтекстноеМеню" id="100"/>
-											<ExtendedTooltip name="РеквизитГрузополучательРасширеннаяПодсказка" id="101"/>
-										</InputField>
-										<InputField name="НазваниеРеквизитаКоличество" id="111">
-											<DataPath>Объект.НазваниеРеквизитаКоличество</DataPath>
-											<Title>
-												<v8:item>
-													<v8:lang>ru</v8:lang>
-													<v8:content>Имя реквизита [Количество]</v8:content>
-												</v8:item>
-											</Title>
-											<ToolTip>
-												<v8:item>
-													<v8:lang>ru</v8:lang>
-													<v8:content>Из указанной колонки документа 1С будет произведен расчет необходимого количества для заполнения ВСД</v8:content>
-												</v8:item>
-											</ToolTip>
-											<EditMode>EnterOnInput</EditMode>
-											<ContextMenu name="НазваниеРеквизитаКоличествоКонтекстноеМеню" id="112"/>
-											<ExtendedTooltip name="НазваниеРеквизитаКоличествоРасширеннаяПодсказка" id="113"/>
-										</InputField>
-										<InputField name="ПарамКоэффициентПересчетаКоличества" id="123">
-											<DataPath>Объект.ПарамКоэффициентПересчетаКоличества</DataPath>
-											<Title>
-												<v8:item>
-													<v8:lang>ru</v8:lang>
-													<v8:content>Коэфф. пересчета в ед. изм. ВСД</v8:content>
-												</v8:item>
-											</Title>
-											<ToolTip>
-												<v8:item>
-													<v8:lang>ru</v8:lang>
-													<v8:content>Например ЕдиницаИзмерения.Вес (Реквизит, присутствующий в таблице документа 1С). Кол-во в ВСД будет равно Имя реквизита количество * Коэфф. пересчета</v8:content>
-												</v8:item>
-											</ToolTip>
-											<EditMode>EnterOnInput</EditMode>
-											<ContextMenu name="ПарамКоэффициентПересчетаКоличестваКонтекстноеМеню" id="124"/>
-											<ExtendedTooltip name="ПарамКоэффициентПересчетаКоличестваРасширеннаяПодсказка" id="125"/>
-										</InputField>
-									</ChildItems>
-								</UsualGroup>
-								<UsualGroup name="Группа28" id="413">
-									<Group>Vertical</Group>
-									<Representation>None</Representation>
-									<ShowTitle>false</ShowTitle>
-									<ExtendedTooltip name="Группа28РасширеннаяПодсказка" id="414"/>
-								</UsualGroup>
-								<UsualGroup name="Колонка3" id="94">
+									<ContextMenu name="НадписьЗаполнениеВсд2ТранзакцияКонтекстноеМеню" id="659"/>
+									<ExtendedTooltip name="НадписьЗаполнениеВсд2ТранзакцияРасширеннаяПодсказка" id="660"/>
+								</LabelDecoration>
+								<InputField name="РеквизитГрузополучатель" id="99">
+									<DataPath>Объект.РеквизитГрузополучатель</DataPath>
 									<Title>
 										<v8:item>
 											<v8:lang>ru</v8:lang>
-											<v8:content>Заполнение Уровней упаковки в ВСД</v8:content>
+											<v8:content>Реквизит Грузополучатель</v8:content>
 										</v8:item>
 									</Title>
-									<Representation>None</Representation>
-									<ExtendedTooltip name="Колонка3РасширеннаяПодсказка" id="95"/>
-									<ChildItems>
-										<InputField name="НазваниеРеквизитаКоличествоМест" id="135">
-											<DataPath>Объект.НазваниеРеквизитаКоличествоМест</DataPath>
-											<Title>
-												<v8:item>
-													<v8:lang>ru</v8:lang>
-													<v8:content>Имя реквизита [количество мест] в Реализации</v8:content>
-												</v8:item>
-											</Title>
-											<ToolTip>
-												<v8:item>
-													<v8:lang>ru</v8:lang>
-													<v8:content>Имя колонки в документе 1С, содержащей количество упаковок (либо данные для расчета упаковок)</v8:content>
-												</v8:item>
-											</ToolTip>
-											<EditMode>EnterOnInput</EditMode>
-											<Width>20</Width>
-											<ContextMenu name="НазваниеРеквизитаКоличествоМестКонтекстноеМеню" id="136"/>
-											<ExtendedTooltip name="НазваниеРеквизитаКоличествоМестРасширеннаяПодсказка" id="137"/>
-										</InputField>
-										<InputField name="ПарамНомерУровняУпаковкиДляВСД" id="132">
-											<DataPath>Объект.ПарамНомерУровняУпаковкиДляВСД</DataPath>
-											<Title>
-												<v8:item>
-													<v8:lang>ru</v8:lang>
-													<v8:content>№ уровня при заполнении ВСД</v8:content>
-												</v8:item>
-											</Title>
-											<ToolTip>
-												<v8:item>
-													<v8:lang>ru</v8:lang>
-													<v8:content>Транспортный, Потребительский и т.д.</v8:content>
-												</v8:item>
-											</ToolTip>
-											<EditMode>EnterOnInput</EditMode>
-											<Width>20</Width>
-											<ContextMenu name="ПарамНомерУровняУпаковкиДляВСДКонтекстноеМеню" id="133"/>
-											<ExtendedTooltip name="ПарамНомерУровняУпаковкиДляВСДРасширеннаяПодсказка" id="134"/>
-										</InputField>
-										<InputField name="ПарамФормаУпаковкиДляВСД" id="129">
-											<DataPath>Объект.ПарамФормаУпаковкиДляВСД</DataPath>
-											<Title>
-												<v8:item>
-													<v8:lang>ru</v8:lang>
-													<v8:content>Форма упаковки Уровня</v8:content>
-												</v8:item>
-											</Title>
-											<EditMode>EnterOnInput</EditMode>
-											<Width>20</Width>
-											<ContextMenu name="ПарамФормаУпаковкиДляВСДКонтекстноеМеню" id="130"/>
-											<ExtendedTooltip name="ПарамФормаУпаковкиДляВСДРасширеннаяПодсказка" id="131"/>
-										</InputField>
-									</ChildItems>
-								</UsualGroup>
-								<UsualGroup name="ГруппаРаспределениеПартий" id="421">
+									<EditMode>EnterOnInput</EditMode>
+									<ListChoiceMode>true</ListChoiceMode>
+									<ChooseType>false</ChooseType>
+									<TextEdit>false</TextEdit>
+									<ChoiceList>
+										<xr:Item>
+											<xr:Presentation/>
+											<xr:CheckState>0</xr:CheckState>
+											<xr:Value xsi:type="FormChoiceListDesTimeValue">
+												<Presentation>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>Контрагент</v8:content>
+													</v8:item>
+												</Presentation>
+												<Value xsi:type="xs:decimal">0</Value>
+											</xr:Value>
+										</xr:Item>
+										<xr:Item>
+											<xr:Presentation/>
+											<xr:CheckState>0</xr:CheckState>
+											<xr:Value xsi:type="FormChoiceListDesTimeValue">
+												<Presentation>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>Адрес доставки</v8:content>
+													</v8:item>
+												</Presentation>
+												<Value xsi:type="xs:decimal">1</Value>
+											</xr:Value>
+										</xr:Item>
+									</ChoiceList>
+									<ContextMenu name="РеквизитГрузополучательКонтекстноеМеню" id="100"/>
+									<ExtendedTooltip name="РеквизитГрузополучательРасширеннаяПодсказка" id="101"/>
+								</InputField>
+								<InputField name="НазваниеРеквизитаКоличество" id="111">
+									<DataPath>Объект.НазваниеРеквизитаКоличество</DataPath>
 									<Title>
 										<v8:item>
 											<v8:lang>ru</v8:lang>
-											<v8:content>Партии</v8:content>
+											<v8:content>Имя реквизита [Количество]</v8:content>
 										</v8:item>
 									</Title>
 									<ToolTip>
 										<v8:item>
 											<v8:lang>ru</v8:lang>
-											<v8:content>Группа распределение партий</v8:content>
+											<v8:content>Из указанной колонки документа 1С будет произведен расчет необходимого количества для заполнения ВСД</v8:content>
 										</v8:item>
 									</ToolTip>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="НазваниеРеквизитаКоличествоКонтекстноеМеню" id="112"/>
+									<ExtendedTooltip name="НазваниеРеквизитаКоличествоРасширеннаяПодсказка" id="113"/>
+								</InputField>
+								<InputField name="ПарамКоэффициентПересчетаКоличества" id="123">
+									<DataPath>Объект.ПарамКоэффициентПересчетаКоличества</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Коэфф. пересчета в ед. изм. ВСД</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Например ЕдиницаИзмерения.Вес (Реквизит, присутствующий в таблице документа 1С). Кол-во в ВСД будет равно Имя реквизита количество * Коэфф. пересчета</v8:content>
+										</v8:item>
+									</ToolTip>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ПарамКоэффициентПересчетаКоличестваКонтекстноеМеню" id="124"/>
+									<ExtendedTooltip name="ПарамКоэффициентПересчетаКоличестваРасширеннаяПодсказка" id="125"/>
+								</InputField>
+								<LabelDecoration name="НадписьВСД2Производство" id="670">
+									<TextColor>#009646</TextColor>
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>ВСД2 Производство</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="НадписьВСД2ПроизводствоКонтекстноеМеню" id="671"/>
+									<ExtendedTooltip name="НадписьВСД2ПроизводствоРасширеннаяПодсказка" id="672"/>
+								</LabelDecoration>
+								<InputField name="КоэфПересчетаКоличестваПриПроизводстве" id="673">
+									<DataPath>Объект.КоэфПересчетаКоличестваПриПроизводстве</DataPath>
+									<ContextMenu name="КоэфПересчетаКоличестваПриПроизводствеКонтекстноеМеню" id="674"/>
+									<ExtendedTooltip name="КоэфПересчетаКоличестваПриПроизводствеРасширеннаяПодсказка" id="675"/>
+								</InputField>
+								<LabelDecoration name="НадписьЗаполнениеУровнейУпаковки" id="661">
+									<TextColor>#009646</TextColor>
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Заполнение уровней упаковки в ВСД</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="НадписьЗаполнениеУровнейУпаковкиКонтекстноеМеню" id="662"/>
+									<ExtendedTooltip name="НадписьЗаполнениеУровнейУпаковкиРасширеннаяПодсказка" id="663"/>
+								</LabelDecoration>
+								<InputField name="НазваниеРеквизитаКоличествоМест" id="135">
+									<DataPath>Объект.НазваниеРеквизитаКоличествоМест</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Имя реквизита [количество мест] в Реализации</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Имя колонки в документе 1С, содержащей количество упаковок (либо данные для расчета упаковок)</v8:content>
+										</v8:item>
+									</ToolTip>
+									<EditMode>EnterOnInput</EditMode>
+									<Width>20</Width>
+									<ContextMenu name="НазваниеРеквизитаКоличествоМестКонтекстноеМеню" id="136"/>
+									<ExtendedTooltip name="НазваниеРеквизитаКоличествоМестРасширеннаяПодсказка" id="137"/>
+								</InputField>
+								<InputField name="ПарамНомерУровняУпаковкиДляВСД" id="132">
+									<DataPath>Объект.ПарамНомерУровняУпаковкиДляВСД</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>№ уровня при заполнении ВСД</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Транспортный, Потребительский и т.д.</v8:content>
+										</v8:item>
+									</ToolTip>
+									<EditMode>EnterOnInput</EditMode>
+									<Width>20</Width>
+									<ContextMenu name="ПарамНомерУровняУпаковкиДляВСДКонтекстноеМеню" id="133"/>
+									<ExtendedTooltip name="ПарамНомерУровняУпаковкиДляВСДРасширеннаяПодсказка" id="134"/>
+								</InputField>
+								<InputField name="ПарамФормаУпаковкиДляВСД" id="129">
+									<DataPath>Объект.ПарамФормаУпаковкиДляВСД</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Форма упаковки Уровня</v8:content>
+										</v8:item>
+									</Title>
+									<EditMode>EnterOnInput</EditMode>
+									<Width>20</Width>
+									<ContextMenu name="ПарамФормаУпаковкиДляВСДКонтекстноеМеню" id="130"/>
+									<ExtendedTooltip name="ПарамФормаУпаковкиДляВСДРасширеннаяПодсказка" id="131"/>
+								</InputField>
+								<LabelDecoration name="НадписьПартии" id="664">
+									<TextColor>#009646</TextColor>
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Партии</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="НадписьПартииКонтекстноеМеню" id="665"/>
+									<ExtendedTooltip name="НадписьПартииРасширеннаяПодсказка" id="666"/>
+								</LabelDecoration>
+								<InputField name="ПарамКолонкаСортировкиПартииСписания" id="328">
+									<DataPath>Объект.ПарамКолонкаСортировкиПартииСписания</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Сортировать ВСД_Партии по реквизиту</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Имя колонки справочника ВСД_Партия, по которой будет произведена сортировка при автоматическом распределинии партий</v8:content>
+										</v8:item>
+									</ToolTip>
+									<Width>20</Width>
 									<HorizontalStretch>true</HorizontalStretch>
-									<Representation>None</Representation>
-									<ExtendedTooltip name="ГруппаРаспределениеПартийРасширеннаяПодсказка" id="422"/>
-									<ChildItems>
-										<InputField name="ПарамКолонкаСортировкиПартииСписания" id="328">
-											<DataPath>Объект.ПарамКолонкаСортировкиПартииСписания</DataPath>
-											<Title>
-												<v8:item>
-													<v8:lang>ru</v8:lang>
-													<v8:content>Сортировать ВСД_Партии по реквизиту</v8:content>
-												</v8:item>
-											</Title>
-											<ToolTip>
-												<v8:item>
-													<v8:lang>ru</v8:lang>
-													<v8:content>Имя колонки справочника ВСД_Партия, по которой будет произведена сортировка при автоматическом распределинии партий</v8:content>
-												</v8:item>
-											</ToolTip>
-											<Width>20</Width>
-											<HorizontalStretch>true</HorizontalStretch>
-											<ListChoiceMode>true</ListChoiceMode>
-											<ChooseType>false</ChooseType>
-											<ChoiceList>
-												<xr:Item>
-													<xr:Presentation/>
-													<xr:CheckState>0</xr:CheckState>
-													<xr:Value xsi:type="FormChoiceListDesTimeValue">
-														<Presentation>
-															<v8:item>
-																<v8:lang>ru</v8:lang>
-																<v8:content>Дата изменения</v8:content>
-															</v8:item>
-														</Presentation>
-														<Value xsi:type="xs:string">ДатаИзменения</Value>
-													</xr:Value>
-												</xr:Item>
-												<xr:Item>
-													<xr:Presentation/>
-													<xr:CheckState>0</xr:CheckState>
-													<xr:Value xsi:type="FormChoiceListDesTimeValue">
-														<Presentation>
-															<v8:item>
-																<v8:lang>ru</v8:lang>
-																<v8:content>Срок годности</v8:content>
-															</v8:item>
-														</Presentation>
-														<Value xsi:type="xs:string">ДатаСрокГодности1</Value>
-													</xr:Value>
-												</xr:Item>
-												<xr:Item>
-													<xr:Presentation/>
-													<xr:CheckState>0</xr:CheckState>
-													<xr:Value xsi:type="FormChoiceListDesTimeValue">
-														<Presentation>
-															<v8:item>
-																<v8:lang>ru</v8:lang>
-																<v8:content>Изготовлено</v8:content>
-															</v8:item>
-														</Presentation>
-														<Value xsi:type="xs:string">ДатаИзготовления1</Value>
-													</xr:Value>
-												</xr:Item>
-											</ChoiceList>
-											<ContextMenu name="ПарамКолонкаСортировкиПартииСписанияКонтекстноеМеню" id="329"/>
-											<ExtendedTooltip name="ПарамКолонкаСортировкиПартииСписанияРасширеннаяПодсказка" id="330"/>
-										</InputField>
-										<CheckBoxField name="ПарамЗнакСортировкиУбывание" id="331">
-											<DataPath>Объект.ПарамЗнакСортировкиУбывание</DataPath>
-											<Title>
-												<v8:item>
-													<v8:lang>ru</v8:lang>
-													<v8:content>Сортировать Партии при подборе по убыванию LIFO</v8:content>
-												</v8:item>
-											</Title>
-											<ToolTip>
-												<v8:item>
-													<v8:lang>ru</v8:lang>
-													<v8:content>Сортировать вышеуказанный данные по убыванию</v8:content>
-												</v8:item>
-											</ToolTip>
-											<CheckBoxType>Auto</CheckBoxType>
-											<ContextMenu name="ПарамЗнакСортировкиУбываниеКонтекстноеМеню" id="332"/>
-											<ExtendedTooltip name="ПарамЗнакСортировкиУбываниеРасширеннаяПодсказка" id="333"/>
-										</CheckBoxField>
-										<InputField name="Смещение" id="102">
-											<DataPath>Объект.Смещение</DataPath>
-											<Title>
-												<v8:item>
-													<v8:lang>ru</v8:lang>
-													<v8:content>Смещение при запросе</v8:content>
-												</v8:item>
-											</Title>
-											<ToolTip>
-												<v8:item>
-													<v8:lang>ru</v8:lang>
-													<v8:content>Получить со смещением от самой первой в Меркурии (можно указывать непосредственно при загрузке)</v8:content>
-												</v8:item>
-											</ToolTip>
-											<EditMode>EnterOnInput</EditMode>
-											<ContextMenu name="СмещениеКонтекстноеМеню" id="103"/>
-											<ExtendedTooltip name="СмещениеРасширеннаяПодсказка" id="104"/>
-										</InputField>
-									</ChildItems>
-								</UsualGroup>
-							</ChildItems>
-						</UsualGroup>
-						<UsualGroup name="ГруппаНастройкиИнтеграции" id="411">
-							<Title>
-								<v8:item>
-									<v8:lang>ru</v8:lang>
-									<v8:content>Общие</v8:content>
-								</v8:item>
-							</Title>
-							<ToolTip>
-								<v8:item>
-									<v8:lang>ru</v8:lang>
-									<v8:content>Группа настройки интеграции</v8:content>
-								</v8:item>
-							</ToolTip>
-							<Group>Vertical</Group>
-							<Representation>StrongSeparation</Representation>
-							<ExtendedTooltip name="ГруппаНастройкиИнтеграцииРасширеннаяПодсказка" id="412"/>
-							<ChildItems>
+									<ListChoiceMode>true</ListChoiceMode>
+									<ChooseType>false</ChooseType>
+									<ChoiceList>
+										<xr:Item>
+											<xr:Presentation/>
+											<xr:CheckState>0</xr:CheckState>
+											<xr:Value xsi:type="FormChoiceListDesTimeValue">
+												<Presentation>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>Дата изменения</v8:content>
+													</v8:item>
+												</Presentation>
+												<Value xsi:type="xs:string">ДатаИзменения</Value>
+											</xr:Value>
+										</xr:Item>
+										<xr:Item>
+											<xr:Presentation/>
+											<xr:CheckState>0</xr:CheckState>
+											<xr:Value xsi:type="FormChoiceListDesTimeValue">
+												<Presentation>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>Срок годности</v8:content>
+													</v8:item>
+												</Presentation>
+												<Value xsi:type="xs:string">ДатаСрокГодности1</Value>
+											</xr:Value>
+										</xr:Item>
+										<xr:Item>
+											<xr:Presentation/>
+											<xr:CheckState>0</xr:CheckState>
+											<xr:Value xsi:type="FormChoiceListDesTimeValue">
+												<Presentation>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>Изготовлено</v8:content>
+													</v8:item>
+												</Presentation>
+												<Value xsi:type="xs:string">ДатаИзготовления1</Value>
+											</xr:Value>
+										</xr:Item>
+									</ChoiceList>
+									<ContextMenu name="ПарамКолонкаСортировкиПартииСписанияКонтекстноеМеню" id="329"/>
+									<ExtendedTooltip name="ПарамКолонкаСортировкиПартииСписанияРасширеннаяПодсказка" id="330"/>
+								</InputField>
+								<CheckBoxField name="ПарамЗнакСортировкиУбывание" id="331">
+									<DataPath>Объект.ПарамЗнакСортировкиУбывание</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Сортировать Партии при подборе по убыванию LIFO</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Сортировать вышеуказанный данные по убыванию</v8:content>
+										</v8:item>
+									</ToolTip>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="ПарамЗнакСортировкиУбываниеКонтекстноеМеню" id="332"/>
+									<ExtendedTooltip name="ПарамЗнакСортировкиУбываниеРасширеннаяПодсказка" id="333"/>
+								</CheckBoxField>
+								<InputField name="Смещение" id="102">
+									<DataPath>Объект.Смещение</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Смещение при запросе</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Получить со смещением от самой первой в Меркурии (можно указывать непосредственно при загрузке)</v8:content>
+										</v8:item>
+									</ToolTip>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="СмещениеКонтекстноеМеню" id="103"/>
+									<ExtendedTooltip name="СмещениеРасширеннаяПодсказка" id="104"/>
+								</InputField>
+								<LabelDecoration name="НадписьОбщие" id="667">
+									<TextColor>#009646</TextColor>
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Общие</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="НадписьОбщиеКонтекстноеМеню" id="668"/>
+									<ExtendedTooltip name="НадписьОбщиеРасширеннаяПодсказка" id="669"/>
+								</LabelDecoration>
 								<CheckBoxField name="ПарамФильтроватьРеализациюПоСкладуПлощадкиОтправителя" id="450">
 									<DataPath>Объект.ПарамФильтроватьРеализациюПоСкладуПлощадкиОтправителя</DataPath>
 									<Title>
@@ -936,6 +927,7 @@
 											<v8:content>ВСД: записывать соответствия Номенклатуры и Продукция_Элемент в документе</v8:content>
 										</v8:item>
 									</Title>
+									<TitleLocation>Left</TitleLocation>
 									<ToolTip>
 										<v8:item>
 											<v8:lang>ru</v8:lang>
@@ -955,6 +947,7 @@
 											<v8:content>Реализация: разрешить вводить на основании несколько ВСД</v8:content>
 										</v8:item>
 									</Title>
+									<TitleLocation>Left</TitleLocation>
 									<CheckBoxType>Auto</CheckBoxType>
 									<ContextMenu name="ПарамРазрешитьВводНаОснованииБолееОдногоВСДКонтекстноеМеню" id="486"/>
 									<ExtendedTooltip name="ПарамРазрешитьВводНаОснованииБолееОдногоВСДРасширеннаяПодсказка" id="487"/>
