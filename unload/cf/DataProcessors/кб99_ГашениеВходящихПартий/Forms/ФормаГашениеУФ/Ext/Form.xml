@@ -53,6 +53,16 @@
 				</Picture>
 				<ExtendedTooltip name="кнПереместитьРасширеннаяПодсказка" id="631"/>
 			</Button>
+			<Button name="ФормакнСписатьПартии" id="670">
+				<Type>CommandBarButton</Type>
+				<Representation>PictureAndText</Representation>
+				<CommandName>Form.Command.кнСписатьПартии</CommandName>
+				<Picture>
+					<xr:Ref>CommonPicture.кб99_rotate_left</xr:Ref>
+					<xr:LoadTransparent>true</xr:LoadTransparent>
+				</Picture>
+				<ExtendedTooltip name="ФормакнСписатьПартииРасширеннаяПодсказка" id="671"/>
+			</Button>
 		</ChildItems>
 	</AutoCommandBar>
 	<Events>
@@ -113,6 +123,11 @@
 			<ShowTitle>false</ShowTitle>
 			<ExtendedTooltip name="Группа20РасширеннаяПодсказка" id="396"/>
 		</UsualGroup>
+		<Button name="кнСписатьПартии" id="668">
+			<Type>UsualButton</Type>
+			<CommandName>Form.Command.кнСписатьПартии</CommandName>
+			<ExtendedTooltip name="кнСписатьПартииРасширеннаяПодсказка" id="669"/>
+		</Button>
 		<Pages name="Страницы" id="7">
 			<Title>
 				<v8:item>
@@ -1552,6 +1567,21 @@
 				</v8:item>
 			</ToolTip>
 			<Action>кнПереместитьПартии</Action>
+		</Command>
+		<Command name="кнСписатьПартии" id="16">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Списать партии</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Кн списать партии</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>кнСписатьПартии</Action>
 		</Command>
 	</Commands>
 </Form>
