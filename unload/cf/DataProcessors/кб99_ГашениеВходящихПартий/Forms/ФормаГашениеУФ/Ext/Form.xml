@@ -23,16 +23,46 @@
 	</CommandSet>
 	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
 		<ChildItems>
-			<Button name="кнПолучитьВСД" id="265">
-				<Type>CommandBarButton</Type>
-				<Representation>PictureAndText</Representation>
-				<CommandName>Form.Command.кнПолучитьВСД</CommandName>
+			<Popup name="ПолучитьВходящие" id="672">
+				<Title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Получить входящие</v8:content>
+					</v8:item>
+				</Title>
+				<ToolTip>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Получить входящие</v8:content>
+					</v8:item>
+				</ToolTip>
 				<Picture>
 					<xr:Ref>CommonPicture.kb99_download</xr:Ref>
-					<xr:LoadTransparent>false</xr:LoadTransparent>
+					<xr:LoadTransparent>true</xr:LoadTransparent>
 				</Picture>
-				<ExtendedTooltip name="кнПолучитьВСДРасширеннаяПодсказка" id="266"/>
-			</Button>
+				<ExtendedTooltip name="ПолучитьВходящиеРасширеннаяПодсказка" id="673"/>
+				<ChildItems>
+					<Button name="кнПолучитьВСД" id="265">
+						<Type>CommandBarButton</Type>
+						<Representation>PictureAndText</Representation>
+						<CommandName>Form.Command.кнПолучитьВСД</CommandName>
+						<Picture>
+							<xr:Ref>CommonPicture.kb99_user</xr:Ref>
+							<xr:LoadTransparent>false</xr:LoadTransparent>
+						</Picture>
+						<ExtendedTooltip name="кнПолучитьВСДРасширеннаяПодсказка" id="266"/>
+					</Button>
+					<Button name="ФормакнПолучитьВсдПоВсемПлощадкам" id="677">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.кнПолучитьВсдПоВсемПлощадкам</CommandName>
+						<Picture>
+							<xr:Ref>CommonPicture.kb99_user_o</xr:Ref>
+							<xr:LoadTransparent>true</xr:LoadTransparent>
+						</Picture>
+						<ExtendedTooltip name="ФормакнПолучитьВсдПоВсемПлощадкамРасширеннаяПодсказка" id="678"/>
+					</Button>
+				</ChildItems>
+			</Popup>
 			<Button name="кнПогасить" id="267">
 				<Type>CommandBarButton</Type>
 				<Representation>PictureAndText</Representation>
@@ -123,11 +153,6 @@
 			<ShowTitle>false</ShowTitle>
 			<ExtendedTooltip name="Группа20РасширеннаяПодсказка" id="396"/>
 		</UsualGroup>
-		<Button name="кнСписатьПартии" id="668">
-			<Type>UsualButton</Type>
-			<CommandName>Form.Command.кнСписатьПартии</CommandName>
-			<ExtendedTooltip name="кнСписатьПартииРасширеннаяПодсказка" id="669"/>
-		</Button>
 		<Pages name="Страницы" id="7">
 			<Title>
 				<v8:item>
@@ -362,6 +387,12 @@
 									<EditMode>EnterOnInput</EditMode>
 									<ContextMenu name="ВСДВходящиеОшибкиКонтекстноеМеню" id="651"/>
 									<ExtendedTooltip name="ВСДВходящиеОшибкиРасширеннаяПодсказка" id="652"/>
+								</InputField>
+								<InputField name="ВСДВходящиеПолучатель_Площадка" id="674">
+									<DataPath>Объект.ВСДВходящие.Получатель_Площадка</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ВСДВходящиеПолучатель_ПлощадкаКонтекстноеМеню" id="675"/>
+									<ExtendedTooltip name="ВСДВходящиеПолучатель_ПлощадкаРасширеннаяПодсказка" id="676"/>
 								</InputField>
 								<InputField name="ВСДВходящиеОтправитель_Площадка" id="124">
 									<DataPath>Объект.ВСДВходящие.Отправитель_Площадка</DataPath>
@@ -1385,7 +1416,7 @@
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Получить входящие</v8:content>
+					<v8:content>По активной площадке</v8:content>
 				</v8:item>
 			</Title>
 			<ToolTip>
@@ -1602,6 +1633,21 @@
 				</v8:item>
 			</ToolTip>
 			<Action>кнСписатьПартии</Action>
+		</Command>
+		<Command name="кнПолучитьВсдПоВсемПлощадкам" id="17">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>По всем площадкам</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Кн получить всд по всем площадкам</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>кнПолучитьВсдПоВсемПлощадкам</Action>
 		</Command>
 	</Commands>
 </Form>
