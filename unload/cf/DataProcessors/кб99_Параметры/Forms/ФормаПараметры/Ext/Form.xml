@@ -522,6 +522,23 @@
 										</Button>
 									</ChildItems>
 								</UsualGroup>
+								<UsualGroup name="Группа17" id="683">
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="Группа17РасширеннаяПодсказка" id="684"/>
+									<ChildItems>
+										<InputField name="Район" id="685">
+											<DataPath>Объект.Район</DataPath>
+											<ContextMenu name="РайонКонтекстноеМеню" id="686"/>
+											<ExtendedTooltip name="РайонРасширеннаяПодсказка" id="687"/>
+										</InputField>
+										<Button name="кнЗагрузитьРайоны" id="688">
+											<Type>UsualButton</Type>
+											<CommandName>Form.Command.кнЗагрузитьРайоны</CommandName>
+											<ExtendedTooltip name="кнЗагрузитьРайоныРасширеннаяПодсказка" id="689"/>
+										</Button>
+									</ChildItems>
+								</UsualGroup>
 								<UsualGroup name="Группа4" id="603">
 									<Group>Horizontal</Group>
 									<Representation>None</Representation>
@@ -533,6 +550,13 @@
 											<DataPath>Объект.Город</DataPath>
 											<EditMode>EnterOnInput</EditMode>
 											<HorizontalStretch>true</HorizontalStretch>
+											<ChoiceParameterLinks>
+												<xr:Link>
+													<xr:Name>Отбор.Владелец</xr:Name>
+													<xr:DataPath xsi:type="xs:string">Объект.Регион</xr:DataPath>
+													<xr:ValueChange>Clear</xr:ValueChange>
+												</xr:Link>
+											</ChoiceParameterLinks>
 											<ContextMenu name="ГородКонтекстноеМеню" id="24"/>
 											<ExtendedTooltip name="ГородРасширеннаяПодсказка" id="25"/>
 										</InputField>
@@ -546,6 +570,24 @@
 												</v8:item>
 											</Title>
 											<ExtendedTooltip name="кнЗагрузитьГорода1РасширеннаяПодсказка" id="518"/>
+										</Button>
+									</ChildItems>
+								</UsualGroup>
+								<UsualGroup name="Группа9" id="679">
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ThroughAlign>Use</ThroughAlign>
+									<ExtendedTooltip name="Группа9РасширеннаяПодсказка" id="680"/>
+									<ChildItems>
+										<InputField name="Улица" id="676">
+											<DataPath>Объект.Улица</DataPath>
+											<ContextMenu name="УлицаКонтекстноеМеню" id="677"/>
+											<ExtendedTooltip name="УлицаРасширеннаяПодсказка" id="678"/>
+										</InputField>
+										<Button name="кнЗагрузитьУлицы" id="681">
+											<Type>UsualButton</Type>
+											<CommandName>Form.Command.кнЗагрузитьУлицы</CommandName>
+											<ExtendedTooltip name="кнЗагрузитьУлицыРасширеннаяПодсказка" id="682"/>
 										</Button>
 									</ChildItems>
 								</UsualGroup>
@@ -2498,6 +2540,36 @@
 			</ToolTip>
 			<Action>кнВерсия2ОбновитьСправочники</Action>
 			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="кнЗагрузитьУлицы" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Улицы</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Кн загрузить улицы</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>кнЗагрузитьУлицы</Action>
+		</Command>
+		<Command name="кнЗагрузитьРайоны" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Районы</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Кн загрузить районы</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>кнЗагрузитьРайоны</Action>
 		</Command>
 	</Commands>
 </Form>
