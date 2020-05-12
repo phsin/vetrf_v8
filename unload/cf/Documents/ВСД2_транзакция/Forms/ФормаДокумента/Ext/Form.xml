@@ -1344,6 +1344,13 @@
 									<ContextMenu name="ТочкиМаршрутаНомерСтрокиКонтекстноеМеню" id="414"/>
 									<ExtendedTooltip name="ТочкиМаршрутаНомерСтрокиРасширеннаяПодсказка" id="415"/>
 								</LabelField>
+								<CheckBoxField name="ТочкиМаршрутаПерегрузка" id="728">
+									<DataPath>Объект.ТочкиМаршрута.Перегрузка</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="ТочкиМаршрутаПерегрузкаКонтекстноеМеню" id="729"/>
+									<ExtendedTooltip name="ТочкиМаршрутаПерегрузкаРасширеннаяПодсказка" id="730"/>
+								</CheckBoxField>
 								<InputField name="ТочкиМаршрутаПлощадка" id="443">
 									<DataPath>Объект.ТочкиМаршрута.Площадка</DataPath>
 									<EditMode>EnterOnInput</EditMode>
