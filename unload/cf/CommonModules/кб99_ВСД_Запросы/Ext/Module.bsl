@@ -7309,16 +7309,62 @@
 		|";
 		
 	Иначе
+		а = 1; // Порядковый номер точки маршрута.
 		Запрос = Запрос+"
 		|<vd:shipmentRoute>
 		|<vd:routePoint>
-		|<vd:sqnId>1</vd:sqnId>
+		|<vd:sqnId>"+ а +"</vd:sqnId>
 		|<vd:enterprise>
 		|<bs:guid>"+ СокрЛП(ДокСсылка.Отправитель_Площадка.GUID) +"</bs:guid>
 		|</vd:enterprise>
-		|</vd:routePoint>
+		|</vd:routePoint>";
+		Если ДокСсылка.ТочкиМаршрута.Количество()>0 Тогда
+			тзТочкиМаршрута = ДокСсылка.ТочкиМаршрута.Выгрузить();
+			Для Каждого ТочкаМаршрута Из тзТочкиМаршрута Цикл
+				а = а+1;
+				Если ЗначениеЗаполнено(ТочкаМаршрута.Площадка) Тогда
+					Запрос = Запрос+"
+					|<vd:routePoint>
+					|<vd:sqnId>"+ а +"</vd:sqnId>
+					|<vd:enterprise>
+					|<bs:guid>"+ СокрЛП(ТочкаМаршрута.Площадка.GUID) +"</bs:guid>
+					|</vd:enterprise>
+					|</vd:routePoint>";
+				Иначе
+					Запрос = Запрос+"
+					|<vd:routePoint>
+					|<vd:sqnId>"+ а +"</vd:sqnId>
+					|<vd:location>
+					|<dt:address>
+					|<dt:country>
+					|<bs:guid>"+ СокрЛП(ТочкаМаршрута.Страна.GUID) +"</bs:guid>
+					|</dt:country>
+					|<dt:region>
+					|<bs:guid>"+ СокрЛП(ТочкаМаршрута.Регион.GUID) +"</bs:guid>
+					|</dt:region>";
+					Если ЗначениеЗаполнено(ТочкаМаршрута.Район) Тогда
+						Запрос = Запрос+"
+						|<dt:district>
+						|<bs:guid>"+ СокрЛП(ТочкаМаршрута.Район.GUID) +"</bs:guid>
+						|</dt:district>";
+					КонецЕсли;
+					Если ЗначениеЗаполнено(ТочкаМаршрута.Город) Тогда
+						Запрос = Запрос+"
+						|<dt:locality>
+						|<bs:guid>"+ СокрЛП(ТочкаМаршрута.Город.GUID) +"</bs:guid>	
+						|</dt:locality>";
+					КонецЕсли;
+					Запрос = Запрос+"	
+					|</dt:address>
+					|</vd:location>
+					|</vd:routePoint>";
+				КонецЕсли;			
+			КонецЦикла;
+		КонецЕсли;
+		а = а+1;
+		Запрос = Запрос+"
 		|<vd:routePoint>
-		|<vd:sqnId>2</vd:sqnId>
+		|<vd:sqnId>"+ а +"</vd:sqnId>
 		|<vd:enterprise>
 		|<bs:guid>"+ СокрЛП(ДокСсылка.Получатель_Площадка.GUID) +"</bs:guid>
 		|</vd:enterprise>
