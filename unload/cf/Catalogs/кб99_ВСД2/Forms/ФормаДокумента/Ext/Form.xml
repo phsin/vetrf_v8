@@ -1065,6 +1065,7 @@
 							<ChildItems>
 								<LabelField name="МаршрутСледованияНомерСтроки" id="557">
 									<DataPath>Объект.ТочкиМаршрута.LineNumber</DataPath>
+									<Visible>false</Visible>
 									<EditMode>EnterOnInput</EditMode>
 									<ContextMenu name="МаршрутСледованияНомерСтрокиКонтекстноеМеню" id="558"/>
 									<ExtendedTooltip name="МаршрутСледованияНомерСтрокиРасширеннаяПодсказка" id="559"/>
@@ -1080,6 +1081,18 @@
 									<EditMode>EnterOnInput</EditMode>
 									<ContextMenu name="МаршрутСледованияПлощадкаКонтекстноеМеню" id="564"/>
 									<ExtendedTooltip name="МаршрутСледованияПлощадкаРасширеннаяПодсказка" id="565"/>
+								</InputField>
+								<InputField name="МаршрутСледованияИмя" id="770">
+									<DataPath>Объект.ТочкиМаршрута.Имя</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Наименование точки перегрузки</v8:content>
+										</v8:item>
+									</Title>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="МаршрутСледованияИмяКонтекстноеМеню" id="771"/>
+									<ExtendedTooltip name="МаршрутСледованияИмяРасширеннаяПодсказка" id="772"/>
 								</InputField>
 								<CheckBoxField name="МаршрутСледованияПерегрузка" id="566">
 									<DataPath>Объект.ТочкиМаршрута.Перегрузка</DataPath>
