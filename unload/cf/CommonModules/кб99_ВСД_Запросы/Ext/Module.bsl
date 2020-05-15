@@ -639,7 +639,7 @@
 		Попытка 
 			locality = businessEntity.juridicalAddress.locality.guid;
 			localityName = businessEntity.juridicalAddress.locality.name;
-			Параметры["Город"] = НайтиГородПоGUID(locality, localityName);
+			Параметры["Город"] = НайтиГородПоGUID(locality, localityName, Параметры["Регион"]);
 		Исключение
 			СообщитьИнфо("Город не указан в juridicalAddress. Загрузите города вручную");
 		КонецПопытки;
@@ -2548,7 +2548,7 @@
 
 #Область Город
 
-Функция НайтиГородПоGUID(GUID, name) Экспорт
+Функция НайтиГородПоGUID(GUID, name, Регион) Экспорт
 
 	Ответ = Неопределено;
 	Guid = СокрЛП(Guid);
@@ -2570,6 +2570,7 @@
 			Спр = Справочники.ВСД_Город.СоздатьЭлемент();
 			Спр.Наименование = name;
 			Спр.GUID = guid;
+			Спр.Владелец = Регион;
 			Спр.Записать();
 			Ответ = Спр.Ссылка;
 		КонецЕсли;		
@@ -3048,7 +3049,7 @@
 		Исключение КонецПопытки;
 		Попытка Площадка_Объект.Страна	= НайтиСтрануПоGUID( enterprise.address.country.GUID, enterprise.address.country.name); Исключение КонецПопытки;
 		Попытка Площадка_Объект.Регион	= НайтиРегионПоGUID( enterprise.address.region.GUID, enterprise.address.region.name); Исключение КонецПопытки;
-		Попытка Площадка_Объект.Город	= НайтиГородПоGUID( enterprise.address.locality.GUID, enterprise.address.locality.name); Исключение КонецПопытки;
+		Попытка Площадка_Объект.Город	= НайтиГородПоGUID( enterprise.address.locality.GUID, enterprise.address.locality.name, Площадка_Объект.Регион); Исключение КонецПопытки;
 		Площадка_Объект.GUID = enterprise.guid;
 		Площадка_Объект.UUID = enterprise.uuid;	
 		Площадка_Объект.Активен = enterprise.active;
@@ -3848,7 +3849,7 @@
 		ХозСубъект_Объект.Активен = businessEntity.active;	
 		Попытка ХозСубъект_Объект.Страна = НайтиСтрануПоGUID( businessEntity.juridicalAddress.country.GUID, businessEntity.juridicalAddress.country.name); Исключение КонецПопытки;
 		Попытка ХозСубъект_Объект.Регион = НайтиРегионПоGUID( businessEntity.juridicalAddress.region.GUID, businessEntity.juridicalAddress.region.name); Исключение КонецПопытки;
-		Попытка ХозСубъект_Объект.Город	= НайтиГородПоGUID( businessEntity.juridicalAddress.locality.GUID, businessEntity.juridicalAddress.locality.name); Исключение КонецПопытки;
+		Попытка ХозСубъект_Объект.Город	= НайтиГородПоGUID( businessEntity.juridicalAddress.locality.GUID, businessEntity.juridicalAddress.locality.name, ХозСубъект_Объект.Регион); Исключение КонецПопытки;
 		
 		// Ищем контрагента
 		Спр = Новый("СправочникМенеджер.Контрагенты");
