@@ -3108,10 +3108,10 @@
 		Возврат Ложь;
 	КонецЕсли;
 	
-	СообщитьИнфо(" Запрос getBusinessEntityByGuid v1 [ "+(ВыбХозСубъект.GUID)+" ]");
-	ЗапросXML = ХозСубъект_ЗагрузитьПоGUID_v1_Запрос(ВыбХозСубъект.GUID);
-	Service = "platform/cerberus/services/EnterpriseService";
-	Action= "GetBusinessEntityByGuid";
+	СообщитьИнфо(" Запрос getBusinessEntityByGuid v2 [ "+(ВыбХозСубъект.GUID)+" ]");
+	ЗапросXML = ПолучитьПлощадкиПоХозсубъекту_ЗапросXML(ВыбХозСубъект.GUID);
+	Service = "platform/services/2.1/EnterpriseService";
+	Action= "getActivityLocationListRequest";
 	
 	ПараметрыОтправки = кб99_ВСД_Отправка.ПараметрыОтправкиИнициализация( Параметры );
 	ПараметрыОтправки.ЗапросXML = ЗапросXML;
@@ -3124,12 +3124,12 @@
 	КонецЕсли;
 	
 	Попытка
-		Если xdto.Body.getBusinessEntityByGuidResponse.businessEntity.Свойства().получить("activityLocation")=Неопределено Тогда 
+		Если xdto.Body.getActivityLocationListResponse.activityLocationList.Свойства().получить("location")=Неопределено Тогда 
 			СообщитьИнфо("Нет привязанных площадок");
 			Возврат Ложь;
 		КонецЕсли;
 			
-		List = xdto.Body.getBusinessEntityByGuidResponse.businessEntity.activityLocation;
+		List = xdto.Body.getActivityLocationListResponse.activityLocationList.location;
 		
 		Если ТипЗнч(List)<>Тип("СписокXDTO") Тогда 
 			activityLocationList = Новый Массив;
@@ -3161,7 +3161,7 @@
 	КонецПопытки;
 			
 	Возврат Ответ;
-	
+
 КонецФункции
 
 Функция Площадки_ЗагрузитьСписокПоХозСубъекту( Знач Параметры, АдресХранилища )  Экспорт // !!!! 
@@ -3239,6 +3239,30 @@
 	|</soapenv:Body>
 	|</soapenv:Envelope>";	
 	Возврат Запрос;
+КонецФункции
+
+Функция ПолучитьПлощадкиПоХозсубъекту_ЗапросXML(_guid, Смещение = 0)
+	
+	Запрос = "
+	|<soapenv:Envelope xmlns:soapenv='http://schemas.xmlsoap.org/soap/envelope/' 
+	|                  xmlns:ws='http://api.vetrf.ru/schema/cdm/registry/ws-definitions/v2' 
+	|                  xmlns:bs='http://api.vetrf.ru/schema/cdm/base' 
+	|                  xmlns:dt='http://api.vetrf.ru/schema/cdm/dictionary/v2'>
+	|   <soapenv:Header/>
+	|   <soapenv:Body>
+	|      <ws:getActivityLocationListRequest>
+	|         <bs:listOptions>
+	|            <bs:count>1000</bs:count>
+	|            <bs:offset>"+ СтрЗаменить( Смещение , Символы.НПП ,"") +"</bs:offset>
+	|         </bs:listOptions>
+	|         <dt:businessEntity>
+	|            <bs:guid>" +_guid+ "</bs:guid>
+	|         </dt:businessEntity>
+	|      </ws:getActivityLocationListRequest>
+	|   </soapenv:Body>
+	|</soapenv:Envelope>";
+	Возврат Запрос;
+
 КонецФункции
 
 Функция Площадки_НайтиПоУсловиям( Знач Параметры, СписокУсловий, Смещение=0) Экспорт
@@ -3737,24 +3761,6 @@
 	|</ws:getBusinessEntityByGuidRequest>
 	|</soapenv:Body>
 	|</soapenv:Envelope>";
-
-	Возврат ЗапросXML;
-КонецФункции
-
-Функция ХозСубъект_ЗагрузитьПоGUID_v1_Запрос(guid)	
-	//Для Ветис 1.5
-	
-	ЗапросXML = "<soapenv:Envelope xmlns:soapenv='http://schemas.xmlsoap.org/soap/envelope/'
-	|xmlns:ws='http://api.vetrf.ru/schema/cdm/cerberus/business-entity/ws-definitions'
-	|xmlns:base='http://api.vetrf.ru/schema/cdm/base'>
-	|<soapenv:Header/>
-	|<soapenv:Body>
-	|<ws:getBusinessEntityByGuidRequest>
-	|<base:guid>"+GUID+"</base:guid>
-	|</ws:getBusinessEntityByGuidRequest>
-	|</soapenv:Body>
-	|</soapenv:Envelope>
-	|";
 
 	Возврат ЗапросXML;
 КонецФункции
