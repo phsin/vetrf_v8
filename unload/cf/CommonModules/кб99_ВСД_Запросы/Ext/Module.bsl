@@ -679,23 +679,26 @@
 
 #Область Продукция
 Функция ЗагрузитьПродукцию_ЗапросXML(тип)
-	Запрос = "<soapenv:Envelope xmlns:soapenv='http://schemas.xmlsoap.org/soap/envelope/'
-	|xmlns:ws='http://api.vetrf.ru/schema/cdm/argus/production/ws-definitions'
-	|xmlns:base='http://api.vetrf.ru/schema/cdm/base'
-	|xmlns:prod='http://api.vetrf.ru/schema/cdm/argus/production'>
-	|<soapenv:Header/>
-	|<soapenv:Body>
-	|<ws:getProductByTypeListRequest>
-	|<base:listOptions>
-	|<base:count>1000</base:count>
-	|<base:offset>0</base:offset>
-	|</base:listOptions>
-	|<prod:productType>"+ тип +"</prod:productType>
-	|</ws:getProductByTypeListRequest>
-	|</soapenv:Body>
+	
+	Запрос = "
+	|<soapenv:Envelope xmlns:soapenv='http://schemas.xmlsoap.org/soap/envelope/' 
+	|xmlns:ws='http://api.vetrf.ru/schema/cdm/registry/ws-definitions/v2' 
+	|xmlns:bs='http://api.vetrf.ru/schema/cdm/base' 
+	|xmlns:dt='http://api.vetrf.ru/schema/cdm/dictionary/v2'>
+	|   <soapenv:Header/>
+	|   <soapenv:Body>
+	|      <ws:getProductByTypeListRequest>
+	|   	<bs:listOptions>
+	|           <bs:count>1000</bs:count>
+	|           <bs:offset>0</bs:offset>
+	|        </bs:listOptions>
+	|        <dt:productType>"+ тип +"</dt:productType>
+	|      </ws:getProductByTypeListRequest>
+	|   </soapenv:Body>
 	|</soapenv:Envelope>
 	|";
 	Возврат Запрос;
+	
 КонецФункции
 
 Процедура ИнициализацияХС_ЗагрузитьПродукцию_Все( Знач Параметры, АдресХранилища ) Экспорт
@@ -743,7 +746,7 @@
 		
 	СообщитьИнфо(" Запрос GetProductList "+ТипПродукции);		
 	ЗапросXML = ЗагрузитьПродукцию_ЗапросXML(ТипПродукции);
-    Service = "platform/services/ProductService";
+    Service = "platform/services/2.1/ProductService";
     Action = "GetProductByTypeList";
 
 	ПараметрыОтправки = кб99_ВСД_Отправка.ПараметрыОтправкиИнициализация( Параметры );
@@ -814,6 +817,7 @@
 КонецФункции
 
 Функция НайтиПродукцию(guid)
+	
 	Если ПустаяСтрока(guid)=0 Тогда			
 		Запрос = Новый Запрос("ВЫБРАТЬ
 		                      |	ВСД_Продукция.Ссылка
@@ -842,23 +846,26 @@
 
 #Область ВидыПродукции
 Функция ЗагрузитьВидыПродукции_ЗапросXML( _guid, Смещение = 0 )
-	Запрос = "<soapenv:Envelope xmlns:soapenv='http://schemas.xmlsoap.org/soap/envelope/'
-	|xmlns:ws='http://api.vetrf.ru/schema/cdm/argus/production/ws-definitions'
-	|xmlns:base='http://api.vetrf.ru/schema/cdm/base'
-	|xmlns:prod='http://api.vetrf.ru/schema/cdm/argus/production'>
-	|<soapenv:Header/>
-	|<soapenv:Body>
-	|<ws:getSubProductByProductListRequest>
-	|<base:listOptions>
-	|<base:count>1000</base:count>
-	|<base:offset>"+Формат( Смещение, "ЧДЦ=0; ЧН=0; ЧГ=" )+"</base:offset>
-	|</base:listOptions>
-	|<prod:productGuid>"+ _guid +"</prod:productGuid>
-	|</ws:getSubProductByProductListRequest>
-	|</soapenv:Body>
+	
+	Запрос = "
+	|<soapenv:Envelope xmlns:soapenv='http://schemas.xmlsoap.org/soap/envelope/'
+	|	xmlns:ws='http://api.vetrf.ru/schema/cdm/registry/ws-definitions/v2' 
+	|	xmlns:bs='http://api.vetrf.ru/schema/cdm/base' 
+	|	xmlns:dt='http://api.vetrf.ru/schema/cdm/dictionary/v2'>
+	|    <soapenv:Header/>
+	|    <soapenv:Body>
+	|      <ws:getSubProductByProductListRequest>
+	|          <bs:listOptions>
+	|            <bs:count>1000</bs:count>
+	|            <bs:offset>"+Формат( Смещение, "ЧДЦ=0; ЧН=0; ЧГ=" )+"</bs:offset>
+	|         </bs:listOptions>
+	|         <dt:productGuid>"+ _guid +"</dt:productGuid>
+	|      </ws:getSubProductByProductListRequest>
+	|    </soapenv:Body>
 	|</soapenv:Envelope>
 	|";
 	Возврат Запрос;
+	
 КонецФункции
 
 Функция ИнициализацияХС_ЗагрузитьВидыПродукции( Знач Параметры, ВидПродукцииGUID, Владелец, _Смещение=0 ) Экспорт
@@ -870,7 +877,7 @@
 	
 	СообщитьИнфо(" Запрос GetProductList ");		
 	ЗапросXML = ЗагрузитьВидыПродукции_ЗапросXML( ВидПродукцииGUID, _Смещение );
-	Service = "platform/services/ProductService";
+	Service = "platform/services/2.1/ProductService";
 	Action = "GetSubProductByProductList";
 	ПараметрыОтправки = кб99_ВСД_Отправка.ПараметрыОтправкиИнициализация( Параметры );
 	ПараметрыОтправки.ЗапросXML = ЗапросXML;
@@ -1538,21 +1545,24 @@
 
 #Область ЕдиницыИзмерения
 Функция ЗагрузитьЕдиницыИзмерения_ЗапросXML()
-	Запрос = "<soapenv:Envelope xmlns:soapenv='http://schemas.xmlsoap.org/soap/envelope/'
-	|xmlns:ws='http://api.vetrf.ru/schema/cdm/argus/common/ws-definitions'
-	|xmlns:base='http://api.vetrf.ru/schema/cdm/base'>
-	|<soapenv:Header/>
-	|<soapenv:Body>
-	|<ws:getUnitListRequest>
-	|<base:listOptions>
-	|<base:count>1000</base:count>
-	|<base:offset>0</base:offset>
-	|</base:listOptions>
-	|</ws:getUnitListRequest>
-	|</soapenv:Body>
+	
+	Запрос = "
+	|<soapenv:Envelope xmlns:soapenv='http://schemas.xmlsoap.org/soap/envelope/' 
+	|xmlns:ws='http://api.vetrf.ru/schema/cdm/registry/ws-definitions/v2' 
+	|xmlns:bs='http://api.vetrf.ru/schema/cdm/base'>
+	|   <soapenv:Header/>
+	|   <soapenv:Body>
+	|      <ws:getUnitListRequest>
+	|         <bs:listOptions>
+	|            <bs:count>1000</bs:count>
+	|            <bs:offset>0</bs:offset>
+	|         </bs:listOptions>
+	|      </ws:getUnitListRequest>
+	|   </soapenv:Body>
 	|</soapenv:Envelope>
 	|";
 	Возврат Запрос;
+	
 КонецФункции
 
 Процедура ИнициализацияХС_ЗагрузитьЕдиницыИзмерения_ВФоне( Знач Параметры, АдресХранилища ) Экспорт
@@ -1575,7 +1585,7 @@
 	
 	СообщитьИнфо(" Запрос GetUnitList ");		
 	ЗапросXML = ЗагрузитьЕдиницыИзмерения_ЗапросXML();
-    Service = "platform/services/DictionaryService";
+    Service = "platform/services/2.1/DictionaryService";
     Action = "GetUnitList";
 	
 	ПараметрыОтправки = кб99_ВСД_Отправка.ПараметрыОтправкиИнициализация( Параметры );
@@ -1675,20 +1685,24 @@
 
 #Область Цели
 Функция ИнициализацияХС_ЗагрузитьЦели_ЗапросXML() Экспорт
-	Запрос = "<soapenv:Envelope xmlns:soapenv='http://schemas.xmlsoap.org/soap/envelope/' 
-	|xmlns:ws='http://api.vetrf.ru/schema/cdm/argus/common/ws-definitions' 
-	|xmlns:base='http://api.vetrf.ru/schema/cdm/base'>
-	|<soapenv:Header/>
-	|<soapenv:Body>
-	|<ws:getPurposeListRequest>
-	|<base:listOptions>
-	|<base:count>1000</base:count>
-	|</base:listOptions>
-	|</ws:getPurposeListRequest>
-	|</soapenv:Body>
+	
+	Запрос = "
+	|<soapenv:Envelope xmlns:soapenv='http://schemas.xmlsoap.org/soap/envelope/' 
+	|xmlns:ws='http://api.vetrf.ru/schema/cdm/registry/ws-definitions/v2' 
+	|xmlns:bs='http://api.vetrf.ru/schema/cdm/base'>
+	|   <soapenv:Header/>
+	|   <soapenv:Body>
+	|      <ws:getPurposeListRequest>
+	|         <bs:listOptions>
+	|            <bs:count>1000</bs:count>
+	|            <bs:offset>0</bs:offset>
+	|         </bs:listOptions>    
+	|      </ws:getPurposeListRequest>
+	|   </soapenv:Body>
 	|</soapenv:Envelope>
 	|";
 	Возврат Запрос;
+	
 КонецФункции
 
 Процедура ИнициализацияХС_ЗагрузитьЦели_ВФоне( Знач Параметры, АдресХранилища ) Экспорт
@@ -1710,7 +1724,7 @@
 	ПометитьНаУдалениеСправочник("ВСД_Цель");
 	
 	ЗапросXML = ИнициализацияХС_ЗагрузитьЦели_ЗапросXML();     
-	Service = "platform/services/DictionaryService";
+	Service = "platform/services/2.1/DictionaryService";
     Action = "GetPurposeList";	
 	ПараметрыОтправки = кб99_ВСД_Отправка.ПараметрыОтправкиИнициализация( Параметры );
 	ПараметрыОтправки.ЗапросXML = ЗапросXML;
@@ -2291,18 +2305,19 @@
 КонецФункции
 
 Функция ЗагрузитьСтраны_ЗапросXML( )
-	Запрос = "<soapenv:Envelope xmlns:soapenv='http://schemas.xmlsoap.org/soap/envelope/'
-	|xmlns:ws='http://api.vetrf.ru/schema/cdm/ikar/ws-definitions'
-	|xmlns:base='http://api.vetrf.ru/schema/cdm/base'>
-	|<soapenv:Header/>
-	|<soapenv:Body>
-	|<ws:getAllCountryListRequest>
-	|<base:listOptions>
-	|<base:count>1000</base:count>
-	|<base:offset>0</base:offset>
-	|</base:listOptions>
-	|</ws:getAllCountryListRequest>
-	|</soapenv:Body>
+	Запрос = "
+	|<soapenv:Envelope xmlns:soapenv='http://schemas.xmlsoap.org/soap/envelope/' 
+	|                  xmlns:ws='http://api.vetrf.ru/schema/cdm/ikar/ws-definitions' 
+	|                  xmlns:base='http://api.vetrf.ru/schema/cdm/base'>
+	|  <soapenv:Header/>
+	|  <soapenv:Body>
+	|    <ws:getAllCountryListRequest>
+	|      <base:listOptions>
+	|        <base:count>10</base:count>
+	|        <base:offset>0</base:offset>
+	|      </base:listOptions>
+	|    </ws:getAllCountryListRequest>
+	|  </soapenv:Body>
 	|</soapenv:Envelope>
 	|";
 	Возврат Запрос;
@@ -2983,17 +2998,21 @@
 КонецФункции
 
 Функция Площадка_ЗагрузитьПоGUID_Запрос(GUID)
-	ЗапросXML = "<soapenv:Envelope xmlns:bs='http://api.vetrf.ru/schema/cdm/base'
-	|		  xmlns:ws='http://api.vetrf.ru/schema/cdm/cerberus/enterprise/ws-definitions'
-	|		  xmlns:soapenv='http://schemas.xmlsoap.org/soap/envelope/'>
-	|<soapenv:Header/>
-	|<soapenv:Body>
-	|<ws:getEnterpriseByGuidRequest>
-	|<bs:guid>"+GUID+"</bs:guid>
-	|</ws:getEnterpriseByGuidRequest>
-	|</soapenv:Body>
-	|</soapenv:Envelope>";
-	Возврат ЗапросXML;
+	
+	Запрос = "
+	|<soapenv:Envelope xmlns:soapenv='http://schemas.xmlsoap.org/soap/envelope/' 
+	|		  xmlns:ws='http://api.vetrf.ru/schema/cdm/registry/ws-definitions/v2' 
+	|		  xmlns:bs='http://api.vetrf.ru/schema/cdm/base'>
+	|   <soapenv:Header/>
+	|   <soapenv:Body>
+	|      <ws:getEnterpriseByGuidRequest>
+	|         <bs:guid>"+GUID+"</bs:guid>
+	|      </ws:getEnterpriseByGuidRequest>
+	|   </soapenv:Body>
+	|</soapenv:Envelope>
+	|";
+	Возврат Запрос;
+	
 КонецФункции
 
 Процедура Площадка_ЗагрузитьПоGUID_ВФоне( Знач Параметры, АдресХранилища ) Экспорт
@@ -3020,7 +3039,7 @@
 
 	СообщитьИнфо(" Запрос getEnterpriseByGuid [ "+(_guid)+" ]");
 	ЗапросXML = Площадка_ЗагрузитьПоGUID_Запрос(_guid);
-	Service = "platform/cerberus/services/EnterpriseService";
+	Service = "platform/services/2.1/EnterpriseService";
 	Action = "GetEnterpriseByGUID";
 	
 	ПараметрыОтправки = кб99_ВСД_Отправка.ПараметрыОтправкиИнициализация( Параметры );
@@ -3049,7 +3068,7 @@
 		Исключение КонецПопытки;
 		Попытка Площадка_Объект.Страна	= НайтиСтрануПоGUID( enterprise.address.country.GUID, enterprise.address.country.name); Исключение КонецПопытки;
 		Попытка Площадка_Объект.Регион	= НайтиРегионПоGUID( enterprise.address.region.GUID, enterprise.address.region.name); Исключение КонецПопытки;
-		Попытка Площадка_Объект.Город	= НайтиГородПоGUID( enterprise.address.locality.GUID, enterprise.address.locality.name, Площадка_Объект.Регион); Исключение КонецПопытки;
+		Попытка Площадка_Объект.Город	= НайтиГородПоGUID( enterprise.address.locality.GUID, enterprise.address.locality.name, Площадка_Объект.Регион ); Исключение КонецПопытки;
 		Площадка_Объект.GUID = enterprise.guid;
 		Площадка_Объект.UUID = enterprise.uuid;	
 		Площадка_Объект.Активен = enterprise.active;
@@ -3161,7 +3180,7 @@
 	КонецПопытки;
 			
 	Возврат Ответ;
-
+	
 КонецФункции
 
 Функция Площадки_ЗагрузитьСписокПоХозСубъекту( Знач Параметры, АдресХранилища )  Экспорт // !!!! 
@@ -3274,7 +3293,7 @@
 	СообщитьИнфо("Запрос GetRussianEnterpriseListByName ");
 	ЗапросXML = НайтиПлощадкиПоУсловиям_ЗапросXML( Параметры, СписокУсловий, Смещение );
 
-	Service = "platform/services/2.0/EnterpriseService";
+	Service = "platform/services/2.1/EnterpriseService";
 	Action = "GetRussianEnterpriseList";	
 	ПараметрыОтправки = кб99_ВСД_Отправка.ПараметрыОтправкиИнициализация( Параметры );
 	ПараметрыОтправки.ЗапросXML = ЗапросXML;
@@ -3649,22 +3668,24 @@
 #Область ХозСубъекты
 
 Функция ХозСубъект_ПолучитьGuidПоИНН_Запрос( ИНН )
-	ЗапросXML = "<soapenv:Envelope xmlns:soapenv='http://schemas.xmlsoap.org/soap/envelope/'
-	|xmlns:ws='http://api.vetrf.ru/schema/cdm/cerberus/business-entity/ws-definitions'
-	|xmlns:base='http://api.vetrf.ru/schema/cdm/base' xmlns:ent='http://api.vetrf.ru/schema/cdm/cerberus/enterprise'
-	|xmlns:ikar='http://api.vetrf.ru/schema/cdm/ikar'>
-	|<soapenv:Header/>
-	|<soapenv:Body>
-	|<ws:getBusinessEntityListRequest>
-	|<ent:businessEntity>
-	|<ent:inn>"+ (инн) +"</ent:inn>
-	|</ent:businessEntity>
-	|</ws:getBusinessEntityListRequest>
-	|</soapenv:Body>
+	
+	Запрос = "
+	|<soapenv:Envelope xmlns:soapenv='http://schemas.xmlsoap.org/soap/envelope/' 
+	|		  xmlns:ws='http://api.vetrf.ru/schema/cdm/registry/ws-definitions/v2' 
+	|		  xmlns:bs='http://api.vetrf.ru/schema/cdm/base' 
+	|		  xmlns:dt='http://api.vetrf.ru/schema/cdm/dictionary/v2'>
+	|   <soapenv:Header/>
+	|   <soapenv:Body>
+	|      <ws:getBusinessEntityListRequest>
+	|         <dt:businessEntity>
+	|            <dt:inn>"+ (ИНН) +"</dt:inn>
+	|         </dt:businessEntity>
+	|      </ws:getBusinessEntityListRequest>
+	|   </soapenv:Body>
 	|</soapenv:Envelope>
 	|";
+	Возврат Запрос;
 	
-	Возврат ЗапросXML;
 КонецФункции
 
 Процедура ХозСубъект_ПолучитьGuidПоИНН_ВФоне( Знач Параметры, АдресХранилища ) Экспорт
@@ -3684,15 +3705,19 @@
 
 Функция ХозСубъект_ПолучитьGuidПоИНН(Знач Параметры, ХозСубъект) Экспорт
 	
-	ИНН = СокрЛП( ПолучитьИНН(ХозСубъект.Контрагент));   
-	Если ПустаяСтрока(ИНН) Тогда 
-		СообщитьИнфо("Неправильно указан ИНН");
-		Возврат Ложь;
-	КонецЕсли;	
-	
+	Если НЕ ЗначениеЗаполнено(ХозСубъект.ИНН) Тогда
+		ИНН = СокрЛП( ПолучитьИНН(ХозСубъект.Контрагент));   
+		Если НЕ ЗначениеЗаполнено(ИНН) Тогда 
+			СообщитьИнфо("Не указан ИНН для контрагента: "+ ХозСубъект.Контрагент.Наименование);
+			Возврат Ложь;
+		КонецЕсли;
+	Иначе
+		ИНН = ХозСубъект.ИНН;
+	КонецЕсли;
+		
 	СообщитьИнфо(" Запрос GetBusinessEntityByINN [ "+ИНН+" ]");		
 	ЗапросXML = ХозСубъект_ПолучитьGuidПоИНН_Запрос( ИНН );
-	Service = "platform/cerberus/services/EnterpriseService";
+	Service = "platform/services/2.1/EnterpriseService";
 	Action = "GetBusinessEntityList";	
 	
 	ПараметрыОтправки = кб99_ВСД_Отправка.ПараметрыОтправкиИнициализация( Параметры );
@@ -3710,7 +3735,7 @@
 		Если Число(xdto.Body.getBusinessEntityListResponse.businessEntityList.total)>0 Тогда	
 			Если  Число(xdto.Body.getBusinessEntityListResponse.businessEntityList.total)>1 тогда
 				Для каждого стр ИЗ xdto.Body.getBusinessEntityListResponse.businessEntityList.businessEntity цикл
-					guid = стр.guid;
+					_guid = стр.guid;
 					_uuid = стр.uuid;
 					active = стр.active;
 				КонецЦикла ;
@@ -5264,7 +5289,6 @@
 	Возврат Ответ;
 
 КонецФункции
-
 
 Процедура Фасовка_из_XML( packaging,ФасовкаНаименование="",ФасовкаФормаУпаковки="",ФасовкаКоличество="",ФасовкаОбъем="",ФасовкаЕдиницаИзм="") Экспорт 
 	Попытка	ФасовкаНаименование =  packaging.packagingType.name;	Исключение КонецПопытки;
