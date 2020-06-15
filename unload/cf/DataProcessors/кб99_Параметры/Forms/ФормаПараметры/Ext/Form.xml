@@ -212,6 +212,11 @@
 							<Representation>StrongSeparation</Representation>
 							<ExtendedTooltip name="ГруппаСистемныеНастройкиРасширеннаяПодсказка" id="406"/>
 							<ChildItems>
+								<Button name="НастроитьРегламентноеЗаданиеОчиститьЗапросы" id="693">
+									<Type>UsualButton</Type>
+									<CommandName>Form.Command.НастроитьРегламентноеЗаданиеОчиститьЗапросы</CommandName>
+									<ExtendedTooltip name="НастроитьРегламентноеЗаданиеОчиститьЗапросыРасширеннаяПодсказка" id="694"/>
+								</Button>
 								<UsualGroup name="Группа45" id="552">
 									<HorizontalStretch>true</HorizontalStretch>
 									<Group>Vertical</Group>
@@ -236,6 +241,11 @@
 											<HorizontalStretch>true</HorizontalStretch>
 											<ContextMenu name="КаталогЛоговКонтекстноеМеню" id="27"/>
 											<ExtendedTooltip name="КаталогЛоговРасширеннаяПодсказка" id="28"/>
+										</InputField>
+										<InputField name="КоличествоДнейХраненияЗапросов" id="690">
+											<DataPath>Объект.КоличествоДнейХраненияЗапросов</DataPath>
+											<ContextMenu name="КоличествоДнейХраненияЗапросовКонтекстноеМеню" id="691"/>
+											<ExtendedTooltip name="КоличествоДнейХраненияЗапросовРасширеннаяПодсказка" id="692"/>
 										</InputField>
 										<InputField name="ПаузаСек" id="29">
 											<DataPath>Объект.ПаузаСек</DataPath>
@@ -2572,6 +2582,21 @@
 				</v8:item>
 			</ToolTip>
 			<Action>кнЗагрузитьРайоны</Action>
+		</Command>
+		<Command name="НастроитьРегламентноеЗаданиеОчиститьЗапросы" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Настроить регламентное задание по очистке логов</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Настроить регламентное задание очистить запросы</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>НастроитьРегламентноеЗаданиеОчиститьЗапросы</Action>
 		</Command>
 	</Commands>
 </Form>
