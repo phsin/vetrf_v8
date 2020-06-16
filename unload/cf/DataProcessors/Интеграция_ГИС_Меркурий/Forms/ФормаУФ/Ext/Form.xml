@@ -672,6 +672,11 @@
 													<CommandName>Form.Command.кнПечатьРеестр</CommandName>
 													<ExtendedTooltip name="кнПечатьРеестрРасширеннаяПодсказка" id="544"/>
 												</Button>
+												<Button name="кнПечатьНаборныйЛист" id="663">
+													<Type>CommandBarButton</Type>
+													<CommandName>Form.Command.кнПечатьНаборныйЛист</CommandName>
+													<ExtendedTooltip name="кнПечатьНаборныйЛистРасширеннаяПодсказка" id="664"/>
+												</Button>
 											</ChildItems>
 										</Popup>
 									</ChildItems>
@@ -2509,6 +2514,21 @@
 				<xr:LoadTransparent>true</xr:LoadTransparent>
 			</Picture>
 			<Action>ЗаполнитьЗаказами</Action>
+		</Command>
+		<Command name="кнПечатьНаборныйЛист" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Наборный лист</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Кн печать наборный лист</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>кнПечатьНаборныйЛист</Action>
 		</Command>
 	</Commands>
 </Form>

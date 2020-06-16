@@ -93,6 +93,16 @@
 				</Picture>
 				<ExtendedTooltip name="ФормакнСписатьПартииРасширеннаяПодсказка" id="671"/>
 			</Button>
+			<Button name="ФормаОбновитьТраспорт" id="679">
+				<Type>CommandBarButton</Type>
+				<Representation>PictureAndText</Representation>
+				<CommandName>Form.Command.ОбновитьТраспорт</CommandName>
+				<Picture>
+					<xr:Ref>CommonPicture.кб99_Car</xr:Ref>
+					<xr:LoadTransparent>true</xr:LoadTransparent>
+				</Picture>
+				<ExtendedTooltip name="ФормаОбновитьТраспортРасширеннаяПодсказка" id="680"/>
+			</Button>
 		</ChildItems>
 	</AutoCommandBar>
 	<Events>
@@ -1648,6 +1658,21 @@
 				</v8:item>
 			</ToolTip>
 			<Action>кнПолучитьВсдПоВсемПлощадкам</Action>
+		</Command>
+		<Command name="ОбновитьТраспорт" id="18">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Обновить траспорт</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Обновить траспорт</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОбновитьТраспорт</Action>
 		</Command>
 	</Commands>
 </Form>

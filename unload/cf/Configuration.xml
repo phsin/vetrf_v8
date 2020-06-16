@@ -38,7 +38,7 @@
 			<Comment/>
 			<NamePrefix/>
 			<ConfigurationExtensionCompatibilityMode>Version8_3_14</ConfigurationExtensionCompatibilityMode>
-			<DefaultRunMode>OrdinaryApplication</DefaultRunMode>
+			<DefaultRunMode>ManagedApplication</DefaultRunMode>
 			<UsePurposes>
 				<v8:Value xsi:type="app:ApplicationUsePurpose">PlatformApplication</v8:Value>
 			</UsePurposes>
@@ -139,6 +139,7 @@
 		<ChildObjects>
 			<Language>Русский</Language>
 			<Subsystem>кб99_ВСД</Subsystem>
+			<Subsystem>ТиповыеДокументы</Subsystem>
 			<CommonPicture>Ветис2</CommonPicture>
 			<CommonPicture>ЛабИсследования</CommonPicture>
 			<CommonPicture>кб99_Car</CommonPicture>
@@ -163,6 +164,8 @@
 			<CommonPicture>kb99_user</CommonPicture>
 			<CommonPicture>kb99_user_o</CommonPicture>
 			<Interface>ВСД</Interface>
+			<SessionParameter>ТекущийПользователь</SessionParameter>
+			<Role>Администратор</Role>
 			<CommonTemplate>КомпонентаПечатиQRКода</CommonTemplate>
 			<FilterCriterion>СвязанныеДокументы</FilterCriterion>
 			<CommonModule>ДлительныеОперации</CommonModule>
@@ -179,7 +182,6 @@
 			<CommonModule>кб99_ВСД_Клиент</CommonModule>
 			<CommonCommand>ВСД_ОтправитьВСД</CommonCommand>
 			<CommonCommand>ВСД_ПлощадкиЗагрузитьПоНазванию</CommonCommand>
-			<CommonCommand>ВСД_ОткрытьЗапрос</CommonCommand>
 			<CommonCommand>ВСД_ПечатьВСДСокращенный</CommonCommand>
 			<CommonCommand>ВСД_ПолучитьОтветВетис</CommonCommand>
 			<CommonCommand>ВСД_ОткрытьОтвет</CommonCommand>
@@ -193,6 +195,8 @@
 			<CommonCommand>ВСД_ОформитьВСДПроизводство</CommonCommand>
 			<CommonCommand>ВСД_ОткрытьВСДвГИС</CommonCommand>
 			<CommonCommand>ВСД_ОбновитьСтатусВСД</CommonCommand>
+			<CommonCommand>ВСД_ОткрытьЗапрос</CommonCommand>
+			<CommonCommand>ВСД_ПечатьНаборныйЛист</CommonCommand>
 			<CommandGroup>Печать</CommandGroup>
 			<CommandGroup>ВСД_ГруппаКоманд</CommandGroup>
 			<CommonForm>кб99_ФормаТермическиеУсловия</CommonForm>
@@ -219,7 +223,6 @@
 			<Catalog>ВСД_Улица</Catalog>
 			<Document>ПеремещениеТоваров</Document>
 			<Document>ВСД2_Производство</Document>
-			<Document>РеализацияТоваровУслуг</Document>
 			<Document>ВСД_транзакция</Document>
 			<Document>ВСД_входящий</Document>
 			<Document>ВСД</Document>
@@ -229,6 +232,8 @@
 			<Document>ВСД2_ОбъединениеПартий</Document>
 			<Document>ВСД2_Инвентаризация</Document>
 			<Document>ВСД2_входящий</Document>
+			<Document>РеализацияТоваровУслуг</Document>
+			<Document>ВСД2_ОбновитьТранспорт</Document>
 			<DocumentJournal>кб99_ЖурналВСД</DocumentJournal>
 			<Enum>кб99_РезультатИсследования</Enum>
 			<Enum>кб99_УровниУпаковки</Enum>

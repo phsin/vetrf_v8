@@ -3648,6 +3648,7 @@
 			<Template>Печать</Template>
 			<Template>Макет</Template>
 			<Template>Макет82</Template>
+			<Template>ПечатьНаборныйЛист</Template>
 			<Command uuid="760de4f6-6d52-441a-ac45-ecda59f10a7c">
 				<Properties>
 					<Name>ПечатьСокращеннойФормыВСД</Name>
@@ -3763,6 +3764,23 @@
 						<xr:Ref>CommonPicture.кб99_map_o</xr:Ref>
 						<xr:LoadTransparent>true</xr:LoadTransparent>
 					</Picture>
+					<Shortcut/>
+				</Properties>
+			</Command>
+			<Command uuid="0fdef847-0312-42f2-b911-2df1e4d01300">
+				<Properties>
+					<Name>ПечатьНаборныйЛист</Name>
+					<Synonym/>
+					<Comment/>
+					<Group>FormCommandBarImportant</Group>
+					<CommandParameterType>
+						<v8:Type>cfg:DocumentRef.ВСД2_транзакция</v8:Type>
+					</CommandParameterType>
+					<ParameterUseMode>Multiple</ParameterUseMode>
+					<ModifiesData>false</ModifiesData>
+					<Representation>Auto</Representation>
+					<ToolTip/>
+					<Picture/>
 					<Shortcut/>
 				</Properties>
 			</Command>
