@@ -978,6 +978,35 @@
 												</CheckBoxField>
 											</ChildItems>
 										</ColumnGroup>
+										<ColumnGroup name="Экспертиза" id="731">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Экспертиза</v8:content>
+												</v8:item>
+											</Title>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Экспертиза</v8:content>
+												</v8:item>
+											</ToolTip>
+											<ExtendedTooltip name="ЭкспертизаРасширеннаяПодсказка" id="732"/>
+											<ChildItems>
+												<InputField name="ТоварыВидПроисхожденияНеПищевойПродукции" id="733">
+													<DataPath>Объект.Товары.ВидПроисхожденияНеПищевойПродукции</DataPath>
+													<EditMode>EnterOnInput</EditMode>
+													<ContextMenu name="ТоварыВидПроисхожденияНеПищевойПродукцииКонтекстноеМеню" id="734"/>
+													<ExtendedTooltip name="ТоварыВидПроисхожденияНеПищевойПродукцииРасширеннаяПодсказка" id="735"/>
+												</InputField>
+												<InputField name="ТоварыРезультатИсследования" id="736">
+													<DataPath>Объект.Товары.РезультатыИсследований</DataPath>
+													<EditMode>EnterOnInput</EditMode>
+													<ContextMenu name="ТоварыРезультатИсследованияКонтекстноеМеню" id="737"/>
+													<ExtendedTooltip name="ТоварыРезультатИсследованияРасширеннаяПодсказка" id="738"/>
+												</InputField>
+											</ChildItems>
+										</ColumnGroup>
 									</ChildItems>
 								</Table>
 							</ChildItems>
