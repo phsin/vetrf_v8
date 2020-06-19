@@ -4099,7 +4099,7 @@
 	|<apldef:apiKey>"+ СокрЛП( Параметры["param_api_key"] ) +"</apldef:apiKey>
 	|<apl:application>
 	|<apl:serviceId>mercury-g2b.service:2.0</apl:serviceId>
-	|<apl:issuerId>"+ СокрЛП( Параметры["param_issuer_id"] ) +"</apl:issuerId>
+	|<apl:issuerId>"+ СокрЛП( ВыбПартия.Получатель_ХозСубъект.guid ) +"</apl:issuerId>
 	|<apl:issueDate>" + ДатаXML(ТекущаяДата(), "T00:00:00") + "</apl:issueDate>	
 	|<apl:data>
 	|<merc:getStockEntryByGuidRequest>
@@ -4815,7 +4815,7 @@
 	//**************************************************
 	
 	
-	Если Партия.Количество=0 Тогда 
+	Если Партия.Количество=0 Тогда
 		
 		Если ( Партия.ЭтоНовый()=0 ) Тогда			
 			СообщитьИнфо("Партия guid ["+Партия.guid+"] Количество = 0. Партия удалена. ", Партия);			
@@ -6824,20 +6824,28 @@
 		|<vd:operator>
 		|<dt:name>" + ЗаменитьСпецСимволы(строкаДок.НаименованиеЛаборатории) + "</dt:name>
 		|</vd:operator>
-		|<vd:referencedDocument>
-		|<vd:issueNumber>"+ СокрЛП(строкаДок.НомерАктаОтбораПроб) +"</vd:issueNumber>
-		|<vd:issueDate>"+ ДатаXML(строкаДок.ДатаОтбораПроб) +"</vd:issueDate>
+		|<vd:referencedDocument>";
+		Если ЗначениеЗаполнено(строкаДок.НомерАктаОтбораПроб) Тогда
+			Запрос = Запрос + "
+			|<vd:issueNumber>"+ СокрЛП(строкаДок.НомерАктаОтбораПроб) +"</vd:issueNumber>
+			|<vd:issueDate>"+ ДатаXML(строкаДок.ДатаОтбораПроб) +"</vd:issueDate>";
+		КонецЕсли;
+		Запрос =  Запрос + "
 		|<vd:type>9</vd:type> 
 		//|<vd:relationshipType>6</vd:relationshipType>
 		|</vd:referencedDocument>
 		|<vd:expertiseID>"+ СокрЛП(строкаДок.НомерЭкспертизы) +"</vd:expertiseID>
 		|<vd:disease>
 		|<dt:name>"+ ЗаменитьСпецСимволы(строкаДок.НаименованиеПоказателя) +"</dt:name>
-		|</vd:disease>
-		|<vd:method>
-		|<dt:name>"+ СокрЛП(строкаДок.МетодИсследования) +"</dt:name>
-		|</vd:method>
-							// Допустимые значения: UNKNOWN, POSITIVE, NEGATIVE
+		|</vd:disease>";
+		Если ЗначениеЗаполнено(строкаДок.МетодИсследования) Тогда
+			Запрос = Запрос + "
+			|<vd:method>
+			|<dt:name>"+ СокрЛП(строкаДок.МетодИсследования) +"</dt:name>
+			|</vd:method>";
+		КонецЕсли;
+		Запрос = Запрос + "
+			// Допустимые значения: UNKNOWN, POSITIVE, NEGATIVE
 		|<vd:result>"+ ПолучитьИдентификаторПеречисления( строкаДок.РезультатИсследования ) +"</vd:result>
 		|<vd:conclusion>"+ СокрЛП(строкаДок.Заключение)  +"</vd:conclusion>
 		|</vd:laboratoryResearch>";
@@ -7328,7 +7336,7 @@
 	|<vd:login>"+Параметры["param_intiator_login"]+"</vd:login>
 	|</merc:initiator>
 	|<merc:vetDocumentId>"+ СокрЛП(ДокСсылка.UUID) +"</merc:vetDocumentId>
-	|<merc:withdrawReason>"+Параметры["парамПричинаАннулирования"]+"</merc:withdrawReason>
+	|<merc:withdrawReason>"+?(ЗначениеЗаполнено(Параметры["парамПричинаАннулирования"]),Параметры["парамПричинаАннулирования"],"Не верно указан объем.")+"</merc:withdrawReason>
 	|<merc:withdrawDate>"+ ДатаXML( ТекущаяДата(), "T23:59:59") +"</merc:withdrawDate>
 	|<merc:specifiedPerson>
 	|<vd:login>"+ Параметры["param_vetdoctor_login"]+"</vd:login>

@@ -716,6 +716,9 @@
 									</EditFormat>
 									<ContextMenu name="ВСДВходящиеДатаСрокГодности1КонтекстноеМеню" id="660"/>
 									<ExtendedTooltip name="ВСДВходящиеДатаСрокГодности1РасширеннаяПодсказка" id="661"/>
+									<Events>
+										<Event name="OnChange">ВСДВходящиеДатаСрокГодности1ПриИзменении</Event>
+									</Events>
 								</InputField>
 								<InputField name="ВСДВходящиеДатаСрокГодности2" id="662">
 									<DataPath>Объект.ВСДВходящие.ДатаСрокГодности2</DataPath>
@@ -786,6 +789,9 @@
 									<CheckBoxType>Auto</CheckBoxType>
 									<ContextMenu name="флАктНесоответствияКонтекстноеМеню" id="272"/>
 									<ExtendedTooltip name="флАктНесоответствияРасширеннаяПодсказка" id="273"/>
+									<Events>
+										<Event name="OnChange">флАктНесоответствияПриИзменении</Event>
+									</Events>
 								</CheckBoxField>
 								<InputField name="тПричинаАкта" id="277">
 									<DataPath>тПричинаАкта</DataPath>
