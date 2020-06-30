@@ -151,6 +151,11 @@
 								</Button>
 							</ChildItems>
 						</UsualGroup>
+						<InputField name="Площадка" id="54">
+							<DataPath>Площадка</DataPath>
+							<ContextMenu name="ПлощадкаКонтекстноеМеню" id="55"/>
+							<ExtendedTooltip name="ПлощадкаРасширеннаяПодсказка" id="56"/>
+						</InputField>
 						<InputField name="ИнтервалПовтораПриАварийномЗавершенииПолучитьАктуальныеПартии" id="48">
 							<DataPath>ИнтервалПовтораПриАварийномЗавершенииПолучитьАктуальныеПартии</DataPath>
 							<ContextMenu name="ИнтервалПовтораПриАварийномЗавершенииПолучитьАктуальныеПартииКонтекстноеМеню" id="49"/>
@@ -339,6 +344,21 @@
 					<v8:AllowedSign>Any</v8:AllowedSign>
 				</v8:NumberQualifiers>
 			</Type>
+		</Attribute>
+		<Attribute name="Площадка" id="13">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Площадка</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueListType</v8:Type>
+			</Type>
+			<FillCheck>ShowError</FillCheck>
+			<Settings xsi:type="v8:TypeDescription">
+				<v8:Type>cfg:CatalogRef.ВСД_Площадка</v8:Type>
+			</Settings>
 		</Attribute>
 	</Attributes>
 	<Commands>

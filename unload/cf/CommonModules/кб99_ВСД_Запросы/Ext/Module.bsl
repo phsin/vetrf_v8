@@ -4399,55 +4399,57 @@
 		СообщитьИнфо("Получено партий по запросу -> "+ПришлоПартий+" текущее смещение: "+Параметры["Смещение"]);
 	КонецЕсли;
 	
-	Попытка
-		Response = xdto.Body.receiveApplicationResultResponse.application.result;
-		Если НЕ(Response.Свойства().Получить("getStockEntryListResponse") = Неопределено) Тогда
-			seList = Response.getStockEntryListResponse.stockEntryList.StockEntry;	
-		ИначеЕсли НЕ(Response.Свойства().Получить("processIncomingConsignmentResponse") = Неопределено) Тогда
-			Если Response.processIncomingConsignmentResponse.Свойства().Получить("stockEntry") <> Неопределено Тогда 
-				seList = Response.processIncomingConsignmentResponse.stockEntry;	
+	Если ПришлоПартий > 0 Тогда // Иначе возникает ошибка если получено 0 партий
+		Попытка
+			Response = xdto.Body.receiveApplicationResultResponse.application.result;
+			Если НЕ(Response.Свойства().Получить("getStockEntryListResponse") = Неопределено) Тогда
+				seList = Response.getStockEntryListResponse.stockEntryList.StockEntry;	
+			ИначеЕсли НЕ(Response.Свойства().Получить("processIncomingConsignmentResponse") = Неопределено) Тогда
+				Если Response.processIncomingConsignmentResponse.Свойства().Получить("stockEntry") <> Неопределено Тогда 
+					seList = Response.processIncomingConsignmentResponse.stockEntry;	
+				Иначе
+					Возврат Партия;
+				КонецЕсли
+			ИначеЕсли НЕ(Response.Свойства().Получить("getStockEntryByGuidResponse") = Неопределено) Тогда			
+				seList = Response.getStockEntryByGuidResponse.stockEntry;	
 			Иначе
+				СообщитьИнфо("В партия получили не обработанные ветки -> "+Response.Свойства().Получить(0));
 				Возврат Партия;
-			КонецЕсли
-		ИначеЕсли НЕ(Response.Свойства().Получить("getStockEntryByGuidResponse") = Неопределено) Тогда			
-			seList = Response.getStockEntryByGuidResponse.stockEntry;	
-		Иначе
-			СообщитьИнфо("В партия получили не обработанные ветки -> "+Response.Свойства().Получить(0));
-			Возврат Партия;
-		КонецЕсли;
+			КонецЕсли;
 
-	Исключение
-		СообщитьИнфо(ОписаниеОшибки());
-		Возврат Партия;
-	КонецПопытки;
-	
-	УдалятьПартии = Ложь;
-	Если Параметры.Свойство("УдалятьПартии", УдалятьПартии) Тогда 
-		Если УдалятьПартии Тогда 
-			УдалитьПартии( Параметры );
-		КонецЕсли;
-	КонецЕсли;
-	
-	Если ТипЗнч(seList)<>Тип("СписокXDTO") Тогда 
-		stockEntryList = Новый Массив;
-		stockEntryList.Добавить(seList);
-	Иначе
-		stockEntryList = seList;
-	КонецЕсли;
-	Для каждого stockEntry ИЗ stockEntryList Цикл		
+		Исключение
+			СообщитьИнфо(ОписаниеОшибки());
+			Возврат Партия;
+		КонецПопытки;
 		
-		Партия = Партия_Заполнить( Параметры, stockEntry);
-					
-	КонецЦикла;
-	
-	Если ПришлоПартий = 1000 Тогда
-		Если ЗначениеЗаполнено(Параметры["Смещение"]) Тогда 
-			Параметры["Смещение"] = Параметры["Смещение"]+1000;
-		Иначе
-			Параметры["Смещение"] = 1000;
+		УдалятьПартии = Ложь;
+		Если Параметры.Свойство("УдалятьПартии", УдалятьПартии) Тогда 
+			Если УдалятьПартии Тогда 
+				УдалитьПартии( Параметры );
+			КонецЕсли;
 		КонецЕсли;
-		Параметры["УдалятьПартии"]=Ложь;
-		Партии2_Запрос_Отправить( Параметры );	
+		
+		Если ТипЗнч(seList)<>Тип("СписокXDTO") Тогда 
+			stockEntryList = Новый Массив;
+			stockEntryList.Добавить(seList);
+		Иначе
+			stockEntryList = seList;
+		КонецЕсли;
+		Для каждого stockEntry ИЗ stockEntryList Цикл		
+			
+			Партия = Партия_Заполнить( Параметры, stockEntry);
+						
+		КонецЦикла;
+		
+		Если ПришлоПартий = 1000 Тогда
+			Если ЗначениеЗаполнено(Параметры["Смещение"]) Тогда 
+				Параметры["Смещение"] = Параметры["Смещение"]+1000;
+			Иначе
+				Параметры["Смещение"] = 1000;
+			КонецЕсли;
+			Параметры["УдалятьПартии"]=Ложь;
+			Партии2_Запрос_Отправить( Параметры );	
+		КонецЕсли;
 	КонецЕсли;
 	
 	СообщитьИнфо("Загружено "+ПришлоПартий+" партий");
