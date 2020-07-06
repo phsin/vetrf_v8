@@ -102,6 +102,9 @@
 							<DataPath>Объект.ВыбДокПроизводства</DataPath>
 							<ContextMenu name="ВыбДокПроизводстваКонтекстноеМеню" id="86"/>
 							<ExtendedTooltip name="ВыбДокПроизводстваРасширеннаяПодсказка" id="87"/>
+							<Events>
+								<Event name="OnChange">ВыбДокПроизводстваПриИзменении</Event>
+							</Events>
 						</InputField>
 						<CheckBoxField name="ОтправлятьВФоне" id="80">
 							<DataPath>Объект.ОтправлятьВФоне</DataPath>
