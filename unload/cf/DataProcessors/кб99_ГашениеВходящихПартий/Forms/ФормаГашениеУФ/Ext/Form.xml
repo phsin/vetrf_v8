@@ -93,16 +93,37 @@
 				</Picture>
 				<ExtendedTooltip name="ФормакнСписатьПартииРасширеннаяПодсказка" id="671"/>
 			</Button>
-			<Button name="ФормаОбновитьТраспорт" id="679">
-				<Type>CommandBarButton</Type>
-				<Representation>PictureAndText</Representation>
-				<CommandName>Form.Command.ОбновитьТраспорт</CommandName>
+			<Popup name="ОбновитьТранспорт" id="679">
+				<Title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Обновить транспорт</v8:content>
+					</v8:item>
+				</Title>
+				<ToolTip>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Указать номер транспорта в точке перегрузки.</v8:content>
+					</v8:item>
+				</ToolTip>
 				<Picture>
 					<xr:Ref>CommonPicture.кб99_Car</xr:Ref>
 					<xr:LoadTransparent>true</xr:LoadTransparent>
 				</Picture>
-				<ExtendedTooltip name="ФормаОбновитьТраспортРасширеннаяПодсказка" id="680"/>
-			</Button>
+				<ExtendedTooltip name="ОбновитьТранспортРасширеннаяПодсказка" id="680"/>
+				<ChildItems>
+					<Button name="ФормаУказатьНомерАвто" id="684">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.УказатьНомерАвто</CommandName>
+						<ExtendedTooltip name="ФормаУказатьНомерАвтоРасширеннаяПодсказка" id="685"/>
+					</Button>
+					<Button name="ФормакнОтправитьДокВсдИзменитьНомерАвто" id="686">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.кнОтправитьДокВсдИзменитьНомерАвто</CommandName>
+						<ExtendedTooltip name="ФормакнОтправитьДокВсдИзменитьНомерАвтоРасширеннаяПодсказка" id="687"/>
+					</Button>
+				</ChildItems>
+			</Popup>
 		</ChildItems>
 	</AutoCommandBar>
 	<Events>
@@ -531,6 +552,12 @@
 									<Width>10</Width>
 									<ContextMenu name="ВСДВходящиеномеравтоКонтекстноеМеню" id="173"/>
 									<ExtendedTooltip name="ВСДВходящиеномеравтоРасширеннаяПодсказка" id="174"/>
+								</InputField>
+								<InputField name="ВСДВходящиеДокОбновитьТранспорт" id="681">
+									<DataPath>Объект.ВСДВходящие.ДокОбновитьТранспорт</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ВСДВходящиеДокОбновитьТранспортКонтекстноеМеню" id="682"/>
+									<ExtendedTooltip name="ВСДВходящиеДокОбновитьТранспортРасширеннаяПодсказка" id="683"/>
 								</InputField>
 								<InputField name="ВСДВходящиеuuid" id="76">
 									<DataPath>Объект.ВСДВходящие.uuid</DataPath>
@@ -1665,20 +1692,43 @@
 			</ToolTip>
 			<Action>кнПолучитьВсдПоВсемПлощадкам</Action>
 		</Command>
-		<Command name="ОбновитьТраспорт" id="18">
+		<Command name="УказатьНомерАвто" id="19">
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Обновить траспорт</v8:content>
+					<v8:content>Указать номер автомобиля</v8:content>
 				</v8:item>
 			</Title>
 			<ToolTip>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Обновить траспорт</v8:content>
+					<v8:content>Указать номер авто</v8:content>
 				</v8:item>
 			</ToolTip>
-			<Action>ОбновитьТраспорт</Action>
+			<Picture>
+				<xr:Ref>CommonPicture.kb99_plus_black</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>УказатьНомерАвто</Action>
+		</Command>
+		<Command name="кнОтправитьДокВсдИзменитьНомерАвто" id="18">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отправить</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отправить в ГИС Меркурий данные об автомобиле</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>CommonPicture.кб99_send</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>кнОтправитьДокВсдИзменитьНомерАвто</Action>
 		</Command>
 	</Commands>
 </Form>
