@@ -183,6 +183,7 @@
 			<CommonModule>кб99_РегламентныеЗадания</CommonModule>
 			<ScheduledJob>кб99_ВСД_УдалитьЗапросы</ScheduledJob>
 			<ScheduledJob>кб99_ВСД_УдалитьЗапросы_XML</ScheduledJob>
+			<ScheduledJob>кб99_ПолучитьАктуальныеПартии</ScheduledJob>
 			<CommonCommand>ВСД_ОтправитьВСД</CommonCommand>
 			<CommonCommand>ВСД_ПлощадкиЗагрузитьПоНазванию</CommonCommand>
 			<CommonCommand>ВСД_ПечатьВСДСокращенный</CommonCommand>
@@ -203,7 +204,7 @@
 			<CommandGroup>Печать</CommandGroup>
 			<CommandGroup>ВСД_ГруппаКоманд</CommandGroup>
 			<CommonForm>кб99_ФормаТермическиеУсловия</CommonForm>
-			<CommonForm>кб99_РегламентноеЗаданиеПоОчисткеЛогов</CommonForm>
+			<CommonForm>кб99_РегламентныеЗадания</CommonForm>
 			<Catalog>Контрагенты</Catalog>
 			<Catalog>Номенклатура</Catalog>
 			<Catalog>ВСД_Площадка</Catalog>
@@ -241,11 +242,12 @@
 			<DocumentJournal>кб99_ЖурналВСД</DocumentJournal>
 			<Enum>кб99_РезультатИсследования</Enum>
 			<Enum>кб99_УровниУпаковки</Enum>
-			<Enum>кб99_ТермическиеУсловияПеревозки</Enum>
 			<Enum>кб99_Маркировка</Enum>
 			<Enum>кб99_ТипыТранспорта</Enum>
 			<Enum>кб99_СтатусВСД</Enum>
 			<Enum>кб99_СтатусЗапроса</Enum>
+			<Enum>кб99_ТермическиеУсловияПеревозки</Enum>
+			<Enum>кб99_ВидПроисхожденияНепищевойПродукции</Enum>
 			<Report>кб99_Отчет_СравнениеОстатковПартий</Report>
 			<DataProcessor>Интеграция_ГИС_Меркурий</DataProcessor>
 			<DataProcessor>кб99_ЛабИсследования</DataProcessor>

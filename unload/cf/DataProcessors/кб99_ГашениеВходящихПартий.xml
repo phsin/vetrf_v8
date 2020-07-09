@@ -607,7 +607,7 @@
 							<Synonym>
 								<v8:item>
 									<v8:lang>ru</v8:lang>
-									<v8:content>ВСДДата</v8:content>
+									<v8:content>Дата ВСД</v8:content>
 								</v8:item>
 							</Synonym>
 							<Comment/>
@@ -909,7 +909,7 @@
 							<Synonym>
 								<v8:item>
 									<v8:lang>ru</v8:lang>
-									<v8:content>Номеравто</v8:content>
+									<v8:content>Номер авто</v8:content>
 								</v8:item>
 							</Synonym>
 							<Comment/>
@@ -1809,6 +1809,42 @@
 							<Comment/>
 							<Type>
 								<v8:Type>cfg:CatalogRef.ВСД_Площадка</v8:Type>
+							</Type>
+							<PasswordMode>false</PasswordMode>
+							<Format/>
+							<EditFormat/>
+							<ToolTip/>
+							<MarkNegatives>false</MarkNegatives>
+							<Mask/>
+							<MultiLine>false</MultiLine>
+							<ExtendedEdit>false</ExtendedEdit>
+							<MinValue xsi:nil="true"/>
+							<MaxValue xsi:nil="true"/>
+							<FillFromFillingValue>false</FillFromFillingValue>
+							<FillValue xsi:nil="true"/>
+							<FillChecking>DontCheck</FillChecking>
+							<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+							<ChoiceParameterLinks/>
+							<ChoiceParameters/>
+							<QuickChoice>Auto</QuickChoice>
+							<CreateOnInput>Auto</CreateOnInput>
+							<ChoiceForm/>
+							<LinkByType/>
+							<ChoiceHistoryOnInput>Auto</ChoiceHistoryOnInput>
+						</Properties>
+					</Attribute>
+					<Attribute uuid="bc321139-18d6-4987-ad6c-f4c32067a812">
+						<Properties>
+							<Name>ДокОбновитьТранспорт</Name>
+							<Synonym>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Док. Обновить транспорт</v8:content>
+								</v8:item>
+							</Synonym>
+							<Comment/>
+							<Type>
+								<v8:Type>cfg:DocumentRef.ВСД2_ОбновитьТранспорт</v8:Type>
 							</Type>
 							<PasswordMode>false</PasswordMode>
 							<Format/>
