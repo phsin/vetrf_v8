@@ -63,16 +63,42 @@
 					</Button>
 				</ChildItems>
 			</Popup>
-			<Button name="кнПогасить" id="267">
-				<Type>CommandBarButton</Type>
-				<Representation>PictureAndText</Representation>
-				<CommandName>Form.Command.кнПогасить</CommandName>
+			<Popup name="Погасить" id="688">
+				<Title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Погасить</v8:content>
+					</v8:item>
+				</Title>
+				<ToolTip>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Погасить</v8:content>
+					</v8:item>
+				</ToolTip>
 				<Picture>
-					<xr:Abs>Picture.svg</xr:Abs>
-					<xr:LoadTransparent>false</xr:LoadTransparent>
+					<xr:Ref>CommonPicture.кб99_check</xr:Ref>
+					<xr:LoadTransparent>true</xr:LoadTransparent>
 				</Picture>
-				<ExtendedTooltip name="кнПогаситьРасширеннаяПодсказка" id="268"/>
-			</Button>
+				<ExtendedTooltip name="ПогаситьРасширеннаяПодсказка" id="689"/>
+				<ChildItems>
+					<Button name="кнПогасить" id="267">
+						<Type>CommandBarButton</Type>
+						<Representation>PictureAndText</Representation>
+						<CommandName>Form.Command.кнПогасить</CommandName>
+						<Picture>
+							<xr:Ref>CommonPicture.кб99_send_o</xr:Ref>
+							<xr:LoadTransparent>false</xr:LoadTransparent>
+						</Picture>
+						<ExtendedTooltip name="кнПогаситьРасширеннаяПодсказка" id="268"/>
+					</Button>
+					<Button name="ФормакнПогаситьПараллельно" id="690">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.кнПогаситьПараллельно</CommandName>
+						<ExtendedTooltip name="ФормакнПогаситьПараллельноРасширеннаяПодсказка" id="691"/>
+					</Button>
+				</ChildItems>
+			</Popup>
 			<Button name="кнПереместить" id="630">
 				<Type>CommandBarButton</Type>
 				<Representation>PictureAndText</Representation>
@@ -1475,7 +1501,7 @@
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Погасить</v8:content>
+					<v8:content>Погасить последовательно</v8:content>
 				</v8:item>
 			</Title>
 			<ToolTip>
@@ -1729,6 +1755,25 @@
 				<xr:LoadTransparent>true</xr:LoadTransparent>
 			</Picture>
 			<Action>кнОтправитьДокВсдИзменитьНомерАвто</Action>
+		</Command>
+		<Command name="кнПогаситьПараллельно" id="20">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Погасить быстро (пакетное гашение)</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Быстрое гашение большого количества ВСД.</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>CommonPicture.кб99_send</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>кнПогаситьПараллельно</Action>
 		</Command>
 	</Commands>
 </Form>
