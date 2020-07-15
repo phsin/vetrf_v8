@@ -2310,13 +2310,13 @@
 Функция ЗагрузитьСтраны_ЗапросXML( )
 	Запрос = "
 	|<soapenv:Envelope xmlns:soapenv='http://schemas.xmlsoap.org/soap/envelope/' 
-	|                  xmlns:ws='http://api.vetrf.ru/schema/cdm/ikar/ws-definitions' 
+	|                  xmlns:ws='http://api.vetrf.ru/schema/cdm/registry/ws-definitions/v2' 
 	|                  xmlns:base='http://api.vetrf.ru/schema/cdm/base'>
 	|  <soapenv:Header/>
 	|  <soapenv:Body>
 	|    <ws:getAllCountryListRequest>
 	|      <base:listOptions>
-	|        <base:count>10</base:count>
+	|        <base:count>1000</base:count>
 	|        <base:offset>0</base:offset>
 	|      </base:listOptions>
 	|    </ws:getAllCountryListRequest>
@@ -2346,7 +2346,7 @@
 	
 	СообщитьИнфо("Запрос GetAllCountryList ");		
 	ЗапросXML = ЗагрузитьСтраны_ЗапросXML();
-    Service = "platform/ikar/services/IkarService";
+    Service = "platform/services/2.1/IkarService";
     Action = "GetAllCountryList";
 
 	ПараметрыОтправки = кб99_ВСД_Отправка.ПараметрыОтправкиИнициализация( Параметры );
@@ -2456,9 +2456,9 @@
 
 Функция ЗагрузитьРегионы_ЗапросXML( guid )
 	Запрос = "<soapenv:Envelope xmlns:soapenv='http://schemas.xmlsoap.org/soap/envelope/'
-	|xmlns:ws='http://api.vetrf.ru/schema/cdm/ikar/ws-definitions'
+	|xmlns:ws='http://api.vetrf.ru/schema/cdm/registry/ws-definitions/v2'
 	|xmlns:base='http://api.vetrf.ru/schema/cdm/base'
-	|xmlns:ikar='http://api.vetrf.ru/schema/cdm/ikar'>
+	|xmlns:ikar='http://api.vetrf.ru/schema/cdm/dictionary/v2'>
 	|<soapenv:Header/>
 	|<soapenv:Body>
 	|<ws:getRegionListByCountryRequest>
@@ -2495,7 +2495,7 @@
 		
 	СообщитьИнфо("Запрос RegionListByCountry ["+СокрЛП(_Страна.GUID) +"]");		
 	ЗапросXML = ЗагрузитьРегионы_ЗапросXML( _Страна.GUID );
-    Service = "platform/ikar/services/IkarService";
+    Service = "platform/services/2.1/IkarService";
     Action = "RegionListByCountry";
 
 	ПараметрыОтправки = кб99_ВСД_Отправка.ПараметрыОтправкиИнициализация( Параметры );
@@ -2602,9 +2602,9 @@
 
 Функция ЗагрузитьГорода_ЗапросXML( guid )
 	Запрос = "<soapenv:Envelope xmlns:soapenv='http://schemas.xmlsoap.org/soap/envelope/'
-	|xmlns:ws='http://api.vetrf.ru/schema/cdm/ikar/ws-definitions'
+	|xmlns:ws='http://api.vetrf.ru/schema/cdm/registry/ws-definitions/v2'
 	|xmlns:base='http://api.vetrf.ru/schema/cdm/base'
-	|xmlns:ikar='http://api.vetrf.ru/schema/cdm/ikar'>
+	|xmlns:ikar='http://api.vetrf.ru/schema/cdm/dictionary/v2'>
 	|<soapenv:Header/>
 	|<soapenv:Body>
 	|<ws:getLocalityListByRegionRequest>
@@ -2644,7 +2644,7 @@
 	
 	СообщитьИнфо(" Запрос GetLocalityListByRegion "+_Регион+" ["+СокрЛП(_Регион.GUID) +"]");		
 	ЗапросXML = ЗагрузитьГорода_ЗапросXML( _Регион.GUID );
-    Service = "platform/ikar/services/IkarService";
+    Service = "platform/services/2.1/IkarService";
     Action = "GetLocalityListByRegion";
 
 	ПараметрыОтправки = кб99_ВСД_Отправка.ПараметрыОтправкиИнициализация( Параметры );
@@ -2718,9 +2718,9 @@
 #Область  Районы
 Функция ЗагрузитьРайоны_ЗапросXML( guid )
 	Запрос = "<soapenv:Envelope xmlns:soapenv='http://schemas.xmlsoap.org/soap/envelope/'
-	|xmlns:ws='http://api.vetrf.ru/schema/cdm/ikar/ws-definitions'
+	|xmlns:ws='http://api.vetrf.ru/schema/cdm/registry/ws-definitions/v2'
 	|xmlns:base='http://api.vetrf.ru/schema/cdm/base'
-	|xmlns:ikar='http://api.vetrf.ru/schema/cdm/ikar'>
+	|xmlns:ikar='http://api.vetrf.ru/schema/cdm/dictionary/v2'>
 	|<soapenv:Header/>
 	|<soapenv:Body>
 	|<ws:getDistrictListByRegionRequest>
@@ -2762,7 +2762,7 @@
 	СообщитьИнфо(" Запрос GetDistrictListByRegion "+_Регион+" ["+СокрЛП(_Регион.GUID) +"]");
 
 	ЗапросXML = ЗагрузитьРайоны_ЗапросXML( _Регион.GUID );	
-    Service = "platform/ikar/services/IkarService";
+    Service = "platform/services/2.1/IkarService";
     Action = "GetDistrictListByRegion";
 
 	ПараметрыОтправки = кб99_ВСД_Отправка.ПараметрыОтправкиИнициализация( Параметры );
@@ -2839,9 +2839,9 @@
 Функция Список_Улиц_ЗапросXML( guid )
 
 	Запрос = "<SOAP-ENV:Envelope xmlns:SOAP-ENV='http://schemas.xmlsoap.org/soap/envelope/'
-	|xmlns:ws='http://api.vetrf.ru/schema/cdm/ikar/ws-definitions'
+	|xmlns:ws='http://api.vetrf.ru/schema/cdm/registry/ws-definitions/v2'
 	|xmlns:base='http://api.vetrf.ru/schema/cdm/base'
-	|xmlns:ikar='http://api.vetrf.ru/schema/cdm/ikar'>
+	|xmlns:ikar='http://api.vetrf.ru/schema/cdm/dictionary/v2'>
 	|<SOAP-ENV:Header/>
 	|<SOAP-ENV:Body>
 	|<ws:getStreetListByLocalityRequest>
@@ -2856,6 +2856,7 @@
 	|";
 
 	Возврат Запрос;
+	
 КонецФункции
 
 Процедура ИнициализацияХС_ЗагрузитьУлицы_ВФоне( Знач Параметры, АдресХранилища ) Экспорт
@@ -2883,7 +2884,7 @@
 	
 	СообщитьИнфо(" Запрос GetStreetListByLocality "+_Город+" ["+СокрЛП(_Город.GUID) +"]");		
 	ЗапросXML = Список_Улиц_ЗапросXML( _Город.GUID );
-    Service = "platform/ikar/services/IkarService";
+    Service = "platform/services/2.1/IkarService";
     Action = "GetStreetListByLocality";
 
 	ПараметрыОтправки = кб99_ВСД_Отправка.ПараметрыОтправкиИнициализация( Параметры );
