@@ -2310,13 +2310,13 @@
 Функция ЗагрузитьСтраны_ЗапросXML( )
 	Запрос = "
 	|<soapenv:Envelope xmlns:soapenv='http://schemas.xmlsoap.org/soap/envelope/' 
-	|                  xmlns:ws='http://api.vetrf.ru/schema/cdm/ikar/ws-definitions' 
+	|                  xmlns:ws='http://api.vetrf.ru/schema/cdm/registry/ws-definitions/v2' 
 	|                  xmlns:base='http://api.vetrf.ru/schema/cdm/base'>
 	|  <soapenv:Header/>
 	|  <soapenv:Body>
 	|    <ws:getAllCountryListRequest>
 	|      <base:listOptions>
-	|        <base:count>10</base:count>
+	|        <base:count>1000</base:count>
 	|        <base:offset>0</base:offset>
 	|      </base:listOptions>
 	|    </ws:getAllCountryListRequest>
@@ -2346,7 +2346,7 @@
 	
 	СообщитьИнфо("Запрос GetAllCountryList ");		
 	ЗапросXML = ЗагрузитьСтраны_ЗапросXML();
-    Service = "platform/ikar/services/IkarService";
+    Service = "platform/services/2.1/IkarService";
     Action = "GetAllCountryList";
 
 	ПараметрыОтправки = кб99_ВСД_Отправка.ПараметрыОтправкиИнициализация( Параметры );
@@ -2456,9 +2456,9 @@
 
 Функция ЗагрузитьРегионы_ЗапросXML( guid )
 	Запрос = "<soapenv:Envelope xmlns:soapenv='http://schemas.xmlsoap.org/soap/envelope/'
-	|xmlns:ws='http://api.vetrf.ru/schema/cdm/ikar/ws-definitions'
+	|xmlns:ws='http://api.vetrf.ru/schema/cdm/registry/ws-definitions/v2'
 	|xmlns:base='http://api.vetrf.ru/schema/cdm/base'
-	|xmlns:ikar='http://api.vetrf.ru/schema/cdm/ikar'>
+	|xmlns:ikar='http://api.vetrf.ru/schema/cdm/dictionary/v2'>
 	|<soapenv:Header/>
 	|<soapenv:Body>
 	|<ws:getRegionListByCountryRequest>
@@ -2495,7 +2495,7 @@
 		
 	СообщитьИнфо("Запрос RegionListByCountry ["+СокрЛП(_Страна.GUID) +"]");		
 	ЗапросXML = ЗагрузитьРегионы_ЗапросXML( _Страна.GUID );
-    Service = "platform/ikar/services/IkarService";
+    Service = "platform/services/2.1/IkarService";
     Action = "RegionListByCountry";
 
 	ПараметрыОтправки = кб99_ВСД_Отправка.ПараметрыОтправкиИнициализация( Параметры );
@@ -2602,9 +2602,9 @@
 
 Функция ЗагрузитьГорода_ЗапросXML( guid )
 	Запрос = "<soapenv:Envelope xmlns:soapenv='http://schemas.xmlsoap.org/soap/envelope/'
-	|xmlns:ws='http://api.vetrf.ru/schema/cdm/ikar/ws-definitions'
+	|xmlns:ws='http://api.vetrf.ru/schema/cdm/registry/ws-definitions/v2'
 	|xmlns:base='http://api.vetrf.ru/schema/cdm/base'
-	|xmlns:ikar='http://api.vetrf.ru/schema/cdm/ikar'>
+	|xmlns:ikar='http://api.vetrf.ru/schema/cdm/dictionary/v2'>
 	|<soapenv:Header/>
 	|<soapenv:Body>
 	|<ws:getLocalityListByRegionRequest>
@@ -2644,7 +2644,7 @@
 	
 	СообщитьИнфо(" Запрос GetLocalityListByRegion "+_Регион+" ["+СокрЛП(_Регион.GUID) +"]");		
 	ЗапросXML = ЗагрузитьГорода_ЗапросXML( _Регион.GUID );
-    Service = "platform/ikar/services/IkarService";
+    Service = "platform/services/2.1/IkarService";
     Action = "GetLocalityListByRegion";
 
 	ПараметрыОтправки = кб99_ВСД_Отправка.ПараметрыОтправкиИнициализация( Параметры );
@@ -2718,9 +2718,9 @@
 #Область  Районы
 Функция ЗагрузитьРайоны_ЗапросXML( guid )
 	Запрос = "<soapenv:Envelope xmlns:soapenv='http://schemas.xmlsoap.org/soap/envelope/'
-	|xmlns:ws='http://api.vetrf.ru/schema/cdm/ikar/ws-definitions'
+	|xmlns:ws='http://api.vetrf.ru/schema/cdm/registry/ws-definitions/v2'
 	|xmlns:base='http://api.vetrf.ru/schema/cdm/base'
-	|xmlns:ikar='http://api.vetrf.ru/schema/cdm/ikar'>
+	|xmlns:ikar='http://api.vetrf.ru/schema/cdm/dictionary/v2'>
 	|<soapenv:Header/>
 	|<soapenv:Body>
 	|<ws:getDistrictListByRegionRequest>
@@ -2762,7 +2762,7 @@
 	СообщитьИнфо(" Запрос GetDistrictListByRegion "+_Регион+" ["+СокрЛП(_Регион.GUID) +"]");
 
 	ЗапросXML = ЗагрузитьРайоны_ЗапросXML( _Регион.GUID );	
-    Service = "platform/ikar/services/IkarService";
+    Service = "platform/services/2.1/IkarService";
     Action = "GetDistrictListByRegion";
 
 	ПараметрыОтправки = кб99_ВСД_Отправка.ПараметрыОтправкиИнициализация( Параметры );
@@ -2839,9 +2839,9 @@
 Функция Список_Улиц_ЗапросXML( guid )
 
 	Запрос = "<SOAP-ENV:Envelope xmlns:SOAP-ENV='http://schemas.xmlsoap.org/soap/envelope/'
-	|xmlns:ws='http://api.vetrf.ru/schema/cdm/ikar/ws-definitions'
+	|xmlns:ws='http://api.vetrf.ru/schema/cdm/registry/ws-definitions/v2'
 	|xmlns:base='http://api.vetrf.ru/schema/cdm/base'
-	|xmlns:ikar='http://api.vetrf.ru/schema/cdm/ikar'>
+	|xmlns:ikar='http://api.vetrf.ru/schema/cdm/dictionary/v2'>
 	|<SOAP-ENV:Header/>
 	|<SOAP-ENV:Body>
 	|<ws:getStreetListByLocalityRequest>
@@ -2856,6 +2856,7 @@
 	|";
 
 	Возврат Запрос;
+	
 КонецФункции
 
 Процедура ИнициализацияХС_ЗагрузитьУлицы_ВФоне( Знач Параметры, АдресХранилища ) Экспорт
@@ -2883,7 +2884,7 @@
 	
 	СообщитьИнфо(" Запрос GetStreetListByLocality "+_Город+" ["+СокрЛП(_Город.GUID) +"]");		
 	ЗапросXML = Список_Улиц_ЗапросXML( _Город.GUID );
-    Service = "platform/ikar/services/IkarService";
+    Service = "platform/services/2.1/IkarService";
     Action = "GetStreetListByLocality";
 
 	ПараметрыОтправки = кб99_ВСД_Отправка.ПараметрыОтправкиИнициализация( Параметры );
@@ -5450,6 +5451,12 @@
 //Функция ПолучитьСписокВСД2_ЗапросXML( Параметры, ПолучательПлощадка, vetDocumentType, vetDocumentStatus, Смещение, ПоступилиС, ПоступилиПо, ОтправительХозСубъект, ОтправительПлощадка)
 Функция ПолучитьСписокВСД2_ЗапросXML( Параметры, ПараметрыЗапроса )
 	
+	Если ЗначениеЗаполнено( ПараметрыЗапроса["Смещение"] ) Тогда 
+		Смещение = ПараметрыЗапроса["Смещение"];
+	Иначе
+		Смещение = 0;
+	КонецЕсли;
+	
 	Запрос = "<SOAP-ENV:Envelope xmlns:dt='http://api.vetrf.ru/schema/cdm/dictionary/v2'
 	|xmlns:bs='http://api.vetrf.ru/schema/cdm/base'
 	|xmlns:merc='http://api.vetrf.ru/schema/cdm/mercury/g2b/applications/v2'
@@ -5472,13 +5479,8 @@
 	|<vd:login>"+ СокрЛП( Параметры["param_intiator_login"] ) +"</vd:login>
 	|</merc:initiator>
 	|<bs:listOptions>
-	|<bs:count>1000</bs:count>";
-	
-	Если НЕ Параметры.Свойство("Смещение") Тогда 
-		Запрос = Запрос +"
-	|<bs:offset>"+Формат( Параметры["Смещение"], "ЧДЦ=0; ЧН=0; ЧГ=" )+"</bs:offset>";
-	КонецЕсли;
-	Запрос = Запрос +"
+	|<bs:count>1000</bs:count>
+	|<bs:offset>"+Формат( Смещение, "ЧДЦ=0; ЧН=0; ЧГ=" )+"</bs:offset>
 	|</bs:listOptions>
 	|<vd:vetDocumentType>"+ ПараметрыЗапроса["vetDocumentType"] +"</vd:vetDocumentType>
 	|<vd:vetDocumentStatus>"+ ПараметрыЗапроса["vetDocumentStatus"] +"</vd:vetDocumentStatus>";
@@ -5521,6 +5523,7 @@
 	|";
 	
 	Возврат Запрос;
+
 КонецФункции
 
 //Функция  ПолучитьСписокВСД( Знач Параметры, ПолучательПлощадка, vetDocumentType = "INCOMING", vetDocumentStatus = "CONFIRMED", Смещение, 
@@ -5548,10 +5551,10 @@
 	
 	appID = кб99_ВСД_Отправка.Получить_ApplicationID( xdto );
 
-	Ответ =  ПолучитьРезультат_ВСД2( Параметры, appID, , Истина, ВсдРезультат );	
+	Ответ =  ПолучитьРезультат_ВСД2( Параметры, ПараметрыЗапроса, appID, , Истина, ВсдРезультат );	
 	Для А=1 По 10 Цикл
 		Если (Ответ="IN_PROCESS") Тогда
-			Ответ =  ПолучитьРезультат_ВСД2( Параметры, appID, , Истина, ВсдРезультат );	
+			Ответ =  ПолучитьРезультат_ВСД2( Параметры, ПараметрыЗапроса, appID, , Истина, ВсдРезультат );	
 		КонецЕсли;
 	КонецЦикла;
 	
@@ -5622,10 +5625,10 @@
 		
 		appID = кб99_ВСД_Отправка.Получить_ApplicationID( xdto );
 
-		Ответ =  ПолучитьРезультат_ВСД2( Параметры, appID );	
+		Ответ =  ПолучитьРезультат_ВСД2( Параметры,, appID );	
 		Для А=1 По 10 Цикл
 			Если (Ответ="IN_PROCESS") Тогда
-				Ответ =  ПолучитьРезультат_ВСД2( Параметры, appID );	
+				Ответ =  ПолучитьРезультат_ВСД2( Параметры,, appID );	
 			КонецЕсли;
 		КонецЦикла;
 		
@@ -6016,7 +6019,7 @@
 
 
 // тзВсдРезультат = возвращает результат ИЗ Меркурия Для гашения
-Функция ПолучитьРезультат_ВСД2( Параметры, appID, докСсылка = Неопределено, СделатьПаузу = Истина, тзВсдРезультат = Неопределено ) Экспорт
+Функция ПолучитьРезультат_ВСД2( Параметры, ПараметрыЗапроса = Неопределено, appID, докСсылка = Неопределено, СделатьПаузу = Истина, тзВсдРезультат = Неопределено ) Экспорт
 	
 	Если ПустаяСтрока(appID) Тогда
 		СообщитьИнфо("Пустая ссылка applicationID");
@@ -6033,6 +6036,12 @@
 	Если НайтиОшибки(xdto, докСсылка) Тогда
 		Возврат Статус;
 	КонецЕсли;
+	
+	Попытка 
+		ПришлоВСД = Число(xdto.Body.receiveApplicationResultResponse.application.result.getVetDocumentListResponse.VetDocumentList.count); 
+	Исключение 
+		ПришлоВСД = 1; 
+	КонецПопытки;
 	
 	Если Статус = "COMPLETED" Тогда 
 		НачатьТранзакцию();
@@ -6057,7 +6066,19 @@
 		КонецПопытки;
 	КонецЕсли;
 	
+	Если ПараметрыЗапроса <> Неопределено Тогда 
+		Если ПришлоВСД = 1000 Тогда
+			Если ЗначениеЗаполнено(ПараметрыЗапроса["Смещение"]) Тогда 
+				ПараметрыЗапроса["Смещение"] = ПараметрыЗапроса["Смещение"]+1000;
+			Иначе
+				ПараметрыЗапроса["Смещение"] = 1000;
+			КонецЕсли;
+			ПолучитьСписокВСД( Параметры, ПараметрыЗапроса );	
+		КонецЕсли;
+	КонецЕсли;
+	
 	Возврат Статус;
+	
 КонецФункции
 
 Функция ЗагрузитьXML_Партии2(Параметры, xdto, докСсылка = Неопределено ) 
@@ -8325,7 +8346,7 @@
    	Если (Параметры["флАктНесоответствия"]) ИЛИ Не(ДокСсылка.Количество = (ДокСсылка.КоличествоПринять + ДокСсылка.КоличествоВозврат)) Тогда
 	Запрос = Запрос+"
 	|<merc:discrepancyReport>
-	|<vd:issueDate>"+ ?(ЗначениеЗаполнено(ДатаXML(ДокСсылка.ТтнДата)),ДатаXML(ДокСсылка.ТтнДата),ДатаXML(ДокСсылка.Дата)) +"</vd:issueDate>
+	|<vd:issueDate>"+ ?(ЗначениеЗаполнено(ДатаXML(ДокСсылка.ТтнДата)),ДатаXML(ДокСсылка.ТтнДата),ДатаXML(ДокСсылка.ВсдДата)) +"</vd:issueDate>
 	|<vd:reason>
 	|<vd:name>"+?(ЗначениеЗаполнено(СокрЛП( Параметры["тПричинаАкта"] )),СокрЛП( Параметры["тПричинаАкта"] ),"несоответствие")+"</vd:name>
 	|</vd:reason>
