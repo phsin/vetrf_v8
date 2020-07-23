@@ -316,6 +316,14 @@
 											</Title>
 											<ExtendedTooltip name="кнВыбратьПериодВСДРасширеннаяПодсказка" id="373"/>
 										</Button>
+										<InputField name="НомерТТН" id="692">
+											<DataPath>НомерТТН</DataPath>
+											<ContextMenu name="НомерТТНКонтекстноеМеню" id="693"/>
+											<ExtendedTooltip name="НомерТТНРасширеннаяПодсказка" id="694"/>
+											<Events>
+												<Event name="OnChange">НомерТТНПриИзменении</Event>
+											</Events>
+										</InputField>
 									</ChildItems>
 								</UsualGroup>
 							</ChildItems>
@@ -1285,6 +1293,21 @@
 			</Title>
 			<Type>
 				<v8:Type>cfg:CatalogRef.ВСД_Площадка</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="НомерТТН" id="11">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Номер ТТН</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>50</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
 			</Type>
 		</Attribute>
 		<ConditionalAppearance>
