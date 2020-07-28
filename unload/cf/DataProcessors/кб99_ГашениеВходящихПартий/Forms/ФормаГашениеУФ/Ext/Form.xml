@@ -150,6 +150,11 @@
 					</Button>
 				</ChildItems>
 			</Popup>
+			<Button name="ФормакнГашениеСВХ" id="695">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.кнГашениеСВХ</CommandName>
+				<ExtendedTooltip name="ФормакнГашениеСВХРасширеннаяПодсказка" id="696"/>
+			</Button>
 		</ChildItems>
 	</AutoCommandBar>
 	<Events>
@@ -1797,6 +1802,26 @@
 				<xr:LoadTransparent>true</xr:LoadTransparent>
 			</Picture>
 			<Action>кнПогаситьПараллельно</Action>
+		</Command>
+		<Command name="кнГашениеСВХ" id="21">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Гашение СВХ</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Гашение грузов со склада временного хранения</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>CommonPicture.кб99_random</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>кнГашениеСВХ</Action>
+			<Representation>TextPicture</Representation>
 		</Command>
 	</Commands>
 </Form>
