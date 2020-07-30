@@ -1,0 +1,348 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.8">
+	<Title>
+		<v8:item>
+			<v8:lang>ru</v8:lang>
+			<v8:content>кб99 Гашение грузов на СВХ</v8:content>
+		</v8:item>
+	</Title>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<InputField name="ПлощадкаПолучатель" id="65">
+			<DataPath>выбПлощадкаПолучатель</DataPath>
+			<ContextMenu name="ПлощадкаПолучательКонтекстноеМеню" id="66"/>
+			<ExtendedTooltip name="ПлощадкаПолучательРасширеннаяПодсказка" id="67"/>
+		</InputField>
+		<UsualGroup name="ГруппаТЧ" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа ТЧ</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа ТЧ</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>AlwaysHorizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаТЧРасширеннаяПодсказка" id="2"/>
+			<ChildItems>
+				<Table name="ГрузыНаСВХ" id="3">
+					<TitleLocation>Auto</TitleLocation>
+					<CommandBarLocation>None</CommandBarLocation>
+					<AutoInsertNewRow>true</AutoInsertNewRow>
+					<EnableStartDrag>true</EnableStartDrag>
+					<EnableDrag>true</EnableDrag>
+					<DataPath>Объект.ГрузыНаСВХ</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Товары на СВХ</v8:content>
+						</v8:item>
+					</Title>
+					<TitleFont ref="style:NormalTextFont" height="14" kind="StyleItem"/>
+					<RowFilter xsi:nil="true"/>
+					<ContextMenu name="ГрузыНаСВХКонтекстноеМеню" id="4"/>
+					<AutoCommandBar name="ГрузыНаСВХКоманднаяПанель" id="5"/>
+					<ExtendedTooltip name="ГрузыНаСВХРасширеннаяПодсказка" id="6"/>
+					<SearchStringAddition name="ГрузыНаСВХСтрокаПоиска" id="7">
+						<AdditionSource>
+							<Item>ГрузыНаСВХ</Item>
+							<Type>SearchStringRepresentation</Type>
+						</AdditionSource>
+						<ContextMenu name="ГрузыНаСВХСтрокаПоискаКонтекстноеМеню" id="8"/>
+						<ExtendedTooltip name="ГрузыНаСВХСтрокаПоискаРасширеннаяПодсказка" id="9"/>
+					</SearchStringAddition>
+					<ViewStatusAddition name="ГрузыНаСВХСостояниеПросмотра" id="10">
+						<AdditionSource>
+							<Item>ГрузыНаСВХ</Item>
+							<Type>ViewStatusRepresentation</Type>
+						</AdditionSource>
+						<ContextMenu name="ГрузыНаСВХСостояниеПросмотраКонтекстноеМеню" id="11"/>
+						<ExtendedTooltip name="ГрузыНаСВХСостояниеПросмотраРасширеннаяПодсказка" id="12"/>
+					</ViewStatusAddition>
+					<SearchControlAddition name="ГрузыНаСВХУправлениеПоиском" id="13">
+						<AdditionSource>
+							<Item>ГрузыНаСВХ</Item>
+							<Type>SearchControl</Type>
+						</AdditionSource>
+						<ContextMenu name="ГрузыНаСВХУправлениеПоискомКонтекстноеМеню" id="14"/>
+						<ExtendedTooltip name="ГрузыНаСВХУправлениеПоискомРасширеннаяПодсказка" id="15"/>
+					</SearchControlAddition>
+					<Events>
+						<Event name="BeforeDeleteRow">ГрузыНаСВХПередУдалением</Event>
+						<Event name="OnActivateRow">ГрузыНаСВХПриАктивизацииСтроки</Event>
+					</Events>
+					<ChildItems>
+						<LabelField name="ГрузыНаСВХНомерСтроки" id="16">
+							<DataPath>Объект.ГрузыНаСВХ.LineNumber</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ГрузыНаСВХНомерСтрокиКонтекстноеМеню" id="17"/>
+							<ExtendedTooltip name="ГрузыНаСВХНомерСтрокиРасширеннаяПодсказка" id="18"/>
+						</LabelField>
+						<InputField name="ГрузыНаСВХДокВСД" id="19">
+							<DataPath>Объект.ГрузыНаСВХ.ДокВСД</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ГрузыНаСВХДокВСДКонтекстноеМеню" id="20"/>
+							<ExtendedTooltip name="ГрузыНаСВХДокВСДРасширеннаяПодсказка" id="21"/>
+						</InputField>
+						<InputField name="ГрузыНаСВХКоличество" id="22">
+							<DataPath>Объект.ГрузыНаСВХ.Количество</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ГрузыНаСВХКоличествоКонтекстноеМеню" id="23"/>
+							<ExtendedTooltip name="ГрузыНаСВХКоличествоРасширеннаяПодсказка" id="24"/>
+						</InputField>
+						<InputField name="ГрузыНаСВХЕдиницаИзмерения" id="25">
+							<DataPath>Объект.ГрузыНаСВХ.ЕдиницаИзмерения</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ГрузыНаСВХЕдиницаИзмеренияКонтекстноеМеню" id="26"/>
+							<ExtendedTooltip name="ГрузыНаСВХЕдиницаИзмеренияРасширеннаяПодсказка" id="27"/>
+						</InputField>
+					</ChildItems>
+				</Table>
+				<Table name="РаспределеннаяПродукцияНаСВХ" id="31">
+					<TitleLocation>Auto</TitleLocation>
+					<AutoInsertNewRow>true</AutoInsertNewRow>
+					<EnableStartDrag>true</EnableStartDrag>
+					<EnableDrag>true</EnableDrag>
+					<DataPath>Объект.РаспределеннаяПродукцияНаСВХ</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Распределенная продукция</v8:content>
+						</v8:item>
+					</Title>
+					<TitleFont ref="style:NormalTextFont" height="14" kind="StyleItem"/>
+					<RowFilter xsi:nil="true"/>
+					<ContextMenu name="РаспределеннаяПродукцияНаСВХКонтекстноеМеню" id="32"/>
+					<AutoCommandBar name="РаспределеннаяПродукцияНаСВХКоманднаяПанель" id="33">
+						<Autofill>false</Autofill>
+						<ChildItems>
+							<Button name="РаспределеннаяПродукцияНаСВХкнПодбор" id="56">
+								<Type>CommandBarButton</Type>
+								<CommandName>Form.Command.кнПодбор</CommandName>
+								<ExtendedTooltip name="РаспределеннаяПродукцияНаСВХкнПодборРасширеннаяПодсказка" id="57"/>
+							</Button>
+						</ChildItems>
+					</AutoCommandBar>
+					<ExtendedTooltip name="РаспределеннаяПродукцияНаСВХРасширеннаяПодсказка" id="34"/>
+					<SearchStringAddition name="РаспределеннаяПродукцияНаСВХСтрокаПоиска" id="35">
+						<AdditionSource>
+							<Item>РаспределеннаяПродукцияНаСВХ</Item>
+							<Type>SearchStringRepresentation</Type>
+						</AdditionSource>
+						<ContextMenu name="РаспределеннаяПродукцияНаСВХСтрокаПоискаКонтекстноеМеню" id="36"/>
+						<ExtendedTooltip name="РаспределеннаяПродукцияНаСВХСтрокаПоискаРасширеннаяПодсказка" id="37"/>
+					</SearchStringAddition>
+					<ViewStatusAddition name="РаспределеннаяПродукцияНаСВХСостояниеПросмотра" id="38">
+						<AdditionSource>
+							<Item>РаспределеннаяПродукцияНаСВХ</Item>
+							<Type>ViewStatusRepresentation</Type>
+						</AdditionSource>
+						<ContextMenu name="РаспределеннаяПродукцияНаСВХСостояниеПросмотраКонтекстноеМеню" id="39"/>
+						<ExtendedTooltip name="РаспределеннаяПродукцияНаСВХСостояниеПросмотраРасширеннаяПодсказка" id="40"/>
+					</ViewStatusAddition>
+					<SearchControlAddition name="РаспределеннаяПродукцияНаСВХУправлениеПоиском" id="41">
+						<AdditionSource>
+							<Item>РаспределеннаяПродукцияНаСВХ</Item>
+							<Type>SearchControl</Type>
+						</AdditionSource>
+						<ContextMenu name="РаспределеннаяПродукцияНаСВХУправлениеПоискомКонтекстноеМеню" id="42"/>
+						<ExtendedTooltip name="РаспределеннаяПродукцияНаСВХУправлениеПоискомРасширеннаяПодсказка" id="43"/>
+					</SearchControlAddition>
+					<Events>
+						<Event name="ChoiceProcessing">РаспределеннаяПродукцияНаСВХОбработкаВыбора</Event>
+					</Events>
+					<ChildItems>
+						<LabelField name="РаспределеннаяПродукцияНаСВХНомерСтроки" id="44">
+							<DataPath>Объект.РаспределеннаяПродукцияНаСВХ.LineNumber</DataPath>
+							<Visible>false</Visible>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="РаспределеннаяПродукцияНаСВХНомерСтрокиКонтекстноеМеню" id="45"/>
+							<ExtendedTooltip name="РаспределеннаяПродукцияНаСВХНомерСтрокиРасширеннаяПодсказка" id="46"/>
+						</LabelField>
+						<InputField name="РаспределеннаяПродукцияНаСВХПродукция_Элемент" id="47">
+							<DataPath>Объект.РаспределеннаяПродукцияНаСВХ.Продукция_Элемент</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="РаспределеннаяПродукцияНаСВХПродукция_ЭлементКонтекстноеМеню" id="48"/>
+							<ExtendedTooltip name="РаспределеннаяПродукцияНаСВХПродукция_ЭлементРасширеннаяПодсказка" id="49"/>
+						</InputField>
+						<InputField name="РаспределеннаяПродукцияНаСВХКоличество" id="50">
+							<DataPath>Объект.РаспределеннаяПродукцияНаСВХ.Количество</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="РаспределеннаяПродукцияНаСВХКоличествоКонтекстноеМеню" id="51"/>
+							<ExtendedTooltip name="РаспределеннаяПродукцияНаСВХКоличествоРасширеннаяПодсказка" id="52"/>
+							<Events>
+								<Event name="OnChange">РаспределеннаяПродукцияНаСВХКоличествоПриИзменении</Event>
+							</Events>
+						</InputField>
+						<ColumnGroup name="Упаковки" id="70">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Упаковки</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Упаковки</v8:content>
+								</v8:item>
+							</ToolTip>
+							<ExtendedTooltip name="УпаковкиРасширеннаяПодсказка" id="71"/>
+							<ChildItems>
+								<InputField name="РаспределеннаяПродукцияНаСВХФормаУпаковки" id="75">
+									<DataPath>Объект.РаспределеннаяПродукцияНаСВХ.ФормаУпаковки</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="РаспределеннаяПродукцияНаСВХФормаУпаковкиКонтекстноеМеню" id="76"/>
+									<ExtendedTooltip name="РаспределеннаяПродукцияНаСВХФормаУпаковкиРасширеннаяПодсказка" id="77"/>
+								</InputField>
+								<InputField name="РаспределеннаяПродукцияНаСВХНомерУровняУпаковки" id="72">
+									<DataPath>Объект.РаспределеннаяПродукцияНаСВХ.НомерУровняУпаковки</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="РаспределеннаяПродукцияНаСВХНомерУровняУпаковкиКонтекстноеМеню" id="73"/>
+									<ExtendedTooltip name="РаспределеннаяПродукцияНаСВХНомерУровняУпаковкиРасширеннаяПодсказка" id="74"/>
+								</InputField>
+							</ChildItems>
+						</ColumnGroup>
+						<InputField name="РаспределеннаяПродукцияНаСВХКоличествоУпаковок" id="78">
+							<DataPath>Объект.РаспределеннаяПродукцияНаСВХ.КоличествоУпаковок</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="РаспределеннаяПродукцияНаСВХКоличествоУпаковокКонтекстноеМеню" id="79"/>
+							<ExtendedTooltip name="РаспределеннаяПродукцияНаСВХКоличествоУпаковокРасширеннаяПодсказка" id="80"/>
+						</InputField>
+					</ChildItems>
+				</Table>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="Надписи" id="68">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Надписи</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Надписи</v8:content>
+				</v8:item>
+			</ToolTip>
+			<GroupHorizontalAlign>Right</GroupHorizontalAlign>
+			<ChildrenAlign>ItemsRightTitlesRight</ChildrenAlign>
+			<HorizontalAlign>Right</HorizontalAlign>
+			<Representation>None</Representation>
+			<United>false</United>
+			<ShowTitle>false</ShowTitle>
+			<ThroughAlign>DontUse</ThroughAlign>
+			<ExtendedTooltip name="НадписиРасширеннаяПодсказка" id="69"/>
+			<ChildItems>
+				<LabelField name="НадписьОсталосьРаспределить" id="62">
+					<DataPath>НадписьОсталосьРаспределить</DataPath>
+					<ReadOnly>true</ReadOnly>
+					<TitleTextColor>#0000FF</TitleTextColor>
+					<HorizontalAlign>Right</HorizontalAlign>
+					<GroupHorizontalAlign>Right</GroupHorizontalAlign>
+					<TextColor>#0000FF</TextColor>
+					<ContextMenu name="НадписьОсталосьРаспределитьКонтекстноеМеню" id="63"/>
+					<ExtendedTooltip name="НадписьОсталосьРаспределитьРасширеннаяПодсказка" id="64"/>
+				</LabelField>
+			</ChildItems>
+		</UsualGroup>
+		<CommandBar name="ГруппаКнопок" id="58">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа кнопок</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа кнопок</v8:content>
+				</v8:item>
+			</ToolTip>
+			<ExtendedTooltip name="ГруппаКнопокРасширеннаяПодсказка" id="59"/>
+			<ChildItems>
+				<Button name="кнПогасить" id="60">
+					<Type>CommandBarButton</Type>
+					<CommandName>Form.Command.кнГотово</CommandName>
+					<ExtendedTooltip name="кнПогаситьРасширеннаяПодсказка" id="61"/>
+				</Button>
+			</ChildItems>
+		</CommandBar>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DataProcessorObject.кб99_ГашениеВходящихПартий</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+		</Attribute>
+		<Attribute name="НадписьОсталосьРаспределить" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Осталось распределить</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="выбПлощадкаПолучатель" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Площадка получатель</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.ВСД_Площадка</v8:Type>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="кнПодбор" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Подбор</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Кн подбор</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>кнПодбор</Action>
+		</Command>
+		<Command name="кнГотово" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Готово</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Кн готово</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>кнГотово</Action>
+		</Command>
+	</Commands>
+</Form>
