@@ -153,12 +153,81 @@
 						</Picture>
 						<ExtendedTooltip name="СнятьВсеОтметкиРасширеннаяПодсказка" id="91"/>
 					</Button>
+					<Popup name="ГруппаСоздать" id="92">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Создать</v8:content>
+							</v8:item>
+						</Title>
+						<Picture>
+							<xr:Ref>CommonPicture.ЛабИсследования</xr:Ref>
+							<xr:LoadTransparent>true</xr:LoadTransparent>
+						</Picture>
+						<Representation>PictureAndText</Representation>
+						<ExtendedTooltip name="ГруппаСоздатьРасширеннаяПодсказка" id="93"/>
+						<ChildItems>
+							<Button name="ПартииСоздатьЛИ" id="73">
+								<Type>CommandBarButton</Type>
+								<Representation>PictureAndText</Representation>
+								<CommandName>Form.Command.СоздатьЛИ</CommandName>
+								<Picture>
+									<xr:Ref>StdPicture.DataCompositionNewNestedScheme</xr:Ref>
+									<xr:LoadTransparent>true</xr:LoadTransparent>
+								</Picture>
+								<ExtendedTooltip name="ПартииСоздатьЛИРасширеннаяПодсказка" id="74"/>
+							</Button>
+							<Button name="ПартииСоздатьЛабИсследПоСырью" id="83">
+								<Type>CommandBarButton</Type>
+								<Representation>PictureAndText</Representation>
+								<CommandName>Form.Command.СоздатьЛабИсследПоСырью</CommandName>
+								<Picture>
+									<xr:Ref>StdPicture.DataCompositionNewGroup</xr:Ref>
+									<xr:LoadTransparent>true</xr:LoadTransparent>
+								</Picture>
+								<ExtendedTooltip name="ПартииСоздатьЛабИсследПоСырьюРасширеннаяПодсказка" id="84"/>
+							</Button>
+						</ChildItems>
+					</Popup>
+					<Popup name="ГруппаОтправить" id="94">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Отправить</v8:content>
+							</v8:item>
+						</Title>
+						<ToolTip>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Группа отправить</v8:content>
+							</v8:item>
+						</ToolTip>
+						<Picture>
+							<xr:Ref>CommonPicture.кб99_space_shattle</xr:Ref>
+							<xr:LoadTransparent>true</xr:LoadTransparent>
+						</Picture>
+						<Representation>PictureAndText</Representation>
+						<ExtendedTooltip name="ГруппаОтправитьРасширеннаяПодсказка" id="95"/>
+						<ChildItems>
+							<Button name="ПартииОтправить" id="75">
+								<Type>CommandBarButton</Type>
+								<Representation>PictureAndText</Representation>
+								<CommandName>Form.Command.Отправить</CommandName>
+								<ExtendedTooltip name="ПартииОтправитьРасширеннаяПодсказка" id="76"/>
+							</Button>
+							<Button name="ПартииОтправитьПакетно" id="96">
+								<Type>CommandBarButton</Type>
+								<CommandName>Form.Command.ОтправитьПакетно</CommandName>
+								<ExtendedTooltip name="ПартииОтправитьПакетноРасширеннаяПодсказка" id="97"/>
+							</Button>
+						</ChildItems>
+					</Popup>
 					<Button name="ФормаЗаполнить" id="56">
 						<Type>CommandBarButton</Type>
 						<Representation>PictureAndText</Representation>
 						<CommandName>Form.Command.Заполнить</CommandName>
 						<Picture>
-							<xr:Ref>StdPicture.DataCompositionNewTable</xr:Ref>
+							<xr:Ref>CommonPicture.кб99_refresh</xr:Ref>
 							<xr:LoadTransparent>true</xr:LoadTransparent>
 						</Picture>
 						<Title>
@@ -168,42 +237,6 @@
 							</v8:item>
 						</Title>
 						<ExtendedTooltip name="ФормаЗаполнитьРасширеннаяПодсказка" id="57"/>
-					</Button>
-					<Button name="ПартииСоздатьЛИ" id="73">
-						<Type>CommandBarButton</Type>
-						<Representation>PictureAndText</Representation>
-						<CommandName>Form.Command.СоздатьЛИ</CommandName>
-						<Picture>
-							<xr:Ref>StdPicture.DataCompositionNewNestedScheme</xr:Ref>
-							<xr:LoadTransparent>true</xr:LoadTransparent>
-						</Picture>
-						<ExtendedTooltip name="ПартииСоздатьЛИРасширеннаяПодсказка" id="74"/>
-					</Button>
-					<Button name="ПартииОтправить" id="75">
-						<Type>CommandBarButton</Type>
-						<Representation>PictureAndText</Representation>
-						<CommandName>Form.Command.Отправить</CommandName>
-						<Picture>
-							<xr:Ref>StdPicture.InputOnBasis</xr:Ref>
-							<xr:LoadTransparent>true</xr:LoadTransparent>
-						</Picture>
-						<Title>
-							<v8:item>
-								<v8:lang>ru</v8:lang>
-								<v8:content>Отправить</v8:content>
-							</v8:item>
-						</Title>
-						<ExtendedTooltip name="ПартииОтправитьРасширеннаяПодсказка" id="76"/>
-					</Button>
-					<Button name="ПартииСоздатьЛабИсследПоСырью" id="83">
-						<Type>CommandBarButton</Type>
-						<Representation>PictureAndText</Representation>
-						<CommandName>Form.Command.СоздатьЛабИсследПоСырью</CommandName>
-						<Picture>
-							<xr:Ref>StdPicture.DataCompositionNewGroup</xr:Ref>
-							<xr:LoadTransparent>true</xr:LoadTransparent>
-						</Picture>
-						<ExtendedTooltip name="ПартииСоздатьЛабИсследПоСырьюРасширеннаяПодсказка" id="84"/>
 					</Button>
 				</ChildItems>
 			</AutoCommandBar>
@@ -475,7 +508,7 @@
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Создать</v8:content>
+					<v8:content>По выбранному шаблону</v8:content>
 				</v8:item>
 			</Title>
 			<ToolTip>
@@ -491,7 +524,7 @@
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Отправить</v8:content>
+					<v8:content>Последовательно(Построчно)</v8:content>
 				</v8:item>
 			</Title>
 			<ToolTip>
@@ -500,6 +533,10 @@
 					<v8:content>Отправить</v8:content>
 				</v8:item>
 			</ToolTip>
+			<Picture>
+				<xr:Ref>CommonPicture.кб99_send_o</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
 			<Action>Отправить</Action>
 			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
@@ -507,7 +544,7 @@
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Создать лаб исслед по Входящему сырью</v8:content>
+					<v8:content>По входящему сырью</v8:content>
 				</v8:item>
 			</Title>
 			<ToolTip>
@@ -547,6 +584,25 @@
 				</v8:item>
 			</ToolTip>
 			<Action>СнятьВсеОтметки</Action>
+		</Command>
+		<Command name="ОтправитьПакетно" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Параллельно(Пакетная отправка)</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отправить пакетно</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>CommonPicture.кб99_send</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ОтправитьПакетно</Action>
 		</Command>
 	</Commands>
 </Form>

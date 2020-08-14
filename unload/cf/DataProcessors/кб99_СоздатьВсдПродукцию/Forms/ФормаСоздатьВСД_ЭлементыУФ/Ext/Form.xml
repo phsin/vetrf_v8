@@ -105,12 +105,14 @@
 											<ChildItems>
 												<InputField name="ВыбГруппаНоменклатуры" id="99">
 													<DataPath>ВыбГруппаНоменклатуры</DataPath>
-													<ChoiceFoldersAndItems>FoldersAndItems</ChoiceFoldersAndItems>
+													<ChoiceFoldersAndItems>Folders</ChoiceFoldersAndItems>
+													<ChooseType>false</ChooseType>
 													<ContextMenu name="ВыбГруппаНоменклатурыКонтекстноеМеню" id="100"/>
 													<ExtendedTooltip name="ВыбГруппаНоменклатурыРасширеннаяПодсказка" id="101"/>
 												</InputField>
 												<InputField name="ВыбСписокНоменклатуры" id="96">
 													<DataPath>ВыбСписокНоменклатуры</DataPath>
+													<ChooseType>false</ChooseType>
 													<ContextMenu name="ВыбСписокНоменклатурыКонтекстноеМеню" id="97"/>
 													<ExtendedTooltip name="ВыбСписокНоменклатурыРасширеннаяПодсказка" id="98"/>
 												</InputField>
@@ -152,6 +154,15 @@
 													<DataPath>ВыбЕдиницаИзмерения</DataPath>
 													<ContextMenu name="ВыбЕдиницаИзмеренияКонтекстноеМеню" id="113"/>
 													<ExtendedTooltip name="ВыбЕдиницаИзмеренияРасширеннаяПодсказка" id="114"/>
+												</InputField>
+												<InputField name="Производитель_Площадка" id="157">
+													<ContextMenu name="Производитель_ПлощадкаКонтекстноеМеню" id="158"/>
+													<ExtendedTooltip name="Производитель_ПлощадкаРасширеннаяПодсказка" id="159"/>
+												</InputField>
+												<InputField name="ВыбПлощадкаПроизводитель" id="160">
+													<DataPath>ВыбПлощадкаПроизводитель</DataPath>
+													<ContextMenu name="ВыбПлощадкаПроизводительКонтекстноеМеню" id="161"/>
+													<ExtendedTooltip name="ВыбПлощадкаПроизводительРасширеннаяПодсказка" id="162"/>
 												</InputField>
 												<InputField name="ВыбСрокГодности" id="115">
 													<DataPath>ВыбСрокГодности</DataPath>
@@ -312,6 +323,12 @@
 													<ContextMenu name="ВСДЭлементыПродукция_ЭлементКонтекстноеМеню" id="131"/>
 													<ExtendedTooltip name="ВСДЭлементыПродукция_ЭлементРасширеннаяПодсказка" id="132"/>
 												</InputField>
+												<InputField name="ВСДЭлементыGUID" id="139">
+													<DataPath>Объект.ВСДЭлементы.GUID</DataPath>
+													<EditMode>EnterOnInput</EditMode>
+													<ContextMenu name="ВСДЭлементыGUIDКонтекстноеМеню" id="140"/>
+													<ExtendedTooltip name="ВСДЭлементыGUIDРасширеннаяПодсказка" id="141"/>
+												</InputField>
 												<InputField name="ВСДЭлементыПродукция" id="133">
 													<DataPath>Объект.ВСДЭлементы.Продукция</DataPath>
 													<EditMode>EnterOnInput</EditMode>
@@ -324,11 +341,11 @@
 													<ContextMenu name="ВСДЭлементыВидПродукцииКонтекстноеМеню" id="137"/>
 													<ExtendedTooltip name="ВСДЭлементыВидПродукцииРасширеннаяПодсказка" id="138"/>
 												</InputField>
-												<InputField name="ВСДЭлементыGUID" id="139">
-													<DataPath>Объект.ВСДЭлементы.GUID</DataPath>
+												<InputField name="ВСДЭлементыПроизводитель_Площадка" id="163">
+													<DataPath>Объект.ВСДЭлементы.Производитель_Площадка</DataPath>
 													<EditMode>EnterOnInput</EditMode>
-													<ContextMenu name="ВСДЭлементыGUIDКонтекстноеМеню" id="140"/>
-													<ExtendedTooltip name="ВСДЭлементыGUIDРасширеннаяПодсказка" id="141"/>
+													<ContextMenu name="ВСДЭлементыПроизводитель_ПлощадкаКонтекстноеМеню" id="164"/>
+													<ExtendedTooltip name="ВСДЭлементыПроизводитель_ПлощадкаРасширеннаяПодсказка" id="165"/>
 												</InputField>
 												<InputField name="ВСДЭлементыКоэффициентПересчета" id="142">
 													<DataPath>Объект.ВСДЭлементы.КоэффициентПересчета</DataPath>
@@ -382,6 +399,9 @@
 			<Type>
 				<v8:Type>v8:ValueListType</v8:Type>
 			</Type>
+			<Settings xsi:type="v8:TypeDescription">
+				<v8:Type>cfg:CatalogRef.Номенклатура</v8:Type>
+			</Settings>
 		</Attribute>
 		<Attribute name="ВыбГруппаНоменклатуры" id="3">
 			<Title>
@@ -457,6 +477,17 @@
 				<v8:Type>cfg:EnumRef.кб99_ТермическиеУсловияПеревозки</v8:Type>
 			</Type>
 			<FillCheck>ShowError</FillCheck>
+		</Attribute>
+		<Attribute name="ВыбПлощадкаПроизводитель" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Площадка производитель</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.ВСД_Площадка</v8:Type>
+			</Type>
 		</Attribute>
 		<ConditionalAppearance>
 			<dcsset:item>
