@@ -505,6 +505,77 @@
 						</Table>
 					</ChildItems>
 				</Page>
+				<Page name="ГруппаСопутствующаяПродукцияПриПереработке" id="154">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Сопутствующая продукция при переработке</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа сопутствующая продукция при переработке</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="ГруппаСопутствующаяПродукцияПриПереработкеРасширеннаяПодсказка" id="155"/>
+					<ChildItems>
+						<Table name="ВторичнаяПродукцияПриПереработке" id="156">
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<DataPath>Объект.ВторичнаяПродукцияПриПереработке</DataPath>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="ВторичнаяПродукцияПриПереработкеКонтекстноеМеню" id="157"/>
+							<AutoCommandBar name="ВторичнаяПродукцияПриПереработкеКоманднаяПанель" id="158"/>
+							<ExtendedTooltip name="ВторичнаяПродукцияПриПереработкеРасширеннаяПодсказка" id="159"/>
+							<SearchStringAddition name="ВторичнаяПродукцияПриПереработкеСтрокаПоиска" id="160">
+								<AdditionSource>
+									<Item>ВторичнаяПродукцияПриПереработке</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ВторичнаяПродукцияПриПереработкеСтрокаПоискаКонтекстноеМеню" id="161"/>
+								<ExtendedTooltip name="ВторичнаяПродукцияПриПереработкеСтрокаПоискаРасширеннаяПодсказка" id="162"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="ВторичнаяПродукцияПриПереработкеСостояниеПросмотра" id="163">
+								<AdditionSource>
+									<Item>ВторичнаяПродукцияПриПереработке</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ВторичнаяПродукцияПриПереработкеСостояниеПросмотраКонтекстноеМеню" id="164"/>
+								<ExtendedTooltip name="ВторичнаяПродукцияПриПереработкеСостояниеПросмотраРасширеннаяПодсказка" id="165"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="ВторичнаяПродукцияПриПереработкеУправлениеПоиском" id="166">
+								<AdditionSource>
+									<Item>ВторичнаяПродукцияПриПереработке</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="ВторичнаяПродукцияПриПереработкеУправлениеПоискомКонтекстноеМеню" id="167"/>
+								<ExtendedTooltip name="ВторичнаяПродукцияПриПереработкеУправлениеПоискомРасширеннаяПодсказка" id="168"/>
+							</SearchControlAddition>
+							<ChildItems>
+								<LabelField name="ВторичнаяПродукцияПриПереработкеНомерСтроки" id="169">
+									<DataPath>Объект.ВторичнаяПродукцияПриПереработке.LineNumber</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ВторичнаяПродукцияПриПереработкеНомерСтрокиКонтекстноеМеню" id="170"/>
+									<ExtendedTooltip name="ВторичнаяПродукцияПриПереработкеНомерСтрокиРасширеннаяПодсказка" id="171"/>
+								</LabelField>
+								<InputField name="ВторичнаяПродукцияПриПереработкеПродукция" id="172">
+									<DataPath>Объект.ВторичнаяПродукцияПриПереработке.Продукция_Элемент</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ВторичнаяПродукцияПриПереработкеПродукцияКонтекстноеМеню" id="173"/>
+									<ExtendedTooltip name="ВторичнаяПродукцияПриПереработкеПродукцияРасширеннаяПодсказка" id="174"/>
+								</InputField>
+								<InputField name="ВторичнаяПродукцияПриПереработкеКоэффициент" id="175">
+									<DataPath>Объект.ВторичнаяПродукцияПриПереработке.Коэффициент</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ВторичнаяПродукцияПриПереработкеКоэффициентКонтекстноеМеню" id="176"/>
+									<ExtendedTooltip name="ВторичнаяПродукцияПриПереработкеКоэффициентРасширеннаяПодсказка" id="177"/>
+								</InputField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
 			</ChildItems>
 		</Pages>
 	</ChildItems>

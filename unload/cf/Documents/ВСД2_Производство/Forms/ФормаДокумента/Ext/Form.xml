@@ -730,11 +730,6 @@
 												<CommandName>Form.Command.кнПодбор</CommandName>
 												<ExtendedTooltip name="ПартииСписаниякнПодборРасширеннаяПодсказка" id="492"/>
 											</Button>
-											<Button name="ПартииСписаниякнЗаполнитьПоСправочнику" id="493">
-												<Type>CommandBarButton</Type>
-												<CommandName>Form.Command.кнЗаполнитьПоПродукцияЭлемент</CommandName>
-												<ExtendedTooltip name="ПартииСписаниякнЗаполнитьПоСправочникуРасширеннаяПодсказка" id="494"/>
-											</Button>
 											<Button name="ПартииСписаниякнАвтоподборПартийПоСпецификации" id="495">
 												<Type>CommandBarButton</Type>
 												<CommandName>Form.Command.кнЗаполнитьПоРегистру</CommandName>
@@ -750,6 +745,11 @@
 												<Type>CommandBarButton</Type>
 												<CommandName>Form.Command.кнЗаполнитьПоСпецификацииНоменклатуры</CommandName>
 												<ExtendedTooltip name="ПартииСписаниякнЗаполнитьПоСпецификации1РасширеннаяПодсказка" id="563"/>
+											</Button>
+											<Button name="ПартииСписаниякнПересчитатьВторичнуюПродукцию" id="593">
+												<Type>CommandBarButton</Type>
+												<CommandName>Form.Command.кнПересчитатьВторичнуюПродукцию</CommandName>
+												<ExtendedTooltip name="ПартииСписаниякнПересчитатьВторичнуюПродукциюРасширеннаяПодсказка" id="594"/>
 											</Button>
 										</ChildItems>
 									</AutoCommandBar>
@@ -1276,6 +1276,21 @@
 			</ToolTip>
 			<Action>кнЗаполнитьПоСпецификацииНоменклатуры</Action>
 			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="кнПересчитатьВторичнуюПродукцию" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Пересчитать вторичную продукцию</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Перед пересчетом удалите строки со вторичной продукцией на вкладке Продукция.</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>кнПересчитатьВторичнуюПродукцию</Action>
 		</Command>
 	</Commands>
 </Form>
