@@ -1,26 +1,26 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.8">
-	<Document uuid="2ad6cedd-fbed-45d9-9407-a27b495fc96c">
+	<Document uuid="81cdf542-c466-4235-8429-915542c9e9da">
 		<InternalInfo>
 			<xr:GeneratedType name="DocumentObject.ВСД" category="Object">
-				<xr:TypeId>5948f538-a4e4-4f77-8ace-015f0a4e3f53</xr:TypeId>
-				<xr:ValueId>79f495c4-4da3-43c9-9082-1db39a5d1bf1</xr:ValueId>
+				<xr:TypeId>5a346865-ba29-42c1-88b8-734b332643f9</xr:TypeId>
+				<xr:ValueId>c8e24511-6baf-4914-af1f-ce90c6b920ad</xr:ValueId>
 			</xr:GeneratedType>
 			<xr:GeneratedType name="DocumentRef.ВСД" category="Ref">
-				<xr:TypeId>0d423ec2-1bdf-468c-bfc5-33091a8bacd1</xr:TypeId>
-				<xr:ValueId>97d6352c-10a3-47d1-8ad8-f5747a249cdd</xr:ValueId>
+				<xr:TypeId>678c74c4-573e-4b26-b9df-10314b641db7</xr:TypeId>
+				<xr:ValueId>043f5e76-2ae6-40f7-80fd-468e73c77a2f</xr:ValueId>
 			</xr:GeneratedType>
 			<xr:GeneratedType name="DocumentSelection.ВСД" category="Selection">
-				<xr:TypeId>8e8bc6b1-da1e-4b05-b2cf-0c1c936699fa</xr:TypeId>
-				<xr:ValueId>4d4c2057-d865-4b3c-9c9c-c6275e8b9153</xr:ValueId>
+				<xr:TypeId>8a70370e-7a5f-4304-a2fa-2586da4720a3</xr:TypeId>
+				<xr:ValueId>838baa2a-302d-4f83-9179-da215a50acf7</xr:ValueId>
 			</xr:GeneratedType>
 			<xr:GeneratedType name="DocumentList.ВСД" category="List">
-				<xr:TypeId>1293747e-033d-4e7c-b3de-969fd0c512aa</xr:TypeId>
-				<xr:ValueId>0e4668ea-e145-4103-b774-e320300a8eb6</xr:ValueId>
+				<xr:TypeId>ebcae120-3234-4f05-9c68-81261f670425</xr:TypeId>
+				<xr:ValueId>ad375bff-1bf3-4a39-9633-b1d2163e30b3</xr:ValueId>
 			</xr:GeneratedType>
 			<xr:GeneratedType name="DocumentManager.ВСД" category="Manager">
-				<xr:TypeId>5a5a86a6-f8e3-4df3-a245-fe3dc0b56a96</xr:TypeId>
-				<xr:ValueId>c1f3f2e8-5209-4cf0-9119-8d5c62d44f99</xr:ValueId>
+				<xr:TypeId>7bc93ca3-26f4-4cb5-9415-9b63b2cef8fd</xr:TypeId>
+				<xr:ValueId>052654f0-5dc2-4aa8-9c5b-089041e5a1b6</xr:ValueId>
 			</xr:GeneratedType>
 		</InternalInfo>
 		<Properties>
@@ -28,7 +28,7 @@
 			<Synonym>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>ВСД</v8:content>
+					<v8:content>ВСД версии 1 (не используется)</v8:content>
 				</v8:item>
 			</Synonym>
 			<Comment>ответ ГИС Меркурий</Comment>
@@ -208,7 +208,7 @@
 			<DataHistory>DontUse</DataHistory>
 		</Properties>
 		<ChildObjects>
-			<Attribute uuid="3fc16c4f-359f-4a65-90b4-bfd8b25953c8">
+			<Attribute uuid="2cb8db23-39ab-483e-8fe7-31184347215e">
 				<Properties>
 					<Name>Отправитель_ХозСубъект</Name>
 					<Synonym>
@@ -247,7 +247,7 @@
 					<DataHistory>Use</DataHistory>
 				</Properties>
 			</Attribute>
-			<Attribute uuid="8cfa8c01-8a98-4687-9169-c348481b1c6c">
+			<Attribute uuid="be6f2d00-241c-422a-9f5f-3c7a776c384d">
 				<Properties>
 					<Name>Отправитель_Площадка</Name>
 					<Synonym>
@@ -286,7 +286,7 @@
 					<DataHistory>Use</DataHistory>
 				</Properties>
 			</Attribute>
-			<Attribute uuid="9e5a56f7-0958-4553-9c1e-985731ecf273">
+			<Attribute uuid="39bb29c7-4087-4452-970b-66ab9a99bdc9">
 				<Properties>
 					<Name>Получатель_ХозСубъект</Name>
 					<Synonym>
@@ -325,7 +325,7 @@
 					<DataHistory>Use</DataHistory>
 				</Properties>
 			</Attribute>
-			<Attribute uuid="01efd9be-321d-4e64-8002-137afac6fca0">
+			<Attribute uuid="fc85ed65-32ac-4afc-b84d-75c360bb5471">
 				<Properties>
 					<Name>Получатель_Площадка</Name>
 					<Synonym>
@@ -364,7 +364,7 @@
 					<DataHistory>Use</DataHistory>
 				</Properties>
 			</Attribute>
-			<Attribute uuid="3f73d70a-0e45-479d-a30f-bc32461c859d">
+			<Attribute uuid="39f2a16d-8a01-4798-9246-42782172d766">
 				<Properties>
 					<Name>Перевозчик_ХозСубъект</Name>
 					<Synonym>
@@ -403,7 +403,7 @@
 					<DataHistory>Use</DataHistory>
 				</Properties>
 			</Attribute>
-			<Attribute uuid="9ea562a9-8d7f-412a-8e3e-8e171f19c641">
+			<Attribute uuid="8c4f6de1-86a7-437d-a5fa-151669c69dbd">
 				<Properties>
 					<Name>applicationID</Name>
 					<Synonym>
@@ -446,7 +446,7 @@
 					<DataHistory>Use</DataHistory>
 				</Properties>
 			</Attribute>
-			<Attribute uuid="4f9a292c-79ec-4706-ac0a-0dcb4e35329d">
+			<Attribute uuid="df916c57-eba4-49ca-b01d-84407b81f188">
 				<Properties>
 					<Name>Количество</Name>
 					<Synonym>
@@ -490,7 +490,7 @@
 					<DataHistory>Use</DataHistory>
 				</Properties>
 			</Attribute>
-			<Attribute uuid="1d978255-9003-49b7-9ddf-09fd36a749cc">
+			<Attribute uuid="73e16612-d9c4-4919-936d-9a7fe1077a1d">
 				<Properties>
 					<Name>КоличествоМест</Name>
 					<Synonym>
@@ -534,7 +534,7 @@
 					<DataHistory>Use</DataHistory>
 				</Properties>
 			</Attribute>
-			<Attribute uuid="fd130253-1dc0-4cb9-a2f2-e31f2a5f704b">
+			<Attribute uuid="200ae65f-a33b-4e3e-82e0-b267b0643a74">
 				<Properties>
 					<Name>ТтнСерия</Name>
 					<Synonym>
@@ -577,7 +577,7 @@
 					<DataHistory>Use</DataHistory>
 				</Properties>
 			</Attribute>
-			<Attribute uuid="017d36ac-9355-48d2-936b-f60b84046cbd">
+			<Attribute uuid="b4f27681-c993-4ccf-a00d-f2aade5330e7">
 				<Properties>
 					<Name>ТтнНомер</Name>
 					<Synonym>
@@ -620,7 +620,7 @@
 					<DataHistory>Use</DataHistory>
 				</Properties>
 			</Attribute>
-			<Attribute uuid="fdb328fb-bc2e-4e44-8b1c-29c63c65ff48">
+			<Attribute uuid="67250547-cbcb-45e5-bd8a-4c9ae5f6aa7c">
 				<Properties>
 					<Name>ТтнДата</Name>
 					<Synonym>
@@ -662,7 +662,7 @@
 					<DataHistory>Use</DataHistory>
 				</Properties>
 			</Attribute>
-			<Attribute uuid="fc4f8c9b-d8c9-423a-b9e7-961c2d65f671">
+			<Attribute uuid="9a7aacce-166e-4c8c-9654-d3b812157ec1">
 				<Properties>
 					<Name>номерАвто</Name>
 					<Synonym>
@@ -705,7 +705,7 @@
 					<DataHistory>Use</DataHistory>
 				</Properties>
 			</Attribute>
-			<Attribute uuid="222635fd-daa4-4b45-b571-34eec20995c3">
+			<Attribute uuid="63d62499-7e33-4e4a-b7f0-3ea0dd91fb72">
 				<Properties>
 					<Name>Экспертиза</Name>
 					<Synonym>
@@ -748,7 +748,7 @@
 					<DataHistory>Use</DataHistory>
 				</Properties>
 			</Attribute>
-			<Attribute uuid="4a16ecca-2ff0-4b15-a46d-7fa4c0d981ad">
+			<Attribute uuid="f2dbeb58-2721-4bd4-abca-2a309b9b34f5">
 				<Properties>
 					<Name>Местность</Name>
 					<Synonym>
@@ -791,7 +791,7 @@
 					<DataHistory>Use</DataHistory>
 				</Properties>
 			</Attribute>
-			<Attribute uuid="c2600c51-0dbc-483a-89ae-3974650625ed">
+			<Attribute uuid="57f971ad-3aea-4615-be26-d60cee3ade04">
 				<Properties>
 					<Name>Статус</Name>
 					<Synonym>
@@ -834,7 +834,7 @@
 					<DataHistory>Use</DataHistory>
 				</Properties>
 			</Attribute>
-			<Attribute uuid="9ee2e026-a196-4bcf-ab80-343d4d361858">
+			<Attribute uuid="f3bc2c50-febe-442b-a1b4-22196ba6dc17">
 				<Properties>
 					<Name>Партия</Name>
 					<Synonym>
@@ -873,7 +873,7 @@
 					<DataHistory>Use</DataHistory>
 				</Properties>
 			</Attribute>
-			<Attribute uuid="04c3dd76-7138-459c-93a2-e07f541377fd">
+			<Attribute uuid="5666a64a-c112-4a50-bc1e-6f9855d5af31">
 				<Properties>
 					<Name>UUID</Name>
 					<Synonym>
@@ -916,7 +916,7 @@
 					<DataHistory>Use</DataHistory>
 				</Properties>
 			</Attribute>
-			<Attribute uuid="31c428c8-aa0a-42d8-a85b-e4dd754eb96b">
+			<Attribute uuid="4a8c8e53-319d-41de-91bc-822a7ba4d46f">
 				<Properties>
 					<Name>ФормаВСД</Name>
 					<Synonym>
@@ -960,7 +960,7 @@
 					<DataHistory>Use</DataHistory>
 				</Properties>
 			</Attribute>
-			<Attribute uuid="5b75cead-6e20-4a16-8326-5ae011d38367">
+			<Attribute uuid="87fc5ea2-2f49-4ab1-8dbc-ce2c2aa87fc8">
 				<Properties>
 					<Name>ЕдиницаИзмерения</Name>
 					<Synonym>
@@ -999,7 +999,7 @@
 					<DataHistory>Use</DataHistory>
 				</Properties>
 			</Attribute>
-			<Attribute uuid="e7104f4f-cc2d-4b42-89f5-4e6d537c3f98">
+			<Attribute uuid="8f0dff44-7506-4650-b4e0-7af5cbb0d90b">
 				<Properties>
 					<Name>ФормаУпаковки</Name>
 					<Synonym>
@@ -1038,7 +1038,7 @@
 					<DataHistory>Use</DataHistory>
 				</Properties>
 			</Attribute>
-			<Attribute uuid="9a67bf19-24cf-4e71-b461-7a45e9d6f074">
+			<Attribute uuid="7135908a-d717-4a8a-b70f-81c38feb6a3e">
 				<Properties>
 					<Name>ТермическоеСостояние</Name>
 					<Synonym>
@@ -1082,7 +1082,7 @@
 					<DataHistory>Use</DataHistory>
 				</Properties>
 			</Attribute>
-			<Attribute uuid="5edf33e7-4078-4aee-90d6-33ee352ccb01">
+			<Attribute uuid="ca709296-8f69-4640-bf3d-ffe1daa23ce7">
 				<Properties>
 					<Name>ОсобыеОтметки</Name>
 					<Synonym>
@@ -1125,7 +1125,7 @@
 					<DataHistory>Use</DataHistory>
 				</Properties>
 			</Attribute>
-			<Attribute uuid="38120b55-f0b2-4324-8d24-9a72de8296e2">
+			<Attribute uuid="797c74ba-56ee-4c96-a460-92d931754078">
 				<Properties>
 					<Name>cargoExpertized</Name>
 					<Synonym>
@@ -1169,7 +1169,7 @@
 					<DataHistory>Use</DataHistory>
 				</Properties>
 			</Attribute>
-			<Attribute uuid="f5ae9847-8b40-4e42-89c8-569c7b20538b">
+			<Attribute uuid="ad1774e6-6c16-432f-91ca-ab120fdecd50">
 				<Properties>
 					<Name>cargoInspected</Name>
 					<Synonym>
@@ -1213,7 +1213,7 @@
 					<DataHistory>Use</DataHistory>
 				</Properties>
 			</Attribute>
-			<Attribute uuid="f3f8f5a8-9aac-4e0e-829c-d32f07d60ce8">
+			<Attribute uuid="63688933-c052-4d29-b750-d7d50a8227d4">
 				<Properties>
 					<Name>Производитель_Площадка</Name>
 					<Synonym>
@@ -1252,7 +1252,7 @@
 					<DataHistory>Use</DataHistory>
 				</Properties>
 			</Attribute>
-			<Attribute uuid="1dd03957-ccbf-47b7-87c0-68045b8389d5">
+			<Attribute uuid="eabb7ea0-dfb8-4d3b-a814-85b31f5c7108">
 				<Properties>
 					<Name>ВсдСерия</Name>
 					<Synonym>
@@ -1295,7 +1295,7 @@
 					<DataHistory>Use</DataHistory>
 				</Properties>
 			</Attribute>
-			<Attribute uuid="38087542-f57a-4718-8275-e5db3a0e6678">
+			<Attribute uuid="724dfed5-a62c-4493-9346-2f102e6c69be">
 				<Properties>
 					<Name>ВсдНомер</Name>
 					<Synonym>
@@ -1338,7 +1338,7 @@
 					<DataHistory>Use</DataHistory>
 				</Properties>
 			</Attribute>
-			<Attribute uuid="349d7f59-fa4f-4c1a-ae25-e73204973870">
+			<Attribute uuid="b1233a98-e837-49ce-90ec-0415beeaae9d">
 				<Properties>
 					<Name>ВсдДата</Name>
 					<Synonym>
@@ -1380,7 +1380,7 @@
 					<DataHistory>Use</DataHistory>
 				</Properties>
 			</Attribute>
-			<Attribute uuid="6230f5fc-2551-4bf3-a5ce-82257b984254">
+			<Attribute uuid="aef9489f-c9cc-41bb-a26a-bfa8b7dbe4e9">
 				<Properties>
 					<Name>Продукция</Name>
 					<Synonym>
@@ -1419,7 +1419,7 @@
 					<DataHistory>Use</DataHistory>
 				</Properties>
 			</Attribute>
-			<Attribute uuid="5fd308ed-d7b5-44da-a193-26083a1fbf54">
+			<Attribute uuid="f107ddc7-f369-4f80-b5e4-026c1399fc5c">
 				<Properties>
 					<Name>ВидПродукции</Name>
 					<Synonym>
@@ -1458,7 +1458,7 @@
 					<DataHistory>Use</DataHistory>
 				</Properties>
 			</Attribute>
-			<Attribute uuid="660ce250-bd4b-4f8e-86c3-310fdde795eb">
+			<Attribute uuid="aac8c62b-c5cd-44fd-876c-ae81415e7613">
 				<Properties>
 					<Name>НаименованиеПродукции</Name>
 					<Synonym>
@@ -1501,7 +1501,7 @@
 					<DataHistory>Use</DataHistory>
 				</Properties>
 			</Attribute>
-			<Attribute uuid="1fb3f990-6b49-4b83-9fa1-cd4ec5bd9a86">
+			<Attribute uuid="e5d974df-d21e-4a69-b98f-c86750912b3f">
 				<Properties>
 					<Name>Продукция_Элемент</Name>
 					<Synonym>
@@ -1540,7 +1540,7 @@
 					<DataHistory>Use</DataHistory>
 				</Properties>
 			</Attribute>
-			<Attribute uuid="a9109093-bfae-4f4c-8b97-7e1d96927fe9">
+			<Attribute uuid="e3cf2bca-a872-4852-9a7c-5be626df0752">
 				<Properties>
 					<Name>Комментарий</Name>
 					<Synonym>
@@ -1583,7 +1583,7 @@
 					<DataHistory>Use</DataHistory>
 				</Properties>
 			</Attribute>
-			<Attribute uuid="08f4621c-30da-4010-9de0-f652061bbbfd">
+			<Attribute uuid="5025bbd1-a943-473f-b91b-d45823a0d40a">
 				<Properties>
 					<Name>ДокументОснование</Name>
 					<Synonym>
@@ -1594,9 +1594,7 @@
 					</Synonym>
 					<Comment>Документ-основание</Comment>
 					<Type>
-						<v8:Type>cfg:DocumentRef.ВСД_транзакция</v8:Type>
 						<v8:Type>cfg:DocumentRef.ВСД2_Производство</v8:Type>
-						<v8:Type>cfg:DocumentRef.ВСД_входящий</v8:Type>
 					</Type>
 					<PasswordMode>false</PasswordMode>
 					<Format/>
@@ -1624,7 +1622,7 @@
 					<DataHistory>Use</DataHistory>
 				</Properties>
 			</Attribute>
-			<Attribute uuid="afa3b1b4-c05e-467a-91d3-588150fdac3f">
+			<Attribute uuid="c97ee54a-fc91-4e96-8574-e830395a2a08">
 				<Properties>
 					<Name>ДатаИзготовления</Name>
 					<Synonym>
@@ -1667,7 +1665,7 @@
 					<DataHistory>Use</DataHistory>
 				</Properties>
 			</Attribute>
-			<Attribute uuid="67a90d50-041e-47e8-9064-082e4675966c">
+			<Attribute uuid="4e9aa58b-17b2-4639-8938-3fbfd74954bf">
 				<Properties>
 					<Name>ДатаИзготовления1</Name>
 					<Synonym>
@@ -1709,7 +1707,7 @@
 					<DataHistory>Use</DataHistory>
 				</Properties>
 			</Attribute>
-			<Attribute uuid="3e43694d-089d-4ace-9c3d-27b3f4dca007">
+			<Attribute uuid="6ac82c22-a0a9-4468-ac94-c162cbff5f72">
 				<Properties>
 					<Name>ДатаИзготовления2</Name>
 					<Synonym>
@@ -1751,7 +1749,7 @@
 					<DataHistory>Use</DataHistory>
 				</Properties>
 			</Attribute>
-			<Attribute uuid="a38545f6-b4fa-48ea-a435-358f53ce6943">
+			<Attribute uuid="88f5f150-384f-4c12-99ea-85de78bcb0b5">
 				<Properties>
 					<Name>ДатаСрокГодности</Name>
 					<Synonym>
@@ -1794,7 +1792,7 @@
 					<DataHistory>Use</DataHistory>
 				</Properties>
 			</Attribute>
-			<Attribute uuid="5078ee27-370e-4f9d-84fa-13ef6ee57081">
+			<Attribute uuid="b6bde16e-546d-4eed-aaf9-8c53d040077d">
 				<Properties>
 					<Name>ДатаСрокГодности1</Name>
 					<Synonym>
@@ -1836,7 +1834,7 @@
 					<DataHistory>Use</DataHistory>
 				</Properties>
 			</Attribute>
-			<Attribute uuid="818f0391-5d12-41eb-b431-4c7e270431c5">
+			<Attribute uuid="ee609d04-5836-46bc-88f4-4066f45f0db8">
 				<Properties>
 					<Name>ДатаСрокГодности2</Name>
 					<Synonym>
@@ -1878,7 +1876,7 @@
 					<DataHistory>Use</DataHistory>
 				</Properties>
 			</Attribute>
-			<Attribute uuid="56f05ed5-0791-49fe-aa28-9db18286ad27">
+			<Attribute uuid="def60491-6d67-4be7-b5bb-0e0b0a4e1497">
 				<Properties>
 					<Name>ТипВСД</Name>
 					<Synonym>
@@ -1921,7 +1919,7 @@
 					<DataHistory>Use</DataHistory>
 				</Properties>
 			</Attribute>
-			<Attribute uuid="3aa3f54e-9777-4a88-8d44-edff7dc33d23">
+			<Attribute uuid="98ccb8a7-bd5a-4421-ad41-da4e5d2782a7">
 				<Properties>
 					<Name>Организация</Name>
 					<Synonym>
@@ -1960,7 +1958,7 @@
 					<DataHistory>Use</DataHistory>
 				</Properties>
 			</Attribute>
-			<Attribute uuid="d170c4ea-1c78-48a8-b21f-4ecbbf2ea04c">
+			<Attribute uuid="bd27da05-d4b1-48cb-9ca9-c927328fa37d">
 				<Properties>
 					<Name>ИмяФайлаОтвет</Name>
 					<Synonym>
@@ -2003,7 +2001,7 @@
 					<DataHistory>Use</DataHistory>
 				</Properties>
 			</Attribute>
-			<Attribute uuid="c557f85e-f7fb-46da-8b31-9484ced80d29">
+			<Attribute uuid="efa22e18-c4d9-4acb-a38c-4fbbbf7775eb">
 				<Properties>
 					<Name>ИмяФайлаЗапрос</Name>
 					<Synonym>
@@ -2046,7 +2044,7 @@
 					<DataHistory>Use</DataHistory>
 				</Properties>
 			</Attribute>
-			<Attribute uuid="e526bebc-05ef-419c-a9d3-9b800b0982a2">
+			<Attribute uuid="c1d5438d-66c3-4e61-9938-c092046edde2">
 				<Properties>
 					<Name>ВидВСД</Name>
 					<Synonym>
@@ -2093,15 +2091,15 @@
 			<Form>ФормаСписка</Form>
 			<Form>ФормаВыбора</Form>
 			<Form>ФормаДокумента</Form>
-			<TabularSection uuid="02d6f111-502e-4b67-b980-03da04376f56">
+			<TabularSection uuid="0adc486a-33d8-4373-aad1-38c15fca43c0">
 				<InternalInfo>
 					<xr:GeneratedType name="DocumentTabularSection.ВСД.Запросы" category="TabularSection">
-						<xr:TypeId>640db8f8-a601-4559-88c1-30650281df65</xr:TypeId>
-						<xr:ValueId>3952aa68-7b4c-480d-af07-5e1181ca306d</xr:ValueId>
+						<xr:TypeId>5885b7e5-8dd5-4f86-bf13-512e66ed35b6</xr:TypeId>
+						<xr:ValueId>4c0a0589-18a7-4465-af8d-f4b46b99d724</xr:ValueId>
 					</xr:GeneratedType>
 					<xr:GeneratedType name="DocumentTabularSectionRow.ВСД.Запросы" category="TabularSectionRow">
-						<xr:TypeId>e2fbfc12-8126-4815-a0ad-898f5b50050a</xr:TypeId>
-						<xr:ValueId>a79f6faa-9036-440f-9480-a1b89347c091</xr:ValueId>
+						<xr:TypeId>ab00cde1-81c7-4307-ad24-222f88c73b97</xr:TypeId>
+						<xr:ValueId>6a4b3d92-9ae3-4ba3-ae19-4dfc627c7498</xr:ValueId>
 					</xr:GeneratedType>
 				</InternalInfo>
 				<Properties>
@@ -2145,7 +2143,7 @@
 					</StandardAttributes>
 				</Properties>
 				<ChildObjects>
-					<Attribute uuid="c75e256b-3192-4e99-86af-c06852ec1546">
+					<Attribute uuid="6c2cf88f-9197-497c-9fd5-63be9c911041">
 						<Properties>
 							<Name>Дата</Name>
 							<Synonym>
@@ -2185,7 +2183,7 @@
 							<DataHistory>Use</DataHistory>
 						</Properties>
 					</Attribute>
-					<Attribute uuid="671156b3-179e-4b38-8801-29ce1a30a963">
+					<Attribute uuid="76212977-3d63-4185-9f98-e8e1227b3197">
 						<Properties>
 							<Name>Файл</Name>
 							<Synonym>
@@ -2226,7 +2224,7 @@
 							<DataHistory>Use</DataHistory>
 						</Properties>
 					</Attribute>
-					<Attribute uuid="1f661827-7a7c-42c0-8507-5271fd6861c2">
+					<Attribute uuid="f5626d24-d513-437f-a624-0df8c1c9e3ad">
 						<Properties>
 							<Name>Пользователь</Name>
 							<Synonym>

@@ -164,10 +164,37 @@
 			<CommonPicture>kb99_user</CommonPicture>
 			<CommonPicture>kb99_user_o</CommonPicture>
 			<CommonPicture>refresh_48</CommonPicture>
+			<CommonPicture>ДокументПомеченНаУдалениеКоннекторЛево</CommonPicture>
+			<CommonPicture>ДокументЗаписанКоннекторЛево</CommonPicture>
+			<CommonPicture>ДокументПроведенКоннекторВерх</CommonPicture>
+			<CommonPicture>СправочникПВХПомеченНаУдалениеКоннекторЛево</CommonPicture>
+			<CommonPicture>СправочникПВХПомеченНаУдалениеКоннекторЛевоВерх</CommonPicture>
+			<CommonPicture>СправочникПВХПомеченНаУдалениеКоннекторЛевоНиз</CommonPicture>
+			<CommonPicture>ДокументПроведенКоннекторВерхНиз</CommonPicture>
+			<CommonPicture>ДокументПроведенКоннекторЛевоВерх</CommonPicture>
+			<CommonPicture>ДокументПроведенКоннекторЛевоНиз</CommonPicture>
+			<CommonPicture>ДокументПомеченНаУдалениеКоннекторВерх</CommonPicture>
+			<CommonPicture>ДокументПомеченНаУдалениеКоннекторВерхНиз</CommonPicture>
+			<CommonPicture>ДокументПомеченНаУдалениеКоннекторЛевоВерх</CommonPicture>
+			<CommonPicture>ДокументПомеченНаУдалениеКоннекторЛевоНиз</CommonPicture>
+			<CommonPicture>ДокументПомеченНаУдалениеКоннекторНиз</CommonPicture>
+			<CommonPicture>ДокументЗаписанКоннекторВерх</CommonPicture>
+			<CommonPicture>ДокументЗаписанКоннекторВерхНиз</CommonPicture>
+			<CommonPicture>ДокументЗаписанКоннекторЛевоВерх</CommonPicture>
+			<CommonPicture>ДокументЗаписанКоннекторЛевоНиз</CommonPicture>
+			<CommonPicture>ДокументЗаписанКоннекторНиз</CommonPicture>
+			<CommonPicture>СправочникПВХКоннекторВверх</CommonPicture>
+			<CommonPicture>СправочникПВХКоннекторВерхНиз</CommonPicture>
+			<CommonPicture>СправочникПВХКоннекторЛево</CommonPicture>
+			<CommonPicture>СправочникПВХКоннекторЛевоВерх</CommonPicture>
+			<CommonPicture>СправочникПВХКоннекторЛевоНиз</CommonPicture>
+			<CommonPicture>СправочникПВХКоннекторНиз</CommonPicture>
+			<CommonPicture>ДокументПроведенКоннекторЛево</CommonPicture>
 			<Interface>ВСД</Interface>
 			<SessionParameter>ТекущийПользователь</SessionParameter>
 			<Role>Администратор</Role>
 			<CommonTemplate>КомпонентаПечатиQRКода</CommonTemplate>
+			<CommonTemplate>СтруктураПодчиненности</CommonTemplate>
 			<FilterCriterion>СвязанныеДокументы</FilterCriterion>
 			<CommonModule>ДлительныеОперации</CommonModule>
 			<CommonModule>УправлениеПечатью</CommonModule>
@@ -189,6 +216,7 @@
 			<CommonModule>ОбщегоНазначенияКлиентСервер</CommonModule>
 			<CommonModule>СтандартныеПодсистемыСервер</CommonModule>
 			<CommonModule>СтандартныеПодсистемыКлиент</CommonModule>
+			<CommonModule>СтруктураПодчиненностиПереопределяемый</CommonModule>
 			<ScheduledJob>кб99_ВСД_УдалитьЗапросы</ScheduledJob>
 			<ScheduledJob>кб99_ВСД_УдалитьЗапросы_XML</ScheduledJob>
 			<ScheduledJob>кб99_ПолучитьАктуальныеПартии</ScheduledJob>
@@ -214,6 +242,7 @@
 			<CommonForm>кб99_ФормаТермическиеУсловия</CommonForm>
 			<CommonForm>кб99_РегламентныеЗадания</CommonForm>
 			<CommonForm>ДлительнаяОперация</CommonForm>
+			<CommonForm>СтруктураПодчиненности</CommonForm>
 			<Catalog>Контрагенты</Catalog>
 			<Catalog>Номенклатура</Catalog>
 			<Catalog>ВСД_Площадка</Catalog>
@@ -237,17 +266,16 @@
 			<Catalog>ВСД_Улица</Catalog>
 			<Document>ПеремещениеТоваров</Document>
 			<Document>ВСД2_Производство</Document>
-			<Document>ВСД_транзакция</Document>
-			<Document>ВСД_входящий</Document>
-			<Document>ВСД</Document>
 			<Document>ВСД2_транзакция</Document>
-			<Document>ВСД2</Document>
 			<Document>ВСД2_ЛабораторныеИсследования</Document>
 			<Document>ВСД2_ОбъединениеПартий</Document>
 			<Document>ВСД2_Инвентаризация</Document>
 			<Document>ВСД2_входящий</Document>
 			<Document>РеализацияТоваровУслуг</Document>
 			<Document>ВСД2_ОбновитьТранспорт</Document>
+			<Document>ВСД</Document>
+			<Document>ВСД2</Document>
+			<Document>ВСД_транзакция</Document>
 			<DocumentJournal>кб99_ЖурналВСД</DocumentJournal>
 			<Enum>кб99_РезультатИсследования</Enum>
 			<Enum>кб99_УровниУпаковки</Enum>
