@@ -28,155 +28,267 @@
 						<InputField name="Наименование" id="4">
 							<DataPath>Объект.Description</DataPath>
 							<EditMode>EnterOnInput</EditMode>
+							<AutoMaxWidth>false</AutoMaxWidth>
 							<ContextMenu name="НаименованиеКонтекстноеМеню" id="5"/>
 							<ExtendedTooltip name="НаименованиеРасширеннаяПодсказка" id="6"/>
 						</InputField>
 						<InputField name="НаименованиеПолное" id="77">
 							<DataPath>Объект.НаименованиеПолное</DataPath>
+							<AutoMaxWidth>false</AutoMaxWidth>
 							<ContextMenu name="НаименованиеПолноеКонтекстноеМеню" id="78"/>
 							<ExtendedTooltip name="НаименованиеПолноеРасширеннаяПодсказка" id="79"/>
 						</InputField>
-						<InputField name="Контрагент" id="7">
-							<DataPath>Объект.Контрагент</DataPath>
-							<EditMode>EnterOnInput</EditMode>
-							<ContextMenu name="КонтрагентКонтекстноеМеню" id="8"/>
-							<ExtendedTooltip name="КонтрагентРасширеннаяПодсказка" id="9"/>
-						</InputField>
-						<InputField name="GUID" id="10">
-							<DataPath>Объект.GUID</DataPath>
-							<EditMode>EnterOnInput</EditMode>
-							<ContextMenu name="GUIDКонтекстноеМеню" id="11"/>
-							<ExtendedTooltip name="GUIDРасширеннаяПодсказка" id="12"/>
-						</InputField>
-						<InputField name="UUID" id="13">
-							<DataPath>Объект.UUID</DataPath>
-							<EditMode>EnterOnInput</EditMode>
-							<ContextMenu name="UUIDКонтекстноеМеню" id="14"/>
-							<ExtendedTooltip name="UUIDРасширеннаяПодсказка" id="15"/>
-						</InputField>
-						<InputField name="ИНН" id="71">
-							<DataPath>Объект.ИНН</DataPath>
-							<ContextMenu name="ИННКонтекстноеМеню" id="72"/>
-							<ExtendedTooltip name="ИННРасширеннаяПодсказка" id="73"/>
-						</InputField>
-						<InputField name="КПП" id="74">
-							<DataPath>Объект.КПП</DataPath>
-							<ContextMenu name="КППКонтекстноеМеню" id="75"/>
-							<ExtendedTooltip name="КППРасширеннаяПодсказка" id="76"/>
-						</InputField>
-						<InputField name="ОГРН" id="16">
-							<DataPath>Объект.ОГРН</DataPath>
-							<EditMode>EnterOnInput</EditMode>
-							<ContextMenu name="ОГРНКонтекстноеМеню" id="17"/>
-							<ExtendedTooltip name="ОГРНРасширеннаяПодсказка" id="18"/>
-						</InputField>
-						<InputField name="Страна" id="80">
-							<DataPath>Объект.Страна</DataPath>
-							<ContextMenu name="СтранаКонтекстноеМеню" id="81"/>
-							<ExtendedTooltip name="СтранаРасширеннаяПодсказка" id="82"/>
-						</InputField>
-						<InputField name="Регион" id="83">
-							<DataPath>Объект.Регион</DataPath>
-							<ContextMenu name="РегионКонтекстноеМеню" id="84"/>
-							<ExtendedTooltip name="РегионРасширеннаяПодсказка" id="85"/>
-						</InputField>
-						<InputField name="Город" id="86">
-							<DataPath>Объект.Город</DataPath>
-							<ContextMenu name="ГородКонтекстноеМеню" id="87"/>
-							<ExtendedTooltip name="ГородРасширеннаяПодсказка" id="88"/>
-						</InputField>
-						<InputField name="Адрес" id="89">
-							<DataPath>Объект.Адрес</DataPath>
-							<ContextMenu name="АдресКонтекстноеМеню" id="90"/>
-							<ExtendedTooltip name="АдресРасширеннаяПодсказка" id="91"/>
-						</InputField>
-						<CheckBoxField name="ПерсональныеПараметрыСписанияПартий" id="92">
-							<DataPath>Объект.ПерсональныеПараметрыСписанияПартий</DataPath>
-							<CheckBoxType>Auto</CheckBoxType>
-							<ContextMenu name="ПерсональныеПараметрыСписанияПартийКонтекстноеМеню" id="93"/>
-							<ExtendedTooltip name="ПерсональныеПараметрыСписанияПартийРасширеннаяПодсказка" id="94"/>
-						</CheckBoxField>
-						<InputField name="ПарамКолонкаСортировкиПартииСписания" id="65">
-							<DataPath>Объект.ПарамКолонкаСортировкиПартииСписания</DataPath>
+						<UsualGroup name="ГруппаGUID" id="97">
 							<Title>
 								<v8:item>
 									<v8:lang>ru</v8:lang>
-									<v8:content>Сортировать ВСД_Партии при заполнении ВСД по реквизиту</v8:content>
+									<v8:content>Группа GUID</v8:content>
 								</v8:item>
 							</Title>
 							<ToolTip>
 								<v8:item>
 									<v8:lang>ru</v8:lang>
-									<v8:content>Имя колонки справочника ВСД_Партия, по которой будет произведена сортировка при автоматическом распределинии партий</v8:content>
+									<v8:content>Группа GUID</v8:content>
 								</v8:item>
 							</ToolTip>
-							<Width>20</Width>
-							<AutoMaxWidth>false</AutoMaxWidth>
-							<HorizontalStretch>true</HorizontalStretch>
-							<ListChoiceMode>true</ListChoiceMode>
-							<ChooseType>false</ChooseType>
-							<ChoiceList>
-								<xr:Item>
-									<xr:Presentation/>
-									<xr:CheckState>0</xr:CheckState>
-									<xr:Value xsi:type="FormChoiceListDesTimeValue">
-										<Presentation>
-											<v8:item>
-												<v8:lang>ru</v8:lang>
-												<v8:content>Дата изменения</v8:content>
-											</v8:item>
-										</Presentation>
-										<Value xsi:type="xs:string">ДатаИзменения</Value>
-									</xr:Value>
-								</xr:Item>
-								<xr:Item>
-									<xr:Presentation/>
-									<xr:CheckState>0</xr:CheckState>
-									<xr:Value xsi:type="FormChoiceListDesTimeValue">
-										<Presentation>
-											<v8:item>
-												<v8:lang>ru</v8:lang>
-												<v8:content>Срок годности</v8:content>
-											</v8:item>
-										</Presentation>
-										<Value xsi:type="xs:string">ДатаСрокГодности1</Value>
-									</xr:Value>
-								</xr:Item>
-								<xr:Item>
-									<xr:Presentation/>
-									<xr:CheckState>0</xr:CheckState>
-									<xr:Value xsi:type="FormChoiceListDesTimeValue">
-										<Presentation>
-											<v8:item>
-												<v8:lang>ru</v8:lang>
-												<v8:content>Изготовлено</v8:content>
-											</v8:item>
-										</Presentation>
-										<Value xsi:type="xs:string">ДатаИзготовления1</Value>
-									</xr:Value>
-								</xr:Item>
-							</ChoiceList>
-							<ContextMenu name="ПарамКолонкаСортировкиПартииСписанияКонтекстноеМеню" id="66"/>
-							<ExtendedTooltip name="ПарамКолонкаСортировкиПартииСписанияРасширеннаяПодсказка" id="67"/>
-						</InputField>
-						<CheckBoxField name="ПарамЗнакСортировкиУбывание" id="68">
-							<DataPath>Объект.ПарамЗнакСортировкиУбывание</DataPath>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ThroughAlign>Use</ThroughAlign>
+							<ExtendedTooltip name="ГруппаGUIDРасширеннаяПодсказка" id="98"/>
+							<ChildItems>
+								<InputField name="GUID" id="10">
+									<DataPath>Объект.GUID</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<ContextMenu name="GUIDКонтекстноеМеню" id="11"/>
+									<ExtendedTooltip name="GUIDРасширеннаяПодсказка" id="12"/>
+								</InputField>
+								<InputField name="UUID" id="13">
+									<DataPath>Объект.UUID</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<ContextMenu name="UUIDКонтекстноеМеню" id="14"/>
+									<ExtendedTooltip name="UUIDРасширеннаяПодсказка" id="15"/>
+								</InputField>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаИНН" id="99">
 							<Title>
 								<v8:item>
 									<v8:lang>ru</v8:lang>
-									<v8:content>Сортировать Партии при подборе по убыванию LIFO</v8:content>
+									<v8:content>Группа ИНН</v8:content>
 								</v8:item>
 							</Title>
 							<ToolTip>
 								<v8:item>
 									<v8:lang>ru</v8:lang>
-									<v8:content>Сортировать вышеуказанный данные по убыванию</v8:content>
+									<v8:content>Группа ИНН</v8:content>
 								</v8:item>
 							</ToolTip>
-							<CheckBoxType>Auto</CheckBoxType>
-							<ContextMenu name="ПарамЗнакСортировкиУбываниеКонтекстноеМеню" id="69"/>
-							<ExtendedTooltip name="ПарамЗнакСортировкиУбываниеРасширеннаяПодсказка" id="70"/>
-						</CheckBoxField>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ThroughAlign>Use</ThroughAlign>
+							<ExtendedTooltip name="ГруппаИННРасширеннаяПодсказка" id="100"/>
+							<ChildItems>
+								<InputField name="ИНН" id="71">
+									<DataPath>Объект.ИНН</DataPath>
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<ContextMenu name="ИННКонтекстноеМеню" id="72"/>
+									<ExtendedTooltip name="ИННРасширеннаяПодсказка" id="73"/>
+								</InputField>
+								<InputField name="КПП" id="74">
+									<DataPath>Объект.КПП</DataPath>
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<ContextMenu name="КППКонтекстноеМеню" id="75"/>
+									<ExtendedTooltip name="КППРасширеннаяПодсказка" id="76"/>
+								</InputField>
+								<InputField name="ОГРН" id="16">
+									<DataPath>Объект.ОГРН</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<ContextMenu name="ОГРНКонтекстноеМеню" id="17"/>
+									<ExtendedTooltip name="ОГРНРасширеннаяПодсказка" id="18"/>
+								</InputField>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="Группа5" id="105">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Соответствует справочнику 1С</v8:content>
+								</v8:item>
+							</Title>
+							<Representation>None</Representation>
+							<ExtendedTooltip name="Группа5РасширеннаяПодсказка" id="106"/>
+							<ChildItems>
+								<InputField name="Контрагент" id="7">
+									<DataPath>Объект.Контрагент</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<ContextMenu name="КонтрагентКонтекстноеМеню" id="8"/>
+									<ExtendedTooltip name="КонтрагентРасширеннаяПодсказка" id="9"/>
+								</InputField>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаАдрес" id="101">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Адрес</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа адрес</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>Vertical</Group>
+							<Representation>None</Representation>
+							<ThroughAlign>Use</ThroughAlign>
+							<ExtendedTooltip name="ГруппаАдресРасширеннаяПодсказка" id="102"/>
+							<ChildItems>
+								<UsualGroup name="Группа4" id="103">
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="Группа4РасширеннаяПодсказка" id="104"/>
+									<ChildItems>
+										<InputField name="Страна" id="80">
+											<DataPath>Объект.Страна</DataPath>
+											<AutoMaxWidth>false</AutoMaxWidth>
+											<ContextMenu name="СтранаКонтекстноеМеню" id="81"/>
+											<ExtendedTooltip name="СтранаРасширеннаяПодсказка" id="82"/>
+										</InputField>
+										<InputField name="Регион" id="83">
+											<DataPath>Объект.Регион</DataPath>
+											<AutoMaxWidth>false</AutoMaxWidth>
+											<ContextMenu name="РегионКонтекстноеМеню" id="84"/>
+											<ExtendedTooltip name="РегионРасширеннаяПодсказка" id="85"/>
+										</InputField>
+										<InputField name="Город" id="86">
+											<DataPath>Объект.Город</DataPath>
+											<AutoMaxWidth>false</AutoMaxWidth>
+											<ContextMenu name="ГородКонтекстноеМеню" id="87"/>
+											<ExtendedTooltip name="ГородРасширеннаяПодсказка" id="88"/>
+										</InputField>
+									</ChildItems>
+								</UsualGroup>
+								<InputField name="Адрес" id="89">
+									<DataPath>Объект.Адрес</DataPath>
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<ContextMenu name="АдресКонтекстноеМеню" id="90"/>
+									<ExtendedTooltip name="АдресРасширеннаяПодсказка" id="91"/>
+								</InputField>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="грПерсональныеПараметрыСписанияПартий" id="95">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Персональные параметры списания партий</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Гр персональные параметры списания партий</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>Vertical</Group>
+							<Representation>StrongSeparation</Representation>
+							<ExtendedTooltip name="грПерсональныеПараметрыСписанияПартийРасширеннаяПодсказка" id="96"/>
+							<ChildItems>
+								<CheckBoxField name="ПерсональныеПараметрыСписанияПартий" id="92">
+									<DataPath>Объект.ПерсональныеПараметрыСписанияПартий</DataPath>
+									<TitleLocation>Right</TitleLocation>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="ПерсональныеПараметрыСписанияПартийКонтекстноеМеню" id="93"/>
+									<ExtendedTooltip name="ПерсональныеПараметрыСписанияПартийРасширеннаяПодсказка" id="94"/>
+								</CheckBoxField>
+								<InputField name="ПарамКолонкаСортировкиПартииСписания" id="65">
+									<DataPath>Объект.ПарамКолонкаСортировкиПартииСписания</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Сортировать ВСД_Партии при заполнении ВСД по реквизиту</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Имя колонки справочника ВСД_Партия, по которой будет произведена сортировка при автоматическом распределинии партий</v8:content>
+										</v8:item>
+									</ToolTip>
+									<Width>20</Width>
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<HorizontalStretch>true</HorizontalStretch>
+									<ListChoiceMode>true</ListChoiceMode>
+									<ChooseType>false</ChooseType>
+									<ChoiceList>
+										<xr:Item>
+											<xr:Presentation/>
+											<xr:CheckState>0</xr:CheckState>
+											<xr:Value xsi:type="FormChoiceListDesTimeValue">
+												<Presentation>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>Дата изменения</v8:content>
+													</v8:item>
+												</Presentation>
+												<Value xsi:type="xs:string">ДатаИзменения</Value>
+											</xr:Value>
+										</xr:Item>
+										<xr:Item>
+											<xr:Presentation/>
+											<xr:CheckState>0</xr:CheckState>
+											<xr:Value xsi:type="FormChoiceListDesTimeValue">
+												<Presentation>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>Срок годности</v8:content>
+													</v8:item>
+												</Presentation>
+												<Value xsi:type="xs:string">ДатаСрокГодности1</Value>
+											</xr:Value>
+										</xr:Item>
+										<xr:Item>
+											<xr:Presentation/>
+											<xr:CheckState>0</xr:CheckState>
+											<xr:Value xsi:type="FormChoiceListDesTimeValue">
+												<Presentation>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>Изготовлено</v8:content>
+													</v8:item>
+												</Presentation>
+												<Value xsi:type="xs:string">ДатаИзготовления1</Value>
+											</xr:Value>
+										</xr:Item>
+									</ChoiceList>
+									<ContextMenu name="ПарамКолонкаСортировкиПартииСписанияКонтекстноеМеню" id="66"/>
+									<ExtendedTooltip name="ПарамКолонкаСортировкиПартииСписанияРасширеннаяПодсказка" id="67"/>
+								</InputField>
+								<CheckBoxField name="ПарамЗнакСортировкиУбывание" id="68">
+									<DataPath>Объект.ПарамЗнакСортировкиУбывание</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Сортировать Партии при подборе по убыванию LIFO</v8:content>
+										</v8:item>
+									</Title>
+									<TitleLocation>Right</TitleLocation>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Сортировать вышеуказанный данные по убыванию</v8:content>
+										</v8:item>
+									</ToolTip>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="ПарамЗнакСортировкиУбываниеКонтекстноеМеню" id="69"/>
+									<ExtendedTooltip name="ПарамЗнакСортировкиУбываниеРасширеннаяПодсказка" id="70"/>
+								</CheckBoxField>
+							</ChildItems>
+						</UsualGroup>
 					</ChildItems>
 				</Page>
 				<Page name="Группа3" id="23">

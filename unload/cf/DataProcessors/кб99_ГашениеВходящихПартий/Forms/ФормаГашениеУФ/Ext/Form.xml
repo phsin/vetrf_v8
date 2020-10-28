@@ -243,7 +243,7 @@
 							<Title>
 								<v8:item>
 									<v8:lang>ru</v8:lang>
-									<v8:content>Группа отбора</v8:content>
+									<v8:content>Фильтр:</v8:content>
 								</v8:item>
 							</Title>
 							<ToolTip>
@@ -254,7 +254,6 @@
 							</ToolTip>
 							<Group>Horizontal</Group>
 							<Representation>None</Representation>
-							<ShowTitle>false</ShowTitle>
 							<ExtendedTooltip name="ГруппаОтбораРасширеннаяПодсказка" id="388"/>
 							<ChildItems>
 								<InputField name="ВыбрХозСубъект" id="389">
@@ -280,34 +279,16 @@
 									<ShowTitle>false</ShowTitle>
 									<ExtendedTooltip name="Группа18РасширеннаяПодсказка" id="371"/>
 									<ChildItems>
-										<InputField name="ВыбНачалоПериода" id="364">
-											<DataPath>ВыбНачалоПериода</DataPath>
-											<Title>
+										<LabelDecoration name="Декорация1" id="702">
+											<Title formatted="false">
 												<v8:item>
 													<v8:lang>ru</v8:lang>
-													<v8:content>Поступившие С</v8:content>
+													<v8:content>За период:</v8:content>
 												</v8:item>
 											</Title>
-											<ContextMenu name="ВыбНачалоПериодаКонтекстноеМеню" id="365"/>
-											<ExtendedTooltip name="ВыбНачалоПериодаРасширеннаяПодсказка" id="366"/>
-											<Events>
-												<Event name="OnChange">ВыбНачалоПериодаПриИзменении</Event>
-											</Events>
-										</InputField>
-										<InputField name="ВыбОкончаниеПериода" id="367">
-											<DataPath>ВыбОкончаниеПериода</DataPath>
-											<Title>
-												<v8:item>
-													<v8:lang>ru</v8:lang>
-													<v8:content>По</v8:content>
-												</v8:item>
-											</Title>
-											<ContextMenu name="ВыбОкончаниеПериодаКонтекстноеМеню" id="368"/>
-											<ExtendedTooltip name="ВыбОкончаниеПериодаРасширеннаяПодсказка" id="369"/>
-											<Events>
-												<Event name="OnChange">ВыбОкончаниеПериодаПриИзменении</Event>
-											</Events>
-										</InputField>
+											<ContextMenu name="Декорация1КонтекстноеМеню" id="703"/>
+											<ExtendedTooltip name="Декорация1РасширеннаяПодсказка" id="704"/>
+										</LabelDecoration>
 										<Button name="кнВыбратьПериодВСД" id="372">
 											<Type>UsualButton</Type>
 											<Width>4</Width>
@@ -323,6 +304,14 @@
 										</Button>
 										<InputField name="НомерТТН" id="692">
 											<DataPath>НомерТТН</DataPath>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>№ ТТН</v8:content>
+												</v8:item>
+											</Title>
+											<AutoMaxWidth>false</AutoMaxWidth>
+											<MaxWidth>10</MaxWidth>
 											<ContextMenu name="НомерТТНКонтекстноеМеню" id="693"/>
 											<ExtendedTooltip name="НомерТТНРасширеннаяПодсказка" id="694"/>
 											<Events>
@@ -1693,7 +1682,7 @@
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Кн выбрать период ВСД</v8:content>
+					<v8:content>Выбрать период прихода ВСД</v8:content>
 				</v8:item>
 			</Title>
 			<ToolTip>
