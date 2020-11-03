@@ -2,26 +2,26 @@
 <MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.8">
 	<DataProcessor uuid="01663917-61dc-44b8-8d66-0f94ea300694">
 		<InternalInfo>
-			<xr:GeneratedType name="DataProcessorObject.кб99_СверкаОстатков" category="Object">
+			<xr:GeneratedType name="DataProcessorObject.кб99_СверкаОстатковУТ10" category="Object">
 				<xr:TypeId>48c13e19-53b8-4ceb-9341-a6321cf0f01c</xr:TypeId>
 				<xr:ValueId>2f33502a-f9fd-4fc4-845d-33b9c040a426</xr:ValueId>
 			</xr:GeneratedType>
-			<xr:GeneratedType name="DataProcessorManager.кб99_СверкаОстатков" category="Manager">
+			<xr:GeneratedType name="DataProcessorManager.кб99_СверкаОстатковУТ10" category="Manager">
 				<xr:TypeId>9de73ac7-8409-4e03-a099-271c237fd5b9</xr:TypeId>
 				<xr:ValueId>945b0f6e-08a4-4e6e-8b10-489113f41647</xr:ValueId>
 			</xr:GeneratedType>
 		</InternalInfo>
 		<Properties>
-			<Name>кб99_СверкаОстатков</Name>
+			<Name>кб99_СверкаОстатковУТ10</Name>
 			<Synonym>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>кб99 Сверка остатков партий (КА1, УТ10)</v8:content>
+					<v8:content>кб99 Сверка остатков партий [КА1, УТ10]</v8:content>
 				</v8:item>
 			</Synonym>
 			<Comment/>
 			<UseStandardCommands>true</UseStandardCommands>
-			<DefaultForm>DataProcessor.кб99_СверкаОстатков.Form.Форма</DefaultForm>
+			<DefaultForm>DataProcessor.кб99_СверкаОстатковУТ10.Form.Форма</DefaultForm>
 			<AuxiliaryForm/>
 			<IncludeHelpInContents>false</IncludeHelpInContents>
 			<ExtendedPresentation/>
@@ -200,11 +200,11 @@
 			</Attribute>
 			<TabularSection uuid="def495e7-5f80-40e1-ab76-b57383b5ffa9">
 				<InternalInfo>
-					<xr:GeneratedType name="DataProcessorTabularSection.кб99_СверкаОстатков.Остатки1С" category="TabularSection">
+					<xr:GeneratedType name="DataProcessorTabularSection.кб99_СверкаОстатковУТ10.Остатки1С" category="TabularSection">
 						<xr:TypeId>c14383be-9a60-4d0a-8f65-5b2719e8eaa9</xr:TypeId>
 						<xr:ValueId>b3811a6f-bfdb-484b-bde5-a53a663203cb</xr:ValueId>
 					</xr:GeneratedType>
-					<xr:GeneratedType name="DataProcessorTabularSectionRow.кб99_СверкаОстатков.Остатки1С" category="TabularSectionRow">
+					<xr:GeneratedType name="DataProcessorTabularSectionRow.кб99_СверкаОстатковУТ10.Остатки1С" category="TabularSectionRow">
 						<xr:TypeId>0e838126-6fc8-4fce-8966-7b64f1b49542</xr:TypeId>
 						<xr:ValueId>762b6c52-4b28-4336-a1d6-7ee5e559af1f</xr:ValueId>
 					</xr:GeneratedType>
@@ -448,11 +448,11 @@
 			</TabularSection>
 			<TabularSection uuid="8c7b1775-ab10-4722-8b44-b2beb27c4988">
 				<InternalInfo>
-					<xr:GeneratedType name="DataProcessorTabularSection.кб99_СверкаОстатков.ОстаткиМеркурий" category="TabularSection">
+					<xr:GeneratedType name="DataProcessorTabularSection.кб99_СверкаОстатковУТ10.ОстаткиМеркурий" category="TabularSection">
 						<xr:TypeId>dd7a8c10-a933-4ba7-8470-98bb4c2471e2</xr:TypeId>
 						<xr:ValueId>21b5c228-9de8-4a3a-8d4b-b4648709a92b</xr:ValueId>
 					</xr:GeneratedType>
-					<xr:GeneratedType name="DataProcessorTabularSectionRow.кб99_СверкаОстатков.ОстаткиМеркурий" category="TabularSectionRow">
+					<xr:GeneratedType name="DataProcessorTabularSectionRow.кб99_СверкаОстатковУТ10.ОстаткиМеркурий" category="TabularSectionRow">
 						<xr:TypeId>5d7e5972-aa9f-422d-a791-8ff5136d3c56</xr:TypeId>
 						<xr:ValueId>8b6cb469-e074-485a-b1da-8e50c48191d6</xr:ValueId>
 					</xr:GeneratedType>
@@ -1006,11 +1006,11 @@
 			</TabularSection>
 			<TabularSection uuid="1a6511b7-81db-4969-9231-52fdf90d3e12">
 				<InternalInfo>
-					<xr:GeneratedType name="DataProcessorTabularSection.кб99_СверкаОстатков.СверкаСходится" category="TabularSection">
+					<xr:GeneratedType name="DataProcessorTabularSection.кб99_СверкаОстатковУТ10.СверкаСходится" category="TabularSection">
 						<xr:TypeId>2bcfb14c-933c-4d79-8cd4-88309983a65a</xr:TypeId>
 						<xr:ValueId>c809ff71-31e9-4ddb-a9a9-03372bbe75a9</xr:ValueId>
 					</xr:GeneratedType>
-					<xr:GeneratedType name="DataProcessorTabularSectionRow.кб99_СверкаОстатков.СверкаСходится" category="TabularSectionRow">
+					<xr:GeneratedType name="DataProcessorTabularSectionRow.кб99_СверкаОстатковУТ10.СверкаСходится" category="TabularSectionRow">
 						<xr:TypeId>f2142cfe-9526-439a-bfaf-445a189f9b8a</xr:TypeId>
 						<xr:ValueId>d562c327-fa98-4dc6-8cfa-eccd3680c280</xr:ValueId>
 					</xr:GeneratedType>
@@ -1363,11 +1363,11 @@
 			</TabularSection>
 			<TabularSection uuid="098f2bb7-ed93-4f5c-962c-eaf74ac48a67">
 				<InternalInfo>
-					<xr:GeneratedType name="DataProcessorTabularSection.кб99_СверкаОстатков.СверкаКорректировка" category="TabularSection">
+					<xr:GeneratedType name="DataProcessorTabularSection.кб99_СверкаОстатковУТ10.СверкаКорректировка" category="TabularSection">
 						<xr:TypeId>a8e54c1a-40e9-4a15-8461-81e9cab593db</xr:TypeId>
 						<xr:ValueId>d6847e1e-046f-4819-8521-de368feca8e3</xr:ValueId>
 					</xr:GeneratedType>
-					<xr:GeneratedType name="DataProcessorTabularSectionRow.кб99_СверкаОстатков.СверкаКорректировка" category="TabularSectionRow">
+					<xr:GeneratedType name="DataProcessorTabularSectionRow.кб99_СверкаОстатковУТ10.СверкаКорректировка" category="TabularSectionRow">
 						<xr:TypeId>95cb2e7f-3ee2-460b-bbae-90d8ee5d18ee</xr:TypeId>
 						<xr:ValueId>3e3c4318-4ab2-4bde-a5bf-8145f99989d4</xr:ValueId>
 					</xr:GeneratedType>
@@ -1719,11 +1719,11 @@
 			</TabularSection>
 			<TabularSection uuid="f8fc76a3-20ba-442a-96ac-09df3642f7e4">
 				<InternalInfo>
-					<xr:GeneratedType name="DataProcessorTabularSection.кб99_СверкаОстатков.ОстаткиМеркурийУдаление" category="TabularSection">
+					<xr:GeneratedType name="DataProcessorTabularSection.кб99_СверкаОстатковУТ10.ОстаткиМеркурийУдаление" category="TabularSection">
 						<xr:TypeId>b9ce95ac-9834-40a9-9517-970947555d0f</xr:TypeId>
 						<xr:ValueId>ba3ffec0-d5d9-4d8e-924b-f5471eaab9f1</xr:ValueId>
 					</xr:GeneratedType>
-					<xr:GeneratedType name="DataProcessorTabularSectionRow.кб99_СверкаОстатков.ОстаткиМеркурийУдаление" category="TabularSectionRow">
+					<xr:GeneratedType name="DataProcessorTabularSectionRow.кб99_СверкаОстатковУТ10.ОстаткиМеркурийУдаление" category="TabularSectionRow">
 						<xr:TypeId>e8296b6c-65aa-4812-8d56-53a9814b6b28</xr:TypeId>
 						<xr:ValueId>afa988f7-5b5d-438e-80f1-24a477f86b84</xr:ValueId>
 					</xr:GeneratedType>
