@@ -40,7 +40,7 @@
 			<title xsi:type="v8:LocalStringType">
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Количество шт</v8:content>
+					<v8:content>Номенклатура остаток (шт)</v8:content>
 				</v8:item>
 			</title>
 		</field>
@@ -67,6 +67,32 @@
 		<field xsi:type="DataSetFieldField">
 			<dataPath>КоличествоОстатокНетто</dataPath>
 			<field>КоличествоОстатокНетто</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Номенклатура остаток вес (кг)</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ДатаИзготовления1</dataPath>
+			<field>ДатаИзготовления1</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Дата изготовления1</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ДатаСрокГодности1</dataPath>
+			<field>ДатаСрокГодности1</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Дата срок годности1</v8:content>
+				</v8:item>
+			</title>
 		</field>
 		<dataSource>ИсточникДанных1</dataSource>
 		<query>ВЫБРАТЬ
@@ -76,8 +102,10 @@
 	ВСД_Партия.НомерПартии,
 	ВСД_Партия.НомерЗаписи,
 	ВСД_Партия.Количество КАК КоличествоПартия,
-	ЕдиницыИзмерения.ВесНетто * ТоварыНаСкладахОстатки.КоличествоОстаток КАК КоличествоОстатокНетто,
-	ТоварыНаСкладахОстатки.КоличествоОстаток КАК КоличествоШт
+	ЕдиницыИзмерения.Вес * ТоварыНаСкладахОстатки.КоличествоОстаток КАК КоличествоОстатокНетто,
+	ТоварыНаСкладахОстатки.КоличествоОстаток КАК КоличествоШт,
+	ВСД_Партия.ДатаИзготовления1,
+	ВСД_Партия.ДатаСрокГодности1
 ИЗ
 	Справочник.ВСД_Соответсвия КАК ВСД_Соответсвия
 		ВНУТРЕННЕЕ СОЕДИНЕНИЕ Справочник.ВСД_Партия КАК ВСД_Партия
@@ -86,22 +114,12 @@
 		ПО ВСД_Соответсвия.Владелец = ТоварыНаСкладахОстатки.Номенклатура
 		ВНУТРЕННЕЕ СОЕДИНЕНИЕ Справочник.ЕдиницыИзмерения КАК ЕдиницыИзмерения
 		ПО ВСД_Соответсвия.Владелец = ЕдиницыИзмерения.Владелец
-			И ВСД_Соответсвия.Владелец.БазоваяЕдиницаИзмерения = ЕдиницыИзмерения.ЕдиницаПоКлассификатору</query>
+			И ВСД_Соответсвия.Владелец.БазоваяЕдиницаИзмерения = ЕдиницыИзмерения.ЕдиницаПоКлассификатору
+ГДЕ
+	НЕ ВСД_Партия.ПометкаУдаления
+	И ТоварыНаСкладахОстатки.Склад = &amp;Склад
+	И ВСД_Партия.Получатель_Площадка = &amp;Получатель_Площадка</query>
 	</dataSet>
-	<calculatedField>
-		<dataPath>Итог</dataPath>
-		<expression/>
-		<title xsi:type="v8:LocalStringType">
-			<v8:item>
-				<v8:lang>ru</v8:lang>
-				<v8:content>Итог</v8:content>
-			</v8:item>
-		</title>
-	</calculatedField>
-	<totalField>
-		<dataPath>КоличествоОстатокНетто</dataPath>
-		<expression>Сумма(КоличествоОстатокНетто)</expression>
-	</totalField>
 	<totalField>
 		<dataPath>КоличествоПартия</dataPath>
 		<expression>Сумма(КоличествоПартия)</expression>
@@ -109,6 +127,10 @@
 	<totalField>
 		<dataPath>КоличествоШт</dataPath>
 		<expression>Сумма(КоличествоШт)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>КоличествоОстатокНетто</dataPath>
+		<expression>Сумма(КоличествоОстатокНетто)</expression>
 	</totalField>
 	<parameter>
 		<name>Период</name>
@@ -127,6 +149,31 @@
 		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
 		<useRestriction>false</useRestriction>
 	</parameter>
+	<parameter>
+		<name>Склад</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Склад</v8:content>
+			</v8:item>
+		</title>
+		<value xsi:nil="true"/>
+		<useRestriction>false</useRestriction>
+	</parameter>
+	<parameter>
+		<name>Получатель_Площадка</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Получатель площадка</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:CatalogRef.ВСД_Площадка</v8:Type>
+		</valueType>
+		<value xsi:nil="true"/>
+		<useRestriction>true</useRestriction>
+	</parameter>
 	<settingsVariant>
 		<dcsset:name>Основной</dcsset:name>
 		<dcsset:presentation xsi:type="xs:string">Основной</dcsset:presentation>
@@ -139,7 +186,14 @@
 					<dcsset:field>ВСД_Партия</dcsset:field>
 				</dcsset:item>
 				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:use>false</dcsset:use>
 					<dcsset:field>НомерПартии</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ДатаИзготовления1</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ДатаСрокГодности1</dcsset:field>
 				</dcsset:item>
 				<dcsset:item xsi:type="dcsset:SelectedItemField">
 					<dcsset:field>КоличествоПартия</dcsset:field>
@@ -151,6 +205,19 @@
 					<dcsset:field>КоличествоОстатокНетто</dcsset:field>
 				</dcsset:item>
 			</dcsset:selection>
+			<dcsset:dataParameters>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>Период</dcscor:parameter>
+					<dcscor:value xsi:type="xs:dateTime">0001-01-01T00:00:00</dcscor:value>
+					<dcsset:userSettingPresentation xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Склад</v8:content>
+						</v8:item>
+					</dcsset:userSettingPresentation>
+				</dcscor:item>
+			</dcsset:dataParameters>
 			<dcsset:order>
 				<dcsset:item xsi:type="dcsset:OrderItemField">
 					<dcsset:field>Номенклатура</dcsset:field>
@@ -159,9 +226,66 @@
 			</dcsset:order>
 			<dcsset:conditionalAppearance>
 				<dcsset:item>
-					<dcsset:selection/>
-					<dcsset:filter/>
-					<dcsset:appearance/>
+					<dcsset:selection>
+						<dcsset:item>
+							<dcsset:field>КоличествоШт</dcsset:field>
+						</dcsset:item>
+						<dcsset:item>
+							<dcsset:field>КоличествоОстатокНетто</dcsset:field>
+						</dcsset:item>
+					</dcsset:selection>
+					<dcsset:filter>
+						<dcsset:item xsi:type="dcsset:FilterItemComparison">
+							<dcsset:left xsi:type="dcscor:Field">СистемныеПоля.Уровень</dcsset:left>
+							<dcsset:comparisonType>Equal</dcsset:comparisonType>
+							<dcsset:right xsi:type="xs:decimal">2</dcsset:right>
+						</dcsset:item>
+					</dcsset:filter>
+					<dcsset:appearance>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:use>false</dcscor:use>
+							<dcscor:parameter>ЦветФона</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:Color">#FF0000</dcscor:value>
+						</dcscor:item>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:parameter>Текст</dcscor:parameter>
+							<dcscor:value xsi:type="v8:LocalStringType">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>  </v8:content>
+								</v8:item>
+							</dcscor:value>
+						</dcscor:item>
+					</dcsset:appearance>
+					<dcsset:useInHierarchicalGroup>DontUse</dcsset:useInHierarchicalGroup>
+				</dcsset:item>
+				<dcsset:item>
+					<dcsset:selection>
+						<dcsset:item>
+							<dcsset:field>КоличествоОстатокНетто</dcsset:field>
+						</dcsset:item>
+						<dcsset:item>
+							<dcsset:field>КоличествоШт</dcsset:field>
+						</dcsset:item>
+					</dcsset:selection>
+					<dcsset:filter>
+						<dcsset:item xsi:type="dcsset:FilterItemComparison">
+							<dcsset:left xsi:type="dcscor:Field">КоличествоОстатокНетто</dcsset:left>
+							<dcsset:comparisonType>LessOrEqual</dcsset:comparisonType>
+							<dcsset:right xsi:type="xs:decimal">0</dcsset:right>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:FilterItemComparison">
+							<dcsset:left xsi:type="dcscor:Field">КоличествоШт</dcsset:left>
+							<dcsset:comparisonType>LessOrEqual</dcsset:comparisonType>
+							<dcsset:right xsi:type="xs:decimal">0</dcsset:right>
+						</dcsset:item>
+					</dcsset:filter>
+					<dcsset:appearance>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:parameter>ЦветТекста</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:Color">style:NegativeTextColor</dcscor:value>
+						</dcscor:item>
+					</dcsset:appearance>
 				</dcsset:item>
 			</dcsset:conditionalAppearance>
 			<dcsset:item xsi:type="dcsset:StructureItemGroup">
