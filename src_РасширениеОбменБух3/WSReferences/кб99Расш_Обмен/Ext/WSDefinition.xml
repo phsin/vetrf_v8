@@ -1,0 +1,165 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns="http://schemas.xmlsoap.org/wsdl/"
+		xmlns:soap12bind="http://schemas.xmlsoap.org/wsdl/soap12/"
+		xmlns:soapbind="http://schemas.xmlsoap.org/wsdl/soap/"
+		xmlns:tns="kb99_Obmen"
+		xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy"
+		xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd"
+		xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+		xmlns:xsd1="kb99"
+		xmlns:xsd2="kb99_Obmen"
+		name="kb99_Obmen"
+		targetNamespace="kb99_Obmen">
+	<types>
+		<xs:schema xmlns:tns="kb99"
+				xmlns:xs="http://www.w3.org/2001/XMLSchema"
+				targetNamespace="kb99"
+				attributeFormDefault="unqualified"
+				elementFormDefault="qualified">
+			<xs:complexType name="ДокументРеализация">
+				<xs:sequence>
+					<xs:element name="Контрагент"/>
+					<xs:element name="тчТовары"
+							type="xsd1:ТабличнаяЧасть"/>
+					<xs:element name="Организация"/>
+				</xs:sequence>
+				<xs:attribute name="Ссылка"
+						use="required"/>
+				<xs:attribute name="Номер"
+						use="required"/>
+				<xs:attribute name="Дата"
+						type="xs:dateTime"
+						use="required"/>
+			</xs:complexType>
+			<xs:complexType name="ДокументРеализацияТовары">
+				<xs:sequence>
+					<xs:element name="Номенклатура"/>
+				</xs:sequence>
+				<xs:attribute name="Количество"
+						use="required"/>
+				<xs:attribute name="Цена"
+						use="required"/>
+				<xs:attribute name="Сумма"
+						use="required"/>
+			</xs:complexType>
+			<xs:complexType name="СправочникКонтрагенты">
+				<xs:attribute name="Ссылка"
+						use="required"/>
+				<xs:attribute name="Код"
+						use="required"/>
+				<xs:attribute name="Наименование"
+						use="required"/>
+				<xs:attribute name="НаименованиеПолное"
+						use="required"/>
+			</xs:complexType>
+			<xs:complexType name="СправочникНоменклатура">
+				<xs:attribute name="Ссылка"
+						use="required"/>
+				<xs:attribute name="Код"
+						use="required"/>
+				<xs:attribute name="Наименование"
+						use="required"/>
+				<xs:attribute name="НаименованиеПолное"
+						use="required"/>
+			</xs:complexType>
+			<xs:complexType name="СправочникОрганизации">
+				<xs:attribute name="Ссылка"
+						use="required"/>
+				<xs:attribute name="Код"
+						use="required"/>
+				<xs:attribute name="Наименование"
+						use="required"/>
+			</xs:complexType>
+			<xs:complexType name="ТабличнаяЧасть">
+				<xs:sequence>
+					<xs:element name="Строки"
+							minOccurs="0"
+							maxOccurs="unbounded"/>
+				</xs:sequence>
+			</xs:complexType>
+		</xs:schema>
+		<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+				xmlns:xs1="kb99"
+				xmlns:xs2="kb99_Obmen"
+				targetNamespace="kb99_Obmen"
+				elementFormDefault="qualified">
+			<xs:import namespace="kb99"/>
+			<xs:element name="Receieve_doc">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="inputData"
+								type="xs:string"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="Receieve_docResponse">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="return"
+								type="xs:string"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+		</xs:schema>
+	</types>
+	<message name="Receieve_docRequestMessage">
+		<part name="parameters"
+				element="tns:Receieve_doc"/>
+	</message>
+	<message name="Receieve_docResponseMessage">
+		<part name="parameters"
+				element="tns:Receieve_docResponse"/>
+	</message>
+	<portType name="kb99_ObmenPortType">
+		<operation name="Receieve_doc">
+			<input name="Receieve_docRequest"
+					message="tns:Receieve_docRequestMessage"/>
+			<output name="Receieve_docResponse"
+					message="tns:Receieve_docResponseMessage"/>
+		</operation>
+	</portType>
+	<binding name="kb99_ObmenSoapBinding"
+			type="tns:kb99_ObmenPortType">
+		<soapbind:binding style="document"
+				transport="http://schemas.xmlsoap.org/soap/http"/>
+		<operation name="Receieve_doc">
+			<soapbind:operation style="document"
+					soapAction="kb99_Obmen#kb99_Obmen:Receieve_doc"/>
+			<input>
+				<soapbind:body use="literal"/>
+			</input>
+			<output>
+				<soapbind:body use="literal"/>
+			</output>
+		</operation>
+	</binding>
+	<binding name="kb99_ObmenSoap12Binding"
+			type="tns:kb99_ObmenPortType">
+		<soap12bind:binding style="document"
+				transport="http://schemas.xmlsoap.org/soap/http"/>
+		<operation name="Receieve_doc">
+			<soap12bind:operation style="document"
+					soapAction="kb99_Obmen#kb99_Obmen:Receieve_doc"/>
+			<input>
+				<soap12bind:body use="literal"/>
+			</input>
+			<output>
+				<soap12bind:body use="literal"/>
+			</output>
+		</operation>
+	</binding>
+	<service name="kb99_Obmen">
+		<port name="kb99_ObmenSoap"
+				binding="tns:kb99_ObmenSoapBinding">
+			<documentation> 
+				<wsi:Claim xmlns:wsi="http://ws-i.org/schemas/conformanceClaim/"
+						conformsTo="http://ws-i.org/profiles/basic/1.1"/>
+			</documentation>
+			<soapbind:address location="http://kb99.pro:48888/kb99_vetis/ws/kb99_Obmen.1cws"/>
+		</port>
+		<port name="kb99_ObmenSoap12"
+				binding="tns:kb99_ObmenSoap12Binding">
+			<soap12bind:address location="http://kb99.pro:48888/kb99_vetis/ws/kb99_Obmen.1cws"/>
+		</port>
+	</service>
+</definitions>
