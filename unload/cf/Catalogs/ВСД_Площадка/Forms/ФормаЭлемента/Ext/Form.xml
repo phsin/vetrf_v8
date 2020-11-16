@@ -41,6 +41,12 @@
 									<ContextMenu name="НомерПлощадкиКонтекстноеМеню" id="23"/>
 									<ExtendedTooltip name="НомерПлощадкиРасширеннаяПодсказка" id="24"/>
 								</InputField>
+								<CheckBoxField name="ИгнорироватьПриГрупповомГашении" id="147">
+									<DataPath>Объект.ИгнорироватьПриГрупповомГашении</DataPath>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="ИгнорироватьПриГрупповомГашенииКонтекстноеМеню" id="148"/>
+									<ExtendedTooltip name="ИгнорироватьПриГрупповомГашенииРасширеннаяПодсказка" id="149"/>
+								</CheckBoxField>
 								<CheckBoxField name="Активна" id="100">
 									<DataPath>Объект.Активен</DataPath>
 									<SkipOnInput>true</SkipOnInput>

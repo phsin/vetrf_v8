@@ -356,18 +356,41 @@
 							<ContextMenu name="ВСДВходящиеКонтекстноеМеню" id="46"/>
 							<AutoCommandBar name="ВСДВходящиеКоманднаяПанель" id="47">
 								<ChildItems>
-									<Button name="ОтметитьВсеДокументы" id="261">
-										<Type>CommandBarButton</Type>
-										<Representation>Picture</Representation>
-										<OnlyInAllActions>true</OnlyInAllActions>
-										<CommandName>Form.Command.кнОтметитьВсеДокументы</CommandName>
+									<Popup name="ГруппаОтметитьВсеДокументы" id="705">
+										<Title>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Группа отметить все документы</v8:content>
+											</v8:item>
+										</Title>
+										<ToolTip>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Группа отметить все документы</v8:content>
+											</v8:item>
+										</ToolTip>
 										<Picture>
 											<xr:Ref>StdPicture.CheckAll</xr:Ref>
 											<xr:LoadTransparent>true</xr:LoadTransparent>
 										</Picture>
-										<ToolTipRepresentation>Balloon</ToolTipRepresentation>
-										<ExtendedTooltip name="ОтметитьВсеДокументыРасширеннаяПодсказка" id="262"/>
-									</Button>
+										<Representation>Picture</Representation>
+										<ExtendedTooltip name="ГруппаОтметитьВсеДокументыРасширеннаяПодсказка" id="706"/>
+										<ChildItems>
+											<Button name="ОтметитьВсеДокументы" id="261">
+												<Type>CommandBarButton</Type>
+												<Representation>Picture</Representation>
+												<OnlyInAllActions>true</OnlyInAllActions>
+												<CommandName>Form.Command.кнОтметитьВсеДокументы</CommandName>
+												<ToolTipRepresentation>Balloon</ToolTipRepresentation>
+												<ExtendedTooltip name="ОтметитьВсеДокументыРасширеннаяПодсказка" id="262"/>
+											</Button>
+											<Button name="ВСДВходящиекнОтметитьПринятыеНаСклад" id="707">
+												<Type>CommandBarButton</Type>
+												<CommandName>Form.Command.кнОтметитьПринятыеНаСклад</CommandName>
+												<ExtendedTooltip name="ВСДВходящиекнОтметитьПринятыеНаСкладРасширеннаяПодсказка" id="708"/>
+											</Button>
+										</ChildItems>
+									</Popup>
 									<Button name="СнятьОтметкиДокументов" id="263">
 										<Type>CommandBarButton</Type>
 										<Representation>Picture</Representation>
@@ -1490,7 +1513,7 @@
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Отметить все документы</v8:content>
+					<v8:content>Все</v8:content>
 				</v8:item>
 			</Title>
 			<ToolTip>
@@ -1831,6 +1854,21 @@
 			</Picture>
 			<Action>кнРаспределитьПродукцию</Action>
 			<Representation>TextPicture</Representation>
+		</Command>
+		<Command name="кнОтметитьПринятыеНаСклад" id="22">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Принятые на склад</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Кн отметить принятые на склад</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>кнОтметитьПринятыеНаСклад</Action>
 		</Command>
 	</Commands>
 </Form>
