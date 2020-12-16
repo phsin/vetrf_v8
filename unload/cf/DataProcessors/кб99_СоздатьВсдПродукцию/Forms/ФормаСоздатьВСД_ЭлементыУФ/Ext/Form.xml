@@ -294,10 +294,6 @@
 												<ContextMenu name="ВСДЭлементыУправлениеПоискомКонтекстноеМеню" id="39"/>
 												<ExtendedTooltip name="ВСДЭлементыУправлениеПоискомРасширеннаяПодсказка" id="40"/>
 											</SearchControlAddition>
-											<Events>
-												<Event name="BeforeAddRow">ВСДЭлементыПередНачаломДобавления</Event>
-												<Event name="BeforeRowChange">ВСДЭлементыПередНачаломИзменения</Event>
-											</Events>
 											<ChildItems>
 												<LabelField name="ВСДЭлементыНомерСтроки" id="121">
 													<DataPath>Объект.ВСДЭлементы.LineNumber</DataPath>

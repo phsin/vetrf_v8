@@ -486,10 +486,6 @@
 								<ContextMenu name="дсСпецификацияУправлениеПоискомКонтекстноеМеню" id="128"/>
 								<ExtendedTooltip name="дсСпецификацияУправлениеПоискомРасширеннаяПодсказка" id="129"/>
 							</SearchControlAddition>
-							<Events>
-								<Event name="BeforeAddRow">дсСпецификацияПередНачаломДобавления</Event>
-								<Event name="ChoiceProcessing">дсСпецификацияОбработкаВыбора</Event>
-							</Events>
 							<ChildItems>
 								<LabelField name="дсСпецификацияСырье" id="130">
 									<DataPath>дсСпецификация.Сырье</DataPath>

@@ -1537,18 +1537,6 @@
 											<ShowTitle>false</ShowTitle>
 											<ExtendedTooltip name="Группа14РасширеннаяПодсказка" id="586"/>
 											<ChildItems>
-												<Button name="кнПолучитьПартии14" id="481">
-													<Type>UsualButton</Type>
-													<Visible>false</Visible>
-													<CommandName>Form.Command.кнПолучитьПартии14</CommandName>
-													<Title>
-														<v8:item>
-															<v8:lang>ru</v8:lang>
-															<v8:content>Получить Партии [Ветис v1] (Фильтр не учитывается)</v8:content>
-														</v8:item>
-													</Title>
-													<ExtendedTooltip name="кнПолучитьПартии14РасширеннаяПодсказка" id="482"/>
-												</Button>
 												<Button name="кнПолучитьПартии" id="285">
 													<Type>UsualButton</Type>
 													<MaxWidth>50</MaxWidth>
@@ -2631,22 +2619,6 @@
 				</v8:item>
 			</ToolTip>
 			<Action>кнСоздатьВСДЭлементы</Action>
-			<CurrentRowUse>DontUse</CurrentRowUse>
-		</Command>
-		<Command name="кнПолучитьПартии14" id="50">
-			<Title>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Получить партии (v1.4)</v8:content>
-				</v8:item>
-			</Title>
-			<ToolTip>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Получить партии версия 1.4</v8:content>
-				</v8:item>
-			</ToolTip>
-			<Action>кнПолучитьПартии14</Action>
 			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="кнПолучитьПартии2" id="52">
