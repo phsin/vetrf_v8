@@ -376,13 +376,10 @@
 										<Representation>Picture</Representation>
 										<ExtendedTooltip name="ГруппаОтметитьВсеДокументыРасширеннаяПодсказка" id="706"/>
 										<ChildItems>
-											<Button name="ОтметитьВсеДокументы" id="261">
+											<Button name="ВСДВходящиекнОтметитьТолькоВыбранные" id="709">
 												<Type>CommandBarButton</Type>
-												<Representation>Picture</Representation>
-												<OnlyInAllActions>true</OnlyInAllActions>
-												<CommandName>Form.Command.кнОтметитьВсеДокументы</CommandName>
-												<ToolTipRepresentation>Balloon</ToolTipRepresentation>
-												<ExtendedTooltip name="ОтметитьВсеДокументыРасширеннаяПодсказка" id="262"/>
+												<CommandName>Form.Command.кнОтметитьТолькоВыбранные</CommandName>
+												<ExtendedTooltip name="ВСДВходящиекнОтметитьТолькоВыбранныеРасширеннаяПодсказка" id="710"/>
 											</Button>
 											<Button name="ВСДВходящиекнОтметитьПринятыеНаСклад" id="707">
 												<Type>CommandBarButton</Type>
@@ -1513,7 +1510,7 @@
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Все</v8:content>
+					<v8:content>+ Все (без ошибок)</v8:content>
 				</v8:item>
 			</Title>
 			<ToolTip>
@@ -1859,7 +1856,7 @@
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Принятые на склад</v8:content>
+					<v8:content>+ все принятые на склад [без ошибок]</v8:content>
 				</v8:item>
 			</Title>
 			<ToolTip>
@@ -1869,6 +1866,21 @@
 				</v8:item>
 			</ToolTip>
 			<Action>кнОтметитьПринятыеНаСклад</Action>
+		</Command>
+		<Command name="кнОтметитьТолькоВыбранные" id="23">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>+ только выбранные</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Кн отметить только выбранные</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>кнОтметитьТолькоВыбранные</Action>
 		</Command>
 	</Commands>
 </Form>

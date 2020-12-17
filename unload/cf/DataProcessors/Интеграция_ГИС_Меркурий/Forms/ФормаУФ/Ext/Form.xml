@@ -1390,6 +1390,12 @@
 										<Event name="StartChoice">ПартииПартияНачалоВыбора</Event>
 									</Events>
 								</InputField>
+								<InputField name="ПартииОстаток" id="677">
+									<DataPath>Объект.Партии.Остаток</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ПартииОстатокКонтекстноеМеню" id="678"/>
+									<ExtendedTooltip name="ПартииОстатокРасширеннаяПодсказка" id="679"/>
+								</InputField>
 								<InputField name="ПартииКоличество" id="213">
 									<DataPath>Объект.Партии.Количество</DataPath>
 									<EditMode>EnterOnInput</EditMode>
