@@ -415,6 +415,11 @@
 											</Picture>
 											<ExtendedTooltip name="КнопкаПлощадкиРасширеннаяПодсказка" id="536"/>
 											<ChildItems>
+												<Button name="ЗагрузитьПлощадкиСКонтролемЗагруженныхХС" id="680">
+													<Type>CommandBarButton</Type>
+													<CommandName>Form.Command.ЗагрузитьПлощадкиСКонтролемЗагруженныхХС</CommandName>
+													<ExtendedTooltip name="ЗагрузитьПлощадкиСКонтролемЗагруженныхХСРасширеннаяПодсказка" id="681"/>
+												</Button>
 												<Button name="ЗагрузитьПлощадкиПоСпискуДокументов" id="257">
 													<Type>CommandBarButton</Type>
 													<Representation>PictureAndText</Representation>
@@ -2607,6 +2612,25 @@
 				</v8:item>
 			</ToolTip>
 			<Action>кнПечатьНаборныйЛист</Action>
+		</Command>
+		<Command name="ЗагрузитьПлощадкиСКонтролемЗагруженныхХС" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Загрузить площадки с контролем загруженных ХС</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Загрузить площадки с контролем загруженных ХС</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>CommonPicture.кб99_check</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ЗагрузитьПлощадкиСКонтролемЗагруженныхХС</Action>
 		</Command>
 	</Commands>
 </Form>
