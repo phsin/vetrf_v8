@@ -1040,6 +1040,11 @@
 										</InputField>
 									</ChildItems>
 								</UsualGroup>
+								<InputField name="МаксимальноеКоличествоПартийСписанияВДокументе" id="719">
+									<DataPath>Объект.МаксимальноеКоличествоПартийСписанияВДокументе</DataPath>
+									<ContextMenu name="МаксимальноеКоличествоПартийСписанияВДокументеКонтекстноеМеню" id="720"/>
+									<ExtendedTooltip name="МаксимальноеКоличествоПартийСписанияВДокументеРасширеннаяПодсказка" id="721"/>
+								</InputField>
 								<UsualGroup name="ГруппаПартии" id="708">
 									<Title>
 										<v8:item>
@@ -1158,6 +1163,12 @@
 										</InputField>
 									</ChildItems>
 								</UsualGroup>
+								<CheckBoxField name="ПоказыватьПросроченныеПартии" id="716">
+									<DataPath>Объект.ПоказыватьПросроченныеПартии</DataPath>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="ПоказыватьПросроченныеПартииКонтекстноеМеню" id="717"/>
+									<ExtendedTooltip name="ПоказыватьПросроченныеПартииРасширеннаяПодсказка" id="718"/>
+								</CheckBoxField>
 								<UsualGroup name="ГруппаВСД2_Производство" id="704">
 									<Title>
 										<v8:item>
