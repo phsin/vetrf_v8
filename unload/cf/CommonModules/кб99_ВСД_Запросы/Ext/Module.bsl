@@ -5927,6 +5927,10 @@
 			ДокОбъект.УстановитьПометкуУдаления(Ложь);
 			Докобъект.СтатусВСД = СтатусВСД;											
 			ДокОбъект.Записать( РежимЗаписиДокумента.Проведение );
+		ИначеЕсли (ТипЗнч(ДокСсылка) = Тип("ДокументСсылка.ВСД2_Производство")) И Параметры.Свойство("ЗавершитьПроизводство") Тогда
+			ДокОбъект.ЗавершитьОперацию = Истина;
+			ДокОбъект.Записать( РежимЗаписиДокумента.Проведение );
+			НайтиИЗавершитьРанееОформленныеНезавершенныеТранзакции( ДокОбъект.Ссылка );
 		Иначе
 			ДокОбъект.Записать( РежимЗаписиДокумента.Проведение );
 		КонецЕсли;
@@ -6509,6 +6513,51 @@
 
 #Область ВСД2_Производство
 
+Функция ВСД2_ЗавершитьПроизводство_ЗапросXML( Параметры, ДокСсылка )
+	
+	Запрос = "<SOAP-ENV:Envelope xmlns:bs='http://api.vetrf.ru/schema/cdm/base' 
+		 |                 xmlns:merc='http://api.vetrf.ru/schema/cdm/mercury/g2b/applications/v2' 
+		 |				   xmlns:apldef='http://api.vetrf.ru/schema/cdm/application/ws-definitions' 
+		 |				   xmlns:apl='http://api.vetrf.ru/schema/cdm/application' 
+		 |				   xmlns:vd='http://api.vetrf.ru/schema/cdm/mercury/vet-document/v2' 
+		 |				   xmlns:SOAP-ENV='http://schemas.xmlsoap.org/soap/envelope/'>
+		 | <SOAP-ENV:Header/>
+		 | <SOAP-ENV:Body>
+		 |   <apldef:submitApplicationRequest>
+		 |     <apldef:apiKey>"+СокрЛП( Параметры["param_api_key"] )+"</apldef:apiKey>
+		 |     <apl:application>
+		 |       <apl:serviceId>mercury-g2b.service:2.0</apl:serviceId>
+		 |       <apl:issuerId>"+СокрЛП( Параметры["param_issuer_id"] )+"</apl:issuerId>
+		 |       <apl:issueDate>"+ДатаВремяXML(ДокСсылка.Дата)+"</apl:issueDate>
+		 |       <apl:data>
+		 |         <merc:registerProductionOperationRequest>
+		 |           <merc:localTransactionId>"+СокрЛП(ДокСсылка.Номер)+"</merc:localTransactionId>
+		 |           <merc:initiator>
+		 |             <vd:login>"+СокрЛП( Параметры["param_intiator_login"] )+"</vd:login>
+		 |           </merc:initiator>
+		 |           <merc:enterprise>
+		 |             <bs:guid>"+СокрЛП(ДокСсылка.Производитель_Площадка.GUID)+"</bs:guid>
+		 |           </merc:enterprise>
+		 |           <merc:productionOperation>
+		 |             <vd:operationId>"+ДокСсылка.operationId+"</vd:operationId>
+		 |             <vd:finalizeOperation>true</vd:finalizeOperation>
+		 |           </merc:productionOperation>
+		 |           <merc:vetDocument>
+		 |             <vd:authentication>
+		 |               <vd:cargoExpertized>"+ПолучитьИдентификаторПеречисления( ДокСсылка.РезультатыИсследований )+"</vd:cargoExpertized>
+		 |             </vd:authentication>
+		 |           </merc:vetDocument>
+		 |         </merc:registerProductionOperationRequest>
+		 |       </apl:data>
+		 |     </apl:application>
+		 |   </apldef:submitApplicationRequest>
+		 | </SOAP-ENV:Body>
+		 |</SOAP-ENV:Envelope>";
+	
+	Возврат Запрос;
+	
+КонецФункции
+
 Функция ВСД2_производство_ЗапросXML( Параметры, ДокСсылка)    
 	
 	Запрос ="<SOAP-ENV:Envelope 
@@ -6636,7 +6685,11 @@
 	Если НЕ ПроверитьЗаполнениеДокумента( ДокСсылка, Параметры ) Тогда 
 		Возврат Ложь; 
 	КонецЕсли;
-			
+	
+	Если ЗначениеЗаполнено(ДокСсылка.operationId) И ДокСсылка.ЗавершитьОперацию Тогда
+		Параметры.Вставить( "ЗавершитьПроизводство", Истина );	
+	КонецЕсли;
+	
 	ЗапросXML = ВСД2_производство_ЗапросXML(Параметры, ДокСсылка);	
 	Service = "platform/services/2.0/ApplicationManagementService";
     Action = "submitApplicationRequest";	
@@ -6668,6 +6721,61 @@
 	Возврат Статус;	
 	
 КонецФункции
+
+Функция ЗавершитьПроизводство( Параметры, ДокСсылка ) Экспорт
+	
+	ЗапросXML = ВСД2_ЗавершитьПроизводство_ЗапросXML( Параметры, ДокСсылка );	
+	Service = "platform/services/2.0/ApplicationManagementService";
+	Action = "submitApplicationRequest";	
+	
+	ПараметрыОтправки = кб99_ВСД_Отправка.ПараметрыОтправкиИнициализация( Параметры );
+	ПараметрыОтправки.ЗапросXML = ЗапросXML;
+    ПараметрыОтправки.Service = Service;
+    ПараметрыОтправки.Action = Action;
+	xdto = кб99_ВСД_Отправка.ОтправитьSOAPНаСервере( ПараметрыОтправки );
+	
+	Статус = СтатусЗапроса( xdto, докСсылка, ПараметрыОтправки );
+	Если НайтиОшибки(xdto, ДокСсылка) Тогда
+		Возврат Неопределено;
+	КонецЕсли;
+	
+	appID = кб99_ВСД_Отправка.Получить_ApplicationID( xdto );
+	
+	Статус =  ПолучитьРезультат_ВСД2( Параметры,, appID, ДокСсылка );	
+	Для А=1 По 10 Цикл
+		Если (Статус="IN_PROCESS") Тогда
+			Статус =  ПолучитьРезультат_ВСД2( Параметры,, appID, ДокСсылка );	
+		КонецЕсли;
+	КонецЦикла;
+
+	Возврат Статус;
+	
+КонецФункции
+
+Процедура НайтиИЗавершитьРанееОформленныеНезавершенныеТранзакции( докСсылка )
+	
+	Запрос = Новый Запрос;
+	Запрос.Текст = 
+	"ВЫБРАТЬ
+	|	ВСД2_Производство.Ссылка КАК Док
+	|ИЗ
+	|	Документ.ВСД2_Производство КАК ВСД2_Производство
+	|ГДЕ
+	|	ВСД2_Производство.operationId ПОДОБНО &operationId
+	|	И ВСД2_Производство.Ссылка <> &Ссылка
+	|	И НЕ ВСД2_Производство.ПометкаУдаления";
+	Запрос.УстановитьПараметр("operationId", ДокСсылка.operationId);
+	Запрос.УстановитьПараметр("Ссылка", ДокСсылка);
+	
+	Выборка = Запрос.Выполнить().Выбрать();
+	
+	Пока Выборка.Следующий() Цикл
+		ДокОбъект = Выборка.Док.ПолучитьОбъект();
+		ДокОбъект.ЗавершитьОперацию = Истина;
+		ДокОбъект.Записать(РежимЗаписиДокумента.Проведение);
+	КонецЦикла;
+	
+КонецПроцедуры
 
 #КонецОбласти
 

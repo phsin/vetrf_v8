@@ -2346,6 +2346,31 @@
 					</Attribute>
 				</ChildObjects>
 			</TabularSection>
+			<Command uuid="21fa4b8f-9d95-4a73-bc4e-a2b1d744bfbd">
+				<Properties>
+					<Name>ЗавершитьПроизводство</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Завершить производство</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+					<Group>CommandGroup.ВСД_ГруппаКоманд</Group>
+					<CommandParameterType>
+						<v8:Type>cfg:DocumentRef.ВСД2_Производство</v8:Type>
+					</CommandParameterType>
+					<ParameterUseMode>Single</ParameterUseMode>
+					<ModifiesData>true</ModifiesData>
+					<Representation>Auto</Representation>
+					<ToolTip/>
+					<Picture>
+						<xr:Ref>CommonPicture.кб99_check</xr:Ref>
+						<xr:LoadTransparent>true</xr:LoadTransparent>
+					</Picture>
+					<Shortcut/>
+				</Properties>
+			</Command>
 		</ChildObjects>
 	</Document>
 </MetaDataObject>
