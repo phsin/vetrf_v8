@@ -1191,12 +1191,17 @@
 											<ContextMenu name="КоэфПересчетаКоличестваПриПроизводствеКонтекстноеМеню" id="674"/>
 											<ExtendedTooltip name="КоэфПересчетаКоличестваПриПроизводствеРасширеннаяПодсказка" id="675"/>
 										</InputField>
-										<CheckBoxField name="НеЗавершатьПроизводство" id="722">
-											<DataPath>Объект.НеЗавершатьПроизводство</DataPath>
+										<CheckBoxField name="ЗавершатьПроизводство" id="722">
+											<DataPath>Объект.ЗавершатьПроизводство</DataPath>
 											<CheckBoxType>Auto</CheckBoxType>
-											<ContextMenu name="НеЗавершатьПроизводствоКонтекстноеМеню" id="723"/>
-											<ExtendedTooltip name="НеЗавершатьПроизводствоРасширеннаяПодсказка" id="724"/>
+											<ContextMenu name="ЗавершатьПроизводствоКонтекстноеМеню" id="723"/>
+											<ExtendedTooltip name="ЗавершатьПроизводствоРасширеннаяПодсказка" id="724"/>
 										</CheckBoxField>
+										<InputField name="ПрефиксНомераНезавершенногоПроизводства" id="725">
+											<DataPath>Объект.ПрефиксНомераНезавершенногоПроизводства</DataPath>
+											<ContextMenu name="ПрефиксНомераНезавершенногоПроизводстваКонтекстноеМеню" id="726"/>
+											<ExtendedTooltip name="ПрефиксНомераНезавершенногоПроизводстваРасширеннаяПодсказка" id="727"/>
+										</InputField>
 										<CheckBoxField name="ПарамПроизводствоЗаполнятьПоСправочнику" id="593">
 											<DataPath>Объект.ПарамПроизводствоЗаполнятьПоСправочнику</DataPath>
 											<CheckBoxType>Auto</CheckBoxType>
