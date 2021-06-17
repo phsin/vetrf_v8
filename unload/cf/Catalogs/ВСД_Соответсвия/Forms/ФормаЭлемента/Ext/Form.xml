@@ -27,11 +27,12 @@
 					<ContextMenu name="КодКонтекстноеМеню" id="2"/>
 					<ExtendedTooltip name="КодРасширеннаяПодсказка" id="3"/>
 				</InputField>
-				<CheckBoxField name="ОсновнаяПродукция" id="15">
-					<DataPath>Объект.ОсновнаяПродукция</DataPath>
+				<CheckBoxField name="ОсновноеСоответствие" id="15">
+					<DataPath>Объект.ОсновноеСоответствие</DataPath>
+					<TitleLocation>Right</TitleLocation>
 					<CheckBoxType>Auto</CheckBoxType>
-					<ContextMenu name="ОсновнаяПродукцияКонтекстноеМеню" id="16"/>
-					<ExtendedTooltip name="ОсновнаяПродукцияРасширеннаяПодсказка" id="17"/>
+					<ContextMenu name="ОсновноеСоответствиеКонтекстноеМеню" id="16"/>
+					<ExtendedTooltip name="ОсновноеСоответствиеРасширеннаяПодсказка" id="17"/>
 				</CheckBoxField>
 			</ChildItems>
 		</UsualGroup>
