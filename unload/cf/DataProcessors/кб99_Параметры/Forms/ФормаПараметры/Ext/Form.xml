@@ -1593,7 +1593,7 @@
 											<v8:content>Продукция</v8:content>
 										</v8:item>
 									</Title>
-									<Group>HorizontalIfPossible</Group>
+									<Group>AlwaysHorizontal</Group>
 									<ExtendedTooltip name="Группа13РасширеннаяПодсказка" id="272"/>
 									<ChildItems>
 										<UsualGroup name="Группа26" id="571">
@@ -1636,11 +1636,6 @@
 													<ExtendedTooltip name="кнСоздатьПродукциюРасширеннаяПодсказка" id="390"/>
 												</Button>
 											</ChildItems>
-										</UsualGroup>
-										<UsualGroup name="Группа6" id="625">
-											<Representation>None</Representation>
-											<ShowTitle>false</ShowTitle>
-											<ExtendedTooltip name="Группа6РасширеннаяПодсказка" id="626"/>
 										</UsualGroup>
 										<UsualGroup name="Группа51" id="567">
 											<Title>
@@ -1689,6 +1684,26 @@
 														</v8:item>
 													</Title>
 													<ExtendedTooltip name="кнСоздатьВСДЭлементыРасширеннаяПодсказка" id="467"/>
+												</Button>
+											</ChildItems>
+										</UsualGroup>
+										<UsualGroup name="Группа6" id="625">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Прочие операции с продукцией</v8:content>
+												</v8:item>
+											</Title>
+											<HorizontalStretch>true</HorizontalStretch>
+											<GroupHorizontalAlign>Center</GroupHorizontalAlign>
+											<Group>Vertical</Group>
+											<Representation>StrongSeparation</Representation>
+											<ExtendedTooltip name="Группа6РасширеннаяПодсказка" id="626"/>
+											<ChildItems>
+												<Button name="кнОбработатьСпрСоответствия" id="728">
+													<Type>UsualButton</Type>
+													<CommandName>Form.Command.кнОбработатьСпрСоответствия</CommandName>
+													<ExtendedTooltip name="кнОбработатьСпрСоответствияРасширеннаяПодсказка" id="729"/>
 												</Button>
 											</ChildItems>
 										</UsualGroup>
@@ -2735,6 +2750,21 @@
 				</v8:item>
 			</ToolTip>
 			<Action>НастроитьРегламентноеЗаданиеОчиститьЗапросы</Action>
+		</Command>
+		<Command name="кнОбработатьСпрСоответствия" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Обработать справочник ВСД Соответствия</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Устанавить реквизит "Основная продукция" для правочника ВСД Соответствия</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>кнОбработатьСпрСоответствия</Action>
 		</Command>
 	</Commands>
 </Form>
