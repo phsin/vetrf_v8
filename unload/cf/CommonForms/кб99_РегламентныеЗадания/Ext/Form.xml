@@ -53,6 +53,7 @@
 							<ChildItems>
 								<CheckBoxField name="ИспользованиеОчиститьРС" id="9">
 									<DataPath>ИспользованиеОчиститьРС</DataPath>
+									<TitleLocation>Right</TitleLocation>
 									<CheckBoxType>Auto</CheckBoxType>
 									<ContextMenu name="ИспользованиеОчиститьРСКонтекстноеМеню" id="10"/>
 									<ExtendedTooltip name="ИспользованиеОчиститьРСРасширеннаяПодсказка" id="11"/>
@@ -64,16 +65,41 @@
 								</Button>
 							</ChildItems>
 						</UsualGroup>
-						<InputField name="ИнтервалПовтораПриАварийномЗавершенииОчиститьРС" id="26">
-							<DataPath>ИнтервалПовтораПриАварийномЗавершенииОчиститьРС</DataPath>
-							<ContextMenu name="ИнтервалПовтораПриАварийномЗавершенииОчиститьРСКонтекстноеМеню" id="27"/>
-							<ExtendedTooltip name="ИнтервалПовтораПриАварийномЗавершенииОчиститьРСРасширеннаяПодсказка" id="28"/>
-						</InputField>
-						<InputField name="КоличествоПовторовПриАварийномЗавершенииОчиститьРС_Запросы" id="23">
-							<DataPath>КоличествоПовторовПриАварийномЗавершенииОчиститьРС_Запросы</DataPath>
-							<ContextMenu name="КоличествоПовторовПриАварийномЗавершенииОчиститьРС_ЗапросыКонтекстноеМеню" id="24"/>
-							<ExtendedTooltip name="КоличествоПовторовПриАварийномЗавершенииОчиститьРС_ЗапросыРасширеннаяПодсказка" id="25"/>
-						</InputField>
+						<UsualGroup name="Группа5" id="57">
+							<Group>Vertical</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ThroughAlign>Use</ThroughAlign>
+							<ExtendedTooltip name="Группа5РасширеннаяПодсказка" id="58"/>
+							<ChildItems>
+								<InputField name="КоличествоПовторовПриАварийномЗавершенииОчиститьРС_Запросы" id="23">
+									<DataPath>КоличествоПовторовПриАварийномЗавершенииОчиститьРС_Запросы</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>повторов при аварийном завершении задания</v8:content>
+										</v8:item>
+									</Title>
+									<TitleLocation>Right</TitleLocation>
+									<Width>5</Width>
+									<ContextMenu name="КоличествоПовторовПриАварийномЗавершенииОчиститьРС_ЗапросыКонтекстноеМеню" id="24"/>
+									<ExtendedTooltip name="КоличествоПовторовПриАварийномЗавершенииОчиститьРС_ЗапросыРасширеннаяПодсказка" id="25"/>
+								</InputField>
+								<InputField name="ИнтервалПовтораПриАварийномЗавершенииОчиститьРС" id="26">
+									<DataPath>ИнтервалПовтораПриАварийномЗавершенииОчиститьРС</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>сек между повторами при аварийном завершении задания</v8:content>
+										</v8:item>
+									</Title>
+									<TitleLocation>Right</TitleLocation>
+									<Width>5</Width>
+									<ContextMenu name="ИнтервалПовтораПриАварийномЗавершенииОчиститьРСКонтекстноеМеню" id="27"/>
+									<ExtendedTooltip name="ИнтервалПовтораПриАварийномЗавершенииОчиститьРСРасширеннаяПодсказка" id="28"/>
+								</InputField>
+							</ChildItems>
+						</UsualGroup>
 					</ChildItems>
 				</Page>
 				<Page name="грРЗОчиститьПапкуСлогФайлами" id="14" DisplayImportance="Usual">
@@ -99,6 +125,7 @@
 							<ChildItems>
 								<CheckBoxField name="ИспользованиеОчиститьВнешФайлы" id="16">
 									<DataPath>ИспользованиеОчиститьВнешФайлы</DataPath>
+									<TitleLocation>Right</TitleLocation>
 									<CheckBoxType>Auto</CheckBoxType>
 									<ContextMenu name="ИспользованиеОчиститьВнешФайлыКонтекстноеМеню" id="17"/>
 									<ExtendedTooltip name="ИспользованиеОчиститьВнешФайлыРасширеннаяПодсказка" id="18"/>
@@ -110,15 +137,31 @@
 								</Button>
 							</ChildItems>
 						</UsualGroup>
-						<InputField name="ИнтервалПовтораПриАварийномЗавершенииОчиститьВнешнююПапкуСЛогФайлами" id="31">
-							<DataPath>ИнтервалПовтораПриАварийномЗавершенииОчиститьВнешнююПапкуСЛогФайлами</DataPath>
-							<ContextMenu name="ИнтервалПовтораПриАварийномЗавершенииОчиститьВнешнююПапкуСЛогФайламиКонтекстноеМеню" id="32"/>
-							<ExtendedTooltip name="ИнтервалПовтораПриАварийномЗавершенииОчиститьВнешнююПапкуСЛогФайламиРасширеннаяПодсказка" id="33"/>
-						</InputField>
 						<InputField name="КоличествоПовторовПриАварийномЗавершенииОчиститьВнешнююПапкуСЛогФайлами" id="34">
 							<DataPath>КоличествоПовторовПриАварийномЗавершенииОчиститьВнешнююПапкуСЛогФайлами</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>повторов при авайрином завершении задания</v8:content>
+								</v8:item>
+							</Title>
+							<TitleLocation>Right</TitleLocation>
+							<Width>5</Width>
 							<ContextMenu name="КоличествоПовторовПриАварийномЗавершенииОчиститьВнешнююПапкуСЛогФайламиКонтекстноеМеню" id="35"/>
 							<ExtendedTooltip name="КоличествоПовторовПриАварийномЗавершенииОчиститьВнешнююПапкуСЛогФайламиРасширеннаяПодсказка" id="36"/>
+						</InputField>
+						<InputField name="ИнтервалПовтораПриАварийномЗавершенииОчиститьВнешнююПапкуСЛогФайлами" id="31">
+							<DataPath>ИнтервалПовтораПриАварийномЗавершенииОчиститьВнешнююПапкуСЛогФайлами</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>секунд между повторами при аварийном завершении задания</v8:content>
+								</v8:item>
+							</Title>
+							<TitleLocation>Right</TitleLocation>
+							<Width>5</Width>
+							<ContextMenu name="ИнтервалПовтораПриАварийномЗавершенииОчиститьВнешнююПапкуСЛогФайламиКонтекстноеМеню" id="32"/>
+							<ExtendedTooltip name="ИнтервалПовтораПриАварийномЗавершенииОчиститьВнешнююПапкуСЛогФайламиРасширеннаяПодсказка" id="33"/>
 						</InputField>
 					</ChildItems>
 				</Page>
@@ -146,6 +189,7 @@
 							<ChildItems>
 								<CheckBoxField name="ИспользованиеЗагружатьПартии" id="43">
 									<DataPath>ИспользованиеЗагружатьПартии</DataPath>
+									<TitleLocation>Right</TitleLocation>
 									<CheckBoxType>Auto</CheckBoxType>
 									<ContextMenu name="ИспользованиеЗагружатьПартииКонтекстноеМеню" id="44"/>
 									<ExtendedTooltip name="ИспользованиеЗагружатьПартииРасширеннаяПодсказка" id="45"/>
@@ -159,16 +203,39 @@
 						</UsualGroup>
 						<InputField name="Площадка" id="54">
 							<DataPath>Площадка</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Площадки</v8:content>
+								</v8:item>
+							</Title>
+							<AutoMaxWidth>false</AutoMaxWidth>
 							<ContextMenu name="ПлощадкаКонтекстноеМеню" id="55"/>
 							<ExtendedTooltip name="ПлощадкаРасширеннаяПодсказка" id="56"/>
 						</InputField>
 						<InputField name="ИнтервалПовтораПриАварийномЗавершенииПолучитьАктуальныеПартии" id="48">
 							<DataPath>ИнтервалПовтораПриАварийномЗавершенииПолучитьАктуальныеПартии</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>секунд между повторами при аварийном завершении задания</v8:content>
+								</v8:item>
+							</Title>
+							<TitleLocation>Right</TitleLocation>
+							<Width>5</Width>
 							<ContextMenu name="ИнтервалПовтораПриАварийномЗавершенииПолучитьАктуальныеПартииКонтекстноеМеню" id="49"/>
 							<ExtendedTooltip name="ИнтервалПовтораПриАварийномЗавершенииПолучитьАктуальныеПартииРасширеннаяПодсказка" id="50"/>
 						</InputField>
 						<InputField name="КоличествоПовторовПриАварийномЗавершенииПолучитьАктуальныеПартии" id="51">
 							<DataPath>КоличествоПовторовПриАварийномЗавершенииПолучитьАктуальныеПартии</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>повторов при авайрином завершении задания</v8:content>
+								</v8:item>
+							</Title>
+							<TitleLocation>Right</TitleLocation>
+							<Width>5</Width>
 							<ContextMenu name="КоличествоПовторовПриАварийномЗавершенииПолучитьАктуальныеПартииКонтекстноеМеню" id="52"/>
 							<ExtendedTooltip name="КоличествоПовторовПриАварийномЗавершенииПолучитьАктуальныеПартииРасширеннаяПодсказка" id="53"/>
 						</InputField>

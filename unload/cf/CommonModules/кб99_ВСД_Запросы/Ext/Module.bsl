@@ -8010,10 +8010,10 @@
 	Запрос=Запрос+"
 	|<vd:statusChange>
 	|<vd:status>CONFIRMED</vd:status>
-	|<vd:specifiedPerson>
-	|<vd:fio>"+ СокрЛП( Параметры["param_vetdoctor_fio"] ) +"</vd:fio>
-	|<vd:post>"+ СокрЛП( Параметры["param_vetdoctor_post"] ) +"</vd:post>
-	|</vd:specifiedPerson>
+	//|<vd:specifiedPerson>
+	//|<vd:fio>"+ СокрЛП( Параметры["param_vetdoctor_fio"] ) +"</vd:fio>
+	//|<vd:post>"+ СокрЛП( Параметры["param_vetdoctor_post"] ) +"</vd:post>
+	//|</vd:specifiedPerson>
 	|<vd:actualDateTime>"+ ДатаXML(ДокСсылка.Дата,"T00:00:00") +"</vd:actualDateTime>
 	|</vd:statusChange>";
 	

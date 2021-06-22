@@ -237,12 +237,12 @@
 	Параметры.Вставить("param_username", ФОбъект.param_username);
 	Параметры.Вставить("param_password", ФОбъект.param_password);
 	Параметры.Вставить("param_issuer_id", ФОбъект.param_issuer_id);
-	Параметры.Вставить("param_service_id", ФОбъект.param_service_id);
+	//Параметры.Вставить("param_service_id", ФОбъект.param_service_id);
 	Параметры.Вставить("param_api_key", ФОбъект.param_api_key);
 	Параметры.Вставить("param_intiator_login", ФОбъект.param_intiator_login);
 	Параметры.Вставить("param_vetdoctor_login", ФОбъект.param_vetdoctor_login);
-	Параметры.Вставить("param_vetdoctor_fio", ФОбъект.param_vetdoctor_fio);	
-	Параметры.Вставить("param_vetdoctor_post", ФОбъект.param_vetdoctor_post);	
+	//Параметры.Вставить("param_vetdoctor_fio", ФОбъект.param_vetdoctor_fio);	
+	//Параметры.Вставить("param_vetdoctor_post", ФОбъект.param_vetdoctor_post);	
 	Параметры.Вставить("Отправитель_Площадка", ФОбъект.Отправитель_Площадка);
 	Параметры.Вставить("Отправитель_ХозСубъект", ФОбъект.Отправитель_ХозСубъект );
 	Параметры.Вставить("Страна", ФОбъект.Страна);
