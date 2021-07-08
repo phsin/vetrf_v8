@@ -988,6 +988,12 @@
 											<ContextMenu name="cargoInspectedКонтекстноеМеню" id="88"/>
 											<ExtendedTooltip name="cargoInspectedРасширеннаяПодсказка" id="89"/>
 										</CheckBoxField>
+										<InputField name="Цель" id="776">
+											<DataPath>Объект.Цель</DataPath>
+											<AutoMaxWidth>false</AutoMaxWidth>
+											<ContextMenu name="ЦельКонтекстноеМеню" id="777"/>
+											<ExtendedTooltip name="ЦельРасширеннаяПодсказка" id="778"/>
+										</InputField>
 										<InputField name="Страна" id="669">
 											<DataPath>Объект.Страна</DataPath>
 											<AutoMaxWidth>false</AutoMaxWidth>
