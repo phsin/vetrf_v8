@@ -549,19 +549,46 @@
 									<ContextMenu name="ВСД_МестностьКонтекстноеМеню" id="62"/>
 									<ExtendedTooltip name="ВСД_МестностьРасширеннаяПодсказка" id="63"/>
 								</InputField>
-								<InputField name="ВСД_ОсобыеОтметки" id="64">
-									<DataPath>Объект.ВСД_ОсобыеОтметки</DataPath>
+								<UsualGroup name="ГруппаОсобыеОтметки" id="775">
 									<Title>
 										<v8:item>
 											<v8:lang>ru</v8:lang>
-											<v8:content>Особые отметки</v8:content>
+											<v8:content>Группа особые отметки</v8:content>
 										</v8:item>
 									</Title>
-									<EditMode>EnterOnInput</EditMode>
-									<HorizontalStretch>true</HorizontalStretch>
-									<ContextMenu name="ВСД_ОсобыеОтметкиКонтекстноеМеню" id="65"/>
-									<ExtendedTooltip name="ВСД_ОсобыеОтметкиРасширеннаяПодсказка" id="66"/>
-								</InputField>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа особые отметки</v8:content>
+										</v8:item>
+									</ToolTip>
+									<Group>Vertical</Group>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаОсобыеОтметкиРасширеннаяПодсказка" id="776"/>
+									<ChildItems>
+										<InputField name="ВСД_ОсобыеОтметки" id="64">
+											<DataPath>Объект.ВСД_ОсобыеОтметки</DataPath>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Особые отметки</v8:content>
+												</v8:item>
+											</Title>
+											<EditMode>EnterOnInput</EditMode>
+											<HorizontalStretch>true</HorizontalStretch>
+											<ContextMenu name="ВСД_ОсобыеОтметкиКонтекстноеМеню" id="65"/>
+											<ExtendedTooltip name="ВСД_ОсобыеОтметкиРасширеннаяПодсказка" id="66"/>
+										</InputField>
+										<CheckBoxField name="ДобавлятьОсобыеОтметкиИзВходящегоВСД" id="777">
+											<DataPath>Объект.ДобавлятьОсобыеОтметкиИзВходящегоВСД</DataPath>
+											<TitleLocation>Right</TitleLocation>
+											<CheckBoxType>Auto</CheckBoxType>
+											<ContextMenu name="ДобавлятьОсобыеОтметкиИзВходящегоВСДКонтекстноеМеню" id="778"/>
+											<ExtendedTooltip name="ДобавлятьОсобыеОтметкиИзВходящегоВСДРасширеннаяПодсказка" id="779"/>
+										</CheckBoxField>
+									</ChildItems>
+								</UsualGroup>
 								<InputField name="ВСД_РезультатыИсследований" id="114">
 									<DataPath>Объект.ВСД_РезультатыИсследований</DataPath>
 									<Title>
