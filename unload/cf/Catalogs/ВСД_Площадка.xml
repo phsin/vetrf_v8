@@ -792,7 +792,7 @@
 					<Synonym>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>Активен</v8:content>
+							<v8:content>Активность</v8:content>
 						</v8:item>
 					</Synonym>
 					<Comment/>
@@ -832,7 +832,7 @@
 					<Synonym>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>Сортировать ВСД_Партии при заполнении ВСД по реквизиту</v8:content>
+							<v8:content>Сортировать ВСД_Партии по</v8:content>
 						</v8:item>
 					</Synonym>
 					<Comment>Сортировка Актуальных Партий</Comment>
@@ -876,7 +876,7 @@
 					<Synonym>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>Сортировать ВСД_Партии при подборе по убыванию LIFO</v8:content>
+							<v8:content>Сортировать ВСД_Партии по убыванию ( LIFO )</v8:content>
 						</v8:item>
 					</Synonym>
 					<Comment/>
@@ -916,7 +916,7 @@
 					<Synonym>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>Персональные параметры списания партий</v8:content>
+							<v8:content>Индивидуальные параметры подбора партий</v8:content>
 						</v8:item>
 					</Synonym>
 					<Comment/>
@@ -1005,6 +1005,46 @@
 					<Comment/>
 					<Type>
 						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+					<PasswordMode>false</PasswordMode>
+					<Format/>
+					<EditFormat/>
+					<ToolTip/>
+					<MarkNegatives>false</MarkNegatives>
+					<Mask/>
+					<MultiLine>false</MultiLine>
+					<ExtendedEdit>false</ExtendedEdit>
+					<MinValue xsi:nil="true"/>
+					<MaxValue xsi:nil="true"/>
+					<FillFromFillingValue>false</FillFromFillingValue>
+					<FillValue xsi:nil="true"/>
+					<FillChecking>DontCheck</FillChecking>
+					<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+					<ChoiceParameterLinks/>
+					<ChoiceParameters/>
+					<QuickChoice>Auto</QuickChoice>
+					<CreateOnInput>Auto</CreateOnInput>
+					<ChoiceForm/>
+					<LinkByType/>
+					<ChoiceHistoryOnInput>Auto</ChoiceHistoryOnInput>
+					<Use>ForItem</Use>
+					<Indexing>DontIndex</Indexing>
+					<FullTextSearch>Use</FullTextSearch>
+					<DataHistory>Use</DataHistory>
+				</Properties>
+			</Attribute>
+			<Attribute uuid="6bc18e78-976f-4032-94bf-5f44d6b4e1c3">
+				<Properties>
+					<Name>СтатусРегистрации</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Статус регистрации</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment>Статус предприятия в реестре ИС Цербер.</Comment>
+					<Type>
+						<v8:Type>cfg:EnumRef.кб99_СтатусПлощадки</v8:Type>
 					</Type>
 					<PasswordMode>false</PasswordMode>
 					<Format/>
