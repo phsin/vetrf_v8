@@ -1334,7 +1334,7 @@
 										<Title>
 											<v8:item>
 												<v8:lang>ru</v8:lang>
-												<v8:content>Добавить Точку перегрузки</v8:content>
+												<v8:content>Добавить точку перегрузки</v8:content>
 											</v8:item>
 										</Title>
 										<ExtendedTooltip name="кнДобавитьММРасширеннаяПодсказка" id="412"/>
@@ -1457,6 +1457,12 @@
 									<EditMode>EnterOnInput</EditMode>
 									<ContextMenu name="ТочкиМаршрутаГородКонтекстноеМеню" id="456"/>
 									<ExtendedTooltip name="ТочкиМаршрутаГородРасширеннаяПодсказка" id="457"/>
+								</InputField>
+								<InputField name="ТочкиМаршрутаНаселенныйПункт" id="739">
+									<DataPath>Объект.ТочкиМаршрута.НаселенныйПункт</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ТочкиМаршрутаНаселенныйПунктКонтекстноеМеню" id="740"/>
+									<ExtendedTooltip name="ТочкиМаршрутаНаселенныйПунктРасширеннаяПодсказка" id="741"/>
 								</InputField>
 								<InputField name="ТочкиМаршрутаУлица" id="458">
 									<DataPath>Объект.ТочкиМаршрута.Улица</DataPath>

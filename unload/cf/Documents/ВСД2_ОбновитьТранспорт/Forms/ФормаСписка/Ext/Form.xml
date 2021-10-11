@@ -21,7 +21,6 @@
 			<UseAlternationRowColor>true</UseAlternationRowColor>
 			<InitialTreeView>ExpandTopLevel</InitialTreeView>
 			<EnableStartDrag>true</EnableStartDrag>
-			<FileDragMode>AsFile</FileDragMode>
 			<DataPath>Список</DataPath>
 			<RowPictureDataPath>Список.DefaultPicture</RowPictureDataPath>
 			<AutoRefresh>false</AutoRefresh>
@@ -83,25 +82,20 @@
 					<ContextMenu name="ОрганизацияКонтекстноеМеню" id="26"/>
 					<ExtendedTooltip name="ОрганизацияРасширеннаяПодсказка" id="27"/>
 				</LabelField>
-				<LabelField name="Хозсубъект" id="40">
+				<LabelField name="Хозсубъект" id="37">
 					<DataPath>Список.Хозсубъект</DataPath>
-					<ContextMenu name="ХозсубъектКонтекстноеМеню" id="41"/>
-					<ExtendedTooltip name="ХозсубъектРасширеннаяПодсказка" id="42"/>
+					<ContextMenu name="ХозсубъектКонтекстноеМеню" id="38"/>
+					<ExtendedTooltip name="ХозсубъектРасширеннаяПодсказка" id="39"/>
 				</LabelField>
 				<LabelField name="Площадка" id="31">
 					<DataPath>Список.Площадка</DataPath>
 					<ContextMenu name="ПлощадкаКонтекстноеМеню" id="32"/>
 					<ExtendedTooltip name="ПлощадкаРасширеннаяПодсказка" id="33"/>
 				</LabelField>
-				<LabelField name="Продукция" id="34">
-					<DataPath>Список.Продукция</DataPath>
-					<ContextMenu name="ПродукцияКонтекстноеМеню" id="35"/>
-					<ExtendedTooltip name="ПродукцияРасширеннаяПодсказка" id="36"/>
-				</LabelField>
-				<LabelField name="СтатусЗапроса" id="37">
+				<LabelField name="СтатусЗапроса" id="34">
 					<DataPath>Список.СтатусЗапроса</DataPath>
-					<ContextMenu name="СтатусЗапросаКонтекстноеМеню" id="38"/>
-					<ExtendedTooltip name="СтатусЗапросаРасширеннаяПодсказка" id="39"/>
+					<ContextMenu name="СтатусЗапросаКонтекстноеМеню" id="35"/>
+					<ExtendedTooltip name="СтатусЗапросаРасширеннаяПодсказка" id="36"/>
 				</LabelField>
 				<LabelField name="Ошибки" id="28">
 					<DataPath>Список.Ошибки</DataPath>
@@ -121,20 +115,19 @@
 				<ManualQuery>true</ManualQuery>
 				<DynamicDataRead>true</DynamicDataRead>
 				<QueryText>ВЫБРАТЬ
-	ДокументВСД2_ОбъединениеПартий.Ссылка КАК Документ,
-	ДокументВСД2_ОбъединениеПартий.Номер КАК Номер,
-	ДокументВСД2_ОбъединениеПартий.Дата КАК Дата,
-	ДокументВСД2_ОбъединениеПартий.Владелец_ХозСубъект КАК Хозсубъект,
-	ДокументВСД2_ОбъединениеПартий.Владелец_Площадка КАК Площадка,
-	ДокументВСД2_ОбъединениеПартий.НаименованиеПродукции КАК Продукция,
-	ДокументВСД2_ОбъединениеПартий.Организация КАК Организация,
+	ДокументВСД2_ОбновитьТранспорт.Ссылка КАК Документ,
+	ДокументВСД2_ОбновитьТранспорт.Номер КАК Номер,
+	ДокументВСД2_ОбновитьТранспорт.Дата КАК Дата,
+	ДокументВСД2_ОбновитьТранспорт.Организация КАК Организация,
+	ДокументВСД2_ОбновитьТранспорт.Получатель_ХозСубъект КАК Хозсубъект,
+	ДокументВСД2_ОбновитьТранспорт.Получатель_Площадка КАК Площадка,
 	ЕСТЬNULL(кб99_ЗапросыСрезПоследних.СтатусЗапроса, "") КАК СтатусЗапроса,
 	ЕСТЬNULL(кб99_ЗапросыСрезПоследних.Ошибки, "") КАК Ошибки
 ИЗ
-	Документ.ВСД2_ОбъединениеПартий КАК ДокументВСД2_ОбъединениеПартий
+	Документ.ВСД2_ОбновитьТранспорт КАК ДокументВСД2_ОбновитьТранспорт
 		ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.кб99_Запросы.СрезПоследних КАК кб99_ЗапросыСрезПоследних
-		ПО ДокументВСД2_ОбъединениеПартий.Ссылка = кб99_ЗапросыСрезПоследних.Объект</QueryText>
-				<MainTable>Document.ВСД2_ОбъединениеПартий</MainTable>
+		ПО ДокументВСД2_ОбновитьТранспорт.Ссылка = кб99_ЗапросыСрезПоследних.Объект</QueryText>
+				<MainTable>Document.ВСД2_ОбновитьТранспорт</MainTable>
 				<ListSettings>
 					<dcsset:filter>
 						<dcsset:viewMode>Normal</dcsset:viewMode>
@@ -146,35 +139,7 @@
 					</dcsset:order>
 					<dcsset:conditionalAppearance>
 						<dcsset:item>
-							<dcsset:selection>
-								<dcsset:item>
-									<dcsset:field>Дата</dcsset:field>
-								</dcsset:item>
-								<dcsset:item>
-									<dcsset:field>Документ</dcsset:field>
-								</dcsset:item>
-								<dcsset:item>
-									<dcsset:field>Номер</dcsset:field>
-								</dcsset:item>
-								<dcsset:item>
-									<dcsset:field>Организация</dcsset:field>
-								</dcsset:item>
-								<dcsset:item>
-									<dcsset:field>Ошибки</dcsset:field>
-								</dcsset:item>
-								<dcsset:item>
-									<dcsset:field>Площадка</dcsset:field>
-								</dcsset:item>
-								<dcsset:item>
-									<dcsset:field>Продукция</dcsset:field>
-								</dcsset:item>
-								<dcsset:item>
-									<dcsset:field>СтатусЗапроса</dcsset:field>
-								</dcsset:item>
-								<dcsset:item>
-									<dcsset:field>Хозсубъект</dcsset:field>
-								</dcsset:item>
-							</dcsset:selection>
+							<dcsset:selection/>
 							<dcsset:filter>
 								<dcsset:item xsi:type="dcsset:FilterItemGroup">
 									<dcsset:groupType>OrGroup</dcsset:groupType>
@@ -197,35 +162,7 @@
 							</dcsset:appearance>
 						</dcsset:item>
 						<dcsset:item>
-							<dcsset:selection>
-								<dcsset:item>
-									<dcsset:field>Дата</dcsset:field>
-								</dcsset:item>
-								<dcsset:item>
-									<dcsset:field>Документ</dcsset:field>
-								</dcsset:item>
-								<dcsset:item>
-									<dcsset:field>Номер</dcsset:field>
-								</dcsset:item>
-								<dcsset:item>
-									<dcsset:field>Организация</dcsset:field>
-								</dcsset:item>
-								<dcsset:item>
-									<dcsset:field>Ошибки</dcsset:field>
-								</dcsset:item>
-								<dcsset:item>
-									<dcsset:field>Площадка</dcsset:field>
-								</dcsset:item>
-								<dcsset:item>
-									<dcsset:field>Продукция</dcsset:field>
-								</dcsset:item>
-								<dcsset:item>
-									<dcsset:field>СтатусЗапроса</dcsset:field>
-								</dcsset:item>
-								<dcsset:item>
-									<dcsset:field>Хозсубъект</dcsset:field>
-								</dcsset:item>
-							</dcsset:selection>
+							<dcsset:selection/>
 							<dcsset:filter>
 								<dcsset:item xsi:type="dcsset:FilterItemComparison">
 									<dcsset:left xsi:type="dcscor:Field">СтатусЗапроса</dcsset:left>
@@ -241,35 +178,7 @@
 							</dcsset:appearance>
 						</dcsset:item>
 						<dcsset:item>
-							<dcsset:selection>
-								<dcsset:item>
-									<dcsset:field>Дата</dcsset:field>
-								</dcsset:item>
-								<dcsset:item>
-									<dcsset:field>Документ</dcsset:field>
-								</dcsset:item>
-								<dcsset:item>
-									<dcsset:field>Номер</dcsset:field>
-								</dcsset:item>
-								<dcsset:item>
-									<dcsset:field>Организация</dcsset:field>
-								</dcsset:item>
-								<dcsset:item>
-									<dcsset:field>Ошибки</dcsset:field>
-								</dcsset:item>
-								<dcsset:item>
-									<dcsset:field>Площадка</dcsset:field>
-								</dcsset:item>
-								<dcsset:item>
-									<dcsset:field>Продукция</dcsset:field>
-								</dcsset:item>
-								<dcsset:item>
-									<dcsset:field>СтатусЗапроса</dcsset:field>
-								</dcsset:item>
-								<dcsset:item>
-									<dcsset:field>Хозсубъект</dcsset:field>
-								</dcsset:item>
-							</dcsset:selection>
+							<dcsset:selection/>
 							<dcsset:filter>
 								<dcsset:item xsi:type="dcsset:FilterItemComparison">
 									<dcsset:left xsi:type="dcscor:Field">СтатусЗапроса</dcsset:left>
@@ -286,12 +195,7 @@
 						</dcsset:item>
 						<dcsset:viewMode>Normal</dcsset:viewMode>
 						<dcsset:userSettingID>b75fecce-942b-4aed-abc9-e6a02e460fb3</dcsset:userSettingID>
-						<dcsset:userSettingPresentation xsi:type="v8:LocalStringType">
-							<v8:item>
-								<v8:lang>ru</v8:lang>
-								<v8:content>Раскраска табличной части</v8:content>
-							</v8:item>
-						</dcsset:userSettingPresentation>
+						<dcsset:userSettingPresentation xsi:type="xs:string">Раскраска табличной части</dcsset:userSettingPresentation>
 					</dcsset:conditionalAppearance>
 					<dcsset:itemsViewMode>Normal</dcsset:itemsViewMode>
 					<dcsset:itemsUserSettingID>911b6018-f537-43e8-a417-da56b22f9aec</dcsset:itemsUserSettingID>

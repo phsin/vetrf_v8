@@ -160,19 +160,83 @@
 													<AutoMaxWidth>false</AutoMaxWidth>
 													<ContextMenu name="СтранаКонтекстноеМеню" id="92"/>
 													<ExtendedTooltip name="СтранаРасширеннаяПодсказка" id="93"/>
+													<Events>
+														<Event name="OnChange">СтранаПриИзменении</Event>
+													</Events>
 												</InputField>
 												<InputField name="Регион" id="94">
 													<DataPath>Объект.Регион</DataPath>
 													<AutoMaxWidth>false</AutoMaxWidth>
 													<ContextMenu name="РегионКонтекстноеМеню" id="95"/>
 													<ExtendedTooltip name="РегионРасширеннаяПодсказка" id="96"/>
+													<Events>
+														<Event name="OnChange">РегионПриИзменении</Event>
+													</Events>
+												</InputField>
+												<InputField name="Район" id="159">
+													<DataPath>Объект.Район</DataPath>
+													<AutoMaxWidth>false</AutoMaxWidth>
+													<ContextMenu name="РайонКонтекстноеМеню" id="160"/>
+													<ExtendedTooltip name="РайонРасширеннаяПодсказка" id="161"/>
+													<Events>
+														<Event name="OnChange">РайонПриИзменении</Event>
+													</Events>
 												</InputField>
 												<InputField name="Город" id="97">
 													<DataPath>Объект.Город</DataPath>
 													<AutoMaxWidth>false</AutoMaxWidth>
 													<ContextMenu name="ГородКонтекстноеМеню" id="98"/>
 													<ExtendedTooltip name="ГородРасширеннаяПодсказка" id="99"/>
+													<Events>
+														<Event name="OnChange">ГородПриИзменении</Event>
+														<Event name="StartChoice">ГородНачалоВыбора</Event>
+													</Events>
 												</InputField>
+												<InputField name="НаселенныйПункт" id="162">
+													<DataPath>Объект.НаселенныйПункт</DataPath>
+													<AutoMaxWidth>false</AutoMaxWidth>
+													<ContextMenu name="НаселенныйПунктКонтекстноеМеню" id="163"/>
+													<ExtendedTooltip name="НаселенныйПунктРасширеннаяПодсказка" id="164"/>
+													<Events>
+														<Event name="OnChange">НаселенныйПунктПриИзменении</Event>
+													</Events>
+												</InputField>
+												<UsualGroup name="ГруппаУлицаИНомерДома" id="171">
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Группа улица и номер дома</v8:content>
+														</v8:item>
+													</Title>
+													<ToolTip>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Группа улица и номер дома</v8:content>
+														</v8:item>
+													</ToolTip>
+													<Representation>None</Representation>
+													<ShowTitle>false</ShowTitle>
+													<ExtendedTooltip name="ГруппаУлицаИНомерДомаРасширеннаяПодсказка" id="172"/>
+													<ChildItems>
+														<InputField name="Улица" id="165">
+															<DataPath>Объект.Улица</DataPath>
+															<ContextMenu name="УлицаКонтекстноеМеню" id="166"/>
+															<ExtendedTooltip name="УлицаРасширеннаяПодсказка" id="167"/>
+															<Events>
+																<Event name="OnChange">УлицаПриИзменении</Event>
+																<Event name="StartChoice">УлицаНачалоВыбора</Event>
+															</Events>
+														</InputField>
+														<InputField name="НомерДома" id="168">
+															<DataPath>Объект.НомерДома</DataPath>
+															<ContextMenu name="НомерДомаКонтекстноеМеню" id="169"/>
+															<ExtendedTooltip name="НомерДомаРасширеннаяПодсказка" id="170"/>
+															<Events>
+																<Event name="OnChange">НомерДомаПриИзменении</Event>
+															</Events>
+														</InputField>
+													</ChildItems>
+												</UsualGroup>
 											</ChildItems>
 										</UsualGroup>
 										<InputField name="Адрес" id="16">

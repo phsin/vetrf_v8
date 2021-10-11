@@ -1,34 +1,34 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.8">
-	<Catalog uuid="d4101eec-cd87-4167-9af4-ae2f1fd7201b">
+	<Catalog uuid="7ac3e63b-b894-45b9-bef7-404d3981f34e">
 		<InternalInfo>
-			<xr:GeneratedType name="CatalogObject.ВСД_Улица" category="Object">
-				<xr:TypeId>1615160d-5275-40b4-9d5b-7a895108be52</xr:TypeId>
-				<xr:ValueId>88623076-6c20-4eb3-8036-9de3c19dfdb4</xr:ValueId>
+			<xr:GeneratedType name="CatalogObject.ВСД_НаселенныеПункты" category="Object">
+				<xr:TypeId>685da81d-738f-472a-8e24-62c4967282a1</xr:TypeId>
+				<xr:ValueId>875a07d3-ed8f-491a-8216-5eaaa72302c7</xr:ValueId>
 			</xr:GeneratedType>
-			<xr:GeneratedType name="CatalogRef.ВСД_Улица" category="Ref">
-				<xr:TypeId>27de469c-e039-411a-82e9-8440b721fac8</xr:TypeId>
-				<xr:ValueId>68126053-f6e3-4bc5-af5a-50c91ea92cff</xr:ValueId>
+			<xr:GeneratedType name="CatalogRef.ВСД_НаселенныеПункты" category="Ref">
+				<xr:TypeId>1f593fe9-e021-48ca-b4b7-9b0fbe891da7</xr:TypeId>
+				<xr:ValueId>c344b0f8-9a2a-448e-af45-5899fb928292</xr:ValueId>
 			</xr:GeneratedType>
-			<xr:GeneratedType name="CatalogSelection.ВСД_Улица" category="Selection">
-				<xr:TypeId>d575a2e8-314e-44e0-b510-e48b66bd97b2</xr:TypeId>
-				<xr:ValueId>0b86892e-4ac8-4875-836d-74d796053725</xr:ValueId>
+			<xr:GeneratedType name="CatalogSelection.ВСД_НаселенныеПункты" category="Selection">
+				<xr:TypeId>ac31573a-8f5d-44bd-94b2-cd7e3792fe2d</xr:TypeId>
+				<xr:ValueId>3eadd8ce-7f20-45fc-b159-55786c39c1ef</xr:ValueId>
 			</xr:GeneratedType>
-			<xr:GeneratedType name="CatalogList.ВСД_Улица" category="List">
-				<xr:TypeId>70539bff-ee61-4c1e-a94e-4afba4f15e46</xr:TypeId>
-				<xr:ValueId>040ee6c7-5107-4fd9-8754-a945a9a2c247</xr:ValueId>
+			<xr:GeneratedType name="CatalogList.ВСД_НаселенныеПункты" category="List">
+				<xr:TypeId>64e41344-25ac-404a-9a23-9fc58345f283</xr:TypeId>
+				<xr:ValueId>0ff349b9-4872-473b-ba3b-b44fd161c4f4</xr:ValueId>
 			</xr:GeneratedType>
-			<xr:GeneratedType name="CatalogManager.ВСД_Улица" category="Manager">
-				<xr:TypeId>18a3c6cc-0169-48c7-bd2b-748e64805152</xr:TypeId>
-				<xr:ValueId>bcdf7569-6559-4b95-997c-7636fdd85086</xr:ValueId>
+			<xr:GeneratedType name="CatalogManager.ВСД_НаселенныеПункты" category="Manager">
+				<xr:TypeId>6352bb6e-02bc-43db-a1f5-520798e045db</xr:TypeId>
+				<xr:ValueId>0d71e436-86eb-4835-8f9e-64d34f807a16</xr:ValueId>
 			</xr:GeneratedType>
 		</InternalInfo>
 		<Properties>
-			<Name>ВСД_Улица</Name>
+			<Name>ВСД_НаселенныеПункты</Name>
 			<Synonym>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Улицы</v8:content>
+					<v8:content>Населенные пункты</v8:content>
 				</v8:item>
 			</Synonym>
 			<Comment/>
@@ -40,7 +40,6 @@
 			<UseStandardCommands>true</UseStandardCommands>
 			<Owners>
 				<xr:Item xsi:type="xr:MDObjectRef">Catalog.ВСД_Город</xr:Item>
-				<xr:Item xsi:type="xr:MDObjectRef">Catalog.ВСД_НаселенныеПункты</xr:Item>
 			</Owners>
 			<SubordinationUse>ToItems</SubordinationUse>
 			<CodeLength>9</CodeLength>
@@ -293,16 +292,16 @@
 			<QuickChoice>false</QuickChoice>
 			<ChoiceMode>BothWays</ChoiceMode>
 			<InputByString>
-				<xr:Field>Catalog.ВСД_Улица.StandardAttribute.Description</xr:Field>
-				<xr:Field>Catalog.ВСД_Улица.StandardAttribute.Code</xr:Field>
+				<xr:Field>Catalog.ВСД_НаселенныеПункты.StandardAttribute.Description</xr:Field>
+				<xr:Field>Catalog.ВСД_НаселенныеПункты.StandardAttribute.Code</xr:Field>
 			</InputByString>
 			<SearchStringModeOnInputByString>Begin</SearchStringModeOnInputByString>
 			<FullTextSearchOnInputByString>DontUse</FullTextSearchOnInputByString>
 			<ChoiceDataGetModeOnInputByString>Directly</ChoiceDataGetModeOnInputByString>
 			<DefaultObjectForm/>
 			<DefaultFolderForm/>
-			<DefaultListForm>Catalog.ВСД_Улица.Form.ФормаСписка</DefaultListForm>
-			<DefaultChoiceForm>Catalog.ВСД_Улица.Form.ФормаВыбора</DefaultChoiceForm>
+			<DefaultListForm/>
+			<DefaultChoiceForm/>
 			<DefaultFolderChoiceForm/>
 			<AuxiliaryObjectForm/>
 			<AuxiliaryFolderForm/>
@@ -314,7 +313,12 @@
 			<DataLockFields/>
 			<DataLockControlMode>Managed</DataLockControlMode>
 			<FullTextSearch>Use</FullTextSearch>
-			<ObjectPresentation/>
+			<ObjectPresentation>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Поселок</v8:content>
+				</v8:item>
+			</ObjectPresentation>
 			<ExtendedObjectPresentation/>
 			<ListPresentation/>
 			<ExtendedListPresentation/>
@@ -324,7 +328,7 @@
 			<DataHistory>DontUse</DataHistory>
 		</Properties>
 		<ChildObjects>
-			<Attribute uuid="2a3a1b50-6513-42b1-a392-aab7370c93d0">
+			<Attribute uuid="e6ad5040-a5a6-4add-b6a0-c3265bc9147f">
 				<Properties>
 					<Name>GUID</Name>
 					<Synonym>
@@ -368,7 +372,7 @@
 					<DataHistory>Use</DataHistory>
 				</Properties>
 			</Attribute>
-			<Attribute uuid="394c7c6b-499a-408d-a377-f7f525564c34">
+			<Attribute uuid="3b5a039a-b4b6-48e5-842b-3f2fbccf28ed">
 				<Properties>
 					<Name>UUID</Name>
 					<Synonym>
@@ -412,8 +416,6 @@
 					<DataHistory>Use</DataHistory>
 				</Properties>
 			</Attribute>
-			<Form>ФормаСписка</Form>
-			<Form>ФормаВыбора</Form>
 		</ChildObjects>
 	</Catalog>
 </MetaDataObject>

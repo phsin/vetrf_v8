@@ -673,6 +673,9 @@
 											<HorizontalStretch>true</HorizontalStretch>
 											<ContextMenu name="СтранаКонтекстноеМеню" id="18"/>
 											<ExtendedTooltip name="СтранаРасширеннаяПодсказка" id="19"/>
+											<Events>
+												<Event name="OnChange">СтранаПриИзменении</Event>
+											</Events>
 										</InputField>
 										<Button name="кнЗагрузитьСтраны1" id="515">
 											<Type>UsualButton</Type>
@@ -701,6 +704,9 @@
 											<HorizontalStretch>true</HorizontalStretch>
 											<ContextMenu name="РегионКонтекстноеМеню" id="21"/>
 											<ExtendedTooltip name="РегионРасширеннаяПодсказка" id="22"/>
+											<Events>
+												<Event name="OnChange">РегионПриИзменении</Event>
+											</Events>
 										</InputField>
 										<Button name="кнЗагрузитьРегионы1" id="509">
 											<Type>UsualButton</Type>
@@ -726,6 +732,9 @@
 											<DataPath>Объект.Район</DataPath>
 											<ContextMenu name="РайонКонтекстноеМеню" id="686"/>
 											<ExtendedTooltip name="РайонРасширеннаяПодсказка" id="687"/>
+											<Events>
+												<Event name="OnChange">РайонПриИзменении</Event>
+											</Events>
 										</InputField>
 										<Button name="кнЗагрузитьРайоны" id="688">
 											<Type>UsualButton</Type>
@@ -755,6 +764,10 @@
 											</ChoiceParameterLinks>
 											<ContextMenu name="ГородКонтекстноеМеню" id="24"/>
 											<ExtendedTooltip name="ГородРасширеннаяПодсказка" id="25"/>
+											<Events>
+												<Event name="OnChange">ГородПриИзменении</Event>
+												<Event name="StartChoice">ГородНачалоВыбора</Event>
+											</Events>
 										</InputField>
 										<Button name="кнЗагрузитьГорода1" id="517">
 											<Type>UsualButton</Type>
@@ -770,6 +783,39 @@
 										</Button>
 									</ChildItems>
 								</UsualGroup>
+								<UsualGroup name="ГруппаПоселок" id="783">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа поселок</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа поселок</v8:content>
+										</v8:item>
+									</ToolTip>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаПоселокРасширеннаяПодсказка" id="784"/>
+									<ChildItems>
+										<InputField name="НаселенныйПункт1" id="785">
+											<DataPath>Объект.НаселенныйПункт</DataPath>
+											<ContextMenu name="НаселенныйПункт1КонтекстноеМеню" id="786"/>
+											<ExtendedTooltip name="НаселенныйПункт1РасширеннаяПодсказка" id="787"/>
+											<Events>
+												<Event name="OnChange">НаселенныйПунктПриИзменении</Event>
+											</Events>
+										</InputField>
+										<Button name="кнЗагрузитьПоселки" id="788">
+											<Type>UsualButton</Type>
+											<Width>10</Width>
+											<CommandName>Form.Command.кнЗагрузитьПоселки</CommandName>
+											<ExtendedTooltip name="кнЗагрузитьПоселкиРасширеннаяПодсказка" id="789"/>
+										</Button>
+									</ChildItems>
+								</UsualGroup>
 								<UsualGroup name="Группа9" id="679">
 									<Group>AlwaysHorizontal</Group>
 									<Representation>None</Representation>
@@ -781,6 +827,9 @@
 											<DataPath>Объект.Улица</DataPath>
 											<ContextMenu name="УлицаКонтекстноеМеню" id="677"/>
 											<ExtendedTooltip name="УлицаРасширеннаяПодсказка" id="678"/>
+											<Events>
+												<Event name="StartChoice">УлицаНачалоВыбора</Event>
+											</Events>
 										</InputField>
 										<Button name="кнЗагрузитьУлицы" id="681">
 											<Type>UsualButton</Type>
@@ -3146,6 +3195,21 @@
 				</v8:item>
 			</ToolTip>
 			<Action>кнОбработатьСпрСоответствия</Action>
+		</Command>
+		<Command name="кнЗагрузитьПоселки" id="10">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Поселки</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Кн загрузить поселки</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>кнЗагрузитьПоселки</Action>
 		</Command>
 	</Commands>
 </Form>

@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.8">
-	<AutoCommandBar name="" id="-1"/>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
 	<ChildItems>
 		<UsualGroup name="СписокКомпоновщикНастроекПользовательскиеНастройки" id="1">
 			<Title>
@@ -15,13 +15,9 @@
 			<ExtendedTooltip name="СписокКомпоновщикНастроекПользовательскиеНастройкиРасширеннаяПодсказка" id="2"/>
 		</UsualGroup>
 		<Table name="Список" id="3">
-			<Representation>List</Representation>
 			<CommandBarLocation>None</CommandBarLocation>
-			<DefaultItem>true</DefaultItem>
 			<UseAlternationRowColor>true</UseAlternationRowColor>
-			<InitialTreeView>ExpandTopLevel</InitialTreeView>
 			<EnableStartDrag>true</EnableStartDrag>
-			<FileDragMode>AsFile</FileDragMode>
 			<DataPath>Список</DataPath>
 			<RowPictureDataPath>Список.DefaultPicture</RowPictureDataPath>
 			<AutoRefresh>false</AutoRefresh>
@@ -37,11 +33,8 @@
 			<ShowRoot>true</ShowRoot>
 			<AllowRootChoice>false</AllowRootChoice>
 			<UpdateOnDataChange>Auto</UpdateOnDataChange>
-			<UserSettingsGroup>СписокКомпоновщикНастроекПользовательскиеНастройки</UserSettingsGroup>
 			<ContextMenu name="СписокКонтекстноеМеню" id="4"/>
-			<AutoCommandBar name="СписокКоманднаяПанель" id="5">
-				<Autofill>false</Autofill>
-			</AutoCommandBar>
+			<AutoCommandBar name="СписокКоманднаяПанель" id="5"/>
 			<ExtendedTooltip name="СписокРасширеннаяПодсказка" id="6"/>
 			<SearchStringAddition name="СписокСтрокаПоиска" id="7">
 				<AdditionSource>
@@ -69,30 +62,29 @@
 			</SearchControlAddition>
 			<ChildItems>
 				<LabelField name="Дата" id="16">
-					<DataPath>Список.Date</DataPath>
-					<DefaultItem>true</DefaultItem>
+					<DataPath>Список.Дата</DataPath>
 					<ContextMenu name="ДатаКонтекстноеМеню" id="17"/>
 					<ExtendedTooltip name="ДатаРасширеннаяПодсказка" id="18"/>
 				</LabelField>
-				<LabelField name="Номер" id="19">
-					<DataPath>Список.Number</DataPath>
-					<ContextMenu name="НомерКонтекстноеМеню" id="20"/>
-					<ExtendedTooltip name="НомерРасширеннаяПодсказка" id="21"/>
+				<LabelField name="Номер" id="22">
+					<DataPath>Список.Номер</DataPath>
+					<ContextMenu name="НомерКонтекстноеМеню" id="23"/>
+					<ExtendedTooltip name="НомерРасширеннаяПодсказка" id="24"/>
 				</LabelField>
-				<LabelField name="Статус" id="22">
-					<DataPath>~Список.Статус</DataPath>
-					<ContextMenu name="СтатусКонтекстноеМеню" id="23"/>
-					<ExtendedTooltip name="СтатусРасширеннаяПодсказка" id="24"/>
-				</LabelField>
-				<LabelField name="UUID" id="25">
-					<DataPath>Список.UUID</DataPath>
-					<ContextMenu name="UUIDКонтекстноеМеню" id="26"/>
-					<ExtendedTooltip name="UUIDРасширеннаяПодсказка" id="27"/>
-				</LabelField>
-				<LabelField name="Организация" id="28">
+				<LabelField name="Организация" id="25">
 					<DataPath>Список.Организация</DataPath>
-					<ContextMenu name="ОрганизацияКонтекстноеМеню" id="29"/>
-					<ExtendedTooltip name="ОрганизацияРасширеннаяПодсказка" id="30"/>
+					<ContextMenu name="ОрганизацияКонтекстноеМеню" id="26"/>
+					<ExtendedTooltip name="ОрганизацияРасширеннаяПодсказка" id="27"/>
+				</LabelField>
+				<LabelField name="СтатусЗапроса" id="31">
+					<DataPath>Список.СтатусЗапроса</DataPath>
+					<ContextMenu name="СтатусЗапросаКонтекстноеМеню" id="32"/>
+					<ExtendedTooltip name="СтатусЗапросаРасширеннаяПодсказка" id="33"/>
+				</LabelField>
+				<LabelField name="Ошибки" id="28">
+					<DataPath>Список.Ошибки</DataPath>
+					<ContextMenu name="ОшибкиКонтекстноеМеню" id="29"/>
+					<ExtendedTooltip name="ОшибкиРасширеннаяПодсказка" id="30"/>
 				</LabelField>
 			</ChildItems>
 		</Table>
@@ -104,8 +96,19 @@
 			</Type>
 			<MainAttribute>true</MainAttribute>
 			<Settings xsi:type="DynamicList">
-				<ManualQuery>false</ManualQuery>
+				<ManualQuery>true</ManualQuery>
 				<DynamicDataRead>true</DynamicDataRead>
+				<QueryText>ВЫБРАТЬ
+	ДокументВСД2_ЛабораторныеИсследования.Ссылка КАК Документ,
+	ДокументВСД2_ЛабораторныеИсследования.Номер КАК Номер,
+	ДокументВСД2_ЛабораторныеИсследования.Дата КАК Дата,
+	ДокументВСД2_ЛабораторныеИсследования.Организация КАК Организация,
+	ЕСТЬNULL(кб99_ЗапросыСрезПоследних.СтатусЗапроса, "") КАК СтатусЗапроса,
+	ЕСТЬNULL(кб99_ЗапросыСрезПоследних.Ошибки, "") КАК Ошибки
+ИЗ
+	Документ.ВСД2_ЛабораторныеИсследования КАК ДокументВСД2_ЛабораторныеИсследования
+		ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.кб99_Запросы.СрезПоследних КАК кб99_ЗапросыСрезПоследних
+		ПО ДокументВСД2_ЛабораторныеИсследования.Ссылка = кб99_ЗапросыСрезПоследних.Объект</QueryText>
 				<MainTable>Document.ВСД2_ЛабораторныеИсследования</MainTable>
 				<ListSettings>
 					<dcsset:filter>
@@ -117,8 +120,72 @@
 						<dcsset:userSettingID>88619765-ccb3-46c6-ac52-38e9c992ebd4</dcsset:userSettingID>
 					</dcsset:order>
 					<dcsset:conditionalAppearance>
+						<dcsset:item>
+							<dcsset:selection/>
+							<dcsset:filter>
+								<dcsset:item xsi:type="dcsset:FilterItemGroup">
+									<dcsset:groupType>OrGroup</dcsset:groupType>
+									<dcsset:item xsi:type="dcsset:FilterItemComparison">
+										<dcsset:left xsi:type="dcscor:Field">СтатусЗапроса</dcsset:left>
+										<dcsset:comparisonType>NotFilled</dcsset:comparisonType>
+									</dcsset:item>
+									<dcsset:item xsi:type="dcsset:FilterItemComparison">
+										<dcsset:left xsi:type="dcscor:Field">СтатусЗапроса</dcsset:left>
+										<dcsset:comparisonType>Contains</dcsset:comparisonType>
+										<dcsset:right xsi:type="xs:string">IN_PROCESS</dcsset:right>
+									</dcsset:item>
+								</dcsset:item>
+							</dcsset:filter>
+							<dcsset:appearance>
+								<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+									<dcscor:parameter>ЦветФона</dcscor:parameter>
+									<dcscor:value xsi:type="v8ui:Color">#FFFF99</dcscor:value>
+								</dcscor:item>
+							</dcsset:appearance>
+							<dcsset:userSettingID>d39e8bb7-7253-4f94-af99-c91239ad7e56</dcsset:userSettingID>
+						</dcsset:item>
+						<dcsset:item>
+							<dcsset:selection/>
+							<dcsset:filter>
+								<dcsset:item xsi:type="dcsset:FilterItemComparison">
+									<dcsset:left xsi:type="dcscor:Field">СтатусЗапроса</dcsset:left>
+									<dcsset:comparisonType>Contains</dcsset:comparisonType>
+									<dcsset:right xsi:type="xs:string">COMPLETED</dcsset:right>
+								</dcsset:item>
+							</dcsset:filter>
+							<dcsset:appearance>
+								<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+									<dcscor:parameter>ЦветФона</dcscor:parameter>
+									<dcscor:value xsi:type="v8ui:Color">#AAFFA0</dcscor:value>
+								</dcscor:item>
+							</dcsset:appearance>
+							<dcsset:userSettingID>6eb6eaf5-f50d-4d28-a1a2-c7a7bd5bcd1a</dcsset:userSettingID>
+						</dcsset:item>
+						<dcsset:item>
+							<dcsset:selection/>
+							<dcsset:filter>
+								<dcsset:item xsi:type="dcsset:FilterItemComparison">
+									<dcsset:left xsi:type="dcscor:Field">СтатусЗапроса</dcsset:left>
+									<dcsset:comparisonType>Contains</dcsset:comparisonType>
+									<dcsset:right xsi:type="xs:string">REJECTED</dcsset:right>
+								</dcsset:item>
+							</dcsset:filter>
+							<dcsset:appearance>
+								<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+									<dcscor:parameter>ЦветФона</dcscor:parameter>
+									<dcscor:value xsi:type="v8ui:Color">#FF6346</dcscor:value>
+								</dcscor:item>
+							</dcsset:appearance>
+							<dcsset:userSettingID>829a5c6f-5aa9-470f-9862-f9bfd9eccfbf</dcsset:userSettingID>
+						</dcsset:item>
 						<dcsset:viewMode>Normal</dcsset:viewMode>
 						<dcsset:userSettingID>b75fecce-942b-4aed-abc9-e6a02e460fb3</dcsset:userSettingID>
+						<dcsset:userSettingPresentation xsi:type="v8:LocalStringType">
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Раскраска табличной части</v8:content>
+							</v8:item>
+						</dcsset:userSettingPresentation>
 					</dcsset:conditionalAppearance>
 					<dcsset:itemsViewMode>Normal</dcsset:itemsViewMode>
 					<dcsset:itemsUserSettingID>911b6018-f537-43e8-a417-da56b22f9aec</dcsset:itemsUserSettingID>
