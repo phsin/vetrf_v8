@@ -23,7 +23,7 @@
 				<Title>
 					<v8:item>
 						<v8:lang>ru</v8:lang>
-						<v8:content>Инвентаризация (Остатки)</v8:content>
+						<v8:content>Оформить инвентаризацию</v8:content>
 					</v8:item>
 				</Title>
 				<ExtendedTooltip name="кнКорректировкаОстатковРасширеннаяПодсказка" id="182"/>
@@ -32,6 +32,7 @@
 	</AutoCommandBar>
 	<Events>
 		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
 	</Events>
 	<ChildItems>
 		<UsualGroup name="Группа1" id="127">
@@ -52,7 +53,7 @@
 							<ExtendedTooltip name="ПлощадкаРасширеннаяПодсказка" id="9"/>
 						</InputField>
 						<CheckBoxField name="УчитыватьСрокГодности" id="124">
-							<DataPath>Объект.УчитыватьСрокГодности</DataPath>
+							<DataPath>Объект.УчитыватьСерии</DataPath>
 							<TitleLocation>Right</TitleLocation>
 							<CheckBoxType>Auto</CheckBoxType>
 							<ContextMenu name="УчитыватьСрокГодностиКонтекстноеМеню" id="125"/>
@@ -60,6 +61,7 @@
 						</CheckBoxField>
 						<CheckBoxField name="УчитыватьПустыеСерии" id="186">
 							<DataPath>Объект.УчитыватьПустыеСерии</DataPath>
+							<Visible>false</Visible>
 							<TitleLocation>Right</TitleLocation>
 							<CheckBoxType>Auto</CheckBoxType>
 							<ContextMenu name="УчитыватьПустыеСерииКонтекстноеМеню" id="187"/>
@@ -106,13 +108,14 @@
 					<Title>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>Остатки1С</v8:content>
+							<v8:content>Остатки 1С</v8:content>
 						</v8:item>
 					</Title>
 					<ExtendedTooltip name="ГруппаОстатки1СРасширеннаяПодсказка" id="13"/>
 					<ChildItems>
 						<CheckBoxField name="Фильтровать" id="212">
 							<DataPath>Объект.Фильтровать</DataPath>
+							<Visible>false</Visible>
 							<CheckBoxType>Auto</CheckBoxType>
 							<ContextMenu name="ФильтроватьКонтекстноеМеню" id="213"/>
 							<ExtendedTooltip name="ФильтроватьРасширеннаяПодсказка" id="214"/>
@@ -183,18 +186,30 @@
 								</InputField>
 								<InputField name="Остатки1СКолВоСоотв" id="229">
 									<DataPath>Объект.Остатки1С.КолВоСоотв</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Кол-во соответствий</v8:content>
+										</v8:item>
+									</Title>
 									<EditMode>EnterOnInput</EditMode>
 									<ContextMenu name="Остатки1СКолВоСоотвКонтекстноеМеню" id="230"/>
 									<ExtendedTooltip name="Остатки1СКолВоСоотвРасширеннаяПодсказка" id="231"/>
 								</InputField>
 								<InputField name="Остатки1СВСДСписок" id="226">
 									<DataPath>Объект.Остатки1С.ВСДСписок</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>ВСД список</v8:content>
+										</v8:item>
+									</Title>
 									<EditMode>EnterOnInput</EditMode>
 									<ContextMenu name="Остатки1СВСДСписокКонтекстноеМеню" id="227"/>
 									<ExtendedTooltip name="Остатки1СВСДСписокРасширеннаяПодсказка" id="228"/>
 								</InputField>
 								<InputField name="Остатки1ССерия" id="104">
-									<DataPath>Объект.Остатки1С.ДатаСрокГодностиСерия</DataPath>
+									<DataPath>Объект.Остатки1С.ДатаПроизводстваСерия</DataPath>
 									<EditMode>EnterOnInput</EditMode>
 									<Format>
 										<v8:item>
@@ -213,6 +228,18 @@
 								</InputField>
 								<InputField name="Остатки1СВНаличииОстаток" id="189">
 									<DataPath>Объект.Остатки1С.ВНаличииОстаток</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Остаток, кг</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>В наличии по регистрам 1С</v8:content>
+										</v8:item>
+									</ToolTip>
 									<EditMode>EnterOnInput</EditMode>
 									<ContextMenu name="Остатки1СВНаличииОстатокКонтекстноеМеню" id="190"/>
 									<ExtendedTooltip name="Остатки1СВНаличииОстатокРасширеннаяПодсказка" id="191"/>
@@ -222,7 +249,7 @@
 									<Title>
 										<v8:item>
 											<v8:lang>ru</v8:lang>
-											<v8:content>вес</v8:content>
+											<v8:content>Вес</v8:content>
 										</v8:item>
 									</Title>
 									<EditMode>EnterOnInput</EditMode>
@@ -234,7 +261,7 @@
 									<Title>
 										<v8:item>
 											<v8:lang>ru</v8:lang>
-											<v8:content>Количество к корректировке</v8:content>
+											<v8:content>Не хватает в Меркурии, кг</v8:content>
 										</v8:item>
 									</Title>
 									<EditMode>EnterOnInput</EditMode>
@@ -333,42 +360,64 @@
 									<ContextMenu name="ОстаткиМеркурийКоличествоКонтекстноеМеню" id="61"/>
 									<ExtendedTooltip name="ОстаткиМеркурийКоличествоРасширеннаяПодсказка" id="62"/>
 								</InputField>
-								<InputField name="ОстаткиМеркурийДатаСрокГодности1" id="118">
-									<DataPath>Объект.ОстаткиМеркурий.ДатаСрокГодности1</DataPath>
-									<EditMode>EnterOnInput</EditMode>
-									<Format>
-										<v8:item>
-											<v8:lang>ru</v8:lang>
-											<v8:content>ДФ=dd.MM.yyyy</v8:content>
-										</v8:item>
-									</Format>
-									<EditFormat>
-										<v8:item>
-											<v8:lang>ru</v8:lang>
-											<v8:content>ДФ=dd.MM.yyyy</v8:content>
-										</v8:item>
-									</EditFormat>
-									<ContextMenu name="ОстаткиМеркурийДатаСрокГодности1КонтекстноеМеню" id="119"/>
-									<ExtendedTooltip name="ОстаткиМеркурийДатаСрокГодности1РасширеннаяПодсказка" id="120"/>
-								</InputField>
-								<InputField name="ОстаткиМеркурийДатаСрокГодности2" id="121">
-									<DataPath>Объект.ОстаткиМеркурий.ДатаСрокГодности2</DataPath>
-									<EditMode>EnterOnInput</EditMode>
-									<Format>
-										<v8:item>
-											<v8:lang>ru</v8:lang>
-											<v8:content>ДФ=dd.MM.yyyy</v8:content>
-										</v8:item>
-									</Format>
-									<EditFormat>
-										<v8:item>
-											<v8:lang>ru</v8:lang>
-											<v8:content>ДФ=dd.MM.yyyy</v8:content>
-										</v8:item>
-									</EditFormat>
-									<ContextMenu name="ОстаткиМеркурийДатаСрокГодности2КонтекстноеМеню" id="122"/>
-									<ExtendedTooltip name="ОстаткиМеркурийДатаСрокГодности2РасширеннаяПодсказка" id="123"/>
-								</InputField>
+								<ColumnGroup name="ОстаткиМеркурийГруппа1" id="313">
+									<ExtendedTooltip name="ОстаткиМеркурийГруппа1РасширеннаяПодсказка" id="314"/>
+									<ChildItems>
+										<InputField name="ОстаткиМеркурийДатаИзготовления1" id="289">
+											<DataPath>Объект.ОстаткиМеркурий.ДатаИзготовления1</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="ОстаткиМеркурийДатаИзготовления1КонтекстноеМеню" id="290"/>
+											<ExtendedTooltip name="ОстаткиМеркурийДатаИзготовления1РасширеннаяПодсказка" id="291"/>
+										</InputField>
+										<InputField name="ОстаткиМеркурийДатаИзготовления2" id="292">
+											<DataPath>Объект.ОстаткиМеркурий.ДатаИзготовления2</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="ОстаткиМеркурийДатаИзготовления2КонтекстноеМеню" id="293"/>
+											<ExtendedTooltip name="ОстаткиМеркурийДатаИзготовления2РасширеннаяПодсказка" id="294"/>
+										</InputField>
+									</ChildItems>
+								</ColumnGroup>
+								<ColumnGroup name="ОстаткиМеркурийГруппа2" id="315">
+									<ExtendedTooltip name="ОстаткиМеркурийГруппа2РасширеннаяПодсказка" id="316"/>
+									<ChildItems>
+										<InputField name="ОстаткиМеркурийДатаСрокГодности1" id="118">
+											<DataPath>Объект.ОстаткиМеркурий.ДатаСрокГодности1</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<Format>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>ДФ=dd.MM.yyyy</v8:content>
+												</v8:item>
+											</Format>
+											<EditFormat>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>ДФ=dd.MM.yyyy</v8:content>
+												</v8:item>
+											</EditFormat>
+											<ContextMenu name="ОстаткиМеркурийДатаСрокГодности1КонтекстноеМеню" id="119"/>
+											<ExtendedTooltip name="ОстаткиМеркурийДатаСрокГодности1РасширеннаяПодсказка" id="120"/>
+										</InputField>
+										<InputField name="ОстаткиМеркурийДатаСрокГодности2" id="121">
+											<DataPath>Объект.ОстаткиМеркурий.ДатаСрокГодности2</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<Format>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>ДФ=dd.MM.yyyy</v8:content>
+												</v8:item>
+											</Format>
+											<EditFormat>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>ДФ=dd.MM.yyyy</v8:content>
+												</v8:item>
+											</EditFormat>
+											<ContextMenu name="ОстаткиМеркурийДатаСрокГодности2КонтекстноеМеню" id="122"/>
+											<ExtendedTooltip name="ОстаткиМеркурийДатаСрокГодности2РасширеннаяПодсказка" id="123"/>
+										</InputField>
+									</ChildItems>
+								</ColumnGroup>
 							</ChildItems>
 						</Table>
 					</ChildItems>
@@ -388,11 +437,6 @@
 					</ToolTip>
 					<ExtendedTooltip name="ГруппаСходитсяРасширеннаяПодсказка" id="67"/>
 					<ChildItems>
-						<Button name="Откорректировать" id="224">
-							<Type>UsualButton</Type>
-							<CommandName>Form.Command.Откорректировать</CommandName>
-							<ExtendedTooltip name="ОткорректироватьРасширеннаяПодсказка" id="225"/>
-						</Button>
 						<Table name="Сверка" id="68">
 							<Representation>List</Representation>
 							<AutoInsertNewRow>true</AutoInsertNewRow>
@@ -401,7 +445,17 @@
 							<DataPath>Объект.СверкаСходится</DataPath>
 							<RowFilter xsi:nil="true"/>
 							<ContextMenu name="СверкаКонтекстноеМеню" id="69"/>
-							<AutoCommandBar name="СверкаКоманднаяПанель" id="70"/>
+							<AutoCommandBar name="СверкаКоманднаяПанель" id="70">
+								<Autofill>false</Autofill>
+								<ChildItems>
+									<Button name="Откорректировать" id="224">
+										<Type>CommandBarButton</Type>
+										<Visible>false</Visible>
+										<CommandName>Form.Command.Откорректировать</CommandName>
+										<ExtendedTooltip name="ОткорректироватьРасширеннаяПодсказка" id="225"/>
+									</Button>
+								</ChildItems>
+							</AutoCommandBar>
 							<ExtendedTooltip name="СверкаРасширеннаяПодсказка" id="71"/>
 							<SearchStringAddition name="СверкаСтрокаПоиска" id="72">
 								<AdditionSource>
@@ -475,7 +529,7 @@
 									<Title>
 										<v8:item>
 											<v8:lang>ru</v8:lang>
-											<v8:content>Партия колич</v8:content>
+											<v8:content>Партия количество</v8:content>
 										</v8:item>
 									</Title>
 									<EditMode>EnterOnInput</EditMode>
@@ -483,7 +537,7 @@
 									<ExtendedTooltip name="СверкаПартияКоличествоРасширеннаяПодсказка" id="220"/>
 								</InputField>
 								<InputField name="СверкаДатаСрокГодностиСерия" id="115">
-									<DataPath>Объект.СверкаСходится.ДатаСрокГодностиСерия</DataPath>
+									<DataPath>Объект.СверкаСходится.ДатаПроизводстваСерия</DataPath>
 									<EditMode>EnterOnInput</EditMode>
 									<Format>
 										<v8:item>
@@ -500,42 +554,64 @@
 									<ContextMenu name="СверкаДатаСрокГодностиСерияКонтекстноеМеню" id="116"/>
 									<ExtendedTooltip name="СверкаДатаСрокГодностиСерияРасширеннаяПодсказка" id="117"/>
 								</InputField>
-								<InputField name="СверкаДатаСрокГодности1" id="109">
-									<DataPath>Объект.СверкаСходится.ДатаСрокГодности1</DataPath>
-									<EditMode>EnterOnInput</EditMode>
-									<Format>
-										<v8:item>
-											<v8:lang>ru</v8:lang>
-											<v8:content>ДФ=dd.MM.yyyy</v8:content>
-										</v8:item>
-									</Format>
-									<EditFormat>
-										<v8:item>
-											<v8:lang>ru</v8:lang>
-											<v8:content>ДФ=dd.MM.yyyy</v8:content>
-										</v8:item>
-									</EditFormat>
-									<ContextMenu name="СверкаДатаСрокГодности1КонтекстноеМеню" id="110"/>
-									<ExtendedTooltip name="СверкаДатаСрокГодности1РасширеннаяПодсказка" id="111"/>
-								</InputField>
-								<InputField name="СверкаДатаСрокГодности2" id="112">
-									<DataPath>Объект.СверкаСходится.ДатаСрокГодности2</DataPath>
-									<EditMode>EnterOnInput</EditMode>
-									<Format>
-										<v8:item>
-											<v8:lang>ru</v8:lang>
-											<v8:content>ДФ=dd.MM.yyyy</v8:content>
-										</v8:item>
-									</Format>
-									<EditFormat>
-										<v8:item>
-											<v8:lang>ru</v8:lang>
-											<v8:content>ДФ=dd.MM.yyyy</v8:content>
-										</v8:item>
-									</EditFormat>
-									<ContextMenu name="СверкаДатаСрокГодности2КонтекстноеМеню" id="113"/>
-									<ExtendedTooltip name="СверкаДатаСрокГодности2РасширеннаяПодсказка" id="114"/>
-								</InputField>
+								<ColumnGroup name="СверкаГруппа1" id="317">
+									<ExtendedTooltip name="СверкаГруппа1РасширеннаяПодсказка" id="318"/>
+									<ChildItems>
+										<InputField name="СверкаДатаИзготовления1" id="307">
+											<DataPath>Объект.СверкаСходится.ДатаИзготовления1</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="СверкаДатаИзготовления1КонтекстноеМеню" id="308"/>
+											<ExtendedTooltip name="СверкаДатаИзготовления1РасширеннаяПодсказка" id="309"/>
+										</InputField>
+										<InputField name="СверкаДатаИзготовления2" id="310">
+											<DataPath>Объект.СверкаСходится.ДатаИзготовления2</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="СверкаДатаИзготовления2КонтекстноеМеню" id="311"/>
+											<ExtendedTooltip name="СверкаДатаИзготовления2РасширеннаяПодсказка" id="312"/>
+										</InputField>
+									</ChildItems>
+								</ColumnGroup>
+								<ColumnGroup name="СверкаГруппа2" id="319">
+									<ExtendedTooltip name="СверкаГруппа2РасширеннаяПодсказка" id="320"/>
+									<ChildItems>
+										<InputField name="СверкаДатаСрокГодности1" id="109">
+											<DataPath>Объект.СверкаСходится.ДатаСрокГодности1</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<Format>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>ДФ=dd.MM.yyyy</v8:content>
+												</v8:item>
+											</Format>
+											<EditFormat>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>ДФ=dd.MM.yyyy</v8:content>
+												</v8:item>
+											</EditFormat>
+											<ContextMenu name="СверкаДатаСрокГодности1КонтекстноеМеню" id="110"/>
+											<ExtendedTooltip name="СверкаДатаСрокГодности1РасширеннаяПодсказка" id="111"/>
+										</InputField>
+										<InputField name="СверкаДатаСрокГодности2" id="112">
+											<DataPath>Объект.СверкаСходится.ДатаСрокГодности2</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<Format>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>ДФ=dd.MM.yyyy</v8:content>
+												</v8:item>
+											</Format>
+											<EditFormat>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>ДФ=dd.MM.yyyy</v8:content>
+												</v8:item>
+											</EditFormat>
+											<ContextMenu name="СверкаДатаСрокГодности2КонтекстноеМеню" id="113"/>
+											<ExtendedTooltip name="СверкаДатаСрокГодности2РасширеннаяПодсказка" id="114"/>
+										</InputField>
+									</ChildItems>
+								</ColumnGroup>
 							</ChildItems>
 						</Table>
 					</ChildItems>
@@ -665,6 +741,36 @@
 									<ContextMenu name="СверкаКорректировкаПартияКонтекстноеМеню" id="161"/>
 									<ExtendedTooltip name="СверкаКорректировкаПартияРасширеннаяПодсказка" id="162"/>
 								</InputField>
+								<InputField name="СверкаКорректировкаДатаИзготовления1" id="295">
+									<DataPath>Объект.СверкаКорректировка.ДатаИзготовления1</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="СверкаКорректировкаДатаИзготовления1КонтекстноеМеню" id="296"/>
+									<ExtendedTooltip name="СверкаКорректировкаДатаИзготовления1РасширеннаяПодсказка" id="297"/>
+								</InputField>
+								<InputField name="СверкаКорректировкаДатаСрокГодностиСерия" id="169">
+									<DataPath>Объект.СверкаКорректировка.ДатаПроизводстваСерия</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<Format>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>ДФ=dd.MM.yyyy</v8:content>
+										</v8:item>
+									</Format>
+									<EditFormat>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>ДФ=dd.MM.yyyy</v8:content>
+										</v8:item>
+									</EditFormat>
+									<ContextMenu name="СверкаКорректировкаДатаСрокГодностиСерияКонтекстноеМеню" id="170"/>
+									<ExtendedTooltip name="СверкаКорректировкаДатаСрокГодностиСерияРасширеннаяПодсказка" id="171"/>
+								</InputField>
+								<InputField name="СверкаКорректировкаДатаИзготовления2" id="298">
+									<DataPath>Объект.СверкаКорректировка.ДатаИзготовления2</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="СверкаКорректировкаДатаИзготовления2КонтекстноеМеню" id="299"/>
+									<ExtendedTooltip name="СверкаКорректировкаДатаИзготовления2РасширеннаяПодсказка" id="300"/>
+								</InputField>
 								<InputField name="СверкаКорректировкаДатаСрокГодности1" id="163">
 									<DataPath>Объект.СверкаКорректировка.ДатаСрокГодности1</DataPath>
 									<EditMode>EnterOnInput</EditMode>
@@ -700,24 +806,6 @@
 									</EditFormat>
 									<ContextMenu name="СверкаКорректировкаДатаСрокГодности2КонтекстноеМеню" id="167"/>
 									<ExtendedTooltip name="СверкаКорректировкаДатаСрокГодности2РасширеннаяПодсказка" id="168"/>
-								</InputField>
-								<InputField name="СверкаКорректировкаДатаСрокГодностиСерия" id="169">
-									<DataPath>Объект.СверкаКорректировка.ДатаСрокГодностиСерия</DataPath>
-									<EditMode>EnterOnInput</EditMode>
-									<Format>
-										<v8:item>
-											<v8:lang>ru</v8:lang>
-											<v8:content>ДФ=dd.MM.yyyy</v8:content>
-										</v8:item>
-									</Format>
-									<EditFormat>
-										<v8:item>
-											<v8:lang>ru</v8:lang>
-											<v8:content>ДФ=dd.MM.yyyy</v8:content>
-										</v8:item>
-									</EditFormat>
-									<ContextMenu name="СверкаКорректировкаДатаСрокГодностиСерияКонтекстноеМеню" id="170"/>
-									<ExtendedTooltip name="СверкаКорректировкаДатаСрокГодностиСерияРасширеннаяПодсказка" id="171"/>
 								</InputField>
 							</ChildItems>
 						</Table>
@@ -798,15 +886,29 @@
 								</InputField>
 								<InputField name="ОстаткиМеркурийУдалениеСрокГодности1" id="265">
 									<DataPath>Объект.ОстаткиМеркурийУдаление.СрокГодности1</DataPath>
+									<Visible>false</Visible>
 									<EditMode>EnterOnInput</EditMode>
 									<ContextMenu name="ОстаткиМеркурийУдалениеСрокГодности1КонтекстноеМеню" id="266"/>
 									<ExtendedTooltip name="ОстаткиМеркурийУдалениеСрокГодности1РасширеннаяПодсказка" id="267"/>
 								</InputField>
 								<InputField name="ОстаткиМеркурийУдалениеСрокГодности2" id="268">
 									<DataPath>Объект.ОстаткиМеркурийУдаление.СрокГодности2</DataPath>
+									<Visible>false</Visible>
 									<EditMode>EnterOnInput</EditMode>
 									<ContextMenu name="ОстаткиМеркурийУдалениеСрокГодности2КонтекстноеМеню" id="269"/>
 									<ExtendedTooltip name="ОстаткиМеркурийУдалениеСрокГодности2РасширеннаяПодсказка" id="270"/>
+								</InputField>
+								<InputField name="ОстаткиМеркурийУдалениеДатаИзготовления1" id="301">
+									<DataPath>Объект.ОстаткиМеркурийУдаление.ДатаИзготовления1</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ОстаткиМеркурийУдалениеДатаИзготовления1КонтекстноеМеню" id="302"/>
+									<ExtendedTooltip name="ОстаткиМеркурийУдалениеДатаИзготовления1РасширеннаяПодсказка" id="303"/>
+								</InputField>
+								<InputField name="ОстаткиМеркурийУдалениеДатаИзготовления2" id="304">
+									<DataPath>Объект.ОстаткиМеркурийУдаление.ДатаИзготовления2</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ОстаткиМеркурийУдалениеДатаИзготовления2КонтекстноеМеню" id="305"/>
+									<ExtendedTooltip name="ОстаткиМеркурийУдалениеДатаИзготовления2РасширеннаяПодсказка" id="306"/>
 								</InputField>
 								<InputField name="ОстаткиМеркурийУдалениеДатаСрокГодности1" id="277">
 									<DataPath>Объект.ОстаткиМеркурийУдаление.ДатаСрокГодности1</DataPath>
@@ -854,7 +956,7 @@
 						<Title>
 							<v8:item>
 								<v8:lang>ru</v8:lang>
-								<v8:content>В наличии остаток</v8:content>
+								<v8:content>В наличии остаток(кг)</v8:content>
 							</v8:item>
 						</Title>
 						<Type>
@@ -956,7 +1058,7 @@
 				<dcsset:appearance>
 					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
 						<dcscor:parameter>ЦветФона</dcscor:parameter>
-						<dcscor:value xsi:type="v8ui:Color">#FF0000</dcscor:value>
+						<dcscor:value xsi:type="v8ui:Color">web:LightPink</dcscor:value>
 					</dcscor:item>
 					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
 						<dcscor:use>false</dcscor:use>
@@ -1005,7 +1107,7 @@
 				<dcsset:appearance>
 					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
 						<dcscor:parameter>ЦветФона</dcscor:parameter>
-						<dcscor:value xsi:type="v8ui:Color">auto</dcscor:value>
+						<dcscor:value xsi:type="v8ui:Color">web:PaleGreen</dcscor:value>
 					</dcscor:item>
 				</dcsset:appearance>
 			</dcsset:item>
