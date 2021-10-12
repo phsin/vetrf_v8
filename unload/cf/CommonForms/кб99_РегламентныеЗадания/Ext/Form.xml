@@ -6,6 +6,7 @@
 			<v8:content>кб99 Регламентные задания</v8:content>
 		</v8:item>
 	</Title>
+	<AutoTitle>false</AutoTitle>
 	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
 		<HorizontalAlign>Right</HorizontalAlign>
 		<Autofill>false</Autofill>
@@ -90,7 +91,7 @@
 									<Title>
 										<v8:item>
 											<v8:lang>ru</v8:lang>
-											<v8:content>сек между повторами при аварийном завершении задания</v8:content>
+											<v8:content>секунд между повторами при аварийном завершении задания</v8:content>
 										</v8:item>
 									</Title>
 									<TitleLocation>Right</TitleLocation>
@@ -142,7 +143,7 @@
 							<Title>
 								<v8:item>
 									<v8:lang>ru</v8:lang>
-									<v8:content>повторов при авайрином завершении задания</v8:content>
+									<v8:content>повторов при аварийном завершении задания</v8:content>
 								</v8:item>
 							</Title>
 							<TitleLocation>Right</TitleLocation>
@@ -213,6 +214,19 @@
 							<ContextMenu name="ПлощадкаКонтекстноеМеню" id="55"/>
 							<ExtendedTooltip name="ПлощадкаРасширеннаяПодсказка" id="56"/>
 						</InputField>
+						<InputField name="КоличествоПовторовПриАварийномЗавершенииПолучитьАктуальныеПартии" id="51">
+							<DataPath>КоличествоПовторовПриАварийномЗавершенииПолучитьАктуальныеПартии</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>повторов при авайрином завершении задания</v8:content>
+								</v8:item>
+							</Title>
+							<TitleLocation>Right</TitleLocation>
+							<Width>5</Width>
+							<ContextMenu name="КоличествоПовторовПриАварийномЗавершенииПолучитьАктуальныеПартииКонтекстноеМеню" id="52"/>
+							<ExtendedTooltip name="КоличествоПовторовПриАварийномЗавершенииПолучитьАктуальныеПартииРасширеннаяПодсказка" id="53"/>
+						</InputField>
 						<InputField name="ИнтервалПовтораПриАварийномЗавершенииПолучитьАктуальныеПартии" id="48">
 							<DataPath>ИнтервалПовтораПриАварийномЗавершенииПолучитьАктуальныеПартии</DataPath>
 							<Title>
@@ -226,18 +240,60 @@
 							<ContextMenu name="ИнтервалПовтораПриАварийномЗавершенииПолучитьАктуальныеПартииКонтекстноеМеню" id="49"/>
 							<ExtendedTooltip name="ИнтервалПовтораПриАварийномЗавершенииПолучитьАктуальныеПартииРасширеннаяПодсказка" id="50"/>
 						</InputField>
-						<InputField name="КоличествоПовторовПриАварийномЗавершенииПолучитьАктуальныеПартии" id="51">
-							<DataPath>КоличествоПовторовПриАварийномЗавершенииПолучитьАктуальныеПартии</DataPath>
-							<Title>
-								<v8:item>
-									<v8:lang>ru</v8:lang>
-									<v8:content>повторов при авайрином завершении задания</v8:content>
-								</v8:item>
-							</Title>
+					</ChildItems>
+				</Page>
+				<Page name="ГруппаСтатусВСД" id="59">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Обновление статуса ВСД</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа статус ВСД</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="ГруппаСтатусВСДРасширеннаяПодсказка" id="60"/>
+					<ChildItems>
+						<UsualGroup name="Группа6" id="61">
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="Группа6РасширеннаяПодсказка" id="62"/>
+							<ChildItems>
+								<CheckBoxField name="ИспользованиеОбновитьСтатусыВСД" id="63">
+									<DataPath>ИспользованиеОбновитьСтатусыВСД</DataPath>
+									<TitleLocation>Right</TitleLocation>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="ИспользованиеОбновитьСтатусыВСДКонтекстноеМеню" id="64"/>
+									<ExtendedTooltip name="ИспользованиеОбновитьСтатусыВСДРасширеннаяПодсказка" id="65"/>
+								</CheckBoxField>
+								<Button name="НастроитьРасписаниеКб99_ОбновитьСтатусыВСД" id="75">
+									<Type>Hyperlink</Type>
+									<CommandName>Form.Command.НастроитьРасписаниеКб99_ОбновитьСтатусыВСД</CommandName>
+									<ExtendedTooltip name="НастроитьРасписаниеКб99_ОбновитьСтатусыВСДРасширеннаяПодсказка" id="76"/>
+								</Button>
+							</ChildItems>
+						</UsualGroup>
+						<InputField name="ОбновлятьСтатусыЗа" id="66">
+							<DataPath>ОбновлятьСтатусыЗа</DataPath>
+							<ContextMenu name="ОбновлятьСтатусыЗаКонтекстноеМеню" id="67"/>
+							<ExtendedTooltip name="ОбновлятьСтатусыЗаРасширеннаяПодсказка" id="68"/>
+						</InputField>
+						<InputField name="КоличествоПовторовПриАварийномЗавершенииОбновитьСтатусыВСД" id="72">
+							<DataPath>КоличествоПовторовПриАварийномЗавершенииОбновитьСтатусыВСД</DataPath>
 							<TitleLocation>Right</TitleLocation>
 							<Width>5</Width>
-							<ContextMenu name="КоличествоПовторовПриАварийномЗавершенииПолучитьАктуальныеПартииКонтекстноеМеню" id="52"/>
-							<ExtendedTooltip name="КоличествоПовторовПриАварийномЗавершенииПолучитьАктуальныеПартииРасширеннаяПодсказка" id="53"/>
+							<ContextMenu name="КоличествоПовторовПриАварийномЗавершенииОбновитьСтатусыВСДКонтекстноеМеню" id="73"/>
+							<ExtendedTooltip name="КоличествоПовторовПриАварийномЗавершенииОбновитьСтатусыВСДРасширеннаяПодсказка" id="74"/>
+						</InputField>
+						<InputField name="ИнтервалПовтораПриАварийномЗавершенииОбновитьСтатусыВСД" id="69">
+							<DataPath>ИнтервалПовтораПриАварийномЗавершенииОбновитьСтатусыВСД</DataPath>
+							<TitleLocation>Right</TitleLocation>
+							<Width>5</Width>
+							<ContextMenu name="ИнтервалПовтораПриАварийномЗавершенииОбновитьСтатусыВСДКонтекстноеМеню" id="70"/>
+							<ExtendedTooltip name="ИнтервалПовтораПриАварийномЗавершенииОбновитьСтатусыВСДРасширеннаяПодсказка" id="71"/>
 						</InputField>
 					</ChildItems>
 				</Page>
@@ -433,6 +489,74 @@
 				<v8:Type>cfg:CatalogRef.ВСД_Площадка</v8:Type>
 			</Settings>
 		</Attribute>
+		<Attribute name="РасписаниеРегламентногоЗаданияКб99_ОбновитьСтатусыВСД" id="14">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Расписание регламентного задания "Обновить статусы ВСД"</v8:content>
+				</v8:item>
+			</Title>
+			<Type/>
+		</Attribute>
+		<Attribute name="ИнтервалПовтораПриАварийномЗавершенииОбновитьСтатусыВСД" id="15">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>секунд между повторами при аварийном завершении задания</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>5</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ИспользованиеОбновитьСтатусыВСД" id="16">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Использование</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="КоличествоПовторовПриАварийномЗавершенииОбновитьСтатусыВСД" id="17">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>повторов при авайрином завершении задания</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>2</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ОбновлятьСтатусыЗа" id="18">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Обновлять ВСД за кол-во дней</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>3</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
 	</Attributes>
 	<Commands>
 		<Command name="кнСохранить" id="1">
@@ -491,6 +615,21 @@
 				<v8:item>
 					<v8:lang>ru</v8:lang>
 					<v8:content>Настроить расписание кб99 получить актуальные партии</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>НастроитьРасписание</Action>
+		</Command>
+		<Command name="НастроитьРасписаниеКб99_ОбновитьСтатусыВСД" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Расписание</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Настроить расписание обновления статусов ВСД</v8:content>
 				</v8:item>
 			</ToolTip>
 			<Action>НастроитьРасписание</Action>

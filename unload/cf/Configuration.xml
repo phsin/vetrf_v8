@@ -45,7 +45,7 @@
 			<ScriptVariant>Russian</ScriptVariant>
 			<DefaultRoles/>
 			<Vendor>https://kb99.pro</Vendor>
-			<Version>2.4.9</Version>
+			<Version>2.4.14</Version>
 			<UpdateCatalogAddress/>
 			<IncludeHelpInContents>false</IncludeHelpInContents>
 			<UseManagedFormInOrdinaryApplication>false</UseManagedFormInOrdinaryApplication>
@@ -237,6 +237,7 @@
 			<ScheduledJob>кб99_ВСД_УдалитьЗапросы</ScheduledJob>
 			<ScheduledJob>кб99_ВСД_УдалитьЗапросы_XML</ScheduledJob>
 			<ScheduledJob>кб99_ПолучитьАктуальныеПартии</ScheduledJob>
+			<ScheduledJob>кб99_ОбновитьСтатусыВСД</ScheduledJob>
 			<CommonCommand>ВСД_ОтправитьВСД</CommonCommand>
 			<CommonCommand>ВСД_ПлощадкиЗагрузитьПоНазванию</CommonCommand>
 			<CommonCommand>ВСД_ПечатьВСДСокращенный</CommonCommand>
@@ -258,9 +259,9 @@
 			<CommandGroup>Печать</CommandGroup>
 			<CommandGroup>ВСД_ГруппаКоманд</CommandGroup>
 			<CommonForm>кб99_ФормаТермическиеУсловия</CommonForm>
-			<CommonForm>кб99_РегламентныеЗадания</CommonForm>
 			<CommonForm>ДлительнаяОперация</CommonForm>
 			<CommonForm>СтруктураПодчиненности</CommonForm>
+			<CommonForm>кб99_РегламентныеЗадания</CommonForm>
 			<Catalog>Контрагенты</Catalog>
 			<Catalog>Номенклатура</Catalog>
 			<Catalog>ВСД_Площадка</Catalog>
