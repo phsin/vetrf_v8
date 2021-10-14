@@ -6166,7 +6166,12 @@
 	|<vd:transportInfo>
 	|<vd:transportType>1</vd:transportType>
 	|<vd:transportNumber>
-	|<vd:vehicleNumber>"+ СокрЛП(ДокСсылка.номерАвто) +"</vd:vehicleNumber>
+	|<vd:vehicleNumber>"+ СокрЛП(ДокСсылка.номерАвто) +"</vd:vehicleNumber>";
+	Если ЗначениеЗаполнено(ДокСсылка.НомерПрицепа) Тогда
+		ЗапросПодвал = ЗапросПодвал+"
+		|<vd:trailerNumber>"+СокрЛП(ДокСсылка.НомерПрицепа)+"</vd:trailerNumber>";
+	КонецЕсли;
+	ЗапросПодвал = ЗапросПодвал+"
 	|</vd:transportNumber>
 	|</vd:transportInfo>
 	|<vd:transportStorageType>"+ XMLСтрока( ДокСсылка.ТермическиеУсловияПеревозки ) +"</vd:transportStorageType> ";
