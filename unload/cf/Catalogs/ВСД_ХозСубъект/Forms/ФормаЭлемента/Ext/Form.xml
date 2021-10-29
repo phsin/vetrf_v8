@@ -89,6 +89,9 @@
 											<AutoMaxWidth>false</AutoMaxWidth>
 											<ContextMenu name="КонтрагентКонтекстноеМеню" id="8"/>
 											<ExtendedTooltip name="КонтрагентРасширеннаяПодсказка" id="9"/>
+											<Events>
+												<Event name="OnChange">КонтрагентПриИзменении</Event>
+											</Events>
 										</InputField>
 									</ChildItems>
 								</UsualGroup>

@@ -280,7 +280,7 @@
 												</InputField>
 												<InputField name="НомерПрицепа" id="742">
 													<DataPath>Объект.НомерПрицепа</DataPath>
-													<AutoMaxWidth>false</AutoMaxWidth>
+													<TitleLocation>Left</TitleLocation>
 													<ContextMenu name="НомерПрицепаКонтекстноеМеню" id="743"/>
 													<ExtendedTooltip name="НомерПрицепаРасширеннаяПодсказка" id="744"/>
 												</InputField>
@@ -762,6 +762,11 @@
 												</Title>
 												<ExtendedTooltip name="ЗаполнитьРасширеннаяПодсказка" id="474"/>
 											</Button>
+											<Button name="ТоварыПодборПоДокументуОснованию" id="745">
+												<Type>CommandBarButton</Type>
+												<CommandName>Form.Command.ПодборПоДокументуОснованию</CommandName>
+												<ExtendedTooltip name="ТоварыПодборПоДокументуОснованиюРасширеннаяПодсказка" id="746"/>
+											</Button>
 											<Button name="ТоварыЗаполнитьПросроченнымиТоварами" id="475">
 												<Type>CommandBarButton</Type>
 												<CommandName>Form.Command.ЗаполнитьПросроченнымиТоварами</CommandName>
@@ -1013,6 +1018,12 @@
 												</InputField>
 											</ChildItems>
 										</ColumnGroup>
+										<InputField name="ТоварыОсобыеОтметки" id="747">
+											<DataPath>Объект.Товары.ОсобыеОтметки</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="ТоварыОсобыеОтметкиКонтекстноеМеню" id="748"/>
+											<ExtendedTooltip name="ТоварыОсобыеОтметкиРасширеннаяПодсказка" id="749"/>
+										</InputField>
 									</ChildItems>
 								</Table>
 							</ChildItems>
@@ -2028,6 +2039,21 @@
 				</v8:item>
 			</ToolTip>
 			<Action>ЗаполнитьПросроченнымиТоварами</Action>
+		</Command>
+		<Command name="ПодборПоДокументуОснованию" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Подбор по документу основанию</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Подбор по документу основанию</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ПодборПоДокументуОснованию</Action>
 		</Command>
 	</Commands>
 	<CommandInterface>

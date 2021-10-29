@@ -51,6 +51,18 @@
 					<v8:content>Срок годности</v8:content>
 				</v8:item>
 			</title>
+			<presentationExpression>кб99_ВСД_Запросы.СтрокаВДатаВремя(СрокГодности)</presentationExpression>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Формат</dcscor:parameter>
+					<dcscor:value xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>ДФ=dd.MM.yyyy</v8:content>
+						</v8:item>
+					</dcscor:value>
+				</dcscor:item>
+			</appearance>
 		</field>
 		<field xsi:type="DataSetFieldField">
 			<dataPath>ДатаИзготовления</dataPath>
@@ -61,6 +73,18 @@
 					<v8:content>Дата изготовления</v8:content>
 				</v8:item>
 			</title>
+			<presentationExpression>кб99_ВСД_Запросы.СтрокаВДатаВремя(ДатаИзготовления)</presentationExpression>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Формат</dcscor:parameter>
+					<dcscor:value xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>ДФ=dd.MM.yyyy</v8:content>
+						</v8:item>
+					</dcscor:value>
+				</dcscor:item>
+			</appearance>
 		</field>
 		<field xsi:type="DataSetFieldField">
 			<dataPath>НомерЗаписи</dataPath>
@@ -100,7 +124,8 @@
 ИЗ
 	Справочник.ВСД_Партия КАК ВСД_Партия
 		ЛЕВОЕ СОЕДИНЕНИЕ Справочник.ВСД_Соответсвия КАК ВСД_Соответсвия
-		ПО ВСД_Партия.Продукция_Элемент = ВСД_Соответсвия.ПродукцияЭлемент
+		ПО ВСД_Партия.Продукция_Элемент = ВСД_Соответсвия.ПродукцияЭлемент 
+		И ВСД_Соответсвия.Владелец &lt;&gt; ЗНАЧЕНИЕ(Справочник.Номенклатура.ПустаяСсылка)
 ГДЕ
 	ВСД_Партия.Количество &gt; 0
 	И НЕ ВСД_Партия.ПометкаУдаления
