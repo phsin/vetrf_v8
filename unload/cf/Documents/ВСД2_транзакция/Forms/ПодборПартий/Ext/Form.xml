@@ -95,36 +95,52 @@
 						</v8:item>
 					</ToolTip>
 					<GroupHorizontalAlign>Right</GroupHorizontalAlign>
+					<Group>AlwaysHorizontal</Group>
 					<ShowTitle>false</ShowTitle>
 					<ExtendedTooltip name="ГруппаНадписиРасширеннаяПодсказка" id="133"/>
 					<ChildItems>
 						<LabelField name="ИтогоВНаличии" id="137">
 							<DataPath>ИтогоВНаличии</DataPath>
 							<TitleLocation>Top</TitleLocation>
+							<HorizontalAlign>Center</HorizontalAlign>
+							<Format>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>ЧН=0</v8:content>
+								</v8:item>
+							</Format>
 							<Border width="1">
-								<v8ui:style xsi:type="v8ui:ControlBorderType">Embossed</v8ui:style>
+								<v8ui:style xsi:type="v8ui:ControlBorderType">Underline</v8ui:style>
 							</Border>
-							<Font ref="style:NormalTextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
+							<Font ref="style:NormalTextFont" height="12" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
 							<ContextMenu name="ИтогоВНаличииКонтекстноеМеню" id="138"/>
 							<ExtendedTooltip name="ИтогоВНаличииРасширеннаяПодсказка" id="139"/>
 						</LabelField>
 						<LabelField name="ИтогоОсталосьПодобрать" id="134">
 							<DataPath>ИтогоОсталосьПодобрать</DataPath>
 							<TitleLocation>Top</TitleLocation>
+							<HorizontalAlign>Center</HorizontalAlign>
 							<Border width="1">
-								<v8ui:style xsi:type="v8ui:ControlBorderType">Embossed</v8ui:style>
+								<v8ui:style xsi:type="v8ui:ControlBorderType">Underline</v8ui:style>
 							</Border>
-							<Font ref="style:NormalTextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
+							<Font ref="style:NormalTextFont" height="12" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
 							<ContextMenu name="ИтогоОсталосьПодобратьКонтекстноеМеню" id="135"/>
 							<ExtendedTooltip name="ИтогоОсталосьПодобратьРасширеннаяПодсказка" id="136"/>
 						</LabelField>
 						<LabelField name="ИтогоПодобрано" id="140">
 							<DataPath>ИтогоПодобрано</DataPath>
 							<TitleLocation>Top</TitleLocation>
+							<HorizontalAlign>Center</HorizontalAlign>
+							<Format>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>ЧН=0</v8:content>
+								</v8:item>
+							</Format>
 							<Border width="1">
-								<v8ui:style xsi:type="v8ui:ControlBorderType">Embossed</v8ui:style>
+								<v8ui:style xsi:type="v8ui:ControlBorderType">Underline</v8ui:style>
 							</Border>
-							<Font ref="style:NormalTextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
+							<Font ref="style:NormalTextFont" height="12" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
 							<ContextMenu name="ИтогоПодобраноКонтекстноеМеню" id="141"/>
 							<ExtendedTooltip name="ИтогоПодобраноРасширеннаяПодсказка" id="142"/>
 						</LabelField>
@@ -287,6 +303,7 @@
 					<Representation>List</Representation>
 					<TitleLocation>Top</TitleLocation>
 					<CommandBarLocation>None</CommandBarLocation>
+					<ReadOnly>true</ReadOnly>
 					<ChangeRowSet>false</ChangeRowSet>
 					<ChangeRowOrder>false</ChangeRowOrder>
 					<ChoiceMode>true</ChoiceMode>
@@ -404,6 +421,7 @@
 					<Representation>List</Representation>
 					<TitleLocation>Top</TitleLocation>
 					<CommandBarLocation>None</CommandBarLocation>
+					<ReadOnly>true</ReadOnly>
 					<AutoInsertNewRow>true</AutoInsertNewRow>
 					<EnableStartDrag>true</EnableStartDrag>
 					<EnableDrag>true</EnableDrag>
