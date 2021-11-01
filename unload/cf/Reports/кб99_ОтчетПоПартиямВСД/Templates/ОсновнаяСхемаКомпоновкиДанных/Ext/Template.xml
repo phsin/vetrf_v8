@@ -31,10 +31,6 @@
 			<field>Количество</field>
 		</field>
 		<field xsi:type="DataSetFieldField">
-			<dataPath>ФормаУпаковки</dataPath>
-			<field>ФормаУпаковки</field>
-		</field>
-		<field xsi:type="DataSetFieldField">
 			<dataPath>НомерПартии</dataPath>
 			<field>НомерПартии</field>
 		</field>
@@ -110,22 +106,32 @@
 				</v8:item>
 			</title>
 		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Партия</dataPath>
+			<field>Партия</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Партия</v8:content>
+				</v8:item>
+			</title>
+		</field>
 		<dataSource>ИсточникДанных1</dataSource>
 		<query>ВЫБРАТЬ
 	ВСД_Соответсвия.Владелец КАК Номенклатура,
-	ВСД_Партия.Количество КАК Количество,
-	ВСД_Партия.ФормаУпаковки КАК ФормаУпаковки,
+	ВСД_Партия.Количество КАК Количество,	
 	ВСД_Партия.ЕдиницаИзмерения КАК ЕдиницаИзмерения,
 	ВСД_Партия.ДатаИзготовления1 КАК ДатаИзготовления,
 	ВСД_Партия.ДатаСрокГодности1 КАК СрокГодности,
 	ВСД_Партия.НомерПартии КАК НомерПартии,
 	ВСД_Партия.НомерЗаписи КАК НомерЗаписи,
-	ВСД_Партия.Получатель_Площадка КАК ВСДПлощадка
+	ВСД_Партия.Получатель_Площадка КАК ВСДПлощадка,
+	ВСД_Партия.Ссылка КАК Партия
 ИЗ
 	Справочник.ВСД_Партия КАК ВСД_Партия
 		ЛЕВОЕ СОЕДИНЕНИЕ Справочник.ВСД_Соответсвия КАК ВСД_Соответсвия
-		ПО ВСД_Партия.Продукция_Элемент = ВСД_Соответсвия.ПродукцияЭлемент 
-		И ВСД_Соответсвия.Владелец &lt;&gt; ЗНАЧЕНИЕ(Справочник.Номенклатура.ПустаяСсылка)
+		ПО ВСД_Партия.Продукция_Элемент = ВСД_Соответсвия.ПродукцияЭлемент
+			
 ГДЕ
 	ВСД_Партия.Количество &gt; 0
 	И НЕ ВСД_Партия.ПометкаУдаления
@@ -151,10 +157,10 @@
 					<dcsset:field>Номенклатура</dcsset:field>
 				</dcsset:item>
 				<dcsset:item xsi:type="dcsset:SelectedItemField">
-					<dcsset:field>Количество</dcsset:field>
+					<dcsset:field>Партия</dcsset:field>
 				</dcsset:item>
 				<dcsset:item xsi:type="dcsset:SelectedItemField">
-					<dcsset:field>ФормаУпаковки</dcsset:field>
+					<dcsset:field>Количество</dcsset:field>
 				</dcsset:item>
 				<dcsset:item xsi:type="dcsset:SelectedItemField">
 					<dcsset:field>ЕдиницаИзмерения</dcsset:field>
@@ -177,6 +183,7 @@
 			</dcsset:selection>
 			<dcsset:filter>
 				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:use>false</dcsset:use>
 					<dcsset:left xsi:type="dcscor:Field">Хозсубъект</dcsset:left>
 					<dcsset:comparisonType>Equal</dcsset:comparisonType>
 					<dcsset:userSettingID>636f48b9-f700-409f-a747-df34dffae3b9</dcsset:userSettingID>
@@ -188,6 +195,7 @@
 					</dcsset:userSettingPresentation>
 				</dcsset:item>
 				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:use>false</dcsset:use>
 					<dcsset:left xsi:type="dcscor:Field">Площадка</dcsset:left>
 					<dcsset:comparisonType>Equal</dcsset:comparisonType>
 					<dcsset:userSettingID>a1b7324b-0f56-46ee-a3c0-1f8ec1a8447f</dcsset:userSettingID>
