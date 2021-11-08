@@ -7,13 +7,6 @@
 		<Event name="OnOpen">ПриОткрытии</Event>
 	</Events>
 	<ChildItems>
-		<UsualGroup name="Группа1" id="141">
-			<HorizontalStretch>true</HorizontalStretch>
-			<Group>Horizontal</Group>
-			<Representation>None</Representation>
-			<ShowTitle>false</ShowTitle>
-			<ExtendedTooltip name="Группа1РасширеннаяПодсказка" id="142"/>
-		</UsualGroup>
 		<UsualGroup name="Группа16" id="171">
 			<Group>Horizontal</Group>
 			<Representation>None</Representation>
@@ -151,8 +144,9 @@
 									<ChildItems>
 										<LabelField name="Статус" id="28">
 											<DataPath>Объект.Статус</DataPath>
+											<Visible>false</Visible>
 											<EditMode>EnterOnInput</EditMode>
-											<HorizontalStretch>true</HorizontalStretch>
+											<HorizontalStretch>false</HorizontalStretch>
 											<Border width="1">
 												<v8ui:style xsi:type="v8ui:ControlBorderType">Embossed</v8ui:style>
 											</Border>
@@ -179,6 +173,25 @@
 						</UsualGroup>
 					</ChildItems>
 				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="Группа1" id="141">
+			<HorizontalStretch>true</HorizontalStretch>
+			<Group>Horizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="Группа1РасширеннаяПодсказка" id="142"/>
+			<ChildItems>
+				<LabelField name="ОписаниеСтатусаПартии" id="268" DisplayImportance="VeryHigh">
+					<DataPath>ОписаниеСтатусаПартии</DataPath>
+					<ReadOnly>true</ReadOnly>
+					<TitleLocation>None</TitleLocation>
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<AutoMaxHeight>false</AutoMaxHeight>
+					<Font ref="style:NormalTextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
+					<ContextMenu name="ОписаниеСтатусаПартииКонтекстноеМеню" id="269"/>
+					<ExtendedTooltip name="ОписаниеСтатусаПартииРасширеннаяПодсказка" id="270"/>
+				</LabelField>
 			</ChildItems>
 		</UsualGroup>
 		<Pages name="Страницы" id="85">
@@ -759,6 +772,21 @@
 					<dcsset:itemsUserSettingID>911b6018-f537-43e8-a417-da56b22f9aec</dcsset:itemsUserSettingID>
 				</ListSettings>
 			</Settings>
+		</Attribute>
+		<Attribute name="ОписаниеСтатусаПартии" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Описание статуса партии</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
 		</Attribute>
 	</Attributes>
 </Form>
