@@ -3221,7 +3221,7 @@
 
 КонецФункции
 
-Функция Список_Улиц_ЗапросXML( guid )
+Функция Список_Улиц_ЗапросXML( guid, Параметры )
 
 	Запрос = "<SOAP-ENV:Envelope xmlns:SOAP-ENV='http://schemas.xmlsoap.org/soap/envelope/'
 	|xmlns:ws='http://api.vetrf.ru/schema/cdm/registry/ws-definitions/v2'
@@ -3232,7 +3232,7 @@
 	|<ws:getStreetListByLocalityRequest>
 	|<base:listOptions>
 	|<base:count>1000</base:count>
-	|<base:offset>0</base:offset>
+	|<base:offset>"+Формат( Параметры["Смещение"], "ЧДЦ=0; ЧН=0; ЧГ=" )+"</base:offset>
 	|</base:listOptions>
 	|<ikar:localityGuid>"+ guid +"</ikar:localityGuid>
 	|</ws:getStreetListByLocalityRequest>
@@ -3277,7 +3277,7 @@
 	КонецЕсли;
 	
 	СообщитьИнфо(" Запрос GetStreetListByLocality "+_Город+" ["+СокрЛП(_Город.GUID) +"]");		
-	ЗапросXML = Список_Улиц_ЗапросXML( _Город.GUID );
+	ЗапросXML = Список_Улиц_ЗапросXML( _Город.GUID, Параметры );
     Service = "platform/services/2.1/IkarService";
     Action = "GetStreetListByLocality";
 
@@ -3290,11 +3290,12 @@
 	Если НайтиОшибки(xdto, _Город ) Тогда
 		Возврат Ложь;
 	КонецЕсли;
-
+	
+	ПолучилиУлиц = Число(xdto.Body.GetStreetListByLocalityResponse.StreetList.count);
 	НачатьТранзакцию();
 	Попытка
 
-		Если Число(xdto.Body.GetStreetListByLocalityResponse.StreetList.count) = 0 Тогда
+		Если ПолучилиУлиц = 0 Тогда
 			ТекстСообщения = СтрШаблон("По населенному пункту %1 в классификаторе отсутствуют улицы", _город.Наименование);
 			СообщитьИнфо(ТекстСообщения);
 			Возврат Истина;
@@ -3312,6 +3313,10 @@
 
 		ЗафиксироватьТранзакцию();
 		
+		Если ПолучилиУлиц = 1000 Тогда
+			Параметры["Смещение"] = Параметры["Смещение"] + 1000;
+			ИнициализацияХС_ЗагрузитьУлицы(Параметры, _Город);
+		КонецЕсли;
 		Ответ = Истина;
 	    СообщитьИнфо("ВСД_Улицы загрузка завершена");
 	Исключение
