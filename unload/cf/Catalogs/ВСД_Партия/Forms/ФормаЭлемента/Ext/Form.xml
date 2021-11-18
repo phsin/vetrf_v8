@@ -19,7 +19,6 @@
 					<ExtendedTooltip name="Группа17РасширеннаяПодсказка" id="174"/>
 					<ChildItems>
 						<UsualGroup name="Группа6" id="151">
-							<ReadOnly>true</ReadOnly>
 							<Group>Horizontal</Group>
 							<Representation>None</Representation>
 							<ShowTitle>false</ShowTitle>
@@ -27,6 +26,7 @@
 							<ExtendedTooltip name="Группа6РасширеннаяПодсказка" id="152"/>
 							<ChildItems>
 								<UsualGroup name="Группа8" id="155">
+									<ReadOnly>true</ReadOnly>
 									<HorizontalStretch>true</HorizontalStretch>
 									<Group>Vertical</Group>
 									<Representation>None</Representation>
@@ -62,6 +62,7 @@
 									</ChildItems>
 								</UsualGroup>
 								<UsualGroup name="Группа19" id="177">
+									<ReadOnly>true</ReadOnly>
 									<Group>Vertical</Group>
 									<Representation>None</Representation>
 									<ShowTitle>false</ShowTitle>
@@ -136,7 +137,6 @@
 									</ChildItems>
 								</UsualGroup>
 								<UsualGroup name="Группа4" id="147">
-									<ReadOnly>true</ReadOnly>
 									<Group>Vertical</Group>
 									<Representation>None</Representation>
 									<ShowTitle>false</ShowTitle>
@@ -154,8 +154,15 @@
 											<ContextMenu name="СтатусКонтекстноеМеню" id="29"/>
 											<ExtendedTooltip name="СтатусРасширеннаяПодсказка" id="30"/>
 										</LabelField>
+										<CheckBoxField name="Заблокировать" id="271">
+											<DataPath>Объект.Заблокировать</DataPath>
+											<CheckBoxType>Auto</CheckBoxType>
+											<ContextMenu name="ЗаблокироватьКонтекстноеМеню" id="272"/>
+											<ExtendedTooltip name="ЗаблокироватьРасширеннаяПодсказка" id="273"/>
+										</CheckBoxField>
 										<InputField name="ДатаИзменения" id="22">
 											<DataPath>Объект.ДатаИзменения</DataPath>
+											<ReadOnly>true</ReadOnly>
 											<EditMode>EnterOnInput</EditMode>
 											<HorizontalStretch>true</HorizontalStretch>
 											<ContextMenu name="ДатаИзмененияКонтекстноеМеню" id="23"/>
@@ -163,6 +170,7 @@
 										</InputField>
 										<InputField name="ВсдДата" id="55">
 											<DataPath>Объект.ВсдДата</DataPath>
+											<ReadOnly>true</ReadOnly>
 											<EditMode>EnterOnInput</EditMode>
 											<ContextMenu name="ВсдДатаКонтекстноеМеню" id="56"/>
 											<ExtendedTooltip name="ВсдДатаРасширеннаяПодсказка" id="57"/>
