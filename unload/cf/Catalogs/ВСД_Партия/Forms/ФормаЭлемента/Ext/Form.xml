@@ -155,7 +155,7 @@
 											<ExtendedTooltip name="СтатусРасширеннаяПодсказка" id="30"/>
 										</LabelField>
 										<CheckBoxField name="Заблокировать" id="271">
-											<DataPath>Объект.Заблокировать</DataPath>
+											<DataPath>Объект.ИсключенаИзПодбора</DataPath>
 											<CheckBoxType>Auto</CheckBoxType>
 											<ContextMenu name="ЗаблокироватьКонтекстноеМеню" id="272"/>
 											<ExtendedTooltip name="ЗаблокироватьРасширеннаяПодсказка" id="273"/>
@@ -388,6 +388,7 @@
 					<ExtendedTooltip name="грЛабИсследованияРасширеннаяПодсказка" id="182"/>
 					<ChildItems>
 						<Table name="ЛабораторныеИсследования" id="183">
+							<HeightInTableRows>5</HeightInTableRows>
 							<AutoInsertNewRow>true</AutoInsertNewRow>
 							<EnableStartDrag>true</EnableStartDrag>
 							<EnableDrag>true</EnableDrag>
@@ -497,6 +498,7 @@
 					<ChildItems>
 						<Table name="УровниУпаковки" id="89">
 							<Representation>List</Representation>
+							<HeightInTableRows>5</HeightInTableRows>
 							<AutoInsertNewRow>true</AutoInsertNewRow>
 							<EnableStartDrag>true</EnableStartDrag>
 							<EnableDrag>true</EnableDrag>
@@ -571,6 +573,7 @@
 					<ChildItems>
 						<Table name="Маркировка" id="116">
 							<Representation>List</Representation>
+							<HeightInTableRows>5</HeightInTableRows>
 							<AutoInsertNewRow>true</AutoInsertNewRow>
 							<EnableStartDrag>true</EnableStartDrag>
 							<EnableDrag>true</EnableDrag>
@@ -649,6 +652,7 @@
 					<ExtendedTooltip name="СтраницаЗапросыРасширеннаяПодсказка" id="230"/>
 					<ChildItems>
 						<Table name="дсЗапросы" id="231">
+							<HeightInTableRows>5</HeightInTableRows>
 							<UseAlternationRowColor>true</UseAlternationRowColor>
 							<EnableStartDrag>true</EnableStartDrag>
 							<DataPath>дсЗапросы</DataPath>
