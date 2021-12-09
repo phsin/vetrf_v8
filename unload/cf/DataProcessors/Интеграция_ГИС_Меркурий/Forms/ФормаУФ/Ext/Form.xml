@@ -125,11 +125,38 @@
 				</Picture>
 				<ExtendedTooltip name="ФормаОткрытьПараметрыРасширеннаяПодсказка" id="650"/>
 			</Button>
-			<Button name="ФормаОбщаяКомандаВСД_УдаленнаяПоддержка" id="682">
-				<Type>CommandBarButton</Type>
-				<CommandName>CommonCommand.ВСД_УдаленнаяПоддержка</CommandName>
-				<ExtendedTooltip name="ФормаОбщаяКомандаВСД_УдаленнаяПоддержкаРасширеннаяПодсказка" id="683"/>
-			</Button>
+			<Popup name="КоманднаяПанельГруппаТехподдержка" id="700">
+				<Title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Техподдержка</v8:content>
+					</v8:item>
+				</Title>
+				<ToolTip>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Техподдержка</v8:content>
+					</v8:item>
+				</ToolTip>
+				<Picture>
+					<xr:Ref>CommonPicture.kb99_Support</xr:Ref>
+					<xr:LoadTransparent>true</xr:LoadTransparent>
+				</Picture>
+				<Representation>PictureAndText</Representation>
+				<ExtendedTooltip name="КоманднаяПанельГруппаТехподдержкаРасширеннаяПодсказка" id="701"/>
+				<ChildItems>
+					<Button name="ФормаОбщаяКомандаВСД_УдаленнаяПоддержка1сКоннект" id="702">
+						<Type>CommandBarButton</Type>
+						<CommandName>CommonCommand.ВСД_УдаленнаяПоддержка1сКоннект</CommandName>
+						<ExtendedTooltip name="ФормаОбщаяКомандаВСД_УдаленнаяПоддержка1сКоннектРасширеннаяПодсказка" id="703"/>
+					</Button>
+					<Button name="ФормаОбщаяКомандаВСД_УдаленнаяПоддержка" id="682">
+						<Type>CommandBarButton</Type>
+						<CommandName>CommonCommand.ВСД_УдаленнаяПоддержкаAnydesk</CommandName>
+						<ExtendedTooltip name="ФормаОбщаяКомандаВСД_УдаленнаяПоддержкаРасширеннаяПодсказка" id="683"/>
+					</Button>
+				</ChildItems>
+			</Popup>
 		</ChildItems>
 	</AutoCommandBar>
 	<Events>
@@ -1533,12 +1560,6 @@
 					<ChildItems>
 						<LabelDecoration name="НадписьИнформацияОТехподдержке" id="687">
 							<AutoMaxWidth>false</AutoMaxWidth>
-							<Title formatted="false">
-								<v8:item>
-									<v8:lang>ru</v8:lang>
-									<v8:content>Нет активного договора техподдержки. Доступно обновление, актуальная версия:</v8:content>
-								</v8:item>
-							</Title>
 							<GroupHorizontalAlign>Left</GroupHorizontalAlign>
 							<ContextMenu name="НадписьИнформацияОТехподдержкеКонтекстноеМеню" id="688"/>
 							<ExtendedTooltip name="НадписьИнформацияОТехподдержкеРасширеннаяПодсказка" id="689"/>

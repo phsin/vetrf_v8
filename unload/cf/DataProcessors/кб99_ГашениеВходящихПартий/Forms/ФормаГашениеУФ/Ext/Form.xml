@@ -155,11 +155,37 @@
 				<CommandName>Form.Command.кнРаспределитьПродукцию</CommandName>
 				<ExtendedTooltip name="ФормакнГашениеСВХРасширеннаяПодсказка" id="696"/>
 			</Button>
-			<Button name="ФормаОбщаяКомандаВСД_УдаленнаяПоддержка" id="711">
-				<Type>CommandBarButton</Type>
-				<CommandName>CommonCommand.ВСД_УдаленнаяПоддержка</CommandName>
-				<ExtendedTooltip name="ФормаОбщаяКомандаВСД_УдаленнаяПоддержкаРасширеннаяПодсказка" id="712"/>
-			</Button>
+			<Popup name="КоманднаяПанельТехподдержка" id="713">
+				<Title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Техподдержка</v8:content>
+					</v8:item>
+				</Title>
+				<ToolTip>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Командная панель техподдержка</v8:content>
+					</v8:item>
+				</ToolTip>
+				<Picture>
+					<xr:Ref>CommonPicture.kb99_Support</xr:Ref>
+					<xr:LoadTransparent>true</xr:LoadTransparent>
+				</Picture>
+				<ExtendedTooltip name="КоманднаяПанельТехподдержкаРасширеннаяПодсказка" id="714"/>
+				<ChildItems>
+					<Button name="ФормаОбщаяКомандаВСД_УдаленнаяПоддержка1сКоннект" id="715">
+						<Type>CommandBarButton</Type>
+						<CommandName>CommonCommand.ВСД_УдаленнаяПоддержка1сКоннект</CommandName>
+						<ExtendedTooltip name="ФормаОбщаяКомандаВСД_УдаленнаяПоддержка1сКоннектРасширеннаяПодсказка" id="716"/>
+					</Button>
+					<Button name="ФормаОбщаяКомандаВСД_УдаленнаяПоддержкаAnydesk" id="717">
+						<Type>CommandBarButton</Type>
+						<CommandName>CommonCommand.ВСД_УдаленнаяПоддержкаAnydesk</CommandName>
+						<ExtendedTooltip name="ФормаОбщаяКомандаВСД_УдаленнаяПоддержкаAnydeskРасширеннаяПодсказка" id="718"/>
+					</Button>
+				</ChildItems>
+			</Popup>
 		</ChildItems>
 	</AutoCommandBar>
 	<Events>

@@ -156,12 +156,9 @@
 			<Subsystem>кб99_ВСД</Subsystem>
 			<Subsystem>ТиповыеДокументы</Subsystem>
 			<CommonPicture>Ветис2</CommonPicture>
-			<CommonPicture>ЛабИсследования</CommonPicture>
-			<CommonPicture>кб99_Car</CommonPicture>
-			<CommonPicture>кб99_map_o</CommonPicture>
-			<CommonPicture>кб99_print</CommonPicture>
 			<CommonPicture>кб99_send</CommonPicture>
-			<CommonPicture>кб99_send_o</CommonPicture>
+			<CommonPicture>кб99_map_o</CommonPicture>
+			<CommonPicture>ЛабИсследования</CommonPicture>
 			<CommonPicture>кб99_space_shattle</CommonPicture>
 			<CommonPicture>кб99_check</CommonPicture>
 			<CommonPicture>кб99_reply</CommonPicture>
@@ -206,7 +203,12 @@
 			<CommonPicture>СправочникПВХКоннекторНиз</CommonPicture>
 			<CommonPicture>ДокументПроведенКоннекторЛево</CommonPicture>
 			<CommonPicture>Ветис</CommonPicture>
-			<CommonPicture>ЛоготипУдаленнаяПоддержка</CommonPicture>
+			<CommonPicture>кб99_Car</CommonPicture>
+			<CommonPicture>кб99_print</CommonPicture>
+			<CommonPicture>кб99_send_o</CommonPicture>
+			<CommonPicture>kb99_ЛоготипAnydesk</CommonPicture>
+			<CommonPicture>kb99_Логотип1сКоннект</CommonPicture>
+			<CommonPicture>kb99_Support</CommonPicture>
 			<Interface>ВСД</Interface>
 			<SessionParameter>ТекущийПользователь</SessionParameter>
 			<Role>Администратор</Role>
@@ -240,9 +242,7 @@
 			<ScheduledJob>кб99_ОбновитьСтатусыВСД</ScheduledJob>
 			<CommonCommand>ВСД_ОтправитьВСД</CommonCommand>
 			<CommonCommand>ВСД_ПлощадкиЗагрузитьПоНазванию</CommonCommand>
-			<CommonCommand>ВСД_ПечатьВСДСокращенный</CommonCommand>
 			<CommonCommand>ВСД_ПолучитьОтветВетис</CommonCommand>
-			<CommonCommand>ВСД_ОткрытьОтвет</CommonCommand>
 			<CommonCommand>ВСД_ПечатьВСДПолный</CommonCommand>
 			<CommonCommand>ВСД_СтруктураПодчиненности</CommonCommand>
 			<CommonCommand>ВСД_АннулироватьВСД</CommonCommand>
@@ -255,7 +255,10 @@
 			<CommonCommand>ВСД_ОбновитьСтатусВСД</CommonCommand>
 			<CommonCommand>ВСД_ОткрытьЗапрос</CommonCommand>
 			<CommonCommand>ВСД_ПечатьНаборныйЛист</CommonCommand>
-			<CommonCommand>ВСД_УдаленнаяПоддержка</CommonCommand>
+			<CommonCommand>ВСД_ПечатьВСДСокращенный</CommonCommand>
+			<CommonCommand>ВСД_ОткрытьОтвет</CommonCommand>
+			<CommonCommand>ВСД_УдаленнаяПоддержкаAnydesk</CommonCommand>
+			<CommonCommand>ВСД_УдаленнаяПоддержка1сКоннект</CommonCommand>
 			<CommandGroup>Печать</CommandGroup>
 			<CommandGroup>ВСД_ГруппаКоманд</CommandGroup>
 			<CommonForm>кб99_ФормаТермическиеУсловия</CommonForm>
