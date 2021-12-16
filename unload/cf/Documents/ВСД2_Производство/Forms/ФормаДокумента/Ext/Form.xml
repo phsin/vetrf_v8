@@ -835,6 +835,9 @@
 											<EditMode>EnterOnInput</EditMode>
 											<ContextMenu name="ПартииСписанияКоличествоКонтекстноеМеню" id="157"/>
 											<ExtendedTooltip name="ПартииСписанияКоличествоРасширеннаяПодсказка" id="158"/>
+											<Events>
+												<Event name="OnChange">ПартииСписанияКоличествоПриИзменении</Event>
+											</Events>
 										</InputField>
 										<InputField name="ПартииСписанияЕдиницаИзмерения" id="159">
 											<DataPath>Объект.ПартииСписания.ЕдиницаИзмерения</DataPath>
@@ -919,6 +922,23 @@
 										</ColumnGroup>
 									</ChildItems>
 								</Table>
+								<LabelField name="ПартииСписанияИтогКоличество" id="595">
+									<DataPath>Объект.ПартииСписания.TotalКоличество</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Количество списания (итог)</v8:content>
+										</v8:item>
+									</Title>
+									<TitleFont ref="style:NormalTextFont" height="11" kind="StyleItem"/>
+									<HorizontalAlign>Left</HorizontalAlign>
+									<GroupHorizontalAlign>Right</GroupHorizontalAlign>
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<HorizontalStretch>false</HorizontalStretch>
+									<Font ref="style:NormalTextFont" height="11" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
+									<ContextMenu name="ПартииСписанияИтогКоличествоКонтекстноеМеню" id="596"/>
+									<ExtendedTooltip name="ПартииСписанияИтогКоличествоРасширеннаяПодсказка" id="597"/>
+								</LabelField>
 							</ChildItems>
 						</UsualGroup>
 					</ChildItems>
