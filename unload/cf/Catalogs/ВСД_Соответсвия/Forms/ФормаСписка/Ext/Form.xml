@@ -76,6 +76,7 @@
 				</CheckBoxField>
 				<LabelField name="Наименование" id="16">
 					<DataPath>Список.Description</DataPath>
+					<Visible>false</Visible>
 					<DefaultItem>true</DefaultItem>
 					<ContextMenu name="НаименованиеКонтекстноеМеню" id="17"/>
 					<ExtendedTooltip name="НаименованиеРасширеннаяПодсказка" id="18"/>
@@ -94,6 +95,11 @@
 					<DataPath>Список.ПродукцияЭлемент</DataPath>
 					<ContextMenu name="ПродукцияЭлементКонтекстноеМеню" id="26"/>
 					<ExtendedTooltip name="ПродукцияЭлементРасширеннаяПодсказка" id="27"/>
+				</LabelField>
+				<LabelField name="Контрагент" id="31">
+					<DataPath>Список.Контрагент</DataPath>
+					<ContextMenu name="КонтрагентКонтекстноеМеню" id="32"/>
+					<ExtendedTooltip name="КонтрагентРасширеннаяПодсказка" id="33"/>
 				</LabelField>
 			</ChildItems>
 		</Table>

@@ -406,20 +406,20 @@
 									<ContextMenu name="дсСоответствияНоменклатураКонтекстноеМеню" id="105"/>
 									<ExtendedTooltip name="дсСоответствияНоменклатураРасширеннаяПодсказка" id="106"/>
 								</LabelField>
-								<LabelField name="дсСоответствияВладелец" id="142">
-									<DataPath>дсСоответствия.Owner</DataPath>
-									<ContextMenu name="дсСоответствияВладелецКонтекстноеМеню" id="143"/>
-									<ExtendedTooltip name="дсСоответствияВладелецРасширеннаяПодсказка" id="144"/>
-								</LabelField>
 								<LabelField name="дсСоответствияНаименование" id="136">
 									<DataPath>дсСоответствия.Description</DataPath>
 									<ContextMenu name="дсСоответствияНаименованиеКонтекстноеМеню" id="137"/>
 									<ExtendedTooltip name="дсСоответствияНаименованиеРасширеннаяПодсказка" id="138"/>
 								</LabelField>
-								<LabelField name="дсСоответствияКод" id="139">
-									<DataPath>дсСоответствия.Code</DataPath>
-									<ContextMenu name="дсСоответствияКодКонтекстноеМеню" id="140"/>
-									<ExtendedTooltip name="дсСоответствияКодРасширеннаяПодсказка" id="141"/>
+								<LabelField name="дсСоответствияВладелец" id="142">
+									<DataPath>дсСоответствия.Owner</DataPath>
+									<ContextMenu name="дсСоответствияВладелецКонтекстноеМеню" id="143"/>
+									<ExtendedTooltip name="дсСоответствияВладелецРасширеннаяПодсказка" id="144"/>
+								</LabelField>
+								<LabelField name="дсСоответствияКонтрагент" id="178">
+									<DataPath>дсСоответствия.Контрагент</DataPath>
+									<ContextMenu name="дсСоответствияКонтрагентКонтекстноеМеню" id="179"/>
+									<ExtendedTooltip name="дсСоответствияКонтрагентРасширеннаяПодсказка" id="180"/>
 								</LabelField>
 							</ChildItems>
 						</Table>

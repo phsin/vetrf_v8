@@ -57,6 +57,11 @@
 				<Event name="OnChange">ПродукцияЭлементПриИзменении</Event>
 			</Events>
 		</InputField>
+		<InputField name="Контрагент" id="18">
+			<DataPath>Объект.Контрагент</DataPath>
+			<ContextMenu name="КонтрагентКонтекстноеМеню" id="19"/>
+			<ExtendedTooltip name="КонтрагентРасширеннаяПодсказка" id="20"/>
+		</InputField>
 	</ChildItems>
 	<Attributes>
 		<Attribute name="Объект" id="1">
