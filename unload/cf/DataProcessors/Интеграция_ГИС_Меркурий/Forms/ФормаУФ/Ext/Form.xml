@@ -1578,6 +1578,11 @@
 						</LabelField>
 					</ChildItems>
 				</UsualGroup>
+				<Button name="ПолучитьИнформациюОбОбновлениях" id="704">
+					<Type>Hyperlink</Type>
+					<CommandName>Form.Command.ПолучитьИнформациюОбОбновлениях</CommandName>
+					<ExtendedTooltip name="ПолучитьИнформациюОбОбновленияхРасширеннаяПодсказка" id="705"/>
+				</Button>
 			</ChildItems>
 		</UsualGroup>
 	</ChildItems>
@@ -2799,6 +2804,21 @@
 				<xr:LoadTransparent>true</xr:LoadTransparent>
 			</Picture>
 			<Action>ЗагрузитьПлощадкиСКонтролем2</Action>
+		</Command>
+		<Command name="ПолучитьИнформациюОбОбновлениях" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Получить информацию об обновлениях</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Получить информацию об обновлениях</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ПолучитьИнформациюОбОбновлениях</Action>
 		</Command>
 	</Commands>
 </Form>
