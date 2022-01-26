@@ -329,6 +329,7 @@
 									<Events>
 										<Event name="BeforeDeleteRow">ПродукцияПередУдалением</Event>
 										<Event name="OnActivateRow">ПродукцияПриАктивизацииСтроки</Event>
+										<Event name="AfterDeleteRow">ПродукцияПослеУдаления</Event>
 									</Events>
 									<ChildItems>
 										<LabelField name="ПродукцияНомерСтроки" id="75">

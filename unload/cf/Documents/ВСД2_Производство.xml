@@ -2347,6 +2347,7 @@
 					</Attribute>
 				</ChildObjects>
 			</TabularSection>
+			<Template>ПроверкаОформления</Template>
 			<Command uuid="21fa4b8f-9d95-4a73-bc4e-a2b1d744bfbd">
 				<Properties>
 					<Name>ЗавершитьПроизводство</Name>
@@ -2369,6 +2370,28 @@
 						<xr:Ref>CommonPicture.кб99_check</xr:Ref>
 						<xr:LoadTransparent>true</xr:LoadTransparent>
 					</Picture>
+					<Shortcut/>
+				</Properties>
+			</Command>
+			<Command uuid="0afabb63-6c3e-44a9-8c9f-96c32c0823f1">
+				<Properties>
+					<Name>ПроверитьОформление</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Проверить</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+					<Group>FormCommandBarImportant</Group>
+					<CommandParameterType>
+						<v8:Type>cfg:DocumentRef.ВСД2_Производство</v8:Type>
+					</CommandParameterType>
+					<ParameterUseMode>Single</ParameterUseMode>
+					<ModifiesData>true</ModifiesData>
+					<Representation>Auto</Representation>
+					<ToolTip/>
+					<Picture/>
 					<Shortcut/>
 				</Properties>
 			</Command>

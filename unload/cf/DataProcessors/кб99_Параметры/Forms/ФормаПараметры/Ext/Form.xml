@@ -1438,6 +1438,13 @@
 											<ContextMenu name="ПарамПроизводствоЗаполнятьТчПоТчСерииПродукцииКонтекстноеМеню" id="601"/>
 											<ExtendedTooltip name="ПарамПроизводствоЗаполнятьТчПоТчСерииПродукцииРасширеннаяПодсказка" id="602"/>
 										</CheckBoxField>
+										<CheckBoxField name="ПроверятьЗаполнениеСырьяВПроизводстве" id="790">
+											<DataPath>Объект.ПроверятьЗаполнениеСырьяВПроизводстве</DataPath>
+											<TitleLocation>Right</TitleLocation>
+											<CheckBoxType>Auto</CheckBoxType>
+											<ContextMenu name="ПроверятьЗаполнениеСырьяВПроизводствеКонтекстноеМеню" id="791"/>
+											<ExtendedTooltip name="ПроверятьЗаполнениеСырьяВПроизводствеРасширеннаяПодсказка" id="792"/>
+										</CheckBoxField>
 										<InputField name="КоэфПересчетаКоличестваПриПроизводстве" id="673">
 											<DataPath>Объект.КоэфПересчетаКоличестваПриПроизводстве</DataPath>
 											<Title>

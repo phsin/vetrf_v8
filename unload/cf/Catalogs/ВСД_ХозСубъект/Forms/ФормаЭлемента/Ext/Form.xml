@@ -229,6 +229,13 @@
 									<ShowTitle>false</ShowTitle>
 									<ExtendedTooltip name="грПерсональныеПараметрыСписанияПартийРасширеннаяПодсказка" id="96"/>
 									<ChildItems>
+										<CheckBoxField name="НомерСФВместоТТН" id="130">
+											<DataPath>Объект.НомерСФВместоТТН</DataPath>
+											<TitleLocation>Right</TitleLocation>
+											<CheckBoxType>Auto</CheckBoxType>
+											<ContextMenu name="НомерСФВместоТТНКонтекстноеМеню" id="131"/>
+											<ExtendedTooltip name="НомерСФВместоТТНРасширеннаяПодсказка" id="132"/>
+										</CheckBoxField>
 										<CheckBoxField name="ПерсональныеПараметрыСписанияПартий" id="92">
 											<DataPath>Объект.ПерсональныеПараметрыСписанияПартий</DataPath>
 											<TitleLocation>Right</TitleLocation>
