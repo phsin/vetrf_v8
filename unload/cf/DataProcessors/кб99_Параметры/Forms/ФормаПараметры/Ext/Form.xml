@@ -1463,6 +1463,22 @@
 											<ContextMenu name="ПрефиксНомераНезавершенногоПроизводстваКонтекстноеМеню" id="726"/>
 											<ExtendedTooltip name="ПрефиксНомераНезавершенногоПроизводстваРасширеннаяПодсказка" id="727"/>
 										</InputField>
+										<CheckBoxField name="ПроверкаБалансаРасходСырья" id="793">
+											<DataPath>Объект.ПроверятьБалансРасходаСырья</DataPath>
+											<TitleLocation>Right</TitleLocation>
+											<CheckBoxType>Auto</CheckBoxType>
+											<ContextMenu name="ПроверкаБалансаРасходСырьяКонтекстноеМеню" id="794"/>
+											<ExtendedTooltip name="ПроверкаБалансаРасходСырьяРасширеннаяПодсказка" id="795"/>
+											<Events>
+												<Event name="OnChange">ПроверкаБалансаРасходСырьяПриИзменении</Event>
+											</Events>
+										</CheckBoxField>
+										<InputField name="ПроцентРасхожденияСырьеПродукция" id="796">
+											<DataPath>Объект.ПроцентРасхожденияСырьеПродукция</DataPath>
+											<TitleLocation>Right</TitleLocation>
+											<ContextMenu name="ПроцентРасхожденияСырьеПродукцияКонтекстноеМеню" id="797"/>
+											<ExtendedTooltip name="ПроцентРасхожденияСырьеПродукцияРасширеннаяПодсказка" id="798"/>
+										</InputField>
 									</ChildItems>
 								</UsualGroup>
 								<UsualGroup name="ГруппаИнвентаризация" id="712">

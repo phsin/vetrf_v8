@@ -440,6 +440,13 @@
 					</ToolTip>
 					<ExtendedTooltip name="ГрСпецификацияРасширеннаяПодсказка" id="116"/>
 					<ChildItems>
+						<CheckBoxField name="НеКонтролироватьРасходСырья" id="181">
+							<DataPath>Объект.НеКонтролироватьРасходСырья</DataPath>
+							<TitleLocation>Right</TitleLocation>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="НеКонтролироватьРасходСырьяКонтекстноеМеню" id="182"/>
+							<ExtendedTooltip name="НеКонтролироватьРасходСырьяРасширеннаяПодсказка" id="183"/>
+						</CheckBoxField>
 						<Table name="дсСпецификация" id="117">
 							<UseAlternationRowColor>true</UseAlternationRowColor>
 							<EnableStartDrag>true</EnableStartDrag>
