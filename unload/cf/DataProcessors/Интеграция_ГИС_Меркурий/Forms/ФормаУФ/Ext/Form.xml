@@ -778,7 +778,7 @@
 											<Representation>Picture</Representation>
 											<CommandName>Form.Command.ВыборПериода</CommandName>
 											<Picture>
-												<xr:Ref>-100</xr:Ref>
+												<xr:Ref>StdPicture.Select</xr:Ref>
 												<xr:LoadTransparent>true</xr:LoadTransparent>
 											</Picture>
 											<ExtendedTooltip name="ВыборПериодаРасширеннаяПодсказка" id="454"/>
@@ -1539,6 +1539,16 @@
 					<ContextMenu name="ВерсияОбработкиКонтекстноеМеню" id="685"/>
 					<ExtendedTooltip name="ВерсияОбработкиРасширеннаяПодсказка" id="686"/>
 				</LabelField>
+				<Button name="ПолучитьИнформациюОбОбновлениях" id="704">
+					<Type>Hyperlink</Type>
+					<Representation>Picture</Representation>
+					<CommandName>Form.Command.ПолучитьИнформациюОбОбновлениях</CommandName>
+					<Picture>
+						<xr:Ref>StdPicture.Refresh</xr:Ref>
+						<xr:LoadTransparent>true</xr:LoadTransparent>
+					</Picture>
+					<ExtendedTooltip name="ПолучитьИнформациюОбОбновленияхРасширеннаяПодсказка" id="705"/>
+				</Button>
 				<UsualGroup name="ГруппаТехподдержка" id="693">
 					<Title>
 						<v8:item>
@@ -1558,11 +1568,11 @@
 					<ShowTitle>false</ShowTitle>
 					<ExtendedTooltip name="ГруппаТехподдержкаРасширеннаяПодсказка" id="694"/>
 					<ChildItems>
-						<LabelDecoration name="НадписьИнформацияОТехподдержке" id="687">
+						<LabelDecoration name="НадписьИнформацияОВерсии" id="706">
 							<AutoMaxWidth>false</AutoMaxWidth>
 							<GroupHorizontalAlign>Left</GroupHorizontalAlign>
-							<ContextMenu name="НадписьИнформацияОТехподдержкеКонтекстноеМеню" id="688"/>
-							<ExtendedTooltip name="НадписьИнформацияОТехподдержкеРасширеннаяПодсказка" id="689"/>
+							<ContextMenu name="НадписьИнформацияОВерсииКонтекстноеМеню" id="707"/>
+							<ExtendedTooltip name="НадписьИнформацияОВерсииРасширеннаяПодсказка" id="708"/>
 						</LabelDecoration>
 						<LabelField name="АктуальнаяВерсия" id="690">
 							<DataPath>АктуальнаяВерсия</DataPath>
@@ -1578,11 +1588,13 @@
 						</LabelField>
 					</ChildItems>
 				</UsualGroup>
-				<Button name="ПолучитьИнформациюОбОбновлениях" id="704">
-					<Type>Hyperlink</Type>
-					<CommandName>Form.Command.ПолучитьИнформациюОбОбновлениях</CommandName>
-					<ExtendedTooltip name="ПолучитьИнформациюОбОбновленияхРасширеннаяПодсказка" id="705"/>
-				</Button>
+				<LabelDecoration name="НадписьИнформацияОТехподдержке" id="687">
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<TextColor>#330000</TextColor>
+					<GroupHorizontalAlign>Left</GroupHorizontalAlign>
+					<ContextMenu name="НадписьИнформацияОТехподдержкеКонтекстноеМеню" id="688"/>
+					<ExtendedTooltip name="НадписьИнформацияОТехподдержкеРасширеннаяПодсказка" id="689"/>
+				</LabelDecoration>
 			</ChildItems>
 		</UsualGroup>
 	</ChildItems>
