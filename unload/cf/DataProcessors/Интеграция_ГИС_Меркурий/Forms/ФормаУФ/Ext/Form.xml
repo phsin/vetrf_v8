@@ -155,6 +155,15 @@
 						<CommandName>CommonCommand.ВСД_УдаленнаяПоддержкаAnydesk</CommandName>
 						<ExtendedTooltip name="ФормаОбщаяКомандаВСД_УдаленнаяПоддержкаРасширеннаяПодсказка" id="683"/>
 					</Button>
+					<Button name="ФормаПолучитьИнформациюОбОбновлениях" id="709">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.ПолучитьИнформациюОбОбновлениях</CommandName>
+						<Picture>
+							<xr:Ref>StdPicture.Refresh</xr:Ref>
+							<xr:LoadTransparent>true</xr:LoadTransparent>
+						</Picture>
+						<ExtendedTooltip name="ФормаПолучитьИнформациюОбОбновленияхРасширеннаяПодсказка" id="710"/>
+					</Button>
 				</ChildItems>
 			</Popup>
 		</ChildItems>
