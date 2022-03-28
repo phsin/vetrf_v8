@@ -45,16 +45,29 @@
 					<Group>Horizontal</Group>
 					<Representation>None</Representation>
 					<ShowTitle>false</ShowTitle>
+					<ThroughAlign>DontUse</ThroughAlign>
 					<ExtendedTooltip name="Группа1РасширеннаяПодсказка" id="4"/>
 					<ChildItems>
 						<InputField name="Номер" id="8">
 							<DataPath>Объект.Number</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>№</v8:content>
+								</v8:item>
+							</Title>
 							<EditMode>EnterOnInput</EditMode>
 							<ContextMenu name="НомерКонтекстноеМеню" id="9"/>
 							<ExtendedTooltip name="НомерРасширеннаяПодсказка" id="10"/>
 						</InputField>
 						<InputField name="Дата" id="11">
 							<DataPath>Объект.Date</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>от</v8:content>
+								</v8:item>
+							</Title>
 							<EditMode>EnterOnInput</EditMode>
 							<EditFormat>
 								<v8:item>
@@ -65,38 +78,30 @@
 							<ContextMenu name="ДатаКонтекстноеМеню" id="12"/>
 							<ExtendedTooltip name="ДатаРасширеннаяПодсказка" id="13"/>
 						</InputField>
-						<InputField name="Статус" id="5">
+						<LabelField name="Статус" id="5">
 							<DataPath>СтатусЗапроса</DataPath>
 							<EditMode>EnterOnInput</EditMode>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<MaxWidth>10</MaxWidth>
 							<Font ref="style:NormalTextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
 							<ContextMenu name="СтатусКонтекстноеМеню" id="6"/>
 							<ExtendedTooltip name="СтатусРасширеннаяПодсказка" id="7"/>
-						</InputField>
+						</LabelField>
 					</ChildItems>
 				</UsualGroup>
 				<InputField name="Организация" id="14">
 					<DataPath>Объект.Организация</DataPath>
 					<EditMode>EnterOnInput</EditMode>
+					<AutoMaxWidth>false</AutoMaxWidth>
 					<ContextMenu name="ОрганизацияКонтекстноеМеню" id="15"/>
 					<ExtendedTooltip name="ОрганизацияРасширеннаяПодсказка" id="16"/>
 					<Events>
 						<Event name="OnChange">ОрганизацияПриИзменении</Event>
 					</Events>
 				</InputField>
-				<InputField name="applicationID" id="19">
-					<DataPath>ApplicationID</DataPath>
-					<Title>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>AppID</v8:content>
-						</v8:item>
-					</Title>
-					<EditMode>EnterOnInput</EditMode>
-					<ContextMenu name="applicationIDКонтекстноеМеню" id="20"/>
-					<ExtendedTooltip name="applicationIDРасширеннаяПодсказка" id="21"/>
-				</InputField>
 				<InputField name="Партия" id="27">
 					<DataPath>Объект.Партия</DataPath>
+					<AutoMaxWidth>false</AutoMaxWidth>
 					<AutoMarkIncomplete>true</AutoMarkIncomplete>
 					<ContextMenu name="ПартияКонтекстноеМеню" id="28"/>
 					<ExtendedTooltip name="ПартияРасширеннаяПодсказка" id="29"/>
@@ -105,24 +110,40 @@
 						<Event name="ChoiceProcessing">ПартияОбработкаВыбора</Event>
 					</Events>
 				</InputField>
-				<LabelField name="Ошибки" id="158">
-					<DataPath>Ошибки</DataPath>
-					<Title>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>Ошибки запроса / Ветис.API</v8:content>
-						</v8:item>
-					</Title>
-					<TitleTextColor>#FF0000</TitleTextColor>
-					<Width>50</Width>
-					<Border width="1">
-						<v8ui:style xsi:type="v8ui:ControlBorderType">Single</v8ui:style>
-					</Border>
-					<BorderColor>style:SpecialTextColor</BorderColor>
-					<TextColor>#FF0000</TextColor>
-					<ContextMenu name="ОшибкиКонтекстноеМеню" id="159"/>
-					<ExtendedTooltip name="ОшибкиРасширеннаяПодсказка" id="160"/>
-				</LabelField>
+				<UsualGroup name="Группа2" id="185">
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<BackColor>#FFDCDC</BackColor>
+					<ExtendedTooltip name="Группа2РасширеннаяПодсказка" id="186"/>
+					<ChildItems>
+						<LabelField name="Ошибки" id="187">
+							<DataPath>Ошибки</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Ошибки запроса / Ветис.API</v8:content>
+								</v8:item>
+							</Title>
+							<TitleTextColor>style:FormTextColor</TitleTextColor>
+							<TitleLocation>None</TitleLocation>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Ошибки последнего запроса, отправленного на сервер Ветис.API</v8:content>
+								</v8:item>
+							</ToolTip>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<HorizontalStretch>true</HorizontalStretch>
+							<Border width="1">
+								<v8ui:style xsi:type="v8ui:ControlBorderType">Single</v8ui:style>
+							</Border>
+							<BorderColor>#FFDCDC</BorderColor>
+							<TextColor>style:FormTextColor</TextColor>
+							<ContextMenu name="ОшибкиКонтекстноеМеню" id="188"/>
+							<ExtendedTooltip name="ОшибкиРасширеннаяПодсказка" id="189"/>
+						</LabelField>
+					</ChildItems>
+				</UsualGroup>
 				<Pages name="ГрСтраницы" id="105">
 					<ExtendedTooltip name="ГрСтраницыРасширеннаяПодсказка" id="106"/>
 					<ChildItems>
@@ -270,47 +291,47 @@
 									<ExtendedTooltip name="Группа3РасширеннаяПодсказка" id="26"/>
 									<ChildItems>
 										<InputField name="НомерАктаОтбораПроб" id="30">
-											<DataPath>Объект.НомерАктаОтбораПроб</DataPath>
+											<DataPath>1/0:cf8bb546-7b7e-4c8e-b64e-1d68a8818364</DataPath>
 											<ContextMenu name="НомерАктаОтбораПробКонтекстноеМеню" id="31"/>
 											<ExtendedTooltip name="НомерАктаОтбораПробРасширеннаяПодсказка" id="32"/>
 										</InputField>
 										<InputField name="ДатаОтбораПроб" id="33">
-											<DataPath>Объект.ДатаОтбораПроб</DataPath>
+											<DataPath>1/0:97cce0d7-e02c-4e4e-8578-e71cc0ac793f</DataPath>
 											<ContextMenu name="ДатаОтбораПробКонтекстноеМеню" id="34"/>
 											<ExtendedTooltip name="ДатаОтбораПробРасширеннаяПодсказка" id="35"/>
 										</InputField>
 										<InputField name="НаименованиеЛаборатории" id="36">
-											<DataPath>Объект.НаименованиеЛаборатории</DataPath>
+											<DataPath>1/0:4b21588d-a182-4ade-92dd-663eeb293aa2</DataPath>
 											<ContextMenu name="НаименованиеЛабораторииКонтекстноеМеню" id="37"/>
 											<ExtendedTooltip name="НаименованиеЛабораторииРасширеннаяПодсказка" id="38"/>
 										</InputField>
 										<InputField name="НаименованиеПоказателя" id="39">
-											<DataPath>Объект.НаименованиеПоказателя</DataPath>
+											<DataPath>1/0:0110018b-6865-40d9-837d-1fc9eb9888de</DataPath>
 											<ContextMenu name="НаименованиеПоказателяКонтекстноеМеню" id="40"/>
 											<ExtendedTooltip name="НаименованиеПоказателяРасширеннаяПодсказка" id="41"/>
 										</InputField>
 										<InputField name="МетодИсследования" id="42">
-											<DataPath>Объект.МетодИсследования</DataPath>
+											<DataPath>1/0:bc118037-c114-4c8f-a9cd-34972b1fd9fa</DataPath>
 											<ContextMenu name="МетодИсследованияКонтекстноеМеню" id="43"/>
 											<ExtendedTooltip name="МетодИсследованияРасширеннаяПодсказка" id="44"/>
 										</InputField>
 										<InputField name="РезультатИсследования" id="45">
-											<DataPath>Объект.РезультатИсследования</DataPath>
+											<DataPath>1/0:d37cba97-9568-4f18-be16-847bf3ec0ff0</DataPath>
 											<ContextMenu name="РезультатИсследованияКонтекстноеМеню" id="46"/>
 											<ExtendedTooltip name="РезультатИсследованияРасширеннаяПодсказка" id="47"/>
 										</InputField>
 										<InputField name="ДатаРезультата" id="48">
-											<DataPath>Объект.ДатаРезультата</DataPath>
+											<DataPath>1/0:c42ed80e-857e-4646-b4af-66cc6f917af4</DataPath>
 											<ContextMenu name="ДатаРезультатаКонтекстноеМеню" id="49"/>
 											<ExtendedTooltip name="ДатаРезультатаРасширеннаяПодсказка" id="50"/>
 										</InputField>
 										<InputField name="НомерЭкспертизы" id="51">
-											<DataPath>Объект.НомерЭкспертизы</DataPath>
+											<DataPath>1/0:3a51a3f8-c477-45b4-bfd8-57133a1b4d6c</DataPath>
 											<ContextMenu name="НомерЭкспертизыКонтекстноеМеню" id="52"/>
 											<ExtendedTooltip name="НомерЭкспертизыРасширеннаяПодсказка" id="53"/>
 										</InputField>
 										<InputField name="Заключение" id="54">
-											<DataPath>Объект.Заключение</DataPath>
+											<DataPath>1/0:d0e312d1-15e9-4812-b42a-77afbb678eb2</DataPath>
 											<ContextMenu name="ЗаключениеКонтекстноеМеню" id="55"/>
 											<ExtendedTooltip name="ЗаключениеРасширеннаяПодсказка" id="56"/>
 										</InputField>
@@ -333,6 +354,12 @@
 							</ToolTip>
 							<ExtendedTooltip name="грЗапросыРасширеннаяПодсказка" id="114"/>
 							<ChildItems>
+								<InputField name="applicationID" id="19">
+									<DataPath>ApplicationID</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="applicationIDКонтекстноеМеню" id="20"/>
+									<ExtendedTooltip name="applicationIDРасширеннаяПодсказка" id="21"/>
+								</InputField>
 								<UsualGroup name="Группа13" id="115">
 									<ShowTitle>false</ShowTitle>
 									<ExtendedTooltip name="Группа13РасширеннаяПодсказка" id="116"/>

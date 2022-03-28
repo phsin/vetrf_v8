@@ -155,14 +155,10 @@
 						<CommandName>CommonCommand.ВСД_УдаленнаяПоддержкаAnydesk</CommandName>
 						<ExtendedTooltip name="ФормаОбщаяКомандаВСД_УдаленнаяПоддержкаРасширеннаяПодсказка" id="683"/>
 					</Button>
-					<Button name="ФормаПолучитьИнформациюОбОбновлениях" id="709">
+					<Button name="ФормаПолучитьИнформациюОбОбновленияхМеню" id="711">
 						<Type>CommandBarButton</Type>
-						<CommandName>Form.Command.ПолучитьИнформациюОбОбновлениях</CommandName>
-						<Picture>
-							<xr:Ref>StdPicture.Refresh</xr:Ref>
-							<xr:LoadTransparent>true</xr:LoadTransparent>
-						</Picture>
-						<ExtendedTooltip name="ФормаПолучитьИнформациюОбОбновленияхРасширеннаяПодсказка" id="710"/>
+						<CommandName>Form.Command.ПолучитьИнформациюОбОбновленияхМеню</CommandName>
+						<ExtendedTooltip name="ФормаПолучитьИнформациюОбОбновленияхМенюРасширеннаяПодсказка" id="712"/>
 					</Button>
 				</ChildItems>
 			</Popup>
@@ -389,6 +385,11 @@
 														</v8:item>
 													</Title>
 													<ExtendedTooltip name="ОтправитьВсдБыстро1РасширеннаяПодсказка" id="636"/>
+												</Button>
+												<Button name="ОтправитьВСДПоРасписанию" id="713">
+													<Type>CommandBarButton</Type>
+													<CommandName>Form.Command.ОтправитьВСДПоРасписанию</CommandName>
+													<ExtendedTooltip name="ОтправитьВСДПоРасписаниюРасширеннаяПодсказка" id="714"/>
 												</Button>
 												<Button name="кнЗапросРегионализация" id="316">
 													<Type>CommandBarButton</Type>
@@ -2839,7 +2840,50 @@
 					<v8:content>Получить информацию об обновлениях</v8:content>
 				</v8:item>
 			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.Refresh</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
 			<Action>ПолучитьИнформациюОбОбновлениях</Action>
+		</Command>
+		<Command name="ПолучитьИнформациюОбОбновленияхМеню" id="12">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Получить информацию об обновлениях</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Получить информацию об обновлениях</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.Refresh</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ОткрытьФормуПолученияИнформацииОбОбновлениях</Action>
+		</Command>
+		<Command name="ОтправитьВСДПоРасписанию" id="13">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отправить по расписанию</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отправить ВСДПо расписанию</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>CommonPicture.kb99_clock_24x24</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ОтложеннаяОтправкаВСД</Action>
+			<Representation>TextPicture</Representation>
 		</Command>
 	</Commands>
 </Form>

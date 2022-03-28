@@ -99,13 +99,24 @@
 					<ContextMenu name="Получатель_ПлощадкаКонтекстноеМеню" id="38"/>
 					<ExtendedTooltip name="Получатель_ПлощадкаРасширеннаяПодсказка" id="39"/>
 				</LabelField>
-				<LabelField name="Статус" id="40">
-					<DataPath>~Список.Статус</DataPath>
-					<ContextMenu name="СтатусКонтекстноеМеню" id="41"/>
-					<ExtendedTooltip name="СтатусРасширеннаяПодсказка" id="42"/>
+				<LabelField name="СтатусЗапроса" id="52">
+					<DataPath>Список.СтатусЗапроса</DataPath>
+					<ContextMenu name="СтатусЗапросаКонтекстноеМеню" id="53"/>
+					<ExtendedTooltip name="СтатусЗапросаРасширеннаяПодсказка" id="54"/>
+				</LabelField>
+				<LabelField name="СтатусВСД" id="55">
+					<DataPath>Список.СтатусВСД</DataPath>
+					<ContextMenu name="СтатусВСДКонтекстноеМеню" id="56"/>
+					<ExtendedTooltip name="СтатусВСДРасширеннаяПодсказка" id="57"/>
 				</LabelField>
 				<LabelField name="ДокументОснование" id="46">
 					<DataPath>Список.ДокументОснование</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Основание</v8:content>
+						</v8:item>
+					</Title>
 					<ContextMenu name="ДокументОснованиеКонтекстноеМеню" id="47"/>
 					<ExtendedTooltip name="ДокументОснованиеРасширеннаяПодсказка" id="48"/>
 				</LabelField>
@@ -124,8 +135,62 @@
 			</Type>
 			<MainAttribute>true</MainAttribute>
 			<Settings xsi:type="DynamicList">
-				<ManualQuery>false</ManualQuery>
+				<ManualQuery>true</ManualQuery>
 				<DynamicDataRead>true</DynamicDataRead>
+				<QueryText>ВЫБРАТЬ
+	ДокументВСД2_транзакция.Ссылка,
+	ДокументВСД2_транзакция.ПометкаУдаления,
+	ДокументВСД2_транзакция.Номер,
+	ДокументВСД2_транзакция.Дата,
+	ДокументВСД2_транзакция.Проведен,
+	ДокументВСД2_транзакция.Отправитель_ХозСубъект,
+	ДокументВСД2_транзакция.Отправитель_Площадка,
+	ДокументВСД2_транзакция.Получатель_ХозСубъект,
+	ДокументВСД2_транзакция.Получатель_Площадка,
+	ДокументВСД2_транзакция.Перевозчик_ХозСубъект,
+	ДокументВСД2_транзакция.ТтнСерия,
+	ДокументВСД2_транзакция.ТтнНомер,
+	ДокументВСД2_транзакция.ТтнДата,
+	ДокументВСД2_транзакция.номерАвто,
+	ДокументВСД2_транзакция.Местность,
+	ДокументВСД2_транзакция.ТермическоеСостояние,
+	ДокументВСД2_транзакция.ОсобыеОтметки,
+	ДокументВСД2_транзакция.cargoInspected,
+	ДокументВСД2_транзакция.ВсдСерия,
+	ДокументВСД2_транзакция.ВсдНомер,
+	ДокументВСД2_транзакция.ВсдДата,
+	ДокументВСД2_транзакция.Комментарий,
+	ДокументВСД2_транзакция.ДокументОснование,
+	ДокументВСД2_транзакция.РезультатыИсследований,
+	ДокументВСД2_транзакция.НомерЗаказаПокупателя,
+	ДокументВСД2_транзакция.ДатаЗаказаПокупателя,
+	ДокументВСД2_транзакция.ТОРГ12Номер,
+	ДокументВСД2_транзакция.ТОРГ12Дата,
+	ДокументВСД2_транзакция.Организация,
+	ДокументВСД2_транзакция.ЭтоПеремещениеОтПоставщика,
+	ДокументВСД2_транзакция.ТермическиеУсловияПеревозки,
+	ДокументВСД2_транзакция.ОрганизацияПолучатель,
+	ДокументВСД2_транзакция.СтатусВСД,
+	ДокументВСД2_транзакция.УПДНомер,
+	ДокументВСД2_транзакция.УпдДата,
+	ДокументВСД2_транзакция.НомерПрицепа,
+	ДокументВСД2_транзакция.ОтправкаПоРасписанию,
+	ДокументВСД2_транзакция.ДатаОтправки,
+	ДокументВСД2_транзакция.Товары,
+	ДокументВСД2_транзакция.УровниУпаковки,
+	ДокументВСД2_транзакция.Маркировка,
+	ДокументВСД2_транзакция.УсловияПеревозки,
+	ДокументВСД2_транзакция.ТочкиМаршрута,
+	ДокументВСД2_транзакция.МоментВремени,
+	ЕСТЬNULL(кб99_ЗапросыСрезПоследних.СтатусЗапроса, "") КАК СтатусЗапроса,
+	ЕСТЬNULL(кб99_ЗапросыСрезПоследних.Ошибки, "") КАК Ошибки
+	
+ИЗ
+	Документ.ВСД2_транзакция КАК ДокументВСД2_транзакция
+		ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.кб99_Запросы.СрезПоследних КАК кб99_ЗапросыСрезПоследних
+		ПО ДокументВСД2_транзакция.Ссылка = кб99_ЗапросыСрезПоследних.Объект	
+			
+</QueryText>
 				<MainTable>Document.ВСД2_транзакция</MainTable>
 				<ListSettings>
 					<dcsset:filter>
@@ -138,6 +203,7 @@
 					</dcsset:order>
 					<dcsset:conditionalAppearance>
 						<dcsset:item>
+							<dcsset:use>false</dcsset:use>
 							<dcsset:selection/>
 							<dcsset:filter>
 								<dcsset:item xsi:type="dcsset:FilterItemGroup">
@@ -157,7 +223,7 @@
 							<dcsset:appearance>
 								<dcscor:item xsi:type="dcsset:SettingsParameterValue">
 									<dcscor:parameter>ЦветФона</dcscor:parameter>
-									<dcscor:value xsi:type="v8ui:Color">#FFFF99</dcscor:value>
+									<dcscor:value xsi:type="v8ui:Color">#FDF5C7</dcscor:value>
 								</dcscor:item>
 							</dcsset:appearance>
 							<dcsset:viewMode>Inaccessible</dcsset:viewMode>
@@ -174,7 +240,7 @@
 							<dcsset:appearance>
 								<dcscor:item xsi:type="dcsset:SettingsParameterValue">
 									<dcscor:parameter>ЦветФона</dcscor:parameter>
-									<dcscor:value xsi:type="v8ui:Color">#AAFFA0</dcscor:value>
+									<dcscor:value xsi:type="v8ui:Color">#CCFFCC</dcscor:value>
 								</dcscor:item>
 							</dcsset:appearance>
 							<dcsset:viewMode>Inaccessible</dcsset:viewMode>
@@ -191,13 +257,111 @@
 							<dcsset:appearance>
 								<dcscor:item xsi:type="dcsset:SettingsParameterValue">
 									<dcscor:parameter>ЦветФона</dcscor:parameter>
-									<dcscor:value xsi:type="v8ui:Color">#FF6346</dcscor:value>
+									<dcscor:value xsi:type="v8ui:Color">#D5D5D5</dcscor:value>
+								</dcscor:item>
+							</dcsset:appearance>
+							<dcsset:viewMode>Inaccessible</dcsset:viewMode>
+						</dcsset:item>
+						<dcsset:item>
+							<dcsset:selection/>
+							<dcsset:filter>
+								<dcsset:item xsi:type="dcsset:FilterItemComparison">
+									<dcsset:left xsi:type="dcscor:Field">СтатусВСД</dcsset:left>
+									<dcsset:comparisonType>Equal</dcsset:comparisonType>
+									<dcsset:right xsi:type="dcscor:DesignTimeValue">Перечисление.кб99_СтатусВСД.UTILIZED</dcsset:right>
+								</dcsset:item>
+							</dcsset:filter>
+							<dcsset:appearance>
+								<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+									<dcscor:parameter>ЦветФона</dcscor:parameter>
+									<dcscor:value xsi:type="v8ui:Color">#CCFFCC</dcscor:value>
+								</dcscor:item>
+								<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+									<dcscor:parameter>ЦветТекста</dcscor:parameter>
+									<dcscor:value xsi:type="v8ui:Color">#B9B9B9</dcscor:value>
+								</dcscor:item>
+							</dcsset:appearance>
+							<dcsset:viewMode>Inaccessible</dcsset:viewMode>
+						</dcsset:item>
+						<dcsset:item>
+							<dcsset:use>false</dcsset:use>
+							<dcsset:selection/>
+							<dcsset:filter>
+								<dcsset:item xsi:type="dcsset:FilterItemComparison">
+									<dcsset:left xsi:type="dcscor:Field">СтатусЗапроса</dcsset:left>
+									<dcsset:comparisonType>Contains</dcsset:comparisonType>
+									<dcsset:right xsi:type="xs:string">ACCEPTED</dcsset:right>
+								</dcsset:item>
+							</dcsset:filter>
+							<dcsset:appearance>
+								<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+									<dcscor:parameter>ЦветФона</dcscor:parameter>
+									<dcscor:value xsi:type="v8ui:Color">#CCFFCC</dcscor:value>
+								</dcscor:item>
+							</dcsset:appearance>
+							<dcsset:viewMode>Inaccessible</dcsset:viewMode>
+						</dcsset:item>
+						<dcsset:item>
+							<dcsset:selection/>
+							<dcsset:filter>
+								<dcsset:item xsi:type="dcsset:FilterItemGroup">
+									<dcsset:groupType>AndGroup</dcsset:groupType>
+									<dcsset:item xsi:type="dcsset:FilterItemComparison">
+										<dcsset:left xsi:type="dcscor:Field">СтатусВСД</dcsset:left>
+										<dcsset:comparisonType>NotFilled</dcsset:comparisonType>
+									</dcsset:item>
+									<dcsset:item xsi:type="dcsset:FilterItemComparison">
+										<dcsset:left xsi:type="dcscor:Field">СтатусЗапроса</dcsset:left>
+										<dcsset:comparisonType>Contains</dcsset:comparisonType>
+										<dcsset:right xsi:type="xs:string">ACCEPTED</dcsset:right>
+									</dcsset:item>
+								</dcsset:item>
+							</dcsset:filter>
+							<dcsset:appearance>
+								<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+									<dcscor:parameter>ЦветФона</dcscor:parameter>
+									<dcscor:value xsi:type="v8ui:Color">#FDF5C7</dcscor:value>
+								</dcscor:item>
+							</dcsset:appearance>
+							<dcsset:viewMode>Inaccessible</dcsset:viewMode>
+						</dcsset:item>
+						<dcsset:item>
+							<dcsset:selection/>
+							<dcsset:filter>
+								<dcsset:item xsi:type="dcsset:FilterItemGroup">
+									<dcsset:groupType>AndGroup</dcsset:groupType>
+									<dcsset:item xsi:type="dcsset:FilterItemComparison">
+										<dcsset:left xsi:type="dcscor:Field">СтатусВСД</dcsset:left>
+										<dcsset:comparisonType>NotFilled</dcsset:comparisonType>
+									</dcsset:item>
+									<dcsset:item xsi:type="dcsset:FilterItemComparison">
+										<dcsset:left xsi:type="dcscor:Field">СтатусЗапроса</dcsset:left>
+										<dcsset:comparisonType>Contains</dcsset:comparisonType>
+										<dcsset:right xsi:type="xs:string">REJECTED</dcsset:right>
+									</dcsset:item>
+								</dcsset:item>
+							</dcsset:filter>
+							<dcsset:appearance>
+								<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+									<dcscor:parameter>ЦветФона</dcscor:parameter>
+									<dcscor:value xsi:type="v8ui:Color">#FBD4D4</dcscor:value>
 								</dcscor:item>
 							</dcsset:appearance>
 							<dcsset:viewMode>Inaccessible</dcsset:viewMode>
 						</dcsset:item>
 						<dcsset:viewMode>Normal</dcsset:viewMode>
 					</dcsset:conditionalAppearance>
+					<dcsset:item xsi:type="dcsset:StructureItemGroup">
+						<dcsset:groupItems>
+							<dcsset:item xsi:type="dcsset:GroupItemField">
+								<dcsset:field>Дата</dcsset:field>
+								<dcsset:groupType>Items</dcsset:groupType>
+								<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+								<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+								<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+							</dcsset:item>
+						</dcsset:groupItems>
+					</dcsset:item>
 					<dcsset:itemsViewMode>Normal</dcsset:itemsViewMode>
 					<dcsset:itemsUserSettingID>911b6018-f537-43e8-a417-da56b22f9aec</dcsset:itemsUserSettingID>
 				</ListSettings>

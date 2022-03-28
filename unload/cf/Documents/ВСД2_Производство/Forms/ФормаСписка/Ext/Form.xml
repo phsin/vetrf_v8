@@ -138,6 +138,7 @@
 								<dcsset:item xsi:type="dcsset:FilterItemGroup">
 									<dcsset:groupType>OrGroup</dcsset:groupType>
 									<dcsset:item xsi:type="dcsset:FilterItemComparison">
+										<dcsset:use>false</dcsset:use>
 										<dcsset:left xsi:type="dcscor:Field">СтатусЗапроса</dcsset:left>
 										<dcsset:comparisonType>Equal</dcsset:comparisonType>
 										<dcsset:right xsi:type="xs:string"/>
@@ -152,7 +153,7 @@
 							<dcsset:appearance>
 								<dcscor:item xsi:type="dcsset:SettingsParameterValue">
 									<dcscor:parameter>ЦветФона</dcscor:parameter>
-									<dcscor:value xsi:type="v8ui:Color">#FFFF99</dcscor:value>
+									<dcscor:value xsi:type="v8ui:Color">#FDF5C7</dcscor:value>
 								</dcscor:item>
 							</dcsset:appearance>
 						</dcsset:item>
@@ -168,7 +169,7 @@
 							<dcsset:appearance>
 								<dcscor:item xsi:type="dcsset:SettingsParameterValue">
 									<dcscor:parameter>ЦветФона</dcscor:parameter>
-									<dcscor:value xsi:type="v8ui:Color">#AAFFA0</dcscor:value>
+									<dcscor:value xsi:type="v8ui:Color">#CCFFCC</dcscor:value>
 								</dcscor:item>
 							</dcsset:appearance>
 							<dcsset:userSettingID>72a32dfc-2829-44d1-aa5b-c4d57799f923</dcsset:userSettingID>
@@ -185,7 +186,7 @@
 							<dcsset:appearance>
 								<dcscor:item xsi:type="dcsset:SettingsParameterValue">
 									<dcscor:parameter>ЦветФона</dcscor:parameter>
-									<dcscor:value xsi:type="v8ui:Color">#FF6346</dcscor:value>
+									<dcscor:value xsi:type="v8ui:Color">#FBD4D4</dcscor:value>
 								</dcscor:item>
 							</dcsset:appearance>
 						</dcsset:item>
@@ -198,6 +199,18 @@
 							</v8:item>
 						</dcsset:userSettingPresentation>
 					</dcsset:conditionalAppearance>
+					<dcsset:item xsi:type="dcsset:StructureItemGroup">
+						<dcsset:groupItems>
+							<dcsset:item xsi:type="dcsset:GroupItemField">
+								<dcsset:use>false</dcsset:use>
+								<dcsset:field>Дата</dcsset:field>
+								<dcsset:groupType>Items</dcsset:groupType>
+								<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+								<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+								<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+							</dcsset:item>
+						</dcsset:groupItems>
+					</dcsset:item>
 					<dcsset:itemsViewMode>Normal</dcsset:itemsViewMode>
 					<dcsset:itemsUserSettingID>911b6018-f537-43e8-a417-da56b22f9aec</dcsset:itemsUserSettingID>
 				</ListSettings>

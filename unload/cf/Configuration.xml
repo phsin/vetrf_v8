@@ -157,7 +157,6 @@
 			<Subsystem>ТиповыеДокументы</Subsystem>
 			<CommonPicture>Ветис2</CommonPicture>
 			<CommonPicture>кб99_send</CommonPicture>
-			<CommonPicture>кб99_map_o</CommonPicture>
 			<CommonPicture>ЛабИсследования</CommonPicture>
 			<CommonPicture>кб99_space_shattle</CommonPicture>
 			<CommonPicture>кб99_check</CommonPicture>
@@ -211,6 +210,8 @@
 			<CommonPicture>kb99_Support</CommonPicture>
 			<CommonPicture>кб99</CommonPicture>
 			<CommonPicture>кб99_20</CommonPicture>
+			<CommonPicture>кб99_map_o</CommonPicture>
+			<CommonPicture>kb99_clock_24x24</CommonPicture>
 			<Interface>ВСД</Interface>
 			<SessionParameter>ТекущийПользователь</SessionParameter>
 			<Role>Администратор</Role>
@@ -218,30 +219,33 @@
 			<CommonTemplate>СтруктураПодчиненности</CommonTemplate>
 			<FilterCriterion>СвязанныеДокументы</FilterCriterion>
 			<CommonModule>ДлительныеОперации</CommonModule>
+			<CommonModule>ДлительныеОперацииКлиент</CommonModule>
 			<CommonModule>УправлениеПечатью</CommonModule>
 			<CommonModule>кб99_ВСД_Отправка</CommonModule>
 			<CommonModule>кб99_ВСД_Общий</CommonModule>
-			<CommonModule>кб99_ВСД_Переопределения</CommonModule>
-			<CommonModule>кб99_ВСД_Производство</CommonModule>
 			<CommonModule>УправлениеКонтактнойИнформацией</CommonModule>
-			<CommonModule>ДлительныеОперацииКлиент</CommonModule>
-			<CommonModule>кб99_ВСД_Запросы</CommonModule>
-			<CommonModule>кб99_ВСД_УправлениеПечатью</CommonModule>
-			<CommonModule>кб99_ВСД_Клиент</CommonModule>
-			<CommonModule>кб99_ВСД</CommonModule>
-			<CommonModule>кб99_РегламентныеЗадания</CommonModule>
 			<CommonModule>ОбщегоНазначения</CommonModule>
 			<CommonModule>СтроковыеФункцииКлиентСервер</CommonModule>
-			<CommonModule>ОбщегоНазначенияПовтИсп</CommonModule>
-			<CommonModule>ДлительныеОперацииКлиентПовтИсп</CommonModule>
 			<CommonModule>ОбщегоНазначенияКлиентСервер</CommonModule>
 			<CommonModule>СтандартныеПодсистемыСервер</CommonModule>
 			<CommonModule>СтандартныеПодсистемыКлиент</CommonModule>
 			<CommonModule>СтруктураПодчиненностиПереопределяемый</CommonModule>
+			<CommonModule>кб99_ВСД_Производство</CommonModule>
+			<CommonModule>кб99_ВСД_Запросы</CommonModule>
+			<CommonModule>кб99_ВСД_УправлениеПечатью</CommonModule>
+			<CommonModule>ОбщегоНазначенияПовтИсп</CommonModule>
+			<CommonModule>ДлительныеОперацииКлиентПовтИсп</CommonModule>
+			<CommonModule>кб99_ВСД_Клиент</CommonModule>
+			<CommonModule>кб99_ВСД</CommonModule>
+			<CommonModule>кб99_РегламентныеЗадания</CommonModule>
+			<CommonModule>кб99_ВСД_Переопределения</CommonModule>
 			<ScheduledJob>кб99_ВСД_УдалитьЗапросы</ScheduledJob>
+			<ScheduledJob>кб99_ОбновитьСтатусыВСД</ScheduledJob>
 			<ScheduledJob>кб99_ВСД_УдалитьЗапросы_XML</ScheduledJob>
 			<ScheduledJob>кб99_ПолучитьАктуальныеПартии</ScheduledJob>
-			<ScheduledJob>кб99_ОбновитьСтатусыВСД</ScheduledJob>
+			<ScheduledJob>кб99_ГашениеВходящихВСД</ScheduledJob>
+			<ScheduledJob>кб99_ОтложеннаяОтправкаВСД2Транзакции</ScheduledJob>
+			<ScheduledJob>кб99_ОбработатьДокументыПроизводство</ScheduledJob>
 			<CommonCommand>ВСД_ОтправитьВСД</CommonCommand>
 			<CommonCommand>ВСД_ПлощадкиЗагрузитьПоНазванию</CommonCommand>
 			<CommonCommand>ВСД_ПолучитьОтветВетис</CommonCommand>
@@ -265,9 +269,12 @@
 			<CommandGroup>Печать</CommandGroup>
 			<CommandGroup>ВСД_ГруппаКоманд</CommandGroup>
 			<CommonForm>кб99_ФормаТермическиеУсловия</CommonForm>
-			<CommonForm>ДлительнаяОперация</CommonForm>
 			<CommonForm>СтруктураПодчиненности</CommonForm>
+			<CommonForm>ДлительнаяОперация</CommonForm>
 			<CommonForm>кб99_РегламентныеЗадания</CommonForm>
+			<CommonForm>кб99_РегламентноеЗаданиеГашение</CommonForm>
+			<CommonForm>кб99_РегламентноеЗаданиеОтправкаВСДТранзакции</CommonForm>
+			<CommonForm>кб99_РегламентноеЗаданиеПроизводство</CommonForm>
 			<Catalog>Контрагенты</Catalog>
 			<Catalog>Номенклатура</Catalog>
 			<Catalog>ВСД_Площадка</Catalog>
