@@ -31,143 +31,9 @@
 					<v8:content>Группа РЗ</v8:content>
 				</v8:item>
 			</ToolTip>
+			<PagesRepresentation>TabsOnLeftHorizontal</PagesRepresentation>
 			<ExtendedTooltip name="ГруппаРЗРасширеннаяПодсказка" id="6"/>
 			<ChildItems>
-				<Page name="грРЗочиститьРС" id="7" DisplayImportance="Usual">
-					<Title>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>Очистка регистра сведений кб99_Запросы</v8:content>
-						</v8:item>
-					</Title>
-					<ToolTip>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>Регламентное задание: очистить регистр сведений</v8:content>
-						</v8:item>
-					</ToolTip>
-					<ChildrenAlign>ItemsRightTitlesLeft</ChildrenAlign>
-					<ExtendedTooltip name="грРЗочиститьРСРасширеннаяПодсказка" id="8"/>
-					<ChildItems>
-						<UsualGroup name="Группа1" id="21">
-							<Representation>None</Representation>
-							<ShowTitle>false</ShowTitle>
-							<ExtendedTooltip name="Группа1РасширеннаяПодсказка" id="22"/>
-							<ChildItems>
-								<CheckBoxField name="ИспользованиеОчиститьРС" id="9">
-									<DataPath>ИспользованиеОчиститьРС</DataPath>
-									<TitleLocation>Right</TitleLocation>
-									<CheckBoxType>Auto</CheckBoxType>
-									<ContextMenu name="ИспользованиеОчиститьРСКонтекстноеМеню" id="10"/>
-									<ExtendedTooltip name="ИспользованиеОчиститьРСРасширеннаяПодсказка" id="11"/>
-								</CheckBoxField>
-								<Button name="НастроитьРасписаниекб99_ВСД_УдалитьЗапросы" id="12">
-									<Type>Hyperlink</Type>
-									<CommandName>Form.Command.НастроитьРасписаниекб99_ВСД_УдалитьЗапросы</CommandName>
-									<ExtendedTooltip name="НастроитьРасписаниекб99_ВСД_УдалитьЗапросыРасширеннаяПодсказка" id="13"/>
-								</Button>
-							</ChildItems>
-						</UsualGroup>
-						<UsualGroup name="Группа5" id="57">
-							<Group>Vertical</Group>
-							<Representation>None</Representation>
-							<ShowTitle>false</ShowTitle>
-							<ThroughAlign>Use</ThroughAlign>
-							<ExtendedTooltip name="Группа5РасширеннаяПодсказка" id="58"/>
-							<ChildItems>
-								<InputField name="КоличествоПовторовПриАварийномЗавершенииОчиститьРС_Запросы" id="23">
-									<DataPath>КоличествоПовторовПриАварийномЗавершенииОчиститьРС_Запросы</DataPath>
-									<Title>
-										<v8:item>
-											<v8:lang>ru</v8:lang>
-											<v8:content>повторов при аварийном завершении задания</v8:content>
-										</v8:item>
-									</Title>
-									<TitleLocation>Right</TitleLocation>
-									<Width>5</Width>
-									<ContextMenu name="КоличествоПовторовПриАварийномЗавершенииОчиститьРС_ЗапросыКонтекстноеМеню" id="24"/>
-									<ExtendedTooltip name="КоличествоПовторовПриАварийномЗавершенииОчиститьРС_ЗапросыРасширеннаяПодсказка" id="25"/>
-								</InputField>
-								<InputField name="ИнтервалПовтораПриАварийномЗавершенииОчиститьРС" id="26">
-									<DataPath>ИнтервалПовтораПриАварийномЗавершенииОчиститьРС</DataPath>
-									<Title>
-										<v8:item>
-											<v8:lang>ru</v8:lang>
-											<v8:content>секунд между повторами при аварийном завершении задания</v8:content>
-										</v8:item>
-									</Title>
-									<TitleLocation>Right</TitleLocation>
-									<Width>5</Width>
-									<ContextMenu name="ИнтервалПовтораПриАварийномЗавершенииОчиститьРСКонтекстноеМеню" id="27"/>
-									<ExtendedTooltip name="ИнтервалПовтораПриАварийномЗавершенииОчиститьРСРасширеннаяПодсказка" id="28"/>
-								</InputField>
-							</ChildItems>
-						</UsualGroup>
-					</ChildItems>
-				</Page>
-				<Page name="грРЗОчиститьПапкуСлогФайлами" id="14" DisplayImportance="Usual">
-					<Title>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>Очистка папки с лог файлами</v8:content>
-						</v8:item>
-					</Title>
-					<ToolTip>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>Гр РЗОчистить папку слог файлами</v8:content>
-						</v8:item>
-					</ToolTip>
-					<ChildrenAlign>ItemsRightTitlesLeft</ChildrenAlign>
-					<ExtendedTooltip name="грРЗОчиститьПапкуСлогФайламиРасширеннаяПодсказка" id="15"/>
-					<ChildItems>
-						<UsualGroup name="Группа2" id="29">
-							<Representation>None</Representation>
-							<ShowTitle>false</ShowTitle>
-							<ExtendedTooltip name="Группа2РасширеннаяПодсказка" id="30"/>
-							<ChildItems>
-								<CheckBoxField name="ИспользованиеОчиститьВнешФайлы" id="16">
-									<DataPath>ИспользованиеОчиститьВнешФайлы</DataPath>
-									<TitleLocation>Right</TitleLocation>
-									<CheckBoxType>Auto</CheckBoxType>
-									<ContextMenu name="ИспользованиеОчиститьВнешФайлыКонтекстноеМеню" id="17"/>
-									<ExtendedTooltip name="ИспользованиеОчиститьВнешФайлыРасширеннаяПодсказка" id="18"/>
-								</CheckBoxField>
-								<Button name="НастроитьРасписаниекб99_ОчиститьВнешнююПапкуСлогФайлами" id="19">
-									<Type>Hyperlink</Type>
-									<CommandName>Form.Command.НастроитьРасписаниекб99_ОчиститьВнешнююПапкуСлогФайлами</CommandName>
-									<ExtendedTooltip name="НастроитьРасписаниекб99_ОчиститьВнешнююПапкуСлогФайламиРасширеннаяПодсказка" id="20"/>
-								</Button>
-							</ChildItems>
-						</UsualGroup>
-						<InputField name="КоличествоПовторовПриАварийномЗавершенииОчиститьВнешнююПапкуСЛогФайлами" id="34">
-							<DataPath>КоличествоПовторовПриАварийномЗавершенииОчиститьВнешнююПапкуСЛогФайлами</DataPath>
-							<Title>
-								<v8:item>
-									<v8:lang>ru</v8:lang>
-									<v8:content>повторов при аварийном завершении задания</v8:content>
-								</v8:item>
-							</Title>
-							<TitleLocation>Right</TitleLocation>
-							<Width>5</Width>
-							<ContextMenu name="КоличествоПовторовПриАварийномЗавершенииОчиститьВнешнююПапкуСЛогФайламиКонтекстноеМеню" id="35"/>
-							<ExtendedTooltip name="КоличествоПовторовПриАварийномЗавершенииОчиститьВнешнююПапкуСЛогФайламиРасширеннаяПодсказка" id="36"/>
-						</InputField>
-						<InputField name="ИнтервалПовтораПриАварийномЗавершенииОчиститьВнешнююПапкуСЛогФайлами" id="31">
-							<DataPath>ИнтервалПовтораПриАварийномЗавершенииОчиститьВнешнююПапкуСЛогФайлами</DataPath>
-							<Title>
-								<v8:item>
-									<v8:lang>ru</v8:lang>
-									<v8:content>секунд между повторами при аварийном завершении задания</v8:content>
-								</v8:item>
-							</Title>
-							<TitleLocation>Right</TitleLocation>
-							<Width>5</Width>
-							<ContextMenu name="ИнтервалПовтораПриАварийномЗавершенииОчиститьВнешнююПапкуСЛогФайламиКонтекстноеМеню" id="32"/>
-							<ExtendedTooltip name="ИнтервалПовтораПриАварийномЗавершенииОчиститьВнешнююПапкуСЛогФайламиРасширеннаяПодсказка" id="33"/>
-						</InputField>
-					</ChildItems>
-				</Page>
 				<Page name="ГруппаЗагрузкаПартий" id="39">
 					<Title>
 						<v8:item>
@@ -409,7 +275,7 @@
 					<Title>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>Отправка ВСД транзакции</v8:content>
+							<v8:content>Отправка транспортных ВСД</v8:content>
 						</v8:item>
 					</Title>
 					<ToolTip>
@@ -515,7 +381,7 @@
 					<Title>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>Производство</v8:content>
+							<v8:content>Отправка производственных ВСД</v8:content>
 						</v8:item>
 					</Title>
 					<ToolTip>
@@ -615,6 +481,141 @@
 								</InputField>
 							</ChildItems>
 						</Table>
+					</ChildItems>
+				</Page>
+				<Page name="грРЗочиститьРС" id="7" DisplayImportance="Usual">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Очистка регистра кб99_Запросы</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Регламентное задание: очистить регистр сведений</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ChildrenAlign>ItemsRightTitlesLeft</ChildrenAlign>
+					<ExtendedTooltip name="грРЗочиститьРСРасширеннаяПодсказка" id="8"/>
+					<ChildItems>
+						<UsualGroup name="Группа1" id="21">
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="Группа1РасширеннаяПодсказка" id="22"/>
+							<ChildItems>
+								<CheckBoxField name="ИспользованиеОчиститьРС" id="9">
+									<DataPath>ИспользованиеОчиститьРС</DataPath>
+									<TitleLocation>Right</TitleLocation>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="ИспользованиеОчиститьРСКонтекстноеМеню" id="10"/>
+									<ExtendedTooltip name="ИспользованиеОчиститьРСРасширеннаяПодсказка" id="11"/>
+								</CheckBoxField>
+								<Button name="НастроитьРасписаниекб99_ВСД_УдалитьЗапросы" id="12">
+									<Type>Hyperlink</Type>
+									<CommandName>Form.Command.НастроитьРасписаниекб99_ВСД_УдалитьЗапросы</CommandName>
+									<ExtendedTooltip name="НастроитьРасписаниекб99_ВСД_УдалитьЗапросыРасширеннаяПодсказка" id="13"/>
+								</Button>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="Группа5" id="57">
+							<Group>Vertical</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ThroughAlign>Use</ThroughAlign>
+							<ExtendedTooltip name="Группа5РасширеннаяПодсказка" id="58"/>
+							<ChildItems>
+								<InputField name="КоличествоПовторовПриАварийномЗавершенииОчиститьРС_Запросы" id="23">
+									<DataPath>КоличествоПовторовПриАварийномЗавершенииОчиститьРС_Запросы</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>повторов при аварийном завершении задания</v8:content>
+										</v8:item>
+									</Title>
+									<TitleLocation>Right</TitleLocation>
+									<Width>5</Width>
+									<ContextMenu name="КоличествоПовторовПриАварийномЗавершенииОчиститьРС_ЗапросыКонтекстноеМеню" id="24"/>
+									<ExtendedTooltip name="КоличествоПовторовПриАварийномЗавершенииОчиститьРС_ЗапросыРасширеннаяПодсказка" id="25"/>
+								</InputField>
+								<InputField name="ИнтервалПовтораПриАварийномЗавершенииОчиститьРС" id="26">
+									<DataPath>ИнтервалПовтораПриАварийномЗавершенииОчиститьРС</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>секунд между повторами при аварийном завершении задания</v8:content>
+										</v8:item>
+									</Title>
+									<TitleLocation>Right</TitleLocation>
+									<Width>5</Width>
+									<ContextMenu name="ИнтервалПовтораПриАварийномЗавершенииОчиститьРСКонтекстноеМеню" id="27"/>
+									<ExtendedTooltip name="ИнтервалПовтораПриАварийномЗавершенииОчиститьРСРасширеннаяПодсказка" id="28"/>
+								</InputField>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</Page>
+				<Page name="грРЗОчиститьПапкуСлогФайлами" id="14" DisplayImportance="Usual">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Очистка папки с лог файлами</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Гр РЗОчистить папку слог файлами</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ChildrenAlign>ItemsRightTitlesLeft</ChildrenAlign>
+					<ExtendedTooltip name="грРЗОчиститьПапкуСлогФайламиРасширеннаяПодсказка" id="15"/>
+					<ChildItems>
+						<UsualGroup name="Группа2" id="29">
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="Группа2РасширеннаяПодсказка" id="30"/>
+							<ChildItems>
+								<CheckBoxField name="ИспользованиеОчиститьВнешФайлы" id="16">
+									<DataPath>ИспользованиеОчиститьВнешФайлы</DataPath>
+									<TitleLocation>Right</TitleLocation>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="ИспользованиеОчиститьВнешФайлыКонтекстноеМеню" id="17"/>
+									<ExtendedTooltip name="ИспользованиеОчиститьВнешФайлыРасширеннаяПодсказка" id="18"/>
+								</CheckBoxField>
+								<Button name="НастроитьРасписаниекб99_ОчиститьВнешнююПапкуСлогФайлами" id="19">
+									<Type>Hyperlink</Type>
+									<CommandName>Form.Command.НастроитьРасписаниекб99_ОчиститьВнешнююПапкуСлогФайлами</CommandName>
+									<ExtendedTooltip name="НастроитьРасписаниекб99_ОчиститьВнешнююПапкуСлогФайламиРасширеннаяПодсказка" id="20"/>
+								</Button>
+							</ChildItems>
+						</UsualGroup>
+						<InputField name="КоличествоПовторовПриАварийномЗавершенииОчиститьВнешнююПапкуСЛогФайлами" id="34">
+							<DataPath>КоличествоПовторовПриАварийномЗавершенииОчиститьВнешнююПапкуСЛогФайлами</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>повторов при аварийном завершении задания</v8:content>
+								</v8:item>
+							</Title>
+							<TitleLocation>Right</TitleLocation>
+							<Width>5</Width>
+							<ContextMenu name="КоличествоПовторовПриАварийномЗавершенииОчиститьВнешнююПапкуСЛогФайламиКонтекстноеМеню" id="35"/>
+							<ExtendedTooltip name="КоличествоПовторовПриАварийномЗавершенииОчиститьВнешнююПапкуСЛогФайламиРасширеннаяПодсказка" id="36"/>
+						</InputField>
+						<InputField name="ИнтервалПовтораПриАварийномЗавершенииОчиститьВнешнююПапкуСЛогФайлами" id="31">
+							<DataPath>ИнтервалПовтораПриАварийномЗавершенииОчиститьВнешнююПапкуСЛогФайлами</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>секунд между повторами при аварийном завершении задания</v8:content>
+								</v8:item>
+							</Title>
+							<TitleLocation>Right</TitleLocation>
+							<Width>5</Width>
+							<ContextMenu name="ИнтервалПовтораПриАварийномЗавершенииОчиститьВнешнююПапкуСЛогФайламиКонтекстноеМеню" id="32"/>
+							<ExtendedTooltip name="ИнтервалПовтораПриАварийномЗавершенииОчиститьВнешнююПапкуСЛогФайламиРасширеннаяПодсказка" id="33"/>
+						</InputField>
 					</ChildItems>
 				</Page>
 			</ChildItems>

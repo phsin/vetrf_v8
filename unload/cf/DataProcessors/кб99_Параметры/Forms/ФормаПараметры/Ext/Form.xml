@@ -467,37 +467,83 @@
 							<ShowTitle>false</ShowTitle>
 							<ExtendedTooltip name="ГруппаНастройкиХСРасширеннаяПодсказка" id="404"/>
 							<ChildItems>
-								<UsualGroup name="Группа46" id="554">
+								<UsualGroup name="ГруппаОтправитель" id="554">
 									<Title>
 										<v8:item>
 											<v8:lang>ru</v8:lang>
-											<v8:content>Основные реквизиты</v8:content>
+											<v8:content>Отправитель</v8:content>
 										</v8:item>
 									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа отправитель</v8:content>
+										</v8:item>
+									</ToolTip>
 									<HorizontalStretch>true</HorizontalStretch>
 									<Group>Vertical</Group>
-									<ExtendedTooltip name="Группа46РасширеннаяПодсказка" id="555"/>
+									<ExtendedTooltip name="ГруппаОтправительРасширеннаяПодсказка" id="555"/>
 									<ChildItems>
 										<InputField name="Отправитель_ХозСубъект" id="14">
 											<DataPath>Объект.Отправитель_ХозСубъект</DataPath>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>ХозСубъект</v8:content>
+												</v8:item>
+											</Title>
 											<EditMode>EnterOnInput</EditMode>
+											<AutoMaxWidth>false</AutoMaxWidth>
 											<HorizontalStretch>true</HorizontalStretch>
+											<AutoMarkIncomplete>true</AutoMarkIncomplete>
 											<ContextMenu name="Отправитель_ХозСубъектКонтекстноеМеню" id="15"/>
 											<ExtendedTooltip name="Отправитель_ХозСубъектРасширеннаяПодсказка" id="16"/>
 										</InputField>
 										<InputField name="Отправитель_Площадка" id="32">
 											<DataPath>Объект.Отправитель_Площадка</DataPath>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Площадка</v8:content>
+												</v8:item>
+											</Title>
 											<EditMode>EnterOnInput</EditMode>
+											<AutoMaxWidth>false</AutoMaxWidth>
 											<HorizontalStretch>true</HorizontalStretch>
+											<AutoMarkIncomplete>true</AutoMarkIncomplete>
 											<ContextMenu name="Отправитель_ПлощадкаКонтекстноеМеню" id="33"/>
 											<ExtendedTooltip name="Отправитель_ПлощадкаРасширеннаяПодсказка" id="34"/>
 											<Events>
 												<Event name="StartChoice">Отправитель_ПлощадкаНаФормеНачалоВыбора</Event>
 											</Events>
 										</InputField>
+									</ChildItems>
+								</UsualGroup>
+								<UsualGroup name="ГруппаПеревозчик" id="802">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Перевозчик</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа перевозчик</v8:content>
+										</v8:item>
+									</ToolTip>
+									<ExtendedTooltip name="ГруппаПеревозчикРасширеннаяПодсказка" id="803"/>
+									<ChildItems>
 										<InputField name="Перевозчик_ХозСубъект" id="35">
 											<DataPath>Объект.Перевозчик_ХозСубъект</DataPath>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>ХозСубъект</v8:content>
+												</v8:item>
+											</Title>
 											<EditMode>EnterOnInput</EditMode>
+											<AutoMaxWidth>false</AutoMaxWidth>
 											<HorizontalStretch>true</HorizontalStretch>
 											<ContextMenu name="Перевозчик_ХозСубъектКонтекстноеМеню" id="36"/>
 											<ExtendedTooltip name="Перевозчик_ХозСубъектРасширеннаяПодсказка" id="37"/>
@@ -532,6 +578,7 @@
 										</v8:item>
 									</Title>
 									<EditMode>EnterOnInput</EditMode>
+									<AutoMaxWidth>false</AutoMaxWidth>
 									<HorizontalStretch>true</HorizontalStretch>
 									<ContextMenu name="ВСД_ЭкспертизаКонтекстноеМеню" id="59"/>
 									<ExtendedTooltip name="ВСД_ЭкспертизаРасширеннаяПодсказка" id="60"/>
@@ -545,6 +592,7 @@
 										</v8:item>
 									</Title>
 									<EditMode>EnterOnInput</EditMode>
+									<AutoMaxWidth>false</AutoMaxWidth>
 									<HorizontalStretch>true</HorizontalStretch>
 									<ContextMenu name="ВСД_МестностьКонтекстноеМеню" id="62"/>
 									<ExtendedTooltip name="ВСД_МестностьРасширеннаяПодсказка" id="63"/>
@@ -576,6 +624,7 @@
 												</v8:item>
 											</Title>
 											<EditMode>EnterOnInput</EditMode>
+											<AutoMaxWidth>false</AutoMaxWidth>
 											<HorizontalStretch>true</HorizontalStretch>
 											<ContextMenu name="ВСД_ОсобыеОтметкиКонтекстноеМеню" id="65"/>
 											<ExtendedTooltip name="ВСД_ОсобыеОтметкиРасширеннаяПодсказка" id="66"/>
@@ -598,12 +647,14 @@
 										</v8:item>
 									</Title>
 									<EditMode>EnterOnInput</EditMode>
+									<AutoMaxWidth>false</AutoMaxWidth>
 									<HorizontalStretch>true</HorizontalStretch>
 									<ContextMenu name="ВСД_РезультатыИсследованийКонтекстноеМеню" id="115"/>
 									<ExtendedTooltip name="ВСД_РезультатыИсследованийРасширеннаяПодсказка" id="116"/>
 								</InputField>
 								<InputField name="ТермическиеУсловияПеревозки" id="573">
 									<DataPath>Объект.ТермическиеУсловияПеревозки</DataPath>
+									<AutoMaxWidth>false</AutoMaxWidth>
 									<ContextMenu name="ТермическиеУсловияПеревозкиКонтекстноеМеню" id="574"/>
 									<ExtendedTooltip name="ТермическиеУсловияПеревозкиРасширеннаяПодсказка" id="575"/>
 								</InputField>
@@ -623,6 +674,7 @@
 												</v8:item>
 											</Title>
 											<EditMode>EnterOnInput</EditMode>
+											<AutoMaxWidth>false</AutoMaxWidth>
 											<HorizontalStretch>true</HorizontalStretch>
 											<ContextMenu name="ВСДЦельКонтекстноеМеню" id="121"/>
 											<ExtendedTooltip name="ВСДЦельРасширеннаяПодсказка" id="122"/>
@@ -670,6 +722,7 @@
 										<InputField name="Страна" id="17">
 											<DataPath>Объект.Страна</DataPath>
 											<EditMode>EnterOnInput</EditMode>
+											<AutoMaxWidth>false</AutoMaxWidth>
 											<HorizontalStretch>true</HorizontalStretch>
 											<ContextMenu name="СтранаКонтекстноеМеню" id="18"/>
 											<ExtendedTooltip name="СтранаРасширеннаяПодсказка" id="19"/>
@@ -701,6 +754,7 @@
 										<InputField name="Регион" id="20">
 											<DataPath>Объект.Регион</DataPath>
 											<EditMode>EnterOnInput</EditMode>
+											<AutoMaxWidth>false</AutoMaxWidth>
 											<HorizontalStretch>true</HorizontalStretch>
 											<ContextMenu name="РегионКонтекстноеМеню" id="21"/>
 											<ExtendedTooltip name="РегионРасширеннаяПодсказка" id="22"/>
@@ -730,6 +784,7 @@
 									<ChildItems>
 										<InputField name="Район" id="685">
 											<DataPath>Объект.Район</DataPath>
+											<AutoMaxWidth>false</AutoMaxWidth>
 											<ContextMenu name="РайонКонтекстноеМеню" id="686"/>
 											<ExtendedTooltip name="РайонРасширеннаяПодсказка" id="687"/>
 											<Events>
@@ -754,6 +809,7 @@
 										<InputField name="Город" id="23">
 											<DataPath>Объект.Город</DataPath>
 											<EditMode>EnterOnInput</EditMode>
+											<AutoMaxWidth>false</AutoMaxWidth>
 											<HorizontalStretch>true</HorizontalStretch>
 											<ChoiceParameterLinks>
 												<xr:Link>
@@ -802,6 +858,7 @@
 									<ChildItems>
 										<InputField name="НаселенныйПункт1" id="785">
 											<DataPath>Объект.НаселенныйПункт</DataPath>
+											<AutoMaxWidth>false</AutoMaxWidth>
 											<ContextMenu name="НаселенныйПункт1КонтекстноеМеню" id="786"/>
 											<ExtendedTooltip name="НаселенныйПункт1РасширеннаяПодсказка" id="787"/>
 											<Events>
@@ -825,6 +882,7 @@
 									<ChildItems>
 										<InputField name="Улица" id="676">
 											<DataPath>Объект.Улица</DataPath>
+											<AutoMaxWidth>false</AutoMaxWidth>
 											<ContextMenu name="УлицаКонтекстноеМеню" id="677"/>
 											<ExtendedTooltip name="УлицаРасширеннаяПодсказка" id="678"/>
 											<Events>
@@ -1579,10 +1637,11 @@
 							<Title>
 								<v8:item>
 									<v8:lang>ru</v8:lang>
-									<v8:content>Автоматическое перемещение партий</v8:content>
+									<v8:content>Поставщик</v8:content>
 								</v8:item>
 							</Title>
 							<Group>Vertical</Group>
+							<Representation>None</Representation>
 							<ExtendedTooltip name="Группа2РасширеннаяПодсказка" id="471"/>
 							<ChildItems>
 								<InputField name="ПарамПоставщикОрганизация" id="472">
@@ -1590,9 +1649,10 @@
 									<Title>
 										<v8:item>
 											<v8:lang>ru</v8:lang>
-											<v8:content>Поставщик Организация</v8:content>
+											<v8:content>Организация</v8:content>
 										</v8:item>
 									</Title>
+									<AutoMaxWidth>false</AutoMaxWidth>
 									<ContextMenu name="ПарамПоставщикОрганизацияКонтекстноеМеню" id="473"/>
 									<ExtendedTooltip name="ПарамПоставщикОрганизацияРасширеннаяПодсказка" id="474"/>
 								</InputField>
@@ -1601,9 +1661,10 @@
 									<Title>
 										<v8:item>
 											<v8:lang>ru</v8:lang>
-											<v8:content>Поставщик ХозСубъект</v8:content>
+											<v8:content>ХозСубъект</v8:content>
 										</v8:item>
 									</Title>
+									<AutoMaxWidth>false</AutoMaxWidth>
 									<ContextMenu name="ПарамПоставщикХозСубъектКонтекстноеМеню" id="476"/>
 									<ExtendedTooltip name="ПарамПоставщикХозСубъектРасширеннаяПодсказка" id="477"/>
 								</InputField>
@@ -1612,9 +1673,10 @@
 									<Title>
 										<v8:item>
 											<v8:lang>ru</v8:lang>
-											<v8:content>Поставщик Площадка</v8:content>
+											<v8:content>Площадка</v8:content>
 										</v8:item>
 									</Title>
+									<AutoMaxWidth>false</AutoMaxWidth>
 									<ContextMenu name="ПарамПоставщикПлощадкаКонтекстноеМеню" id="479"/>
 									<ExtendedTooltip name="ПарамПоставщикПлощадкаРасширеннаяПодсказка" id="480"/>
 								</InputField>
@@ -1649,6 +1711,8 @@
 											<v8:content>Начало работы </v8:content>
 										</v8:item>
 									</Title>
+									<Group>Vertical</Group>
+									<Representation>None</Representation>
 									<ExtendedTooltip name="Группа30РасширеннаяПодсказка" id="424"/>
 									<ChildItems>
 										<Button name="кнИнициализация" id="305">
@@ -1662,15 +1726,16 @@
 											</Title>
 											<ExtendedTooltip name="кнИнициализацияРасширеннаяПодсказка" id="306"/>
 										</Button>
-										<LabelDecoration name="Декорация5" id="769">
+										<LabelDecoration name="Декорация6" id="804">
+											<Font ref="style:NormalTextFont" height="8" kind="StyleItem"/>
 											<Title formatted="false">
 												<v8:item>
 													<v8:lang>ru</v8:lang>
-													<v8:content>Загрузить все классификаторы и справочники</v8:content>
+													<v8:content>Загрузить классификаторы и справочники из Ветис</v8:content>
 												</v8:item>
 											</Title>
-											<ContextMenu name="Декорация5КонтекстноеМеню" id="770"/>
-											<ExtendedTooltip name="Декорация5РасширеннаяПодсказка" id="771"/>
+											<ContextMenu name="Декорация6КонтекстноеМеню" id="805"/>
+											<ExtendedTooltip name="Декорация6РасширеннаяПодсказка" id="806"/>
 										</LabelDecoration>
 									</ChildItems>
 								</UsualGroup>
@@ -1682,6 +1747,7 @@
 										</v8:item>
 									</Title>
 									<Group>Vertical</Group>
+									<Representation>None</Representation>
 									<ExtendedTooltip name="Группа16РасширеннаяПодсказка" id="294"/>
 									<ChildItems>
 										<Button name="кнЗагрузитьПродукцию" id="295">
@@ -1770,6 +1836,7 @@
 											<v8:content>Обновление при переходе на версию 2</v8:content>
 										</v8:item>
 									</Title>
+									<Representation>None</Representation>
 									<ExtendedTooltip name="Группа27РасширеннаяПодсказка" id="592"/>
 									<ChildItems>
 										<Button name="Версия2ОбновитьСправочники" id="589">
@@ -2129,6 +2196,7 @@
 												</Button>
 												<LabelDecoration name="Декорация1" id="737">
 													<AutoMaxWidth>false</AutoMaxWidth>
+													<Font ref="style:NormalTextFont" height="8" kind="StyleItem"/>
 													<Title formatted="false">
 														<v8:item>
 															<v8:lang>ru</v8:lang>

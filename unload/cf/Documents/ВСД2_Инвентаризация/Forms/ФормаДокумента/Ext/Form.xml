@@ -92,6 +92,7 @@
 									<v8:content>Основание</v8:content>
 								</v8:item>
 							</Title>
+							<TitleLocation>None</TitleLocation>
 							<EditMode>EnterOnInput</EditMode>
 							<Hiperlink>true</Hiperlink>
 							<ContextMenu name="ДокументОснованиеКонтекстноеМеню" id="45"/>
@@ -201,6 +202,9 @@
 											</Title>
 											<EditMode>EnterOnInput</EditMode>
 											<AutoMaxWidth>false</AutoMaxWidth>
+											<DropListButton>false</DropListButton>
+											<ChoiceButton>true</ChoiceButton>
+											<ChoiceButtonRepresentation>ShowInInputField</ChoiceButtonRepresentation>
 											<ContextMenu name="Владелец_ХозСубъектКонтекстноеМеню" id="66"/>
 											<ExtendedTooltip name="Владелец_ХозСубъектРасширеннаяПодсказка" id="67"/>
 											<Events>
@@ -217,6 +221,23 @@
 											</Title>
 											<EditMode>EnterOnInput</EditMode>
 											<AutoMaxWidth>false</AutoMaxWidth>
+											<DropListButton>false</DropListButton>
+											<ChoiceButton>true</ChoiceButton>
+											<ChoiceButtonRepresentation>ShowInInputField</ChoiceButtonRepresentation>
+											<ClearButton>false</ClearButton>
+											<SpinButton>false</SpinButton>
+											<OpenButton>true</OpenButton>
+											<CreateButton>false</CreateButton>
+											<AutoChoiceIncomplete>false</AutoChoiceIncomplete>
+											<QuickChoice>false</QuickChoice>
+											<ChoiceParameterLinks>
+												<xr:Link>
+													<xr:Name>Отбор.ХозСубъект</xr:Name>
+													<xr:DataPath xsi:type="xs:string">Объект.Владелец_ХозСубъект</xr:DataPath>
+													<xr:ValueChange>Clear</xr:ValueChange>
+												</xr:Link>
+											</ChoiceParameterLinks>
+											<ChoiceHistoryOnInput>DontUse</ChoiceHistoryOnInput>
 											<ContextMenu name="Владелец_ПлощадкаКонтекстноеМеню" id="69"/>
 											<ExtendedTooltip name="Владелец_ПлощадкаРасширеннаяПодсказка" id="70"/>
 											<Events>
@@ -289,6 +310,7 @@
 							<ChildItems>
 								<Table name="Продукция" id="149">
 									<Representation>List</Representation>
+									<Height>5</Height>
 									<AutoInsertNewRow>true</AutoInsertNewRow>
 									<EnableStartDrag>true</EnableStartDrag>
 									<EnableDrag>true</EnableDrag>
@@ -351,6 +373,7 @@
 										<LabelField name="ПродукцияНомерСтроки" id="307">
 											<DataPath>Объект.Продукция.LineNumber</DataPath>
 											<EditMode>EnterOnInput</EditMode>
+											<Width>2</Width>
 											<ContextMenu name="ПродукцияНомерСтрокиКонтекстноеМеню" id="308"/>
 											<ExtendedTooltip name="ПродукцияНомерСтрокиРасширеннаяПодсказка" id="309"/>
 										</LabelField>
@@ -367,47 +390,58 @@
 													<v8:content>Продукция группа продукция элемент</v8:content>
 												</v8:item>
 											</ToolTip>
+											<Width>30</Width>
+											<HorizontalStretch>true</HorizontalStretch>
 											<ExtendedTooltip name="ПродукцияГруппаПродукцияЭлементРасширеннаяПодсказка" id="482"/>
 											<ChildItems>
 												<InputField name="ПродукцияПродукция_Элемент" id="325">
 													<DataPath>Объект.Продукция.Продукция_Элемент</DataPath>
 													<EditMode>EnterOnInput</EditMode>
+													<Width>40</Width>
 													<ContextMenu name="ПродукцияПродукция_ЭлементКонтекстноеМеню" id="326"/>
 													<ExtendedTooltip name="ПродукцияПродукция_ЭлементРасширеннаяПодсказка" id="327"/>
 													<Events>
 														<Event name="OnChange">ПродукцияПродукция_ЭлементПриИзменении</Event>
 													</Events>
 												</InputField>
-												<InputField name="ПродукцияНоменклатура" id="313">
-													<DataPath>Объект.Продукция.Номенклатура</DataPath>
+												<InputField name="ПродукцияПартия" id="310">
+													<DataPath>Объект.Продукция.Партия</DataPath>
 													<EditMode>EnterOnInput</EditMode>
-													<ContextMenu name="ПродукцияНоменклатураКонтекстноеМеню" id="314"/>
-													<ExtendedTooltip name="ПродукцияНоменклатураРасширеннаяПодсказка" id="315"/>
+													<DropListButton>false</DropListButton>
+													<ChoiceButton>true</ChoiceButton>
+													<ChoiceButtonRepresentation>ShowInInputField</ChoiceButtonRepresentation>
+													<OpenButton>true</OpenButton>
+													<CreateButton>false</CreateButton>
+													<QuickChoice>false</QuickChoice>
+													<ChooseType>false</ChooseType>
+													<ChoiceParameterLinks>
+														<xr:Link>
+															<xr:Name>Отбор.Продукция_Элемент</xr:Name>
+															<xr:DataPath xsi:type="xs:string">Items.Продукция.CurrentData.Продукция_Элемент</xr:DataPath>
+															<xr:ValueChange>Clear</xr:ValueChange>
+														</xr:Link>
+													</ChoiceParameterLinks>
+													<ChoiceHistoryOnInput>DontUse</ChoiceHistoryOnInput>
+													<ContextMenu name="ПродукцияПартияКонтекстноеМеню" id="311"/>
+													<ExtendedTooltip name="ПродукцияПартияРасширеннаяПодсказка" id="312"/>
 													<Events>
-														<Event name="OnChange">ПродукцияНоменклатураПриИзменении</Event>
+														<Event name="StartChoice">ПродукцияПартияНачалоВыбора</Event>
+														<Event name="ChoiceProcessing">ПродукцияПартияОбработкаВыбора</Event>
 													</Events>
 												</InputField>
 											</ChildItems>
 										</ColumnGroup>
-										<InputField name="ПродукцияПартия" id="310">
-											<DataPath>Объект.Продукция.Партия</DataPath>
-											<EditMode>EnterOnInput</EditMode>
-											<ContextMenu name="ПродукцияПартияКонтекстноеМеню" id="311"/>
-											<ExtendedTooltip name="ПродукцияПартияРасширеннаяПодсказка" id="312"/>
-											<Events>
-												<Event name="StartChoice">ПродукцияПартияНачалоВыбора</Event>
-												<Event name="ChoiceProcessing">ПродукцияПартияОбработкаВыбора</Event>
-											</Events>
-										</InputField>
 										<InputField name="ПродукцияКоличество" id="328">
 											<DataPath>Объект.Продукция.Количество</DataPath>
 											<EditMode>EnterOnInput</EditMode>
+											<Width>10</Width>
 											<ContextMenu name="ПродукцияКоличествоКонтекстноеМеню" id="329"/>
 											<ExtendedTooltip name="ПродукцияКоличествоРасширеннаяПодсказка" id="330"/>
 										</InputField>
 										<InputField name="ПродукцияЕдиницаИзмерения" id="331">
 											<DataPath>Объект.Продукция.ЕдиницаИзмерения</DataPath>
 											<EditMode>EnterOnInput</EditMode>
+											<Width>10</Width>
 											<ContextMenu name="ПродукцияЕдиницаИзмеренияКонтекстноеМеню" id="332"/>
 											<ExtendedTooltip name="ПродукцияЕдиницаИзмеренияРасширеннаяПодсказка" id="333"/>
 										</InputField>
@@ -666,7 +700,7 @@
 									<ChildItems>
 										<Table name="УровниУпаковки" id="208">
 											<Representation>List</Representation>
-											<Height>5</Height>
+											<HeightInTableRows>2</HeightInTableRows>
 											<AutoInsertNewRow>true</AutoInsertNewRow>
 											<VerticalStretch>false</VerticalStretch>
 											<EnableStartDrag>true</EnableStartDrag>
@@ -720,18 +754,21 @@
 												<InputField name="УровниУпаковкиНомерУровня" id="376">
 													<DataPath>Объект.УровниУпаковки.НомерУровня</DataPath>
 													<EditMode>EnterOnInput</EditMode>
+													<Width>10</Width>
 													<ContextMenu name="УровниУпаковкиНомерУровняКонтекстноеМеню" id="377"/>
 													<ExtendedTooltip name="УровниУпаковкиНомерУровняРасширеннаяПодсказка" id="378"/>
 												</InputField>
 												<InputField name="УровниУпаковкиФормаУпаковки" id="379">
 													<DataPath>Объект.УровниУпаковки.ФормаУпаковки</DataPath>
 													<EditMode>EnterOnInput</EditMode>
+													<Width>10</Width>
 													<ContextMenu name="УровниУпаковкиФормаУпаковкиКонтекстноеМеню" id="380"/>
 													<ExtendedTooltip name="УровниУпаковкиФормаУпаковкиРасширеннаяПодсказка" id="381"/>
 												</InputField>
 												<InputField name="УровниУпаковкиКоличество" id="382">
 													<DataPath>Объект.УровниУпаковки.Количество</DataPath>
 													<EditMode>EnterOnInput</EditMode>
+													<Width>10</Width>
 													<ContextMenu name="УровниУпаковкиКоличествоКонтекстноеМеню" id="383"/>
 													<ExtendedTooltip name="УровниУпаковкиКоличествоРасширеннаяПодсказка" id="384"/>
 												</InputField>
@@ -754,7 +791,7 @@
 									<ChildItems>
 										<Table name="Маркировка" id="238">
 											<Representation>List</Representation>
-											<Height>5</Height>
+											<HeightInTableRows>2</HeightInTableRows>
 											<AutoInsertNewRow>true</AutoInsertNewRow>
 											<VerticalStretch>false</VerticalStretch>
 											<EnableStartDrag>true</EnableStartDrag>
@@ -803,24 +840,27 @@
 													<ContextMenu name="МаркировкаНомерСтрокиКонтекстноеМеню" id="386"/>
 													<ExtendedTooltip name="МаркировкаНомерСтрокиРасширеннаяПодсказка" id="387"/>
 												</LabelField>
+												<InputField name="МаркировкаНомерУровня" id="388">
+													<DataPath>Объект.Маркировка.НомерУровня</DataPath>
+													<Enabled>false</Enabled>
+													<EditMode>EnterOnInput</EditMode>
+													<Width>10</Width>
+													<ContextMenu name="МаркировкаНомерУровняКонтекстноеМеню" id="389"/>
+													<ExtendedTooltip name="МаркировкаНомерУровняРасширеннаяПодсказка" id="390"/>
+												</InputField>
 												<InputField name="МаркировкаКласс" id="391">
 													<DataPath>Объект.Маркировка.Класс</DataPath>
 													<EditMode>EnterOnInput</EditMode>
+													<Width>10</Width>
 													<ContextMenu name="МаркировкаКлассКонтекстноеМеню" id="392"/>
 													<ExtendedTooltip name="МаркировкаКлассРасширеннаяПодсказка" id="393"/>
 												</InputField>
 												<InputField name="МаркировкаМаркировка" id="394">
 													<DataPath>Объект.Маркировка.Маркировка</DataPath>
 													<EditMode>EnterOnInput</EditMode>
+													<Width>20</Width>
 													<ContextMenu name="МаркировкаМаркировкаКонтекстноеМеню" id="395"/>
 													<ExtendedTooltip name="МаркировкаМаркировкаРасширеннаяПодсказка" id="396"/>
-												</InputField>
-												<InputField name="МаркировкаНомерУровня" id="388">
-													<DataPath>Объект.Маркировка.НомерУровня</DataPath>
-													<Enabled>false</Enabled>
-													<EditMode>EnterOnInput</EditMode>
-													<ContextMenu name="МаркировкаНомерУровняКонтекстноеМеню" id="389"/>
-													<ExtendedTooltip name="МаркировкаНомерУровняРасширеннаяПодсказка" id="390"/>
 												</InputField>
 												<InputField name="МаркировкаСтрокаПродукции" id="397">
 													<DataPath>Объект.Маркировка.СтрокаПродукции</DataPath>
@@ -880,6 +920,7 @@
 								<Table name="Запросы" id="413">
 									<Representation>List</Representation>
 									<ReadOnly>true</ReadOnly>
+									<HeightInTableRows>5</HeightInTableRows>
 									<UseAlternationRowColor>true</UseAlternationRowColor>
 									<AutoInsertNewRow>true</AutoInsertNewRow>
 									<EnableStartDrag>true</EnableStartDrag>
