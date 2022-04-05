@@ -846,6 +846,7 @@
 								<ExtendedTooltip name="ОтгрузкиУправлениеПоискомРасширеннаяПодсказка" id="158"/>
 							</SearchControlAddition>
 							<Events>
+								<Event name="Selection">ОтгрузкиВыбор</Event>
 								<Event name="BeforeAddRow">ОтгрузкиПередНачаломДобавления</Event>
 							</Events>
 							<ChildItems>
@@ -891,6 +892,13 @@
 									<ContextMenu name="ОтгрузкиГрузополучательКонтекстноеМеню" id="166"/>
 									<ExtendedTooltip name="ОтгрузкиГрузополучательРасширеннаяПодсказка" id="167"/>
 								</InputField>
+								<InputField name="ОтгрузкиВСДПредставление" id="715">
+									<DataPath>Объект.Отгрузки.ВСДПредставление</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ОтгрузкиВСДПредставлениеКонтекстноеМеню" id="716"/>
+									<ExtendedTooltip name="ОтгрузкиВСДПредставлениеРасширеннаяПодсказка" id="717"/>
+								</InputField>
 								<InputField name="ОтгрузкиПлощадка" id="168">
 									<DataPath>Объект.Отгрузки.Площадка</DataPath>
 									<EditMode>EnterOnInput</EditMode>
@@ -906,6 +914,7 @@
 								</InputField>
 								<InputField name="ОтгрузкиВСД" id="171">
 									<DataPath>Объект.Отгрузки.ВСД</DataPath>
+									<Visible>false</Visible>
 									<EditMode>EnterOnInput</EditMode>
 									<ChoiceButton>false</ChoiceButton>
 									<ClearButton>true</ClearButton>
@@ -947,8 +956,16 @@
 									<ContextMenu name="ОтгрузкиНомерЗаявкиКонтекстноеМеню" id="675"/>
 									<ExtendedTooltip name="ОтгрузкиНомерЗаявкиРасширеннаяПодсказка" id="676"/>
 								</InputField>
+								<InputField name="ОтгрузкиДокПредставление" id="718">
+									<DataPath>Объект.Отгрузки.ДокПредставление</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ОтгрузкиДокПредставлениеКонтекстноеМеню" id="719"/>
+									<ExtendedTooltip name="ОтгрузкиДокПредставлениеРасширеннаяПодсказка" id="720"/>
+								</InputField>
 								<InputField name="ОтгрузкиДок" id="180">
 									<DataPath>Объект.Отгрузки.Док</DataPath>
+									<Visible>false</Visible>
 									<EditMode>EnterOnInput</EditMode>
 									<ExtendedEdit>false</ExtendedEdit>
 									<ChoiceButton>false</ChoiceButton>
@@ -1614,6 +1631,40 @@
 				<v8:Type>cfg:DataProcessorObject.Интеграция_ГИС_Меркурий</v8:Type>
 			</Type>
 			<MainAttribute>true</MainAttribute>
+			<Columns>
+				<AdditionalColumns table="Объект.Отгрузки">
+					<Column name="ВСДПредставление" id="1">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>ВСД</v8:content>
+							</v8:item>
+						</Title>
+						<Type>
+							<v8:Type>xs:string</v8:Type>
+							<v8:StringQualifiers>
+								<v8:Length>150</v8:Length>
+								<v8:AllowedLength>Variable</v8:AllowedLength>
+							</v8:StringQualifiers>
+						</Type>
+					</Column>
+					<Column name="ДокПредставление" id="2">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Документ</v8:content>
+							</v8:item>
+						</Title>
+						<Type>
+							<v8:Type>xs:string</v8:Type>
+							<v8:StringQualifiers>
+								<v8:Length>150</v8:Length>
+								<v8:AllowedLength>Variable</v8:AllowedLength>
+							</v8:StringQualifiers>
+						</Type>
+					</Column>
+				</AdditionalColumns>
+			</Columns>
 		</Attribute>
 		<Attribute name="ВыбХозСубъект" id="2">
 			<Title>
@@ -1814,37 +1865,7 @@
 			<dcsset:item>
 				<dcsset:selection>
 					<dcsset:item>
-						<dcsset:field>ОтгрузкиНомерСтроки</dcsset:field>
-					</dcsset:item>
-					<dcsset:item>
-						<dcsset:field>ОтгрузкиОтметка</dcsset:field>
-					</dcsset:item>
-					<dcsset:item>
-						<dcsset:field>ОтгрузкиГрузополучатель</dcsset:field>
-					</dcsset:item>
-					<dcsset:item>
-						<dcsset:field>ОтгрузкиПлощадка</dcsset:field>
-					</dcsset:item>
-					<dcsset:item>
-						<dcsset:field>ОтгрузкиВСД</dcsset:field>
-					</dcsset:item>
-					<dcsset:item>
-						<dcsset:field>ОтгрузкиКоличество</dcsset:field>
-					</dcsset:item>
-					<dcsset:item>
-						<dcsset:field>ОтгрузкиДок</dcsset:field>
-					</dcsset:item>
-					<dcsset:item>
-						<dcsset:field>ОтгрузкиКонтрагент</dcsset:field>
-					</dcsset:item>
-					<dcsset:item>
-						<dcsset:field>ОтгрузкиХозСубъект</dcsset:field>
-					</dcsset:item>
-					<dcsset:item>
-						<dcsset:field>ОтгрузкиНомерАвто</dcsset:field>
-					</dcsset:item>
-					<dcsset:item>
-						<dcsset:field>ОтгрузкиНомерЗаявки</dcsset:field>
+						<dcsset:field>Отгрузки</dcsset:field>
 					</dcsset:item>
 				</dcsset:selection>
 				<dcsset:filter>
@@ -1864,37 +1885,7 @@
 			<dcsset:item>
 				<dcsset:selection>
 					<dcsset:item>
-						<dcsset:field>ОтгрузкиНомерСтроки</dcsset:field>
-					</dcsset:item>
-					<dcsset:item>
-						<dcsset:field>ОтгрузкиОтметка</dcsset:field>
-					</dcsset:item>
-					<dcsset:item>
-						<dcsset:field>ОтгрузкиГрузополучатель</dcsset:field>
-					</dcsset:item>
-					<dcsset:item>
-						<dcsset:field>ОтгрузкиПлощадка</dcsset:field>
-					</dcsset:item>
-					<dcsset:item>
-						<dcsset:field>ОтгрузкиВСД</dcsset:field>
-					</dcsset:item>
-					<dcsset:item>
-						<dcsset:field>ОтгрузкиКоличество</dcsset:field>
-					</dcsset:item>
-					<dcsset:item>
-						<dcsset:field>ОтгрузкиДок</dcsset:field>
-					</dcsset:item>
-					<dcsset:item>
-						<dcsset:field>ОтгрузкиКонтрагент</dcsset:field>
-					</dcsset:item>
-					<dcsset:item>
-						<dcsset:field>ОтгрузкиХозСубъект</dcsset:field>
-					</dcsset:item>
-					<dcsset:item>
-						<dcsset:field>ОтгрузкиНомерАвто</dcsset:field>
-					</dcsset:item>
-					<dcsset:item>
-						<dcsset:field>ОтгрузкиНомерЗаявки</dcsset:field>
+						<dcsset:field>Отгрузки</dcsset:field>
 					</dcsset:item>
 				</dcsset:selection>
 				<dcsset:filter>
@@ -1914,37 +1905,7 @@
 			<dcsset:item>
 				<dcsset:selection>
 					<dcsset:item>
-						<dcsset:field>ОтгрузкиНомерСтроки</dcsset:field>
-					</dcsset:item>
-					<dcsset:item>
-						<dcsset:field>ОтгрузкиОтметка</dcsset:field>
-					</dcsset:item>
-					<dcsset:item>
-						<dcsset:field>ОтгрузкиГрузополучатель</dcsset:field>
-					</dcsset:item>
-					<dcsset:item>
-						<dcsset:field>ОтгрузкиПлощадка</dcsset:field>
-					</dcsset:item>
-					<dcsset:item>
-						<dcsset:field>ОтгрузкиВСД</dcsset:field>
-					</dcsset:item>
-					<dcsset:item>
-						<dcsset:field>ОтгрузкиКоличество</dcsset:field>
-					</dcsset:item>
-					<dcsset:item>
-						<dcsset:field>ОтгрузкиДок</dcsset:field>
-					</dcsset:item>
-					<dcsset:item>
-						<dcsset:field>ОтгрузкиКонтрагент</dcsset:field>
-					</dcsset:item>
-					<dcsset:item>
-						<dcsset:field>ОтгрузкиХозСубъект</dcsset:field>
-					</dcsset:item>
-					<dcsset:item>
-						<dcsset:field>ОтгрузкиНомерАвто</dcsset:field>
-					</dcsset:item>
-					<dcsset:item>
-						<dcsset:field>ОтгрузкиНомерЗаявки</dcsset:field>
+						<dcsset:field>Отгрузки</dcsset:field>
 					</dcsset:item>
 				</dcsset:selection>
 				<dcsset:filter>
@@ -1964,37 +1925,7 @@
 			<dcsset:item>
 				<dcsset:selection>
 					<dcsset:item>
-						<dcsset:field>ОтгрузкиНомерСтроки</dcsset:field>
-					</dcsset:item>
-					<dcsset:item>
-						<dcsset:field>ОтгрузкиОтметка</dcsset:field>
-					</dcsset:item>
-					<dcsset:item>
-						<dcsset:field>ОтгрузкиГрузополучатель</dcsset:field>
-					</dcsset:item>
-					<dcsset:item>
-						<dcsset:field>ОтгрузкиПлощадка</dcsset:field>
-					</dcsset:item>
-					<dcsset:item>
-						<dcsset:field>ОтгрузкиВСД</dcsset:field>
-					</dcsset:item>
-					<dcsset:item>
-						<dcsset:field>ОтгрузкиКоличество</dcsset:field>
-					</dcsset:item>
-					<dcsset:item>
-						<dcsset:field>ОтгрузкиДок</dcsset:field>
-					</dcsset:item>
-					<dcsset:item>
-						<dcsset:field>ОтгрузкиКонтрагент</dcsset:field>
-					</dcsset:item>
-					<dcsset:item>
-						<dcsset:field>ОтгрузкиХозСубъект</dcsset:field>
-					</dcsset:item>
-					<dcsset:item>
-						<dcsset:field>ОтгрузкиНомерАвто</dcsset:field>
-					</dcsset:item>
-					<dcsset:item>
-						<dcsset:field>ОтгрузкиНомерЗаявки</dcsset:field>
+						<dcsset:field>Отгрузки</dcsset:field>
 					</dcsset:item>
 				</dcsset:selection>
 				<dcsset:filter>
@@ -2014,37 +1945,7 @@
 			<dcsset:item>
 				<dcsset:selection>
 					<dcsset:item>
-						<dcsset:field>ОтгрузкиНомерСтроки</dcsset:field>
-					</dcsset:item>
-					<dcsset:item>
-						<dcsset:field>ОтгрузкиОтметка</dcsset:field>
-					</dcsset:item>
-					<dcsset:item>
-						<dcsset:field>ОтгрузкиГрузополучатель</dcsset:field>
-					</dcsset:item>
-					<dcsset:item>
-						<dcsset:field>ОтгрузкиПлощадка</dcsset:field>
-					</dcsset:item>
-					<dcsset:item>
-						<dcsset:field>ОтгрузкиВСД</dcsset:field>
-					</dcsset:item>
-					<dcsset:item>
-						<dcsset:field>ОтгрузкиКоличество</dcsset:field>
-					</dcsset:item>
-					<dcsset:item>
-						<dcsset:field>ОтгрузкиДок</dcsset:field>
-					</dcsset:item>
-					<dcsset:item>
-						<dcsset:field>ОтгрузкиКонтрагент</dcsset:field>
-					</dcsset:item>
-					<dcsset:item>
-						<dcsset:field>ОтгрузкиХозСубъект</dcsset:field>
-					</dcsset:item>
-					<dcsset:item>
-						<dcsset:field>ОтгрузкиНомерАвто</dcsset:field>
-					</dcsset:item>
-					<dcsset:item>
-						<dcsset:field>ОтгрузкиНомерЗаявки</dcsset:field>
+						<dcsset:field>Отгрузки</dcsset:field>
 					</dcsset:item>
 				</dcsset:selection>
 				<dcsset:filter>
