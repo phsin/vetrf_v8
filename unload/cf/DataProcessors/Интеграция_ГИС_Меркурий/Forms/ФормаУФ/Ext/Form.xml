@@ -896,6 +896,7 @@
 									<DataPath>Объект.Отгрузки.ВСДПредставление</DataPath>
 									<ReadOnly>true</ReadOnly>
 									<EditMode>EnterOnInput</EditMode>
+									<Width>30</Width>
 									<ContextMenu name="ОтгрузкиВСДПредставлениеКонтекстноеМеню" id="716"/>
 									<ExtendedTooltip name="ОтгрузкиВСДПредставлениеРасширеннаяПодсказка" id="717"/>
 								</InputField>
@@ -930,6 +931,7 @@
 									<DataPath>Объект.Отгрузки.Количество</DataPath>
 									<ReadOnly>true</ReadOnly>
 									<EditMode>EnterOnInput</EditMode>
+									<Width>10</Width>
 									<DropListButton>false</DropListButton>
 									<TextEdit>false</TextEdit>
 									<ContextMenu name="ОтгрузкиКоличествоКонтекстноеМеню" id="175"/>
@@ -946,12 +948,25 @@
 								</InputField>
 								<InputField name="ОтгрузкиНомерАвто" id="671">
 									<DataPath>Объект.Отгрузки.НомерАвто</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>№ авто</v8:content>
+										</v8:item>
+									</Title>
 									<EditMode>EnterOnInput</EditMode>
+									<Width>10</Width>
 									<ContextMenu name="ОтгрузкиНомерАвтоКонтекстноеМеню" id="672"/>
 									<ExtendedTooltip name="ОтгрузкиНомерАвтоРасширеннаяПодсказка" id="673"/>
 								</InputField>
 								<InputField name="ОтгрузкиНомерЗаявки" id="674">
 									<DataPath>Объект.Отгрузки.НомерЗаявки</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>№ заявки</v8:content>
+										</v8:item>
+									</Title>
 									<EditMode>EnterOnInput</EditMode>
 									<ContextMenu name="ОтгрузкиНомерЗаявкиКонтекстноеМеню" id="675"/>
 									<ExtendedTooltip name="ОтгрузкиНомерЗаявкиРасширеннаяПодсказка" id="676"/>
@@ -959,6 +974,12 @@
 								<InputField name="ОтгрузкиДокПредставление" id="718">
 									<DataPath>Объект.Отгрузки.ДокПредставление</DataPath>
 									<ReadOnly>true</ReadOnly>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Основание</v8:content>
+										</v8:item>
+									</Title>
 									<EditMode>EnterOnInput</EditMode>
 									<ContextMenu name="ОтгрузкиДокПредставлениеКонтекстноеМеню" id="719"/>
 									<ExtendedTooltip name="ОтгрузкиДокПредставлениеРасширеннаяПодсказка" id="720"/>
@@ -989,6 +1010,12 @@
 								</InputField>
 								<InputField name="ОтгрузкиХозСубъект" id="186">
 									<DataPath>Объект.Отгрузки.ХозСубъект</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>ХозСубъект</v8:content>
+										</v8:item>
+									</Title>
 									<EditMode>EnterOnInput</EditMode>
 									<ChoiceButton>false</ChoiceButton>
 									<ClearButton>false</ClearButton>
