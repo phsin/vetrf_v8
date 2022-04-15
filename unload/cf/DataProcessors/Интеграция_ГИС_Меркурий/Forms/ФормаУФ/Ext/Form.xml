@@ -846,7 +846,6 @@
 								<ExtendedTooltip name="ОтгрузкиУправлениеПоискомРасширеннаяПодсказка" id="158"/>
 							</SearchControlAddition>
 							<Events>
-								<Event name="Selection">ОтгрузкиВыбор</Event>
 								<Event name="BeforeAddRow">ОтгрузкиПередНачаломДобавления</Event>
 							</Events>
 							<ChildItems>
@@ -892,18 +891,14 @@
 									<ContextMenu name="ОтгрузкиГрузополучательКонтекстноеМеню" id="166"/>
 									<ExtendedTooltip name="ОтгрузкиГрузополучательРасширеннаяПодсказка" id="167"/>
 								</InputField>
-								<InputField name="ОтгрузкиВСДПредставление" id="715">
-									<DataPath>Объект.Отгрузки.ВСДПредставление</DataPath>
-									<ReadOnly>true</ReadOnly>
-									<EditMode>EnterOnInput</EditMode>
-									<Width>30</Width>
-									<ContextMenu name="ОтгрузкиВСДПредставлениеКонтекстноеМеню" id="716"/>
-									<ExtendedTooltip name="ОтгрузкиВСДПредставлениеРасширеннаяПодсказка" id="717"/>
-								</InputField>
 								<InputField name="ОтгрузкиПлощадка" id="168">
 									<DataPath>Объект.Отгрузки.Площадка</DataPath>
-									<EditMode>EnterOnInput</EditMode>
+									<DropListButton>false</DropListButton>
+									<ChoiceButton>true</ChoiceButton>
+									<ChoiceButtonRepresentation>ShowInInputField</ChoiceButtonRepresentation>
 									<ClearButton>true</ClearButton>
+									<OpenButton>true</OpenButton>
+									<CreateButton>false</CreateButton>
 									<ChoiceHistoryOnInput>DontUse</ChoiceHistoryOnInput>
 									<ContextMenu name="ОтгрузкиПлощадкаКонтекстноеМеню" id="169"/>
 									<ExtendedTooltip name="ОтгрузкиПлощадкаРасширеннаяПодсказка" id="170"/>
@@ -911,6 +906,19 @@
 										<Event name="OnChange">ОтгрузкиПлощадкаПриИзменении</Event>
 										<Event name="StartChoice">ОтгрузкиПлощадкаНачалоВыбора</Event>
 										<Event name="Clearing">ОтгрузкиПлощадкаОчистка</Event>
+									</Events>
+								</InputField>
+								<InputField name="ОтгрузкиВСДПредставление" id="715">
+									<DataPath>Объект.Отгрузки.ВСДПредставление</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<Width>30</Width>
+									<ClearButton>true</ClearButton>
+									<OpenButton>true</OpenButton>
+									<ContextMenu name="ОтгрузкиВСДПредставлениеКонтекстноеМеню" id="716"/>
+									<ExtendedTooltip name="ОтгрузкиВСДПредставлениеРасширеннаяПодсказка" id="717"/>
+									<Events>
+										<Event name="Opening">ОтгрузкиВСДПредставлениеОткрытие</Event>
+										<Event name="Clearing">ОтгрузкиВСДОчистка</Event>
 									</Events>
 								</InputField>
 								<InputField name="ОтгрузкиВСД" id="171">
@@ -973,7 +981,6 @@
 								</InputField>
 								<InputField name="ОтгрузкиДокПредставление" id="718">
 									<DataPath>Объект.Отгрузки.ДокПредставление</DataPath>
-									<ReadOnly>true</ReadOnly>
 									<Title>
 										<v8:item>
 											<v8:lang>ru</v8:lang>
@@ -981,8 +988,12 @@
 										</v8:item>
 									</Title>
 									<EditMode>EnterOnInput</EditMode>
+									<OpenButton>true</OpenButton>
 									<ContextMenu name="ОтгрузкиДокПредставлениеКонтекстноеМеню" id="719"/>
 									<ExtendedTooltip name="ОтгрузкиДокПредставлениеРасширеннаяПодсказка" id="720"/>
+									<Events>
+										<Event name="Opening">ОтгрузкиДокПредставлениеОткрытие</Event>
+									</Events>
 								</InputField>
 								<InputField name="ОтгрузкиДок" id="180">
 									<DataPath>Объект.Отгрузки.Док</DataPath>

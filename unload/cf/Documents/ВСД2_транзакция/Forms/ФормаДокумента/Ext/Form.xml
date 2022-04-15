@@ -482,6 +482,12 @@
 													</Title>
 													<EditMode>EnterOnInput</EditMode>
 													<AutoMaxWidth>false</AutoMaxWidth>
+													<DropListButton>false</DropListButton>
+													<ChoiceButton>true</ChoiceButton>
+													<ChoiceButtonRepresentation>ShowInInputField</ChoiceButtonRepresentation>
+													<ClearButton>false</ClearButton>
+													<SpinButton>false</SpinButton>
+													<OpenButton>true</OpenButton>
 													<ContextMenu name="Получатель_ХозСубъектКонтекстноеМеню" id="14"/>
 													<ExtendedTooltip name="Получатель_ХозСубъектРасширеннаяПодсказка" id="15"/>
 													<Events>
@@ -498,9 +504,16 @@
 													</Title>
 													<EditMode>EnterOnInput</EditMode>
 													<AutoMaxWidth>false</AutoMaxWidth>
+													<DropListButton>false</DropListButton>
+													<ChoiceButton>true</ChoiceButton>
+													<ChoiceButtonRepresentation>ShowInInputField</ChoiceButtonRepresentation>
+													<ClearButton>false</ClearButton>
+													<OpenButton>true</OpenButton>
+													<CreateButton>false</CreateButton>
 													<ContextMenu name="Получатель_ПлощадкаКонтекстноеМеню" id="17"/>
 													<ExtendedTooltip name="Получатель_ПлощадкаРасширеннаяПодсказка" id="18"/>
 													<Events>
+														<Event name="OnChange">Получатель_ПлощадкаПриИзменении</Event>
 														<Event name="StartChoice">Получатель_ПлощадкаНачалоВыбора</Event>
 													</Events>
 												</InputField>
