@@ -35,7 +35,7 @@
 				<Title>
 					<v8:item>
 						<v8:lang>ru</v8:lang>
-						<v8:content>Гашение Входящих</v8:content>
+						<v8:content>Гашение входящих</v8:content>
 					</v8:item>
 				</Title>
 				<ExtendedTooltip name="кнГашениеРасширеннаяПодсказка" id="462"/>
@@ -51,7 +51,7 @@
 				<Title>
 					<v8:item>
 						<v8:lang>ru</v8:lang>
-						<v8:content>Загрузить Партии</v8:content>
+						<v8:content>Загрузить партии</v8:content>
 					</v8:item>
 				</Title>
 				<ExtendedTooltip name="кнПолучитьПартии2РасширеннаяПодсказка" id="644"/>
@@ -67,7 +67,7 @@
 				<Title>
 					<v8:item>
 						<v8:lang>ru</v8:lang>
-						<v8:content>Выбрать Партии для ВСД</v8:content>
+						<v8:content>Выбрать партии</v8:content>
 					</v8:item>
 				</Title>
 				<ExtendedTooltip name="кнЗаполнитьТаблицуПартийРасширеннаяПодсказка" id="315"/>
@@ -94,7 +94,7 @@
 				<Title>
 					<v8:item>
 						<v8:lang>ru</v8:lang>
-						<v8:content>Отправить ВСД Последовательно</v8:content>
+						<v8:content>Отправить ВСД</v8:content>
 					</v8:item>
 				</Title>
 				<ExtendedTooltip name="ОтправитьВсдПоследовательно2РасширеннаяПодсказка" id="646"/>
@@ -110,7 +110,7 @@
 				<Title>
 					<v8:item>
 						<v8:lang>ru</v8:lang>
-						<v8:content>Отправить ВСД Быстро</v8:content>
+						<v8:content>Отправить ВСД группой</v8:content>
 					</v8:item>
 				</Title>
 				<ExtendedTooltip name="ОтправитьВсдБыстро2РасширеннаяПодсказка" id="656"/>
@@ -234,7 +234,7 @@
 					<Title>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>Реализации + Перемещения</v8:content>
+							<v8:content>Реализации / Перемещения / Заказы</v8:content>
 						</v8:item>
 					</Title>
 					<ToolTip>
@@ -365,7 +365,7 @@
 													<Title>
 														<v8:item>
 															<v8:lang>ru</v8:lang>
-															<v8:content>Отправить ВСД Последовательно</v8:content>
+															<v8:content>Отправить ВСД</v8:content>
 														</v8:item>
 													</Title>
 													<ExtendedTooltip name="ОтправитьВсдПоследовательно1РасширеннаяПодсказка" id="634"/>
@@ -381,7 +381,7 @@
 													<Title>
 														<v8:item>
 															<v8:lang>ru</v8:lang>
-															<v8:content>Отправить ВСД Быстро</v8:content>
+															<v8:content>Отправить ВСД группой</v8:content>
 														</v8:item>
 													</Title>
 													<ExtendedTooltip name="ОтправитьВсдБыстро1РасширеннаяПодсказка" id="636"/>
@@ -462,6 +462,12 @@
 												<Button name="ЗагрузитьПлощадкиСКонтролемЗагруженныхХС" id="680">
 													<Type>CommandBarButton</Type>
 													<CommandName>Form.Command.ЗагрузитьПлощадкиСКонтролемЗагруженныхХС</CommandName>
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Загрузить площадки с проверкой</v8:content>
+														</v8:item>
+													</Title>
 													<ExtendedTooltip name="ЗагрузитьПлощадкиСКонтролемЗагруженныхХСРасширеннаяПодсказка" id="681"/>
 												</Button>
 												<Button name="ЗагрузитьПлощадкиПоСпискуДокументов" id="257">
@@ -490,7 +496,7 @@
 													<Title>
 														<v8:item>
 															<v8:lang>ru</v8:lang>
-															<v8:content>Загрузить площадки по Названию</v8:content>
+															<v8:content>Загрузить площадки по названию</v8:content>
 														</v8:item>
 													</Title>
 													<ExtendedTooltip name="ЗагрузитьПлощадкиПоСпискуДокументовНаименованиеРасширеннаяПодсказка" id="290"/>
@@ -518,11 +524,7 @@
 											<ChildItems>
 												<Button name="ЗаполнитьРеализациями" id="661">
 													<Type>CommandBarButton</Type>
-													<CommandName>Form.Command.ОбновитьСписокРеализаций</CommandName>
-													<Picture>
-														<xr:Ref>CommonPicture.кб99_random</xr:Ref>
-														<xr:LoadTransparent>true</xr:LoadTransparent>
-													</Picture>
+													<CommandName>Form.Command.ЗаполнитьРеализациями</CommandName>
 													<Title>
 														<v8:item>
 															<v8:lang>ru</v8:lang>
@@ -534,16 +536,18 @@
 												<Button name="ЗаполнитьЗаказами" id="659">
 													<Type>CommandBarButton</Type>
 													<CommandName>Form.Command.ЗаполнитьЗаказами</CommandName>
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Заказами</v8:content>
+														</v8:item>
+													</Title>
 													<ExtendedTooltip name="ЗаполнитьЗаказамиРасширеннаяПодсказка" id="660"/>
 												</Button>
 												<Button name="ЗаполнитьПеремещения" id="651">
 													<Type>CommandBarButton</Type>
 													<Representation>PictureAndText</Representation>
 													<CommandName>Form.Command.ЗаполнитьПеремещения</CommandName>
-													<Picture>
-														<xr:Ref>CommonPicture.кб99_exchange</xr:Ref>
-														<xr:LoadTransparent>false</xr:LoadTransparent>
-													</Picture>
 													<Title>
 														<v8:item>
 															<v8:lang>ru</v8:lang>
@@ -979,6 +983,12 @@
 									<ContextMenu name="ОтгрузкиНомерЗаявкиКонтекстноеМеню" id="675"/>
 									<ExtendedTooltip name="ОтгрузкиНомерЗаявкиРасширеннаяПодсказка" id="676"/>
 								</InputField>
+								<InputField name="ОтгрузкиСтатусЗаявки" id="721">
+									<DataPath>Объект.Отгрузки.СтатусЗаявки</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ОтгрузкиСтатусЗаявкиКонтекстноеМеню" id="722"/>
+									<ExtendedTooltip name="ОтгрузкиСтатусЗаявкиРасширеннаяПодсказка" id="723"/>
+								</InputField>
 								<InputField name="ОтгрузкиДокПредставление" id="718">
 									<DataPath>Объект.Отгрузки.ДокПредставление</DataPath>
 									<Title>
@@ -1211,7 +1221,7 @@
 											<Title>
 												<v8:item>
 													<v8:lang>ru</v8:lang>
-													<v8:content>Отправить ВСД Последовательно</v8:content>
+													<v8:content>Отправить ВСД</v8:content>
 												</v8:item>
 											</Title>
 											<ExtendedTooltip name="ОтправитьВсдПоследовательноРасширеннаяПодсказка" id="319"/>
@@ -1227,7 +1237,7 @@
 											<Title>
 												<v8:item>
 													<v8:lang>ru</v8:lang>
-													<v8:content>Отправить ВСД Быстро</v8:content>
+													<v8:content>Отправить ВСД группой</v8:content>
 												</v8:item>
 											</Title>
 											<ExtendedTooltip name="ОтправитьВсдБыстроРасширеннаяПодсказка" id="620"/>
@@ -1274,13 +1284,13 @@
 											<HorizontalStretch>true</HorizontalStretch>
 											<CommandName>Form.Command.ПроизводствоОтправить</CommandName>
 											<Picture>
-												<xr:Abs>Picture.svg</xr:Abs>
+												<xr:Ref>CommonPicture.кб99_send</xr:Ref>
 												<xr:LoadTransparent>false</xr:LoadTransparent>
 											</Picture>
 											<Title>
 												<v8:item>
 													<v8:lang>ru</v8:lang>
-													<v8:content>Отправить Производственные ВСД</v8:content>
+													<v8:content>Отправить производственные ВСД</v8:content>
 												</v8:item>
 											</Title>
 											<ExtendedTooltip name="кнПроизводствоОтправитьРасширеннаяПодсказка" id="357"/>
@@ -1319,43 +1329,6 @@
 										</Button>
 									</ChildItems>
 								</Popup>
-								<Popup name="ГруппаИнвентаризация" id="637">
-									<Title>
-										<v8:item>
-											<v8:lang>ru</v8:lang>
-											<v8:content>Инвентаризация</v8:content>
-										</v8:item>
-									</Title>
-									<ToolTip>
-										<v8:item>
-											<v8:lang>ru</v8:lang>
-											<v8:content>Группа инвентаризация</v8:content>
-										</v8:item>
-									</ToolTip>
-									<Picture>
-										<xr:Abs>Picture.svg</xr:Abs>
-										<xr:LoadTransparent>false</xr:LoadTransparent>
-									</Picture>
-									<ExtendedTooltip name="ГруппаИнвентаризацияРасширеннаяПодсказка" id="638"/>
-									<ChildItems>
-										<Button name="кнСоздатьИнвентаризацию" id="598">
-											<Type>CommandBarButton</Type>
-											<HorizontalStretch>true</HorizontalStretch>
-											<CommandName>Form.Command.СоздатьИнвентаризацию</CommandName>
-											<Picture>
-												<xr:Abs>Picture.svg</xr:Abs>
-												<xr:LoadTransparent>false</xr:LoadTransparent>
-											</Picture>
-											<Title>
-												<v8:item>
-													<v8:lang>ru</v8:lang>
-													<v8:content>Создать Инвентаризацию</v8:content>
-												</v8:item>
-											</Title>
-											<ExtendedTooltip name="кнСоздатьИнвентаризациюРасширеннаяПодсказка" id="599"/>
-										</Button>
-									</ChildItems>
-								</Popup>
 								<Popup name="ГруппаВнПеремещения" id="639">
 									<Title>
 										<v8:item>
@@ -1374,25 +1347,41 @@
 										<xr:LoadTransparent>false</xr:LoadTransparent>
 									</Picture>
 									<ExtendedTooltip name="ГруппаВнПеремещенияРасширеннаяПодсказка" id="640"/>
-									<ChildItems>
-										<Button name="кнПереместитьОтПоставщика" id="360">
-											<Type>CommandBarButton</Type>
-											<HorizontalStretch>true</HorizontalStretch>
-											<CommandName>Form.Command.кнПереместитьОтПоставщика</CommandName>
-											<Picture>
-												<xr:Ref>CommonPicture.кб99_exchange</xr:Ref>
-												<xr:LoadTransparent>false</xr:LoadTransparent>
-											</Picture>
-											<Title>
-												<v8:item>
-													<v8:lang>ru</v8:lang>
-													<v8:content>Переместить от Поставщика (внутр)</v8:content>
-												</v8:item>
-											</Title>
-											<ExtendedTooltip name="кнПереместитьОтПоставщикаРасширеннаяПодсказка" id="361"/>
-										</Button>
-									</ChildItems>
 								</Popup>
+								<Button name="кнСоздатьИнвентаризацию" id="598">
+									<Type>CommandBarButton</Type>
+									<Representation>PictureAndText</Representation>
+									<HorizontalStretch>true</HorizontalStretch>
+									<CommandName>Form.Command.СоздатьИнвентаризацию</CommandName>
+									<Picture>
+										<xr:Abs>Picture.svg</xr:Abs>
+										<xr:LoadTransparent>false</xr:LoadTransparent>
+									</Picture>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Инвентаризация</v8:content>
+										</v8:item>
+									</Title>
+									<ExtendedTooltip name="кнСоздатьИнвентаризациюРасширеннаяПодсказка" id="599"/>
+								</Button>
+								<Button name="кнПереместитьОтПоставщика" id="360">
+									<Type>CommandBarButton</Type>
+									<Representation>PictureAndText</Representation>
+									<HorizontalStretch>true</HorizontalStretch>
+									<CommandName>Form.Command.кнПереместитьОтПоставщика</CommandName>
+									<Picture>
+										<xr:Ref>CommonPicture.кб99_exchange</xr:Ref>
+										<xr:LoadTransparent>false</xr:LoadTransparent>
+									</Picture>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Внутреннее перемещение</v8:content>
+										</v8:item>
+									</Title>
+									<ExtendedTooltip name="кнПереместитьОтПоставщикаРасширеннаяПодсказка" id="361"/>
+								</Button>
 							</ChildItems>
 						</CommandBar>
 						<Table name="Партии" id="191">
@@ -2182,7 +2171,7 @@
 					<v8:content>Обновить список реализаций</v8:content>
 				</v8:item>
 			</ToolTip>
-			<Action>ОбновитьСписокРеализаций</Action>
+			<Action>ОбновитьСписокДокументов</Action>
 			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="ЗагрузитьПлощадкиПоСпискуДокументов" id="6">
@@ -2726,10 +2715,6 @@
 					<v8:content>Заполнить заказами</v8:content>
 				</v8:item>
 			</ToolTip>
-			<Picture>
-				<xr:Ref>CommonPicture.kb99_user_o</xr:Ref>
-				<xr:LoadTransparent>true</xr:LoadTransparent>
-			</Picture>
 			<Action>ЗаполнитьЗаказами</Action>
 		</Command>
 		<Command name="кнПечатьНаборныйЛист" id="4">
@@ -2823,6 +2808,21 @@
 			</Picture>
 			<Action>ОтложеннаяОтправкаВСД</Action>
 			<Representation>TextPicture</Representation>
+		</Command>
+		<Command name="ЗаполнитьРеализациями" id="14">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заполнить реализациями</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заполнить реализациями</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ЗаполнитьРеализациями</Action>
 		</Command>
 	</Commands>
 </Form>
