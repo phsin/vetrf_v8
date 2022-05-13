@@ -1345,6 +1345,19 @@
 									<ThroughAlign>Use</ThroughAlign>
 									<ExtendedTooltip name="ГруппаПартииРасширеннаяПодсказка" id="709"/>
 									<ChildItems>
+										<CheckBoxField name="ПарамПроизводствоЗаполнятьТчПоТчСерииПродукции" id="600">
+											<DataPath>Объект.ПарамИспользоватьСерииПродукции</DataPath>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Заполнять табличную часть по Сериям Товаров</v8:content>
+												</v8:item>
+											</Title>
+											<TitleLocation>Right</TitleLocation>
+											<CheckBoxType>Auto</CheckBoxType>
+											<ContextMenu name="ПарамПроизводствоЗаполнятьТчПоТчСерииПродукцииКонтекстноеМеню" id="601"/>
+											<ExtendedTooltip name="ПарамПроизводствоЗаполнятьТчПоТчСерииПродукцииРасширеннаяПодсказка" id="602"/>
+										</CheckBoxField>
 										<InputField name="ПарамКолонкаСортировкиПартииСписания" id="328">
 											<DataPath>Объект.ПарамКолонкаСортировкиПартииСписания</DataPath>
 											<Title>
@@ -1478,19 +1491,6 @@
 											<CheckBoxType>Auto</CheckBoxType>
 											<ContextMenu name="ПарамПроизводствоЗаполнятьПоСправочникуКонтекстноеМеню" id="594"/>
 											<ExtendedTooltip name="ПарамПроизводствоЗаполнятьПоСправочникуРасширеннаяПодсказка" id="595"/>
-										</CheckBoxField>
-										<CheckBoxField name="ПарамПроизводствоЗаполнятьТчПоТчСерииПродукции" id="600">
-											<DataPath>Объект.ПарамПроизводствоЗаполнятьТчПоТчСерииПродукции</DataPath>
-											<Title>
-												<v8:item>
-													<v8:lang>ru</v8:lang>
-													<v8:content>Заполнять табличную часть по Сериям Товаров</v8:content>
-												</v8:item>
-											</Title>
-											<TitleLocation>Right</TitleLocation>
-											<CheckBoxType>Auto</CheckBoxType>
-											<ContextMenu name="ПарамПроизводствоЗаполнятьТчПоТчСерииПродукцииКонтекстноеМеню" id="601"/>
-											<ExtendedTooltip name="ПарамПроизводствоЗаполнятьТчПоТчСерииПродукцииРасширеннаяПодсказка" id="602"/>
 										</CheckBoxField>
 										<CheckBoxField name="ПроверятьЗаполнениеСырьяВПроизводстве" id="790">
 											<DataPath>Объект.ПроверятьЗаполнениеСырьяВПроизводстве</DataPath>

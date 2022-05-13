@@ -97,33 +97,69 @@
 						<CommandName>Form.Command.кнПогаситьПараллельно</CommandName>
 						<ExtendedTooltip name="ФормакнПогаситьПараллельноРасширеннаяПодсказка" id="691"/>
 					</Button>
+					<Button name="ФормакнПогаситьСАктомНесоответствия" id="727">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.кнПогаситьСАктомНесоответствия</CommandName>
+						<ExtendedTooltip name="ФормакнПогаситьСАктомНесоответствияРасширеннаяПодсказка" id="728"/>
+					</Button>
 				</ChildItems>
 			</Popup>
-			<Button name="кнПереместить" id="630">
-				<Type>CommandBarButton</Type>
-				<Representation>PictureAndText</Representation>
-				<CommandName>Form.Command.кнПереместитьПартии</CommandName>
+			<Popup name="ГруппаПартии" id="723">
+				<Title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Партии</v8:content>
+					</v8:item>
+				</Title>
+				<ToolTip>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Группа партии</v8:content>
+					</v8:item>
+				</ToolTip>
 				<Picture>
-					<xr:Ref>CommonPicture.кб99_exchange</xr:Ref>
-					<xr:LoadTransparent>false</xr:LoadTransparent>
-				</Picture>
-				<ExtendedTooltip name="кнПереместитьРасширеннаяПодсказка" id="631"/>
-			</Button>
-			<Button name="ФормакнСписатьПартии" id="670">
-				<Type>CommandBarButton</Type>
-				<Representation>PictureAndText</Representation>
-				<CommandName>Form.Command.кнСписатьПартии</CommandName>
-				<Picture>
-					<xr:Ref>CommonPicture.кб99_rotate_left</xr:Ref>
+					<xr:Ref>CommonPicture.kb99_shopping_basket</xr:Ref>
 					<xr:LoadTransparent>true</xr:LoadTransparent>
 				</Picture>
-				<ExtendedTooltip name="ФормакнСписатьПартииРасширеннаяПодсказка" id="671"/>
-			</Button>
+				<ExtendedTooltip name="ГруппаПартииРасширеннаяПодсказка" id="724"/>
+				<ChildItems>
+					<Button name="ФормакнОформитьЗакупкуУПоставщика" id="719">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.ОформитьЗакупкуУПоставщика</CommandName>
+						<ExtendedTooltip name="ФормакнОформитьЗакупкуУПоставщикаРасширеннаяПодсказка" id="720"/>
+					</Button>
+					<Button name="кнПереместить" id="630">
+						<Type>CommandBarButton</Type>
+						<Representation>PictureAndText</Representation>
+						<CommandName>Form.Command.кнПереместитьПартии</CommandName>
+						<Picture>
+							<xr:Ref>CommonPicture.кб99_exchange</xr:Ref>
+							<xr:LoadTransparent>false</xr:LoadTransparent>
+						</Picture>
+						<ExtendedTooltip name="кнПереместитьРасширеннаяПодсказка" id="631"/>
+					</Button>
+					<Button name="ФормакнГашениеСВХ" id="695">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.кнРаспределитьПродукцию</CommandName>
+						<ExtendedTooltip name="ФормакнГашениеСВХРасширеннаяПодсказка" id="696"/>
+					</Button>
+					<Button name="ФормакнСписатьПартии" id="670">
+						<Type>CommandBarButton</Type>
+						<Representation>PictureAndText</Representation>
+						<CommandName>Form.Command.кнСписатьПартии</CommandName>
+						<Picture>
+							<xr:Ref>CommonPicture.кб99_remove</xr:Ref>
+							<xr:LoadTransparent>true</xr:LoadTransparent>
+						</Picture>
+						<ExtendedTooltip name="ФормакнСписатьПартииРасширеннаяПодсказка" id="671"/>
+					</Button>
+				</ChildItems>
+			</Popup>
 			<Popup name="ОбновитьТранспорт" id="679">
 				<Title>
 					<v8:item>
 						<v8:lang>ru</v8:lang>
-						<v8:content>Обновить транспорт</v8:content>
+						<v8:content>№ авто</v8:content>
 					</v8:item>
 				</Title>
 				<ToolTip>
@@ -150,11 +186,6 @@
 					</Button>
 				</ChildItems>
 			</Popup>
-			<Button name="ФормакнГашениеСВХ" id="695">
-				<Type>CommandBarButton</Type>
-				<CommandName>Form.Command.кнРаспределитьПродукцию</CommandName>
-				<ExtendedTooltip name="ФормакнГашениеСВХРасширеннаяПодсказка" id="696"/>
-			</Button>
 			<Popup name="КоманднаяПанельТехподдержка" id="713">
 				<Title>
 					<v8:item>
@@ -217,7 +248,7 @@
 					<Title>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>Активная Площадка</v8:content>
+							<v8:content>Площадка</v8:content>
 						</v8:item>
 					</Title>
 					<EditMode>EnterOnInput</EditMode>
@@ -274,7 +305,7 @@
 							<Title>
 								<v8:item>
 									<v8:lang>ru</v8:lang>
-									<v8:content>Фильтр:</v8:content>
+									<v8:content>Фильтр</v8:content>
 								</v8:item>
 							</Title>
 							<ToolTip>
@@ -284,7 +315,10 @@
 								</v8:item>
 							</ToolTip>
 							<Group>Horizontal</Group>
+							<Collapsed>true</Collapsed>
 							<Representation>None</Representation>
+							<ShowLeftMargin>false</ShowLeftMargin>
+							<ShowTitle>false</ShowTitle>
 							<ExtendedTooltip name="ГруппаОтбораРасширеннаяПодсказка" id="388"/>
 							<ChildItems>
 								<InputField name="ВыбрХозСубъект" id="389">
@@ -314,7 +348,7 @@
 											<Title formatted="false">
 												<v8:item>
 													<v8:lang>ru</v8:lang>
-													<v8:content>За период:</v8:content>
+													<v8:content>Период:</v8:content>
 												</v8:item>
 											</Title>
 											<ContextMenu name="Декорация1КонтекстноеМеню" id="703"/>
@@ -428,6 +462,11 @@
 											<xr:LoadTransparent>true</xr:LoadTransparent>
 										</Picture>
 										<ExtendedTooltip name="СнятьОтметкиДокументовРасширеннаяПодсказка" id="264"/>
+									</Button>
+									<Button name="ВСДВходящиекнФильтр" id="725">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.кнФильтр</CommandName>
+										<ExtendedTooltip name="ВСДВходящиекнФильтрРасширеннаяПодсказка" id="726"/>
 									</Button>
 								</ChildItems>
 							</AutoCommandBar>
@@ -870,6 +909,7 @@
 							</ChildItems>
 						</Table>
 						<UsualGroup name="ГруппаАктНесоответсвия" id="269">
+							<Visible>false</Visible>
 							<Title>
 								<v8:item>
 									<v8:lang>ru</v8:lang>
@@ -891,7 +931,7 @@
 									<Title>
 										<v8:item>
 											<v8:lang>ru</v8:lang>
-											<v8:content>Акт Несоответствия</v8:content>
+											<v8:content>Акт несоответствия</v8:content>
 										</v8:item>
 									</Title>
 									<TitleLocation>Right</TitleLocation>
@@ -913,7 +953,7 @@
 									<Title>
 										<v8:item>
 											<v8:lang>ru</v8:lang>
-											<v8:content>Причина составления Акта</v8:content>
+											<v8:content>Причина составления</v8:content>
 										</v8:item>
 									</Title>
 									<ContextMenu name="тПричинаАктаКонтекстноеМеню" id="278"/>
@@ -924,7 +964,7 @@
 									<Title>
 										<v8:item>
 											<v8:lang>ru</v8:lang>
-											<v8:content>Описание Несоответствия</v8:content>
+											<v8:content>Описание несоответствия</v8:content>
 										</v8:item>
 									</Title>
 									<ContextMenu name="тОписаниеНесоответствияКонтекстноеМеню" id="275"/>
@@ -1830,7 +1870,7 @@
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Указать номер автомобиля</v8:content>
+					<v8:content>Указать № автомобиля</v8:content>
 				</v8:item>
 			</Title>
 			<ToolTip>
@@ -1839,10 +1879,6 @@
 					<v8:content>Указать номер авто</v8:content>
 				</v8:item>
 			</ToolTip>
-			<Picture>
-				<xr:Ref>CommonPicture.kb99_plus_black</xr:Ref>
-				<xr:LoadTransparent>true</xr:LoadTransparent>
-			</Picture>
 			<Action>УказатьНомерАвто</Action>
 		</Command>
 		<Command name="кнОтправитьДокВсдИзменитьНомерАвто" id="18">
@@ -1858,10 +1894,6 @@
 					<v8:content>Отправить в ГИС Меркурий данные об автомобиле</v8:content>
 				</v8:item>
 			</ToolTip>
-			<Picture>
-				<xr:Ref>CommonPicture.кб99_send</xr:Ref>
-				<xr:LoadTransparent>true</xr:LoadTransparent>
-			</Picture>
 			<Action>кнОтправитьДокВсдИзменитьНомерАвто</Action>
 		</Command>
 		<Command name="кнПогаситьПараллельно" id="20">
@@ -1887,7 +1919,7 @@
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Распределить продукцию</v8:content>
+					<v8:content>Распределить партии СВХ</v8:content>
 				</v8:item>
 			</Title>
 			<ToolTip>
@@ -1932,6 +1964,60 @@
 				</v8:item>
 			</ToolTip>
 			<Action>кнОтметитьТолькоВыбранные</Action>
+		</Command>
+		<Command name="ОформитьЗакупкуУПоставщика" id="24">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Создать приходную накладную</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Оформить документ "Приобретение товаров и услуг" по отмеченным строкам</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>CommonPicture.kb99_shopping_basket</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ОформитьЗакупкуУПоставщика</Action>
+			<Representation>TextPicture</Representation>
+		</Command>
+		<Command name="кнФильтр" id="25">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Фильтр</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Кн фильтр</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>кнФильтр</Action>
+		</Command>
+		<Command name="кнПогаситьСАктомНесоответствия" id="26">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Погасить с актом несоответствия</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Кн погасить с актом несоответствия</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>CommonPicture.кб99_Внимание</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>кнПогаситьСАктомНесоответствия</Action>
 		</Command>
 	</Commands>
 </Form>

@@ -183,7 +183,7 @@
 								</v8:item>
 							</ToolTip>
 							<Group>Vertical</Group>
-							<Representation>StrongSeparation</Representation>
+							<Representation>NormalSeparation</Representation>
 							<ExtendedTooltip name="ГруппаПроизводительРасширеннаяПодсказка" id="196"/>
 							<ChildItems>
 								<InputField name="Производитель_ХозСубъект" id="199">
@@ -195,7 +195,6 @@
 										</v8:item>
 									</Title>
 									<EditMode>EnterOnInput</EditMode>
-									<AutoMaxWidth>false</AutoMaxWidth>
 									<ContextMenu name="Производитель_ХозСубъектКонтекстноеМеню" id="200"/>
 									<ExtendedTooltip name="Производитель_ХозСубъектРасширеннаяПодсказка" id="201"/>
 									<Events>
@@ -211,7 +210,6 @@
 										</v8:item>
 									</Title>
 									<EditMode>EnterOnInput</EditMode>
-									<AutoMaxWidth>false</AutoMaxWidth>
 									<ContextMenu name="Производитель_ПлощадкаКонтекстноеМеню" id="203"/>
 									<ExtendedTooltip name="Производитель_ПлощадкаРасширеннаяПодсказка" id="204"/>
 									<Events>
@@ -246,6 +244,7 @@
 									</Title>
 									<EditMode>EnterOnInput</EditMode>
 									<AutoMaxWidth>false</AutoMaxWidth>
+									<MaxWidth>25</MaxWidth>
 									<ContextMenu name="operationIdКонтекстноеМеню" id="35"/>
 									<ExtendedTooltip name="operationIdРасширеннаяПодсказка" id="36"/>
 								</InputField>
@@ -303,7 +302,6 @@
 										</v8:item>
 									</ToolTip>
 									<EditMode>EnterOnInput</EditMode>
-									<AutoMaxWidth>false</AutoMaxWidth>
 									<ContextMenu name="РезультатыИсследованийКонтекстноеМеню" id="232"/>
 									<ExtendedTooltip name="РезультатыИсследованийРасширеннаяПодсказка" id="233"/>
 								</InputField>
