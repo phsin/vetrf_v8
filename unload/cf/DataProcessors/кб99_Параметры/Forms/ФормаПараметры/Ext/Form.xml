@@ -924,7 +924,7 @@
 							<ShowTitle>false</ShowTitle>
 							<ExtendedTooltip name="Группа12РасширеннаяПодсказка" id="549"/>
 							<ChildItems>
-								<UsualGroup name="ГруппаОбщие" id="710">
+								<UsualGroup name="ГруппаВходящие" id="710">
 									<Title>
 										<v8:item>
 											<v8:lang>ru</v8:lang>
@@ -934,11 +934,12 @@
 									<ToolTip>
 										<v8:item>
 											<v8:lang>ru</v8:lang>
-											<v8:content>Группа общие</v8:content>
+											<v8:content>Группа входящие</v8:content>
 										</v8:item>
 									</ToolTip>
 									<Group>Vertical</Group>
-									<ExtendedTooltip name="ГруппаОбщиеРасширеннаяПодсказка" id="711"/>
+									<ThroughAlign>DontUse</ThroughAlign>
+									<ExtendedTooltip name="ГруппаВходящиеРасширеннаяПодсказка" id="711"/>
 									<ChildItems>
 										<CheckBoxField name="ПарамВсдВходящиеИскатьДокументПрихода" id="695">
 											<DataPath>Объект.ПарамВсдВходящиеИскатьДокументПрихода</DataPath>
@@ -953,15 +954,30 @@
 											<ContextMenu name="ПарамВсдВходящиеИскатьДокументПриходаКонтекстноеМеню" id="696"/>
 											<ExtendedTooltip name="ПарамВсдВходящиеИскатьДокументПриходаРасширеннаяПодсказка" id="697"/>
 										</CheckBoxField>
+										<CheckBoxField name="ЗаполнятьТермическиеУсловияИзВходящегоВСД" id="772">
+											<DataPath>Объект.ЗаполнятьТермическиеУсловияИзВходящегоВСД</DataPath>
+											<TitleLocation>Right</TitleLocation>
+											<CheckBoxType>Auto</CheckBoxType>
+											<ContextMenu name="ЗаполнятьТермическиеУсловияИзВходящегоВСДКонтекстноеМеню" id="773"/>
+											<ExtendedTooltip name="ЗаполнятьТермическиеУсловияИзВходящегоВСДРасширеннаяПодсказка" id="774"/>
+										</CheckBoxField>
+										<CheckBoxField name="ВходящиеПроверятьДатуИзготовления" id="821">
+											<DataPath>Объект.ВходящиеПроверятьДатуИзготовления</DataPath>
+											<TitleLocation>Right</TitleLocation>
+											<CheckBoxType>Auto</CheckBoxType>
+											<ContextMenu name="ВходящиеПроверятьДатуИзготовленияКонтекстноеМеню" id="822"/>
+											<ExtendedTooltip name="ВходящиеПроверятьДатуИзготовленияРасширеннаяПодсказка" id="823"/>
+											<Events>
+												<Event name="OnChange">ВходящиеПроверятьДатуИзготовленияПриИзменении</Event>
+											</Events>
+										</CheckBoxField>
+										<InputField name="ВходящиеПроверятьДатуИзготовленияКоличествоДней" id="826">
+											<DataPath>Объект.ВходящиеПроверятьДатуИзготовленияКоличествоДней</DataPath>
+											<ContextMenu name="ВходящиеПроверятьДатуИзготовленияКоличествоДнейКонтекстноеМеню" id="827"/>
+											<ExtendedTooltip name="ВходящиеПроверятьДатуИзготовленияКоличествоДнейРасширеннаяПодсказка" id="828"/>
+										</InputField>
 									</ChildItems>
 								</UsualGroup>
-								<CheckBoxField name="ЗаполнятьТермическиеУсловияИзВходящегоВСД" id="772">
-									<DataPath>Объект.ЗаполнятьТермическиеУсловияИзВходящегоВСД</DataPath>
-									<TitleLocation>Right</TitleLocation>
-									<CheckBoxType>Auto</CheckBoxType>
-									<ContextMenu name="ЗаполнятьТермическиеУсловияИзВходящегоВСДКонтекстноеМеню" id="773"/>
-									<ExtendedTooltip name="ЗаполнятьТермическиеУсловияИзВходящегоВСДРасширеннаяПодсказка" id="774"/>
-								</CheckBoxField>
 								<UsualGroup name="грВСД2_Транзакция2" id="714">
 									<Title>
 										<v8:item>
@@ -1016,6 +1032,19 @@
 															</v8:item>
 														</Presentation>
 														<Value xsi:type="xs:decimal">1</Value>
+													</xr:Value>
+												</xr:Item>
+												<xr:Item>
+													<xr:Presentation/>
+													<xr:CheckState>0</xr:CheckState>
+													<xr:Value xsi:type="FormChoiceListDesTimeValue">
+														<Presentation>
+															<v8:item>
+																<v8:lang>ru</v8:lang>
+																<v8:content>Партнер</v8:content>
+															</v8:item>
+														</Presentation>
+														<Value xsi:type="xs:decimal">2</Value>
 													</xr:Value>
 												</xr:Item>
 											</ChoiceList>
