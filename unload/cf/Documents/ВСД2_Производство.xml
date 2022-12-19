@@ -194,7 +194,9 @@
 			<RegisterRecordsDeletion>AutoDeleteOnUnpost</RegisterRecordsDeletion>
 			<RegisterRecordsWritingOnPost>WriteSelected</RegisterRecordsWritingOnPost>
 			<SequenceFilling>AutoFill</SequenceFilling>
-			<RegisterRecords/>
+			<RegisterRecords>
+				<xr:Item xsi:type="xr:MDObjectRef">AccumulationRegister.кб99_ОстаткиПартийВСД</xr:Item>
+			</RegisterRecords>
 			<PostInPrivilegedMode>false</PostInPrivilegedMode>
 			<UnpostInPrivilegedMode>false</UnpostInPrivilegedMode>
 			<IncludeHelpInContents>true</IncludeHelpInContents>
@@ -2378,21 +2380,21 @@
 			</TabularSection>
 			<TabularSection uuid="38829158-47e1-4e40-98bb-9c09fbbe6ca6">
 				<InternalInfo>
-					<xr:GeneratedType name="DocumentTabularSection.ВСД2_Производство.ПартииПроизведенные" category="TabularSection">
+					<xr:GeneratedType name="DocumentTabularSection.ВСД2_Производство.ПартииРезультат" category="TabularSection">
 						<xr:TypeId>abeea298-a8c4-4e70-9625-baa2b858dae4</xr:TypeId>
 						<xr:ValueId>e3e83b1f-09db-4e14-822d-5eeffba5db7e</xr:ValueId>
 					</xr:GeneratedType>
-					<xr:GeneratedType name="DocumentTabularSectionRow.ВСД2_Производство.ПартииПроизведенные" category="TabularSectionRow">
+					<xr:GeneratedType name="DocumentTabularSectionRow.ВСД2_Производство.ПартииРезультат" category="TabularSectionRow">
 						<xr:TypeId>34670b66-548d-4d6c-ba7d-9f9cfcf23d17</xr:TypeId>
 						<xr:ValueId>4c181195-52e5-472c-b1c0-5a868e2898c1</xr:ValueId>
 					</xr:GeneratedType>
 				</InternalInfo>
 				<Properties>
-					<Name>ПартииПроизведенные</Name>
+					<Name>ПартииРезультат</Name>
 					<Synonym>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>Партии произведенные</v8:content>
+							<v8:content>Партии результат</v8:content>
 						</v8:item>
 					</Synonym>
 					<Comment/>
@@ -2451,7 +2453,7 @@
 							<ExtendedEdit>false</ExtendedEdit>
 							<MinValue xsi:nil="true"/>
 							<MaxValue xsi:nil="true"/>
-							<FillChecking>ShowError</FillChecking>
+							<FillChecking>DontCheck</FillChecking>
 							<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
 							<ChoiceParameterLinks/>
 							<ChoiceParameters/>
@@ -2493,7 +2495,7 @@
 							<ExtendedEdit>false</ExtendedEdit>
 							<MinValue xsi:nil="true"/>
 							<MaxValue xsi:nil="true"/>
-							<FillChecking>ShowError</FillChecking>
+							<FillChecking>DontCheck</FillChecking>
 							<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
 							<ChoiceParameterLinks/>
 							<ChoiceParameters/>

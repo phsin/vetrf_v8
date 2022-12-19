@@ -1502,6 +1502,40 @@
 											<ContextMenu name="СмещениеКонтекстноеМеню" id="103"/>
 											<ExtendedTooltip name="СмещениеРасширеннаяПодсказка" id="104"/>
 										</InputField>
+										<UsualGroup name="ГруппаКонтрольОстатков" id="838">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Группа контроль остатков</v8:content>
+												</v8:item>
+											</Title>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Группа контроль остатков</v8:content>
+												</v8:item>
+											</ToolTip>
+											<Representation>None</Representation>
+											<ShowTitle>false</ShowTitle>
+											<ExtendedTooltip name="ГруппаКонтрольОстатковРасширеннаяПодсказка" id="839"/>
+											<ChildItems>
+												<CheckBoxField name="КонтролироватьОстаткиПартийПоРегистру" id="835">
+													<DataPath>Объект.КонтролироватьОстаткиПартийПоРегистру</DataPath>
+													<TitleLocation>Right</TitleLocation>
+													<CheckBoxType>Auto</CheckBoxType>
+													<ContextMenu name="КонтролироватьОстаткиПартийПоРегиструКонтекстноеМеню" id="836"/>
+													<ExtendedTooltip name="КонтролироватьОстаткиПартийПоРегиструРасширеннаяПодсказка" id="837"/>
+													<Events>
+														<Event name="OnChange">КонтролироватьОстаткиПартийПоРегиструПриИзменении</Event>
+													</Events>
+												</CheckBoxField>
+												<InputField name="ДатаНачалаКонтроляОстатковПартйиПоРегистру" id="840">
+													<DataPath>Объект.ДатаНачалаКонтроляОстатковПартийПоРегистру</DataPath>
+													<ContextMenu name="ДатаНачалаКонтроляОстатковПартйиПоРегиструКонтекстноеМеню" id="841"/>
+													<ExtendedTooltip name="ДатаНачалаКонтроляОстатковПартйиПоРегиструРасширеннаяПодсказка" id="842"/>
+												</InputField>
+											</ChildItems>
+										</UsualGroup>
 									</ChildItems>
 								</UsualGroup>
 								<UsualGroup name="ГруппаВСД2_Производство" id="704">

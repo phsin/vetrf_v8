@@ -45,7 +45,7 @@
 			<ScriptVariant>Russian</ScriptVariant>
 			<DefaultRoles/>
 			<Vendor>https://kb99.pro</Vendor>
-			<Version>2.6.4</Version>
+			<Version>2.6.5</Version>
 			<UpdateCatalogAddress/>
 			<IncludeHelpInContents>false</IncludeHelpInContents>
 			<UseManagedFormInOrdinaryApplication>false</UseManagedFormInOrdinaryApplication>
@@ -313,6 +313,7 @@
 			<Document>ВСД2</Document>
 			<Document>ВСД_транзакция</Document>
 			<Document>ПриобретениеТоваровУслуг</Document>
+			<Document>ПартииВСД</Document>
 			<DocumentJournal>кб99_ЖурналВСД</DocumentJournal>
 			<Enum>кб99_РезультатИсследования</Enum>
 			<Enum>кб99_УровниУпаковки</Enum>
@@ -327,6 +328,7 @@
 			<Report>кб99_ОтчетПоПартиямВСД</Report>
 			<Report>кб99_ОтчетПоСтатусамИсходящихВСД</Report>
 			<Report>кб99_ПроверкаВСД</Report>
+			<Report>кб99_ДвиженияПартийВСД</Report>
 			<DataProcessor>Интеграция_ГИС_Меркурий</DataProcessor>
 			<DataProcessor>кб99_ЛабИсследования</DataProcessor>
 			<DataProcessor>кб99_ГашениеВходящихПартий</DataProcessor>
@@ -339,6 +341,7 @@
 			<InformationRegister>кб99_ОрганизацияПоУмолчанию</InformationRegister>
 			<InformationRegister>кб99_ПроизводственнаяСпецификация</InformationRegister>
 			<InformationRegister>кб99_Запросы</InformationRegister>
+			<AccumulationRegister>кб99_ОстаткиПартийВСД</AccumulationRegister>
 		</ChildObjects>
 	</Configuration>
 </MetaDataObject>
