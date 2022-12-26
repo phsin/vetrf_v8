@@ -2527,6 +2527,91 @@
 										</Button>
 									</ChildItems>
 								</Page>
+								<Page name="ОтправкаЗапросов" id="843">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Отправка запросов</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Отправка запросов</v8:content>
+										</v8:item>
+									</ToolTip>
+									<ExtendedTooltip name="ОтправкаЗапросовРасширеннаяПодсказка" id="844"/>
+									<ChildItems>
+										<UsualGroup name="ГруппаДокумент" id="854">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Группа документ</v8:content>
+												</v8:item>
+											</Title>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Группа документ</v8:content>
+												</v8:item>
+											</ToolTip>
+											<Representation>None</Representation>
+											<ShowTitle>false</ShowTitle>
+											<ExtendedTooltip name="ГруппаДокументРасширеннаяПодсказка" id="855"/>
+											<ChildItems>
+												<InputField name="ВыбранныйДокумент" id="845">
+													<DataPath>ВыбранныйДокумент</DataPath>
+													<ContextMenu name="ВыбранныйДокументКонтекстноеМеню" id="846"/>
+													<ExtendedTooltip name="ВыбранныйДокументРасширеннаяПодсказка" id="847"/>
+												</InputField>
+												<CommandBar name="КомандыОтправкаЗапросов" id="850">
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Команды отправка запросов</v8:content>
+														</v8:item>
+													</Title>
+													<ToolTip>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Команды отправка запросов</v8:content>
+														</v8:item>
+													</ToolTip>
+													<ExtendedTooltip name="КомандыОтправкаЗапросовРасширеннаяПодсказка" id="851"/>
+													<ChildItems>
+														<Popup name="Запросы" id="852">
+															<Title>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Запросы</v8:content>
+																</v8:item>
+															</Title>
+															<ToolTip>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Запросы</v8:content>
+																</v8:item>
+															</ToolTip>
+															<ExtendedTooltip name="ЗапросыРасширеннаяПодсказка" id="853"/>
+															<ChildItems>
+																<Button name="кнПолучитьУсловияПеревозки" id="848">
+																	<Type>CommandBarButton</Type>
+																	<CommandName>Form.Command.кнПолучитьУсловияПеревозки</CommandName>
+																	<ExtendedTooltip name="кнПолучитьУсловияПеревозкиРасширеннаяПодсказка" id="849"/>
+																</Button>
+															</ChildItems>
+														</Popup>
+														<Button name="кнПолучитьОтветВетис" id="856">
+															<Type>CommandBarButton</Type>
+															<CommandName>Form.Command.кнПолучитьОтветВетис</CommandName>
+															<ExtendedTooltip name="кнПолучитьОтветВетисРасширеннаяПодсказка" id="857"/>
+														</Button>
+													</ChildItems>
+												</CommandBar>
+											</ChildItems>
+										</UsualGroup>
+									</ChildItems>
+								</Page>
 							</ChildItems>
 						</Pages>
 					</ChildItems>
@@ -2727,6 +2812,17 @@
 					<v8:Length>50</v8:Length>
 					<v8:AllowedLength>Variable</v8:AllowedLength>
 				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ВыбранныйДокумент" id="17">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Документ</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:DocumentRef.ВСД2_транзакция</v8:Type>
 			</Type>
 		</Attribute>
 		<ConditionalAppearance>
@@ -3549,6 +3645,36 @@
 				</v8:item>
 			</ToolTip>
 			<Action>ЗагрузитьВСД</Action>
+		</Command>
+		<Command name="кнПолучитьУсловияПеревозки" id="19">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Условия перевозки</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Кн получить условия перевозки</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>кнПолучитьУсловияПеревозки</Action>
+		</Command>
+		<Command name="кнПолучитьОтветВетис" id="20">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Получить ответ</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Кн получить ответ ветис</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>кнПолучитьОтветВетис</Action>
 		</Command>
 	</Commands>
 </Form>

@@ -252,7 +252,14 @@
 						</v8:item>
 					</Title>
 					<EditMode>EnterOnInput</EditMode>
-					<ChoiceHistoryOnInput>DontUse</ChoiceHistoryOnInput>
+					<DropListButton>true</DropListButton>
+					<ChoiceButton>true</ChoiceButton>
+					<ChoiceButtonRepresentation>ShowInDropList</ChoiceButtonRepresentation>
+					<ClearButton>false</ClearButton>
+					<OpenButton>true</OpenButton>
+					<CreateButton>false</CreateButton>
+					<QuickChoice>true</QuickChoice>
+					<ChooseType>false</ChooseType>
 					<ContextMenu name="Отправитель_ПлощадкаКонтекстноеМеню" id="2"/>
 					<ExtendedTooltip name="Отправитель_ПлощадкаРасширеннаяПодсказка" id="3"/>
 					<Events>
@@ -1443,9 +1450,9 @@
 				</dcsset:selection>
 				<dcsset:filter>
 					<dcsset:item xsi:type="dcsset:FilterItemComparison">
-						<dcsset:left xsi:type="dcscor:Field">Объект.ВСДВходящие.СтатусЗапроса</dcsset:left>
-						<dcsset:comparisonType>Contains</dcsset:comparisonType>
-						<dcsset:right xsi:type="xs:string">REJECTED</dcsset:right>
+						<dcsset:left xsi:type="dcscor:Field">Объект.ВСДВходящие.СтатусЗапросаПеречисление</dcsset:left>
+						<dcsset:comparisonType>Equal</dcsset:comparisonType>
+						<dcsset:right xsi:type="dcscor:DesignTimeValue">Перечисление.кб99_СтатусЗапроса.REJECTED</dcsset:right>
 					</dcsset:item>
 				</dcsset:filter>
 				<dcsset:appearance>
