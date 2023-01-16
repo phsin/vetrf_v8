@@ -1,0 +1,675 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.8">
+	<Title>
+		<v8:item>
+			<v8:lang>ru</v8:lang>
+			<v8:content>Изменение номера автомобиля в ВСД</v8:content>
+		</v8:item>
+	</Title>
+	<AutoTitle>false</AutoTitle>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="ГруппаПоДокументу" id="187">
+			<Visible>false</Visible>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>По документу</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа по документу</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаПоДокументуРасширеннаяПодсказка" id="188"/>
+			<ChildItems>
+				<InputField name="РасходнаяНакладная" id="184">
+					<DataPath>ВСД2_Транзакция</DataPath>
+					<DropListButton>false</DropListButton>
+					<ChoiceButton>true</ChoiceButton>
+					<ChoiceButtonRepresentation>ShowInInputField</ChoiceButtonRepresentation>
+					<ClearButton>true</ClearButton>
+					<ContextMenu name="РасходнаяНакладнаяКонтекстноеМеню" id="185"/>
+					<ExtendedTooltip name="РасходнаяНакладнаяРасширеннаяПодсказка" id="186"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<Table name="тзВСД" id="151">
+			<Representation>List</Representation>
+			<AutoInsertNewRow>true</AutoInsertNewRow>
+			<EnableStartDrag>true</EnableStartDrag>
+			<EnableDrag>true</EnableDrag>
+			<DataPath>тзВСД</DataPath>
+			<ViewStatusLocation>None</ViewStatusLocation>
+			<RowFilter xsi:nil="true"/>
+			<ContextMenu name="тзВСДКонтекстноеМеню" id="152"/>
+			<AutoCommandBar name="тзВСДКоманднаяПанель" id="153">
+				<Autofill>false</Autofill>
+				<ChildItems>
+					<Button name="тзВСДОформитьИзменения" id="191">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.ОформитьИзменения</CommandName>
+						<ExtendedTooltip name="тзВСДОформитьИзмененияРасширеннаяПодсказка" id="192"/>
+					</Button>
+					<Button name="тзВСДОтправить" id="196">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.Отправить</CommandName>
+						<ExtendedTooltip name="тзВСДОтправитьРасширеннаяПодсказка" id="197"/>
+					</Button>
+				</ChildItems>
+			</AutoCommandBar>
+			<ExtendedTooltip name="тзВСДРасширеннаяПодсказка" id="154"/>
+			<SearchStringAddition name="тзВСДСтрокаПоиска" id="155">
+				<AdditionSource>
+					<Item>тзВСД</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="тзВСДСтрокаПоискаКонтекстноеМеню" id="156"/>
+				<ExtendedTooltip name="тзВСДСтрокаПоискаРасширеннаяПодсказка" id="157"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="тзВСДСостояниеПросмотра" id="158">
+				<AdditionSource>
+					<Item>тзВСД</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="тзВСДСостояниеПросмотраКонтекстноеМеню" id="159"/>
+				<ExtendedTooltip name="тзВСДСостояниеПросмотраРасширеннаяПодсказка" id="160"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="тзВСДУправлениеПоиском" id="161">
+				<AdditionSource>
+					<Item>тзВСД</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="тзВСДУправлениеПоискомКонтекстноеМеню" id="162"/>
+				<ExtendedTooltip name="тзВСДУправлениеПоискомРасширеннаяПодсказка" id="163"/>
+			</SearchControlAddition>
+			<Events>
+				<Event name="BeforeDeleteRow">тзВСДПередУдалением</Event>
+				<Event name="OnActivateRow">тзВСДПриАктивизацииСтроки</Event>
+			</Events>
+			<ChildItems>
+				<CheckBoxField name="тзВСДОтметка" id="193">
+					<DataPath>тзВСД.Отметка</DataPath>
+					<Visible>false</Visible>
+					<TitleLocation>None</TitleLocation>
+					<EditMode>EnterOnInput</EditMode>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="тзВСДОтметкаКонтекстноеМеню" id="194"/>
+					<ExtendedTooltip name="тзВСДОтметкаРасширеннаяПодсказка" id="195"/>
+				</CheckBoxField>
+				<InputField name="тзВСДВСД" id="164">
+					<DataPath>тзВСД.ВСД</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="тзВСДВСДКонтекстноеМеню" id="165"/>
+					<ExtendedTooltip name="тзВСДВСДРасширеннаяПодсказка" id="166"/>
+				</InputField>
+				<InputField name="тзВСДДокументОбновитьТранспорт" id="173">
+					<DataPath>тзВСД.ДокументОбновитьТранспорт</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="тзВСДДокументОбновитьТранспортКонтекстноеМеню" id="174"/>
+					<ExtendedTooltip name="тзВСДДокументОбновитьТранспортРасширеннаяПодсказка" id="175"/>
+				</InputField>
+			</ChildItems>
+		</Table>
+		<Table name="МаршрутСледования" id="76">
+			<Representation>List</Representation>
+			<AutoInsertNewRow>true</AutoInsertNewRow>
+			<EnableStartDrag>true</EnableStartDrag>
+			<EnableDrag>true</EnableDrag>
+			<DataPath>МаршрутСледования</DataPath>
+			<ViewStatusLocation>None</ViewStatusLocation>
+			<RowFilter xsi:nil="true"/>
+			<ContextMenu name="МаршрутСледованияКонтекстноеМеню" id="77"/>
+			<AutoCommandBar name="МаршрутСледованияКоманднаяПанель" id="78">
+				<Autofill>false</Autofill>
+			</AutoCommandBar>
+			<ExtendedTooltip name="МаршрутСледованияРасширеннаяПодсказка" id="79"/>
+			<SearchStringAddition name="МаршрутСледованияСтрокаПоиска" id="80">
+				<AdditionSource>
+					<Item>МаршрутСледования</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="МаршрутСледованияСтрокаПоискаКонтекстноеМеню" id="81"/>
+				<ExtendedTooltip name="МаршрутСледованияСтрокаПоискаРасширеннаяПодсказка" id="82"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="МаршрутСледованияСостояниеПросмотра" id="83">
+				<AdditionSource>
+					<Item>МаршрутСледования</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="МаршрутСледованияСостояниеПросмотраКонтекстноеМеню" id="84"/>
+				<ExtendedTooltip name="МаршрутСледованияСостояниеПросмотраРасширеннаяПодсказка" id="85"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="МаршрутСледованияУправлениеПоиском" id="86">
+				<AdditionSource>
+					<Item>МаршрутСледования</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="МаршрутСледованияУправлениеПоискомКонтекстноеМеню" id="87"/>
+				<ExtendedTooltip name="МаршрутСледованияУправлениеПоискомРасширеннаяПодсказка" id="88"/>
+			</SearchControlAddition>
+			<ChildItems>
+				<InputField name="МаршрутСледованияНомерТочки" id="89">
+					<DataPath>МаршрутСледования.НомерТочки</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="МаршрутСледованияНомерТочкиКонтекстноеМеню" id="90"/>
+					<ExtendedTooltip name="МаршрутСледованияНомерТочкиРасширеннаяПодсказка" id="91"/>
+				</InputField>
+				<CheckBoxField name="МаршрутСледованияПерегрузка" id="95">
+					<DataPath>МаршрутСледования.Перегрузка</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="МаршрутСледованияПерегрузкаКонтекстноеМеню" id="96"/>
+					<ExtendedTooltip name="МаршрутСледованияПерегрузкаРасширеннаяПодсказка" id="97"/>
+				</CheckBoxField>
+				<InputField name="МаршрутСледованияПлощадка" id="92">
+					<DataPath>МаршрутСледования.Площадка</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="МаршрутСледованияПлощадкаКонтекстноеМеню" id="93"/>
+					<ExtendedTooltip name="МаршрутСледованияПлощадкаРасширеннаяПодсказка" id="94"/>
+				</InputField>
+				<InputField name="МаршрутСледованияИмя" id="125">
+					<DataPath>МаршрутСледования.Название</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="МаршрутСледованияИмяКонтекстноеМеню" id="126"/>
+					<ExtendedTooltip name="МаршрутСледованияИмяРасширеннаяПодсказка" id="127"/>
+				</InputField>
+				<ColumnGroup name="МаршрутСледованияГруппаТипТранспорта" id="147">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Маршрут следования группа тип транспорта</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Маршрут следования группа тип транспорта</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="МаршрутСледованияГруппаТипТранспортаРасширеннаяПодсказка" id="148"/>
+					<ChildItems>
+						<InputField name="МаршрутСледованияТипТраснпорта" id="98">
+							<DataPath>МаршрутСледования.ТипТранспорта</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="МаршрутСледованияТипТраснпортаКонтекстноеМеню" id="99"/>
+							<ExtendedTooltip name="МаршрутСледованияТипТраснпортаРасширеннаяПодсказка" id="100"/>
+						</InputField>
+					</ChildItems>
+				</ColumnGroup>
+				<ColumnGroup name="МаршрутСледованияГруппаНомерАвто" id="143">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Маршрут следования группа номер авто</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Маршрут следования группа номер авто</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="МаршрутСледованияГруппаНомерАвтоРасширеннаяПодсказка" id="144"/>
+					<ChildItems>
+						<InputField name="МаршрутСледованияНомерАвто" id="101">
+							<DataPath>МаршрутСледования.НомерАвто</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="МаршрутСледованияНомерАвтоКонтекстноеМеню" id="102"/>
+							<ExtendedTooltip name="МаршрутСледованияНомерАвтоРасширеннаяПодсказка" id="103"/>
+						</InputField>
+					</ChildItems>
+				</ColumnGroup>
+				<ColumnGroup name="МаршрутСледованияГруппаНомерПрицепа" id="145">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Маршрут следования группа номер прицепа</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Маршрут следования группа номер прицепа</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="МаршрутСледованияГруппаНомерПрицепаРасширеннаяПодсказка" id="146"/>
+					<ChildItems>
+						<InputField name="МаршрутСледованияномерПрицепа" id="104">
+							<DataPath>МаршрутСледования.номерПрицепа</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="МаршрутСледованияномерПрицепаКонтекстноеМеню" id="105"/>
+							<ExtendedTooltip name="МаршрутСледованияномерПрицепаРасширеннаяПодсказка" id="106"/>
+						</InputField>
+					</ChildItems>
+				</ColumnGroup>
+			</ChildItems>
+		</Table>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DataProcessorObject.кб99_ИзменениеНомераАвтомобиля</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+		</Attribute>
+		<Attribute name="ВСД2_Транзакция" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>ВСД2 транзакция</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:DocumentRef.ВСД2_транзакция</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="тзВСД" id="11">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Маршруты</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="ВСД" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>ВСД</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.кб99_ВСД2</v8:Type>
+					</Type>
+				</Column>
+				<Column name="КлючСтроки" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Ключ строки</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>36</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="ДокументОбновитьТранспорт" id="4">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Документ "Обновить транспорт"</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:DocumentRef.ВСД2_ОбновитьТранспорт</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Отметка" id="5">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Отметка</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+				<Column name="СтатусЗапроса" id="6">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Статус запроса</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:EnumRef.кб99_СтатусЗапроса</v8:Type>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="МаршрутСледования" id="12">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Маршрут следования</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="НомерТочки" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Номер точки</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>10</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Площадка" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Площадка</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.ВСД_Площадка</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Перегрузка" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Перегрузка</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+				<Column name="ТипТранспорта" id="4">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Тип транспорта</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:EnumRef.кб99_ТипыТранспорта</v8:Type>
+					</Type>
+				</Column>
+				<Column name="НомерАвто" id="5">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Номер авто</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>45</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="номерПрицепа" id="6">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Номер прицепа</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>25</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="номерКонтейнера" id="7">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Номер контейнера</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>25</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="номерВагона" id="8">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Номер вагона</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>25</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="НомерАвиарейса" id="9">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Номер авиарейса</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>25</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="НазваниеСудна" id="10">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Название судна</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>45</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="НомерТС" id="11">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Номер ТС</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>70</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="UUID" id="12">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>UUID</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>36</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Название" id="13">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Название</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>250</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="КлючСтроки" id="14">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Ключ строки</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>36</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<ConditionalAppearance>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>тзВСД</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemGroup">
+						<dcsset:groupType>OrGroup</dcsset:groupType>
+						<dcsset:item xsi:type="dcsset:FilterItemComparison">
+							<dcsset:left xsi:type="dcscor:Field">тзВСД.СтатусЗапроса</dcsset:left>
+							<dcsset:comparisonType>Contains</dcsset:comparisonType>
+							<dcsset:right xsi:type="xs:string">COMPLETED</dcsset:right>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:FilterItemComparison">
+							<dcsset:left xsi:type="dcscor:Field">тзВСД.Отметка</dcsset:left>
+							<dcsset:comparisonType>Equal</dcsset:comparisonType>
+							<dcsset:right xsi:type="xs:boolean">false</dcsset:right>
+						</dcsset:item>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>ЦветФона</dcscor:parameter>
+						<dcscor:value xsi:type="v8ui:Color">web:MediumGreen</dcscor:value>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+		</ConditionalAppearance>
+	</Attributes>
+	<Commands>
+		<Command name="ОбработатьОтветСервера" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Обработать ответ сервера</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Обработать ответ сервера</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОбработатьОтветСервера</Action>
+		</Command>
+		<Command name="ПрочитатьИзФайла" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Прочитать</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Прочитать из файла</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ПрочитатьИзФайла</Action>
+		</Command>
+		<Command name="ЗагрузитьПоДокументу" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Загрузить</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Загрузить по документу</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ЗагрузитьПоДокументу</Action>
+		</Command>
+		<Command name="ОформитьИзменения" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Оформить изменения</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Оформить изменения</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>CommonPicture.кб99_plus</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ОформитьИзменения</Action>
+			<Representation>TextPicture</Representation>
+		</Command>
+		<Command name="Отправить" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отправить</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отправить</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>CommonPicture.кб99_send</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>Отправить</Action>
+			<Representation>TextPicture</Representation>
+		</Command>
+	</Commands>
+</Form>
