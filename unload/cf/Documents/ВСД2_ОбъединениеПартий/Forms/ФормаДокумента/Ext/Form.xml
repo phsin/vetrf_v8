@@ -395,6 +395,18 @@
 											<ContextMenu name="ПродукцияЕдиницаИзмеренияКонтекстноеМеню" id="210"/>
 											<ExtendedTooltip name="ПродукцияЕдиницаИзмеренияРасширеннаяПодсказка" id="211"/>
 										</InputField>
+										<LabelField name="ПродукцияПартияНомерПартии" id="321">
+											<DataPath>Объект.Продукция.Партия.НомерПартии</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="ПродукцияПартияНомерПартииКонтекстноеМеню" id="322"/>
+											<ExtendedTooltip name="ПродукцияПартияНомерПартииРасширеннаяПодсказка" id="323"/>
+										</LabelField>
+										<LabelField name="ПродукцияПартияПроизводитель_Площадка" id="324">
+											<DataPath>Объект.Продукция.Партия.Производитель_Площадка</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="ПродукцияПартияПроизводитель_ПлощадкаКонтекстноеМеню" id="325"/>
+											<ExtendedTooltip name="ПродукцияПартияПроизводитель_ПлощадкаРасширеннаяПодсказка" id="326"/>
+										</LabelField>
 										<ColumnGroup name="ПродукцияГруппаДатаИзготовления" id="306">
 											<Title>
 												<v8:item>
