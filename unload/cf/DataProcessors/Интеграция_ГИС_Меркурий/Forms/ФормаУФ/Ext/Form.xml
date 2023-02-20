@@ -1018,6 +1018,12 @@
 									<ContextMenu name="ОтгрузкиДокКонтекстноеМеню" id="181"/>
 									<ExtendedTooltip name="ОтгрузкиДокРасширеннаяПодсказка" id="182"/>
 								</InputField>
+								<InputField name="ОтгрузкиКомментарий" id="724">
+									<DataPath>Объект.Отгрузки.Комментарий</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ОтгрузкиКомментарийКонтекстноеМеню" id="725"/>
+									<ExtendedTooltip name="ОтгрузкиКомментарийРасширеннаяПодсказка" id="726"/>
+								</InputField>
 								<InputField name="ОтгрузкиКонтрагент" id="183">
 									<DataPath>Объект.Отгрузки.Контрагент</DataPath>
 									<EditMode>EnterOnInput</EditMode>

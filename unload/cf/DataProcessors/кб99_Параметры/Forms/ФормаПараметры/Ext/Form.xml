@@ -1779,6 +1779,11 @@
 								</InputField>
 							</ChildItems>
 						</UsualGroup>
+						<InputField name="СвойКонтрагент" id="862">
+							<DataPath>Объект.СвойКонтрагент</DataPath>
+							<ContextMenu name="СвойКонтрагентКонтекстноеМеню" id="863"/>
+							<ExtendedTooltip name="СвойКонтрагентРасширеннаяПодсказка" id="864"/>
+						</InputField>
 					</ChildItems>
 				</Page>
 				<Page name="СтраницаИнициализация" id="633">
@@ -2527,20 +2532,20 @@
 										</Button>
 									</ChildItems>
 								</Page>
-								<Page name="ОтправкаЗапросов" id="843">
+								<Page name="ГруппаЗапросы" id="843">
 									<Title>
 										<v8:item>
 											<v8:lang>ru</v8:lang>
-											<v8:content>Отправка запросов</v8:content>
+											<v8:content>Запросы</v8:content>
 										</v8:item>
 									</Title>
 									<ToolTip>
 										<v8:item>
 											<v8:lang>ru</v8:lang>
-											<v8:content>Отправка запросов</v8:content>
+											<v8:content>Группа запросы</v8:content>
 										</v8:item>
 									</ToolTip>
-									<ExtendedTooltip name="ОтправкаЗапросовРасширеннаяПодсказка" id="844"/>
+									<ExtendedTooltip name="ГруппаЗапросыРасширеннаяПодсказка" id="844"/>
 									<ChildItems>
 										<UsualGroup name="ГруппаДокумент" id="854">
 											<Title>
@@ -2610,6 +2615,11 @@
 												</CommandBar>
 											</ChildItems>
 										</UsualGroup>
+										<Button name="УдалитьЗапросыСправочникаВСД" id="860">
+											<Type>UsualButton</Type>
+											<CommandName>Form.Command.УдалитьЗапросыВСД</CommandName>
+											<ExtendedTooltip name="УдалитьЗапросыСправочникаВСДРасширеннаяПодсказка" id="861"/>
+										</Button>
 									</ChildItems>
 								</Page>
 							</ChildItems>
@@ -3675,6 +3685,36 @@
 				</v8:item>
 			</ToolTip>
 			<Action>кнПолучитьОтветВетис</Action>
+		</Command>
+		<Command name="ОчиститьПустыеЗапросы" id="21">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Очистить пустые запросы</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Очистить пустые запросы</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОчиститьПустыеЗапросы</Action>
+		</Command>
+		<Command name="УдалитьЗапросыВСД" id="22">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Удалить старые запросы ВСД</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Удалить запросы ВСД</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>УдалитьЗапросыВСД</Action>
 		</Command>
 	</Commands>
 </Form>

@@ -145,14 +145,9 @@
 								<dcsset:item xsi:type="dcsset:FilterItemGroup">
 									<dcsset:groupType>OrGroup</dcsset:groupType>
 									<dcsset:item xsi:type="dcsset:FilterItemComparison">
-										<dcsset:use>false</dcsset:use>
-										<dcsset:left xsi:type="dcscor:Field">СтатусЗапроса</dcsset:left>
-										<dcsset:comparisonType>NotFilled</dcsset:comparisonType>
-									</dcsset:item>
-									<dcsset:item xsi:type="dcsset:FilterItemComparison">
 										<dcsset:left xsi:type="dcscor:Field">СтатусЗапроса</dcsset:left>
 										<dcsset:comparisonType>Contains</dcsset:comparisonType>
-										<dcsset:right xsi:type="xs:string">IN_PROCESS</dcsset:right>
+										<dcsset:right xsi:type="xs:string">В процессе обработки</dcsset:right>
 									</dcsset:item>
 								</dcsset:item>
 							</dcsset:filter>
@@ -169,7 +164,7 @@
 								<dcsset:item xsi:type="dcsset:FilterItemComparison">
 									<dcsset:left xsi:type="dcscor:Field">СтатусЗапроса</dcsset:left>
 									<dcsset:comparisonType>Contains</dcsset:comparisonType>
-									<dcsset:right xsi:type="xs:string">COMPLETED</dcsset:right>
+									<dcsset:right xsi:type="xs:string">Завершен</dcsset:right>
 								</dcsset:item>
 							</dcsset:filter>
 							<dcsset:appearance>
@@ -185,7 +180,7 @@
 								<dcsset:item xsi:type="dcsset:FilterItemComparison">
 									<dcsset:left xsi:type="dcscor:Field">СтатусЗапроса</dcsset:left>
 									<dcsset:comparisonType>Contains</dcsset:comparisonType>
-									<dcsset:right xsi:type="xs:string">REJECTED</dcsset:right>
+									<dcsset:right xsi:type="xs:string">Отклонен</dcsset:right>
 								</dcsset:item>
 							</dcsset:filter>
 							<dcsset:appearance>
