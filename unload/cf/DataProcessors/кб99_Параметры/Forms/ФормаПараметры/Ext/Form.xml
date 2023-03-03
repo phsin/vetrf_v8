@@ -1087,6 +1087,17 @@
 											<ContextMenu name="РеквизитГрузополучательКонтекстноеМеню" id="100"/>
 											<ExtendedTooltip name="РеквизитГрузополучательРасширеннаяПодсказка" id="101"/>
 										</InputField>
+										<InputField name="НомерАвто" id="865">
+											<DataPath>Объект.НомерАвто</DataPath>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Номер автомобиля (по умолчанию)</v8:content>
+												</v8:item>
+											</Title>
+											<ContextMenu name="НомерАвтоКонтекстноеМеню" id="866"/>
+											<ExtendedTooltip name="НомерАвтоРасширеннаяПодсказка" id="867"/>
+										</InputField>
 										<InputField name="НазваниеРеквизитаКоличество" id="111">
 											<DataPath>Объект.НазваниеРеквизитаКоличество</DataPath>
 											<Title>
@@ -1103,7 +1114,7 @@
 											</ToolTip>
 											<EditMode>EnterOnInput</EditMode>
 											<AutoMaxWidth>false</AutoMaxWidth>
-											<MaxWidth>10</MaxWidth>
+											<MaxWidth>20</MaxWidth>
 											<ContextMenu name="НазваниеРеквизитаКоличествоКонтекстноеМеню" id="112"/>
 											<ExtendedTooltip name="НазваниеРеквизитаКоличествоРасширеннаяПодсказка" id="113"/>
 										</InputField>
@@ -1123,7 +1134,7 @@
 											</ToolTip>
 											<EditMode>EnterOnInput</EditMode>
 											<AutoMaxWidth>false</AutoMaxWidth>
-											<MaxWidth>10</MaxWidth>
+											<MaxWidth>20</MaxWidth>
 											<ContextMenu name="ПарамКоэффициентПересчетаКоличестваКонтекстноеМеню" id="124"/>
 											<ExtendedTooltip name="ПарамКоэффициентПересчетаКоличестваРасширеннаяПодсказка" id="125"/>
 										</InputField>
@@ -1354,7 +1365,7 @@
 											<EditMode>EnterOnInput</EditMode>
 											<Width>10</Width>
 											<AutoMaxWidth>false</AutoMaxWidth>
-											<MaxWidth>10</MaxWidth>
+											<MaxWidth>20</MaxWidth>
 											<ContextMenu name="НазваниеРеквизитаКоличествоМестКонтекстноеМеню" id="136"/>
 											<ExtendedTooltip name="НазваниеРеквизитаКоличествоМестРасширеннаяПодсказка" id="137"/>
 										</InputField>
@@ -1375,7 +1386,7 @@
 											<EditMode>EnterOnInput</EditMode>
 											<Width>10</Width>
 											<AutoMaxWidth>false</AutoMaxWidth>
-											<MaxWidth>10</MaxWidth>
+											<MaxWidth>20</MaxWidth>
 											<ContextMenu name="ПарамНомерУровняУпаковкиДляВСДКонтекстноеМеню" id="133"/>
 											<ExtendedTooltip name="ПарамНомерУровняУпаковкиДляВСДРасширеннаяПодсказка" id="134"/>
 										</InputField>
@@ -1390,7 +1401,7 @@
 											<EditMode>EnterOnInput</EditMode>
 											<Width>10</Width>
 											<AutoMaxWidth>false</AutoMaxWidth>
-											<MaxWidth>10</MaxWidth>
+											<MaxWidth>20</MaxWidth>
 											<ContextMenu name="ПарамФормаУпаковкиДляВСДКонтекстноеМеню" id="130"/>
 											<ExtendedTooltip name="ПарамФормаУпаковкиДляВСДРасширеннаяПодсказка" id="131"/>
 										</InputField>
