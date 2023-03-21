@@ -183,6 +183,11 @@
 												</InputField>
 											</ChildItems>
 										</UsualGroup>
+										<InputField name="ОсобыеОтметки" id="184">
+											<DataPath>Объект.ОсобыеОтметки</DataPath>
+											<ContextMenu name="ОсобыеОтметкиКонтекстноеМеню" id="185"/>
+											<ExtendedTooltip name="ОсобыеОтметкиРасширеннаяПодсказка" id="186"/>
+										</InputField>
 									</ChildItems>
 								</UsualGroup>
 								<UsualGroup name="Группа17" id="109">
@@ -272,7 +277,7 @@
 													<HorizontalStretch>true</HorizontalStretch>
 													<Group>Vertical</Group>
 													<Behavior>Usual</Behavior>
-													<Representation>StrongSeparation</Representation>
+													<Representation>None</Representation>
 													<ExtendedTooltip name="Группа7РасширеннаяПодсказка" id="74"/>
 													<ChildItems>
 														<UsualGroup name="Группа11" id="81">
