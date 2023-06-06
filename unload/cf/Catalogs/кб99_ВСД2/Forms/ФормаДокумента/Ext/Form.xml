@@ -1329,35 +1329,11 @@
 											<ContextMenu name="УсловияПеревозкиОтметкаКонтекстноеМеню" id="637"/>
 											<ExtendedTooltip name="УсловияПеревозкиОтметкаРасширеннаяПодсказка" id="638"/>
 										</CheckBoxField>
-										<InputField name="УсловияПеревозкиUUID" id="639">
-											<DataPath>Объект.УсловияПеревозки.UUID</DataPath>
+										<InputField name="УсловияПеревозкиУсловие" id="779">
+											<DataPath>Объект.УсловияПеревозки.Условие</DataPath>
 											<EditMode>EnterOnInput</EditMode>
-											<ContextMenu name="УсловияПеревозкиUUIDКонтекстноеМеню" id="640"/>
-											<ExtendedTooltip name="УсловияПеревозкиUUIDРасширеннаяПодсказка" id="641"/>
-										</InputField>
-										<InputField name="УсловияПеревозкиGUID" id="642">
-											<DataPath>Объект.УсловияПеревозки.GUID</DataPath>
-											<EditMode>EnterOnInput</EditMode>
-											<ContextMenu name="УсловияПеревозкиGUIDКонтекстноеМеню" id="643"/>
-											<ExtendedTooltip name="УсловияПеревозкиGUIDРасширеннаяПодсказка" id="644"/>
-										</InputField>
-										<InputField name="УсловияПеревозкиНазвание" id="645">
-											<DataPath>Объект.УсловияПеревозки.Название</DataPath>
-											<EditMode>EnterOnInput</EditMode>
-											<ContextMenu name="УсловияПеревозкиНазваниеКонтекстноеМеню" id="646"/>
-											<ExtendedTooltip name="УсловияПеревозкиНазваниеРасширеннаяПодсказка" id="647"/>
-										</InputField>
-										<InputField name="УсловияПеревозкиРешение" id="648">
-											<DataPath>Объект.УсловияПеревозки.Решение</DataPath>
-											<EditMode>EnterOnInput</EditMode>
-											<ContextMenu name="УсловияПеревозкиРешениеКонтекстноеМеню" id="649"/>
-											<ExtendedTooltip name="УсловияПеревозкиРешениеРасширеннаяПодсказка" id="650"/>
-										</InputField>
-										<InputField name="УсловияПеревозкиВидПродукции" id="651">
-											<DataPath>Объект.УсловияПеревозки.ВидПродукции</DataPath>
-											<EditMode>EnterOnInput</EditMode>
-											<ContextMenu name="УсловияПеревозкиВидПродукцииКонтекстноеМеню" id="652"/>
-											<ExtendedTooltip name="УсловияПеревозкиВидПродукцииРасширеннаяПодсказка" id="653"/>
+											<ContextMenu name="УсловияПеревозкиУсловиеКонтекстноеМеню" id="780"/>
+											<ExtendedTooltip name="УсловияПеревозкиУсловиеРасширеннаяПодсказка" id="781"/>
 										</InputField>
 									</ChildItems>
 								</Table>

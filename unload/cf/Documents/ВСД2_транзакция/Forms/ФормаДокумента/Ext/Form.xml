@@ -1484,35 +1484,17 @@
 									<ContextMenu name="УсловияПеревозкиОтметкаКонтекстноеМеню" id="226"/>
 									<ExtendedTooltip name="УсловияПеревозкиОтметкаРасширеннаяПодсказка" id="227"/>
 								</CheckBoxField>
-								<InputField name="УсловияПеревозкиUUID" id="228">
-									<DataPath>Объект.УсловияПеревозки.UUID</DataPath>
+								<InputField name="УсловияПеревозкиУсловие" id="781">
+									<DataPath>Объект.УсловияПеревозки.Условие</DataPath>
 									<EditMode>EnterOnInput</EditMode>
-									<ContextMenu name="УсловияПеревозкиUUIDКонтекстноеМеню" id="229"/>
-									<ExtendedTooltip name="УсловияПеревозкиUUIDРасширеннаяПодсказка" id="230"/>
-								</InputField>
-								<InputField name="УсловияПеревозкиGUID" id="231">
-									<DataPath>Объект.УсловияПеревозки.GUID</DataPath>
-									<EditMode>EnterOnInput</EditMode>
-									<ContextMenu name="УсловияПеревозкиGUIDКонтекстноеМеню" id="232"/>
-									<ExtendedTooltip name="УсловияПеревозкиGUIDРасширеннаяПодсказка" id="233"/>
-								</InputField>
-								<InputField name="УсловияПеревозкиНазвание" id="234">
-									<DataPath>Объект.УсловияПеревозки.Название</DataPath>
-									<EditMode>EnterOnInput</EditMode>
-									<ContextMenu name="УсловияПеревозкиНазваниеКонтекстноеМеню" id="235"/>
-									<ExtendedTooltip name="УсловияПеревозкиНазваниеРасширеннаяПодсказка" id="236"/>
-								</InputField>
-								<InputField name="УсловияПеревозкиРешение" id="237">
-									<DataPath>Объект.УсловияПеревозки.Решение</DataPath>
-									<EditMode>EnterOnInput</EditMode>
-									<ContextMenu name="УсловияПеревозкиРешениеКонтекстноеМеню" id="238"/>
-									<ExtendedTooltip name="УсловияПеревозкиРешениеРасширеннаяПодсказка" id="239"/>
-								</InputField>
-								<InputField name="УсловияПеревозкиВидПродукции" id="240">
-									<DataPath>Объект.УсловияПеревозки.ВидПродукции</DataPath>
-									<EditMode>EnterOnInput</EditMode>
-									<ContextMenu name="УсловияПеревозкиВидПродукцииКонтекстноеМеню" id="241"/>
-									<ExtendedTooltip name="УсловияПеревозкиВидПродукцииРасширеннаяПодсказка" id="242"/>
+									<DropListButton>false</DropListButton>
+									<ChoiceButton>false</ChoiceButton>
+									<ClearButton>false</ClearButton>
+									<SpinButton>false</SpinButton>
+									<OpenButton>true</OpenButton>
+									<CreateButton>false</CreateButton>
+									<ContextMenu name="УсловияПеревозкиУсловиеКонтекстноеМеню" id="782"/>
+									<ExtendedTooltip name="УсловияПеревозкиУсловиеРасширеннаяПодсказка" id="783"/>
 								</InputField>
 							</ChildItems>
 						</Table>
@@ -2002,6 +1984,7 @@
 					<ExtendedTooltip name="ОстаткиПартийРасширеннаяПодсказка" id="761"/>
 					<ChildItems>
 						<Table name="дсОстаткиПартий" id="762">
+							<HeightInTableRows>5</HeightInTableRows>
 							<UseAlternationRowColor>true</UseAlternationRowColor>
 							<EnableStartDrag>true</EnableStartDrag>
 							<DataPath>дсОстаткиПартий</DataPath>

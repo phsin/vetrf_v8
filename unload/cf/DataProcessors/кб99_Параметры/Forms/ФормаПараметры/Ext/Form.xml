@@ -311,6 +311,38 @@
 										</UsualGroup>
 									</ChildItems>
 								</UsualGroup>
+								<InputField name="КодЛицензии" id="609">
+									<DataPath>Объект.КодЛицензии</DataPath>
+									<Width>36</Width>
+									<HorizontalStretch>false</HorizontalStretch>
+									<ContextMenu name="КодЛицензииКонтекстноеМеню" id="610"/>
+									<ExtendedTooltip name="КодЛицензииРасширеннаяПодсказка" id="611"/>
+								</InputField>
+								<UsualGroup name="Группа36" id="873">
+									<Width>46</Width>
+									<Behavior>Usual</Behavior>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="Группа36РасширеннаяПодсказка" id="874"/>
+									<ChildItems>
+										<LabelDecoration name="ДекорацияИнициализация" id="870">
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Выполнить начальную загрузку данных:</v8:content>
+												</v8:item>
+											</Title>
+											<ContextMenu name="ДекорацияИнициализацияКонтекстноеМеню" id="871"/>
+											<ExtendedTooltip name="ДекорацияИнициализацияРасширеннаяПодсказка" id="872"/>
+										</LabelDecoration>
+										<Button name="НачальнаяЗагрузка" id="868">
+											<Type>UsualButton</Type>
+											<GroupHorizontalAlign>Right</GroupHorizontalAlign>
+											<CommandName>Form.Command.НачальнаяЗагрузка</CommandName>
+											<ExtendedTooltip name="НачальнаяЗагрузкаРасширеннаяПодсказка" id="869"/>
+										</Button>
+									</ChildItems>
+								</UsualGroup>
 							</ChildItems>
 						</UsualGroup>
 						<UsualGroup name="ГруппаСистемныеНастройки" id="405">
@@ -339,11 +371,6 @@
 									<ShowTitle>false</ShowTitle>
 									<ExtendedTooltip name="Группа45РасширеннаяПодсказка" id="553"/>
 									<ChildItems>
-										<InputField name="КодЛицензии" id="609">
-											<DataPath>Объект.КодЛицензии</DataPath>
-											<ContextMenu name="КодЛицензииКонтекстноеМеню" id="610"/>
-											<ExtendedTooltip name="КодЛицензииРасширеннаяПодсказка" id="611"/>
-										</InputField>
 										<InputField name="КаталогИнтеграции" id="488">
 											<DataPath>Объект.КаталогИнтеграции</DataPath>
 											<HorizontalStretch>true</HorizontalStretch>
@@ -2600,6 +2627,12 @@
 											<CommandName>Form.Command.ЗагрузитьВСД</CommandName>
 											<ExtendedTooltip name="ЗагрузитьВСДРасширеннаяПодсказка" id="813"/>
 										</Button>
+										<Button name="кнЗаполнитьУсловияПеревозки1" id="879">
+											<Type>UsualButton</Type>
+											<CommandName>Form.Command.кнЗаполнитьУсловияПеревозки</CommandName>
+											<ToolTipRepresentation>ShowTop</ToolTipRepresentation>
+											<ExtendedTooltip name="кнЗаполнитьУсловияПеревозки1РасширеннаяПодсказка" id="880"/>
+										</Button>
 									</ChildItems>
 								</Page>
 								<Page name="ГруппаЗапросы" id="843">
@@ -3423,7 +3456,7 @@
 			<ToolTip>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>За грузка всех классификаторов Меркурий и заполнение начальных параметров</v8:content>
+					<v8:content>Загрузка всех классификаторов Меркурий и заполнение начальных параметров</v8:content>
 				</v8:item>
 			</ToolTip>
 			<Action>кнИнициализация</Action>
@@ -3786,6 +3819,36 @@
 				</v8:item>
 			</ToolTip>
 			<Action>УдалитьЗапросыВСД</Action>
+		</Command>
+		<Command name="НачальнаяЗагрузка" id="23">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выполнить</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Загрузка всех классификаторов Меркурий и заполнение начальных параметров</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>кнИнициализация</Action>
+		</Command>
+		<Command name="кнЗаполнитьУсловияПеревозки" id="24">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заполнить условия перевозки</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Создать и заполнить условия перевозки в существующих документах "ВСД2 Транзакция". Начиная с версии 2.7.19 используется справочник "Условия перевозки"</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>кнЗаполнитьУсловияПеревозки</Action>
 		</Command>
 	</Commands>
 </Form>

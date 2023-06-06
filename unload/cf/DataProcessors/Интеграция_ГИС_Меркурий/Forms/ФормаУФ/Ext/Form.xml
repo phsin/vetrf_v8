@@ -1296,6 +1296,11 @@
 											</Title>
 											<ExtendedTooltip name="кнПроизводствоРасширеннаяПодсказка" id="343"/>
 										</Button>
+										<Button name="ПроизводствоПоВидамПродукции" id="727">
+											<Type>CommandBarButton</Type>
+											<CommandName>Form.Command.ПроизводствоПоВидамПродукции</CommandName>
+											<ExtendedTooltip name="ПроизводствоПоВидамПродукцииРасширеннаяПодсказка" id="728"/>
+										</Button>
 										<Button name="кнПроизводствоОтправить" id="356">
 											<Type>CommandBarButton</Type>
 											<HorizontalStretch>true</HorizontalStretch>
@@ -2842,6 +2847,25 @@
 				</v8:item>
 			</ToolTip>
 			<Action>ЗаполнитьРеализациями</Action>
+		</Command>
+		<Command name="ПроизводствоПоВидамПродукции" id="15">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>По видам продукции</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Производство по видам продукции</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>CommonPicture.кб99_random</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ПроизводствоПоВидамПродукции</Action>
 		</Command>
 	</Commands>
 </Form>
