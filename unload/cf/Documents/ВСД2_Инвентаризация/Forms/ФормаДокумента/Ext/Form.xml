@@ -452,6 +452,7 @@
 													<ContextMenu name="ПродукцияПартияКонтекстноеМеню" id="311"/>
 													<ExtendedTooltip name="ПродукцияПартияРасширеннаяПодсказка" id="312"/>
 													<Events>
+														<Event name="OnChange">ПродукцияПартияПриИзменении</Event>
 														<Event name="StartChoice">ПродукцияПартияНачалоВыбора</Event>
 														<Event name="ChoiceProcessing">ПродукцияПартияОбработкаВыбора</Event>
 													</Events>
