@@ -1611,87 +1611,6 @@
 										</UsualGroup>
 									</ChildItems>
 								</UsualGroup>
-								<UsualGroup name="ГруппаВСД2_Производство" id="704">
-									<Title>
-										<v8:item>
-											<v8:lang>ru</v8:lang>
-											<v8:content>Производство</v8:content>
-										</v8:item>
-									</Title>
-									<ToolTip>
-										<v8:item>
-											<v8:lang>ru</v8:lang>
-											<v8:content>Группа ВСД2 производство</v8:content>
-										</v8:item>
-									</ToolTip>
-									<Group>Vertical</Group>
-									<Behavior>Usual</Behavior>
-									<ThroughAlign>DontUse</ThroughAlign>
-									<ExtendedTooltip name="ГруппаВСД2_ПроизводствоРасширеннаяПодсказка" id="705"/>
-									<ChildItems>
-										<CheckBoxField name="ЗавершатьПроизводство" id="722">
-											<DataPath>Объект.ЗавершатьПроизводство</DataPath>
-											<TitleLocation>Right</TitleLocation>
-											<CheckBoxType>Auto</CheckBoxType>
-											<ContextMenu name="ЗавершатьПроизводствоКонтекстноеМеню" id="723"/>
-											<ExtendedTooltip name="ЗавершатьПроизводствоРасширеннаяПодсказка" id="724"/>
-										</CheckBoxField>
-										<CheckBoxField name="ПарамПроизводствоЗаполнятьПоСправочнику" id="593">
-											<DataPath>Объект.ПарамПроизводствоЗаполнятьПоСправочнику</DataPath>
-											<TitleLocation>Right</TitleLocation>
-											<CheckBoxType>Auto</CheckBoxType>
-											<ContextMenu name="ПарамПроизводствоЗаполнятьПоСправочникуКонтекстноеМеню" id="594"/>
-											<ExtendedTooltip name="ПарамПроизводствоЗаполнятьПоСправочникуРасширеннаяПодсказка" id="595"/>
-										</CheckBoxField>
-										<CheckBoxField name="ПроверятьЗаполнениеСырьяВПроизводстве" id="790">
-											<DataPath>Объект.ПроверятьЗаполнениеСырьяВПроизводстве</DataPath>
-											<TitleLocation>Right</TitleLocation>
-											<CheckBoxType>Auto</CheckBoxType>
-											<ContextMenu name="ПроверятьЗаполнениеСырьяВПроизводствеКонтекстноеМеню" id="791"/>
-											<ExtendedTooltip name="ПроверятьЗаполнениеСырьяВПроизводствеРасширеннаяПодсказка" id="792"/>
-										</CheckBoxField>
-										<InputField name="КоэфПересчетаКоличестваПриПроизводстве" id="673">
-											<DataPath>Объект.КоэфПересчетаКоличестваПриПроизводстве</DataPath>
-											<Title>
-												<v8:item>
-													<v8:lang>ru</v8:lang>
-													<v8:content>Коэффициент пересчета количества, %</v8:content>
-												</v8:item>
-											</Title>
-											<TitleLocation>Left</TitleLocation>
-											<ContextMenu name="КоэфПересчетаКоличестваПриПроизводствеКонтекстноеМеню" id="674"/>
-											<ExtendedTooltip name="КоэфПересчетаКоличестваПриПроизводствеРасширеннаяПодсказка" id="675"/>
-										</InputField>
-										<InputField name="ПрефиксНомераНезавершенногоПроизводства" id="725">
-											<DataPath>Объект.ПрефиксНомераНезавершенногоПроизводства</DataPath>
-											<TitleLocation>Left</TitleLocation>
-											<ContextMenu name="ПрефиксНомераНезавершенногоПроизводстваКонтекстноеМеню" id="726"/>
-											<ExtendedTooltip name="ПрефиксНомераНезавершенногоПроизводстваРасширеннаяПодсказка" id="727"/>
-										</InputField>
-										<CheckBoxField name="ПроверкаБалансаРасходСырья" id="793">
-											<DataPath>Объект.ПроверятьБалансРасходаСырья</DataPath>
-											<TitleLocation>Right</TitleLocation>
-											<CheckBoxType>Auto</CheckBoxType>
-											<ContextMenu name="ПроверкаБалансаРасходСырьяКонтекстноеМеню" id="794"/>
-											<ExtendedTooltip name="ПроверкаБалансаРасходСырьяРасширеннаяПодсказка" id="795"/>
-											<Events>
-												<Event name="OnChange">ПроверкаБалансаРасходСырьяПриИзменении</Event>
-											</Events>
-										</CheckBoxField>
-										<InputField name="ПроцентРасхожденияСырьеПродукция" id="796">
-											<DataPath>Объект.ПроцентРасхожденияСырьеПродукция</DataPath>
-											<Title>
-												<v8:item>
-													<v8:lang>ru</v8:lang>
-													<v8:content>Допустимый процент расхождения, %</v8:content>
-												</v8:item>
-											</Title>
-											<TitleLocation>Left</TitleLocation>
-											<ContextMenu name="ПроцентРасхожденияСырьеПродукцияКонтекстноеМеню" id="797"/>
-											<ExtendedTooltip name="ПроцентРасхожденияСырьеПродукцияРасширеннаяПодсказка" id="798"/>
-										</InputField>
-									</ChildItems>
-								</UsualGroup>
 								<UsualGroup name="ГруппаИнвентаризация" id="712">
 									<Title>
 										<v8:item>
@@ -1795,31 +1714,161 @@
 						</UsualGroup>
 					</ChildItems>
 				</Page>
-				<Page name="СтраницаВнутреннееПеремещение" id="631">
+				<Page name="СтраницаПроизводствоВнутреннееПеремещениеё" id="631">
 					<Title>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>Внутреннее перемещение</v8:content>
+							<v8:content>Производство</v8:content>
 						</v8:item>
 					</Title>
 					<ToolTip>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>Страница внутреннее перемещение</v8:content>
+							<v8:content>Страница производство внутреннее перемещениеё</v8:content>
 						</v8:item>
 					</ToolTip>
-					<ExtendedTooltip name="СтраницаВнутреннееПеремещениеРасширеннаяПодсказка" id="632"/>
+					<ExtendedTooltip name="СтраницаПроизводствоВнутреннееПеремещениеёРасширеннаяПодсказка" id="632"/>
 					<ChildItems>
+						<UsualGroup name="ГруппаВСД2_Производство" id="704">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Производство</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа ВСД2 производство</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>Vertical</Group>
+							<Behavior>Usual</Behavior>
+							<ThroughAlign>DontUse</ThroughAlign>
+							<ExtendedTooltip name="ГруппаВСД2_ПроизводствоРасширеннаяПодсказка" id="705"/>
+							<ChildItems>
+								<CheckBoxField name="ЗавершатьПроизводство" id="722">
+									<DataPath>Объект.ЗавершатьПроизводство</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Завершать производственные транзакции</v8:content>
+										</v8:item>
+									</Title>
+									<TitleLocation>Right</TitleLocation>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="ЗавершатьПроизводствоКонтекстноеМеню" id="723"/>
+									<ExtendedTooltip name="ЗавершатьПроизводствоРасширеннаяПодсказка" id="724"/>
+								</CheckBoxField>
+								<CheckBoxField name="ПарамПроизводствоЗаполнятьПоСправочнику" id="593">
+									<DataPath>Объект.ПарамПроизводствоЗаполнятьПоСправочнику</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Заполнять сырье по справочнику Спецификации </v8:content>
+										</v8:item>
+									</Title>
+									<TitleLocation>Right</TitleLocation>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="ПарамПроизводствоЗаполнятьПоСправочникуКонтекстноеМеню" id="594"/>
+									<ExtendedTooltip name="ПарамПроизводствоЗаполнятьПоСправочникуРасширеннаяПодсказка" id="595"/>
+								</CheckBoxField>
+								<InputField name="КоэфПересчетаКоличестваПриПроизводстве" id="673">
+									<DataPath>Объект.КоэфПересчетаКоличестваПриПроизводстве</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Коэффициент пересчета количества, %</v8:content>
+										</v8:item>
+									</Title>
+									<TitleLocation>Left</TitleLocation>
+									<ContextMenu name="КоэфПересчетаКоличестваПриПроизводствеКонтекстноеМеню" id="674"/>
+									<ExtendedTooltip name="КоэфПересчетаКоличестваПриПроизводствеРасширеннаяПодсказка" id="675"/>
+								</InputField>
+								<InputField name="ПрефиксНомераНезавершенногоПроизводства" id="725">
+									<DataPath>Объект.ПрефиксНомераНезавершенногоПроизводства</DataPath>
+									<TitleLocation>Left</TitleLocation>
+									<ContextMenu name="ПрефиксНомераНезавершенногоПроизводстваКонтекстноеМеню" id="726"/>
+									<ExtendedTooltip name="ПрефиксНомераНезавершенногоПроизводстваРасширеннаяПодсказка" id="727"/>
+								</InputField>
+								<CheckBoxField name="ПроверятьЗаполнениеСырьяВПроизводстве" id="790">
+									<DataPath>Объект.ПроверятьЗаполнениеСырьяВПроизводстве</DataPath>
+									<TitleLocation>Right</TitleLocation>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="ПроверятьЗаполнениеСырьяВПроизводствеКонтекстноеМеню" id="791"/>
+									<ExtendedTooltip name="ПроверятьЗаполнениеСырьяВПроизводствеРасширеннаяПодсказка" id="792"/>
+								</CheckBoxField>
+								<CheckBoxField name="ПроверкаБалансаРасходСырья" id="793">
+									<DataPath>Объект.ПроверятьБалансРасходаСырья</DataPath>
+									<TitleLocation>Right</TitleLocation>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="ПроверкаБалансаРасходСырьяКонтекстноеМеню" id="794"/>
+									<ExtendedTooltip name="ПроверкаБалансаРасходСырьяРасширеннаяПодсказка" id="795"/>
+									<Events>
+										<Event name="OnChange">ПроверкаБалансаРасходСырьяПриИзменении</Event>
+									</Events>
+								</CheckBoxField>
+								<InputField name="ПроцентРасхожденияСырьеПродукция" id="796">
+									<DataPath>Объект.ПроцентРасхожденияСырьеПродукция</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Допустимый процент расхождения, %</v8:content>
+										</v8:item>
+									</Title>
+									<TitleLocation>Left</TitleLocation>
+									<ContextMenu name="ПроцентРасхожденияСырьеПродукцияКонтекстноеМеню" id="797"/>
+									<ExtendedTooltip name="ПроцентРасхожденияСырьеПродукцияРасширеннаяПодсказка" id="798"/>
+								</InputField>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаСепарация" id="881">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Сепарация</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа сепарация</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>Vertical</Group>
+							<ExtendedTooltip name="ГруппаСепарацияРасширеннаяПодсказка" id="882"/>
+							<ChildItems>
+								<InputField name="ПЭ_Сливки" id="883">
+									<DataPath>Объект.ПЭ_Сливки</DataPath>
+									<ContextMenu name="ПЭ_СливкиКонтекстноеМеню" id="884"/>
+									<ExtendedTooltip name="ПЭ_СливкиРасширеннаяПодсказка" id="885"/>
+								</InputField>
+								<InputField name="ПЭ_Обрат" id="886">
+									<DataPath>Объект.ПЭ_Обрат</DataPath>
+									<ContextMenu name="ПЭ_ОбратКонтекстноеМеню" id="887"/>
+									<ExtendedTooltip name="ПЭ_ОбратРасширеннаяПодсказка" id="888"/>
+								</InputField>
+								<InputField name="ЖирностьМолокаПроцент" id="889">
+									<DataPath>Объект.ЖирностьМолокаПроцент</DataPath>
+									<ContextMenu name="ЖирностьМолокаПроцентКонтекстноеМеню" id="890"/>
+									<ExtendedTooltip name="ЖирностьМолокаПроцентРасширеннаяПодсказка" id="891"/>
+								</InputField>
+								<InputField name="ЖирностьСливокПроцент" id="892">
+									<DataPath>Объект.ЖирностьСливокПроцент</DataPath>
+									<ContextMenu name="ЖирностьСливокПроцентКонтекстноеМеню" id="893"/>
+									<ExtendedTooltip name="ЖирностьСливокПроцентРасширеннаяПодсказка" id="894"/>
+								</InputField>
+							</ChildItems>
+						</UsualGroup>
 						<UsualGroup name="Группа2" id="470">
 							<Title>
 								<v8:item>
 									<v8:lang>ru</v8:lang>
-									<v8:content>Поставщик</v8:content>
+									<v8:content>Внутренние перемещения</v8:content>
 								</v8:item>
 							</Title>
 							<Group>Vertical</Group>
 							<Behavior>Usual</Behavior>
-							<Representation>None</Representation>
 							<ExtendedTooltip name="Группа2РасширеннаяПодсказка" id="471"/>
 							<ChildItems>
 								<InputField name="ПарамПоставщикОрганизация" id="472">
@@ -1855,13 +1904,13 @@
 									<ContextMenu name="ПарамПоставщикПлощадкаКонтекстноеМеню" id="479"/>
 									<ExtendedTooltip name="ПарамПоставщикПлощадкаРасширеннаяПодсказка" id="480"/>
 								</InputField>
+								<InputField name="СвойКонтрагент" id="862">
+									<DataPath>Объект.СвойКонтрагент</DataPath>
+									<ContextMenu name="СвойКонтрагентКонтекстноеМеню" id="863"/>
+									<ExtendedTooltip name="СвойКонтрагентРасширеннаяПодсказка" id="864"/>
+								</InputField>
 							</ChildItems>
 						</UsualGroup>
-						<InputField name="СвойКонтрагент" id="862">
-							<DataPath>Объект.СвойКонтрагент</DataPath>
-							<ContextMenu name="СвойКонтрагентКонтекстноеМеню" id="863"/>
-							<ExtendedTooltip name="СвойКонтрагентРасширеннаяПодсказка" id="864"/>
-						</InputField>
 					</ChildItems>
 				</Page>
 				<Page name="СтраницаИнициализация" id="633">
