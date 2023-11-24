@@ -1951,8 +1951,14 @@
 								</LabelField>
 								<LabelField name="ЗапросыApplicationID" id="500">
 									<DataPath>дсЗапросы.ApplicationID</DataPath>
+									<Width>20</Width>
 									<ContextMenu name="ЗапросыApplicationIDКонтекстноеМеню" id="501"/>
 									<ExtendedTooltip name="ЗапросыApplicationIDРасширеннаяПодсказка" id="502"/>
+								</LabelField>
+								<LabelField name="ЗапросыОшибки" id="784">
+									<DataPath>дсЗапросы.Ошибки</DataPath>
+									<ContextMenu name="ЗапросыОшибкиКонтекстноеМеню" id="785"/>
+									<ExtendedTooltip name="ЗапросыОшибкиРасширеннаяПодсказка" id="786"/>
 								</LabelField>
 								<LabelField name="ЗапросыЗапрос" id="503">
 									<DataPath>дсЗапросы.Запрос</DataPath>

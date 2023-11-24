@@ -1820,6 +1820,13 @@
 									<ContextMenu name="ПроцентРасхожденияСырьеПродукцияКонтекстноеМеню" id="797"/>
 									<ExtendedTooltip name="ПроцентРасхожденияСырьеПродукцияРасширеннаяПодсказка" id="798"/>
 								</InputField>
+								<CheckBoxField name="ПроизводствоРазбиватьПострочно" id="895">
+									<DataPath>Объект.ПроизводствоРазбиватьПострочно</DataPath>
+									<TitleLocation>Right</TitleLocation>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="ПроизводствоРазбиватьПострочноКонтекстноеМеню" id="896"/>
+									<ExtendedTooltip name="ПроизводствоРазбиватьПострочноРасширеннаяПодсказка" id="897"/>
+								</CheckBoxField>
 							</ChildItems>
 						</UsualGroup>
 						<UsualGroup name="ГруппаСепарация" id="881">

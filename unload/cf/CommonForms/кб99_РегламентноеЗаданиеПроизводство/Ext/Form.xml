@@ -349,6 +349,11 @@
 								<Event name="OnChange">ОрганизацияПриИзменении</Event>
 							</Events>
 						</InputField>
+						<InputField name="ПериодЗакрытияТранзакции" id="84">
+							<DataPath>ПериодЗакрытияТранзакции</DataPath>
+							<ContextMenu name="ПериодЗакрытияТранзакцииКонтекстноеМеню" id="85"/>
+							<ExtendedTooltip name="ПериодЗакрытияТранзакцииРасширеннаяПодсказка" id="86"/>
+						</InputField>
 					</ChildItems>
 				</Page>
 			</ChildItems>
@@ -574,6 +579,22 @@
 			</Title>
 			<Type>
 				<v8:Type>cfg:CatalogRef.ВСД_ХозСубъект</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ПериодЗакрытияТранзакции" id="17">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Период закрытия транзакции, ч</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>3</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
 			</Type>
 		</Attribute>
 	</Attributes>

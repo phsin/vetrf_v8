@@ -25,20 +25,20 @@
 			<AutoCommandBar name="СписокДокументовКоманднаяПанель" id="3">
 				<Autofill>false</Autofill>
 				<ChildItems>
-					<Button name="СписокДокументовВыбрать" id="26">
+					<Button name="Выбрать" id="25">
 						<Type>CommandBarButton</Type>
 						<CommandName>Form.Command.Выбрать</CommandName>
-						<ExtendedTooltip name="СписокДокументовВыбратьРасширеннаяПодсказка" id="27"/>
+						<ExtendedTooltip name="ВыбратьРасширеннаяПодсказка" id="26"/>
 					</Button>
-					<Button name="СписокДокументовкнЗавершитьВыбранныеТранзакции" id="28">
+					<Button name="кнЗавершитьВыбранныеТранзакции" id="23">
 						<Type>CommandBarButton</Type>
 						<CommandName>Form.Command.кнЗавершитьВыбранныеТранзакции</CommandName>
-						<ExtendedTooltip name="СписокДокументовкнЗавершитьВыбранныеТранзакцииРасширеннаяПодсказка" id="29"/>
+						<ExtendedTooltip name="кнЗавершитьВыбранныеТранзакцииРасширеннаяПодсказка" id="24"/>
 					</Button>
-					<Button name="СписокДокументовОформитьНовоеПроизводство" id="30">
+					<Button name="ФормаОформитьНовоеПроизводство" id="27">
 						<Type>CommandBarButton</Type>
 						<CommandName>Form.Command.ОформитьНовоеПроизводство</CommandName>
-						<ExtendedTooltip name="СписокДокументовОформитьНовоеПроизводствоРасширеннаяПодсказка" id="31"/>
+						<ExtendedTooltip name="ФормаОформитьНовоеПроизводствоРасширеннаяПодсказка" id="28"/>
 					</Button>
 				</ChildItems>
 			</AutoCommandBar>
@@ -71,43 +71,23 @@
 				<Event name="Selection">СписокДокументовВыбор</Event>
 			</Events>
 			<ChildItems>
-				<CheckBoxField name="СписокДокументовОтметка" id="17">
-					<DataPath>СписокДокументов.Отметка</DataPath>
+				<InputField name="СписокДокументовДокумент" id="14">
+					<DataPath>СписокДокументов.Документ</DataPath>
 					<EditMode>EnterOnInput</EditMode>
-					<CheckBoxType>Auto</CheckBoxType>
-					<ContextMenu name="СписокДокументовОтметкаКонтекстноеМеню" id="18"/>
-					<ExtendedTooltip name="СписокДокументовОтметкаРасширеннаяПодсказка" id="19"/>
-				</CheckBoxField>
-				<InputField name="СписокДокументовНомерОперации" id="20">
-					<DataPath>СписокДокументов.НомерОперации</DataPath>
-					<ReadOnly>true</ReadOnly>
-					<EditMode>EnterOnInput</EditMode>
-					<ContextMenu name="СписокДокументовНомерОперацииКонтекстноеМеню" id="21"/>
-					<ExtendedTooltip name="СписокДокументовНомерОперацииРасширеннаяПодсказка" id="22"/>
+					<ContextMenu name="СписокДокументовДокументКонтекстноеМеню" id="15"/>
+					<ExtendedTooltip name="СписокДокументовДокументРасширеннаяПодсказка" id="16"/>
 				</InputField>
-				<InputField name="СписокДокументовПлощадка" id="23">
-					<DataPath>СписокДокументов.Площадка</DataPath>
-					<ReadOnly>true</ReadOnly>
+				<InputField name="СписокДокументовНомерНезавершенногоПроизводства" id="17">
+					<DataPath>СписокДокументов.НомерНезавершенногоПроизводства</DataPath>
 					<EditMode>EnterOnInput</EditMode>
-					<ContextMenu name="СписокДокументовПлощадкаКонтекстноеМеню" id="24"/>
-					<ExtendedTooltip name="СписокДокументовПлощадкаРасширеннаяПодсказка" id="25"/>
+					<ContextMenu name="СписокДокументовНомерНезавершенногоПроизводстваКонтекстноеМеню" id="18"/>
+					<ExtendedTooltip name="СписокДокументовНомерНезавершенногоПроизводстваРасширеннаяПодсказка" id="19"/>
 				</InputField>
 			</ChildItems>
 		</Table>
 	</ChildItems>
 	<Attributes>
-		<Attribute name="Организация" id="2">
-			<Title>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Организация</v8:content>
-				</v8:item>
-			</Title>
-			<Type>
-				<v8:Type>cfg:CatalogRef.Организации</v8:Type>
-			</Type>
-		</Attribute>
-		<Attribute name="СписокДокументов" id="3">
+		<Attribute name="СписокДокументов" id="1">
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
@@ -129,91 +109,33 @@
 						<v8:Type>cfg:DocumentRef.ВСД2_Производство</v8:Type>
 					</Type>
 				</Column>
-				<Column name="Отметка" id="2">
+				<Column name="НомерНезавершенногоПроизводства" id="2">
 					<Title>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>V</v8:content>
-						</v8:item>
-					</Title>
-					<Type>
-						<v8:Type>xs:boolean</v8:Type>
-					</Type>
-				</Column>
-				<Column name="НомерОперации" id="3">
-					<Title>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>№ операции</v8:content>
+							<v8:content>№ Незавершенной операции</v8:content>
 						</v8:item>
 					</Title>
 					<Type>
 						<v8:Type>xs:string</v8:Type>
 						<v8:StringQualifiers>
-							<v8:Length>50</v8:Length>
+							<v8:Length>0</v8:Length>
 							<v8:AllowedLength>Variable</v8:AllowedLength>
 						</v8:StringQualifiers>
 					</Type>
 				</Column>
-				<Column name="Площадка" id="4">
-					<Title>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>Площадка</v8:content>
-						</v8:item>
-					</Title>
-					<Type>
-						<v8:Type>cfg:CatalogRef.ВСД_Площадка</v8:Type>
-					</Type>
-				</Column>
-				<Column name="СтатусЗапроса" id="5">
-					<Title>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>Статус запроса</v8:content>
-						</v8:item>
-					</Title>
-					<Type>
-						<v8:Type>cfg:EnumRef.кб99_СтатусЗапроса</v8:Type>
-					</Type>
-				</Column>
-				<Column name="СписокПродукции" id="6">
-					<Title>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>Список продукции</v8:content>
-						</v8:item>
-					</Title>
-					<Type>
-						<v8:Type>v8:ValueListType</v8:Type>
-					</Type>
-				</Column>
-				<Column name="Организация" id="7">
-					<Title>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>Организация</v8:content>
-						</v8:item>
-					</Title>
-					<Type>
-						<v8:Type>cfg:CatalogRef.Организации</v8:Type>
-					</Type>
-				</Column>
-				<Column name="Период" id="8">
-					<Title>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>Период</v8:content>
-						</v8:item>
-					</Title>
-					<Type>
-						<v8:Type>xs:dateTime</v8:Type>
-						<v8:DateQualifiers>
-							<v8:DateFractions>Date</v8:DateFractions>
-						</v8:DateQualifiers>
-					</Type>
-				</Column>
 			</Columns>
+		</Attribute>
+		<Attribute name="Организация" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Организация</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.Организации</v8:Type>
+			</Type>
 		</Attribute>
 	</Attributes>
 	<Commands>

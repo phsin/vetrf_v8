@@ -195,6 +195,7 @@
 			<RegisterRecordsWritingOnPost>WriteSelected</RegisterRecordsWritingOnPost>
 			<SequenceFilling>AutoFill</SequenceFilling>
 			<RegisterRecords>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.кб_НезавершенныеПроизводственныеТранзакции</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">AccumulationRegister.кб99_ОстаткиПартийВСД</xr:Item>
 			</RegisterRecords>
 			<PostInPrivilegedMode>false</PostInPrivilegedMode>
@@ -953,6 +954,7 @@
 			</Attribute>
 			<Form>ФормаСписка</Form>
 			<Form>ФормаДокумента</Form>
+			<Form>ФормаСпискаНезавершенногоПроизводства_СтарыйВариант</Form>
 			<Form>ФормаСпискаНезавершенногоПроизводства</Form>
 			<TabularSection uuid="327bcbc8-1362-432d-9c67-7207cb835ab0">
 				<InternalInfo>
@@ -1032,14 +1034,7 @@
 							<FillChecking>DontCheck</FillChecking>
 							<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
 							<ChoiceParameterLinks/>
-							<ChoiceParameters>
-								<app:item name="Отбор.Услуга">
-									<app:value xsi:type="xs:boolean">false</app:value>
-								</app:item>
-								<app:item name="Отбор.Набор">
-									<app:value xsi:type="xs:boolean">false</app:value>
-								</app:item>
-							</ChoiceParameters>
+							<ChoiceParameters/>
 							<QuickChoice>Auto</QuickChoice>
 							<CreateOnInput>Auto</CreateOnInput>
 							<ChoiceForm/>
@@ -2529,7 +2524,7 @@
 						<v8:Type>cfg:DocumentRef.ВСД2_Производство</v8:Type>
 					</CommandParameterType>
 					<ParameterUseMode>Single</ParameterUseMode>
-					<ModifiesData>true</ModifiesData>
+					<ModifiesData>false</ModifiesData>
 					<Representation>Auto</Representation>
 					<ToolTip/>
 					<Picture>
