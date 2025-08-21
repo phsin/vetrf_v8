@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.13">
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.18">
 	<AutoTime>CurrentOrLast</AutoTime>
 	<UsePostingMode>Auto</UsePostingMode>
 	<RepostOnWrite>true</RepostOnWrite>
@@ -23,14 +23,12 @@
 				</v8:item>
 			</ToolTip>
 			<Group>Vertical</Group>
-			<Behavior>Usual</Behavior>
 			<Representation>None</Representation>
 			<ShowTitle>false</ShowTitle>
 			<ExtendedTooltip name="ГруппаГоловаРасширеннаяПодсказка" id="2"/>
 			<ChildItems>
 				<UsualGroup name="Группа1" id="3">
 					<Group>Horizontal</Group>
-					<Behavior>Usual</Behavior>
 					<Representation>None</Representation>
 					<ShowTitle>false</ShowTitle>
 					<ThroughAlign>DontUse</ThroughAlign>
@@ -102,7 +100,6 @@
 					</ChildItems>
 				</UsualGroup>
 				<UsualGroup name="Группа3" id="310">
-					<Behavior>Usual</Behavior>
 					<Representation>None</Representation>
 					<ShowTitle>false</ShowTitle>
 					<BackColor>#FFDCDC</BackColor>
@@ -186,7 +183,6 @@
 								</v8:item>
 							</ToolTip>
 							<Group>Vertical</Group>
-							<Behavior>Usual</Behavior>
 							<ShowTitle>false</ShowTitle>
 							<ExtendedTooltip name="ГруппаПартииРасширеннаяПодсказка" id="55"/>
 							<ChildItems>
@@ -204,7 +200,6 @@
 										</v8:item>
 									</ToolTip>
 									<Group>Vertical</Group>
-									<Behavior>Usual</Behavior>
 									<Representation>StrongSeparation</Representation>
 									<ExtendedTooltip name="ГруппаВладелецРасширеннаяПодсказка" id="37"/>
 									<ChildItems>
@@ -243,7 +238,6 @@
 									</ChildItems>
 								</UsualGroup>
 								<UsualGroup name="Группа5" id="224">
-									<Behavior>Usual</Behavior>
 									<Representation>None</Representation>
 									<ShowTitle>false</ShowTitle>
 									<ExtendedTooltip name="Группа5РасширеннаяПодсказка" id="225"/>
@@ -516,7 +510,6 @@
 							<ExtendedTooltip name="applicationIDРасширеннаяПодсказка" id="28"/>
 						</InputField>
 						<UsualGroup name="Группа13" id="250">
-							<Behavior>Usual</Behavior>
 							<ShowTitle>false</ShowTitle>
 							<ExtendedTooltip name="Группа13РасширеннаяПодсказка" id="251"/>
 							<ChildItems>
@@ -543,6 +536,7 @@
 									<ShowRoot>true</ShowRoot>
 									<AllowRootChoice>false</AllowRootChoice>
 									<UpdateOnDataChange>Auto</UpdateOnDataChange>
+									<AllowGettingCurrentRowURL>true</AllowGettingCurrentRowURL>
 									<ContextMenu name="ЗапросыКонтекстноеМеню" id="253"/>
 									<AutoCommandBar name="ЗапросыКоманднаяПанель" id="254">
 										<Autofill>false</Autofill>
@@ -652,6 +646,7 @@
 							<ShowRoot>true</ShowRoot>
 							<AllowRootChoice>false</AllowRootChoice>
 							<UpdateOnDataChange>Auto</UpdateOnDataChange>
+							<AllowGettingCurrentRowURL>true</AllowGettingCurrentRowURL>
 							<ContextMenu name="дсОстаткиПартийКонтекстноеМеню" id="330"/>
 							<AutoCommandBar name="дсОстаткиПартийКоманднаяПанель" id="331">
 								<Autofill>false</Autofill>

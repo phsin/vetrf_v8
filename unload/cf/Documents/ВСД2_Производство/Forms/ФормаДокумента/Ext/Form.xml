@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.13">
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.18">
 	<AutoTime>CurrentOrLast</AutoTime>
 	<UsePostingMode>Auto</UsePostingMode>
 	<RepostOnWrite>true</RepostOnWrite>
@@ -25,14 +25,12 @@
 				</v8:item>
 			</ToolTip>
 			<Group>Vertical</Group>
-			<Behavior>Usual</Behavior>
 			<Representation>None</Representation>
 			<ShowTitle>false</ShowTitle>
 			<ExtendedTooltip name="ГруппаГоловаРасширеннаяПодсказка" id="163"/>
 			<ChildItems>
 				<UsualGroup name="Группа1" id="164">
 					<Group>Horizontal</Group>
-					<Behavior>Usual</Behavior>
 					<Representation>None</Representation>
 					<ShowTitle>false</ShowTitle>
 					<ThroughAlign>DontUse</ThroughAlign>
@@ -106,7 +104,6 @@
 					</ChildItems>
 				</UsualGroup>
 				<UsualGroup name="Группа2" id="616">
-					<Behavior>Usual</Behavior>
 					<Representation>None</Representation>
 					<ShowTitle>false</ShowTitle>
 					<BackColor>#FFDCDC</BackColor>
@@ -187,7 +184,6 @@
 								</v8:item>
 							</ToolTip>
 							<Group>Vertical</Group>
-							<Behavior>Usual</Behavior>
 							<Representation>NormalSeparation</Representation>
 							<ExtendedTooltip name="ГруппаПроизводительРасширеннаяПодсказка" id="196"/>
 							<ChildItems>
@@ -225,7 +221,6 @@
 						</UsualGroup>
 						<UsualGroup name="Группа3" id="205">
 							<Group>Horizontal</Group>
-							<Behavior>Usual</Behavior>
 							<Representation>None</Representation>
 							<ShowTitle>false</ShowTitle>
 							<ExtendedTooltip name="Группа3РасширеннаяПодсказка" id="206"/>
@@ -270,7 +265,6 @@
 								</v8:item>
 							</ToolTip>
 							<Group>Horizontal</Group>
-							<Behavior>Usual</Behavior>
 							<Representation>None</Representation>
 							<ShowTitle>false</ShowTitle>
 							<ExtendedTooltip name="ГруппаОкружениеРасширеннаяПодсказка" id="225"/>
@@ -328,7 +322,6 @@
 								</v8:item>
 							</ToolTip>
 							<Group>Vertical</Group>
-							<Behavior>Usual</Behavior>
 							<Representation>None</Representation>
 							<ShowTitle>false</ShowTitle>
 							<BackColor>#FFFDC9</BackColor>
@@ -351,7 +344,6 @@
 									<GroupHorizontalAlign>Left</GroupHorizontalAlign>
 									<Group>AlwaysHorizontal</Group>
 									<HorizontalAlign>Left</HorizontalAlign>
-									<Behavior>Usual</Behavior>
 									<Representation>None</Representation>
 									<ShowTitle>false</ShowTitle>
 									<BackColor>#FFFDC9</BackColor>
@@ -386,7 +378,6 @@
 											<v8:content>Группа отложенное завершение</v8:content>
 										</v8:item>
 									</ToolTip>
-									<Behavior>Usual</Behavior>
 									<Representation>None</Representation>
 									<ShowTitle>false</ShowTitle>
 									<ExtendedTooltip name="ГруппаОтложенноеЗавершениеРасширеннаяПодсказка" id="610"/>
@@ -418,6 +409,7 @@
 							<v8:content>Продукция</v8:content>
 						</v8:item>
 					</Title>
+					<TitleDataPath>Объект.Продукция.RowsCount</TitleDataPath>
 					<ExtendedTooltip name="ГруппаТоварыРасширеннаяПодсказка" id="287"/>
 					<ChildItems>
 						<UsualGroup name="ГруппаПродукция" id="60">
@@ -428,7 +420,6 @@
 								</v8:item>
 							</Title>
 							<Group>Vertical</Group>
-							<Behavior>Usual</Behavior>
 							<ShowTitle>false</ShowTitle>
 							<ExtendedTooltip name="ГруппаПродукцияРасширеннаяПодсказка" id="61"/>
 							<ChildItems>
@@ -472,6 +463,7 @@
 									<Events>
 										<Event name="BeforeDeleteRow">ПродукцияПередУдалением</Event>
 										<Event name="OnActivateRow">ПродукцияПриАктивизацииСтроки</Event>
+										<Event name="OnStartEdit">ПродукцияПриНачалеРедактирования</Event>
 										<Event name="AfterDeleteRow">ПродукцияПослеУдаления</Event>
 									</Events>
 									<ChildItems>
@@ -633,7 +625,6 @@
 								</v8:item>
 							</Title>
 							<Group>Horizontal</Group>
-							<Behavior>Usual</Behavior>
 							<Representation>None</Representation>
 							<ShowTitle>false</ShowTitle>
 							<ExtendedTooltip name="ГруппаМаркировкаРасширеннаяПодсказка" id="345"/>
@@ -646,7 +637,6 @@
 										</v8:item>
 									</Title>
 									<Group>Vertical</Group>
-									<Behavior>Usual</Behavior>
 									<Representation>None</Representation>
 									<ShowTitle>false</ShowTitle>
 									<ExtendedTooltip name="ГруппаУровниУпаковкиРасширеннаяПодсказка" id="347"/>
@@ -735,7 +725,6 @@
 									</ChildItems>
 								</UsualGroup>
 								<UsualGroup name="Группа10" id="376">
-									<Behavior>Usual</Behavior>
 									<Representation>None</Representation>
 									<ShowTitle>false</ShowTitle>
 									<ExtendedTooltip name="Группа10РасширеннаяПодсказка" id="377"/>
@@ -839,6 +828,7 @@
 							<v8:content>Страница3</v8:content>
 						</v8:item>
 					</ToolTip>
+					<TitleDataPath>Объект.ПартииСписания.RowsCount</TitleDataPath>
 					<ExtendedTooltip name="Страница3РасширеннаяПодсказка" id="407"/>
 					<ChildItems>
 						<UsualGroup name="ГруппаПартииСписания" id="123">
@@ -849,7 +839,6 @@
 								</v8:item>
 							</Title>
 							<Group>Vertical</Group>
-							<Behavior>Usual</Behavior>
 							<ShowTitle>false</ShowTitle>
 							<ExtendedTooltip name="ГруппаПартииСписанияРасширеннаяПодсказка" id="124"/>
 							<ChildItems>
@@ -1119,7 +1108,6 @@
 							<ExtendedTooltip name="applicationIDРасширеннаяПодсказка" id="189"/>
 						</InputField>
 						<UsualGroup name="Группа13" id="511">
-							<Behavior>Usual</Behavior>
 							<ShowTitle>false</ShowTitle>
 							<ExtendedTooltip name="Группа13РасширеннаяПодсказка" id="512"/>
 							<ChildItems>
@@ -1147,6 +1135,7 @@
 									<ShowRoot>true</ShowRoot>
 									<AllowRootChoice>false</AllowRootChoice>
 									<UpdateOnDataChange>Auto</UpdateOnDataChange>
+									<AllowGettingCurrentRowURL>true</AllowGettingCurrentRowURL>
 									<ContextMenu name="ЗапросыКонтекстноеМеню" id="514"/>
 									<AutoCommandBar name="ЗапросыКоманднаяПанель" id="515">
 										<Autofill>false</Autofill>
@@ -1246,6 +1235,7 @@
 							<ShowRoot>true</ShowRoot>
 							<AllowRootChoice>false</AllowRootChoice>
 							<UpdateOnDataChange>Auto</UpdateOnDataChange>
+							<AllowGettingCurrentRowURL>true</AllowGettingCurrentRowURL>
 							<ContextMenu name="дсОстаткиПартийКонтекстноеМеню" id="621"/>
 							<AutoCommandBar name="дсОстаткиПартийКоманднаяПанель" id="622">
 								<Autofill>false</Autofill>

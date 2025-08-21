@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.13">
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.18">
 	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
 	<UseForFoldersAndItems>Items</UseForFoldersAndItems>
 	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
@@ -23,7 +23,6 @@
 					<ExtendedTooltip name="Группа2РасширеннаяПодсказка" id="22"/>
 					<ChildItems>
 						<UsualGroup name="Группа7" id="109">
-							<Behavior>Usual</Behavior>
 							<Representation>None</Representation>
 							<ShowTitle>false</ShowTitle>
 							<ExtendedTooltip name="Группа7РасширеннаяПодсказка" id="110"/>
@@ -55,7 +54,6 @@
 										</v8:item>
 									</ToolTip>
 									<Group>Vertical</Group>
-									<Behavior>Usual</Behavior>
 									<Representation>None</Representation>
 									<ShowTitle>false</ShowTitle>
 									<ThroughAlign>Use</ThroughAlign>
@@ -84,7 +82,6 @@
 											<v8:content>Соответствует справочнику 1С</v8:content>
 										</v8:item>
 									</Title>
-									<Behavior>Usual</Behavior>
 									<Representation>None</Representation>
 									<ExtendedTooltip name="Группа5РасширеннаяПодсказка" id="106"/>
 									<ChildItems>
@@ -114,14 +111,12 @@
 										</v8:item>
 									</ToolTip>
 									<Group>Vertical</Group>
-									<Behavior>Usual</Behavior>
 									<Representation>None</Representation>
 									<ThroughAlign>Use</ThroughAlign>
 									<ExtendedTooltip name="ГруппаАдресРасширеннаяПодсказка" id="102"/>
 									<ChildItems>
 										<UsualGroup name="Группа4" id="103">
 											<Group>Vertical</Group>
-											<Behavior>Usual</Behavior>
 											<Representation>None</Representation>
 											<ShowTitle>false</ShowTitle>
 											<ExtendedTooltip name="Группа4РасширеннаяПодсказка" id="104"/>
@@ -185,7 +180,6 @@
 															<v8:content>Группа улици и номер дома</v8:content>
 														</v8:item>
 													</ToolTip>
-													<Behavior>Usual</Behavior>
 													<Representation>None</Representation>
 													<ShowTitle>false</ShowTitle>
 													<ExtendedTooltip name="ГруппаУлициИНомерДомаРасширеннаяПодсказка" id="120"/>
@@ -233,7 +227,6 @@
 										</v8:item>
 									</ToolTip>
 									<Group>Vertical</Group>
-									<Behavior>Usual</Behavior>
 									<Representation>NormalSeparation</Representation>
 									<ShowTitle>false</ShowTitle>
 									<ExtendedTooltip name="грПерсональныеПараметрыСписанияПартийРасширеннаяПодсказка" id="96"/>
@@ -273,6 +266,13 @@
 											<CheckBoxType>Auto</CheckBoxType>
 											<ContextMenu name="ПарамЗнакСортировкиУбываниеКонтекстноеМеню" id="69"/>
 											<ExtendedTooltip name="ПарамЗнакСортировкиУбываниеРасширеннаяПодсказка" id="70"/>
+										</CheckBoxField>
+										<CheckBoxField name="Комиссия" id="133">
+											<DataPath>Объект.Комиссия</DataPath>
+											<TitleLocation>Right</TitleLocation>
+											<CheckBoxType>Auto</CheckBoxType>
+											<ContextMenu name="КомиссияКонтекстноеМеню" id="134"/>
+											<ExtendedTooltip name="КомиссияРасширеннаяПодсказка" id="135"/>
 										</CheckBoxField>
 										<InputField name="ПарамКолонкаСортировкиПартииСписания" id="65">
 											<DataPath>Объект.ПарамКолонкаСортировкиПартииСписания</DataPath>
@@ -343,7 +343,6 @@
 						</UsualGroup>
 						<UsualGroup name="Группа6" id="107">
 							<Group>Vertical</Group>
-							<Behavior>Usual</Behavior>
 							<Representation>None</Representation>
 							<ShowTitle>false</ShowTitle>
 							<ExtendedTooltip name="Группа6РасширеннаяПодсказка" id="108"/>
@@ -374,7 +373,6 @@
 										</v8:item>
 									</ToolTip>
 									<Group>Vertical</Group>
-									<Behavior>Usual</Behavior>
 									<Representation>None</Representation>
 									<ShowTitle>false</ShowTitle>
 									<ThroughAlign>Use</ThroughAlign>
@@ -447,6 +445,7 @@
 							<ShowRoot>true</ShowRoot>
 							<AllowRootChoice>false</AllowRootChoice>
 							<UpdateOnDataChange>Auto</UpdateOnDataChange>
+							<AllowGettingCurrentRowURL>true</AllowGettingCurrentRowURL>
 							<ContextMenu name="дсСоответствияКонтекстноеМеню" id="26"/>
 							<AutoCommandBar name="дсСоответствияКоманднаяПанель" id="27"/>
 							<ExtendedTooltip name="дсСоответствияРасширеннаяПодсказка" id="28"/>
@@ -622,7 +621,7 @@
 				<dcsset:appearance>
 					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
 						<dcscor:parameter>ЦветТекста</dcscor:parameter>
-						<dcscor:value xsi:type="v8ui:Color">style:AccentColor</dcscor:value>
+						<dcscor:value xsi:type="v8ui:Color">#009646</dcscor:value>
 					</dcscor:item>
 				</dcsset:appearance>
 			</dcsset:item>

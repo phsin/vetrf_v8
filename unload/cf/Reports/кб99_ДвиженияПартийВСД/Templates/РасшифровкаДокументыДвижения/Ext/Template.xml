@@ -27,13 +27,6 @@
 			</title>
 		</field>
 		<field xsi:type="DataSetFieldField">
-			<dataPath>Партия</dataPath>
-			<field>Партия</field>
-			<role>
-				<dcscom:dimension>true</dcscom:dimension>
-			</role>
-		</field>
-		<field xsi:type="DataSetFieldField">
 			<dataPath>Приход</dataPath>
 			<field>Приход</field>
 			<title xsi:type="v8:LocalStringType">
@@ -87,11 +80,32 @@
 				<dcscom:balanceType>ClosingBalance</dcscom:balanceType>
 			</role>
 		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Продукция_Элемент</dataPath>
+			<field>Продукция_Элемент</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ПродукцияЭлемент</dataPath>
+			<field>ПродукцияЭлемент</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Продукция элемент</v8:content>
+				</v8:item>
+			</title>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ВСД_Площадка</dataPath>
+			<field>ВСД_Площадка</field>
+		</field>
 		<dataSource>ИсточникДанных1</dataSource>
 		<query>ВЫБРАТЬ
 	кб99_ОстаткиПартийВСДОстаткиИОбороты.Период КАК Период,
 	кб99_ОстаткиПартийВСДОстаткиИОбороты.Регистратор.Ссылка КАК Документ,
-	кб99_ОстаткиПартийВСДОстаткиИОбороты.Партия КАК Партия,
+	кб99_ОстаткиПартийВСДОстаткиИОбороты.Продукция_Элемент КАК ПродукцияЭлемент,
 	кб99_ОстаткиПартийВСДОстаткиИОбороты.КоличествоНачальныйОстаток КАК НачальныйОстаток,
 	кб99_ОстаткиПартийВСДОстаткиИОбороты.КоличествоПриход КАК Приход,
 	кб99_ОстаткиПартийВСДОстаткиИОбороты.КоличествоРасход КАК Расход,

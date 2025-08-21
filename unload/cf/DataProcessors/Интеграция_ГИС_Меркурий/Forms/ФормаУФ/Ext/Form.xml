@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.13">
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.18">
 	<Title>
 		<v8:item>
 			<v8:lang>ru</v8:lang>
@@ -40,22 +40,49 @@
 				</Title>
 				<ExtendedTooltip name="кнГашениеРасширеннаяПодсказка" id="462"/>
 			</Button>
-			<Button name="кнПолучитьПартии2" id="643">
-				<Type>CommandBarButton</Type>
-				<Representation>PictureAndText</Representation>
-				<CommandName>Form.Command.кнПолучитьПартии</CommandName>
-				<Picture>
-					<xr:Ref>CommonPicture.kb99_download</xr:Ref>
-					<xr:LoadTransparent>false</xr:LoadTransparent>
-				</Picture>
+			<Popup name="ГруппаЗагрузитьПартии" id="731">
 				<Title>
 					<v8:item>
 						<v8:lang>ru</v8:lang>
 						<v8:content>Загрузить партии</v8:content>
 					</v8:item>
 				</Title>
-				<ExtendedTooltip name="кнПолучитьПартии2РасширеннаяПодсказка" id="644"/>
-			</Button>
+				<ToolTip>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Группа загрузить партии</v8:content>
+					</v8:item>
+				</ToolTip>
+				<ExtendedTooltip name="ГруппаЗагрузитьПартииРасширеннаяПодсказка" id="732"/>
+				<ChildItems>
+					<Button name="ФормаПолучитьПартииАктуальные" id="735">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.ПолучитьПартииАктуальные</CommandName>
+						<ExtendedTooltip name="ФормаПолучитьПартииАктуальныеРасширеннаяПодсказка" id="736"/>
+					</Button>
+					<Button name="кнПолучитьПартии2" id="643">
+						<Type>CommandBarButton</Type>
+						<Representation>PictureAndText</Representation>
+						<CommandName>Form.Command.ПолучитьПартии</CommandName>
+						<Picture>
+							<xr:Ref>CommonPicture.kb99_download</xr:Ref>
+							<xr:LoadTransparent>false</xr:LoadTransparent>
+						</Picture>
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Получить партии, созданные за период</v8:content>
+							</v8:item>
+						</Title>
+						<ExtendedTooltip name="кнПолучитьПартии2РасширеннаяПодсказка" id="644"/>
+					</Button>
+					<Button name="ФормаПолучитьПартииСИзменениями" id="733">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.ПолучитьПартииСИзменениями</CommandName>
+						<ExtendedTooltip name="ФормаПолучитьПартииСИзменениямиРасширеннаяПодсказка" id="734"/>
+					</Button>
+				</ChildItems>
+			</Popup>
 			<Button name="кнЗаполнитьТаблицуПартий" id="314">
 				<Type>CommandBarButton</Type>
 				<Representation>PictureAndText</Representation>
@@ -184,7 +211,6 @@
 				</v8:item>
 			</ToolTip>
 			<Group>Horizontal</Group>
-			<Behavior>Usual</Behavior>
 			<Representation>None</Representation>
 			<ShowTitle>false</ShowTitle>
 			<ExtendedTooltip name="ГруппаВыборПлощадкиРасширеннаяПодсказка" id="492"/>
@@ -261,7 +287,6 @@
 								</v8:item>
 							</ToolTip>
 							<Group>Horizontal</Group>
-							<Behavior>Usual</Behavior>
 							<Representation>None</Representation>
 							<ShowTitle>false</ShowTitle>
 							<ExtendedTooltip name="ПанельКнопок1РасширеннаяПодсказка" id="347"/>
@@ -322,8 +347,9 @@
 												</Button>
 												<Button name="кнПолучитьПартии1" id="312">
 													<Type>CommandBarButton</Type>
+													<Visible>false</Visible>
 													<Representation>PictureAndText</Representation>
-													<CommandName>Form.Command.кнПолучитьПартии</CommandName>
+													<CommandName>Form.Command.ПолучитьПартии</CommandName>
 													<Picture>
 														<xr:Ref>CommonPicture.kb99_download</xr:Ref>
 														<xr:LoadTransparent>false</xr:LoadTransparent>
@@ -579,7 +605,6 @@
 								</v8:item>
 							</ToolTip>
 							<Group>Horizontal</Group>
-							<Behavior>Usual</Behavior>
 							<Representation>None</Representation>
 							<ShowTitle>false</ShowTitle>
 							<ExtendedTooltip name="ПанельКнопок2РасширеннаяПодсказка" id="237"/>
@@ -734,6 +759,11 @@
 													<CommandName>Form.Command.кнПечатьНаборныйЛист</CommandName>
 													<ExtendedTooltip name="кнПечатьНаборныйЛистРасширеннаяПодсказка" id="664"/>
 												</Button>
+												<Button name="ПрикрепитьВСДВоВложенияЕИС" id="729">
+													<Type>CommandBarButton</Type>
+													<CommandName>Form.Command.ПрикрепитьВСДВоВложенияЕИС</CommandName>
+													<ExtendedTooltip name="ПрикрепитьВСДВоВложенияЕИСРасширеннаяПодсказка" id="730"/>
+												</Button>
 											</ChildItems>
 										</Popup>
 									</ChildItems>
@@ -752,7 +782,6 @@
 										</v8:item>
 									</ToolTip>
 									<Group>Horizontal</Group>
-									<Behavior>Usual</Behavior>
 									<Representation>None</Representation>
 									<ShowTitle>false</ShowTitle>
 									<ExtendedTooltip name="ПанельУсловийОтгрузкиРасширеннаяПодсказка" id="561"/>
@@ -804,6 +833,16 @@
 										</Button>
 									</ChildItems>
 								</UsualGroup>
+								<CheckBoxField name="флСкрытьОформленные" id="737">
+									<DataPath>флСкрытьОформленные</DataPath>
+									<TitleLocation>Right</TitleLocation>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="флСкрытьОформленныеКонтекстноеМеню" id="738"/>
+									<ExtendedTooltip name="флСкрытьОформленныеРасширеннаяПодсказка" id="739"/>
+									<Events>
+										<Event name="OnChange">флСкрытьОформленныеПриИзменении</Event>
+									</Events>
+								</CheckBoxField>
 							</ChildItems>
 						</UsualGroup>
 						<Table name="Отгрузки" id="146">
@@ -1091,7 +1130,6 @@
 							</ToolTip>
 							<HorizontalStretch>true</HorizontalStretch>
 							<Group>AlwaysHorizontal</Group>
-							<Behavior>Usual</Behavior>
 							<Representation>None</Representation>
 							<ChildItemsWidth>Equal</ChildItemsWidth>
 							<ShowTitle>false</ShowTitle>
@@ -1113,7 +1151,6 @@
 									</ToolTip>
 									<HorizontalStretch>true</HorizontalStretch>
 									<Group>Vertical</Group>
-									<Behavior>Usual</Behavior>
 									<Representation>StrongSeparation</Representation>
 									<ExtendedTooltip name="ГруппаТранспортныеВСДРасширеннаяПодсказка" id="353"/>
 								</UsualGroup>
@@ -1132,7 +1169,6 @@
 									</ToolTip>
 									<HorizontalStretch>true</HorizontalStretch>
 									<Group>Vertical</Group>
-									<Behavior>Usual</Behavior>
 									<Representation>StrongSeparation</Representation>
 									<ExtendedTooltip name="ГруппаПроизводственныеВСДРасширеннаяПодсказка" id="355"/>
 								</UsualGroup>
@@ -1151,7 +1187,6 @@
 									</ToolTip>
 									<HorizontalStretch>true</HorizontalStretch>
 									<Group>Vertical</Group>
-									<Behavior>Usual</Behavior>
 									<Representation>StrongSeparation</Representation>
 									<ExtendedTooltip name="ГруппаПереместитьОтПоставщикаРасширеннаяПодсказка" id="359"/>
 								</UsualGroup>
@@ -1170,7 +1205,6 @@
 									</ToolTip>
 									<HorizontalStretch>true</HorizontalStretch>
 									<Group>Vertical</Group>
-									<Behavior>Usual</Behavior>
 									<Representation>StrongSeparation</Representation>
 									<ExtendedTooltip name="ГруппаСоздатьИнвентаризациюРасширеннаяПодсказка" id="597"/>
 								</UsualGroup>
@@ -1189,7 +1223,6 @@
 									</ToolTip>
 									<HorizontalStretch>true</HorizontalStretch>
 									<VerticalStretch>false</VerticalStretch>
-									<Behavior>Usual</Behavior>
 									<Representation>StrongSeparation</Representation>
 									<ExtendedTooltip name="ЛабораторныеИсследованияРасширеннаяПодсказка" id="616"/>
 								</UsualGroup>
@@ -1589,7 +1622,6 @@
 				</v8:item>
 			</ToolTip>
 			<Group>AlwaysHorizontal</Group>
-			<Behavior>Usual</Behavior>
 			<Representation>None</Representation>
 			<ShowTitle>false</ShowTitle>
 			<ExtendedTooltip name="ГруппаТекущаяВерсияРасширеннаяПодсказка" id="699"/>
@@ -1641,7 +1673,6 @@
 					</ToolTip>
 					<Group>AlwaysHorizontal</Group>
 					<ChildrenAlign>ItemsLeftTitlesLeft</ChildrenAlign>
-					<Behavior>Usual</Behavior>
 					<Representation>None</Representation>
 					<ShowTitle>false</ShowTitle>
 					<ExtendedTooltip name="ГруппаТехподдержкаРасширеннаяПодсказка" id="694"/>
@@ -1912,6 +1943,28 @@
 				</v8:StringQualifiers>
 			</Type>
 		</Attribute>
+		<Attribute name="флЗаказы" id="17">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Фл заказы</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="флСкрытьОформленные" id="18">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Скрыть оформленные</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
 		<ConditionalAppearance>
 			<dcsset:item>
 				<dcsset:selection>
@@ -2016,37 +2069,7 @@
 			<dcsset:item>
 				<dcsset:selection>
 					<dcsset:item>
-						<dcsset:field>ПартииНомерСтроки</dcsset:field>
-					</dcsset:item>
-					<dcsset:item>
-						<dcsset:field>ПартииВСД_Продукция_Элемент</dcsset:field>
-					</dcsset:item>
-					<dcsset:item>
-						<dcsset:field>ПартииПартия</dcsset:field>
-					</dcsset:item>
-					<dcsset:item>
-						<dcsset:field>ПартииКоличество</dcsset:field>
-					</dcsset:item>
-					<dcsset:item>
-						<dcsset:field>ПартииКоличествоМест</dcsset:field>
-					</dcsset:item>
-					<dcsset:item>
-						<dcsset:field>ПартииКоличествоСписания</dcsset:field>
-					</dcsset:item>
-					<dcsset:item>
-						<dcsset:field>ПартииВСД_Производство</dcsset:field>
-					</dcsset:item>
-					<dcsset:item>
-						<dcsset:field>ПартииПолеСортировки</dcsset:field>
-					</dcsset:item>
-					<dcsset:item>
-						<dcsset:field>ПартииНоменклатура</dcsset:field>
-					</dcsset:item>
-					<dcsset:item>
-						<dcsset:field>ПартииДокумент</dcsset:field>
-					</dcsset:item>
-					<dcsset:item>
-						<dcsset:field>ПартииОстаток</dcsset:field>
+						<dcsset:field>Партии</dcsset:field>
 					</dcsset:item>
 				</dcsset:selection>
 				<dcsset:filter>
@@ -2066,37 +2089,7 @@
 			<dcsset:item>
 				<dcsset:selection>
 					<dcsset:item>
-						<dcsset:field>ПартииНомерСтроки</dcsset:field>
-					</dcsset:item>
-					<dcsset:item>
-						<dcsset:field>ПартииВСД_Продукция_Элемент</dcsset:field>
-					</dcsset:item>
-					<dcsset:item>
-						<dcsset:field>ПартииПартия</dcsset:field>
-					</dcsset:item>
-					<dcsset:item>
-						<dcsset:field>ПартииКоличество</dcsset:field>
-					</dcsset:item>
-					<dcsset:item>
-						<dcsset:field>ПартииКоличествоМест</dcsset:field>
-					</dcsset:item>
-					<dcsset:item>
-						<dcsset:field>ПартииКоличествоСписания</dcsset:field>
-					</dcsset:item>
-					<dcsset:item>
-						<dcsset:field>ПартииВСД_Производство</dcsset:field>
-					</dcsset:item>
-					<dcsset:item>
-						<dcsset:field>ПартииПолеСортировки</dcsset:field>
-					</dcsset:item>
-					<dcsset:item>
-						<dcsset:field>ПартииДокумент</dcsset:field>
-					</dcsset:item>
-					<dcsset:item>
-						<dcsset:field>ПартииНоменклатура</dcsset:field>
-					</dcsset:item>
-					<dcsset:item>
-						<dcsset:field>ПартииОстаток</dcsset:field>
+						<dcsset:field>Партии</dcsset:field>
 					</dcsset:item>
 				</dcsset:selection>
 				<dcsset:filter>
@@ -2116,37 +2109,7 @@
 			<dcsset:item>
 				<dcsset:selection>
 					<dcsset:item>
-						<dcsset:field>ПартииНомерСтроки</dcsset:field>
-					</dcsset:item>
-					<dcsset:item>
-						<dcsset:field>ПартииВСД_Продукция_Элемент</dcsset:field>
-					</dcsset:item>
-					<dcsset:item>
-						<dcsset:field>ПартииПартия</dcsset:field>
-					</dcsset:item>
-					<dcsset:item>
-						<dcsset:field>ПартииКоличество</dcsset:field>
-					</dcsset:item>
-					<dcsset:item>
-						<dcsset:field>ПартииКоличествоМест</dcsset:field>
-					</dcsset:item>
-					<dcsset:item>
-						<dcsset:field>ПартииКоличествоСписания</dcsset:field>
-					</dcsset:item>
-					<dcsset:item>
-						<dcsset:field>ПартииВСД_Производство</dcsset:field>
-					</dcsset:item>
-					<dcsset:item>
-						<dcsset:field>ПартииПолеСортировки</dcsset:field>
-					</dcsset:item>
-					<dcsset:item>
-						<dcsset:field>ПартииДокумент</dcsset:field>
-					</dcsset:item>
-					<dcsset:item>
-						<dcsset:field>ПартииНоменклатура</dcsset:field>
-					</dcsset:item>
-					<dcsset:item>
-						<dcsset:field>ПартииОстаток</dcsset:field>
+						<dcsset:field>Партии</dcsset:field>
 					</dcsset:item>
 				</dcsset:selection>
 				<dcsset:filter>
@@ -2246,7 +2209,7 @@
 			<Action>СнятьОтметкиДокументов</Action>
 			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
-		<Command name="кнПолучитьПартии" id="10">
+		<Command name="ПолучитьПартии" id="10">
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
@@ -2259,7 +2222,7 @@
 					<v8:content>Загрузить партии из Меркурий по выбранной площадке</v8:content>
 				</v8:item>
 			</ToolTip>
-			<Action>кнПолучитьПартии</Action>
+			<Action>ПолучитьПартии</Action>
 			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="ЗагрузитьПлощадкиПоСпискуДокументовНаименование" id="11">
@@ -2866,6 +2829,54 @@
 				<xr:LoadTransparent>true</xr:LoadTransparent>
 			</Picture>
 			<Action>ПроизводствоПоВидамПродукции</Action>
+		</Command>
+		<Command name="ПрикрепитьВСДВоВложенияЕИС" id="16">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Прикрепить ВСД во вложения ЕИС</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Прикрепить ВСДВо вложения ЕИС</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ПрикрепитьВСДВоВложенияЕИС</Action>
+			<Action>кб99_ПрикрепитьВСДВоВложенияЕИСПосле</Action>
+		</Command>
+		<Command name="ПолучитьПартииСИзменениями" id="17">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Получить партии с изменениями за период</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Загрузить партии из Меркурий по выбранной площадке</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ПолучитьПартииСИзменениями</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ПолучитьПартииАктуальные" id="18">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Получить актуальные партии (&gt;0)</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Загрузить партии из Меркурий по выбранной площадке</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ПолучитьПартииАктуальные</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 	</Commands>
 </Form>

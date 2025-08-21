@@ -1,6 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.13">
-	<VerticalScroll>useWithoutStretch</VerticalScroll>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.18">
 	<UseForFoldersAndItems>Items</UseForFoldersAndItems>
 	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
 	<Events>
@@ -15,14 +14,12 @@
 				</v8:item>
 			</ToolTip>
 			<Group>AlwaysHorizontal</Group>
-			<Behavior>Usual</Behavior>
 			<Representation>None</Representation>
 			<ShowTitle>false</ShowTitle>
 			<ExtendedTooltip name="ГруппаГоловаРасширеннаяПодсказка" id="2"/>
 			<ChildItems>
 				<UsualGroup name="Группа1" id="3">
 					<Group>Vertical</Group>
-					<Behavior>Usual</Behavior>
 					<Representation>None</Representation>
 					<ChildItemsWidth>Equal</ChildItemsWidth>
 					<ShowTitle>false</ShowTitle>
@@ -49,7 +46,6 @@
 				</UsualGroup>
 				<UsualGroup name="Группа3" id="34">
 					<Group>Vertical</Group>
-					<Behavior>Usual</Behavior>
 					<Representation>None</Representation>
 					<ShowTitle>false</ShowTitle>
 					<ThroughAlign>Use</ThroughAlign>
@@ -73,7 +69,6 @@
 				</UsualGroup>
 				<UsualGroup name="Группа38" id="662">
 					<Group>Vertical</Group>
-					<Behavior>Usual</Behavior>
 					<Representation>None</Representation>
 					<ShowTitle>false</ShowTitle>
 					<ExtendedTooltip name="Группа38РасширеннаяПодсказка" id="663"/>
@@ -93,7 +88,6 @@
 				</UsualGroup>
 				<UsualGroup name="Группа2" id="717">
 					<Group>Vertical</Group>
-					<Behavior>Usual</Behavior>
 					<Representation>None</Representation>
 					<ShowTitle>false</ShowTitle>
 					<ExtendedTooltip name="Группа2РасширеннаяПодсказка" id="718"/>
@@ -135,6 +129,7 @@
 					<v8:content>Страницы</v8:content>
 				</v8:item>
 			</ToolTip>
+			<VerticalStretch>true</VerticalStretch>
 			<PagesRepresentation>TabsOnLeftHorizontal</PagesRepresentation>
 			<ExtendedTooltip name="СтраницыРасширеннаяПодсказка" id="46"/>
 			<ChildItems>
@@ -155,7 +150,6 @@
 					<ChildItems>
 						<UsualGroup name="Группа19" id="727">
 							<Group>Vertical</Group>
-							<Behavior>Usual</Behavior>
 							<Representation>None</Representation>
 							<ShowTitle>false</ShowTitle>
 							<ExtendedTooltip name="Группа19РасширеннаяПодсказка" id="728"/>
@@ -189,7 +183,6 @@
 										</v8:item>
 									</ToolTip>
 									<Group>AlwaysHorizontal</Group>
-									<Behavior>Usual</Behavior>
 									<Representation>None</Representation>
 									<ExtendedTooltip name="ГруппаВСДРасширеннаяПодсказка" id="115"/>
 									<ChildItems>
@@ -264,7 +257,6 @@
 								</v8:item>
 							</Title>
 							<Group>Vertical</Group>
-							<Behavior>Usual</Behavior>
 							<Representation>StrongSeparation</Representation>
 							<ExtendedTooltip name="Группа37РасширеннаяПодсказка" id="661"/>
 							<ChildItems>
@@ -323,13 +315,11 @@
 					<ChildItems>
 						<UsualGroup name="Группа9" id="721">
 							<Group>AlwaysHorizontal</Group>
-							<Behavior>Usual</Behavior>
 							<ShowTitle>false</ShowTitle>
 							<ExtendedTooltip name="Группа9РасширеннаяПодсказка" id="722"/>
 							<ChildItems>
 								<UsualGroup name="Группа14" id="222">
 									<Group>Vertical</Group>
-									<Behavior>Usual</Behavior>
 									<Representation>None</Representation>
 									<ShowTitle>false</ShowTitle>
 									<ExtendedTooltip name="Группа14РасширеннаяПодсказка" id="223"/>
@@ -363,14 +353,12 @@
 								</UsualGroup>
 								<UsualGroup name="Группа15" id="723">
 									<Group>Vertical</Group>
-									<Behavior>Usual</Behavior>
 									<Representation>None</Representation>
 									<ShowTitle>false</ShowTitle>
 									<ExtendedTooltip name="Группа15РасширеннаяПодсказка" id="724"/>
 									<ChildItems>
 										<UsualGroup name="Группа4" id="226">
 											<Group>Vertical</Group>
-											<Behavior>Usual</Behavior>
 											<Representation>None</Representation>
 											<ShowTitle>false</ShowTitle>
 											<ExtendedTooltip name="Группа4РасширеннаяПодсказка" id="227"/>
@@ -391,7 +379,6 @@
 										</UsualGroup>
 										<UsualGroup name="Группа16" id="228">
 											<Group>Vertical</Group>
-											<Behavior>Usual</Behavior>
 											<Representation>None</Representation>
 											<ShowTitle>false</ShowTitle>
 											<ExtendedTooltip name="Группа16РасширеннаяПодсказка" id="229"/>
@@ -418,7 +405,6 @@
 						</UsualGroup>
 						<UsualGroup name="Группа17" id="236">
 							<Group>Horizontal</Group>
-							<Behavior>Usual</Behavior>
 							<Representation>None</Representation>
 							<ShowTitle>false</ShowTitle>
 							<ExtendedTooltip name="Группа17РасширеннаяПодсказка" id="237"/>
@@ -447,12 +433,10 @@
 								</v8:item>
 							</ToolTip>
 							<Group>AlwaysHorizontal</Group>
-							<Behavior>Usual</Behavior>
 							<ExtendedTooltip name="ГруппаСрокиРасширеннаяПодсказка" id="264"/>
 							<ChildItems>
 								<UsualGroup name="Группа24" id="768">
 									<Group>Vertical</Group>
-									<Behavior>Usual</Behavior>
 									<Representation>None</Representation>
 									<ShowTitle>false</ShowTitle>
 									<ExtendedTooltip name="Группа24РасширеннаяПодсказка" id="769"/>
@@ -475,7 +459,6 @@
 								</UsualGroup>
 								<UsualGroup name="Группа23" id="281">
 									<Group>Vertical</Group>
-									<Behavior>Usual</Behavior>
 									<Representation>None</Representation>
 									<ShowTitle>false</ShowTitle>
 									<ExtendedTooltip name="Группа23РасширеннаяПодсказка" id="282"/>
@@ -498,7 +481,6 @@
 								</UsualGroup>
 								<UsualGroup name="Группа22" id="279">
 									<Group>Vertical</Group>
-									<Behavior>Usual</Behavior>
 									<Representation>None</Representation>
 									<ShowTitle>false</ShowTitle>
 									<ExtendedTooltip name="Группа22РасширеннаяПодсказка" id="280"/>
@@ -518,7 +500,6 @@
 							</ChildItems>
 						</UsualGroup>
 						<UsualGroup name="Группа18" id="244">
-							<Behavior>Usual</Behavior>
 							<Representation>None</Representation>
 							<ShowTitle>false</ShowTitle>
 							<ExtendedTooltip name="Группа18РасширеннаяПодсказка" id="245"/>
@@ -537,7 +518,6 @@
 										</v8:item>
 									</ToolTip>
 									<Group>Horizontal</Group>
-									<Behavior>Usual</Behavior>
 									<ExtendedTooltip name="ГруппаФасовкаРасширеннаяПодсказка" id="262"/>
 									<ChildItems>
 										<InputField name="ФасовкаНаименование" id="249">
@@ -643,6 +623,136 @@
 						</InputField>
 					</ChildItems>
 				</Page>
+				<Page name="СтраницаЛабИсследования" id="782">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Лабораторные исследования</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Страница лаб исследования</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="СтраницаЛабИсследованияРасширеннаяПодсказка" id="783"/>
+					<ChildItems>
+						<Table name="ЛабораторныеИсследования" id="784">
+							<CommandBarLocation>None</CommandBarLocation>
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<DataPath>Объект.ЛабораторныеИсследования</DataPath>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="ЛабораторныеИсследованияКонтекстноеМеню" id="785"/>
+							<AutoCommandBar name="ЛабораторныеИсследованияКоманднаяПанель" id="786"/>
+							<ExtendedTooltip name="ЛабораторныеИсследованияРасширеннаяПодсказка" id="787"/>
+							<SearchStringAddition name="ЛабораторныеИсследованияСтрокаПоиска" id="788">
+								<AdditionSource>
+									<Item>ЛабораторныеИсследования</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ЛабораторныеИсследованияСтрокаПоискаКонтекстноеМеню" id="789"/>
+								<ExtendedTooltip name="ЛабораторныеИсследованияСтрокаПоискаРасширеннаяПодсказка" id="790"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="ЛабораторныеИсследованияСостояниеПросмотра" id="791">
+								<AdditionSource>
+									<Item>ЛабораторныеИсследования</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ЛабораторныеИсследованияСостояниеПросмотраКонтекстноеМеню" id="792"/>
+								<ExtendedTooltip name="ЛабораторныеИсследованияСостояниеПросмотраРасширеннаяПодсказка" id="793"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="ЛабораторныеИсследованияУправлениеПоиском" id="794">
+								<AdditionSource>
+									<Item>ЛабораторныеИсследования</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="ЛабораторныеИсследованияУправлениеПоискомКонтекстноеМеню" id="795"/>
+								<ExtendedTooltip name="ЛабораторныеИсследованияУправлениеПоискомРасширеннаяПодсказка" id="796"/>
+							</SearchControlAddition>
+							<ChildItems>
+								<LabelField name="ЛабораторныеИсследованияНомерСтроки" id="797">
+									<DataPath>Объект.ЛабораторныеИсследования.LineNumber</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ЛабораторныеИсследованияНомерСтрокиКонтекстноеМеню" id="798"/>
+									<ExtendedTooltip name="ЛабораторныеИсследованияНомерСтрокиРасширеннаяПодсказка" id="799"/>
+								</LabelField>
+								<InputField name="ЛабораторныеИсследованияНомерАктаОтбораПроб" id="800">
+									<DataPath>Объект.ЛабораторныеИсследования.НомерАктаОтбораПроб</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+									<ContextMenu name="ЛабораторныеИсследованияНомерАктаОтбораПробКонтекстноеМеню" id="801"/>
+									<ExtendedTooltip name="ЛабораторныеИсследованияНомерАктаОтбораПробРасширеннаяПодсказка" id="802"/>
+								</InputField>
+								<InputField name="ЛабораторныеИсследованияДатаОтбораПроб" id="803">
+									<DataPath>Объект.ЛабораторныеИсследования.ДатаОтбораПроб</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+									<ContextMenu name="ЛабораторныеИсследованияДатаОтбораПробКонтекстноеМеню" id="804"/>
+									<ExtendedTooltip name="ЛабораторныеИсследованияДатаОтбораПробРасширеннаяПодсказка" id="805"/>
+								</InputField>
+								<InputField name="ЛабораторныеИсследованияНаименованиеЛаборатории" id="806">
+									<DataPath>Объект.ЛабораторныеИсследования.НаименованиеЛаборатории</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+									<ContextMenu name="ЛабораторныеИсследованияНаименованиеЛабораторииКонтекстноеМеню" id="807"/>
+									<ExtendedTooltip name="ЛабораторныеИсследованияНаименованиеЛабораторииРасширеннаяПодсказка" id="808"/>
+								</InputField>
+								<InputField name="ЛабораторныеИсследованияНаименованиеПоказателя" id="809">
+									<DataPath>Объект.ЛабораторныеИсследования.НаименованиеПоказателя</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+									<ContextMenu name="ЛабораторныеИсследованияНаименованиеПоказателяКонтекстноеМеню" id="810"/>
+									<ExtendedTooltip name="ЛабораторныеИсследованияНаименованиеПоказателяРасширеннаяПодсказка" id="811"/>
+								</InputField>
+								<InputField name="ЛабораторныеИсследованияДатаРезультата" id="812">
+									<DataPath>Объект.ЛабораторныеИсследования.ДатаРезультата</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+									<ContextMenu name="ЛабораторныеИсследованияДатаРезультатаКонтекстноеМеню" id="813"/>
+									<ExtendedTooltip name="ЛабораторныеИсследованияДатаРезультатаРасширеннаяПодсказка" id="814"/>
+								</InputField>
+								<InputField name="ЛабораторныеИсследованияМетодИсследования" id="815">
+									<DataPath>Объект.ЛабораторныеИсследования.МетодИсследования</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+									<ContextMenu name="ЛабораторныеИсследованияМетодИсследованияКонтекстноеМеню" id="816"/>
+									<ExtendedTooltip name="ЛабораторныеИсследованияМетодИсследованияРасширеннаяПодсказка" id="817"/>
+								</InputField>
+								<InputField name="ЛабораторныеИсследованияНомерЭкспертизы" id="818">
+									<DataPath>Объект.ЛабораторныеИсследования.НомерЭкспертизы</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+									<ContextMenu name="ЛабораторныеИсследованияНомерЭкспертизыКонтекстноеМеню" id="819"/>
+									<ExtendedTooltip name="ЛабораторныеИсследованияНомерЭкспертизыРасширеннаяПодсказка" id="820"/>
+								</InputField>
+								<InputField name="ЛабораторныеИсследованияРезультатИсследования" id="821">
+									<DataPath>Объект.ЛабораторныеИсследования.РезультатИсследования</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+									<ContextMenu name="ЛабораторныеИсследованияРезультатИсследованияКонтекстноеМеню" id="822"/>
+									<ExtendedTooltip name="ЛабораторныеИсследованияРезультатИсследованияРасширеннаяПодсказка" id="823"/>
+								</InputField>
+								<InputField name="ЛабораторныеИсследованияЗаключение" id="824">
+									<DataPath>Объект.ЛабораторныеИсследования.Заключение</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+									<ContextMenu name="ЛабораторныеИсследованияЗаключениеКонтекстноеМеню" id="825"/>
+									<ExtendedTooltip name="ЛабораторныеИсследованияЗаключениеРасширеннаяПодсказка" id="826"/>
+								</InputField>
+								<InputField name="ЛабораторныеИсследованияДопСведения" id="827">
+									<DataPath>Объект.ЛабораторныеИсследования.ДопСведения</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+									<ContextMenu name="ЛабораторныеИсследованияДопСведенияКонтекстноеМеню" id="828"/>
+									<ExtendedTooltip name="ЛабораторныеИсследованияДопСведенияРасширеннаяПодсказка" id="829"/>
+								</InputField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
 				<Page name="СтраницаДоставка" id="719">
 					<Title>
 						<v8:item>
@@ -672,7 +782,6 @@
 								</v8:item>
 							</ToolTip>
 							<Group>Vertical</Group>
-							<Behavior>Usual</Behavior>
 							<Representation>None</Representation>
 							<ShowTitle>false</ShowTitle>
 							<ExtendedTooltip name="ГруппаАвтоРасширеннаяПодсказка" id="73"/>
@@ -703,7 +812,6 @@
 										</v8:item>
 									</ToolTip>
 									<Group>AlwaysHorizontal</Group>
-									<Behavior>Usual</Behavior>
 									<Representation>None</Representation>
 									<ThroughAlign>Use</ThroughAlign>
 									<ExtendedTooltip name="ГруппаТТНРасширеннаяПодсказка" id="668"/>
@@ -854,7 +962,6 @@
 										</v8:item>
 									</ToolTip>
 									<Group>AlwaysHorizontal</Group>
-									<Behavior>Usual</Behavior>
 									<Representation>None</Representation>
 									<ThroughAlign>Use</ThroughAlign>
 									<ExtendedTooltip name="ГруппаТСРасширеннаяПодсказка" id="181"/>
@@ -989,7 +1096,6 @@
 										</v8:item>
 									</ToolTip>
 									<Group>Vertical</Group>
-									<Behavior>Usual</Behavior>
 									<Representation>None</Representation>
 									<ExtendedTooltip name="ГруппаВетКонтрольРасширеннаяПодсказка" id="84"/>
 									<ChildItems>
@@ -1088,14 +1194,12 @@
 					<ChildItems>
 						<UsualGroup name="Группа34" id="457">
 							<Group>Vertical</Group>
-							<Behavior>Usual</Behavior>
 							<Representation>None</Representation>
 							<ShowTitle>false</ShowTitle>
 							<ExtendedTooltip name="Группа34РасширеннаяПодсказка" id="458"/>
 						</UsualGroup>
 						<UsualGroup name="Группа35" id="459">
 							<Group>Vertical</Group>
-							<Behavior>Usual</Behavior>
 							<Representation>None</Representation>
 							<ShowTitle>false</ShowTitle>
 							<ExtendedTooltip name="Группа35РасширеннаяПодсказка" id="460"/>
@@ -1273,7 +1377,6 @@
 								</v8:item>
 							</Title>
 							<Group>Vertical</Group>
-							<Behavior>Usual</Behavior>
 							<ShowTitle>false</ShowTitle>
 							<ExtendedTooltip name="ГруппаУсловияПеревозкиРасширеннаяПодсказка" id="619"/>
 							<ChildItems>
@@ -1358,7 +1461,6 @@
 					<ChildItems>
 						<UsualGroup name="Группа25" id="294">
 							<Group>Horizontal</Group>
-							<Behavior>Usual</Behavior>
 							<Representation>None</Representation>
 							<ShowTitle>false</ShowTitle>
 							<ExtendedTooltip name="Группа25РасширеннаяПодсказка" id="295"/>
@@ -1608,7 +1710,6 @@
 					<ExtendedTooltip name="СтраницаЗапросыРасширеннаяПодсказка" id="673"/>
 					<ChildItems>
 						<UsualGroup name="Группа20" id="729">
-							<Behavior>Usual</Behavior>
 							<ExtendedTooltip name="Группа20РасширеннаяПодсказка" id="730"/>
 						</UsualGroup>
 						<Table name="дсЗапросы" id="731">
@@ -1635,6 +1736,7 @@
 							<ShowRoot>false</ShowRoot>
 							<AllowRootChoice>false</AllowRootChoice>
 							<UpdateOnDataChange>Auto</UpdateOnDataChange>
+							<AllowGettingCurrentRowURL>true</AllowGettingCurrentRowURL>
 							<ContextMenu name="дсЗапросыКонтекстноеМеню" id="732"/>
 							<AutoCommandBar name="дсЗапросыКоманднаяПанель" id="733"/>
 							<ExtendedTooltip name="дсЗапросыРасширеннаяПодсказка" id="734"/>

@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.13">
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.18">
 	<AutoTime>CurrentOrLast</AutoTime>
 	<UsePostingMode>Auto</UsePostingMode>
 	<RepostOnWrite>true</RepostOnWrite>
@@ -38,14 +38,12 @@
 					<v8:content>Группа голова</v8:content>
 				</v8:item>
 			</ToolTip>
-			<Behavior>Usual</Behavior>
 			<Representation>None</Representation>
 			<ShowTitle>false</ShowTitle>
 			<ExtendedTooltip name="ГруппаГоловаРасширеннаяПодсказка" id="2"/>
 			<ChildItems>
 				<UsualGroup name="Группа1" id="3">
 					<Group>Horizontal</Group>
-					<Behavior>Usual</Behavior>
 					<Representation>None</Representation>
 					<ShowTitle>false</ShowTitle>
 					<ThroughAlign>DontUse</ThroughAlign>
@@ -90,6 +88,20 @@
 							<ContextMenu name="СтатусКонтекстноеМеню" id="6"/>
 							<ExtendedTooltip name="СтатусРасширеннаяПодсказка" id="7"/>
 						</LabelField>
+						<LabelField name="ДокументОснование" id="190">
+							<DataPath>Объект.ДокументОснование</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Основание</v8:content>
+								</v8:item>
+							</Title>
+							<EditMode>EnterOnInput</EditMode>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<Hiperlink>true</Hiperlink>
+							<ContextMenu name="ДокументОснованиеКонтекстноеМеню" id="191"/>
+							<ExtendedTooltip name="ДокументОснованиеРасширеннаяПодсказка" id="192"/>
+						</LabelField>
 					</ChildItems>
 				</UsualGroup>
 				<InputField name="Организация" id="14">
@@ -114,7 +126,6 @@
 					</Events>
 				</InputField>
 				<UsualGroup name="Группа2" id="185">
-					<Behavior>Usual</Behavior>
 					<Representation>None</Representation>
 					<ShowTitle>false</ShowTitle>
 					<BackColor>#FFDCDC</BackColor>
@@ -163,7 +174,6 @@
 							<ChildItems>
 								<UsualGroup name="Группа4" id="60">
 									<Group>Horizontal</Group>
-									<Behavior>Usual</Behavior>
 									<Representation>None</Representation>
 									<ShowTitle>false</ShowTitle>
 									<ExtendedTooltip name="Группа4РасширеннаяПодсказка" id="61"/>
@@ -261,8 +271,35 @@
 												<InputField name="ИсследованияРезультатИсследования" id="99">
 													<DataPath>Объект.Исследования.РезультатИсследования</DataPath>
 													<EditMode>EnterOnInput</EditMode>
+													<ListChoiceMode>true</ListChoiceMode>
 													<AutoChoiceIncomplete>true</AutoChoiceIncomplete>
 													<AutoMarkIncomplete>true</AutoMarkIncomplete>
+													<ChoiceList>
+														<xr:Item>
+															<xr:Presentation/>
+															<xr:CheckState>0</xr:CheckState>
+															<xr:Value xsi:type="FormChoiceListDesTimeValue">
+																<Presentation/>
+																<Value xsi:type="xr:DesignTimeRef">Enum.кб99_РезультатИсследования.EnumValue.UNKNOWN</Value>
+															</xr:Value>
+														</xr:Item>
+														<xr:Item>
+															<xr:Presentation/>
+															<xr:CheckState>0</xr:CheckState>
+															<xr:Value xsi:type="FormChoiceListDesTimeValue">
+																<Presentation/>
+																<Value xsi:type="xr:DesignTimeRef">Enum.кб99_РезультатИсследования.EnumValue.POSITIVE</Value>
+															</xr:Value>
+														</xr:Item>
+														<xr:Item>
+															<xr:Presentation/>
+															<xr:CheckState>0</xr:CheckState>
+															<xr:Value xsi:type="FormChoiceListDesTimeValue">
+																<Presentation/>
+																<Value xsi:type="xr:DesignTimeRef">Enum.кб99_РезультатИсследования.EnumValue.NEGATIVE</Value>
+															</xr:Value>
+														</xr:Item>
+													</ChoiceList>
 													<ContextMenu name="ИсследованияРезультатИсследованияКонтекстноеМеню" id="100"/>
 													<ExtendedTooltip name="ИсследованияРезультатИсследованияРасширеннаяПодсказка" id="101"/>
 												</InputField>
@@ -292,7 +329,6 @@
 								<UsualGroup name="Группа3" id="25">
 									<ReadOnly>true</ReadOnly>
 									<Group>Vertical</Group>
-									<Behavior>Usual</Behavior>
 									<Representation>None</Representation>
 									<ShowTitle>false</ShowTitle>
 									<ExtendedTooltip name="Группа3РасширеннаяПодсказка" id="26"/>
@@ -359,7 +395,6 @@
 									<ExtendedTooltip name="applicationIDРасширеннаяПодсказка" id="21"/>
 								</InputField>
 								<UsualGroup name="Группа13" id="115">
-									<Behavior>Usual</Behavior>
 									<ShowTitle>false</ShowTitle>
 									<ExtendedTooltip name="Группа13РасширеннаяПодсказка" id="116"/>
 									<ChildItems>
@@ -387,6 +422,7 @@
 											<ShowRoot>true</ShowRoot>
 											<AllowRootChoice>false</AllowRootChoice>
 											<UpdateOnDataChange>Auto</UpdateOnDataChange>
+											<AllowGettingCurrentRowURL>true</AllowGettingCurrentRowURL>
 											<ContextMenu name="ЗапросыКонтекстноеМеню" id="118"/>
 											<AutoCommandBar name="ЗапросыКоманднаяПанель" id="119">
 												<Autofill>false</Autofill>

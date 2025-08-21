@@ -1,0 +1,149 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<DataCompositionSchema xmlns="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcscom="http://v8.1c.ru/8.1/data-composition-system/common" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<dataSource>
+		<name>ИсточникДанных1</name>
+		<dataSourceType>Local</dataSourceType>
+	</dataSource>
+	<dataSet xsi:type="DataSetQuery">
+		<name>НаборДанных1</name>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Объект</dataPath>
+			<field>Объект</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Количество</dataPath>
+			<field>Количество</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Документ</dataPath>
+			<field>Документ</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Документ</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СтатусЗапроса</dataPath>
+			<field>СтатусЗапроса</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Период</dataPath>
+			<field>Период</field>
+		</field>
+		<dataSource>ИсточникДанных1</dataSource>
+		<query>ВЫБРАТЬ
+	ВСД2_транзакцияТовары.Ссылка КАК Документ,
+	ВСД2_транзакцияТовары.Количество КАК Количество,
+	кб99_ЗапросыСрезПоследних.СтатусЗапроса КАК СтатусЗапроса,
+	кб99_ЗапросыСрезПоследних.Период КАК Период
+ИЗ
+	Документ.ВСД2_транзакция.Товары КАК ВСД2_транзакцияТовары
+		ВНУТРЕННЕЕ СОЕДИНЕНИЕ РегистрСведений.кб99_Запросы.СрезПоследних КАК кб99_ЗапросыСрезПоследних
+		ПО ВСД2_транзакцияТовары.Ссылка = кб99_ЗапросыСрезПоследних.Объект
+			И (кб99_ЗапросыСрезПоследних.СтатусЗапросаПеречисление В (ЗНАЧЕНИЕ(Перечисление.кб99_СтатусЗапроса.COMPLETED), ЗНАЧЕНИЕ(Перечисление.кб99_СтатусЗапроса.IN_PROCESS), ЗНАЧЕНИЕ(Перечисление.кб99_СтатусЗапроса.ACCEPTED)))
+ГДЕ
+	ВСД2_транзакцияТовары.Партия = &amp;Партия
+
+ОБЪЕДИНИТЬ ВСЕ
+
+ВЫБРАТЬ
+	ВСД2_ИнвентаризацияПродукция.Ссылка,
+	ВСД2_ИнвентаризацияПродукция.Количество,
+	кб99_ЗапросыСрезПоследних.СтатусЗапроса,
+	кб99_ЗапросыСрезПоследних.Период
+ИЗ
+	Документ.ВСД2_Инвентаризация.Продукция КАК ВСД2_ИнвентаризацияПродукция
+		ВНУТРЕННЕЕ СОЕДИНЕНИЕ РегистрСведений.кб99_Запросы.СрезПоследних КАК кб99_ЗапросыСрезПоследних
+		ПО ВСД2_ИнвентаризацияПродукция.Ссылка = кб99_ЗапросыСрезПоследних.Объект
+			И (кб99_ЗапросыСрезПоследних.СтатусЗапросаПеречисление В (ЗНАЧЕНИЕ(Перечисление.кб99_СтатусЗапроса.COMPLETED), ЗНАЧЕНИЕ(Перечисление.кб99_СтатусЗапроса.IN_PROCESS), ЗНАЧЕНИЕ(Перечисление.кб99_СтатусЗапроса.ACCEPTED)))
+ГДЕ
+	ВСД2_ИнвентаризацияПродукция.Партия = &amp;Партия
+
+ОБЪЕДИНИТЬ ВСЕ
+
+ВЫБРАТЬ
+	ВСД2_ПроизводствоПартииСписания.Ссылка,
+	ВСД2_ПроизводствоПартииСписания.Количество,
+	кб99_ЗапросыСрезПоследних.СтатусЗапроса,
+	кб99_ЗапросыСрезПоследних.Период
+ИЗ
+	Документ.ВСД2_Производство.ПартииСписания КАК ВСД2_ПроизводствоПартииСписания
+		ВНУТРЕННЕЕ СОЕДИНЕНИЕ РегистрСведений.кб99_Запросы.СрезПоследних КАК кб99_ЗапросыСрезПоследних
+		ПО ВСД2_ПроизводствоПартииСписания.Ссылка = кб99_ЗапросыСрезПоследних.Объект
+			И (кб99_ЗапросыСрезПоследних.СтатусЗапросаПеречисление В (ЗНАЧЕНИЕ(Перечисление.кб99_СтатусЗапроса.COMPLETED), ЗНАЧЕНИЕ(Перечисление.кб99_СтатусЗапроса.IN_PROCESS), ЗНАЧЕНИЕ(Перечисление.кб99_СтатусЗапроса.ACCEPTED)))
+ГДЕ
+	ВСД2_ПроизводствоПартииСписания.Партия = &amp;Партия
+
+УПОРЯДОЧИТЬ ПО
+	Период</query>
+	</dataSet>
+	<totalField>
+		<dataPath>Количество</dataPath>
+		<expression>Сумма(Количество)</expression>
+	</totalField>
+	<parameter>
+		<name>Период</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Период</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>true</useRestriction>
+	</parameter>
+	<parameter>
+		<name>Партия</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Партия</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:CatalogRef.ВСД_Партия</v8:Type>
+		</valueType>
+		<value xsi:nil="true"/>
+		<useRestriction>true</useRestriction>
+		<denyIncompleteValues>true</denyIncompleteValues>
+	</parameter>
+	<settingsVariant>
+		<dcsset:name>Основной</dcsset:name>
+		<dcsset:presentation xsi:type="xs:string">Основной</dcsset:presentation>
+		<dcsset:settings xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows">
+			<dcsset:selection>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Документ</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Количество</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>СтатусЗапроса</dcsset:field>
+				</dcsset:item>
+			</dcsset:selection>
+			<dcsset:outputParameters>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>МакетОформления</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string">Античный</dcscor:value>
+				</dcscor:item>
+			</dcsset:outputParameters>
+			<dcsset:item xsi:type="dcsset:StructureItemGroup">
+				<dcsset:order>
+					<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+				</dcsset:order>
+				<dcsset:selection>
+					<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+				</dcsset:selection>
+			</dcsset:item>
+		</dcsset:settings>
+	</settingsVariant>
+</DataCompositionSchema>
