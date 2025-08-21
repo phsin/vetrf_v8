@@ -10,9 +10,6 @@
 		<Pages name="Группа1" id="28">
 			<PagesRepresentation>TabsOnTop</PagesRepresentation>
 			<ExtendedTooltip name="Группа1РасширеннаяПодсказка" id="29"/>
-			<Events>
-				<Event name="OnCurrentPageChange">Группа1ПриСменеСтраницы</Event>
-			</Events>
 			<ChildItems>
 				<Page name="страница1" id="30">
 					<Title>
@@ -479,139 +476,6 @@
 						</Table>
 					</ChildItems>
 				</Page>
-				<Page name="Группа15" id="34">
-					<Title>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>Соответствия</v8:content>
-						</v8:item>
-					</Title>
-					<Width>10</Width>
-					<Height>10</Height>
-					<ExtendedTooltip name="Группа15РасширеннаяПодсказка" id="35"/>
-					<ChildItems>
-						<Table name="дсСоответствия" id="36">
-							<Representation>List</Representation>
-							<UseAlternationRowColor>true</UseAlternationRowColor>
-							<EnableStartDrag>true</EnableStartDrag>
-							<FileDragMode>AsFile</FileDragMode>
-							<DataPath>дсСоответствия</DataPath>
-							<RowPictureDataPath>дсСоответствия.DefaultPicture</RowPictureDataPath>
-							<AutoRefresh>false</AutoRefresh>
-							<AutoRefreshPeriod>60</AutoRefreshPeriod>
-							<Period>
-								<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
-								<v8:startDate>0001-01-01T00:00:00</v8:startDate>
-								<v8:endDate>0001-01-01T00:00:00</v8:endDate>
-							</Period>
-							<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
-							<RestoreCurrentRow>false</RestoreCurrentRow>
-							<TopLevelParent xsi:nil="true"/>
-							<ShowRoot>true</ShowRoot>
-							<AllowRootChoice>false</AllowRootChoice>
-							<UpdateOnDataChange>Auto</UpdateOnDataChange>
-							<AllowGettingCurrentRowURL>true</AllowGettingCurrentRowURL>
-							<ContextMenu name="дсСоответствияКонтекстноеМеню" id="37"/>
-							<AutoCommandBar name="дсСоответствияКоманднаяПанель" id="38"/>
-							<ExtendedTooltip name="дсСоответствияРасширеннаяПодсказка" id="39"/>
-							<SearchStringAddition name="дсСоответствияСтрокаПоиска" id="40">
-								<AdditionSource>
-									<Item>дсСоответствия</Item>
-									<Type>SearchStringRepresentation</Type>
-								</AdditionSource>
-								<ContextMenu name="дсСоответствияСтрокаПоискаКонтекстноеМеню" id="41"/>
-								<ExtendedTooltip name="дсСоответствияСтрокаПоискаРасширеннаяПодсказка" id="42"/>
-							</SearchStringAddition>
-							<ViewStatusAddition name="дсСоответствияСостояниеПросмотра" id="43">
-								<AdditionSource>
-									<Item>дсСоответствия</Item>
-									<Type>ViewStatusRepresentation</Type>
-								</AdditionSource>
-								<ContextMenu name="дсСоответствияСостояниеПросмотраКонтекстноеМеню" id="44"/>
-								<ExtendedTooltip name="дсСоответствияСостояниеПросмотраРасширеннаяПодсказка" id="45"/>
-							</ViewStatusAddition>
-							<SearchControlAddition name="дсСоответствияУправлениеПоиском" id="46">
-								<AdditionSource>
-									<Item>дсСоответствия</Item>
-									<Type>SearchControl</Type>
-								</AdditionSource>
-								<ContextMenu name="дсСоответствияУправлениеПоискомКонтекстноеМеню" id="47"/>
-								<ExtendedTooltip name="дсСоответствияУправлениеПоискомРасширеннаяПодсказка" id="48"/>
-							</SearchControlAddition>
-							<Events>
-								<Event name="BeforeAddRow">дсСоответствияПередНачаломДобавления</Event>
-								<Event name="ChoiceProcessing">дсСоответствияОбработкаВыбора</Event>
-							</Events>
-							<ChildItems>
-								<LabelField name="дсСоответствияПервый" id="55">
-									<DataPath>~дсСоответствия.Второй</DataPath>
-									<Title>
-										<v8:item>
-											<v8:lang>ru</v8:lang>
-											<v8:content>ХС</v8:content>
-										</v8:item>
-									</Title>
-									<ContextMenu name="дсСоответствияПервыйКонтекстноеМеню" id="56"/>
-									<ExtendedTooltip name="дсСоответствияПервыйРасширеннаяПодсказка" id="57"/>
-								</LabelField>
-								<CheckBoxField name="дсСоответствияСоответствует" id="67">
-									<DataPath>~дсСоответствия.Соответствует</DataPath>
-									<CheckBoxType>Auto</CheckBoxType>
-									<ContextMenu name="дсСоответствияСоответствуетКонтекстноеМеню" id="68"/>
-									<ExtendedTooltip name="дсСоответствияСоответствуетРасширеннаяПодсказка" id="69"/>
-								</CheckBoxField>
-								<LabelField name="дсСоответствияНаименование" id="70">
-									<DataPath>дсСоответствия.Description</DataPath>
-									<ContextMenu name="дсСоответствияНаименованиеКонтекстноеМеню" id="71"/>
-									<ExtendedTooltip name="дсСоответствияНаименованиеРасширеннаяПодсказка" id="72"/>
-								</LabelField>
-								<LabelField name="дсСоответствияКод" id="73">
-									<DataPath>дсСоответствия.Code</DataPath>
-									<Visible>false</Visible>
-									<ContextMenu name="дсСоответствияКодКонтекстноеМеню" id="74"/>
-									<ExtendedTooltip name="дсСоответствияКодРасширеннаяПодсказка" id="75"/>
-								</LabelField>
-								<LabelField name="дсСоответствияКонтрагент" id="76">
-									<DataPath>дсСоответствия.Контрагент</DataPath>
-									<ContextMenu name="дсСоответствияКонтрагентКонтекстноеМеню" id="77"/>
-									<ExtendedTooltip name="дсСоответствияКонтрагентРасширеннаяПодсказка" id="78"/>
-								</LabelField>
-								<ColumnGroup name="дсГруппаUID" id="157">
-									<Title>
-										<v8:item>
-											<v8:lang>ru</v8:lang>
-											<v8:content>Дс группа UID</v8:content>
-										</v8:item>
-									</Title>
-									<ToolTip>
-										<v8:item>
-											<v8:lang>ru</v8:lang>
-											<v8:content>Дс группа UID</v8:content>
-										</v8:item>
-									</ToolTip>
-									<ExtendedTooltip name="дсГруппаUIDРасширеннаяПодсказка" id="158"/>
-									<ChildItems>
-										<LabelField name="дсСоответствияGUID" id="79">
-											<DataPath>дсСоответствия.GUID</DataPath>
-											<ContextMenu name="дсСоответствияGUIDКонтекстноеМеню" id="80"/>
-											<ExtendedTooltip name="дсСоответствияGUIDРасширеннаяПодсказка" id="81"/>
-										</LabelField>
-										<LabelField name="дсСоответствияUUID" id="82">
-											<DataPath>дсСоответствия.UUID</DataPath>
-											<ContextMenu name="дсСоответствияUUIDКонтекстноеМеню" id="83"/>
-											<ExtendedTooltip name="дсСоответствияUUIDРасширеннаяПодсказка" id="84"/>
-										</LabelField>
-									</ChildItems>
-								</ColumnGroup>
-								<LabelField name="дсСоответствияОГРН" id="85">
-									<DataPath>дсСоответствия.ОГРН</DataPath>
-									<ContextMenu name="дсСоответствияОГРНКонтекстноеМеню" id="86"/>
-									<ExtendedTooltip name="дсСоответствияОГРНРасширеннаяПодсказка" id="87"/>
-								</LabelField>
-							</ChildItems>
-						</Table>
-					</ChildItems>
-				</Page>
 			</ChildItems>
 		</Pages>
 	</ChildItems>
@@ -622,38 +486,6 @@
 			</Type>
 			<MainAttribute>true</MainAttribute>
 			<SavedData>true</SavedData>
-		</Attribute>
-		<Attribute name="дсСоответствия" id="2">
-			<Title>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Соответствия</v8:content>
-				</v8:item>
-			</Title>
-			<Type>
-				<v8:Type>cfg:DynamicList</v8:Type>
-			</Type>
-			<Settings xsi:type="DynamicList">
-				<ManualQuery>false</ManualQuery>
-				<DynamicDataRead>true</DynamicDataRead>
-				<MainTable>Catalog.ВСД_ХозСубъект</MainTable>
-				<ListSettings>
-					<dcsset:filter>
-						<dcsset:viewMode>Normal</dcsset:viewMode>
-						<dcsset:userSettingID>dfcece9d-5077-440b-b6b3-45a5cb4538eb</dcsset:userSettingID>
-					</dcsset:filter>
-					<dcsset:order>
-						<dcsset:viewMode>Normal</dcsset:viewMode>
-						<dcsset:userSettingID>88619765-ccb3-46c6-ac52-38e9c992ebd4</dcsset:userSettingID>
-					</dcsset:order>
-					<dcsset:conditionalAppearance>
-						<dcsset:viewMode>Normal</dcsset:viewMode>
-						<dcsset:userSettingID>b75fecce-942b-4aed-abc9-e6a02e460fb3</dcsset:userSettingID>
-					</dcsset:conditionalAppearance>
-					<dcsset:itemsViewMode>Normal</dcsset:itemsViewMode>
-					<dcsset:itemsUserSettingID>911b6018-f537-43e8-a417-da56b22f9aec</dcsset:itemsUserSettingID>
-				</ListSettings>
-			</Settings>
 		</Attribute>
 	</Attributes>
 </Form>

@@ -425,6 +425,8 @@
 			<Catalog>ВСД_УсловияПеревозки</Catalog>
 			<Catalog>СерииНоменклатуры</Catalog>
 			<Catalog>СтруктурныеЕдиницы</Catalog>
+			<Catalog>ВидыЦенПоставщиков</Catalog>
+			<Catalog>СпецификацииНоменклатуры</Catalog>
 			<Document>ПеремещениеТоваров</Document>
 			<Document>ВСД2_Производство</Document>
 			<Document>ВСД2_транзакция</Document>
@@ -436,7 +438,6 @@
 			<Document>ВСД2_ОбновитьТранспорт</Document>
 			<Document>ВСД</Document>
 			<Document>ВСД2</Document>
-			<Document>ВСД_транзакция</Document>
 			<Document>ПриобретениеТоваровУслуг</Document>
 			<Document>ПартииВСД</Document>
 			<Document>КорректировкаПриобретения</Document>
@@ -444,6 +445,7 @@
 			<Document>РасходнаяНакладная</Document>
 			<Document>РеализацияТоваров</Document>
 			<Document>ПеремещениеЗапасов</Document>
+			<Document>ПоступлениеТоваровУслуг</Document>
 			<DocumentJournal>кб99_ЖурналВСД</DocumentJournal>
 			<Enum>кб99_РезультатИсследования</Enum>
 			<Enum>кб99_УровниУпаковки</Enum>
@@ -481,7 +483,10 @@
 			<InformationRegister>кб99_ОстаткиПартийВетис</InformationRegister>
 			<InformationRegister>кб_НезавершенныеПроизводственныеТранзакции</InformationRegister>
 			<InformationRegister>кб99_Параметры</InformationRegister>
+			<InformationRegister>ШтрихкодыНоменклатуры</InformationRegister>
+			<InformationRegister>ПараметрыМаршрута</InformationRegister>
 			<AccumulationRegister>кб99_ОстаткиПартийВСД</AccumulationRegister>
+			<AccumulationRegister>ТоварыНаСкладах</AccumulationRegister>
 		</ChildObjects>
 	</Configuration>
 </MetaDataObject>
