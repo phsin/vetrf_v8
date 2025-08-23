@@ -1,7 +1,7 @@
 @chcp 65001
 
-@rem формирование файла конфигурации. для включения раскомментируйте код ниже
-@rem call vrunner compile --src src/cf --out build/1cv8.cf %*
+@rem Сборка основной разработческой ИБ. по умолчанию в каталоге build/ib
+call vrunner init-dev --src src/cf %*
 
 @rem обновление конфигурации основной разработческой ИБ из хранилища. для включения раскомментируйте код ниже
 @rem call vrunner loadrepo %*
@@ -13,11 +13,6 @@
 
 @rem собрать расширения конфигурации внутри ИБ
 @rem call vrunner compileext src/cfe/МоеРасширение МоеРасширение %*
-call vrunner compileext .\\src\\cfe кб99_ЕИС --updatedb --settings tools/vrunner.json 
 
-@rem compile cfe
-@rem vrunner compileexttocfe -s cfe -o testNew.cfe --ibconnection /F./build/ib --language ru
-
-@rem update cfe
-@rem call vrunner updateext кб99_ЕИС --settings tools/vrunner.json
-
+@rem Обновление в режиме Предприятия
+call vrunner run --command "ЗапуститьОбновлениеИнформационнойБазы;ЗавершитьРаботуСистемы;" --execute $runnerRoot\epf\ЗакрытьПредприятие.epf %*
