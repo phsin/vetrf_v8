@@ -8,8 +8,8 @@ pipeline {
     }
     
     environment {
-//        V8_VERSION = "8.3.25.1374"
-//        IB_PATH = "./build/ib"
+        V8_VERSION = "8.3.25.1374"
+        IB_PATH = "./build/ib"
     }
     
     stages {
