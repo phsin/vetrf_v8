@@ -994,6 +994,19 @@
 										<InputField name="ТоварыПартия" id="117">
 											<DataPath>Объект.Товары.Партия</DataPath>
 											<EditMode>EnterOnInput</EditMode>
+											<DropListButton>false</DropListButton>
+											<ChoiceButton>true</ChoiceButton>
+											<ChoiceButtonRepresentation>ShowInInputField</ChoiceButtonRepresentation>
+											<ClearButton>false</ClearButton>
+											<OpenButton>true</OpenButton>
+											<CreateButton>false</CreateButton>
+											<QuickChoice>false</QuickChoice>
+											<ChoiceForm>Catalog.ВСД_Партия.Form.ФормаВыбора</ChoiceForm>
+											<AutoShowOpenButtonMode>Always</AutoShowOpenButtonMode>
+											<SpellCheckingOnTextInput>DontUse</SpellCheckingOnTextInput>
+											<AutoCapitalizationOnTextInput>None</AutoCapitalizationOnTextInput>
+											<SpecialTextInputMode>None</SpecialTextInputMode>
+											<ChoiceHistoryOnInput>DontUse</ChoiceHistoryOnInput>
 											<ContextMenu name="ТоварыПартияКонтекстноеМеню" id="118"/>
 											<ExtendedTooltip name="ТоварыПартияРасширеннаяПодсказка" id="119"/>
 											<Events>
