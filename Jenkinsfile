@@ -3,8 +3,6 @@ pipeline {
     
     environment {
         V8_VERSION = "8.3.25.1374"
-        TEMPLATE_DB = "D:\\DevOps\\Demo\\SSR\\1Cv8.1CD"
-        EXTENSION_SRC = "src/cfe"
         IB_PATH = "./build/ib"
     }
     
@@ -74,18 +72,10 @@ pipeline {
             steps {
                 echo "Создание информационной базы из шаблона"
                 script {
-                    if (fileExists("${env.TEMPLATE_DB}")) {
                         echo "Копирование шаблона базы данных"
                         bat """
                             chcp 65001 > nul
-                            if exist "${env.IB_PATH}" rmdir /s /q "${env.IB_PATH}"
-                            echo D | xcopy /E /I /Y "${env.TEMPLATE_DB}" "${env.IB_PATH}"
-                        """
-                    } else {
-                        echo "Создание новой пустой базы данных"
-                        bat """
-                            chcp 65001 > nul
-                            vrunner init-dev --ibconnection "/F${env.IB_PATH}" --settings tools/vrunner.json
+                            prepare.cmd
                         """
                     }
                 }
@@ -102,25 +92,16 @@ pipeline {
         //     }
         // }
         
-        stage('Сборка и загрузка расширения') {
+        stage('Сборка и загрузка из репозитория') {
             steps {
-                echo "Сборка и загрузка расширения из исходников"
+                echo "Сборка и загрузка из репозитория"
                 bat """
+                    chcp 65001 > nul
                     call build.cmd 
                 """
             }
         }
-        
-        // stage('Синтаксический контроль') {
-        //     steps {
-        //         echo "Выполнение синтаксического контроля"
-        //         bat """
-        //             chcp 65001 > nul
-        //             vrunner syntax-check --ibconnection "/F${env.IB_PATH}" --settings tools/vrunner.json
-        //         """
-        //     }
-        // }
-        
+                
         stage('Start BDD Tests') {
             steps {
                 echo "Запуск BDD тестов с подробным логированием"
@@ -163,6 +144,16 @@ pipeline {
                         currentBuild.result = 'UNSTABLE'
                     }
                 }
+            }
+        }
+
+        stage('Синтаксический контроль') {
+            steps {
+                echo "Выполнение синтаксического контроля"
+                bat """
+                    chcp 65001 > nul
+                    call syntax-check.cmd
+                """
             }
         }
     }
