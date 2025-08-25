@@ -1,8 +1,8 @@
 {
     "$schema": "https://raw.githubusercontent.com/vanessa-opensource/vanessa-runner/develop/vanessa-runner-schema.json",
     "default": {
-        "--ibconnection": "/F.D:\\DevOps\\Demo\\Vetis\\1Cv8.1CD",
-        "--db-user": "Admin",
+        "--ibconnection": "/F./build/ib",
+        "--db-user": "Администратор",
         "--db-pwd": "",
         "--root": ".",
         "--workspace": ".",
@@ -12,20 +12,24 @@
         "--additional": "/DisplayAllFunctions /Lru  /iTaxi /TESTMANAGER",
         "--ordinaryapp": "-1"
     },
-    "loadrepo": {
-        "--disable-support": true
-    },
-    "update-dev": {
-        "--disable-support": true
-    },
     "init-dev": {
-        "--template": "D:\\DevOps\\Demo\\Vetis\\1Cv8.1CD"
+
     },
-    "compileext": {
-        "--extension-name": "кб99_ЕИС"
+    "vanessa": {        
+        "--vanessasettings": "./tools/VAmin.json",
+        "--pathvanessa": "./tools/vanessa-automation-single.epf",
+        "--workspace": ".",
+        "--additional": "/DisplayAllFunctions /L ru",
+        "--buildstatus": "./build/buildstatus.log"
     },
-    "vanessa": {
-        "--vanessasettings": "./tools/JSON/vanessaBddConf.json"
+    "vanessa-add": {        
+        "--pathvanessa": "D:\\1cBase\\Tests\\vanessa-automation\\vanessa-automation.epf",
+        "--vanessasettings": "./tools/EISParams.json",
+        "--vanessasettings": "./tools/JSON/vanessaAutomationSingle.json",
+        "--vanessasettings": "./tools/VAParams.json",        
+        "--pathvanessa": "./tools/vanessa-automation.epf",
+        "--workspace": ".",
+        "--additional": "/DisplayAllFunctions /L ru"        
     },
     "xunit": {
         "--xddConfig": "./tools/JSON/vanessaTddConf.json",
@@ -36,8 +40,8 @@
     "syntax-check": {
         "--groupbymetadata": true,
         "--exception-file": "tools/syntax-check-excludes.txt",
-        "--junitpath": "out/syntax-check/junit/junit.xml",
-        "--allure-results2": "out/syntax-check/allure",
+        "--junitpath": "build/reports/syntax-check/junit/junit.xml",
+        "--allure-results2": "build/reports/syntax-check/allure",
         "--mode": [
             "-ExtendedModulesCheck",
             "-ThinClient",
