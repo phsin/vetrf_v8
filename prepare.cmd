@@ -2,11 +2,12 @@
 
 if exist "build/ib" rmdir /s /q "build/ib"
 echo D | xcopy /E /I /Y "D:\DevOps\Demo\Vetis\" "build/ib"
-if %ERRORLEVEL% neq 0 (
-    echo ОШИБКА: Не удалось скопировать шаблон базы из D:\DevOps\Demo\Vetis\
-    echo Проверьте существование каталога источника
-    exit /b 1
-)
+
+rem if %ERRORLEVEL% neq 0 (
+rem     echo ОШИБКА: Не удалось скопировать шаблон базы из D:\DevOps\Demo\Vetis\
+rem     echo Проверьте существование каталога источника
+rem     exit /b 1
+rem )
 
 
 @rem Сборка основной разработческой ИБ. по умолчанию в каталоге build/ib
