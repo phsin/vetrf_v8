@@ -1,9 +1,15 @@
 pipeline {
     agent any
     
+    options {
+        timeout(time: 2, unit: 'HOURS')
+        timestamps()
+        buildDiscarder(logRotator(numToKeepStr: '10'))
+    }
+    
     environment {
-        V8_VERSION = "8.3.25.1374"
-        IB_PATH = "./build/ib"
+//        V8_VERSION = "8.3.25.1374"
+//        IB_PATH = "./build/ib"
     }
     
     stages {
@@ -43,7 +49,7 @@ pipeline {
         } */
 
 
-    /*     stage('Подготовка') {
+        /* stage('Подготовка') {
             steps {
                 echo "Подготовка рабочего пространства"
                  bat '''
@@ -77,10 +83,10 @@ pipeline {
                             chcp 65001 > nul
                             prepare.cmd
                         """
-                    }
                 }
             }
         }
+        
         
         // stage('Обновление из хранилища') {
         //     steps {
@@ -130,7 +136,7 @@ pipeline {
                         //     bat 'powershell "Get-Content build\\logs\\vanessa-console.log -Tail 30"'
                         // }
                         
-/*                         // Список файлов ошибок
+                        /* // Список файлов ошибок
                         bat '''
                             echo === Список файлов ошибок ===
                             if exist build\\logs\\errors\\*.* (
@@ -162,46 +168,39 @@ pipeline {
         always {
             echo "Публикация отчетов и сбор статистики"
             script {
-                // Публикация отчетов Allure
-                if (fileExists('build/out/allure')) {
+                // Публикация отчетов Allure (Vanessa тесты)
+                if (fileExists('out/smoke/allure')) {
                     allure([
                         includeProperties: false,
                         jdk: '',
                         properties: [],
                         reportBuildPolicy: 'ALWAYS',
-                        results: [[path: 'build/out/allure']]
+                        results: [[path: 'out/smoke/allure']]
                     ])
                 }
                 
-                // Публикация синтаксических отчетов
-                if (fileExists('out/syntax-check')) {
-                    publishHTML([
-                        allowMissing: true,
-                        alwaysLinkToLastBuild: true,
-                        keepAll: true,
-                        reportDir: 'out/syntax-check',
-                        reportFiles: '*.html',
-                        reportName: 'Syntax Check Report'
+                // Публикация синтаксических отчетов (JUnit)
+                if (fileExists('build/reports/syntax-check/junit')) {
+                    junit testResults: 'build/reports/syntax-check/junit/*.xml', allowEmptyResults: true
+                }
+                
+                // Публикация синтаксических отчетов (Allure)
+                if (fileExists('build/reports/syntax-check/allure')) {
+                    allure([
+                        includeProperties: false,
+                        jdk: '',
+                        properties: [],
+                        reportBuildPolicy: 'ALWAYS',
+                        results: [[path: 'build/reports/syntax-check/allure']]
                     ])
                 }
                 
-                // Публикация результатов тестов JUnit (если есть)
-                script {
-                    def junitFiles = findFiles(glob: 'build/reports/junit/*.xml')
-                    if (junitFiles.length > 0) {
-                        echo "Найдено JUnit файлов: ${junitFiles.length}"
-                        junit testResults: 'build/reports/junit/*.xml', allowEmptyResults: true
-                    } else {
-                        echo "JUnit файлы не найдены в build/reports/junit/"
-                        // Попытка поиска в других местах
-                        def allureXmlFiles = findFiles(glob: 'build/out/allure/*.xml')
-                        if (allureXmlFiles.length > 0) {
-                            echo "Найдено XML файлов в Allure: ${allureXmlFiles.length}"
-                            junit testResults: 'build/out/allure/*.xml', allowEmptyResults: true
-                        } else {
-                            echo "Тестовые XML файлы не найдены"
-                        }
-                    }
+                // Публикация результатов тестов JUnit (Vanessa тесты)
+                if (fileExists('out/smoke/junit')) {
+                    echo "Найдены JUnit отчеты Vanessa тестов"
+                    junit testResults: 'out/smoke/junit/*.xml', allowEmptyResults: true
+                } else {
+                    echo "JUnit файлы Vanessa тестов не найдены в out/smoke/junit/"
                 }                
                 // Публикация HTML отчета с логами
                 if (fileExists('build/logs')) {
@@ -219,8 +218,8 @@ pipeline {
                 // Архивирование всех артефактов
                 archiveArtifacts artifacts: 'build/**/*.log', allowEmptyArchive: true
                 archiveArtifacts artifacts: 'build/logs/**/*', allowEmptyArchive: true
-                archiveArtifacts artifacts: 'build/out/allure/**/*', allowEmptyArchive: true
                 archiveArtifacts artifacts: 'build/reports/**/*', allowEmptyArchive: true
+                archiveArtifacts artifacts: 'out/smoke/**/*', allowEmptyArchive: true
             }
         }
         success {
