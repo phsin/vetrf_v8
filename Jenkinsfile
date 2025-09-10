@@ -10,6 +10,7 @@ pipeline {
     environment {
         V8_VERSION = "8.3.25.1374"
         IB_PATH = "./build/ib"
+        SONAR_PROJECT_KEY = "vetis_v8_git_test"
     }
     
     stages {
@@ -64,6 +65,36 @@ pipeline {
                 """
             }
         }
+
+        stage('SonarQube Analysis') {
+            steps {
+                script {
+                    
+                    // Чтение файла Configuration.xml в переменную
+                    def configurationText = readFile encoding:'UTF-8', file:'unload/cf/Configuration.xml'
+                    // Получение значения тега Version
+                    def configurationVersion = (configurationText =~ /<Version>(.*)<\/Version>/)[0][1]
+                    
+                    // Получение пути к установленной автоматически утилите sonar-scanner.
+                    // Имя утилиты должно совпадать с заданным в настройках Global Tool Configuration
+                    def scannerHome = tool 'sonar-scanner'
+                    def sonarCommand = "${scannerHome}\\bin\\sonar-scanner.bat"
+                    
+                    // Получение данных авторизации к серверу SonarQube.
+                    // Имя сервера должно совпадать с заданным в настройках System Configuration
+                    withSonarQubeEnv('SONARQUBE_ENV') {
+                        bat """
+                            chcp 65001 > nul
+                            "${sonarCommand}" \
+                            -Dsonar.projectVersion=${configurationVersion} \
+                            -Dsonar.projectKey=${env.SONAR_PROJECT_KEY} \
+                            -Dsonar.host.url=%SONAR_HOST_URL% \
+                            -Dsonar.login=%SONAR_AUTH_TOKEN%
+                        """
+                    }
+                }
+            }
+        }                
     }
     
     post {
