@@ -70,23 +70,23 @@ pipeline {
         always {
             echo "Публикация отчетов и сбор статистики"
             script {
-                // Публикация отчетов Allure (Vanessa тесты)
-                if (fileExists('out/smoke/allure')) {
+                // Публикация отчетов Allure
+                if (fileExists('build/out/allure')) {
                     allure([
                         includeProperties: false,
                         jdk: '',
                         properties: [],
                         reportBuildPolicy: 'ALWAYS',
-                        results: [[path: 'out/smoke/allure']]
+                        results: [[path: 'build/out/allure']]
                     ])
                 }
-                
+
                 // Публикация синтаксических отчетов (JUnit)
                 if (fileExists('build/reports/syntax-check/junit')) {
                     junit testResults: 'build/reports/syntax-check/junit/*.xml', allowEmptyResults: true
                 }
                 
-                // Публикация синтаксических отчетов (Allure)
+/*                 // Публикация синтаксических отчетов (Allure)
                 if (fileExists('build/reports/syntax-check/allure')) {
                     allure([
                         includeProperties: false,
@@ -95,7 +95,7 @@ pipeline {
                         reportBuildPolicy: 'ALWAYS',
                         results: [[path: 'build/reports/syntax-check/allure']]
                     ])
-                }
+                } */
                 
                 // Публикация результатов тестов JUnit (Vanessa тесты)
                 if (fileExists('out/smoke/junit')) {
