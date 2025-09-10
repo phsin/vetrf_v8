@@ -10,7 +10,7 @@ pipeline {
     environment {
         V8_VERSION = "8.3.25.1374"
         IB_PATH = "./build/ib"
-        SONAR_PROJECT_KEY = "vetis_v8_git_test"
+        SONAR_PROJECT_KEY = "vetis_v8"
     }
     
     stages {
