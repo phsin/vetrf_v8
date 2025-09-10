@@ -1,0 +1,22 @@
+{
+    "$schema": "https://1c-syntax.github.io/bsl-language-server/configuration/schema.json",
+    "diagnostics": {
+      "parameters": {
+        "Typo": {
+          "minWordLength": 3,
+          "userWordsToIgnore": "еис,кб99"
+        },
+        "ExternalAppStarting": {
+          "checkGotoUrl": false,
+          "userPatternString": "КомандаСистемы|System|ЗапуститьСистему|RunSystem|ЗапуститьПриложение|RunApp|НачатьЗапускПриложения|BeginRunningApplication|ЗапуститьПриложениеАсинх|RunAppAsync|ЗапуститьПрограмму|ОткрытьПроводник|ОткрытьФайл"
+        },
+        "DeprecatedCurrentDate": false,
+        "MissingCodeTryCatchEx": {
+          "commentAsCode": false
+        },
+        "UsingObjectNotAvailableUnix": false,
+        "ExecuteExternalCodeInCommonModule": false
+      }
+    }
+  }
+  
