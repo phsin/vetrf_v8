@@ -89,7 +89,15 @@ pipeline {
                             -Dsonar.projectVersion=${configurationVersion} \
                             -Dsonar.projectKey=${env.SONAR_PROJECT_KEY} \
                             -Dsonar.host.url=%SONAR_HOST_URL% \
-                            -Dsonar.login=%SONAR_AUTH_TOKEN%
+                            -Dsonar.login=%SONAR_AUTH_TOKEN% \
+                            -Dsonar.inclusions=**/*.bsl, **/*.os \
+                            -Dsonar.sourceEncoding=UTF-8 \
+                            -Dsonar.language=ru \
+                            -Dsonar.source=./unload/cf \
+                            -Dsonar.exclusions=**/*.xml, **/*.json, **/*.md, **/*.txt, **/*.log, **/*.log.gz, **/*.log.bz2, **/*.log.xz, **/*.log.tar, **/*.log.tar.gz, **/*.log.tar.bz2, **/*.log.tar.xz \
+                            -Dsonar.bsl.languageserver.overrideConfiguration=true \
+                            -Dsonar.bsl.languageserver.configurationPath=.bsl-language-server.json
+                            -Dsonar.scanner.skipSystemTruststore=true
                         """
                     }
                 }
