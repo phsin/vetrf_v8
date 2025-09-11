@@ -128,13 +128,13 @@ pipeline {
                     ])
                 } */
                 
-                // Публикация результатов тестов JUnit (Vanessa тесты)
+           /*      // Публикация результатов тестов JUnit (Vanessa тесты)
                 if (fileExists('out/smoke/junit')) {
                     echo "Найдены JUnit отчеты Vanessa тестов"
                     junit testResults: 'out/smoke/junit/*.xml', allowEmptyResults: true
                 } else {
                     echo "JUnit файлы Vanessa тестов не найдены в out/smoke/junit/"
-                }                
+                }                 */
                 // Публикация HTML отчета с логами
                 if (fileExists('build/logs')) {
                     publishHTML([
@@ -152,7 +152,7 @@ pipeline {
                 archiveArtifacts artifacts: 'build/**/*.log', allowEmptyArchive: false
                 archiveArtifacts artifacts: 'build/logs/**/*', allowEmptyArchive: false
                 archiveArtifacts artifacts: 'build/reports/**/*', allowEmptyArchive: false
-                archiveArtifacts artifacts: 'out/smoke/**/*', allowEmptyArchive: false
+                //archiveArtifacts artifacts: 'out/smoke/**/*', allowEmptyArchive: false
             }
         }
         success {
