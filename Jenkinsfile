@@ -15,6 +15,12 @@ pipeline {
     
     stages {
 
+        stage('Checkout') {
+            steps {
+                checkout scm   // multibranch сам подставит нужную ветку
+            }
+        }
+        
         stage('Создание ИБ из шаблона') {
             steps {
                 echo "Создание информационной базы из шаблона"
@@ -88,9 +94,9 @@ pipeline {
                             "${sonarCommand}" \
                             -Dsonar.projectVersion=${configurationVersion} \
                             -Dsonar.projectKey=${env.SONAR_PROJECT_KEY} \
-                            -Dsonar.branch.name=dev \
                             -Dsonar.host.url=%SONAR_HOST_URL% \
                             -Dsonar.token=%SONAR_AUTH_TOKEN% \
+                            -Dsonar.branch.name=%BRANCH_NAME%
                         """
                     }
                 }
