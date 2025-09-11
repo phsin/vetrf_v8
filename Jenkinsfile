@@ -88,6 +88,7 @@ pipeline {
                             "${sonarCommand}" \
                             -Dsonar.projectVersion=${configurationVersion} \
                             -Dsonar.projectKey=${env.SONAR_PROJECT_KEY} \
+                            -Dsonar.branch.name=dev \
                             -Dsonar.host.url=%SONAR_HOST_URL% \
                             -Dsonar.token=%SONAR_AUTH_TOKEN% \
                         """
