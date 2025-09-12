@@ -223,7 +223,6 @@
 		<Event name="OnOpen">ПриОткрытии</Event>
 		<Event name="BeforeClose">ПередЗакрытием</Event>
 		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
-		<Event name="OnClose">ПриЗакрытии</Event>
 	</Events>
 	<ChildItems>
 		<UsualGroup name="ГруппаПлощадка" id="251">
@@ -534,6 +533,11 @@
 														<Representation>PictureAndText</Representation>
 														<CommandName>Form.Command.ИсключитьИзПодбораПриГашении</CommandName>
 														<ExtendedTooltip name="ВСДВходящиеИсключитьИзПодбораПригашенииРасширеннаяПодсказка" id="840"/>
+													</Button>
+													<Button name="ВСДВходящиеУстановитьДокументПоступления" id="841">
+														<Type>CommandBarButton</Type>
+														<CommandName>Form.Command.УстановитьДокументПоступления</CommandName>
+														<ExtendedTooltip name="ВСДВходящиеУстановитьДокументПоступленияРасширеннаяПодсказка" id="842"/>
 													</Button>
 												</ChildItems>
 											</AutoCommandBar>
@@ -2694,6 +2698,21 @@
 				</v8:item>
 			</ToolTip>
 			<Action>ИсключитьИзПодбораПриГашении</Action>
+		</Command>
+		<Command name="УстановитьДокументПоступления" id="32">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Установить документ поступления</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Установить документ поступления</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>УстановитьДокументПоступления</Action>
 		</Command>
 	</Commands>
 </Form>
