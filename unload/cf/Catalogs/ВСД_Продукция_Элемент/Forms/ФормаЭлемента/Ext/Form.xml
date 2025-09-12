@@ -338,12 +338,48 @@
 																</InputField>
 																<CheckBoxField name="Скоропортящийся" id="238">
 																	<DataPath>Объект.Скоропортящийся</DataPath>
+																	<TitleLocation>Right</TitleLocation>
 																	<CheckBoxType>Auto</CheckBoxType>
 																	<ContextMenu name="СкоропортящийсяКонтекстноеМеню" id="239"/>
 																	<ExtendedTooltip name="СкоропортящийсяРасширеннаяПодсказка" id="240"/>
 																</CheckBoxField>
 															</ChildItems>
 														</UsualGroup>
+													</ChildItems>
+												</UsualGroup>
+												<UsualGroup name="ГруппаКонтрольПриПроизводстве" id="241">
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Контроль при производстве</v8:content>
+														</v8:item>
+													</Title>
+													<ToolTip>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Группа контроль при производстве</v8:content>
+														</v8:item>
+													</ToolTip>
+													<Width>12</Width>
+													<HorizontalStretch>true</HorizontalStretch>
+													<Group>Vertical</Group>
+													<Representation>None</Representation>
+													<ExtendedTooltip name="ГруппаКонтрольПриПроизводствеРасширеннаяПодсказка" id="242"/>
+													<ChildItems>
+														<CheckBoxField name="НеКонтролироватьРасходСырья" id="249">
+															<DataPath>Объект.НеКонтролироватьРасходСырья</DataPath>
+															<TitleLocation>Right</TitleLocation>
+															<CheckBoxType>Auto</CheckBoxType>
+															<ContextMenu name="НеКонтролироватьРасходСырьяКонтекстноеМеню" id="250"/>
+															<ExtendedTooltip name="НеКонтролироватьРасходСырьяРасширеннаяПодсказка" id="251"/>
+														</CheckBoxField>
+														<CheckBoxField name="КонтролироватьСрокиПриФасовке" id="243">
+															<DataPath>Объект.КонтролироватьСрокиПриФасовке</DataPath>
+															<TitleLocation>Right</TitleLocation>
+															<CheckBoxType>Auto</CheckBoxType>
+															<ContextMenu name="КонтролироватьСрокиПриФасовкеКонтекстноеМеню" id="244"/>
+															<ExtendedTooltip name="КонтролироватьСрокиПриФасовкеРасширеннаяПодсказка" id="245"/>
+														</CheckBoxField>
 													</ChildItems>
 												</UsualGroup>
 											</ChildItems>
@@ -455,13 +491,6 @@
 					</ToolTip>
 					<ExtendedTooltip name="ГрСпецификацияРасширеннаяПодсказка" id="116"/>
 					<ChildItems>
-						<CheckBoxField name="НеКонтролироватьРасходСырья" id="181">
-							<DataPath>Объект.НеКонтролироватьРасходСырья</DataPath>
-							<TitleLocation>Right</TitleLocation>
-							<CheckBoxType>Auto</CheckBoxType>
-							<ContextMenu name="НеКонтролироватьРасходСырьяКонтекстноеМеню" id="182"/>
-							<ExtendedTooltip name="НеКонтролироватьРасходСырьяРасширеннаяПодсказка" id="183"/>
-						</CheckBoxField>
 						<Table name="дсСпецификация" id="117">
 							<UseAlternationRowColor>true</UseAlternationRowColor>
 							<EnableStartDrag>true</EnableStartDrag>
