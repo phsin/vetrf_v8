@@ -1615,6 +1615,13 @@
 					</ToolTip>
 					<ExtendedTooltip name="СтраницаСвязанныеДокументыРасширеннаяПодсказка" id="454"/>
 					<ChildItems>
+						<InputField name="ДокументПрихода" id="830">
+							<DataPath>Объект.ДокументПрихода</DataPath>
+							<OpenButton>true</OpenButton>
+							<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+							<ContextMenu name="ДокументПриходаКонтекстноеМеню" id="831"/>
+							<ExtendedTooltip name="ДокументПриходаРасширеннаяПодсказка" id="832"/>
+						</InputField>
 						<Table name="СвязанныеДокументы" id="513">
 							<AutoInsertNewRow>true</AutoInsertNewRow>
 							<EnableStartDrag>true</EnableStartDrag>
