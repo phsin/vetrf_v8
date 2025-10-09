@@ -162,7 +162,7 @@
 						</Title>
 						<Picture>
 							<xr:Ref>CommonPicture.ЛабИсследования</xr:Ref>
-							<xr:LoadTransparent>true</xr:LoadTransparent>
+							<xr:LoadTransparent>false</xr:LoadTransparent>
 						</Picture>
 						<Representation>PictureAndText</Representation>
 						<ExtendedTooltip name="ГруппаСоздатьРасширеннаяПодсказка" id="93"/>
@@ -209,7 +209,7 @@
 						</ToolTip>
 						<Picture>
 							<xr:Ref>CommonPicture.кб99_space_shattle</xr:Ref>
-							<xr:LoadTransparent>true</xr:LoadTransparent>
+							<xr:LoadTransparent>false</xr:LoadTransparent>
 						</Picture>
 						<Representation>PictureAndText</Representation>
 						<ExtendedTooltip name="ГруппаОтправитьРасширеннаяПодсказка" id="95"/>
@@ -233,7 +233,7 @@
 						<CommandName>Form.Command.Заполнить</CommandName>
 						<Picture>
 							<xr:Ref>CommonPicture.кб99_refresh</xr:Ref>
-							<xr:LoadTransparent>true</xr:LoadTransparent>
+							<xr:LoadTransparent>false</xr:LoadTransparent>
 						</Picture>
 						<Title>
 							<v8:item>
@@ -399,6 +399,7 @@
 			<Type>
 				<v8:Type>v8:ValueListType</v8:Type>
 			</Type>
+			<Settings xsi:type="v8:TypeDescription"/>
 		</Attribute>
 		<ConditionalAppearance>
 			<dcsset:item>
@@ -551,7 +552,7 @@
 			</ToolTip>
 			<Picture>
 				<xr:Ref>CommonPicture.кб99_send_o</xr:Ref>
-				<xr:LoadTransparent>true</xr:LoadTransparent>
+				<xr:LoadTransparent>false</xr:LoadTransparent>
 			</Picture>
 			<Action>Отправить</Action>
 			<CurrentRowUse>DontUse</CurrentRowUse>
@@ -616,7 +617,7 @@
 			</ToolTip>
 			<Picture>
 				<xr:Ref>CommonPicture.кб99_send</xr:Ref>
-				<xr:LoadTransparent>true</xr:LoadTransparent>
+				<xr:LoadTransparent>false</xr:LoadTransparent>
 			</Picture>
 			<Action>ОтправитьПакетно</Action>
 		</Command>
