@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.8">
+<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.18">
 	<Subsystem uuid="53a7cff2-0ec8-4cdf-bba1-976ec888a33d">
 		<Properties>
 			<Name>кб99_ВСД</Name>
@@ -12,15 +12,14 @@
 			<Comment/>
 			<IncludeHelpInContents>true</IncludeHelpInContents>
 			<IncludeInCommandInterface>true</IncludeInCommandInterface>
+			<UseOneCommand>false</UseOneCommand>
 			<Explanation/>
 			<Picture>
-				<xr:Ref>CommonPicture.Ветис2</xr:Ref>
+				<xr:Ref>CommonPicture.кб99_20</xr:Ref>
 				<xr:LoadTransparent>true</xr:LoadTransparent>
 			</Picture>
 			<Content>
 				<xr:Item xsi:type="xr:MDObjectRef">Document.ВСД</xr:Item>
-				<xr:Item xsi:type="xr:MDObjectRef">Document.ВСД_транзакция</xr:Item>
-				<xr:Item xsi:type="xr:MDObjectRef">Document.ВСД_входящий</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">Document.ВСД2_Производство</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">Catalog.ВСД_Партия</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">Catalog.ВСД_Продукция_Элемент</xr:Item>
@@ -33,7 +32,6 @@
 				<xr:Item xsi:type="xr:MDObjectRef">Catalog.ВСД_Продукция</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">Catalog.ВСД_Площадка</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">Catalog.ВСД_ХозСубъект</xr:Item>
-				<xr:Item xsi:type="xr:MDObjectRef">DocumentJournal.кб99_ЖурналВСД</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">Enum.кб99_РезультатИсследования</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">Document.ВСД2_транзакция</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">Document.ВСД2_ЛабораторныеИсследования</xr:Item>
@@ -57,12 +55,10 @@
 				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.ЛабИсследования</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">DataProcessor.кб99_ЛабИсследования</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.кб99_ВСД_УправлениеПечатью</xr:Item>
-				<xr:Item xsi:type="xr:MDObjectRef">CommonTemplate.КомпонентаПечатиQRКода</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.кб99_ВСД_Клиент</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">CommonCommand.ВСД_ОбновитьСтатусВСД</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">Enum.кб99_СтатусВСД</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.кб99_Запросы</xr:Item>
-				<xr:Item xsi:type="xr:MDObjectRef">DataProcessor.кб99_ГашениеВходящихПартий</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">Catalog.кб99_ВСД2</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">Catalog.ВСД_Соответсвия</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.кб99_map_o</xr:Item>
@@ -91,6 +87,66 @@
 				<xr:Item xsi:type="xr:MDObjectRef">DataProcessor.кб99_НайтиПлощадки</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">DataProcessor.кб99_Параметры</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">DataProcessor.кб99_СверкаОстатковУТ11</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonForm.кб99_ФормаТермическиеУсловия</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">ScheduledJob.кб99_ВСД_УдалитьЗапросы_XML</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">ScheduledJob.кб99_ВСД_УдалитьЗапросы</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.кб99_РегламентныеЗадания</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">ScheduledJob.кб99_ПолучитьАктуальныеПартии</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.кб99_ВидПроисхожденияНепищевойПродукции</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">DataProcessor.кб99_ГашениеВходящихПартий</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.Ветис</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">DataProcessor.кб99_СверкаОстатковУТ10</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.кб99_СтатусЗапроса</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.ВСД2_ОбновитьТранспорт</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.ВСД_Улица</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.ВСД_Район</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.refresh_48</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonCommand.ВСД_ПечатьНаборныйЛист</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonCommand.ВСД_ОткрытьВСДвГИС</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonCommand.ВСД_ОформитьВСДПроизводство</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonCommand.ВСД_ОформитьВСД</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonCommand.ВСД_ОформитьВСДПеремещениеОтПоставщика</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonCommand.ВСД_WIKI</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonCommand.ВСД_Продукция_Создать</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonCommand.ВСД_АннулироватьВСД</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonCommand.ВСД_СтруктураПодчиненности</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonCommand.ВСД_ПечатьВСДПолный</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonCommand.ВСД_ПолучитьОтветВетис</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonCommand.ВСД_ПечатьВСДСокращенный</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonCommand.ВСД_ПлощадкиЗагрузитьПоНазванию</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonCommand.ВСД_ОтправитьВСД</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.кб99_СтатусПлощадки</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">ScheduledJob.кб99_ОбновитьСтатусыВСД</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonForm.кб99_РегламентныеЗадания</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.kb99_Support</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.kb99_Логотип1сКоннект</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.kb99_ЛоготипAnydesk</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.кб99</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.кб99_20</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.kb99_clock_24x24</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">ScheduledJob.кб99_ГашениеВходящихВСД</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">ScheduledJob.кб99_ОтложеннаяОтправкаВСД2Транзакции</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">ScheduledJob.кб99_ОбработатьДокументыПроизводство</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonForm.кб99_РегламентноеЗаданиеГашение</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonForm.кб99_РегламентноеЗаданиеОтправкаВСДТранзакции</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonForm.кб99_РегламентноеЗаданиеПроизводство</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonCommand.ВСД_УдаленнаяПоддержка1сКоннект</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonCommand.ВСД_СоздатьХозсубъект</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.кб99_Внимание</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonForm.кб99_ФормаВводаНомераАвто</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">AccumulationRegister.кб99_ОстаткиПартийВСД</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.кб99_ОстаткиПартийВетис</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">DataProcessor.кб99_ИзменениеНомераАвтомобиля</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonForm.кб99_ФормаВыбораВидаПродукции</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.кб_НезавершенныеПроизводственныеТранзакции</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">DataProcessor.кб99_ЗавершениеПроизводственныхТранзакций</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.кб99_Параметры</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">DataProcessor.кб99_ОграничениеПартийВПодборе</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.кб99_ОтметкиСтрок</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Role.кб99_АдминистраторИнтеграцииВетИС</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Role.кб99_ПользовательИнтеграцииВетИС</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.кб99_Команды_Общий_Сервер</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.кб99_Команды_Общий_Клиент</xr:Item>
 			</Content>
 		</Properties>
 		<ChildObjects>
@@ -99,6 +155,7 @@
 			<Subsystem>Команды</Subsystem>
 			<Subsystem>ОтчетыВСД</Subsystem>
 			<Subsystem>ДокументыВСДv1</Subsystem>
+			<Subsystem>УстаревшиеВерсии</Subsystem>
 		</ChildObjects>
 	</Subsystem>
 </MetaDataObject>

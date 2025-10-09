@@ -1,12 +1,13 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.8">
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.18">
 	<Title>
 		<v8:item>
 			<v8:lang>ru</v8:lang>
-			<v8:content>Интеграция ГИС Меркурий vetis.kb99.pro </v8:content>
+			<v8:content>кб99 Интеграция ФГИС Меркурий</v8:content>
 		</v8:item>
 	</Title>
 	<AutoTitle>false</AutoTitle>
+	<ChildrenAlign>ItemsLeftTitlesLeft</ChildrenAlign>
 	<ScalingMode>Normal</ScalingMode>
 	<CommandSet>
 		<ExcludedCommand>Abort</ExcludedCommand>
@@ -34,27 +35,54 @@
 				<Title>
 					<v8:item>
 						<v8:lang>ru</v8:lang>
-						<v8:content>Гашение Входящих</v8:content>
+						<v8:content>Гашение входящих</v8:content>
 					</v8:item>
 				</Title>
 				<ExtendedTooltip name="кнГашениеРасширеннаяПодсказка" id="462"/>
 			</Button>
-			<Button name="кнПолучитьПартии2" id="643">
-				<Type>CommandBarButton</Type>
-				<Representation>PictureAndText</Representation>
-				<CommandName>Form.Command.кнПолучитьПартии</CommandName>
-				<Picture>
-					<xr:Ref>CommonPicture.kb99_download</xr:Ref>
-					<xr:LoadTransparent>false</xr:LoadTransparent>
-				</Picture>
+			<Popup name="ГруппаЗагрузитьПартии" id="731">
 				<Title>
 					<v8:item>
 						<v8:lang>ru</v8:lang>
-						<v8:content>Загрузить Партии</v8:content>
+						<v8:content>Загрузить партии</v8:content>
 					</v8:item>
 				</Title>
-				<ExtendedTooltip name="кнПолучитьПартии2РасширеннаяПодсказка" id="644"/>
-			</Button>
+				<ToolTip>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Группа загрузить партии</v8:content>
+					</v8:item>
+				</ToolTip>
+				<ExtendedTooltip name="ГруппаЗагрузитьПартииРасширеннаяПодсказка" id="732"/>
+				<ChildItems>
+					<Button name="ФормаПолучитьПартииАктуальные" id="735">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.ПолучитьПартииАктуальные</CommandName>
+						<ExtendedTooltip name="ФормаПолучитьПартииАктуальныеРасширеннаяПодсказка" id="736"/>
+					</Button>
+					<Button name="кнПолучитьПартии2" id="643">
+						<Type>CommandBarButton</Type>
+						<Representation>PictureAndText</Representation>
+						<CommandName>Form.Command.ПолучитьПартии</CommandName>
+						<Picture>
+							<xr:Ref>CommonPicture.kb99_download</xr:Ref>
+							<xr:LoadTransparent>false</xr:LoadTransparent>
+						</Picture>
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Получить партии, созданные за период</v8:content>
+							</v8:item>
+						</Title>
+						<ExtendedTooltip name="кнПолучитьПартии2РасширеннаяПодсказка" id="644"/>
+					</Button>
+					<Button name="ФормаПолучитьПартииСИзменениями" id="733">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.ПолучитьПартииСИзменениями</CommandName>
+						<ExtendedTooltip name="ФормаПолучитьПартииСИзменениямиРасширеннаяПодсказка" id="734"/>
+					</Button>
+				</ChildItems>
+			</Popup>
 			<Button name="кнЗаполнитьТаблицуПартий" id="314">
 				<Type>CommandBarButton</Type>
 				<Representation>PictureAndText</Representation>
@@ -66,7 +94,7 @@
 				<Title>
 					<v8:item>
 						<v8:lang>ru</v8:lang>
-						<v8:content>Выбрать Партии для ВСД</v8:content>
+						<v8:content>Выбрать партии</v8:content>
 					</v8:item>
 				</Title>
 				<ExtendedTooltip name="кнЗаполнитьТаблицуПартийРасширеннаяПодсказка" id="315"/>
@@ -93,7 +121,7 @@
 				<Title>
 					<v8:item>
 						<v8:lang>ru</v8:lang>
-						<v8:content>Отправить ВСД Последовательно</v8:content>
+						<v8:content>Отправить ВСД</v8:content>
 					</v8:item>
 				</Title>
 				<ExtendedTooltip name="ОтправитьВсдПоследовательно2РасширеннаяПодсказка" id="646"/>
@@ -109,7 +137,7 @@
 				<Title>
 					<v8:item>
 						<v8:lang>ru</v8:lang>
-						<v8:content>Отправить ВСД Быстро</v8:content>
+						<v8:content>Отправить ВСД группой</v8:content>
 					</v8:item>
 				</Title>
 				<ExtendedTooltip name="ОтправитьВсдБыстро2РасширеннаяПодсказка" id="656"/>
@@ -124,9 +152,47 @@
 				</Picture>
 				<ExtendedTooltip name="ФормаОткрытьПараметрыРасширеннаяПодсказка" id="650"/>
 			</Button>
+			<Popup name="КоманднаяПанельГруппаТехподдержка" id="700">
+				<Title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Техподдержка</v8:content>
+					</v8:item>
+				</Title>
+				<ToolTip>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Техподдержка</v8:content>
+					</v8:item>
+				</ToolTip>
+				<Picture>
+					<xr:Ref>CommonPicture.kb99_Support</xr:Ref>
+					<xr:LoadTransparent>true</xr:LoadTransparent>
+				</Picture>
+				<Representation>PictureAndText</Representation>
+				<ExtendedTooltip name="КоманднаяПанельГруппаТехподдержкаРасширеннаяПодсказка" id="701"/>
+				<ChildItems>
+					<Button name="ФормаОбщаяКомандаВСД_УдаленнаяПоддержка1сКоннект" id="702">
+						<Type>CommandBarButton</Type>
+						<CommandName>CommonCommand.ВСД_УдаленнаяПоддержка1сКоннект</CommandName>
+						<ExtendedTooltip name="ФормаОбщаяКомандаВСД_УдаленнаяПоддержка1сКоннектРасширеннаяПодсказка" id="703"/>
+					</Button>
+					<Button name="ФормаОбщаяКомандаВСД_УдаленнаяПоддержка" id="682">
+						<Type>CommandBarButton</Type>
+						<CommandName>0</CommandName>
+						<ExtendedTooltip name="ФормаОбщаяКомандаВСД_УдаленнаяПоддержкаРасширеннаяПодсказка" id="683"/>
+					</Button>
+					<Button name="ФормаПолучитьИнформациюОбОбновленияхМеню" id="711">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.ПолучитьИнформациюОбОбновленияхМеню</CommandName>
+						<ExtendedTooltip name="ФормаПолучитьИнформациюОбОбновленияхМенюРасширеннаяПодсказка" id="712"/>
+					</Button>
+				</ChildItems>
+			</Popup>
 		</ChildItems>
 	</AutoCommandBar>
 	<Events>
+		<Event name="NotificationProcessing">ОбработкаОповещения</Event>
 		<Event name="OnOpen">ПриОткрытии</Event>
 		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
 	</Events>
@@ -154,7 +220,7 @@
 					<Title>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>Активная Площадка</v8:content>
+							<v8:content>Площадка</v8:content>
 						</v8:item>
 					</Title>
 					<ChoiceHistoryOnInput>DontUse</ChoiceHistoryOnInput>
@@ -189,13 +255,14 @@
 					<v8:content>Панель страницы</v8:content>
 				</v8:item>
 			</ToolTip>
+			<PagesRepresentation>TabsOnTop</PagesRepresentation>
 			<ExtendedTooltip name="ПанельСтраницыРасширеннаяПодсказка" id="139"/>
 			<ChildItems>
 				<Page name="СтраницаОтгрузки" id="142">
 					<Title>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>Реализации + Перемещения</v8:content>
+							<v8:content>Реализации / Перемещения / Заказы</v8:content>
 						</v8:item>
 					</Title>
 					<ToolTip>
@@ -280,8 +347,9 @@
 												</Button>
 												<Button name="кнПолучитьПартии1" id="312">
 													<Type>CommandBarButton</Type>
+													<Visible>false</Visible>
 													<Representation>PictureAndText</Representation>
-													<CommandName>Form.Command.кнПолучитьПартии</CommandName>
+													<CommandName>Form.Command.ПолучитьПартии</CommandName>
 													<Picture>
 														<xr:Ref>CommonPicture.kb99_download</xr:Ref>
 														<xr:LoadTransparent>false</xr:LoadTransparent>
@@ -326,7 +394,7 @@
 													<Title>
 														<v8:item>
 															<v8:lang>ru</v8:lang>
-															<v8:content>Отправить ВСД Последовательно</v8:content>
+															<v8:content>Отправить ВСД</v8:content>
 														</v8:item>
 													</Title>
 													<ExtendedTooltip name="ОтправитьВсдПоследовательно1РасширеннаяПодсказка" id="634"/>
@@ -342,10 +410,15 @@
 													<Title>
 														<v8:item>
 															<v8:lang>ru</v8:lang>
-															<v8:content>Отправить ВСД Быстро</v8:content>
+															<v8:content>Отправить ВСД группой</v8:content>
 														</v8:item>
 													</Title>
 													<ExtendedTooltip name="ОтправитьВсдБыстро1РасширеннаяПодсказка" id="636"/>
+												</Button>
+												<Button name="ОтправитьВСДПоРасписанию" id="713">
+													<Type>CommandBarButton</Type>
+													<CommandName>Form.Command.ОтправитьВСДПоРасписанию</CommandName>
+													<ExtendedTooltip name="ОтправитьВСДПоРасписаниюРасширеннаяПодсказка" id="714"/>
 												</Button>
 												<Button name="кнЗапросРегионализация" id="316">
 													<Type>CommandBarButton</Type>
@@ -415,6 +488,17 @@
 											</Picture>
 											<ExtendedTooltip name="КнопкаПлощадкиРасширеннаяПодсказка" id="536"/>
 											<ChildItems>
+												<Button name="ЗагрузитьПлощадкиСКонтролемЗагруженныхХС" id="680">
+													<Type>CommandBarButton</Type>
+													<CommandName>Form.Command.ЗагрузитьПлощадкиСКонтролемЗагруженныхХС</CommandName>
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Загрузить площадки с проверкой</v8:content>
+														</v8:item>
+													</Title>
+													<ExtendedTooltip name="ЗагрузитьПлощадкиСКонтролемЗагруженныхХСРасширеннаяПодсказка" id="681"/>
+												</Button>
 												<Button name="ЗагрузитьПлощадкиПоСпискуДокументов" id="257">
 													<Type>CommandBarButton</Type>
 													<Representation>PictureAndText</Representation>
@@ -441,23 +525,68 @@
 													<Title>
 														<v8:item>
 															<v8:lang>ru</v8:lang>
-															<v8:content>Загрузить площадки по Названию</v8:content>
+															<v8:content>Загрузить площадки по названию</v8:content>
 														</v8:item>
 													</Title>
 													<ExtendedTooltip name="ЗагрузитьПлощадкиПоСпискуДокументовНаименованиеРасширеннаяПодсказка" id="290"/>
 												</Button>
 											</ChildItems>
 										</Popup>
-										<Button name="ЗаполнитьПеремещения" id="651">
-											<Type>CommandBarButton</Type>
-											<Representation>PictureAndText</Representation>
-											<CommandName>Form.Command.ЗаполнитьПеремещения</CommandName>
+										<Popup name="КнопкаЗаполнить" id="657">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Заполнить</v8:content>
+												</v8:item>
+											</Title>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Кнопка заполнить</v8:content>
+												</v8:item>
+											</ToolTip>
 											<Picture>
 												<xr:Ref>CommonPicture.кб99_exchange</xr:Ref>
-												<xr:LoadTransparent>false</xr:LoadTransparent>
+												<xr:LoadTransparent>true</xr:LoadTransparent>
 											</Picture>
-											<ExtendedTooltip name="ЗаполнитьПеремещенияРасширеннаяПодсказка" id="652"/>
-										</Button>
+											<ExtendedTooltip name="КнопкаЗаполнитьРасширеннаяПодсказка" id="658"/>
+											<ChildItems>
+												<Button name="ЗаполнитьРеализациями" id="661">
+													<Type>CommandBarButton</Type>
+													<CommandName>Form.Command.ЗаполнитьРеализациями</CommandName>
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Реализациями</v8:content>
+														</v8:item>
+													</Title>
+													<ExtendedTooltip name="ЗаполнитьРеализациямиРасширеннаяПодсказка" id="662"/>
+												</Button>
+												<Button name="ЗаполнитьЗаказами" id="659">
+													<Type>CommandBarButton</Type>
+													<CommandName>Form.Command.ЗаполнитьЗаказами</CommandName>
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Заказами</v8:content>
+														</v8:item>
+													</Title>
+													<ExtendedTooltip name="ЗаполнитьЗаказамиРасширеннаяПодсказка" id="660"/>
+												</Button>
+												<Button name="ЗаполнитьПеремещения" id="651">
+													<Type>CommandBarButton</Type>
+													<Representation>PictureAndText</Representation>
+													<CommandName>Form.Command.ЗаполнитьПеремещения</CommandName>
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Перемещениями</v8:content>
+														</v8:item>
+													</Title>
+													<ExtendedTooltip name="ЗаполнитьПеремещенияРасширеннаяПодсказка" id="652"/>
+												</Button>
+											</ChildItems>
+										</Popup>
 									</ChildItems>
 								</CommandBar>
 							</ChildItems>
@@ -528,7 +657,6 @@
 												<Button name="ОтметитьВсеДокументы" id="261">
 													<Type>CommandBarButton</Type>
 													<Representation>Text</Representation>
-													<OnlyInAllActions>true</OnlyInAllActions>
 													<CommandName>Form.Command.кнОтметитьВсеДокументы</CommandName>
 													<Title>
 														<v8:item>
@@ -537,6 +665,7 @@
 														</v8:item>
 													</Title>
 													<ToolTipRepresentation>Balloon</ToolTipRepresentation>
+													<LocationInCommandBar>InCommandBarAndInAdditionalSubmenu</LocationInCommandBar>
 													<ExtendedTooltip name="ОтметитьВсеДокументыРасширеннаяПодсказка" id="262"/>
 												</Button>
 												<Button name="кнОтметитьНеотправленныеВСД" id="441">
@@ -625,6 +754,16 @@
 													<CommandName>Form.Command.кнПечатьРеестр</CommandName>
 													<ExtendedTooltip name="кнПечатьРеестрРасширеннаяПодсказка" id="544"/>
 												</Button>
+												<Button name="кнПечатьНаборныйЛист" id="663">
+													<Type>CommandBarButton</Type>
+													<CommandName>Form.Command.кнПечатьНаборныйЛист</CommandName>
+													<ExtendedTooltip name="кнПечатьНаборныйЛистРасширеннаяПодсказка" id="664"/>
+												</Button>
+												<Button name="ПрикрепитьВСДВоВложенияЕИС" id="729">
+													<Type>CommandBarButton</Type>
+													<CommandName>Form.Command.ПрикрепитьВСДВоВложенияЕИС</CommandName>
+													<ExtendedTooltip name="ПрикрепитьВСДВоВложенияЕИСРасширеннаяПодсказка" id="730"/>
+												</Button>
 											</ChildItems>
 										</Popup>
 									</ChildItems>
@@ -687,13 +826,23 @@
 											<Representation>Picture</Representation>
 											<CommandName>Form.Command.ВыборПериода</CommandName>
 											<Picture>
-												<xr:Ref>StdPicture.Select</xr:Ref>
+												<xr:Ref>StdPicture.InputFieldSelect</xr:Ref>
 												<xr:LoadTransparent>true</xr:LoadTransparent>
 											</Picture>
 											<ExtendedTooltip name="ВыборПериодаРасширеннаяПодсказка" id="454"/>
 										</Button>
 									</ChildItems>
 								</UsualGroup>
+								<CheckBoxField name="флСкрытьОформленные" id="737">
+									<DataPath>флСкрытьОформленные</DataPath>
+									<TitleLocation>Right</TitleLocation>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="флСкрытьОформленныеКонтекстноеМеню" id="738"/>
+									<ExtendedTooltip name="флСкрытьОформленныеРасширеннаяПодсказка" id="739"/>
+									<Events>
+										<Event name="OnChange">флСкрытьОформленныеПриИзменении</Event>
+									</Events>
+								</CheckBoxField>
 							</ChildItems>
 						</UsualGroup>
 						<Table name="Отгрузки" id="146">
@@ -792,8 +941,12 @@
 								</InputField>
 								<InputField name="ОтгрузкиПлощадка" id="168">
 									<DataPath>Объект.Отгрузки.Площадка</DataPath>
-									<EditMode>EnterOnInput</EditMode>
+									<DropListButton>false</DropListButton>
+									<ChoiceButton>true</ChoiceButton>
+									<ChoiceButtonRepresentation>ShowInInputField</ChoiceButtonRepresentation>
 									<ClearButton>true</ClearButton>
+									<OpenButton>true</OpenButton>
+									<CreateButton>false</CreateButton>
 									<ChoiceHistoryOnInput>DontUse</ChoiceHistoryOnInput>
 									<ContextMenu name="ОтгрузкиПлощадкаКонтекстноеМеню" id="169"/>
 									<ExtendedTooltip name="ОтгрузкиПлощадкаРасширеннаяПодсказка" id="170"/>
@@ -803,8 +956,22 @@
 										<Event name="Clearing">ОтгрузкиПлощадкаОчистка</Event>
 									</Events>
 								</InputField>
+								<InputField name="ОтгрузкиВСДПредставление" id="715">
+									<DataPath>Объект.Отгрузки.ВСДПредставление</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<Width>30</Width>
+									<ClearButton>true</ClearButton>
+									<OpenButton>true</OpenButton>
+									<ContextMenu name="ОтгрузкиВСДПредставлениеКонтекстноеМеню" id="716"/>
+									<ExtendedTooltip name="ОтгрузкиВСДПредставлениеРасширеннаяПодсказка" id="717"/>
+									<Events>
+										<Event name="Opening">ОтгрузкиВСДПредставлениеОткрытие</Event>
+										<Event name="Clearing">ОтгрузкиВСДОчистка</Event>
+									</Events>
+								</InputField>
 								<InputField name="ОтгрузкиВСД" id="171">
 									<DataPath>Объект.Отгрузки.ВСД</DataPath>
+									<Visible>false</Visible>
 									<EditMode>EnterOnInput</EditMode>
 									<ChoiceButton>false</ChoiceButton>
 									<ClearButton>true</ClearButton>
@@ -820,6 +987,7 @@
 									<DataPath>Объект.Отгрузки.Количество</DataPath>
 									<ReadOnly>true</ReadOnly>
 									<EditMode>EnterOnInput</EditMode>
+									<Width>10</Width>
 									<DropListButton>false</DropListButton>
 									<TextEdit>false</TextEdit>
 									<ContextMenu name="ОтгрузкиКоличествоКонтекстноеМеню" id="175"/>
@@ -834,8 +1002,56 @@
 									<ContextMenu name="ОтгрузкиКоличествоМестКонтекстноеМеню" id="178"/>
 									<ExtendedTooltip name="ОтгрузкиКоличествоМестРасширеннаяПодсказка" id="179"/>
 								</InputField>
+								<InputField name="ОтгрузкиНомерАвто" id="671">
+									<DataPath>Объект.Отгрузки.НомерАвто</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>№ авто</v8:content>
+										</v8:item>
+									</Title>
+									<EditMode>EnterOnInput</EditMode>
+									<Width>10</Width>
+									<ContextMenu name="ОтгрузкиНомерАвтоКонтекстноеМеню" id="672"/>
+									<ExtendedTooltip name="ОтгрузкиНомерАвтоРасширеннаяПодсказка" id="673"/>
+								</InputField>
+								<InputField name="ОтгрузкиНомерЗаявки" id="674">
+									<DataPath>Объект.Отгрузки.НомерЗаявки</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>№ заявки</v8:content>
+										</v8:item>
+									</Title>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ОтгрузкиНомерЗаявкиКонтекстноеМеню" id="675"/>
+									<ExtendedTooltip name="ОтгрузкиНомерЗаявкиРасширеннаяПодсказка" id="676"/>
+								</InputField>
+								<InputField name="ОтгрузкиСтатусЗаявки" id="721">
+									<DataPath>Объект.Отгрузки.СтатусЗаявки</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ОтгрузкиСтатусЗаявкиКонтекстноеМеню" id="722"/>
+									<ExtendedTooltip name="ОтгрузкиСтатусЗаявкиРасширеннаяПодсказка" id="723"/>
+								</InputField>
+								<InputField name="ОтгрузкиДокПредставление" id="718">
+									<DataPath>Объект.Отгрузки.ДокПредставление</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Основание</v8:content>
+										</v8:item>
+									</Title>
+									<EditMode>EnterOnInput</EditMode>
+									<OpenButton>true</OpenButton>
+									<ContextMenu name="ОтгрузкиДокПредставлениеКонтекстноеМеню" id="719"/>
+									<ExtendedTooltip name="ОтгрузкиДокПредставлениеРасширеннаяПодсказка" id="720"/>
+									<Events>
+										<Event name="Opening">ОтгрузкиДокПредставлениеОткрытие</Event>
+									</Events>
+								</InputField>
 								<InputField name="ОтгрузкиДок" id="180">
 									<DataPath>Объект.Отгрузки.Док</DataPath>
+									<Visible>false</Visible>
 									<EditMode>EnterOnInput</EditMode>
 									<ExtendedEdit>false</ExtendedEdit>
 									<ChoiceButton>false</ChoiceButton>
@@ -845,6 +1061,12 @@
 									<ChoiceHistoryOnInput>DontUse</ChoiceHistoryOnInput>
 									<ContextMenu name="ОтгрузкиДокКонтекстноеМеню" id="181"/>
 									<ExtendedTooltip name="ОтгрузкиДокРасширеннаяПодсказка" id="182"/>
+								</InputField>
+								<InputField name="ОтгрузкиКомментарий" id="724">
+									<DataPath>Объект.Отгрузки.Комментарий</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ОтгрузкиКомментарийКонтекстноеМеню" id="725"/>
+									<ExtendedTooltip name="ОтгрузкиКомментарийРасширеннаяПодсказка" id="726"/>
 								</InputField>
 								<InputField name="ОтгрузкиКонтрагент" id="183">
 									<DataPath>Объект.Отгрузки.Контрагент</DataPath>
@@ -859,6 +1081,12 @@
 								</InputField>
 								<InputField name="ОтгрузкиХозСубъект" id="186">
 									<DataPath>Объект.Отгрузки.ХозСубъект</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>ХозСубъект</v8:content>
+										</v8:item>
+									</Title>
 									<EditMode>EnterOnInput</EditMode>
 									<ChoiceButton>false</ChoiceButton>
 									<ClearButton>false</ClearButton>
@@ -1043,7 +1271,7 @@
 											<Title>
 												<v8:item>
 													<v8:lang>ru</v8:lang>
-													<v8:content>Отправить ВСД Последовательно</v8:content>
+													<v8:content>Отправить ВСД</v8:content>
 												</v8:item>
 											</Title>
 											<ExtendedTooltip name="ОтправитьВсдПоследовательноРасширеннаяПодсказка" id="319"/>
@@ -1059,7 +1287,7 @@
 											<Title>
 												<v8:item>
 													<v8:lang>ru</v8:lang>
-													<v8:content>Отправить ВСД Быстро</v8:content>
+													<v8:content>Отправить ВСД группой</v8:content>
 												</v8:item>
 											</Title>
 											<ExtendedTooltip name="ОтправитьВсдБыстроРасширеннаяПодсказка" id="620"/>
@@ -1101,18 +1329,23 @@
 											</Title>
 											<ExtendedTooltip name="кнПроизводствоРасширеннаяПодсказка" id="343"/>
 										</Button>
+										<Button name="ПроизводствоПоВидамПродукции" id="727">
+											<Type>CommandBarButton</Type>
+											<CommandName>Form.Command.ПроизводствоПоВидамПродукции</CommandName>
+											<ExtendedTooltip name="ПроизводствоПоВидамПродукцииРасширеннаяПодсказка" id="728"/>
+										</Button>
 										<Button name="кнПроизводствоОтправить" id="356">
 											<Type>CommandBarButton</Type>
 											<HorizontalStretch>true</HorizontalStretch>
 											<CommandName>Form.Command.ПроизводствоОтправить</CommandName>
 											<Picture>
-												<xr:Abs>Picture.svg</xr:Abs>
+												<xr:Ref>CommonPicture.кб99_send</xr:Ref>
 												<xr:LoadTransparent>false</xr:LoadTransparent>
 											</Picture>
 											<Title>
 												<v8:item>
 													<v8:lang>ru</v8:lang>
-													<v8:content>Отправить Производственные ВСД</v8:content>
+													<v8:content>Отправить производственные ВСД</v8:content>
 												</v8:item>
 											</Title>
 											<ExtendedTooltip name="кнПроизводствоОтправитьРасширеннаяПодсказка" id="357"/>
@@ -1151,43 +1384,6 @@
 										</Button>
 									</ChildItems>
 								</Popup>
-								<Popup name="ГруппаИнвентаризация" id="637">
-									<Title>
-										<v8:item>
-											<v8:lang>ru</v8:lang>
-											<v8:content>Инвентаризация</v8:content>
-										</v8:item>
-									</Title>
-									<ToolTip>
-										<v8:item>
-											<v8:lang>ru</v8:lang>
-											<v8:content>Группа инвентаризация</v8:content>
-										</v8:item>
-									</ToolTip>
-									<Picture>
-										<xr:Abs>Picture.svg</xr:Abs>
-										<xr:LoadTransparent>false</xr:LoadTransparent>
-									</Picture>
-									<ExtendedTooltip name="ГруппаИнвентаризацияРасширеннаяПодсказка" id="638"/>
-									<ChildItems>
-										<Button name="кнСоздатьИнвентаризацию" id="598">
-											<Type>CommandBarButton</Type>
-											<HorizontalStretch>true</HorizontalStretch>
-											<CommandName>Form.Command.СоздатьИнвентаризацию</CommandName>
-											<Picture>
-												<xr:Abs>Picture.svg</xr:Abs>
-												<xr:LoadTransparent>false</xr:LoadTransparent>
-											</Picture>
-											<Title>
-												<v8:item>
-													<v8:lang>ru</v8:lang>
-													<v8:content>Создать Инвентаризацию</v8:content>
-												</v8:item>
-											</Title>
-											<ExtendedTooltip name="кнСоздатьИнвентаризациюРасширеннаяПодсказка" id="599"/>
-										</Button>
-									</ChildItems>
-								</Popup>
 								<Popup name="ГруппаВнПеремещения" id="639">
 									<Title>
 										<v8:item>
@@ -1206,25 +1402,41 @@
 										<xr:LoadTransparent>false</xr:LoadTransparent>
 									</Picture>
 									<ExtendedTooltip name="ГруппаВнПеремещенияРасширеннаяПодсказка" id="640"/>
-									<ChildItems>
-										<Button name="кнПереместитьОтПоставщика" id="360">
-											<Type>CommandBarButton</Type>
-											<HorizontalStretch>true</HorizontalStretch>
-											<CommandName>Form.Command.кнПереместитьОтПоставщика</CommandName>
-											<Picture>
-												<xr:Ref>CommonPicture.кб99_exchange</xr:Ref>
-												<xr:LoadTransparent>false</xr:LoadTransparent>
-											</Picture>
-											<Title>
-												<v8:item>
-													<v8:lang>ru</v8:lang>
-													<v8:content>Переместить от Поставщика (внутр)</v8:content>
-												</v8:item>
-											</Title>
-											<ExtendedTooltip name="кнПереместитьОтПоставщикаРасширеннаяПодсказка" id="361"/>
-										</Button>
-									</ChildItems>
 								</Popup>
+								<Button name="кнСоздатьИнвентаризацию" id="598">
+									<Type>CommandBarButton</Type>
+									<Representation>PictureAndText</Representation>
+									<HorizontalStretch>true</HorizontalStretch>
+									<CommandName>Form.Command.СоздатьИнвентаризацию</CommandName>
+									<Picture>
+										<xr:Abs>Picture.svg</xr:Abs>
+										<xr:LoadTransparent>false</xr:LoadTransparent>
+									</Picture>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Инвентаризация</v8:content>
+										</v8:item>
+									</Title>
+									<ExtendedTooltip name="кнСоздатьИнвентаризациюРасширеннаяПодсказка" id="599"/>
+								</Button>
+								<Button name="кнПереместитьОтПоставщика" id="360">
+									<Type>CommandBarButton</Type>
+									<Representation>PictureAndText</Representation>
+									<HorizontalStretch>true</HorizontalStretch>
+									<CommandName>Form.Command.кнПереместитьОтПоставщика</CommandName>
+									<Picture>
+										<xr:Ref>CommonPicture.кб99_exchange</xr:Ref>
+										<xr:LoadTransparent>false</xr:LoadTransparent>
+									</Picture>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Внутреннее перемещение</v8:content>
+										</v8:item>
+									</Title>
+									<ExtendedTooltip name="кнПереместитьОтПоставщикаРасширеннаяПодсказка" id="361"/>
+								</Button>
 							</ChildItems>
 						</CommandBar>
 						<Table name="Партии" id="191">
@@ -1289,6 +1501,18 @@
 									<ContextMenu name="ПартииНомерСтрокиКонтекстноеМеню" id="205"/>
 									<ExtendedTooltip name="ПартииНомерСтрокиРасширеннаяПодсказка" id="206"/>
 								</LabelField>
+								<InputField name="ПартииДокумент" id="668">
+									<DataPath>Объект.Партии.Документ</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ПартииДокументКонтекстноеМеню" id="669"/>
+									<ExtendedTooltip name="ПартииДокументРасширеннаяПодсказка" id="670"/>
+								</InputField>
+								<InputField name="ПартииНоменклатура" id="665">
+									<DataPath>Объект.Партии.Номенклатура</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ПартииНоменклатураКонтекстноеМеню" id="666"/>
+									<ExtendedTooltip name="ПартииНоменклатураРасширеннаяПодсказка" id="667"/>
+								</InputField>
 								<InputField name="ПартииВСД_Продукция_Элемент" id="207">
 									<DataPath>Объект.Партии.Продукция_Элемент</DataPath>
 									<EditMode>EnterOnInput</EditMode>
@@ -1309,6 +1533,16 @@
 									<ChoiceHistoryOnInput>DontUse</ChoiceHistoryOnInput>
 									<ContextMenu name="ПартииПартияКонтекстноеМеню" id="211"/>
 									<ExtendedTooltip name="ПартииПартияРасширеннаяПодсказка" id="212"/>
+									<Events>
+										<Event name="OnChange">ПартииПартияПриИзменении</Event>
+										<Event name="StartChoice">ПартииПартияНачалоВыбора</Event>
+									</Events>
+								</InputField>
+								<InputField name="ПартииОстаток" id="677">
+									<DataPath>Объект.Партии.Остаток</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ПартииОстатокКонтекстноеМеню" id="678"/>
+									<ExtendedTooltip name="ПартииОстатокРасширеннаяПодсказка" id="679"/>
 								</InputField>
 								<InputField name="ПартииКоличество" id="213">
 									<DataPath>Объект.Партии.Количество</DataPath>
@@ -1374,6 +1608,104 @@
 				</Page>
 			</ChildItems>
 		</Pages>
+		<UsualGroup name="ГруппаТекущаяВерсия" id="698">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа текущая версия</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа текущая версия</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>AlwaysHorizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаТекущаяВерсияРасширеннаяПодсказка" id="699"/>
+			<ChildItems>
+				<LabelDecoration name="ЗаголовокВерсия" id="695">
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<Title formatted="false">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Версия:</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="ЗаголовокВерсияКонтекстноеМеню" id="696"/>
+					<ExtendedTooltip name="ЗаголовокВерсияРасширеннаяПодсказка" id="697"/>
+				</LabelDecoration>
+				<LabelField name="ВерсияОбработки" id="684">
+					<DataPath>ВерсияОбработки</DataPath>
+					<TitleLocation>None</TitleLocation>
+					<HorizontalAlign>Left</HorizontalAlign>
+					<GroupHorizontalAlign>Left</GroupHorizontalAlign>
+					<Width>6</Width>
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<Font ref="style:NormalTextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
+					<ContextMenu name="ВерсияОбработкиКонтекстноеМеню" id="685"/>
+					<ExtendedTooltip name="ВерсияОбработкиРасширеннаяПодсказка" id="686"/>
+				</LabelField>
+				<Button name="ПолучитьИнформациюОбОбновлениях" id="704">
+					<Type>Hyperlink</Type>
+					<Representation>Picture</Representation>
+					<CommandName>Form.Command.ПолучитьИнформациюОбОбновлениях</CommandName>
+					<Picture>
+						<xr:Ref>StdPicture.Refresh</xr:Ref>
+						<xr:LoadTransparent>true</xr:LoadTransparent>
+					</Picture>
+					<ExtendedTooltip name="ПолучитьИнформациюОбОбновленияхРасширеннаяПодсказка" id="705"/>
+				</Button>
+				<UsualGroup name="ГруппаТехподдержка" id="693">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа техподдержка</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа техподдержка</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>AlwaysHorizontal</Group>
+					<ChildrenAlign>ItemsLeftTitlesLeft</ChildrenAlign>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаТехподдержкаРасширеннаяПодсказка" id="694"/>
+					<ChildItems>
+						<LabelDecoration name="НадписьИнформацияОВерсии" id="706">
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<GroupHorizontalAlign>Left</GroupHorizontalAlign>
+							<ContextMenu name="НадписьИнформацияОВерсииКонтекстноеМеню" id="707"/>
+							<ExtendedTooltip name="НадписьИнформацияОВерсииРасширеннаяПодсказка" id="708"/>
+						</LabelDecoration>
+						<LabelField name="АктуальнаяВерсия" id="690">
+							<DataPath>АктуальнаяВерсия</DataPath>
+							<TitleLocation>None</TitleLocation>
+							<HorizontalAlign>Left</HorizontalAlign>
+							<GroupHorizontalAlign>Left</GroupHorizontalAlign>
+							<Hiperlink>true</Hiperlink>
+							<ContextMenu name="АктуальнаяВерсияКонтекстноеМеню" id="691"/>
+							<ExtendedTooltip name="АктуальнаяВерсияРасширеннаяПодсказка" id="692"/>
+							<Events>
+								<Event name="Click">АктуальнаяВерсияНажатие</Event>
+							</Events>
+						</LabelField>
+					</ChildItems>
+				</UsualGroup>
+				<LabelDecoration name="НадписьИнформацияОТехподдержке" id="687">
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<TextColor>#330000</TextColor>
+					<GroupHorizontalAlign>Left</GroupHorizontalAlign>
+					<ContextMenu name="НадписьИнформацияОТехподдержкеКонтекстноеМеню" id="688"/>
+					<ExtendedTooltip name="НадписьИнформацияОТехподдержкеРасширеннаяПодсказка" id="689"/>
+				</LabelDecoration>
+			</ChildItems>
+		</UsualGroup>
 	</ChildItems>
 	<Attributes>
 		<Attribute name="Объект" id="1">
@@ -1381,6 +1713,40 @@
 				<v8:Type>cfg:DataProcessorObject.Интеграция_ГИС_Меркурий</v8:Type>
 			</Type>
 			<MainAttribute>true</MainAttribute>
+			<Columns>
+				<AdditionalColumns table="Объект.Отгрузки">
+					<Column name="ВСДПредставление" id="1">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>ВСД</v8:content>
+							</v8:item>
+						</Title>
+						<Type>
+							<v8:Type>xs:string</v8:Type>
+							<v8:StringQualifiers>
+								<v8:Length>150</v8:Length>
+								<v8:AllowedLength>Variable</v8:AllowedLength>
+							</v8:StringQualifiers>
+						</Type>
+					</Column>
+					<Column name="ДокПредставление" id="2">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Документ</v8:content>
+							</v8:item>
+						</Title>
+						<Type>
+							<v8:Type>xs:string</v8:Type>
+							<v8:StringQualifiers>
+								<v8:Length>150</v8:Length>
+								<v8:AllowedLength>Variable</v8:AllowedLength>
+							</v8:StringQualifiers>
+						</Type>
+					</Column>
+				</AdditionalColumns>
+			</Columns>
 		</Attribute>
 		<Attribute name="ВыбХозСубъект" id="2">
 			<Title>
@@ -1485,7 +1851,7 @@
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Версия обработки</v8:content>
+					<v8:content>Версия</v8:content>
 				</v8:item>
 			</Title>
 			<Type>
@@ -1533,35 +1899,77 @@
 				</v8:StringQualifiers>
 			</Type>
 		</Attribute>
+		<Attribute name="ДатаОкончанияДоговораТехподдержки" id="14">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Дата окончания договора техподдержки</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:dateTime</v8:Type>
+				<v8:DateQualifiers>
+					<v8:DateFractions>Date</v8:DateFractions>
+				</v8:DateQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="СсылкаНаОписаниеАктуальнойВерсии" id="15">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Ссылка на описание актуальной версии</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="АктуальнаяВерсия" id="16">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Актуальная версия</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>10</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="флЗаказы" id="17">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Фл заказы</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="флСкрытьОформленные" id="18">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Скрыть оформленные</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
 		<ConditionalAppearance>
 			<dcsset:item>
 				<dcsset:selection>
 					<dcsset:item>
-						<dcsset:field>ОтгрузкиНомерСтроки</dcsset:field>
-					</dcsset:item>
-					<dcsset:item>
-						<dcsset:field>ОтгрузкиОтметка</dcsset:field>
-					</dcsset:item>
-					<dcsset:item>
-						<dcsset:field>ОтгрузкиГрузополучатель</dcsset:field>
-					</dcsset:item>
-					<dcsset:item>
-						<dcsset:field>ОтгрузкиПлощадка</dcsset:field>
-					</dcsset:item>
-					<dcsset:item>
-						<dcsset:field>ОтгрузкиВСД</dcsset:field>
-					</dcsset:item>
-					<dcsset:item>
-						<dcsset:field>ОтгрузкиКоличество</dcsset:field>
-					</dcsset:item>
-					<dcsset:item>
-						<dcsset:field>ОтгрузкиДок</dcsset:field>
-					</dcsset:item>
-					<dcsset:item>
-						<dcsset:field>ОтгрузкиКонтрагент</dcsset:field>
-					</dcsset:item>
-					<dcsset:item>
-						<dcsset:field>ОтгрузкиХозСубъект</dcsset:field>
+						<dcsset:field>Отгрузки</dcsset:field>
 					</dcsset:item>
 				</dcsset:selection>
 				<dcsset:filter>
@@ -1581,31 +1989,7 @@
 			<dcsset:item>
 				<dcsset:selection>
 					<dcsset:item>
-						<dcsset:field>ОтгрузкиНомерСтроки</dcsset:field>
-					</dcsset:item>
-					<dcsset:item>
-						<dcsset:field>ОтгрузкиОтметка</dcsset:field>
-					</dcsset:item>
-					<dcsset:item>
-						<dcsset:field>ОтгрузкиГрузополучатель</dcsset:field>
-					</dcsset:item>
-					<dcsset:item>
-						<dcsset:field>ОтгрузкиПлощадка</dcsset:field>
-					</dcsset:item>
-					<dcsset:item>
-						<dcsset:field>ОтгрузкиВСД</dcsset:field>
-					</dcsset:item>
-					<dcsset:item>
-						<dcsset:field>ОтгрузкиКоличество</dcsset:field>
-					</dcsset:item>
-					<dcsset:item>
-						<dcsset:field>ОтгрузкиДок</dcsset:field>
-					</dcsset:item>
-					<dcsset:item>
-						<dcsset:field>ОтгрузкиКонтрагент</dcsset:field>
-					</dcsset:item>
-					<dcsset:item>
-						<dcsset:field>ОтгрузкиХозСубъект</dcsset:field>
+						<dcsset:field>Отгрузки</dcsset:field>
 					</dcsset:item>
 				</dcsset:selection>
 				<dcsset:filter>
@@ -1625,31 +2009,7 @@
 			<dcsset:item>
 				<dcsset:selection>
 					<dcsset:item>
-						<dcsset:field>ОтгрузкиНомерСтроки</dcsset:field>
-					</dcsset:item>
-					<dcsset:item>
-						<dcsset:field>ОтгрузкиОтметка</dcsset:field>
-					</dcsset:item>
-					<dcsset:item>
-						<dcsset:field>ОтгрузкиГрузополучатель</dcsset:field>
-					</dcsset:item>
-					<dcsset:item>
-						<dcsset:field>ОтгрузкиПлощадка</dcsset:field>
-					</dcsset:item>
-					<dcsset:item>
-						<dcsset:field>ОтгрузкиВСД</dcsset:field>
-					</dcsset:item>
-					<dcsset:item>
-						<dcsset:field>ОтгрузкиКоличество</dcsset:field>
-					</dcsset:item>
-					<dcsset:item>
-						<dcsset:field>ОтгрузкиДок</dcsset:field>
-					</dcsset:item>
-					<dcsset:item>
-						<dcsset:field>ОтгрузкиКонтрагент</dcsset:field>
-					</dcsset:item>
-					<dcsset:item>
-						<dcsset:field>ОтгрузкиХозСубъект</dcsset:field>
+						<dcsset:field>Отгрузки</dcsset:field>
 					</dcsset:item>
 				</dcsset:selection>
 				<dcsset:filter>
@@ -1669,31 +2029,7 @@
 			<dcsset:item>
 				<dcsset:selection>
 					<dcsset:item>
-						<dcsset:field>ОтгрузкиНомерСтроки</dcsset:field>
-					</dcsset:item>
-					<dcsset:item>
-						<dcsset:field>ОтгрузкиОтметка</dcsset:field>
-					</dcsset:item>
-					<dcsset:item>
-						<dcsset:field>ОтгрузкиГрузополучатель</dcsset:field>
-					</dcsset:item>
-					<dcsset:item>
-						<dcsset:field>ОтгрузкиПлощадка</dcsset:field>
-					</dcsset:item>
-					<dcsset:item>
-						<dcsset:field>ОтгрузкиВСД</dcsset:field>
-					</dcsset:item>
-					<dcsset:item>
-						<dcsset:field>ОтгрузкиКоличество</dcsset:field>
-					</dcsset:item>
-					<dcsset:item>
-						<dcsset:field>ОтгрузкиДок</dcsset:field>
-					</dcsset:item>
-					<dcsset:item>
-						<dcsset:field>ОтгрузкиКонтрагент</dcsset:field>
-					</dcsset:item>
-					<dcsset:item>
-						<dcsset:field>ОтгрузкиХозСубъект</dcsset:field>
+						<dcsset:field>Отгрузки</dcsset:field>
 					</dcsset:item>
 				</dcsset:selection>
 				<dcsset:filter>
@@ -1713,31 +2049,7 @@
 			<dcsset:item>
 				<dcsset:selection>
 					<dcsset:item>
-						<dcsset:field>ОтгрузкиНомерСтроки</dcsset:field>
-					</dcsset:item>
-					<dcsset:item>
-						<dcsset:field>ОтгрузкиОтметка</dcsset:field>
-					</dcsset:item>
-					<dcsset:item>
-						<dcsset:field>ОтгрузкиГрузополучатель</dcsset:field>
-					</dcsset:item>
-					<dcsset:item>
-						<dcsset:field>ОтгрузкиПлощадка</dcsset:field>
-					</dcsset:item>
-					<dcsset:item>
-						<dcsset:field>ОтгрузкиВСД</dcsset:field>
-					</dcsset:item>
-					<dcsset:item>
-						<dcsset:field>ОтгрузкиКоличество</dcsset:field>
-					</dcsset:item>
-					<dcsset:item>
-						<dcsset:field>ОтгрузкиДок</dcsset:field>
-					</dcsset:item>
-					<dcsset:item>
-						<dcsset:field>ОтгрузкиКонтрагент</dcsset:field>
-					</dcsset:item>
-					<dcsset:item>
-						<dcsset:field>ОтгрузкиХозСубъект</dcsset:field>
+						<dcsset:field>Отгрузки</dcsset:field>
 					</dcsset:item>
 				</dcsset:selection>
 				<dcsset:filter>
@@ -1757,28 +2069,7 @@
 			<dcsset:item>
 				<dcsset:selection>
 					<dcsset:item>
-						<dcsset:field>ПартииНомерСтроки</dcsset:field>
-					</dcsset:item>
-					<dcsset:item>
-						<dcsset:field>ПартииВСД_Продукция_Элемент</dcsset:field>
-					</dcsset:item>
-					<dcsset:item>
-						<dcsset:field>ПартииПартия</dcsset:field>
-					</dcsset:item>
-					<dcsset:item>
-						<dcsset:field>ПартииКоличество</dcsset:field>
-					</dcsset:item>
-					<dcsset:item>
-						<dcsset:field>ПартииКоличествоМест</dcsset:field>
-					</dcsset:item>
-					<dcsset:item>
-						<dcsset:field>ПартииКоличествоСписания</dcsset:field>
-					</dcsset:item>
-					<dcsset:item>
-						<dcsset:field>ПартииВСД_Производство</dcsset:field>
-					</dcsset:item>
-					<dcsset:item>
-						<dcsset:field>ПартииПолеСортировки</dcsset:field>
+						<dcsset:field>Партии</dcsset:field>
 					</dcsset:item>
 				</dcsset:selection>
 				<dcsset:filter>
@@ -1798,28 +2089,7 @@
 			<dcsset:item>
 				<dcsset:selection>
 					<dcsset:item>
-						<dcsset:field>ПартииНомерСтроки</dcsset:field>
-					</dcsset:item>
-					<dcsset:item>
-						<dcsset:field>ПартииВСД_Продукция_Элемент</dcsset:field>
-					</dcsset:item>
-					<dcsset:item>
-						<dcsset:field>ПартииПартия</dcsset:field>
-					</dcsset:item>
-					<dcsset:item>
-						<dcsset:field>ПартииКоличество</dcsset:field>
-					</dcsset:item>
-					<dcsset:item>
-						<dcsset:field>ПартииКоличествоМест</dcsset:field>
-					</dcsset:item>
-					<dcsset:item>
-						<dcsset:field>ПартииКоличествоСписания</dcsset:field>
-					</dcsset:item>
-					<dcsset:item>
-						<dcsset:field>ПартииВСД_Производство</dcsset:field>
-					</dcsset:item>
-					<dcsset:item>
-						<dcsset:field>ПартииПолеСортировки</dcsset:field>
+						<dcsset:field>Партии</dcsset:field>
 					</dcsset:item>
 				</dcsset:selection>
 				<dcsset:filter>
@@ -1839,28 +2109,7 @@
 			<dcsset:item>
 				<dcsset:selection>
 					<dcsset:item>
-						<dcsset:field>ПартииНомерСтроки</dcsset:field>
-					</dcsset:item>
-					<dcsset:item>
-						<dcsset:field>ПартииВСД_Продукция_Элемент</dcsset:field>
-					</dcsset:item>
-					<dcsset:item>
-						<dcsset:field>ПартииПартия</dcsset:field>
-					</dcsset:item>
-					<dcsset:item>
-						<dcsset:field>ПартииКоличество</dcsset:field>
-					</dcsset:item>
-					<dcsset:item>
-						<dcsset:field>ПартииКоличествоМест</dcsset:field>
-					</dcsset:item>
-					<dcsset:item>
-						<dcsset:field>ПартииКоличествоСписания</dcsset:field>
-					</dcsset:item>
-					<dcsset:item>
-						<dcsset:field>ПартииВСД_Производство</dcsset:field>
-					</dcsset:item>
-					<dcsset:item>
-						<dcsset:field>ПартииПолеСортировки</dcsset:field>
+						<dcsset:field>Партии</dcsset:field>
 					</dcsset:item>
 				</dcsset:selection>
 				<dcsset:filter>
@@ -1909,7 +2158,7 @@
 					<v8:content>Обновить список реализаций</v8:content>
 				</v8:item>
 			</ToolTip>
-			<Action>ОбновитьСписокРеализаций</Action>
+			<Action>ОбновитьСписокДокументов</Action>
 			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="ЗагрузитьПлощадкиПоСпискуДокументов" id="6">
@@ -1960,7 +2209,7 @@
 			<Action>СнятьОтметкиДокументов</Action>
 			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
-		<Command name="кнПолучитьПартии" id="10">
+		<Command name="ПолучитьПартии" id="10">
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
@@ -1973,7 +2222,7 @@
 					<v8:content>Загрузить партии из Меркурий по выбранной площадке</v8:content>
 				</v8:item>
 			</ToolTip>
-			<Action>кнПолучитьПартии</Action>
+			<Action>ПолучитьПартии</Action>
 			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="ЗагрузитьПлощадкиПоСпискуДокументовНаименование" id="11">
@@ -2439,6 +2688,194 @@
 				</v8:item>
 			</ToolTip>
 			<Action>ЗаполнитьПеремещения</Action>
+		</Command>
+		<Command name="ЗаполнитьЗаказами" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заказами покупателя</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заполнить заказами</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ЗаполнитьЗаказами</Action>
+		</Command>
+		<Command name="кнПечатьНаборныйЛист" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Наборный лист</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Кн печать наборный лист</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>кнПечатьНаборныйЛист</Action>
+		</Command>
+		<Command name="ЗагрузитьПлощадкиСКонтролемЗагруженныхХС" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Загрузить площадки с контролем ранее загруженных хозсубъектов</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сначала получаем по ИНН список хозсубъектов из Меркурия, если их несколько - есть возможность выбрать какой сохранить. При сохранении проверяем есть ли ранее загруженные ХС с выбранным GUID.</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>CommonPicture.кб99_check</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ЗагрузитьПлощадкиСКонтролем2</Action>
+		</Command>
+		<Command name="ПолучитьИнформациюОбОбновлениях" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Получить информацию об обновлениях</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Получить информацию об обновлениях</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.Refresh</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ПолучитьИнформациюОбОбновлениях</Action>
+		</Command>
+		<Command name="ПолучитьИнформациюОбОбновленияхМеню" id="12">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Получить информацию об обновлениях</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Получить информацию об обновлениях</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.Refresh</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ОткрытьФормуПолученияИнформацииОбОбновлениях</Action>
+		</Command>
+		<Command name="ОтправитьВСДПоРасписанию" id="13">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отправить по расписанию</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отправить ВСДПо расписанию</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>CommonPicture.kb99_clock_24x24</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ОтложеннаяОтправкаВСД</Action>
+			<Representation>TextPicture</Representation>
+		</Command>
+		<Command name="ЗаполнитьРеализациями" id="14">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заполнить реализациями</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заполнить реализациями</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ЗаполнитьРеализациями</Action>
+		</Command>
+		<Command name="ПроизводствоПоВидамПродукции" id="15">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>По видам продукции</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Производство по видам продукции</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>CommonPicture.кб99_random</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ПроизводствоПоВидамПродукции</Action>
+		</Command>
+		<Command name="ПрикрепитьВСДВоВложенияЕИС" id="16">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Прикрепить ВСД во вложения ЕИС</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Прикрепить ВСДВо вложения ЕИС</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>кб99_ПрикрепитьВСДВоВложенияЕИСПосле</Action>
+		</Command>
+		<Command name="ПолучитьПартииСИзменениями" id="17">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Получить партии с изменениями за период</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Загрузить партии из Меркурий по выбранной площадке</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ПолучитьПартииСИзменениями</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ПолучитьПартииАктуальные" id="18">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Получить актуальные партии (&gt;0)</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Загрузить партии из Меркурий по выбранной площадке</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ПолучитьПартииАктуальные</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 	</Commands>
 </Form>

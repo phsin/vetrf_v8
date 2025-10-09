@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.8">
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.18">
 	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
 	<UseForFoldersAndItems>Items</UseForFoldersAndItems>
 	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
@@ -7,13 +7,6 @@
 		<Event name="OnOpen">ПриОткрытии</Event>
 	</Events>
 	<ChildItems>
-		<UsualGroup name="Группа1" id="141">
-			<HorizontalStretch>true</HorizontalStretch>
-			<Group>Horizontal</Group>
-			<Representation>None</Representation>
-			<ShowTitle>false</ShowTitle>
-			<ExtendedTooltip name="Группа1РасширеннаяПодсказка" id="142"/>
-		</UsualGroup>
 		<UsualGroup name="Группа16" id="171">
 			<Group>Horizontal</Group>
 			<Representation>None</Representation>
@@ -26,7 +19,6 @@
 					<ExtendedTooltip name="Группа17РасширеннаяПодсказка" id="174"/>
 					<ChildItems>
 						<UsualGroup name="Группа6" id="151">
-							<ReadOnly>true</ReadOnly>
 							<Group>Horizontal</Group>
 							<Representation>None</Representation>
 							<ShowTitle>false</ShowTitle>
@@ -34,6 +26,7 @@
 							<ExtendedTooltip name="Группа6РасширеннаяПодсказка" id="152"/>
 							<ChildItems>
 								<UsualGroup name="Группа8" id="155">
+									<ReadOnly>true</ReadOnly>
 									<HorizontalStretch>true</HorizontalStretch>
 									<Group>Vertical</Group>
 									<Representation>None</Representation>
@@ -69,6 +62,7 @@
 									</ChildItems>
 								</UsualGroup>
 								<UsualGroup name="Группа19" id="177">
+									<ReadOnly>true</ReadOnly>
 									<Group>Vertical</Group>
 									<Representation>None</Representation>
 									<ShowTitle>false</ShowTitle>
@@ -143,7 +137,6 @@
 									</ChildItems>
 								</UsualGroup>
 								<UsualGroup name="Группа4" id="147">
-									<ReadOnly>true</ReadOnly>
 									<Group>Vertical</Group>
 									<Representation>None</Representation>
 									<ShowTitle>false</ShowTitle>
@@ -151,8 +144,9 @@
 									<ChildItems>
 										<LabelField name="Статус" id="28">
 											<DataPath>Объект.Статус</DataPath>
+											<Visible>false</Visible>
 											<EditMode>EnterOnInput</EditMode>
-											<HorizontalStretch>true</HorizontalStretch>
+											<HorizontalStretch>false</HorizontalStretch>
 											<Border width="1">
 												<v8ui:style xsi:type="v8ui:ControlBorderType">Embossed</v8ui:style>
 											</Border>
@@ -160,8 +154,15 @@
 											<ContextMenu name="СтатусКонтекстноеМеню" id="29"/>
 											<ExtendedTooltip name="СтатусРасширеннаяПодсказка" id="30"/>
 										</LabelField>
+										<CheckBoxField name="Заблокировать" id="271">
+											<DataPath>Объект.ИсключенаИзПодбора</DataPath>
+											<CheckBoxType>Auto</CheckBoxType>
+											<ContextMenu name="ЗаблокироватьКонтекстноеМеню" id="272"/>
+											<ExtendedTooltip name="ЗаблокироватьРасширеннаяПодсказка" id="273"/>
+										</CheckBoxField>
 										<InputField name="ДатаИзменения" id="22">
 											<DataPath>Объект.ДатаИзменения</DataPath>
+											<ReadOnly>true</ReadOnly>
 											<EditMode>EnterOnInput</EditMode>
 											<HorizontalStretch>true</HorizontalStretch>
 											<ContextMenu name="ДатаИзмененияКонтекстноеМеню" id="23"/>
@@ -169,6 +170,7 @@
 										</InputField>
 										<InputField name="ВсдДата" id="55">
 											<DataPath>Объект.ВсдДата</DataPath>
+											<ReadOnly>true</ReadOnly>
 											<EditMode>EnterOnInput</EditMode>
 											<ContextMenu name="ВсдДатаКонтекстноеМеню" id="56"/>
 											<ExtendedTooltip name="ВсдДатаРасширеннаяПодсказка" id="57"/>
@@ -181,6 +183,25 @@
 				</UsualGroup>
 			</ChildItems>
 		</UsualGroup>
+		<UsualGroup name="Группа1" id="141">
+			<HorizontalStretch>true</HorizontalStretch>
+			<Group>Horizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="Группа1РасширеннаяПодсказка" id="142"/>
+			<ChildItems>
+				<LabelField name="ОписаниеСтатусаПартии" id="268" DisplayImportance="VeryHigh">
+					<DataPath>ОписаниеСтатусаПартии</DataPath>
+					<ReadOnly>true</ReadOnly>
+					<TitleLocation>None</TitleLocation>
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<AutoMaxHeight>false</AutoMaxHeight>
+					<Font ref="style:NormalTextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
+					<ContextMenu name="ОписаниеСтатусаПартииКонтекстноеМеню" id="269"/>
+					<ExtendedTooltip name="ОписаниеСтатусаПартииРасширеннаяПодсказка" id="270"/>
+				</LabelField>
+			</ChildItems>
+		</UsualGroup>
 		<Pages name="Страницы" id="85">
 			<Title>
 				<v8:item>
@@ -188,6 +209,7 @@
 					<v8:content>Страницы</v8:content>
 				</v8:item>
 			</Title>
+			<PagesRepresentation>TabsOnTop</PagesRepresentation>
 			<ExtendedTooltip name="СтраницыРасширеннаяПодсказка" id="86"/>
 			<ChildItems>
 				<Page name="Группа12" id="163">
@@ -367,6 +389,7 @@
 					<ExtendedTooltip name="грЛабИсследованияРасширеннаяПодсказка" id="182"/>
 					<ChildItems>
 						<Table name="ЛабораторныеИсследования" id="183">
+							<HeightInTableRows>5</HeightInTableRows>
 							<AutoInsertNewRow>true</AutoInsertNewRow>
 							<EnableStartDrag>true</EnableStartDrag>
 							<EnableDrag>true</EnableDrag>
@@ -476,6 +499,7 @@
 					<ChildItems>
 						<Table name="УровниУпаковки" id="89">
 							<Representation>List</Representation>
+							<HeightInTableRows>5</HeightInTableRows>
 							<AutoInsertNewRow>true</AutoInsertNewRow>
 							<EnableStartDrag>true</EnableStartDrag>
 							<EnableDrag>true</EnableDrag>
@@ -550,6 +574,7 @@
 					<ChildItems>
 						<Table name="Маркировка" id="116">
 							<Representation>List</Representation>
+							<HeightInTableRows>5</HeightInTableRows>
 							<AutoInsertNewRow>true</AutoInsertNewRow>
 							<EnableStartDrag>true</EnableStartDrag>
 							<EnableDrag>true</EnableDrag>
@@ -628,6 +653,7 @@
 					<ExtendedTooltip name="СтраницаЗапросыРасширеннаяПодсказка" id="230"/>
 					<ChildItems>
 						<Table name="дсЗапросы" id="231">
+							<HeightInTableRows>5</HeightInTableRows>
 							<UseAlternationRowColor>true</UseAlternationRowColor>
 							<EnableStartDrag>true</EnableStartDrag>
 							<DataPath>дсЗапросы</DataPath>
@@ -645,6 +671,7 @@
 							<ShowRoot>true</ShowRoot>
 							<AllowRootChoice>false</AllowRootChoice>
 							<UpdateOnDataChange>Auto</UpdateOnDataChange>
+							<AllowGettingCurrentRowURL>true</AllowGettingCurrentRowURL>
 							<ContextMenu name="дсЗапросыКонтекстноеМеню" id="232"/>
 							<AutoCommandBar name="дсЗапросыКоманднаяПанель" id="233"/>
 							<ExtendedTooltip name="дсЗапросыРасширеннаяПодсказка" id="234"/>
@@ -759,6 +786,21 @@
 					<dcsset:itemsUserSettingID>911b6018-f537-43e8-a417-da56b22f9aec</dcsset:itemsUserSettingID>
 				</ListSettings>
 			</Settings>
+		</Attribute>
+		<Attribute name="ОписаниеСтатусаПартии" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Описание статуса партии</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
 		</Attribute>
 	</Attributes>
 </Form>

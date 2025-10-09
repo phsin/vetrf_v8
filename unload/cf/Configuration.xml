@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.8">
+<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.18">
 	<Configuration uuid="d6b5cddd-c482-44ec-985e-bd8e031ff16a">
 		<InternalInfo>
 			<xr:ContainedObject>
@@ -26,29 +26,33 @@
 				<xr:ClassId>e68182ea-4237-4383-967f-90c1e3370bc7</xr:ClassId>
 				<xr:ObjectId>d619c0df-a8b5-417f-80f5-a6b44c3bea31</xr:ObjectId>
 			</xr:ContainedObject>
+			<xr:ContainedObject>
+				<xr:ClassId>fb282519-d103-4dd3-bc12-cb271d631dfc</xr:ClassId>
+				<xr:ObjectId>fc779810-856f-451c-bb4f-eb9be365d05e</xr:ObjectId>
+			</xr:ContainedObject>
 		</InternalInfo>
 		<Properties>
-			<Name>кб99_Интеграция</Name>
+			<Name>Интеграция_кб99_Ветис</Name>
 			<Synonym>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Интеграция 1С + ГИС Меркурий</v8:content>
+					<v8:content>Интеграция 1С + ФГИС Меркурий / Ветис</v8:content>
 				</v8:item>
 			</Synonym>
 			<Comment>версия v2.2.16 от 18.03.2020</Comment>
 			<NamePrefix/>
-			<ConfigurationExtensionCompatibilityMode>Version8_3_14</ConfigurationExtensionCompatibilityMode>
-			<DefaultRunMode>OrdinaryApplication</DefaultRunMode>
+			<ConfigurationExtensionCompatibilityMode>Version8_3_25</ConfigurationExtensionCompatibilityMode>
+			<DefaultRunMode>ManagedApplication</DefaultRunMode>
 			<UsePurposes>
 				<v8:Value xsi:type="app:ApplicationUsePurpose">PlatformApplication</v8:Value>
 			</UsePurposes>
 			<ScriptVariant>Russian</ScriptVariant>
 			<DefaultRoles/>
-			<Vendor/>
-			<Version/>
+			<Vendor>https://kb99.pro</Vendor>
+			<Version>2.8.40.250910</Version>
 			<UpdateCatalogAddress/>
 			<IncludeHelpInContents>false</IncludeHelpInContents>
-			<UseManagedFormInOrdinaryApplication>false</UseManagedFormInOrdinaryApplication>
+			<UseManagedFormInOrdinaryApplication>true</UseManagedFormInOrdinaryApplication>
 			<UseOrdinaryFormInManagedApplication>false</UseOrdinaryFormInManagedApplication>
 			<AdditionalFullTextSearchDictionaries/>
 			<CommonSettingsStorage/>
@@ -56,96 +60,216 @@
 			<ReportsVariantsStorage/>
 			<FormDataSettingsStorage/>
 			<DynamicListsUserSettingsStorage/>
+			<URLExternalDataStorage/>
 			<Content/>
 			<DefaultReportForm/>
 			<DefaultReportVariantForm/>
 			<DefaultReportSettingsForm/>
+			<DefaultReportAppearanceTemplate/>
 			<DefaultDynamicListSettingsForm/>
 			<DefaultSearchForm/>
 			<DefaultDataHistoryChangeHistoryForm/>
 			<DefaultDataHistoryVersionDataForm/>
 			<DefaultDataHistoryVersionDifferencesForm/>
-			<RequiredMobileApplicationPermissions>
-				<v8:pair>
-					<v8:Key xsi:type="app:RequiredMobileApplicationPermissions">Multimedia</v8:Key>
-					<v8:Value xsi:type="xs:boolean">false</v8:Value>
-				</v8:pair>
-				<v8:pair>
-					<v8:Key xsi:type="app:RequiredMobileApplicationPermissions">Location</v8:Key>
-					<v8:Value xsi:type="xs:boolean">false</v8:Value>
-				</v8:pair>
-				<v8:pair>
-					<v8:Key xsi:type="app:RequiredMobileApplicationPermissions">Contacts</v8:Key>
-					<v8:Value xsi:type="xs:boolean">false</v8:Value>
-				</v8:pair>
-				<v8:pair>
-					<v8:Key xsi:type="app:RequiredMobileApplicationPermissions">Calendars</v8:Key>
-					<v8:Value xsi:type="xs:boolean">false</v8:Value>
-				</v8:pair>
-				<v8:pair>
-					<v8:Key xsi:type="app:RequiredMobileApplicationPermissions">Telephony</v8:Key>
-					<v8:Value xsi:type="xs:boolean">false</v8:Value>
-				</v8:pair>
-				<v8:pair>
-					<v8:Key xsi:type="app:RequiredMobileApplicationPermissions">PushNotification</v8:Key>
-					<v8:Value xsi:type="xs:boolean">false</v8:Value>
-				</v8:pair>
-				<v8:pair>
-					<v8:Key xsi:type="app:RequiredMobileApplicationPermissions">LocalNotification</v8:Key>
-					<v8:Value xsi:type="xs:boolean">false</v8:Value>
-				</v8:pair>
-				<v8:pair>
-					<v8:Key xsi:type="app:RequiredMobileApplicationPermissions">Print</v8:Key>
-					<v8:Value xsi:type="xs:boolean">false</v8:Value>
-				</v8:pair>
-				<v8:pair>
-					<v8:Key xsi:type="app:RequiredMobileApplicationPermissions">InAppPurchases</v8:Key>
-					<v8:Value xsi:type="xs:boolean">false</v8:Value>
-				</v8:pair>
-				<v8:pair>
-					<v8:Key xsi:type="app:RequiredMobileApplicationPermissions">Ads</v8:Key>
-					<v8:Value xsi:type="xs:boolean">false</v8:Value>
-				</v8:pair>
-				<v8:pair>
-					<v8:Key xsi:type="app:RequiredMobileApplicationPermissions">BackgroundLocation</v8:Key>
-					<v8:Value xsi:type="xs:boolean">false</v8:Value>
-				</v8:pair>
-				<v8:pair>
-					<v8:Key xsi:type="app:RequiredMobileApplicationPermissions">BackgroundAudioPlayback</v8:Key>
-					<v8:Value xsi:type="xs:boolean">false</v8:Value>
-				</v8:pair>
-				<v8:pair>
-					<v8:Key xsi:type="app:RequiredMobileApplicationPermissions">FileExchangeWithPersonalComputer</v8:Key>
-					<v8:Value xsi:type="xs:boolean">false</v8:Value>
-				</v8:pair>
-			</RequiredMobileApplicationPermissions>
+			<DefaultCollaborationSystemUsersChoiceForm/>
+			<RequiredMobileApplicationPermissions/>
+			<UsedMobileApplicationFunctionalities>
+				<app:functionality>
+					<app:functionality>Biometrics</app:functionality>
+					<app:use>true</app:use>
+				</app:functionality>
+				<app:functionality>
+					<app:functionality>Location</app:functionality>
+					<app:use>false</app:use>
+				</app:functionality>
+				<app:functionality>
+					<app:functionality>BackgroundLocation</app:functionality>
+					<app:use>false</app:use>
+				</app:functionality>
+				<app:functionality>
+					<app:functionality>BluetoothPrinters</app:functionality>
+					<app:use>false</app:use>
+				</app:functionality>
+				<app:functionality>
+					<app:functionality>WiFiPrinters</app:functionality>
+					<app:use>false</app:use>
+				</app:functionality>
+				<app:functionality>
+					<app:functionality>Contacts</app:functionality>
+					<app:use>false</app:use>
+				</app:functionality>
+				<app:functionality>
+					<app:functionality>Calendars</app:functionality>
+					<app:use>false</app:use>
+				</app:functionality>
+				<app:functionality>
+					<app:functionality>PushNotifications</app:functionality>
+					<app:use>false</app:use>
+				</app:functionality>
+				<app:functionality>
+					<app:functionality>LocalNotifications</app:functionality>
+					<app:use>false</app:use>
+				</app:functionality>
+				<app:functionality>
+					<app:functionality>InAppPurchases</app:functionality>
+					<app:use>false</app:use>
+				</app:functionality>
+				<app:functionality>
+					<app:functionality>PersonalComputerFileExchange</app:functionality>
+					<app:use>false</app:use>
+				</app:functionality>
+				<app:functionality>
+					<app:functionality>Ads</app:functionality>
+					<app:use>false</app:use>
+				</app:functionality>
+				<app:functionality>
+					<app:functionality>NumberDialing</app:functionality>
+					<app:use>false</app:use>
+				</app:functionality>
+				<app:functionality>
+					<app:functionality>CallProcessing</app:functionality>
+					<app:use>false</app:use>
+				</app:functionality>
+				<app:functionality>
+					<app:functionality>CallLog</app:functionality>
+					<app:use>false</app:use>
+				</app:functionality>
+				<app:functionality>
+					<app:functionality>AutoSendSMS</app:functionality>
+					<app:use>false</app:use>
+				</app:functionality>
+				<app:functionality>
+					<app:functionality>ReceiveSMS</app:functionality>
+					<app:use>false</app:use>
+				</app:functionality>
+				<app:functionality>
+					<app:functionality>SMSLog</app:functionality>
+					<app:use>false</app:use>
+				</app:functionality>
+				<app:functionality>
+					<app:functionality>Camera</app:functionality>
+					<app:use>false</app:use>
+				</app:functionality>
+				<app:functionality>
+					<app:functionality>Microphone</app:functionality>
+					<app:use>false</app:use>
+				</app:functionality>
+				<app:functionality>
+					<app:functionality>MusicLibrary</app:functionality>
+					<app:use>false</app:use>
+				</app:functionality>
+				<app:functionality>
+					<app:functionality>PictureAndVideoLibraries</app:functionality>
+					<app:use>false</app:use>
+				</app:functionality>
+				<app:functionality>
+					<app:functionality>AudioPlaybackAndVibration</app:functionality>
+					<app:use>false</app:use>
+				</app:functionality>
+				<app:functionality>
+					<app:functionality>BackgroundAudioPlaybackAndVibration</app:functionality>
+					<app:use>false</app:use>
+				</app:functionality>
+				<app:functionality>
+					<app:functionality>InstallPackages</app:functionality>
+					<app:use>false</app:use>
+				</app:functionality>
+				<app:functionality>
+					<app:functionality>OSBackup</app:functionality>
+					<app:use>true</app:use>
+				</app:functionality>
+				<app:functionality>
+					<app:functionality>ApplicationUsageStatistics</app:functionality>
+					<app:use>false</app:use>
+				</app:functionality>
+				<app:functionality>
+					<app:functionality>BarcodeScanning</app:functionality>
+					<app:use>false</app:use>
+				</app:functionality>
+				<app:functionality>
+					<app:functionality>BackgroundAudioRecording</app:functionality>
+					<app:use>false</app:use>
+				</app:functionality>
+				<app:functionality>
+					<app:functionality>AllFilesAccess</app:functionality>
+					<app:use>false</app:use>
+				</app:functionality>
+				<app:functionality>
+					<app:functionality>Videoconferences</app:functionality>
+					<app:use>false</app:use>
+				</app:functionality>
+				<app:functionality>
+					<app:functionality>NFC</app:functionality>
+					<app:use>false</app:use>
+				</app:functionality>
+				<app:functionality>
+					<app:functionality>DocumentScanning</app:functionality>
+					<app:use>false</app:use>
+				</app:functionality>
+				<app:functionality>
+					<app:functionality>SpeechToText</app:functionality>
+					<app:use>false</app:use>
+				</app:functionality>
+				<app:functionality>
+					<app:functionality>Geofences</app:functionality>
+					<app:use>false</app:use>
+				</app:functionality>
+				<app:functionality>
+					<app:functionality>IncomingShareRequests</app:functionality>
+					<app:use>false</app:use>
+				</app:functionality>
+				<app:functionality>
+					<app:functionality>AllIncomingShareRequestsTypesProcessing</app:functionality>
+					<app:use>false</app:use>
+				</app:functionality>
+				<app:functionality>
+					<app:functionality>TextToSpeech</app:functionality>
+					<app:use>false</app:use>
+				</app:functionality>
+			</UsedMobileApplicationFunctionalities>
+			<StandaloneConfigurationRestrictionRoles/>
+			<MobileApplicationURLs/>
+			<AllowedIncomingShareRequestTypes/>
 			<MainClientApplicationWindowMode>Normal</MainClientApplicationWindowMode>
 			<DefaultInterface/>
 			<DefaultStyle/>
 			<DefaultLanguage>Language.Русский</DefaultLanguage>
 			<BriefInformation/>
 			<DetailedInformation/>
-			<Copyright/>
-			<VendorInformationAddress/>
-			<ConfigurationInformationAddress/>
+			<Copyright>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>https://kb99.pro</v8:content>
+				</v8:item>
+			</Copyright>
+			<VendorInformationAddress>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>https://kb99.pro</v8:content>
+				</v8:item>
+			</VendorInformationAddress>
+			<ConfigurationInformationAddress>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>https://kb99.pro/vetis</v8:content>
+				</v8:item>
+			</ConfigurationInformationAddress>
 			<DataLockControlMode>Managed</DataLockControlMode>
 			<ObjectAutonumerationMode>NotAutoFree</ObjectAutonumerationMode>
 			<ModalityUseMode>DontUse</ModalityUseMode>
 			<SynchronousPlatformExtensionAndAddInCallUseMode>DontUse</SynchronousPlatformExtensionAndAddInCallUseMode>
 			<InterfaceCompatibilityMode>TaxiEnableVersion8_2</InterfaceCompatibilityMode>
-			<CompatibilityMode>Version8_3_9</CompatibilityMode>
+			<DatabaseTablespacesUseMode>DontUse</DatabaseTablespacesUseMode>
+			<CompatibilityMode>Version8_3_14</CompatibilityMode>
 			<DefaultConstantsForm/>
 		</Properties>
 		<ChildObjects>
 			<Language>Русский</Language>
 			<Subsystem>кб99_ВСД</Subsystem>
+			<Subsystem>ТиповыеДокументы</Subsystem>
 			<CommonPicture>Ветис2</CommonPicture>
-			<CommonPicture>ЛабИсследования</CommonPicture>
-			<CommonPicture>кб99_Car</CommonPicture>
-			<CommonPicture>кб99_map_o</CommonPicture>
-			<CommonPicture>кб99_print</CommonPicture>
 			<CommonPicture>кб99_send</CommonPicture>
-			<CommonPicture>кб99_send_o</CommonPicture>
+			<CommonPicture>ЛабИсследования</CommonPicture>
 			<CommonPicture>кб99_space_shattle</CommonPicture>
 			<CommonPicture>кб99_check</CommonPicture>
 			<CommonPicture>кб99_reply</CommonPicture>
@@ -162,27 +286,94 @@
 			<CommonPicture>kb99_truck</CommonPicture>
 			<CommonPicture>kb99_user</CommonPicture>
 			<CommonPicture>kb99_user_o</CommonPicture>
+			<CommonPicture>refresh_48</CommonPicture>
+			<CommonPicture>ДокументПомеченНаУдалениеКоннекторЛево</CommonPicture>
+			<CommonPicture>ДокументЗаписанКоннекторЛево</CommonPicture>
+			<CommonPicture>ДокументПроведенКоннекторВерх</CommonPicture>
+			<CommonPicture>СправочникПВХПомеченНаУдалениеКоннекторЛево</CommonPicture>
+			<CommonPicture>СправочникПВХПомеченНаУдалениеКоннекторЛевоВерх</CommonPicture>
+			<CommonPicture>СправочникПВХПомеченНаУдалениеКоннекторЛевоНиз</CommonPicture>
+			<CommonPicture>ДокументПроведенКоннекторВерхНиз</CommonPicture>
+			<CommonPicture>ДокументПроведенКоннекторЛевоВерх</CommonPicture>
+			<CommonPicture>ДокументПроведенКоннекторЛевоНиз</CommonPicture>
+			<CommonPicture>ДокументПомеченНаУдалениеКоннекторВерх</CommonPicture>
+			<CommonPicture>ДокументПомеченНаУдалениеКоннекторВерхНиз</CommonPicture>
+			<CommonPicture>ДокументПомеченНаУдалениеКоннекторЛевоВерх</CommonPicture>
+			<CommonPicture>ДокументПомеченНаУдалениеКоннекторЛевоНиз</CommonPicture>
+			<CommonPicture>ДокументПомеченНаУдалениеКоннекторНиз</CommonPicture>
+			<CommonPicture>ДокументЗаписанКоннекторВерх</CommonPicture>
+			<CommonPicture>ДокументЗаписанКоннекторВерхНиз</CommonPicture>
+			<CommonPicture>ДокументЗаписанКоннекторЛевоВерх</CommonPicture>
+			<CommonPicture>ДокументЗаписанКоннекторЛевоНиз</CommonPicture>
+			<CommonPicture>ДокументЗаписанКоннекторНиз</CommonPicture>
+			<CommonPicture>СправочникПВХКоннекторВверх</CommonPicture>
+			<CommonPicture>СправочникПВХКоннекторВерхНиз</CommonPicture>
+			<CommonPicture>СправочникПВХКоннекторЛево</CommonPicture>
+			<CommonPicture>СправочникПВХКоннекторЛевоВерх</CommonPicture>
+			<CommonPicture>СправочникПВХКоннекторЛевоНиз</CommonPicture>
+			<CommonPicture>СправочникПВХКоннекторНиз</CommonPicture>
+			<CommonPicture>ДокументПроведенКоннекторЛево</CommonPicture>
+			<CommonPicture>Ветис</CommonPicture>
+			<CommonPicture>кб99_Car</CommonPicture>
+			<CommonPicture>кб99_print</CommonPicture>
+			<CommonPicture>кб99_send_o</CommonPicture>
+			<CommonPicture>kb99_ЛоготипAnydesk</CommonPicture>
+			<CommonPicture>kb99_Логотип1сКоннект</CommonPicture>
+			<CommonPicture>kb99_Support</CommonPicture>
+			<CommonPicture>кб99</CommonPicture>
+			<CommonPicture>кб99_20</CommonPicture>
+			<CommonPicture>кб99_map_o</CommonPicture>
+			<CommonPicture>kb99_clock_24x24</CommonPicture>
+			<CommonPicture>кб99_Внимание</CommonPicture>
+			<CommonPicture>кб99_ОтметкиСтрок</CommonPicture>
 			<Interface>ВСД</Interface>
+			<SessionParameter>ТекущийПользователь</SessionParameter>
+			<Role>Администратор</Role>
+			<Role>кб99_АдминистраторИнтеграцииВетИС</Role>
+			<Role>кб99_ПользовательИнтеграцииВетИС</Role>
 			<CommonTemplate>КомпонентаПечатиQRКода</CommonTemplate>
+			<CommonTemplate>СтруктураПодчиненности</CommonTemplate>
 			<FilterCriterion>СвязанныеДокументы</FilterCriterion>
 			<CommonModule>ДлительныеОперации</CommonModule>
+			<CommonModule>ДлительныеОперацииКлиент</CommonModule>
 			<CommonModule>УправлениеПечатью</CommonModule>
-			<CommonModule>кб99_ВСД</CommonModule>
 			<CommonModule>кб99_ВСД_Отправка</CommonModule>
 			<CommonModule>кб99_ВСД_Общий</CommonModule>
-			<CommonModule>кб99_ВСД_Переопределения</CommonModule>
-			<CommonModule>кб99_ВСД_Производство</CommonModule>
 			<CommonModule>УправлениеКонтактнойИнформацией</CommonModule>
-			<CommonModule>ДлительныеОперацииКлиент</CommonModule>
+			<CommonModule>ОбщегоНазначения</CommonModule>
+			<CommonModule>СтроковыеФункцииКлиентСервер</CommonModule>
+			<CommonModule>ОбщегоНазначенияКлиентСервер</CommonModule>
+			<CommonModule>СтандартныеПодсистемыСервер</CommonModule>
+			<CommonModule>СтандартныеПодсистемыКлиент</CommonModule>
+			<CommonModule>СтруктураПодчиненностиПереопределяемый</CommonModule>
+			<CommonModule>кб99_ВСД_Производство</CommonModule>
 			<CommonModule>кб99_ВСД_Запросы</CommonModule>
 			<CommonModule>кб99_ВСД_УправлениеПечатью</CommonModule>
+			<CommonModule>ОбщегоНазначенияПовтИсп</CommonModule>
+			<CommonModule>ДлительныеОперацииКлиентПовтИсп</CommonModule>
 			<CommonModule>кб99_ВСД_Клиент</CommonModule>
+			<CommonModule>кб99_ВСД</CommonModule>
+			<CommonModule>кб99_РегламентныеЗадания</CommonModule>
+			<CommonModule>кб99_ВСД_Переопределения</CommonModule>
+			<CommonModule>РаботаСФайламиКлиентСервер</CommonModule>
+			<CommonModule>РаботаСФайламиСлужебныйВызовСервера</CommonModule>
+			<CommonModule>РаботаСФайлами</CommonModule>
+			<CommonModule>РаботаСФайламиСлужебный</CommonModule>
+			<CommonModule>РаботаСФайламиСлужебныйКлиентСервер</CommonModule>
+			<CommonModule>ЖурналРегистрации</CommonModule>
+			<CommonModule>ЖурналРегистрацииКлиент</CommonModule>
+			<CommonModule>кб99_Команды_Общий_Клиент</CommonModule>
+			<CommonModule>кб99_Команды_Общий_Сервер</CommonModule>
+			<ScheduledJob>кб99_ВСД_УдалитьЗапросы</ScheduledJob>
+			<ScheduledJob>кб99_ОбновитьСтатусыВСД</ScheduledJob>
+			<ScheduledJob>кб99_ВСД_УдалитьЗапросы_XML</ScheduledJob>
+			<ScheduledJob>кб99_ПолучитьАктуальныеПартии</ScheduledJob>
+			<ScheduledJob>кб99_ГашениеВходящихВСД</ScheduledJob>
+			<ScheduledJob>кб99_ОтложеннаяОтправкаВСД2Транзакции</ScheduledJob>
+			<ScheduledJob>кб99_ОбработатьДокументыПроизводство</ScheduledJob>
 			<CommonCommand>ВСД_ОтправитьВСД</CommonCommand>
 			<CommonCommand>ВСД_ПлощадкиЗагрузитьПоНазванию</CommonCommand>
-			<CommonCommand>ВСД_ОткрытьЗапрос</CommonCommand>
-			<CommonCommand>ВСД_ПечатьВСДСокращенный</CommonCommand>
 			<CommonCommand>ВСД_ПолучитьОтветВетис</CommonCommand>
-			<CommonCommand>ВСД_ОткрытьОтвет</CommonCommand>
 			<CommonCommand>ВСД_ПечатьВСДПолный</CommonCommand>
 			<CommonCommand>ВСД_СтруктураПодчиненности</CommonCommand>
 			<CommonCommand>ВСД_АннулироватьВСД</CommonCommand>
@@ -193,18 +384,36 @@
 			<CommonCommand>ВСД_ОформитьВСДПроизводство</CommonCommand>
 			<CommonCommand>ВСД_ОткрытьВСДвГИС</CommonCommand>
 			<CommonCommand>ВСД_ОбновитьСтатусВСД</CommonCommand>
+			<CommonCommand>ВСД_ПечатьНаборныйЛист</CommonCommand>
+			<CommonCommand>ВСД_ПечатьВСДСокращенный</CommonCommand>
+			<CommonCommand>ВСД_УдаленнаяПоддержка1сКоннект</CommonCommand>
+			<CommonCommand>ВСД_СоздатьХозсубъект</CommonCommand>
+			<CommonCommand>ВСД_УказатьНомерАвтомобиля</CommonCommand>
+			<CommonCommand>ВСД_ОтчетОстаткиПоПартиям</CommonCommand>
+			<CommonCommand>ВСД_ИсторияСписанияПартии</CommonCommand>
 			<CommandGroup>Печать</CommandGroup>
 			<CommandGroup>ВСД_ГруппаКоманд</CommandGroup>
+			<CommonForm>кб99_ФормаТермическиеУсловия</CommonForm>
+			<CommonForm>СтруктураПодчиненности</CommonForm>
+			<CommonForm>ДлительнаяОперация</CommonForm>
+			<CommonForm>кб99_РегламентныеЗадания</CommonForm>
+			<CommonForm>кб99_РегламентноеЗаданиеГашение</CommonForm>
+			<CommonForm>кб99_РегламентноеЗаданиеОтправкаВСДТранзакции</CommonForm>
+			<CommonForm>кб99_РегламентноеЗаданиеПроизводство</CommonForm>
+			<CommonForm>кб99_ФормаВводаНомераАвто</CommonForm>
+			<CommonForm>кб99_ФормаВыбораВидаПродукции</CommonForm>
 			<Catalog>Контрагенты</Catalog>
 			<Catalog>Номенклатура</Catalog>
-			<Catalog>ВСД_ХозСубъект</Catalog>
-			<Catalog>ВСД_Площадка</Catalog>
-			<Catalog>ВСД_Продукция</Catalog>
 			<Catalog>ВСД_ФормыУпаковки</Catalog>
 			<Catalog>ВСД_ЕдиницыИзмерения</Catalog>
 			<Catalog>ВСД_Страна</Catalog>
 			<Catalog>ВСД_Регион</Catalog>
+			<Catalog>ВСД_Район</Catalog>
 			<Catalog>ВСД_Город</Catalog>
+			<Catalog>ВСД_НаселенныеПункты</Catalog>
+			<Catalog>ВСД_Улица</Catalog>
+			<Catalog>ВСД_ХозСубъект</Catalog>
+			<Catalog>ВСД_Продукция</Catalog>
 			<Catalog>ВСД_ВидПродукции</Catalog>
 			<Catalog>ВСД_Продукция_Элемент</Catalog>
 			<Catalog>ВСД_Партия</Catalog>
@@ -214,27 +423,53 @@
 			<Catalog>Склады</Catalog>
 			<Catalog>ВСД_Соответсвия</Catalog>
 			<Catalog>кб99_ВСД2</Catalog>
+			<Catalog>Партнеры</Catalog>
+			<Catalog>ДоговорыКонтрагентов</Catalog>
+			<Catalog>ВСД_Площадка</Catalog>
+			<Catalog>ВСД_УсловияПеревозки</Catalog>
+			<Catalog>СерииНоменклатуры</Catalog>
+			<Catalog>СтруктурныеЕдиницы</Catalog>
+			<Catalog>ВидыЦенПоставщиков</Catalog>
+			<Catalog>СпецификацииНоменклатуры</Catalog>
+			<Catalog>СкладыКомпании</Catalog>
+			<Catalog>ПодразделенияКомпании</Catalog>
 			<Document>ПеремещениеТоваров</Document>
 			<Document>ВСД2_Производство</Document>
-			<Document>РеализацияТоваровУслуг</Document>
-			<Document>ВСД_транзакция</Document>
-			<Document>ВСД_входящий</Document>
-			<Document>ВСД</Document>
 			<Document>ВСД2_транзакция</Document>
-			<Document>ВСД2</Document>
 			<Document>ВСД2_ЛабораторныеИсследования</Document>
 			<Document>ВСД2_ОбъединениеПартий</Document>
 			<Document>ВСД2_Инвентаризация</Document>
 			<Document>ВСД2_входящий</Document>
+			<Document>РеализацияТоваровУслуг</Document>
+			<Document>ВСД2_ОбновитьТранспорт</Document>
+			<Document>ВСД</Document>
+			<Document>ВСД2</Document>
+			<Document>ПриобретениеТоваровУслуг</Document>
+			<Document>ПартииВСД</Document>
+			<Document>КорректировкаПриобретения</Document>
+			<Document>КорректировкаПоступления</Document>
+			<Document>РасходнаяНакладная</Document>
+			<Document>РеализацияТоваров</Document>
+			<Document>ПеремещениеЗапасов</Document>
+			<Document>ПоступлениеТоваровУслуг</Document>
 			<DocumentJournal>кб99_ЖурналВСД</DocumentJournal>
 			<Enum>кб99_РезультатИсследования</Enum>
 			<Enum>кб99_УровниУпаковки</Enum>
-			<Enum>кб99_ТермическиеУсловияПеревозки</Enum>
 			<Enum>кб99_Маркировка</Enum>
 			<Enum>кб99_ТипыТранспорта</Enum>
 			<Enum>кб99_СтатусВСД</Enum>
 			<Enum>кб99_СтатусЗапроса</Enum>
+			<Enum>кб99_ТермическиеУсловияПеревозки</Enum>
+			<Enum>кб99_ВидПроисхожденияНепищевойПродукции</Enum>
+			<Enum>кб99_СтатусПлощадки</Enum>
 			<Report>кб99_Отчет_СравнениеОстатковПартий</Report>
+			<Report>кб99_ОтчетПоПартиямВСД</Report>
+			<Report>кб99_ОтчетПоСтатусамИсходящихВСД</Report>
+			<Report>кб99_ПроверкаВСД</Report>
+			<Report>кб99_ДвиженияПартийВСД</Report>
+			<Report>кб99_ОстаткиПартий</Report>
+			<Report>кб99_ОстаткиПартийПоНоменклатуре</Report>
+			<Report>кб99_ОтчетСписанияПартии</Report>
 			<DataProcessor>Интеграция_ГИС_Меркурий</DataProcessor>
 			<DataProcessor>кб99_ЛабИсследования</DataProcessor>
 			<DataProcessor>кб99_ГашениеВходящихПартий</DataProcessor>
@@ -243,9 +478,21 @@
 			<DataProcessor>кб99_НайтиПлощадки</DataProcessor>
 			<DataProcessor>кб99_Параметры</DataProcessor>
 			<DataProcessor>кб99_СверкаОстатковУТ11</DataProcessor>
+			<DataProcessor>кб99_СверкаОстатковУТ10</DataProcessor>
+			<DataProcessor>кб99_ИзменениеНомераАвтомобиля</DataProcessor>
+			<DataProcessor>кб99_ЗавершениеПроизводственныхТранзакций</DataProcessor>
+			<DataProcessor>кб99_ОграничениеПартийВПодборе</DataProcessor>
+			<DataProcessor>ЖурналРегистрации</DataProcessor>
 			<InformationRegister>кб99_ОрганизацияПоУмолчанию</InformationRegister>
 			<InformationRegister>кб99_ПроизводственнаяСпецификация</InformationRegister>
 			<InformationRegister>кб99_Запросы</InformationRegister>
+			<InformationRegister>кб99_ОстаткиПартийВетис</InformationRegister>
+			<InformationRegister>кб_НезавершенныеПроизводственныеТранзакции</InformationRegister>
+			<InformationRegister>кб99_Параметры</InformationRegister>
+			<InformationRegister>ШтрихкодыНоменклатуры</InformationRegister>
+			<InformationRegister>ПараметрыМаршрута</InformationRegister>
+			<AccumulationRegister>кб99_ОстаткиПартийВСД</AccumulationRegister>
+			<AccumulationRegister>ТоварыНаСкладах</AccumulationRegister>
 		</ChildObjects>
 	</Configuration>
 </MetaDataObject>
