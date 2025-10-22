@@ -1,0 +1,91 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.17">
+	<Enum uuid="25699eb7-78b6-4a6f-94f4-e7e3f5d4d1e8">
+		<InternalInfo>
+			<xr:GeneratedType name="EnumRef.кб99_ТермическиеУсловияПеревозки" category="Ref">
+				<xr:TypeId>7fff1ea1-9bbd-4722-9ab1-574cc4e92c47</xr:TypeId>
+				<xr:ValueId>be5c806e-814c-4c97-a892-a4ff19778186</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="EnumManager.кб99_ТермическиеУсловияПеревозки" category="Manager">
+				<xr:TypeId>74f63144-d0f5-41df-9998-a0f777b4e264</xr:TypeId>
+				<xr:ValueId>c8c08570-fd5c-49d6-a645-33c9cbf2f27d</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="EnumList.кб99_ТермическиеУсловияПеревозки" category="List">
+				<xr:TypeId>3c8b70ff-3c6f-4687-80f5-c653b8ea1a82</xr:TypeId>
+				<xr:ValueId>7e991176-a5d4-4630-b968-645ea9c2a643</xr:ValueId>
+			</xr:GeneratedType>
+		</InternalInfo>
+		<Properties>
+			<Name>кб99_ТермическиеУсловияПеревозки</Name>
+			<Synonym>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>ВСД термические условия перевозки</v8:content>
+				</v8:item>
+			</Synonym>
+			<Comment/>
+			<UseStandardCommands>false</UseStandardCommands>
+			<Characteristics/>
+			<QuickChoice>true</QuickChoice>
+			<ChoiceMode>BothWays</ChoiceMode>
+			<DefaultListForm/>
+			<DefaultChoiceForm/>
+			<AuxiliaryListForm/>
+			<AuxiliaryChoiceForm/>
+			<ListPresentation/>
+			<ExtendedListPresentation/>
+			<Explanation/>
+			<ChoiceHistoryOnInput>Auto</ChoiceHistoryOnInput>
+		</Properties>
+		<ChildObjects>
+			<EnumValue uuid="37ae11be-9cdd-4e8a-b2fd-fb59f332fa44">
+				<Properties>
+					<Name>FROZEN</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Замороженный</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="ab045344-cea8-494c-9d5c-2c64d2c51e96">
+				<Properties>
+					<Name>CHILLED</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Охлажденный</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="a6154fe8-e515-400e-a2dc-87f2ca4a938b">
+				<Properties>
+					<Name>COOLED</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Охлаждаемый</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="f3f514d1-e635-4fec-8e71-4dd8cb9ee2c8">
+				<Properties>
+					<Name>VENTILATED</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Вентилируемый</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+				</Properties>
+			</EnumValue>
+		</ChildObjects>
+	</Enum>
+</MetaDataObject>

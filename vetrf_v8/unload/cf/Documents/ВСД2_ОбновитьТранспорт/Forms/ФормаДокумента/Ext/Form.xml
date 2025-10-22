@@ -1,0 +1,468 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.17">
+	<AutoTime>CurrentOrLast</AutoTime>
+	<UsePostingMode>Auto</UsePostingMode>
+	<RepostOnWrite>true</RepostOnWrite>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="Шапка" id="68">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Шапка</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Шапка</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>AlwaysHorizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ШапкаРасширеннаяПодсказка" id="69"/>
+			<ChildItems>
+				<InputField name="Дата" id="4">
+					<DataPath>Объект.Date</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ДатаКонтекстноеМеню" id="5"/>
+					<ExtendedTooltip name="ДатаРасширеннаяПодсказка" id="6"/>
+				</InputField>
+				<InputField name="Номер" id="1">
+					<DataPath>Объект.Number</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="НомерКонтекстноеМеню" id="2"/>
+					<ExtendedTooltip name="НомерРасширеннаяПодсказка" id="3"/>
+				</InputField>
+				<LabelField name="Статус" id="73">
+					<DataPath>СтатусЗапроса</DataPath>
+					<Font ref="style:NormalTextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
+					<ContextMenu name="СтатусКонтекстноеМеню" id="74"/>
+					<ExtendedTooltip name="СтатусРасширеннаяПодсказка" id="75"/>
+				</LabelField>
+			</ChildItems>
+		</UsualGroup>
+		<InputField name="Организация" id="7">
+			<DataPath>Объект.Организация</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="ОрганизацияКонтекстноеМеню" id="8"/>
+			<ExtendedTooltip name="ОрганизацияРасширеннаяПодсказка" id="9"/>
+		</InputField>
+		<InputField name="Получатель_ХозСубъект" id="10">
+			<DataPath>Объект.Получатель_ХозСубъект</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="Получатель_ХозСубъектКонтекстноеМеню" id="11"/>
+			<ExtendedTooltip name="Получатель_ХозСубъектРасширеннаяПодсказка" id="12"/>
+		</InputField>
+		<InputField name="Получатель_Площадка" id="13">
+			<DataPath>Объект.Получатель_Площадка</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="Получатель_ПлощадкаКонтекстноеМеню" id="14"/>
+			<ExtendedTooltip name="Получатель_ПлощадкаРасширеннаяПодсказка" id="15"/>
+		</InputField>
+		<Pages name="СтраницыДокумента" id="76">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Страницы документа</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Страницы документа</v8:content>
+				</v8:item>
+			</ToolTip>
+			<PagesRepresentation>TabsOnTop</PagesRepresentation>
+			<ExtendedTooltip name="СтраницыДокументаРасширеннаяПодсказка" id="77"/>
+			<ChildItems>
+				<Page name="ТочкиМаршрута" id="78">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Точки маршрута</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Точки маршрута</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="ТочкиМаршрутаРасширеннаяПодсказка" id="79"/>
+					<ChildItems>
+						<Table name="ВСДВходящие" id="16">
+							<Representation>List</Representation>
+							<ChangeRowSet>false</ChangeRowSet>
+							<ChangeRowOrder>false</ChangeRowOrder>
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<DataPath>Объект.ВСДВходящие</DataPath>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="ВСДВходящиеКонтекстноеМеню" id="17"/>
+							<AutoCommandBar name="ВСДВходящиеКоманднаяПанель" id="18"/>
+							<ExtendedTooltip name="ВСДВходящиеРасширеннаяПодсказка" id="19"/>
+							<SearchStringAddition name="ВСДВходящиеСтрокаПоиска" id="20">
+								<AdditionSource>
+									<Item>ВСДВходящие</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ВСДВходящиеСтрокаПоискаКонтекстноеМеню" id="21"/>
+								<ExtendedTooltip name="ВСДВходящиеСтрокаПоискаРасширеннаяПодсказка" id="22"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="ВСДВходящиеСостояниеПросмотра" id="23">
+								<AdditionSource>
+									<Item>ВСДВходящие</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ВСДВходящиеСостояниеПросмотраКонтекстноеМеню" id="24"/>
+								<ExtendedTooltip name="ВСДВходящиеСостояниеПросмотраРасширеннаяПодсказка" id="25"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="ВСДВходящиеУправлениеПоиском" id="26">
+								<AdditionSource>
+									<Item>ВСДВходящие</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="ВСДВходящиеУправлениеПоискомКонтекстноеМеню" id="27"/>
+								<ExtendedTooltip name="ВСДВходящиеУправлениеПоискомРасширеннаяПодсказка" id="28"/>
+							</SearchControlAddition>
+							<ChildItems>
+								<LabelField name="ВСДВходящиеНомерСтроки" id="29">
+									<DataPath>Объект.ВСДВходящие.LineNumber</DataPath>
+									<Visible>false</Visible>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ВСДВходящиеНомерСтрокиКонтекстноеМеню" id="30"/>
+									<ExtendedTooltip name="ВСДВходящиеНомерСтрокиРасширеннаяПодсказка" id="31"/>
+								</LabelField>
+								<InputField name="ВСДВходящиеНомерТочки" id="41">
+									<DataPath>Объект.ВСДВходящие.НомерТочки</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ВСДВходящиеНомерТочкиКонтекстноеМеню" id="42"/>
+									<ExtendedTooltip name="ВСДВходящиеНомерТочкиРасширеннаяПодсказка" id="43"/>
+								</InputField>
+								<CheckBoxField name="ВСДВходящиеПерегрузка" id="32">
+									<DataPath>Объект.ВСДВходящие.Перегрузка</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="ВСДВходящиеПерегрузкаКонтекстноеМеню" id="33"/>
+									<ExtendedTooltip name="ВСДВходящиеПерегрузкаРасширеннаяПодсказка" id="34"/>
+								</CheckBoxField>
+								<InputField name="ВСДВходящиеДокВСД" id="38">
+									<DataPath>Объект.ВСДВходящие.ДокВСД</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ВСДВходящиеДокВСДКонтекстноеМеню" id="39"/>
+									<ExtendedTooltip name="ВСДВходящиеДокВСДРасширеннаяПодсказка" id="40"/>
+								</InputField>
+								<InputField name="ВСДВходящиеТтнНомер" id="35">
+									<DataPath>Объект.ВСДВходящие.ТтнНомер</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ВСДВходящиеТтнНомерКонтекстноеМеню" id="36"/>
+									<ExtendedTooltip name="ВСДВходящиеТтнНомерРасширеннаяПодсказка" id="37"/>
+								</InputField>
+								<InputField name="ВСДВходящиеИмя" id="119">
+									<DataPath>Объект.ВСДВходящие.Имя</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Наименование точки перегрузки</v8:content>
+										</v8:item>
+									</Title>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ВСДВходящиеИмяКонтекстноеМеню" id="120"/>
+									<ExtendedTooltip name="ВСДВходящиеИмяРасширеннаяПодсказка" id="121"/>
+								</InputField>
+								<InputField name="ВСДВходящиеПлощадка" id="122">
+									<DataPath>Объект.ВСДВходящие.Площадка</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ВСДВходящиеПлощадкаКонтекстноеМеню" id="123"/>
+									<ExtendedTooltip name="ВСДВходящиеПлощадкаРасширеннаяПодсказка" id="124"/>
+								</InputField>
+								<InputField name="ВСДВходящиеUUID" id="44">
+									<DataPath>Объект.ВСДВходящие.UUID</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ВСДВходящиеUUIDКонтекстноеМеню" id="45"/>
+									<ExtendedTooltip name="ВСДВходящиеUUIDРасширеннаяПодсказка" id="46"/>
+								</InputField>
+								<InputField name="ВСДВходящиеТипТранспорта" id="47">
+									<DataPath>Объект.ВСДВходящие.ТипТранспорта</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ВСДВходящиеТипТранспортаКонтекстноеМеню" id="48"/>
+									<ExtendedTooltip name="ВСДВходящиеТипТранспортаРасширеннаяПодсказка" id="49"/>
+									<Events>
+										<Event name="OnChange">ВСДВходящиеТипТранспортаПриИзменении</Event>
+									</Events>
+								</InputField>
+								<InputField name="ВСДВходящиеНомерТС" id="50">
+									<DataPath>Объект.ВСДВходящие.НомерАвто</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ВСДВходящиеНомерТСКонтекстноеМеню" id="51"/>
+									<ExtendedTooltip name="ВСДВходящиеНомерТСРасширеннаяПодсказка" id="52"/>
+									<Events>
+										<Event name="OnChange">ВСДВходящиеНомерТСПриИзменении</Event>
+									</Events>
+								</InputField>
+								<InputField name="ВСДВходящиеномерПрицепа" id="53">
+									<DataPath>Объект.ВСДВходящие.номерПрицепа</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ВСДВходящиеномерПрицепаКонтекстноеМеню" id="54"/>
+									<ExtendedTooltip name="ВСДВходящиеномерПрицепаРасширеннаяПодсказка" id="55"/>
+								</InputField>
+								<InputField name="ВСДВходящиеномерКонтейнера" id="65">
+									<DataPath>Объект.ВСДВходящие.номерКонтейнера</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ВСДВходящиеномерКонтейнераКонтекстноеМеню" id="66"/>
+									<ExtendedTooltip name="ВСДВходящиеномерКонтейнераРасширеннаяПодсказка" id="67"/>
+								</InputField>
+								<InputField name="ВСДВходящиеномерВагона" id="56">
+									<DataPath>Объект.ВСДВходящие.номерВагона</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ВСДВходящиеномерВагонаКонтекстноеМеню" id="57"/>
+									<ExtendedTooltip name="ВСДВходящиеномерВагонаРасширеннаяПодсказка" id="58"/>
+								</InputField>
+								<InputField name="ВСДВходящиеНомерАвиарейса" id="59">
+									<DataPath>Объект.ВСДВходящие.НомерАвиарейса</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ВСДВходящиеНомерАвиарейсаКонтекстноеМеню" id="60"/>
+									<ExtendedTooltip name="ВСДВходящиеНомерАвиарейсаРасширеннаяПодсказка" id="61"/>
+								</InputField>
+								<InputField name="ВСДВходящиеНазваниеСудна" id="62">
+									<DataPath>Объект.ВСДВходящие.НазваниеСудна</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ВСДВходящиеНазваниеСуднаКонтекстноеМеню" id="63"/>
+									<ExtendedTooltip name="ВСДВходящиеНазваниеСуднаРасширеннаяПодсказка" id="64"/>
+								</InputField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
+				<Page name="Запросы" id="80">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Запросы</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Запросы</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="ЗапросыРасширеннаяПодсказка" id="81"/>
+					<ChildItems>
+						<Table name="дсЗапросы" id="82">
+							<HeightInTableRows>5</HeightInTableRows>
+							<UseAlternationRowColor>true</UseAlternationRowColor>
+							<EnableStartDrag>true</EnableStartDrag>
+							<DataPath>дсЗапросы</DataPath>
+							<RowPictureDataPath>дсЗапросы.DefaultPicture</RowPictureDataPath>
+							<AutoRefresh>false</AutoRefresh>
+							<AutoRefreshPeriod>60</AutoRefreshPeriod>
+							<Period>
+								<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+								<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+								<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+							</Period>
+							<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+							<RestoreCurrentRow>false</RestoreCurrentRow>
+							<TopLevelParent xsi:nil="true"/>
+							<ShowRoot>true</ShowRoot>
+							<AllowRootChoice>false</AllowRootChoice>
+							<UpdateOnDataChange>Auto</UpdateOnDataChange>
+							<AllowGettingCurrentRowURL>true</AllowGettingCurrentRowURL>
+							<ContextMenu name="дсЗапросыКонтекстноеМеню" id="83"/>
+							<AutoCommandBar name="дсЗапросыКоманднаяПанель" id="84"/>
+							<ExtendedTooltip name="дсЗапросыРасширеннаяПодсказка" id="85"/>
+							<SearchStringAddition name="дсЗапросыСтрокаПоиска" id="86">
+								<AdditionSource>
+									<Item>дсЗапросы</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="дсЗапросыСтрокаПоискаКонтекстноеМеню" id="87"/>
+								<ExtendedTooltip name="дсЗапросыСтрокаПоискаРасширеннаяПодсказка" id="88"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="дсЗапросыСостояниеПросмотра" id="89">
+								<AdditionSource>
+									<Item>дсЗапросы</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="дсЗапросыСостояниеПросмотраКонтекстноеМеню" id="90"/>
+								<ExtendedTooltip name="дсЗапросыСостояниеПросмотраРасширеннаяПодсказка" id="91"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="дсЗапросыУправлениеПоиском" id="92">
+								<AdditionSource>
+									<Item>дсЗапросы</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="дсЗапросыУправлениеПоискомКонтекстноеМеню" id="93"/>
+								<ExtendedTooltip name="дсЗапросыУправлениеПоискомРасширеннаяПодсказка" id="94"/>
+							</SearchControlAddition>
+							<ChildItems>
+								<LabelField name="дсЗапросыПериод" id="95">
+									<DataPath>дсЗапросы.Period</DataPath>
+									<ContextMenu name="дсЗапросыПериодКонтекстноеМеню" id="96"/>
+									<ExtendedTooltip name="дсЗапросыПериодРасширеннаяПодсказка" id="97"/>
+								</LabelField>
+								<LabelField name="дсЗапросыОбъект" id="98">
+									<DataPath>дсЗапросы.Объект</DataPath>
+									<ContextMenu name="дсЗапросыОбъектКонтекстноеМеню" id="99"/>
+									<ExtendedTooltip name="дсЗапросыОбъектРасширеннаяПодсказка" id="100"/>
+								</LabelField>
+								<LabelField name="дсЗапросыСтатусЗапроса" id="101">
+									<DataPath>дсЗапросы.СтатусЗапроса</DataPath>
+									<ContextMenu name="дсЗапросыСтатусЗапросаКонтекстноеМеню" id="102"/>
+									<ExtendedTooltip name="дсЗапросыСтатусЗапросаРасширеннаяПодсказка" id="103"/>
+								</LabelField>
+								<LabelField name="дсЗапросыПользователь" id="104">
+									<DataPath>дсЗапросы.Пользователь</DataPath>
+									<ContextMenu name="дсЗапросыПользовательКонтекстноеМеню" id="105"/>
+									<ExtendedTooltip name="дсЗапросыПользовательРасширеннаяПодсказка" id="106"/>
+								</LabelField>
+								<LabelField name="дсЗапросыApplicationID" id="107">
+									<DataPath>дсЗапросы.ApplicationID</DataPath>
+									<ContextMenu name="дсЗапросыApplicationIDКонтекстноеМеню" id="108"/>
+									<ExtendedTooltip name="дсЗапросыApplicationIDРасширеннаяПодсказка" id="109"/>
+								</LabelField>
+								<LabelField name="дсЗапросыОшибки" id="110">
+									<DataPath>дсЗапросы.Ошибки</DataPath>
+									<ContextMenu name="дсЗапросыОшибкиКонтекстноеМеню" id="111"/>
+									<ExtendedTooltip name="дсЗапросыОшибкиРасширеннаяПодсказка" id="112"/>
+								</LabelField>
+								<LabelField name="дсЗапросыЗапрос" id="113">
+									<DataPath>дсЗапросы.Запрос</DataPath>
+									<ContextMenu name="дсЗапросыЗапросКонтекстноеМеню" id="114"/>
+									<ExtendedTooltip name="дсЗапросыЗапросРасширеннаяПодсказка" id="115"/>
+								</LabelField>
+								<LabelField name="дсЗапросыОтвет" id="116">
+									<DataPath>дсЗапросы.Ответ</DataPath>
+									<ContextMenu name="дсЗапросыОтветКонтекстноеМеню" id="117"/>
+									<ExtendedTooltip name="дсЗапросыОтветРасширеннаяПодсказка" id="118"/>
+								</LabelField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
+			</ChildItems>
+		</Pages>
+		<LabelField name="Ошибки" id="70">
+			<DataPath>Ошибки</DataPath>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Ошибки запроса / Ветис.API</v8:content>
+				</v8:item>
+			</Title>
+			<TitleTextColor>#FF0000</TitleTextColor>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Ошибки последнего запроса, отправленного на сервер Ветис.API</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Width>100</Width>
+			<HorizontalStretch>true</HorizontalStretch>
+			<Border width="1">
+				<v8ui:style xsi:type="v8ui:ControlBorderType">Single</v8ui:style>
+			</Border>
+			<BorderColor>#FF0000</BorderColor>
+			<TextColor>#FF0000</TextColor>
+			<ContextMenu name="ОшибкиКонтекстноеМеню" id="71"/>
+			<ExtendedTooltip name="ОшибкиРасширеннаяПодсказка" id="72"/>
+		</LabelField>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DocumentObject.ВСД2_ОбновитьТранспорт</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+			<UseAlways>
+				<Field>Объект.RegisterRecords</Field>
+			</UseAlways>
+		</Attribute>
+		<Attribute name="дсЗапросы" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Запросы</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:DynamicList</v8:Type>
+			</Type>
+			<Settings xsi:type="DynamicList">
+				<ManualQuery>false</ManualQuery>
+				<DynamicDataRead>true</DynamicDataRead>
+				<MainTable>InformationRegister.кб99_Запросы</MainTable>
+				<ListSettings>
+					<dcsset:filter>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>dfcece9d-5077-440b-b6b3-45a5cb4538eb</dcsset:userSettingID>
+					</dcsset:filter>
+					<dcsset:order>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>88619765-ccb3-46c6-ac52-38e9c992ebd4</dcsset:userSettingID>
+					</dcsset:order>
+					<dcsset:conditionalAppearance>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>b75fecce-942b-4aed-abc9-e6a02e460fb3</dcsset:userSettingID>
+					</dcsset:conditionalAppearance>
+					<dcsset:itemsViewMode>Normal</dcsset:itemsViewMode>
+					<dcsset:itemsUserSettingID>911b6018-f537-43e8-a417-da56b22f9aec</dcsset:itemsUserSettingID>
+				</ListSettings>
+			</Settings>
+		</Attribute>
+		<Attribute name="Ошибки" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Ошибки</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="СтатусЗапроса" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Статус</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ApplicationID" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Application ID</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+	</Attributes>
+</Form>
