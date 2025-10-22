@@ -1,0 +1,319 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.17">
+	<AutoTime>CurrentOrLast</AutoTime>
+	<UsePostingMode>Auto</UsePostingMode>
+	<RepostOnWrite>true</RepostOnWrite>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="ГруппаДатаНомер" id="37">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа дата номер</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа дата номер</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаДатаНомерРасширеннаяПодсказка" id="38"/>
+			<ChildItems>
+				<InputField name="Номер" id="1">
+					<DataPath>Объект.Number</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="НомерКонтекстноеМеню" id="2"/>
+					<ExtendedTooltip name="НомерРасширеннаяПодсказка" id="3"/>
+				</InputField>
+				<InputField name="Дата" id="4">
+					<DataPath>Объект.Date</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ДатаКонтекстноеМеню" id="5"/>
+					<ExtendedTooltip name="ДатаРасширеннаяПодсказка" id="6"/>
+				</InputField>
+				<InputField name="Организация" id="29">
+					<DataPath>Объект.Организация</DataPath>
+					<ContextMenu name="ОрганизацияКонтекстноеМеню" id="30"/>
+					<ExtendedTooltip name="ОрганизацияРасширеннаяПодсказка" id="31"/>
+					<Events>
+						<Event name="OnChange">ОрганизацияПриИзменении</Event>
+					</Events>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<InputField name="Хозсубъект" id="39">
+			<DataPath>Объект.ВСД_Хозсубъект</DataPath>
+			<AutoMaxWidth>false</AutoMaxWidth>
+			<MaxWidth>31</MaxWidth>
+			<ContextMenu name="ХозсубъектКонтекстноеМеню" id="40"/>
+			<ExtendedTooltip name="ХозсубъектРасширеннаяПодсказка" id="41"/>
+		</InputField>
+		<InputField name="ВСД_Площадка" id="34">
+			<DataPath>Объект.ВСД_Площадка</DataPath>
+			<AutoMaxWidth>false</AutoMaxWidth>
+			<MaxWidth>31</MaxWidth>
+			<ContextMenu name="ВСД_ПлощадкаКонтекстноеМеню" id="35"/>
+			<ExtendedTooltip name="ВСД_ПлощадкаРасширеннаяПодсказка" id="36"/>
+		</InputField>
+		<Pages name="СтраницыДокумента" id="42">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Страницы документа</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Страницы документа</v8:content>
+				</v8:item>
+			</ToolTip>
+			<PagesRepresentation>TabsOnTop</PagesRepresentation>
+			<ExtendedTooltip name="СтраницыДокументаРасширеннаяПодсказка" id="43"/>
+			<ChildItems>
+				<Page name="СтраницаПартии" id="44">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Партии</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Страница партии</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="СтраницаПартииРасширеннаяПодсказка" id="45"/>
+					<ChildItems>
+						<Table name="ВСД_Партии" id="7">
+							<Representation>List</Representation>
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<DataPath>Объект.ПартииРезультат</DataPath>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="ВСД_ПартииКонтекстноеМеню" id="8"/>
+							<AutoCommandBar name="ВСД_ПартииКоманднаяПанель" id="9">
+								<Autofill>false</Autofill>
+								<ChildItems>
+									<Button name="ВСД_ПартииПолучитьПартии" id="32">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.ПолучитьПартии</CommandName>
+										<ExtendedTooltip name="ВСД_ПартииПолучитьПартииРасширеннаяПодсказка" id="33"/>
+									</Button>
+								</ChildItems>
+							</AutoCommandBar>
+							<ExtendedTooltip name="ВСД_ПартииРасширеннаяПодсказка" id="10"/>
+							<SearchStringAddition name="ВСД_ПартииСтрокаПоиска" id="11">
+								<AdditionSource>
+									<Item>ВСД_Партии</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ВСД_ПартииСтрокаПоискаКонтекстноеМеню" id="12"/>
+								<ExtendedTooltip name="ВСД_ПартииСтрокаПоискаРасширеннаяПодсказка" id="13"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="ВСД_ПартииСостояниеПросмотра" id="14">
+								<AdditionSource>
+									<Item>ВСД_Партии</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ВСД_ПартииСостояниеПросмотраКонтекстноеМеню" id="15"/>
+								<ExtendedTooltip name="ВСД_ПартииСостояниеПросмотраРасширеннаяПодсказка" id="16"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="ВСД_ПартииУправлениеПоиском" id="17">
+								<AdditionSource>
+									<Item>ВСД_Партии</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="ВСД_ПартииУправлениеПоискомКонтекстноеМеню" id="18"/>
+								<ExtendedTooltip name="ВСД_ПартииУправлениеПоискомРасширеннаяПодсказка" id="19"/>
+							</SearchControlAddition>
+							<ChildItems>
+								<LabelField name="ВСД_ПартииНомерСтроки" id="20">
+									<DataPath>Объект.ПартииРезультат.LineNumber</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ВСД_ПартииНомерСтрокиКонтекстноеМеню" id="21"/>
+									<ExtendedTooltip name="ВСД_ПартииНомерСтрокиРасширеннаяПодсказка" id="22"/>
+								</LabelField>
+								<InputField name="ВСД_ПартииПартия" id="23">
+									<DataPath>Объект.ПартииРезультат.Партия</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ВСД_ПартииПартияКонтекстноеМеню" id="24"/>
+									<ExtendedTooltip name="ВСД_ПартииПартияРасширеннаяПодсказка" id="25"/>
+								</InputField>
+								<InputField name="ВСД_ПартииКоличество" id="26">
+									<DataPath>Объект.ПартииРезультат.Количество</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ВСД_ПартииКоличествоКонтекстноеМеню" id="27"/>
+									<ExtendedTooltip name="ВСД_ПартииКоличествоРасширеннаяПодсказка" id="28"/>
+								</InputField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
+				<Page name="ОстаткиПартий" id="46">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Остатки партий</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Остатки партий</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="ОстаткиПартийРасширеннаяПодсказка" id="47"/>
+					<ChildItems>
+						<Table name="дсОстаткиПартий" id="48">
+							<UseAlternationRowColor>true</UseAlternationRowColor>
+							<EnableStartDrag>true</EnableStartDrag>
+							<DataPath>дсОстаткиПартий</DataPath>
+							<RowPictureDataPath>дсОстаткиПартий.DefaultPicture</RowPictureDataPath>
+							<AutoRefresh>false</AutoRefresh>
+							<AutoRefreshPeriod>60</AutoRefreshPeriod>
+							<Period>
+								<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+								<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+								<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+							</Period>
+							<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+							<RestoreCurrentRow>false</RestoreCurrentRow>
+							<TopLevelParent xsi:nil="true"/>
+							<ShowRoot>true</ShowRoot>
+							<AllowRootChoice>false</AllowRootChoice>
+							<UpdateOnDataChange>Auto</UpdateOnDataChange>
+							<AllowGettingCurrentRowURL>true</AllowGettingCurrentRowURL>
+							<ContextMenu name="дсОстаткиПартийКонтекстноеМеню" id="49"/>
+							<AutoCommandBar name="дсОстаткиПартийКоманднаяПанель" id="50">
+								<Autofill>false</Autofill>
+							</AutoCommandBar>
+							<ExtendedTooltip name="дсОстаткиПартийРасширеннаяПодсказка" id="51"/>
+							<SearchStringAddition name="дсОстаткиПартийСтрокаПоиска" id="52">
+								<AdditionSource>
+									<Item>дсОстаткиПартий</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="дсОстаткиПартийСтрокаПоискаКонтекстноеМеню" id="53"/>
+								<ExtendedTooltip name="дсОстаткиПартийСтрокаПоискаРасширеннаяПодсказка" id="54"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="дсОстаткиПартийСостояниеПросмотра" id="55">
+								<AdditionSource>
+									<Item>дсОстаткиПартий</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="дсОстаткиПартийСостояниеПросмотраКонтекстноеМеню" id="56"/>
+								<ExtendedTooltip name="дсОстаткиПартийСостояниеПросмотраРасширеннаяПодсказка" id="57"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="дсОстаткиПартийУправлениеПоиском" id="58">
+								<AdditionSource>
+									<Item>дсОстаткиПартий</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="дсОстаткиПартийУправлениеПоискомКонтекстноеМеню" id="59"/>
+								<ExtendedTooltip name="дсОстаткиПартийУправлениеПоискомРасширеннаяПодсказка" id="60"/>
+							</SearchControlAddition>
+							<ChildItems>
+								<LabelField name="дсОстаткиПартийПартия" id="61">
+									<DataPath>дсОстаткиПартий.Партия</DataPath>
+									<ContextMenu name="дсОстаткиПартийПартияКонтекстноеМеню" id="62"/>
+									<ExtendedTooltip name="дсОстаткиПартийПартияРасширеннаяПодсказка" id="63"/>
+								</LabelField>
+								<LabelField name="дсОстаткиПартийКоличество" id="64">
+									<DataPath>дсОстаткиПартий.Количество</DataPath>
+									<ContextMenu name="дсОстаткиПартийКоличествоКонтекстноеМеню" id="65"/>
+									<ExtendedTooltip name="дсОстаткиПартийКоличествоРасширеннаяПодсказка" id="66"/>
+								</LabelField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
+			</ChildItems>
+		</Pages>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DocumentObject.ПартииВСД</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+			<UseAlways>
+				<Field>Объект.RegisterRecords</Field>
+			</UseAlways>
+		</Attribute>
+		<Attribute name="ИдентификаторЗадания" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Идентификатор задания</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>36</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="дсОстаткиПартий" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Остатки партий</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:DynamicList</v8:Type>
+			</Type>
+			<Settings xsi:type="DynamicList">
+				<ManualQuery>false</ManualQuery>
+				<DynamicDataRead>true</DynamicDataRead>
+				<MainTable>InformationRegister.кб99_ОстаткиПартийВетис</MainTable>
+				<ListSettings>
+					<dcsset:filter>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>dfcece9d-5077-440b-b6b3-45a5cb4538eb</dcsset:userSettingID>
+					</dcsset:filter>
+					<dcsset:order>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>88619765-ccb3-46c6-ac52-38e9c992ebd4</dcsset:userSettingID>
+					</dcsset:order>
+					<dcsset:conditionalAppearance>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>b75fecce-942b-4aed-abc9-e6a02e460fb3</dcsset:userSettingID>
+					</dcsset:conditionalAppearance>
+					<dcsset:itemsViewMode>Normal</dcsset:itemsViewMode>
+					<dcsset:itemsUserSettingID>911b6018-f537-43e8-a417-da56b22f9aec</dcsset:itemsUserSettingID>
+				</ListSettings>
+			</Settings>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="ПолучитьПартии" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Получить партии</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Получить партии</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ПолучитьПартии</Action>
+		</Command>
+	</Commands>
+</Form>

@@ -1,1 +1,0 @@
-oscript -encoding=utf-8 .git/hooks/v8files-extractor.os --decompile epf src 
