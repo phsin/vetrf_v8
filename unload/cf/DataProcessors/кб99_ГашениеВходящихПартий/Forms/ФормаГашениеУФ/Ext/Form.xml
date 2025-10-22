@@ -1618,6 +1618,18 @@
 							<ChildItems>
 								<InputField name="ИмяРеквизитаАртикул" id="344">
 									<DataPath>ИмяРеквизитаАртикул</DataPath>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Введите название реквизита, в котором хранится артикул номенклатуры. Название должно совпадать с именем в конфигураторе.</v8:content>
+										</v8:item>
+									</ToolTip>
+									<InputHint>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Артикул</v8:content>
+										</v8:item>
+									</InputHint>
 									<ContextMenu name="ИмяРеквизитаАртикулКонтекстноеМеню" id="345"/>
 									<ExtendedTooltip name="ИмяРеквизитаАртикулРасширеннаяПодсказка" id="346"/>
 								</InputField>
@@ -1648,6 +1660,18 @@
 							<ChildItems>
 								<InputField name="ИмяРеквизитаШК" id="347">
 									<DataPath>ИмяРеквизитаШК</DataPath>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Введите название реквизита, в котором хранится штрихкод номенклатуры. Название должно совпадать с именем в конфигураторе.</v8:content>
+										</v8:item>
+									</ToolTip>
+									<InputHint>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Штрихкод</v8:content>
+										</v8:item>
+									</InputHint>
 									<ContextMenu name="ИмяРеквизитаШККонтекстноеМеню" id="348"/>
 									<ExtendedTooltip name="ИмяРеквизитаШКРасширеннаяПодсказка" id="349"/>
 								</InputField>
@@ -1895,6 +1919,7 @@
 					<v8:AllowedLength>Variable</v8:AllowedLength>
 				</v8:StringQualifiers>
 			</Type>
+			<FillCheck>ShowError</FillCheck>
 		</Attribute>
 		<Attribute name="ИмяРеквизитаШК" id="6">
 			<Title>
@@ -1910,6 +1935,7 @@
 					<v8:AllowedLength>Variable</v8:AllowedLength>
 				</v8:StringQualifiers>
 			</Type>
+			<FillCheck>ShowError</FillCheck>
 		</Attribute>
 		<Attribute name="ВыбНачалоПериода" id="7">
 			<Title>
