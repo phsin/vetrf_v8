@@ -29,4 +29,4 @@
 
 [*Описание решения*](https://xn----ctbjbnchgq5bbglv.xn--p1ai/)
 
-[*Документация и установка*](https://docs.kb99.pro/doc/integraciya-mercury-dlya-1sv8-8DwbvdfsVu)
+[*Документация и установка*](https://docs.kb99.pro/s/vetis-for-1cv8)
