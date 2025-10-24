@@ -307,6 +307,8 @@
 							<v8:content>Группа гашение</v8:content>
 						</v8:item>
 					</ToolTip>
+					<Height>15</Height>
+					<ScrollOnCompress>true</ScrollOnCompress>
 					<ExtendedTooltip name="ГруппаГашениеРасширеннаяПодсказка" id="42"/>
 					<ChildItems>
 						<UsualGroup name="ГруппаОтбора" id="387">
@@ -1919,7 +1921,6 @@
 					<v8:AllowedLength>Variable</v8:AllowedLength>
 				</v8:StringQualifiers>
 			</Type>
-			<FillCheck>ShowError</FillCheck>
 		</Attribute>
 		<Attribute name="ИмяРеквизитаШК" id="6">
 			<Title>
@@ -1935,7 +1936,6 @@
 					<v8:AllowedLength>Variable</v8:AllowedLength>
 				</v8:StringQualifiers>
 			</Type>
-			<FillCheck>ShowError</FillCheck>
 		</Attribute>
 		<Attribute name="ВыбНачалоПериода" id="7">
 			<Title>
