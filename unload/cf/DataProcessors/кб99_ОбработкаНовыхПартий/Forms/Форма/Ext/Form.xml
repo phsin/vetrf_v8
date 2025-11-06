@@ -12,10 +12,16 @@
 				<CommandName>Form.Command.СнятьОграничениеНаПодбор</CommandName>
 				<ExtendedTooltip name="ФормаСнятьОграничениеНаПодборРасширеннаяПодсказка" id="63"/>
 			</Button>
+			<Button name="ФормаУстановитьДокументПоступление" id="77">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.УстановитьДокументПоступление</CommandName>
+				<ExtendedTooltip name="ФормаУстановитьДокументПоступлениеРасширеннаяПодсказка" id="78"/>
+			</Button>
 		</ChildItems>
 	</AutoCommandBar>
 	<Events>
 		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="BeforeClose">ПередЗакрытием</Event>
 		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
 	</Events>
 	<ChildItems>
@@ -107,11 +113,22 @@
 							<CellHyperlink>true</CellHyperlink>
 							<ValuesPicture>
 								<xr:Ref>CommonPicture.кб99_ОтметкиСтрок</xr:Ref>
-								<xr:LoadTransparent>false</xr:LoadTransparent>
+								<xr:LoadTransparent>true</xr:LoadTransparent>
 							</ValuesPicture>
 							<ContextMenu name="СписокПартийПометкаКонтекстноеМеню" id="45"/>
 							<ExtendedTooltip name="СписокПартийПометкаРасширеннаяПодсказка" id="46"/>
 						</PictureField>
+						<LabelField name="СписокПартийДокументПрихода" id="79">
+							<DataPath>СписокПартий.ДокументПрихода</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Документ поступление</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="СписокПартийДокументПриходаКонтекстноеМеню" id="80"/>
+							<ExtendedTooltip name="СписокПартийДокументПриходаРасширеннаяПодсказка" id="81"/>
+						</LabelField>
 						<LabelField name="СписокПартийПартия" id="35">
 							<DataPath>СписокПартий.Партия</DataPath>
 							<ContextMenu name="СписокПартийПартияКонтекстноеМеню" id="36"/>
@@ -312,6 +329,16 @@
 								<Event name="OnChange">ПродукцияПриИзменении</Event>
 							</Events>
 						</InputField>
+						<CheckBoxField name="БезДокументаПоступление" id="74">
+							<DataPath>БезДокументаПоступление</DataPath>
+							<TitleLocation>Right</TitleLocation>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="БезДокументаПоступлениеКонтекстноеМеню" id="75"/>
+							<ExtendedTooltip name="БезДокументаПоступлениеРасширеннаяПодсказка" id="76"/>
+							<Events>
+								<Event name="OnChange">БезДокументаПоступлениеПриИзменении</Event>
+							</Events>
+						</CheckBoxField>
 					</ChildItems>
 				</UsualGroup>
 			</ChildItems>
@@ -320,7 +347,7 @@
 	<Attributes>
 		<Attribute name="Объект" id="1">
 			<Type>
-				<v8:Type>cfg:DataProcessorObject.кб99_ОграничениеПартийВПодборе</v8:Type>
+				<v8:Type>cfg:DataProcessorObject.кб99_ОбработкаНовыхПартий</v8:Type>
 			</Type>
 			<MainAttribute>true</MainAttribute>
 		</Attribute>
@@ -348,7 +375,8 @@
 	ВСД_Партия.Количество КАК Количество,
 	ВСД_Партия.НомерЗаписи КАК НомерЗаписи,
 	ВСД_Партия.ЕдиницаИзмерения КАК ЕдиницаИзмерения,
-	ВСД_Партия.Ссылка В(&amp;ВыбранныеПартии) КАК Пометка
+	ВСД_Партия.Ссылка В (&amp;ВыбранныеПартии) КАК Пометка,
+	ВСД_Партия.ДокументПрихода КАК ДокументПрихода
 ИЗ
 	Справочник.ВСД_Партия КАК ВСД_Партия
 ГДЕ
@@ -477,7 +505,17 @@
 			<Type>
 				<v8:Type>v8:ValueListType</v8:Type>
 			</Type>
-			<Settings xsi:type="v8:TypeDescription"/>
+		</Attribute>
+		<Attribute name="БезДокументаПоступление" id="11">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Без документа поступления</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
 		</Attribute>
 	</Attributes>
 	<Commands>
@@ -550,6 +588,21 @@
 			</Picture>
 			<Action>СнятьОтметки</Action>
 			<Representation>Picture</Representation>
+		</Command>
+		<Command name="УстановитьДокументПоступление" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Установить документ поступление</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Установить документ поступление</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>УстановитьДокументПоступление</Action>
 		</Command>
 	</Commands>
 </Form>

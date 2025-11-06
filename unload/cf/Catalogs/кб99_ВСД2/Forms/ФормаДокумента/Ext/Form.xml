@@ -161,6 +161,13 @@
 									<ContextMenu name="ДокументОснованиеКонтекстноеМеню" id="18"/>
 									<ExtendedTooltip name="ДокументОснованиеРасширеннаяПодсказка" id="19"/>
 								</InputField>
+								<InputField name="ДокументПрихода" id="830">
+									<DataPath>Объект.ДокументПрихода</DataPath>
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+									<ContextMenu name="ДокументПриходаКонтекстноеМеню" id="831"/>
+									<ExtendedTooltip name="ДокументПриходаРасширеннаяПодсказка" id="832"/>
+								</InputField>
 								<InputField name="UUID" id="31">
 									<DataPath>Объект.UUID</DataPath>
 									<ReadOnly>true</ReadOnly>
